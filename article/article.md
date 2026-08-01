@@ -635,15 +635,14 @@ $\lambda = \pi/2$'de $\det g = 0$ verir: **dejenere metrik**. Orada metriğin te
 yoktur ve alan denklemi tanımsızdır. Bu genel bir sonuçtur, iki imza sınıfı
 arasında dejenere olmayan sürekli bir yol yoktur.
 
-**Bu argümanın sınırı açıkça belirtilmelidir.** Gösterilen şey, dejenere bir
-noktadan kaçınılamayacağıdır; gösterilmeyen şey, o noktadan geçilemeyeceğidir.
-Literatürün büyük kısmı tam olarak orada durmayıp devam eder: [35] zamana bağlı
-bir kink ile $g_{00}$ üzerinden sürekli bir imza değişimi kurar, [37] ve benzeri
-çalışmalar Colombeau genelleştirilmiş fonksiyonlarıyla dejenere hiperyüzeyde
-çarpımı tanımlı kılar, [9] ve [10] dağılım teorisini ve varyasyonel türetimi imza
-değişimine taşır, [13] Hadamard düzenlemesi kullanır. Dolayısıyla buradaki
-tıkanma, geçişin imkânsızlığından çok kullanılan araçların yetersizliği olabilir.
-Bu, modelin açık sorularından biridir.
+**Bu argümanın iki kusuru vardır ve Bölüm 13.5'te düzeltilmiştir.** Birincisi,
+yukarıdaki yol hedefine varmaz: $\lambda = \pi$'de $\mathrm{diag}(1,1,1,1)$
+verir, yani Öklid imzası $(4,0)$'a ulaşır, $(3,1)$'e değil. Dolayısıyla
+kozmolojideki geçişi tarif eder, buradakini değil. İkincisi, determinant
+üzerinden yürüyen gerekçe geçersizdir: $\det \eta = \det \eta' = -1$ olduğundan
+determinant iki uç arasında işaret değiştirmek zorunda değildir.
+
+Bölüm 13.5 doğru yolu kurar ve sonuç yukarıdakinden farklı çıkar.
 
 ### 13.4 Sonuç
 
@@ -658,11 +657,59 @@ konileri bir doğruya, dual metriğin dejenere olması bir hiperdüzleme çöker
 Bu koni-çökmesi resmi, aşağıdaki 13.3'teki argümanın geometrik karşılığıdır.
 
 Kara delik ufku bu modelin "kısmi" hâli değildir; farklı sınıfta bir olaydır. Ufuk
-imza sınıfını korur, bu yüzden geçirgendir. $\Sigma$ imza sınıfını değiştirir, bu
-yüzden yansıtıcıdır. Aralarında sürekli köprü kurmak dejenere bir nokta gerektirir
-ve orada da geçiş sağlanmaz; tıkanma yalnızca yer değiştirir.
+imza sınıfını korur, bu yüzden geçirgendir. $\Sigma$ imza sınıfını değiştirir.
+Aralarında sürekli köprü kurmak dejenere bir nokta gerektirir; ancak bu noktanın
+ne kadar kötü olduğu Bölüm 13.5'te hesaplanmıştır ve sanıldığı kadar kötü
+değildir.
 
-Bu, Bölüm 9'daki yansıtıcılık sonucunun bağımsız bir doğrulamasıdır.
+### 13.5 İki imza arasında sürekli yol ne kadar dejenere olmak zorunda
+
+Soru şudur: $(1,3)$'ten $(3,1)$'e giden sürekli bir yol boyunca aynı noktada kaç
+öz-değerin birden sıfırlanması gerekir. Dejenereliğin kendisi kaçınılmazdır,
+çünkü pozitif öz-değer sayısının birden üçe çıkması gerekir ve her değişim sıfırdan
+geçer; ancak bu sayının **kaç tane birden** sıfırlandığını söylemez.
+
+**Doğrudan yol.** İki bileşen birlikte çevrilirse
+
+$$g(\lambda) = \mathrm{diag}(1,\, -\cos\lambda,\, -\cos\lambda,\, -1)$$
+
+elde edilir. $\lambda = 0$'da $(1,3)$, $\lambda = \pi$'de $(3,1)$ verir, yani
+hedefe varır. $\lambda = \pi/2$'de **iki öz-değer birden** sıfırlanır: rank iki
+düşer. Bütün yol boyunca en kötü nokta budur.
+
+**Kademeli yol.** Bileşenler teker teker çevrilirse iki ayaklı bir yol çıkar:
+
+$$g_1(\lambda) = \mathrm{diag}(1,\, -\cos\lambda,\, -1,\, -1)
+  \;:\; (1,3) \longrightarrow (2,2)$$
+$$g_2(\lambda) = \mathrm{diag}(1,\, 1,\, -\cos\lambda,\, -1)
+  \;:\; (2,2) \longrightarrow (3,1)$$
+
+Her iki ayakta da rank yalnızca **bir** düşer.
+
+| Yol | Varış | En kötü rank düşüşü |
+|-----|-------|---------------------|
+| $\mathrm{diag}(1,-\cos\lambda,-\cos\lambda,-\cos\lambda)$, Bölüm 13.3 | $(4,0)$, hedef değil | 3 |
+| Doğrudan, iki bileşen birlikte | $(3,1)$ | 2 |
+| Kademeli, $(2,2)$ üzerinden | $(3,1)$ | **1** |
+
+**Sonuç.** Dejenerelik kaçınılmazdır, ama rank-2 dejenerelik **kaçınılmaz
+değildir.** $(1,3)$'ten $(3,1)$'e, her noktada yalnızca tek bir öz-değerin
+sıfırlandığı sürekli bir yol vardır.
+
+Bunun önemi şuradadır: literatürün dejenere yüzeyle çalışan araçları tam olarak
+rank-1 dejenerelik için kuruludur. [15] ve [16]'nın "transvers radikal" dediği
+yapı budur, ve [35]'in kink modeli, [37]'nin Colombeau kuruluşu, [13]'ün Hadamard
+düzenlemesi bu sınıfta çalışır. Dolayısıyla bu modelin geçişi, o araçların
+erişemeyeceği bir yerde **değildir**.
+
+Bedeli vardır: kademeli yol $(2,2)$ imzasından, yani iki zamanlı bir bölgeden
+geçer. Bu, Bölüm 14'teki sıralama sorunlarının orada da geçerli olacağı anlamına
+gelir, ancak üç zaman yerine iki zamanla ve yalnızca ara bölgede. Bu ara bölgenin
+fiziksel olarak var sayılıp sayılamayacağı burada karara bağlanmamıştır.
+
+Bölüm 13.3'ün "iki imza sınıfı arasında dejenere olmayan sürekli bir yol yoktur"
+ifadesi doğrudur ve Sylvester'ın sonucudur. Ondan çıkarılan "dolayısıyla geçiş
+sağlanmaz" ifadesi ise **doğru değildir** ve geri çekilmektedir.
 
 ---
 
@@ -1032,9 +1079,13 @@ buradaki model reel kütleyi ve görelilik ilkesini korur, karşılığında ge�
 olmayan bir eşik alır. Hangi bedelin daha kabul edilebilir olduğu burada
 kararlaştırılmamıştır.
 
-**10. "Dejenere yüzeyden geçilemeyeceği gösterilmemiştir."** Bölüm 13.3'te
-belirtildiği gibi bu itiraz haklıdır ve cevabı yoktur. Literatür o noktadan
-[35], [37], [9], [13] gibi araçlarla geçmektedir.
+**10. "Dejenere yüzeyden geçilemeyeceği gösterilmemiştir."** İtiraz haklıydı ve
+Bölüm 13.5'te karşılanmıştır. Dejenerelik kaçınılmazdır, ancak rank-2 dejenerelik
+değildir: $(2,2)$ üzerinden giden kademeli bir yolda her noktada yalnızca tek bir
+öz-değer sıfırlanır, ki bu tam olarak [15], [16], [35], [37] ve [13]'ün
+araçlarının çalıştığı sınıftır. Bölüm 13.3'ün karşıt sonucu geri çekilmiştir.
+Geriye kalan soru geçişin mümkün olup olmadığı değil, $(2,2)$ ara bölgesinin
+fiziksel olarak kabul edilip edilemeyeceğidir.
 
 ---
 
@@ -1078,9 +1129,15 @@ Modele özgü olduğu düşünülen sonuçlar: eşikte tam yansımanın akı kor
 Wick dönüşünde "tek olan ekseni döndür" kuralı ve iki bölgenin ortak bir Öklid
 teorisinin analitik devamları olması (Bölüm 15), ve iki literatürün birleştirilmesi.
 
+Bölüm 13.5'te kapanan nokta: iki imza arasındaki sürekli yolun ne kadar dejenere
+olmak zorunda olduğu. Cevap, her noktada tek bir öz-değerin sıfırlandığı bir yolun
+var olduğu, bedelinin ise $(2,2)$ imzalı iki zamanlı bir ara bölgeden geçmek
+olduğudur. Bölüm 13.3'ün "geçiş sağlanmaz" sonucu geri çekilmiştir.
+
 Kapatılamamış noktalar, oldukları gibi: güçlü ile zayıf eklem koşulu arasındaki
-tercihin gerekçesi (Bölüm 9.1), dejenere yüzeyden geçilip geçilemeyeceği
-(Bölüm 13.3), üç zamanın olasılık korunumu altında tek zamana çökmesi itirazı
+tercihin gerekçesi (Bölüm 9.1), $(2,2)$ ara bölgesinin fiziksel olarak
+savunulabilir olup olmadığı (Bölüm 13.5), üç zamanın olasılık korunumu altında
+tek zamana çökmesi itirazı
 (Bölüm 7.3), imza değiştiren arka planda parçacık üretimi (Bölüm 16.2), eşik
 duvarlarının kuantum kararlılığı (Bölüm 9.1), yerçekiminin hiç ele alınmamış
 olması, ve ölçülebilir bir öngörünün bulunmaması.

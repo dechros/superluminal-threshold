@@ -9,6 +9,7 @@
 #include "field/KleinGordonField.h"
 #include "field/MaxwellField.h"
 #include "horizon/BlackHoleHorizon.h"
+#include "horizon/DegeneratePath.h"
 #include "literature/LiteraturePosition.h"
 #include "quantum/CanonicalQuantization.h"
 #include "quantum/PathIntegral.h"
@@ -40,6 +41,7 @@ namespace
         sections.push_back(std::make_unique<slm::MaxwellSection>());
         sections.push_back(std::make_unique<slm::LiteraturePosition>());
         sections.push_back(std::make_unique<slm::BlackHoleHorizon>());
+        sections.push_back(std::make_unique<slm::DegeneratePathSection>());
         sections.push_back(std::make_unique<slm::CanonicalQuantization>());
         sections.push_back(std::make_unique<slm::PathIntegral>());
         sections.push_back(std::make_unique<slm::VacuumCasimir>());
