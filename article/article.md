@@ -1,7 +1,8 @@
 # Superluminal geçişte imza değişimi: ayrık involüsyon modeli
 
-> Not: Bu metin yalnızca bu çalışmanın kendi sonuçlarını içerir. Atıflar ve
-> kaynakça sonradan eklenecektir.
+> Bu metin, modelin kendi sonuçlarını literatürdeki konumuyla birlikte verir.
+> Köşeli parantez içindeki numaralar sondaki kaynakçaya gönderir. Bir sonucun
+> daha önce elde edilmiş olduğu durumlarda bu açıkça belirtilir.
 
 ## Özet
 
@@ -16,12 +17,19 @@ yapan parça. $B(c^2/V)$ ise sıradan bir subluminal Lorentz boostudur ve hız
 bilgisini taşıyan parçadır. Bu ayrım, aşağıdaki bütün sonuçların dayanağıdır:
 grup yapısının kapanması, enerji ile momentumun takası, öte tarafta öngörünün
 denklem tipinden ötürü çökmesi, superluminal durgunluğun bir ayar fazlalığı
-olduğunun gösterilmesi, ve eşik yüzeyinin geçirgen değil yansıtıcı olması.
+olduğunun gösterilmesi, ve eşik yüzeyinin akı geçirmemesi.
 
 Çalışma kendi sınırını da içerir: Sylvester atalet yasası, reel bir dönüşümün bir
 metriğin imzasını doğrudan çevirmesini yasaklar. Dolayısıyla $D$, tek bir metriğin
 imzasını çeviren bir operatör değil, iki farklı metrik arasında bir eşlemedir. Bu
 sınır Bölüm 17'de açıkça ele alınıyor.
+
+Öncelik konusunda baştan açık olmak gerekir. Superluminal çerçevelerin 1+3
+boyuttaki kuruluşu [2]'ye, çarpanlamanın kendisi yine [2]'ye aittir; imza
+değişiminde eklem koşulları literatürü [5], [6], [7] ile 1990'ların başına
+dayanır. Bu çalışmanın iddiası yeni bir parça bulmak değil, bu iki literatürü
+birleştirmek ve birleşimin sonuçlarını sonuna kadar takip etmektir. Hangi
+sonucun kime ait olduğu ilgili bölümlerde tek tek belirtilmiştir.
 
 ## Modelin yedi maddesi
 
@@ -31,7 +39,7 @@ sınır Bölüm 17'de açıkça ele alınıyor.
 4. Enerji ve momentum takas olur.
 5. Hız dönüşümü $v' = c^2/v$.
 6. Ötede öngörü çöker, denklem tipinin doğrudan sonucu olarak.
-7. Eşik geçirgen değil, yansıtıcıdır.
+7. Eşik geçirgen değil, yansıtıcıdır (güçlü eklem koşulu altında; bkz. Bölüm 9.1).
 
 ## Gösterim ve konvansiyonlar
 
@@ -55,6 +63,14 @@ $$M(V) = D \cdot B(c^2/V), \qquad V > c$$
 
 - $D$, sabit, parametresiz involüsyon; imza değişimini tek başına yapar.
 - $B(c^2/V)$, sıradan subluminal Lorentz boostu; $V$ bilgisini taşır.
+
+**Bu çarpanlama yeni değildir.** Bir superboost'un, sonsuz hız limitindeki bir
+çevirme ile dual hız $c^2/V$'ye ait sıradan bir boostun bileşkesi olduğu [2]'de
+belirtilmiştir ve [3] bunu kendi eleştirisinin ikinci basamağı olarak kullanır.
+Burada eklenen şey çarpanlamanın kendisi değil, üç noktadır: çarpanlamanın
+modelin düzenleyici ilkesi olarak sonuna kadar kullanılması, çevirme parçasının
+Bölüm 2.1'deki tam tarama ile **zorunlu** olduğunun gösterilmesi, ve grup
+kapanmasındaki bozulmanın Bölüm 3'te yalnızca $B$ katmanına yıkılması.
 
 $V > c$ olduğundan $u = c^2/V < c$'dir, yani $B$ gerçekten subluminaldir. Her $V$
 değeri için
@@ -114,6 +130,13 @@ Doğrulanan iki olgu:
 Kapanma sorunu $D$'den değil, $B$ katmanından kaynaklanır. $D \cdot B$'yi tek bir
 dönüşüm olarak ele almak kapanmayı bozar; ayrıştırıldığında iki parça da düzgündür:
 $D$ bir $\mathbb{Z}_2$ ayrık simetrisi, $B$ ise $SO(1,3)$ içindedir.
+
+Bu sonucun daha geniş bir hâli [4]'te bağımsız olarak kurulmuştur: orada
+genişletme, kutupsal ve azimutal açılara bağlı bir Klein dörtlü grubu
+gerçeklemesiyle yapılır, genişletilmiş Poincaré grubunun üniter indirgenemez
+temsilleri sınıflandırılır ve Casimir öz-değer probleminden dalga denklemleri
+türetilir. Aşağıdaki yapı bunun yön-bağımsız ve dar bir kesitidir; ikisi
+arasındaki ilişki Bölüm 12.1'de hesaplanmıştır.
 
 Yapı, $\langle D \rangle \ltimes SO(1,3)$ biçiminde bir yarı-doğrudan çarpımdır.
 Kapanmanın bozulması, $D B D^{-1}$ konjugasyonunun boost tipini korumamasından
@@ -253,6 +276,13 @@ Hadamard anlamında kötü konumlanmıştır.
 
 Bu sonuç bir yorum değil, denklem tipinin doğrudan sonucudur.
 
+Aynı sonuç [7]'de operatör teorisiyle **ispat edilmiştir**: iki boyutlu bir
+imza-değişen uzay-zamanda sınır koşulları Schrödinger Hamiltonyeninin öz-eşlenik
+genişlemelerinden çıkarılır, Klein-Gordon başlangıç değer problemi kötü
+konumlanmış bulunur, ve değişim yüzeyinden uzakta düzgün ve tıkız destekli
+başlangıç verisi için çözümün $L^2$ normunun **sonlu zamanda ıraksadığı**
+gösterilir. Yukarıdaki mod hesabı bu teoremin bir gösterimidir, ispatı değildir.
+
 ---
 
 ## 7. Karşı tarafta dinamik ve zamanın oku
@@ -284,6 +314,17 @@ Bölge II'de zamanın oku **yoktur**. Ok, ilgili boyutun **tek** olmasının son
 Buna karşılık Bölge II'de bir **uzay oku** vardır, çünkü orada $r$ tek eksendir.
 
 Ok entropiden değil, boyut sayısından çıkar.
+
+**Bir itiraz.** [21], iki zamanlı dinamikte olasılık korunumu dayatıldığında
+fazladan zaman ekseninin gözlenebilirliğinin sınırlandığını gösterir: klasik
+$1+2$ boyutta Newton'un ikinci yasası tam olarak integre edilebilir ve her
+başlangıç koşulu için **etkin tek zamanlı** bir evrim verir; kuantum tarafta ise
+düzey aralıkları, toplam süre ve $\hbar$ içeren genelleştirilmiş bir belirsizlik
+bağıntısı çıkar. Bu, üç zamanlı Bölge II'nin dışarıdan bakıldığında tek zamanlı
+görünebileceği anlamına gelir. Buradaki kuruluş ile arasındaki fark, [21]'in
+evrimin üniter ve olasılık koruyan olmasını istemesidir; Bölüm 14'te gösterildiği
+gibi Bölge II'de bu talebin dayandığı yapı zaten mevcut değildir. Yine de bu
+itiraz açık bir sorudur ve modelin lehine kapatılmış sayılmamalıdır.
 
 ---
 
@@ -334,6 +375,73 @@ Bu sonuç modele elle konmamıştır; kendi Lagrangian'ından çıkmıştır.
 Dispersiyon tarafındaki karşılığı: $v_{\text{faz}} = v_{\text{grup}} = c$ ancak
 $\mu = 0$ için sağlanır. Kütleli alan için $v_{\text{faz}} > c$ ama
 $v_{\text{grup}} < c$'dir; eşik aşılmaz, **teğet** geçilir.
+
+### 9.1 Hangi eklem koşulu seçildi, ve seçim ne kadar belirleyici
+
+Yukarıdaki iki koşulun birlikte dayatılması masum bir adım değildir. İmza
+değişimi literatüründe bu tam olarak tartışmalı noktadır: dış eğriliğin yüzeyde
+yalnızca **sürekli** mi olması gerektiği (*zayıf* imza değişimi), yoksa
+**sıfırlanması** mı (*güçlü*). [6] sekiz aday eylem yazıp her birinin hangi
+koşulu verdiğini inceler ve ikisini de savunulabilir bulur. [9] daha ileri gider:
+imza değişiminde kanonik Einstein denklemleri diye bir şey yoktur, seçim
+yapılmak zorundadır; [11] aynı noktayı yineleyip herhangi bir seçimi "asıl"
+denklemler diye adlandırmanın retorik olduğunu söyler.
+
+Yukarıdaki $\pi|_\Sigma = 0$ sonucu **güçlü** koşuldur. Aynı sonuç, aynı yöntemle,
+[5]'te daha önce elde edilmiştir: orada Klein-Gordon alanı imza değiştiren bir
+arka planda ele alınır ve eklem koşulu, alan denklemlerindeki Dirac dağılımının
+katsayısı olarak $\phi' \delta = 0$ biçiminde **türetilir**, yani denklemleri
+anlamlı kılmak için varsayılmaz. Buradaki türetim Lagrangian'dan gider ve aynı
+yere varır.
+
+Seçimin ne kadar belirleyici olduğunu ölçmek için $\Sigma$ üzerinde bir mod
+saçılması kurulur. Normal koordinat $\xi$, Bölge I $\xi<0$, Bölge II $\xi>0$:
+
+$$\phi = e^{i\kappa\xi} + R\,e^{-i\kappa\xi}, \qquad
+  \psi = T_+ e^{i\kappa\xi} + T_- e^{-i\kappa\xi}$$
+
+Bölge II'de iki genlik birden tutulur, çünkü orada zaman sıralaması olmadığı için
+"dışarı giden dalga" koşulu **tanımlanamaz** (Bölüm 14.2).
+
+İlk gözlem: normal doğrultudaki indirgenmiş denklem iki tarafta da aynıdır,
+
+$$\frac{d^2}{d\xi^2} + \kappa^2 = 0, \qquad \kappa^2 = c^2(k_T^2 + \mu)$$
+
+yani yüzeyde bir **empedans basamağı yoktur**. Geçirgenliği belirleyen tek şey
+momentum eşleşmesinin işaretidir.
+
+Eklem koşulları $1 + R = T_+ + T_-$ ve $1 - R = s\,(T_+ - T_-)$ olur; burada
+güçlü koşul için $s = -1$, zayıf koşul için $s = +1$. Akılar
+$F_I = 1 - |R|^2$ ve $F_{II} = |T_+|^2 - |T_-|^2$ ile verilir. Sonuçlar:
+
+| Koşul | Dışarı-giden çözüm | Akı korunumu | Sonuç |
+|-------|--------------------|--------------|-------|
+| Güçlü, $s=-1$ | Yok, sistem aşırı belirlenmiş | Ancak $\|R\| = 1$ ise | **Tam yansıma, zorunlu** |
+| Zayıf, $s=+1$ | Var, $R = 0$ | Her $R$ için | Geçirgen, ama miktar **belirsiz** |
+| Dirichlet duvar | Bölge II ayrık | $R = -1$ | Tam yansıma |
+| Neumann duvar | Bölge II ayrık | $R = +1$ | Tam yansıma |
+
+Güçlü koşulda $T_+ = R$ ve $T_- = 1$ çıkar, dolayısıyla $F_{II} = |R|^2 - 1 = -F_I$
+olur. İki akının eşit olması ancak $1 - |R|^2 = 0$ ile mümkündür. Yani **tam
+yansıma ek bir varsayım değil, akı korunumunun tek çözümüdür.** Bölüm 9'un sonucu
+bu haliyle bir seçimin sonucu olmaktan çıkıp, o seçim verildiğinde bir zorunluluk
+hâline gelir.
+
+Zayıf koşulda ise $T_+ = 1$, $T_- = R$ olur ve akı **her** $R$ için korunur.
+Zayıf koşul geçişe izin verir ama ne kadar geçtiğini söylemez; Bölge II bir
+radyasyon koşulu sağlayamadığı için $R$ serbest kalır. Bu, zayıf koşulun "geçiş
+var" demekten çok "bu problem iyi konumlanmamış" demek olduğu anlamına gelir ve
+Bölüm 6'daki sonuçla tutarlıdır.
+
+Dört durumdan üçü yansıtıcıdır. Özellikle [8]'in öz-eşlenik genişlemelerden
+çıkardığı **Dirichlet** koşulu, buradaki Neumann koşulunun tersi olmasına rağmen
+aynı yere varır: orada da Minkowski bölgesi Kleinian bölgeden kopar. Dolayısıyla
+"eşikten akı geçmez" sonucu, Neumann ile Dirichlet arasındaki tercihe duyarlı
+**değildir**. Duyarlı olduğu tek şey güçlü ile zayıf arasındaki tercihtir.
+
+Buna karşılık [8] bir uyarı da içerir: kuantum alanların varlığı bu duvarları
+**kararsız** kılar, Kleinian bölge ya çöker ya sınırsız genişler. Burada bu
+soruya girilmemiştir ve açık bırakılmaktadır.
 
 ---
 
@@ -561,6 +669,18 @@ Bu, Bölüm 6'daki determinizm kaybının kuantum düzeyindeki karşılığıdı
 birleştirilemez. Model böylece üç bağımsız yoldan aynı sonuca varır: **Bölge II
 kendi içinde tutarlıdır, ancak Bölge I ile birleştirilemez.**
 
+**Bu engellerin aşıldığı iddiası ve akıbeti.** [22], burada sayılanlarla aynı
+karakterdeki üç engelin, yani alttan sınırsız spektrumun, çerçeveye bağlı
+kararsız vakumun ve kovaryant olmayan komütasyon bağıntılarının, Lorentz grubunun
+fazla küçük bir Hilbert uzayında temsil edilmesinden kaynaklandığını ve uzayın
+$\mathcal{F} \otimes \mathcal{F}^\star$ biçiminde ikiye katlanmasıyla
+kalktığını öne sürer. [23] bu yapının kuantum bir teori **olmadığını** gösterir:
+ikiye katlanmış uzayda alan her noktada komüte eder, dolayısıyla kanonik
+komütasyon bağıntıları sağlanmaz ve geriye kuantum dinamiği olmayan klasik bir
+teori kalır; ayrıca Feynman reçetesi üniterliği bozar. [24] aynı sonucu sanal
+takyonlar için de kurar. Dolayısıyla bu bölümdeki engeller, bilinen tek onarım
+girişimi karşısında ayakta kalmaktadır.
+
 Kurtarılabilen yapı yol integralidir:
 
 $$Z = \int \mathcal{D}[\psi]\; e^{\,i S'[\psi]/\hbar},
@@ -649,6 +769,14 @@ ve analitik devamla Lorentz bölgesine taşınabilir.
 > var" sorusu cevapsızdır; "ne kadar korelasyon var" sorusu cevaplanabilir.
 
 Bu, Bölüm 7'deki "yörünge yok, cephe var" sonucunun kuantum karşılığıdır.
+
+**Açık kalan zorluk.** [19], altta yatan klasik teori ne olursa olsun, imza
+değiştiren bir arka planda kuantum alanının ciddi sorunlar ürettiğini savunur;
+başlıcası, naif olarak sonsuz sayıda parçacık üretilmesidir, ki bunu bir
+potansiyel bariyerinin yarısına kadar tünellemeye benzetip WKB tahminleri
+verirler. Yukarıdaki "parçacık değil korelasyon" okuması bu sorunu ortadan
+kaldırmaz; sorunun sorulamaz hâle geldiği bir çerçeve önerir. Bu ikisi arasındaki
+fark önemlidir ve burada bir çözüm iddia edilmemektedir.
 
 ### 16.3 Casimir etkisi
 

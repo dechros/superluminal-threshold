@@ -1,3 +1,4 @@
+#include "boundary/JunctionScattering.h"
 #include "boundary/ThresholdSurface.h"
 #include "core/Report.h"
 #include "core/Section.h"
@@ -34,6 +35,7 @@ namespace
         sections.push_back(std::make_unique<slm::KleinGordonField>());
         sections.push_back(std::make_unique<slm::SuperluminalRest>());
         sections.push_back(std::make_unique<slm::ThresholdSurface>());
+        sections.push_back(std::make_unique<slm::JunctionScattering>());
         sections.push_back(std::make_unique<slm::SphericalSolution>());
         sections.push_back(std::make_unique<slm::MaxwellSection>());
         sections.push_back(std::make_unique<slm::LiteraturePosition>());
