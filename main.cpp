@@ -1,38 +1,3 @@
-// ============================================================================
-//  Superluminal geciste imza degisimi: ayrik involusyon modeli
-// ----------------------------------------------------------------------------
-//  Bu program, modelin butun cebirsel ve sayisal iddialarini ard arda
-//  calistirir ve her birini GECTI / KALDI olarak raporlar.
-//
-//  Modelin ozeti (calisma notu §10):
-//    1. c asilirsa uzay ve zaman rol degistirir; ani, hizdan bagimsiz
-//    2. Bunu yapan tek donusum D; involusyon, parite korur, isik hizi korur
-//    3. Otede hiz skaler degil, yonelim
-//    4. Enerji ve momentum takas olur
-//    5. v' = c^2/v
-//    6. Otede ongoru coker (denklem tipi geregi)
-//    7. Esik gecirgen degil, yansitici
-//
-//  Bolumlerin kaynagi ve turetimleri, ilgili siniflarin baslik dosyalarinda
-//  yorum olarak tutulur. Her sinif calisma notunun bir bolumune karsilik gelir.
-//
-//  YONTEM NOTU (§13)
-//  Tum dogrulamalar once sympy ile SEMBOLIK olarak yapilmisti:
-//    - Matris ozellikleri: metrik, involusyon, determinant, grup mertebesi
-//    - 384 permutasyon taramasi
-//    - Dort-momentum donusumu ve genel 2->2 korunum
-//    - Euler-Lagrange turetmeleri
-//    - O(3) stabilizator hesabi
-//    - Dispersiyon ve limit hesaplari
-//  Elle yapilan iki hesap (parite argumani, boyut sayimi) sembolik kontrolde
-//  YANLIS CIKTI ve duzeltildi. Modelin bugunku hali bu duzeltmeleri icerir.
-//
-//  Burada ayni dogrulamalar C++ ile sayisal/cebirsel olarak yeniden kuruldu.
-//  Matrislerin buyuk kismi tamsayi girdilidir ve cift duyarlikta tam temsil
-//  edilir, dolayisiyla permutasyon, involusyon ve determinant testleri
-//  sembolik hesapla birebir ayni sonucu verir.
-// ============================================================================
-
 #include "boundary/ThresholdSurface.h"
 #include "core/Report.h"
 #include "core/Section.h"
@@ -59,7 +24,6 @@
 
 namespace
 {
-
     std::vector<std::unique_ptr<slm::Section>> buildSections()
     {
         std::vector<std::unique_ptr<slm::Section>> sections;
@@ -72,13 +36,13 @@ namespace
         sections.push_back(std::make_unique<slm::ThresholdSurface>());
         sections.push_back(std::make_unique<slm::SphericalSolution>());
         sections.push_back(std::make_unique<slm::MaxwellSection>());
+        sections.push_back(std::make_unique<slm::LiteraturePosition>());
         sections.push_back(std::make_unique<slm::BlackHoleHorizon>());
         sections.push_back(std::make_unique<slm::CanonicalQuantization>());
         sections.push_back(std::make_unique<slm::PathIntegral>());
         sections.push_back(std::make_unique<slm::VacuumCasimir>());
         sections.push_back(std::make_unique<slm::SylvesterObstruction>());
         sections.push_back(std::make_unique<slm::DirectionDependentD>());
-        sections.push_back(std::make_unique<slm::LiteraturePosition>());
         return sections;
     }
 
@@ -87,25 +51,24 @@ namespace
         std::cout << "\n";
         std::cout << "################################################################\n";
         std::cout << "#                                                              #\n";
-        std::cout << "#   SUPERLUMINAL GECISTE IMZA DEGISIMI                         #\n";
-        std::cout << "#   Ayrik involusyon modeli — butun hesaplarin dogrulanmasi     #\n";
+        std::cout << "#   SIGNATURE CHANGE ACROSS A SUPERLUMINAL TRANSITION          #\n";
+        std::cout << "#   Discrete involution model, verification of every claim     #\n";
         std::cout << "#                                                              #\n";
         std::cout << "################################################################\n";
     }
 
     void printModelSummary()
     {
-        std::cout << "\n  MODELIN OZETI\n";
-        std::cout << "  1. c asilirsa uzay ve zaman rol degistirir; ani, hizdan bagimsiz\n";
-        std::cout << "  2. Bunu yapan tek donusum D; involusyon, parite korur, c'yi korur\n";
-        std::cout << "  3. Otede hiz skaler degil, yonelim\n";
-        std::cout << "  4. Enerji ve momentum takas olur\n";
+        std::cout << "\n  MODEL SUMMARY\n";
+        std::cout << "  1. Beyond c space and time swap roles; abrupt, speed independent\n";
+        std::cout << "  2. The one transformation doing it is D; involutive, parity and c preserving\n";
+        std::cout << "  3. On the far side speed is not a scalar but an orientation\n";
+        std::cout << "  4. Energy and momentum swap\n";
         std::cout << "  5. v' = c^2/v\n";
-        std::cout << "  6. Otede ongoru coker (denklem tipi geregi)\n";
-        std::cout << "  7. Esik gecirgen degil, yansitici\n";
+        std::cout << "  6. Prediction collapses there, forced by the equation type\n";
+        std::cout << "  7. The threshold is reflecting, not transmitting\n";
     }
-
-} // namespace
+}
 
 int main()
 {
@@ -128,7 +91,7 @@ int main()
     }
     catch (const std::exception &error)
     {
-        std::cerr << "\nHATA: " << error.what() << "\n";
+        std::cerr << "\nERROR: " << error.what() << "\n";
         return 2;
     }
 }
