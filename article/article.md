@@ -659,10 +659,21 @@ karşılık gelir.
 vakum enerji yoğunluğunda $\langle T_{00}(z)\rangle \sim \hbar c / z^4$ tipi bir
 kayma olur; renormalizasyon gerektirir.
 
-**İki yüzey arasında.** $L$ aralıklı iki $\Sigma$ yüzeyi arasında standart
-Neumann-Neumann sonucu geçerlidir:
+**İki yüzey arasında.** $L$ aralıklı iki $\Sigma$ yüzeyi arasında, kütlesiz tek
+reel skaler alan için:
 
-$$\frac{E}{A} = -\frac{\pi^2 \hbar c}{720\, L^3}$$
+$$\frac{E}{A} = -\frac{\pi^2 \hbar c}{1440\, L^3}$$
+
+Katsayının seçimi önemlidir. $-\pi^2\hbar c/(720 L^3)$ değeri iki polarizasyonlu
+elektromanyetik alana aittir; burada ele alınan $\psi$ tek bileşenli bir skaler
+olduğu için değer bunun yarısıdır. Ayrıca aynı katsayı hem Dirichlet-Dirichlet
+hem Neumann-Neumann için geçerlidir, dolayısıyla bu sayı Bölüm 9'daki eklem
+koşulu tartışmasından **bağımsızdır**. Yalnızca karışık Dirichlet-Neumann
+durumunda işaret döner ve kuvvet itici olur.
+
+Bu ifade kütlesiz limit içindir. Kütleli alan için, $mL \gg 1$ bölgesinde Casimir
+enerjisi $e^{-2mL}$ ile üstel olarak bastırılır; dolayısıyla yukarıdaki sonuç
+$mL \ll 1$ idealizasyonudur.
 
 Ölçek yasası doğrulanır: $L$ iki katına çıkınca enerji sekizde bire düşer.
 

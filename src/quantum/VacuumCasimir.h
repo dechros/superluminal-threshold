@@ -11,7 +11,8 @@ namespace slm
     {
     public:
         /// Casimir energy per unit area between two Neumann surfaces,
-        /// -pi^2 hbar c / (720 L^3).
+        /// -pi^2 hbar c / (1440 L^3), the single massless scalar value, which is
+        /// the same for Dirichlet and for Neumann conditions on both surfaces.
         /// \param separation Distance L between the surfaces.
         static double casimirEnergyPerArea(double hbar, double c, double separation);
 

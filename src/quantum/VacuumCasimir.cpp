@@ -11,7 +11,7 @@ namespace slm
     double VacuumCasimir::casimirEnergyPerArea(double hbar, double c, double separation)
     {
         const double pi = std::numbers::pi;
-        return -pi * pi * hbar * c / (720.0 * std::pow(separation, 3));
+        return -pi * pi * hbar * c / (1440.0 * std::pow(separation, 3));
     }
 
     double VacuumCasimir::singleSurfaceEnergyDensityScale(double hbar, double c, double distance)
