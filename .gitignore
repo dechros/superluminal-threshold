@@ -1,6 +1,5 @@
 # ---- Derleme ciktilari -----------------------------------------------------
-build/*
-!build/.gitkeep
+build/
 bin/
 obj/
 out/
