@@ -63,3 +63,6 @@ __pycache__/
 *.pyc
 .venv/
 venv/
+
+# scratch produced while reading the literature
+.digest.json
