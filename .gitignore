@@ -1,0 +1,66 @@
+# ---- Derleme ciktilari -----------------------------------------------------
+build/*
+!build/.gitkeep
+bin/
+obj/
+out/
+*.o
+*.obj
+*.a
+*.so
+*.so.*
+*.dylib
+*.dll
+*.exe
+*.elf
+*.gch
+*.pch
+*.d
+superluminal
+superluminal-debug
+
+# ---- Derleyici / arac uretimi ----------------------------------------------
+compile_commands.json
+.cache/
+*.gcno
+*.gcda
+*.gcov
+callgrind.out.*
+perf.data*
+massif.out.*
+vgcore.*
+core
+core.*
+
+# ---- Sanitizer / profil ciktilari ------------------------------------------
+*.profraw
+*.profdata
+*.log
+
+# ---- Editor / IDE ----------------------------------------------------------
+# .vscode icindeki task, launch ve IntelliSense ayarlari REPOYA DAHILDIR;
+# yalnizca kisisel/gecici dosyalar disarida birakilir.
+.vscode/*
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/c_cpp_properties.json
+!.vscode/settings.json
+!.vscode/extensions.json
+.idea/
+*.swp
+*.swo
+*~
+*.orig
+*.rej
+.clangd/
+
+# ---- Isletim sistemi -------------------------------------------------------
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# ---- Python (eski sembolik hesap katmanindan kalanlar) ---------------------
+__pycache__/
+*.pyc
+.venv/
+venv/
