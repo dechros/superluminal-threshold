@@ -33,6 +33,7 @@
 #include "particle/EnergyBookkeeping.h"
 #include "particle/ExitFace.h"
 #include "particle/FarSideMotion.h"
+#include "particle/FlowAssumption.h"
 #include "particle/StateTable.h"
 #include "particle/ReturnEvent.h"
 #include "particle/RoundTrip.h"
@@ -111,6 +112,7 @@ namespace
         sections.push_back(std::make_unique<slm::OpenQuestionsSection>());
         sections.push_back(std::make_unique<slm::FarSideMotionSection>());
         sections.push_back(std::make_unique<slm::TimeProjectionSection>());
+        sections.push_back(std::make_unique<slm::FlowAssumptionSection>());
         sections.push_back(std::make_unique<slm::TimeHolonomySection>());
         sections.push_back(std::make_unique<slm::ReturnEventSection>());
         return sections;
