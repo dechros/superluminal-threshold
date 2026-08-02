@@ -3178,6 +3178,7 @@ ne bölüm numarası ne kaynak numarası bulunur.
 | Oyalanma süresi ile fazdan gecikmenin karşılaştırılması | `src/intermediate/DwellTime` |
 | Lapse konturunun dejenere noktanın hangi tarafından geçtiği | `src/quantum/LapseContour` |
 | Yönlendirilebilirlik ile zorunluluğun ayrılması | `src/particle/FlowAssumption` |
+| Sınırda dönmüş çizgi ile yaratılmış çiftin ayrılması | `src/particle/TimeReversalSignature` |
 | Dönüş olayının kapalı biçimi | `src/particle/ReturnFormula` |
 | Geçiş süresinin beş okumasının yan yana hesabı | `src/intermediate/TraversalClocks` |
 | Sinyal cephesinin tepeden ayrılması | `src/intermediate/SignalFront` |
@@ -3270,15 +3271,15 @@ zamanlı sıfır eğrilik ölçütü.
 **Yöntem tarafındaki eksik.** Bu denetimin ikinci bulgusu şudur: literatür
 notlarının öncelik tablosundaki $24$ satırdan dördünün burada bir C++ karşılığı
 yoktu ve makalede yalnızca sözle kullanılıyordu. Biri o zamandan beri
-kurulmuştur (lapse kontur ölçütü, Bölüm 14.10); **üçü** hâlâ yalnızca sözle
-kullanılmaktadır. Bunlar açıkça
+kurulmuştur (lapse kontur ölçütü, Bölüm 14.10), ikisi daha bu turda
+kurulmuştur (çift yok oluşu okuması ve görünür yük, Bölüm 26.3'e bağlanan
+`src/particle/TimeReversalSignature`). Geriye **bir** yöntem kalmaktadır ve o da
+kapsam kararı gereğidir. Bunlar açıkça
 kaydedilir, çünkü aksi hâlde Bölüm 22 sağlanmamış bir bütünlük iddia etmiş olur:
 
 | Yalnızca sözle kullanılan yöntem | Neden kurulmadı |
 |----------------------------------|------------------|
-| Zaman yönlendirilebilirliğinin çökmesinin bir çift yok oluşuna benzemesi | Sayım düzeneği tarif edilmediği için; Bölüm 26.3'te açık madde |
-| Zamanı ters çeviren bir bölgenin sınırının net akı, yani görünür yük taşıması | Kapsam dışı; yer çekimi kanalı dışındaki taşıyıcılar kurulmadı |
-| Zaman yönlendirilemez bölgede cismin spinör gibi dönüşmesi | Spin bu çalışmada hiçbir yere sokulmamıştır, kapsam kararı gereği |
+| Zaman yönlendirilemez bölgede cismin spinör gibi dönüşmesi | Spin bu çalışmada hiçbir yere sokulmamıştır. Karar gözden geçirilmiş ve **korunmuştur**: spin eklemek, kapsamın on bir maddesinin dışına çıkmak olurdu, ve Bölüm 14.11'in saat bileşenleri spin gerektirmeden kurulabildiği için buna zaten gerek kalmamıştır |
 
 > Yeniden üretilenlerin sayısı itibara alınanların sayısını aşmaktadır, ama
 > bütün kaynakların yarısından azıdır. Bu çalışmanın kendi güvencesi altındaki
@@ -3819,7 +3820,7 @@ ikisi de kaydedilmelidir.
 | Sonuçlar arasındaki dağılım | Sapmaların üç değerli bir kümede olduğu | Her değere düşen ağırlık |
 | Yer çekimi kanalı | Tepki verdiği, yarım birimde $4{,}0000$ karşıtlık | Kanalın kapasitesi |
 | Karmaşık zaman kurgusu | Dönüş anını veren mekanizma; lapse kontur ölçütü hesaplanmış ve tutarlı çıkmıştır (Bölüm 14.10) | Ölçütün iki geçiş genliğinin kendisi üzerinde uygulanması; indirgenmiş biçimde kalmıştır |
-| Dönen parçacık ile yaratılmış çift | Sayımda ayrıştıkları | Ayırt edecek bir gözlem; yoktur |
+| Dönen parçacık ile yaratılmış çift | Sınır sayımının ve görünür yükün ikisinde de **aynı** olduğu, enerji bütçesinin ise ayrıştığı (Bölüm 26.6) | Enerji bütçesini sınırda ölçecek düzenek; tarif edilmemiştir |
 | Geçiş süresinin hangi okuması fiziksel | Beş okumanın hepsinin aynı genlikten hesabı | Aralarında seçim; üçü ışığın üstünde, ikisi altında |
 | Geçirgen eşiğin oran koşulu karşısındaki durumu | Bu ailede hiçbir profilin hem katman taşıyıp hem oran koşulunu sağlamadığı | Daha geniş bir geçiş ailesinde temsilci; aranmamıştır |
 
@@ -3849,6 +3850,33 @@ kaldırılamamalarıdır.
 Geri çekilenlerin sayısı, açık ve tartışmalı olanların toplamını aşmamaktadır.
 Bu, bilançonun kasıtlı bir ölçütüdür: kapatılan soruların sayısı, açık
 bırakılanları geçtiğinde hesap değil beyan yapılıyor demektir.
+
+### 26.6 Sınırda görülen: dönmüş dünya çizgisi ile yaratılmış çift
+
+Bu bölüm, yukarıdaki dördüncü açık maddeyi kapatmaz ama **keskinleştirir**
+(`src/particle/TimeReversalSignature`).
+
+Zaman yönelimi çöken bir bölgeye girip çıkan bir cisim izlenerek takip edilemez.
+Dışarıdaki gözlemcinin elinde yalnızca sınırdaki muhasebe vardır: kaç dünya
+çizgisi sınırı hangi yönde kesiyor ve ne taşıyor.
+
+**Sayım ayırt etmiyor.** İleri giderek giren ve geri giderek çıkan bir çizgi,
+tek bir zaman yönünde ısrar eden gözlemciye **iki** çizgi olarak görünür; hep
+aynı türden iki tane, hiçbir zaman biri girip biri çıkan. Sınır sayımı bu
+yüzden ikişer ikişer değişir, ve bu tam olarak bir çift yaratılmasının ya da yok
+olmasının değiştirdiği kadardır: $n$ dönmüş çizgi $+2n$ verir, $n$ yaratılmış
+çift de $+2n$ verir.
+
+**Görünür yük de ayırt etmiyor.** Bir çizginin zaman yönünü ters çevirmek
+taşıdığının işaretini de ters çevirir, dolayısıyla bölge, oraya hiçbir yük
+konmamışken dışarıya bir yük gösterir: bir dönmüş çizgi için $+2$, iki için
+$+4$, dört için $+8$. Ama aynı yük çift okumasında da görünür.
+
+**Enerji ayırt ediyor.** Yaratılmış bir çift, çizgi başına iki durgun enerji
+bedeli öder; dönmüş bir çizgi hiçbir bedel ödemez.
+
+> Açık madde bu nedenle şöyle daralır: kapatacak ölçüm bir **sayım** değil, sınır
+> boyunca bir **enerji bütçesidir**. Sayım ve yük, iki okumada da özdeştir.
 
 ---
 
