@@ -10,24 +10,24 @@ doi: "10.1103/PhysRevD.52.7333"
 comments: "10 pages, latex, no figures. Replying to - "Comment on `Failure of Standard Conservation Laws at a Classical Change of Signature'", S.A. Hayward, Phys. Rev. D52, 7331-7332 (1995) (gr-qc/9606045)"
 url: https://arxiv.org/abs/gr-qc/9601040
 stance: similiar
-body_source: "arXiv LaTeX kaynagi (gr-qc-9601040.tex) — denklemler LaTeX olarak korundu"
+body_source: "arXiv LaTeX source (gr-qc-9601040.tex), equations preserved as LaTeX"
 equation_blocks: 32
 figures: 0
 ---
 
 # Reply Comment: Comparison of Approaches to Classical Signature Change
 
-**Yazarlar:** Charles Hellaby, Tevian dray
+**Authors:** Charles Hellaby, Tevian dray
 
-**Dergi:** Phys.Rev. D52 (1995) 7333-7339
+**Journal:** Phys.Rev. D52 (1995) 7333-7339
 
-**Kaynak:** https://arxiv.org/abs/gr-qc/9601040 — arXiv LaTeX kaynagi (gr-qc-9601040.tex) — denklemler LaTeX olarak korundu
+**Source:** https://arxiv.org/abs/gr-qc/9601040 (arXiv LaTeX source, equations preserved as LaTeX)
 
 ## Abstract
 
 We contrast the two approaches to ``classical" signature change used by Hayward with the one used by us (Hellaby and Dray). There is (as yet) no rigorous derivation of appropriate distributional field equations. Hayward's distributional approach is based on a postulated modified form of the field equations. We make an alternative postulate. We point out an important difference between two possible philosophies of signature change --- ours is strictly classical, while Hayward's Lagrangian approach adopts what amounts to an imaginary proper ``time" on one side of the signature change, as is explicitly done in quantum cosmology. We also explain why we chose to use the Darmois-Israel type junction conditions, rather than the Lichnerowicz type junction conditions favoured by Hayward. We show that the difference in results is entirely explained by the difference in philosophy (imaginary versus real Euclidean ``time"), and not by the difference in approach to junction conditions (Lichnerowicz with specific coordinates versus Darmois with general coordinates).
 
-## Tam metin
+## Full text
 
 ```latex
  
@@ -930,3 +930,59 @@ in preparation.
 
  
 ```
+
+## What the paper argues
+
+This is Hellaby and Dray's reply in the four-round exchange with Hayward, and
+it is the round where they state their own position most plainly rather than
+attacking his.
+
+1. **They concede the ground the dispute stands on.** There is, as they put it,
+   "(as yet) no rigorous derivation of appropriate distributional field
+   equations". Hayward postulates one modified form; they postulate an
+   alternative. Neither is derived, so the choice between them is not settled
+   by the equations themselves.
+2. **They diagnose the difference as philosophical, not technical.** Their claim
+   is that the whole disagreement in results follows from one thing: their
+   treatment is strictly classical with real Euclidean coordinates throughout,
+   while Hayward's Lagrangian approach amounts to an imaginary proper time on
+   one side, "as is explicitly done in quantum cosmology".
+3. **They defend Darmois over Lichnerowicz.** Darmois-Israel conditions are
+   stated in general coordinates and ask only for the induced metric and the
+   extrinsic curvature to match; Lichnerowicz conditions, which Hayward
+   prefers, are stated in specific coordinates and ask for more. Their argument
+   is that the extra requirements are assumptions layered onto the field
+   equations rather than consequences of them.
+4. **They deny that the junction-condition choice does the work.** The
+   difference in results is "entirely explained by the difference in
+   philosophy... and not by the difference in approach to junction conditions".
+5. **They grant the limits of their own position.** The correct prescription
+   "remains a matter of conjecture", and Hayward's approaches are "reasonable
+   and interesting, but not the only possibilities".
+
+## Why this matters here
+
+Two things in this paper bear directly on the construction here, and they pull
+in opposite directions.
+
+**In its favour.** Their concession that no rigorous distributional derivation
+exists is the reason the weak choice can be adopted at all rather than being
+ruled out in advance. If the field equations settled the matter there would be
+nothing to choose. This is the ground on which the article's section 4 states
+the junction condition as a choice with a price rather than as a derivation,
+and the price is then computed instead of argued.
+
+**Against it.** Their central diagnosis, that the whole difference is imaginary
+versus real time, is denied point by point in Hayward's second comment
+(gr-qc/9606044), and the denial is checkable rather than rhetorical: that
+calculation uses real coordinates, is purely classical, and is done in normal
+coordinates, which is the same formalism used here. So the article cannot lean
+on this paper's diagnosis to set Hayward's objection aside. It has to answer
+the objection on its own terms, which is what section 3.7 does by computing the
+rate rather than disputing the philosophy, and what that computation returns
+does not favour the weak choice.
+
+**What remains genuinely open after this exchange.** Uniqueness of the
+distributional form of the field equations. Both sides agree it is unsettled;
+neither side's postulate is derived. That is recorded in the article's ledger
+of open questions rather than being resolved in either direction here.

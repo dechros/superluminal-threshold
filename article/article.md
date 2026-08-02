@@ -30,7 +30,18 @@ Eşik geçirgen kabul edilir. Bu, zayıf eklem koşulunun seçilmesidir ve bedel
 açıkça ödenir: geçiş yüzeyinde bir madde katmanı doğar, gücü kalınlığın tersiyle
 gider, ve yalnızca özel olarak ayarlanmış bir profilde tümüyle kaybolur. Bedel
 bundan da ağırdır: yüzey zamansal olmadığı için o katman baskın enerji koşulunu
-ihlal eder ve bu, madde seçimiyle onarılamaz.
+ihlal eder ve bu, madde seçimiyle onarılamaz. Üçüncü bir bedel Bölüm 3.7'de
+hesaplanmıştır ve en ağırıdır: kullanılan metrik ailesinde oran koşulunu geçen
+tek profil, güçlü koşulu sağlayan profildir.
+
+**Bu nedenle çalışmanın hedefi koşullu olarak konur.** Geçirgen okuma bir
+saçılma ifadesi olarak ayaktadır: mod geçirgenliği, ara bölgenin tipinden ve
+kütle kabuğundan hesaplanır, ve o hesap bir ara değerleme profili
+kullanmamaktadır. Ama geçirgen okumanın bu metrik ailesinde bir **geometrik
+temsilcisi yoktur**. İki hesabın birbirinden bağımsız olması, kodda öyle olduğu
+için doğrudur; fiziksel olarak savunulabilir olduğu **gösterilmemiştir**. Bu
+çalışmanın bütün geçirgen sonuçları, o bağımsızlığın savunulabilir olması
+koşuluna bağlıdır ve bu koşul açık bir soru olarak kaydedilmiştir.
 
 Parçacık iki okumayla birden taşınır. Hesap dalga paketiyle yapılır, anlatım
 nokta cisimle; aradaki sözlük kurulur ve nokta cisim okumasının dar paket
