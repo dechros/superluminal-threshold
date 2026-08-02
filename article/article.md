@@ -2895,6 +2895,7 @@ ne bölüm numarası ne kaynak numarası bulunur.
 | Maxwell alanının $D$ altındaki davranışı | `src/field/MaxwellField` |
 | Sylvester engeli ve itirazların hesabı | `src/critique/SylvesterObstruction`, `src/critique/ObjectionTests`, `src/critique/AlternativeRoutes` |
 | Anlaşmazlıkların uzlaşan ve çelişen olarak ayrılması | `src/critique/Reconciliation` |
+| Literatürün bıraktığı soruların sınıflandırılması | `src/critique/OpenQuestions` |
 
 **Sayısal güvenilirlik.** Modelin matrislerinin büyük kısmı tamsayı girdilidir
 ($0, +1, -1$) ve bu girdiler ikilik tabanda tam temsil edildiğinden permütasyon,
@@ -3202,7 +3203,87 @@ Bölüm 14.6'da açıkça bırakılmıştır.
 
 ---
 
-## 26. Anlaşmazlıkların iki türü ve hangisinin hangisi olduğu
+## 26. Literatürün bıraktığı sorular ve bu çalışmanın onlara duruşu
+
+Bu bölüm, konuyla ilgili literatürün çözmediği ya da tartışmalı bıraktığı
+soruları dört sınıfa ayırır ve her birinde bu çalışmanın nerede durduğunu
+söyler. Sınıflar farklı muamele gerektirir ve karıştırılmamalıdır.
+
+**Geri çekilen**, bir zamanlar ileri sürülmüş ve o zamandan beri çürütülmüş
+iddialardır. **Karşılığı olmayan**, hiçbir yayının kapsamadığı, dolayısıyla
+üzerinde anlaşılacak ya da anlaşılamayacak bir muhatabı bulunmayan sorulardır.
+**Açık**, hem dışarıda hem burada çözülmemiş olanlardır. **Tartışmalı** ise iki
+yayının aynı soruya farklı sayı verdiği durumlardır; deneyin kapatabileceği tek
+sınıf budur.
+
+### 26.1 Geri çekilenler
+
+Dördü de fikir değişikliğiyle değil, bir hesapla geri çekilmiştir. İkisi
+literatürün bu çalışmaya karşı, ikisi bu çalışmanın kendi kendine yaptığı
+düzeltmedir.
+
+| İddia | Durumu | Geri çekilme gerekçesi |
+|-------|--------|------------------------|
+| İki imza arasında sürekli yol kurulamaz | Geri çekildi | Yol vardır, bedeli iki zamanlı bir ara bölgeden geçmektir |
+| Öte taraf her şey için kötü konumlanmıştır | Geri çekildi | Kütle kabuğu dışında modlar patlar, kabuk üzerinde hiçbiri patlamaz |
+| Doyan gecikme hızlı bir geçiştir | Geri çekildi | O rejimde gecikme, depolanan normun sabit bir katıdır |
+| Geçirgen eşik enerji bakımından zararsızdır | Geri çekildi | Katman taşıyan her profil baskın koşulu ihlal eder |
+
+Son ikisi bu çalışmanın kendi sonuçlarını geri çekmesidir ve bu, bilançonun
+bir zafer listesi olmadığının doğrudan kanıtıdır.
+
+### 26.2 Karşılığı olmayanlar
+
+Üç konuda literatürde karşılaştırılacak bir sonuç yoktur. Bunlar özgünlük
+iddiası değil, **yalnızlık** kaydıdır: sayı doğru olsa da yanlış olsa da
+kontrol edecek bir muhatap bulunmamaktadır.
+
+| Soru | Durum |
+|------|-------|
+| İmza değişimi boyunca geçirgenlik katsayısı | Yayınlanmış hesap yok; buradaki sayı tek başınadır |
+| İmza değişiminden geçen dalga paketi | Yayınlanmış çalışma yok; paket katmanının bu durum için öncülü yoktur |
+| Öte taraftaki yönelimden dönüş olayına eşleme | Yayınlanmış çalışma yok |
+
+Üçüncüsü bu çalışmanın çekirdeğidir; dolayısıyla çekirdek, üzerinde
+kıyaslanacak literatürü bulunmayan bir sorudur. Bu hem fırsat hem risktir ve
+ikisi de kaydedilmelidir.
+
+### 26.3 Açık kalanlar
+
+| Soru | Elde olan | Eksik olan |
+|------|-----------|------------|
+| Sonuçlar arasındaki dağılım | Sapmaların üç değerli bir kümede olduğu | Her değere düşen ağırlık |
+| Yer çekimi kanalı | Tepki verdiği, yarım birimde $4{,}0000$ karşıtlık | Kanalın kapasitesi |
+| Karmaşık zaman kurgusu | Dönüş anını veren mekanizma | Kabul edilebilirlik ölçütü; benimsenmemiştir |
+| Dönen parçacık ile yaratılmış çift | Sayımda ayrıştıkları | Ayırt edecek bir gözlem; yoktur |
+
+Dördüncüsü özellikle ağırdır: dönen parçacık ile yaratılan çift, enerjinin
+büyüklüğünde uyuşup sayımda ayrışır, ve sayımı yapacak düzenek
+tarif edilmemiştir. Gidiş dönüşün gözlenebilir olması buna bağlıdır.
+
+### 26.4 Tartışmalılar
+
+Dört tanedir ve Bölüm 27.2'de iki rakip sayısıyla birlikte verilmiştir; burada
+tekrarlanmaz. Ayırt edici özellikleri, bakış açısı değiştirilerek
+kaldırılamamalarıdır.
+
+### 26.5 Bilanço
+
+| Sınıf | Sayı |
+|-------|------|
+| Geri çekilen | $4$ |
+| Karşılığı olmayan | $3$ |
+| Açık | $4$ |
+| Tartışmalı | $4$ |
+| **Toplam** | $15$ |
+
+Geri çekilenlerin sayısı, açık ve tartışmalı olanların toplamını aşmamaktadır.
+Bu, bilançonun kasıtlı bir ölçütüdür: kapatılan soruların sayısı, açık
+bırakılanları geçtiğinde hesap değil beyan yapılıyor demektir.
+
+---
+
+## 27. Anlaşmazlıkların iki türü ve hangisinin hangisi olduğu
 
 Rakip kuruluşları doğrulamak ya da yanlışlamak bir yöntemdir. Bu çalışma
 bunun yerine kapsayıcı bir yöntem izler: iki konum, bakılan yön farklı olduğu
@@ -3219,7 +3300,7 @@ içindeki ve literatürle olan anlaşmazlıklarını bu ölçüte göre ikiye ay
 parametre çevrilerek elde edilebiliyorsa uzlaşmış sayılır. İki tarafın
 birbirini ikna edebilmesi yeterli değildir.
 
-### 26.1 Tek bir madalyonun iki yüzü olan beş anlaşmazlık
+### 27.1 Tek bir madalyonun iki yüzü olan beş anlaşmazlık
 
 | Anlaşmazlık | Çevirilen parametre | Sonuç |
 |-------------|--------------------|-------|
@@ -3232,7 +3313,7 @@ birbirini ikna edebilmesi yeterli değildir.
 Beşinin hiçbiri muhakeme ile kapatılmamıştır. Her birinde iki okuma da
 hesaplanmış ve aralarındaki parametre gösterilmiştir.
 
-### 26.2 Yönteme direnen dört çelişki
+### 27.2 Yönteme direnen dört çelişki
 
 Aşağıdaki dördünde iki konum **aynı ölçüm için farklı sayılar** verir. Bakış
 açısı değiştirerek bu fark kalkmaz. Her satırda iki sayı da hesaplanmış ve
@@ -3252,7 +3333,7 @@ değildir. Modelin bugünkü hâli bunlardan hiçbirine karar vermemektedir.
 dört satırın her birinde iki sayının gerçekten farklı olduğu ayrı ayrı
 sınanmakta ve farklı çıkanlar sayılmaktadır.
 
-### 26.3 Yöntemin bilançosu
+### 27.3 Yöntemin bilançosu
 
 Dokuz anlaşmazlıktan beşi tek bir hesabın iki okuması olarak birleştirilmiş,
 dördü gerçek çelişki olarak ayakta bırakılmıştır. Kapsayıcı yöntem

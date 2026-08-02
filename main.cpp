@@ -7,6 +7,7 @@
 #include "core/Section.h"
 #include "critique/AlternativeRoutes.h"
 #include "critique/ObjectionTests.h"
+#include "critique/OpenQuestions.h"
 #include "critique/Reconciliation.h"
 #include "critique/SylvesterObstruction.h"
 #include "dynamics/Dispersion.h"
@@ -95,6 +96,7 @@ namespace
         sections.push_back(std::make_unique<slm::ObjectionTestsSection>());
         sections.push_back(std::make_unique<slm::AlternativeRoutesSection>());
         sections.push_back(std::make_unique<slm::ReconciliationSection>());
+        sections.push_back(std::make_unique<slm::OpenQuestionsSection>());
         sections.push_back(std::make_unique<slm::FarSideMotionSection>());
         sections.push_back(std::make_unique<slm::TimeProjectionSection>());
         sections.push_back(std::make_unique<slm::TimeHolonomySection>());
