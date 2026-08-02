@@ -1778,6 +1778,13 @@ ayrışır, farklı bir mekanizmayla değil. Sonuç açıktır:
 > bilgi taşımaz. Bu rejimde dönüş anının "yolculuk süresi" olarak okunması
 > **desteklenmemektedir**.
 
+Bu sonucun kapsamı Bölüm 14.11'de daraltılmıştır ve daraltan hesap yine bu
+modelin kendi araçlarıyla yapılmıştır. Yukarıdaki cümle, fazdan okunan gecikme
+ile oyalanma süresi çifti için doğrudur; ancak "engel rejiminde bağımsız bir
+geçiş saati yoktur" biçimindeki daha geniş okuma **yanlıştır**. Aynı genlikten
+türeyen ve depolanan normdan bağımsız olan, kalınlıkla doymayan bir okuma
+vardır.
+
 **Yayılımlı rejimde durum tersinedir.** Ara bölge yokken depolanan norm
 kalınlıkla doğrusal artar ($d = 1, 2, 4$ için $1{,}000$, $2{,}000$, $4{,}000$),
 dolayısıyla iki nicelik birlikte doyamaz ve geçiş okuması ayakta kalır. Bu,
@@ -1860,6 +1867,122 @@ Bu keyfilik ancak bir kabul edilebilirlik ölçütü benimsenerek kaldırılır 
 böyle bir ölçütün bu modelin geçişi tarafından sağlanıp sağlanmadığı burada
 gösterilmemiştir. Dolayısıyla yukarıdaki sayılar, ölçüt benimsendiğinde
 geçerli olan sayılardır.
+
+### 14.11 Geçiş süresinin beş okuması, tek çözüm üzerinde
+
+Bir parçacığın klasik olarak giremeyeceği bir bölgede ne kadar kaldığı sorusunun
+tek bir kabul görmüş cevabı yoktur ve anlaşmazlık aritmetik değildir: birbirine
+denk olmayan birkaç nicelik bu adı hak eder, her biri bir ölçümün geri
+döndüreceği şeydir ve birbirleriyle uyuşmazlar. Bu nedenle bunlardan birini tek
+başına aktarmak bir sonuç değil, savunulması gereken bir seçimdir. Aşağıdaki beş
+okuma, **aynı geçirgenlik genliğinden** türetilerek yan yana hesaplanmıştır
+(`src/intermediate/TraversalClocks`).
+
+İlk ikisi bilinen okumalardır: **fazdan gecikme**, geçirgenlik fazının frekansa
+göre türevi; **oyalanma süresi**, depolanan normun gelen akıya oranı. Sonraki
+ikisi frekansa göre değil, **engel yüksekliğine göre** türevden gelir ve tek bir
+karmaşık sayı oluşturur. Bu sayının gerçel kısmı, alana bağlanmış bir saatin
+dönme olarak göstereceği bileşendir; sanal kısmı ise hizalanma olarak
+göstereceği bileşendir. Beşincisi, iç dalga sayısının modülünden kurulan
+**yarı klasik** okumadır. Bunun için hiçbir yere spin sokulmamıştır: saat
+bileşenleri skaler genliğin engel yüksekliğine göre türevinden okunur; dönen bir
+spin bunları ölçmenin bir yoludur, tanımı değil.
+
+| $d$ | Faz | Oyalanma | Dönme | Hizalanma | Yarı klasik |
+|-----|-----|----------|-------|-----------|-------------|
+| $2$ | $1{,}4629$ | $0{,}5195$ | $0{,}5195$ | $2{,}6221$ | $2{,}4653$ |
+| $4$ | $1{,}4629$ | $0{,}5193$ | $0{,}5193$ | $5{,}0879$ | $4{,}9305$ |
+| $8$ | $1{,}4629$ | $0{,}5193$ | $0{,}5193$ | $10{,}0184$ | $9{,}8611$ |
+| $16$ | $1{,}4629$ | $0{,}5193$ | $0{,}5193$ | $19{,}8795$ | $19{,}7221$ |
+| $32$ | $1{,}4629$ | $0{,}5193$ | $0{,}5193$ | $39{,}6016$ | $39{,}4442$ |
+
+**Birinci sonuç: dönme bileşeni oyalanma süresini altı basamağa kadar yeniden
+üretir.** Bu iki hesap hiçbir formül paylaşmaz; biri iç alanın karesini kalınlık
+boyunca integre eder, öteki genliğin engel yüksekliğine göre logaritmik
+türevidir. Uyuşmaları, Bölüm 14.7'nin depolanan norm hesabının bir integrasyon
+artefaktı olmadığını bağımsız olarak doğrular.
+
+**İkinci sonuç: hizalanma bileşeni doymaz.** Kalınlık başına $1{,}2326$
+büyür ve yarı klasik okumayı $0{,}1573$'lük **sabit** bir farkla izler; fark
+kalınlıkla değişmediği için iki yüzeye aittir, iç bölgeye değil. Yani engel
+rejiminde doyma, geçişin bir özelliği değil, iki okumanın özelliğidir.
+
+**Işıkla karşılaştırma, okuma okuma yapılmak zorundadır.** Beş okumanın her
+birinin ima ettiği hız, ışık hızı birimiyle:
+
+| $d$ | Faz | Oyalanma | Dönme | Hizalanma | Yarı klasik |
+|-----|-----|----------|-------|-----------|-------------|
+| $4$ | $2{,}734$ | $7{,}702$ | $7{,}702$ | $0{,}786$ | $0{,}811$ |
+| $16$ | $10{,}937$ | $30{,}810$ | $30{,}810$ | $0{,}805$ | $0{,}811$ |
+
+Beş okumadan **üçü geçişi ışığın üstüne, ikisi altına** koyar ve bu bölünme
+kalınlığın bir kazası değildir; dörtte ve onaltıda aynıdır. Dahası bölünme
+rastgele değildir: **doyan üç okuma, ışığı geçen üç okumanın aynısıdır.** Bu tek
+bir olgudur, iki değil.
+
+Buradan çıkan sonuç modelin lehine değildir ve öyle sunulmamaktadır:
+
+> Geçişin ne kadar sürdüğü sorusuna tek bir sayı cevap vermez, ve geçişin ışığın
+> hangi tarafına düştüğü de bölgenin bir özelliği değildir. İkisi de bir ölçüm
+> seçimidir.
+
+Bu modelin sorduğu soru, parçacığın **bizim** saatimizde nereye düştüğüdür; yani
+dışarıdaki bir dedektöre geçen tepenin varışıdır. O gözlenebilir, kuruluşu
+gereği fazdan gecikmedir. Hizalanma bileşeni ise alana bağlanmış bir saatin
+**içeride** okuduğu şeydir; "ne kadar etkileşti" sorusunu cevaplar, "ne zaman
+vardı" sorusunu değil. Bu nedenle Bölüm 25'te faz okuması kullanılmaktadır. Bu
+gerekçe artık açıkça verilmektedir; daha önce sessizce devralınıyordu.
+
+### 14.12 Cephe ile tepe: hızlanan hangisi
+
+İlerlemiş bir tepe, bir şeyin engeli ışıktan hızlı geçtiği yolundaki her iddiaya
+karşı standart itirazdır ve itiraz yerindedir. Bazı modları ötekilerden daha iyi
+geçiren bir bölge paketi **yeniden biçimlendirir**: önce varan kısım en az
+zayıflatılır, dolayısıyla çıkan tepe çoğunlukla zaten öncü kenar olan şeyden
+kurulur. Tepe, hiçbir şey öne geçmeden erken görünür. Öne gönderilen bir şey
+yoktur; zaten orada olan bir parçadan bir biçim yeniden kurulmuştur.
+
+Bilginin taşınıp taşınmadığına karar veren nicelik tepe değil, **cephedir**:
+herhangi bir büyüklükteki ilk bozulma. Hızı, dağılım bağıntısının sınırsız
+frekanstaki davranışıyla belirlenir (`src/intermediate/SignalFront`).
+
+**Işık üstü bir hız tek başına delil değildir, ve bu bu çalışmadan eskidir.**
+Kütleli bir alan için faz hızı her frekansta ışığı geçer, grup hızı hiçbir
+frekansta geçmez, ve çarpımları tam olarak birdir:
+
+| $\omega$ | Faz hızı | Grup hızı | Çarpım |
+|----------|----------|-----------|--------|
+| $2{,}8$ | $1{,}6615$ | $0{,}6019$ | $1{,}000000$ |
+| $6$ | $1{,}0776$ | $0{,}9280$ | $1{,}000000$ |
+| $20$ | $1{,}0063$ | $0{,}9937$ | $1{,}000000$ |
+
+**Cephe sınırı alır ve sınır ışıktır.** Faz hızının ışığı aşma payı frekans
+büyüdükçe sıfıra düşer: $\omega = 10$ için $2{,}598 \times 10^{-2}$,
+$\omega = 100$ için $2{,}501 \times 10^{-4}$, $\omega = 1000$ için
+$2{,}500 \times 10^{-6}$, $\omega = 10^{5}$ için $2{,}500 \times 10^{-10}$.
+Bölge cepheye saydamdır: $d = 4$ için cephe $4{,}000001$, $d = 16$ için
+$16{,}000005$ gecikir, yani **tam ışık süresi kadar**. Cephe hiçbir kalınlıkta
+öne alınmaz.
+
+**İlerlemiş tepenin üzerinde taşındığı şey.** Öne alma büyürken onu taşıyan
+genlik çöker:
+
+| $d$ | Geçen genlik | Tepenin öne alınması |
+|-----|--------------|----------------------|
+| $2$ | $2{,}0364 \times 10^{-2}$ | $+0{,}5371$ |
+| $8$ | $2{,}4532 \times 10^{-8}$ | $+6{,}5371$ |
+| $32$ | $5{,}1651 \times 10^{-32}$ | $+30{,}5371$ |
+
+İkisi birbirine karşı hareket eder. Hiçbir kalınlık, ölçülebilir bir şey
+üzerinde öne alma satın almaz. Dolayısıyla:
+
+> Tepenin öne alınması bir sinyal taşımaz. Bu, etrafından dolaşılarak değil,
+> kabul edilerek kaydedilmektedir.
+
+Bölüm 25'teki dönüş olayı yerleşimi, bir tepenin nereye düştüğüne dair bir
+ifadedir; bir mesajın bölge içinden ışığı geçtiği iddiası değildir. Bu, engelden
+geçirim üzerine bir sınırdır ve **geçişin kendisi** hakkında hiçbir şey
+söylemez; orada ne döneceğine cephe değil, kütle kabuğu karar verir.
 
 ---
 
@@ -2881,6 +3004,8 @@ ne bölüm numarası ne kaynak numarası bulunur.
 | Eşiğin mod filtresi olması | `src/boundary/ModeFilter` |
 | İki geçişin ortak genliği ve dönüş anı | `src/intermediate/TwoCrossings` |
 | Oyalanma süresi ile fazdan gecikmenin karşılaştırılması | `src/intermediate/DwellTime` |
+| Geçiş süresinin beş okumasının yan yana hesabı | `src/intermediate/TraversalClocks` |
+| Sinyal cephesinin tepeden ayrılması | `src/intermediate/SignalFront` |
 | Gidiş dönüş muhasebesi: mod, yük, entropi | `src/particle/RoundTrip` |
 | Üç bileşenli enerji ve dönmenin bedeli | `src/particle/EnergyBookkeeping` |
 | Sonuç tablosu ve yeniden sayımı | `src/particle/StateTable` |
@@ -3197,9 +3322,19 @@ kısmı, bu koordinatın konumu olarak tanımlanmıştır ve hesap onu vermekted
 **Olmadığı şey.** Bu, ışıktan hızlı bir **yayılma** değildir. Aynı rejimde
 içeride grup hızı diye bir nicelik yoktur, çünkü mod sönümlüdür ve Bölüm
 18.13'te gösterildiği gibi kat edilen bir mesafe bulunmaz. Ölçülen şey, dönen
-paketin **tepe noktasının** nereye düştüğüdür. Engel geçişlerinde bilinen bu
-olgunun sinyal hızıyla ilişkisi, modelin kapatamadığı noktalardan biridir ve
-Bölüm 14.6'da açıkça bırakılmıştır.
+paketin **tepe noktasının** nereye düştüğüdür.
+
+**Ve bir sinyal taşımadığı.** Bu nokta artık açık bırakılmamakta, hesaplanmış
+olarak kapatılmaktadır. Bölüm 14.12'de cephe tepeden ayrı olarak hesaplanmıştır:
+cephe hızı frekans büyüdükçe ışık hızına düşer, bölge cepheyi hiçbir kalınlıkta
+öne almaz, ve öne alma büyürken onu taşıyan genlik $d = 32$ için
+$5{,}2 \times 10^{-32}$'ye çöker. Yukarıdaki $+30{,}5371$, bir mesajın ışığı
+geçtiği anlamına gelmez ve bu çalışma öyle bir iddiada bulunmamaktadır.
+
+**Ayrıca tek okuma da değildir.** Bölüm 14.11'de aynı genlikten türetilen beş
+okumadan üçü geçişi ışığın üstüne, ikisi altına koyar. Yukarıdaki tablo faz
+okumasıyla kurulmuştur, çünkü sorulan soru dışarıdaki bir dedektörde tepenin ne
+zaman göründüğüdür; ama bu bir seçimdir ve gerekçesi 14.11'de verilmiştir.
 
 ---
 
@@ -3256,6 +3391,10 @@ ikisi de kaydedilmelidir.
 | Yer çekimi kanalı | Tepki verdiği, yarım birimde $4{,}0000$ karşıtlık | Kanalın kapasitesi |
 | Karmaşık zaman kurgusu | Dönüş anını veren mekanizma | Kabul edilebilirlik ölçütü; benimsenmemiştir |
 | Dönen parçacık ile yaratılmış çift | Sayımda ayrıştıkları | Ayırt edecek bir gözlem; yoktur |
+| Geçiş süresinin hangi okuması fiziksel | Beş okumanın hepsinin aynı genlikten hesabı | Aralarında seçim; üçü ışığın üstünde, ikisi altında |
+
+Beşincisi Bölüm 14.11'de eklenmiştir ve doğrudan çekirdek soruya dokunur:
+geçişin ışığın hangi tarafına düştüğü bile okumaya göre değişmektedir.
 
 Dördüncüsü özellikle ağırdır: dönen parçacık ile yaratılan çift, enerjinin
 büyüklüğünde uyuşup sayımda ayrışır, ve sayımı yapacak düzenek
@@ -3273,9 +3412,9 @@ kaldırılamamalarıdır.
 |-------|------|
 | Geri çekilen | $4$ |
 | Karşılığı olmayan | $3$ |
-| Açık | $4$ |
+| Açık | $5$ |
 | Tartışmalı | $4$ |
-| **Toplam** | $15$ |
+| **Toplam** | $16$ |
 
 Geri çekilenlerin sayısı, açık ve tartışmalı olanların toplamını aşmamaktadır.
 Bu, bilançonun kasıtlı bir ölçütüdür: kapatılan soruların sayısı, açık

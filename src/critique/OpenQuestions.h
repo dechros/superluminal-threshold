@@ -91,7 +91,13 @@ namespace slm
         /// pair has been broken.
         static bool pairDegeneracyBroken();
 
-        /// Number of questions still open, counted from the four above.
+        /// Whether the question of which reading of the crossing time is the
+        /// physical one has been settled, which it has not. Several readings
+        /// are built from one amplitude, they disagree, and they do not even
+        /// agree on which side of the speed of light the crossing falls.
+        static bool physicalReadingSettled();
+
+        /// Number of questions still open, counted from the five above.
         static int openCount();
 
         /// Number of disagreements where two positions give different numbers

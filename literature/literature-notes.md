@@ -1311,3 +1311,680 @@ the object Section 24.6's curvature criterion computes, so this is a precedent f
 holonomy being the quantity that distinguishes the two signatures.
 
 ---
+
+# Part C. The far side: three times, and their reduction to one
+
+Bears on Sections 8, 8.1 to 8.5, 9, 9.1, 9.2, 10.1 to 10.14, 12, 12.1, 12.2,
+21.4, 24.1 to 24.6.
+
+## C1. Two-time physics: the extra time removed by gauge
+
+### [31] Bars, *Two-time physics*, arXiv:hep-th/9809034; *Two-time physics in field theory*, Phys. Rev. D 62 (2000) 046007, arXiv:hep-th/0003100; *Survey*, Class. Quantum Grav. 18 (2001) 3113, arXiv:hep-th/0008164
+PRIOR to Section 24.3 in spirit, and the anchor of this whole cluster. An
+`Sp(2,R)` gauge symmetry makes many one-time systems different gauge fixings of a
+single two-time system in `d+2` dimensions, so the extra time is removed by gauge
+rather than by fiat. Section 24.3 finds that the far-side rest states form a
+single orbit and that orientation there is gauge redundancy with no observable
+motion attached. Same mechanism, and Bars has the mature version: field theory,
+interactions, gravity and gauge backgrounds.
+
+### [213] Bars, Deliduman, Minic, *Lifting M-theory to two-time physics*, arXiv:hep-th/9810025
+PRIOR, and the clearest statement of the lifting direction. The massive
+non-relativistic free particle in $d-1$ space dimensions has an action with a
+non-linearly realised $SO(d,2)$ symmetry; by adding gauge degrees of freedom a
+host of one-time systems lift to the **same** $SO(d,2)$ covariant theory in $d+2$
+dimensions with manifest Lorentz symmetry and an `Sp(2,R)` gauge symmetry.
+Conversely the two-time action gauge fixes to the non-relativistic particle, the
+massive relativistic particle, and the particle in $AdS_{d-n} \times S^n$. For us
+the useful half is the converse: the same extra-time theory produces a
+**massive** one-time particle in one gauge and a massless one in another, so mass
+on our side is a gauge artefact of orientation on the far side. Compare
+Section 24.2's motion dictionary, and `[222]`, where mass is attributed to the two
+hidden times directly.
+
+### [214] Bars, Deliduman, Pasqua, *Supersymmetric two-time physics*, arXiv:hep-th/9812161
+CONTEXT. An `Sp(2,R)` gauge invariant particle action with manifest $SO(d,2)$,
+global supersymmetry and kappa supersymmetry, whose global and local
+supersymmetries are non-abelian generalisations of Poincare type and are
+**consistent with the presence of two timelike dimensions**. It provides a
+unified superparticle representation of $OSp(N/4)$, $SU(2,2/N)$ and $OSp(8^*/N)$,
+the superconformal groups underlying AdS/CFT dualities, and reduces by gauge
+choice to the ordinary massless superparticle. The value to us is narrow and
+real: supersymmetry, which is usually the first thing to break when the signature
+is exotic, survives two times here. Read against `[58]` and `[195]` to `[197]`,
+where fermions across a signature change are the problem.
+
+### [215] Bars, Deliduman, Minic, *Strings, branes and two-time physics*, arXiv:hep-th/9906223
+CONTEXT. The two-time formalism generalised from particles to strings and
+$p$-branes, with the two-time action gauge fixing to various one-time actions
+dual to each other under gauge transformations, including tensionless and rigid
+strings in flat $(d-1)+1$ and tensionless strings in $AdS_{d-n} \times S^n$.
+Compare `[212]`, where a tensionless string in $(2,2)$ acquires a holonomy
+structure it cannot have in $(3,1)$.
+
+### [216] Bars, *Two-time physics with gravitational and gauge field backgrounds*, arXiv:hep-th/0002140
+PRIOR, and the one that matters most for Section 19.7. **All** possible
+gravitational, gauge and other interactions experienced by particles in ordinary
+$d$ dimensions can be described in two-time language in $d+2$ dimensions, by
+including background fields in the worldline formulation. One two-time model with
+a fixed set of backgrounds gauge fixes to diverse one-time models, all dually
+related. To satisfy the two-time gauge symmetry the background fields must obey
+coupled differential equations that are generally covariant and gauge invariant in
+the $d+2$ target, and **the gravitational background obeys a null homothety
+condition**. Two consequences. Interactions are not an obstacle to an extra time;
+they are a constraint on the backgrounds. And the null homothety condition is the
+first concrete restriction in the corpus on what a metric with an extra time is
+allowed to be if it is to project consistently, which is the shape of constraint
+Section 24.1's slot assignment needs and does not have.
+
+### [217] Bars, Chen, Quelin, *Dual field theories in $(d-1)+1$ emergent spacetimes from a unifying field theory in $d+2$ spacetime*, arXiv:0705.2834
+### [218] Bars, Quelin, *Dualities among 1T field theories with spin, emerging from a unifying 2T field theory*, arXiv:0802.1947
+PRIOR, a pair, and together the strongest statement of the shadow picture.
+`[217]` reproduces the Standard Model as a two-time field theory in 4 space and 2
+time dimensions projected holographically onto an emergent $3+1$, with the strong
+CP problem resolved as a consequence of the higher symmetry, and then constructs
+**duals** of the Standard Model as other holographic images of the same $4+2$
+theory on a variety of emergent $3+1$ spacetimes, obtained as a family of gauge
+choices. `[218]` extends this to Klein-Gordon, Dirac and Yang-Mills fields
+together, and shows the shadow one-time theories must have **hidden relations
+among themselves**, taking the form of dualities and hidden spacetime symmetries;
+a subset of the shadows are one-time theories in different gravitational
+backgrounds, flat Minkowski, Robertson-Walker, $AdS_{d-k} \times S^k$ and
+singular ones, and the duality transformations among the conformally flat subset
+are constructed explicitly.
+
+This is the mature form of the article's own metaphor in Section 27: several
+readings that look like rival claims are projections of one object. Bars supplies
+the case where that is a theorem with the projection map written down, and the
+article should compare its inclusive method against it rather than only against
+the coin image. The honest difference: Bars's projections are gauge choices in
+one theory, and our two regions are joined by a junction condition, which is not
+a gauge choice.
+
+### [219] Frederico, Rivelles, *The transition amplitude for 2T physics*, Phys. Rev. D 82 (2010) 021701, arXiv:1002.1263
+PRIOR, and the most directly usable member of this cluster, because it works with
+a **propagator between an initial and a final point** rather than with an action.
+BRST-BFV quantisation of the `Sp(2,R)` constrained system in $D+2$ dimensions is
+performed once with a single gauge choice, producing one master amplitude
+$K(X_f, X_i)$ manifestly $SO(D,2)$ invariant. The lower-dimensional systems are
+then obtained **not by gauge fixing again but by restricting the endpoints to lie
+on a chosen hypersurface** of the $D+2$ space, different hypersurfaces
+reproducing the known one-time systems.
+
+This is the sharpest available form of the article's core question stated
+dynamically. Our map takes an orientation and a motion on the far side to an
+event on our time axis; here an amplitude on the many-time space is restricted to
+endpoints on a hypersurface, and which hypersurface you choose is what the
+surviving time is. Section 25 should be written against this: the domain is the
+far-side data, the codomain is the endpoint on the chosen hypersurface, and the
+map is a restriction of one invariant amplitude rather than a new object.
+
+### [220] Bars, *Gauge symmetry in phase space, consequences for physics and spacetime*, arXiv:1004.0688
+CONTEXT, the review, and the right single citation for the mechanism. A gauge
+symmetry in phase space imposing equivalence of momentum and position at every
+instant of the worldline forces two times rather than one, with one-time
+phenomena in $3+1$ appearing as shadows of the same phenomena in $4+2$. The
+claim to note: the extra $1+1$ dimensions are **neither small nor hidden**, and
+additional data about their properties can be gathered by observers stuck in
+$3+1$. That is precisely the article's Section 24.5 claim, that orientation on the
+far side commands an interval here, and Bars asserts it for a gauge-equivalent
+extra time where we assert it for a junction-separated one. The difference should
+be stated: in Bars's setting nothing crosses, because the extra dimensions are not
+elsewhere.
+
+### [221] Kamenshchik, Marrani, Muscolino, *Two-time physics, Carroll symmetry and Jordan algebras*, arXiv:2603.16276
+CONTEXT, the most recent member. Carroll particles with nonzero energy, that is
+particles that **remain at rest**, are described within two-time physics, with
+classical and quantum treatments, and links are drawn between the extended phase
+space of two-time physics and Freudenthal triple systems over a semisimple cubic
+Jordan algebra. The relevance is direct and narrow: a particle that stays at rest
+while carrying energy is exactly what Section 24.3 says a far-side body is,
+orientation without observable motion. Carroll symmetry is the existing name for
+that regime, and the article should use it rather than describing the situation
+from scratch.
+
+### [222] Dartora, Cabrera, *The Dirac equation and a non-chiral electroweak theory in six dimensional spacetime from a locally gauged SO(3,3) symmetry group*, arXiv:0901.4230
+PRIOR, and the closest published relative of the article's own reduction problem.
+A toy electroweak model in six dimensions with **three timelike and three
+spacelike** coordinates, invariant under $SO(3,3)$. The six-dimensional gamma
+matrices are constructed, a Dirac-like Lagrangian written, and the spinor
+decomposed into two Dirac spinors interpreted as the electron and the neutrino,
+so that the two fields merge naturally. The structural claim: **the $SO(3,3)$
+symmetry must be locally broken to the observable $SO(1,3)$, with only one
+observable time component $t_z$**, and the $t_z$ axis need not be the same at
+every point of spacetime; the effect of that local breaking is perceived by
+observers as the existence of the gauge fields. The origin of mass is attributed
+to the remaining two hidden timelike dimensions, with no Higgs mechanism.
+
+Three things for us, and this is the single most useful new entry in Part C.
+First, three times reduced to one observable time is our exact configuration
+(Section 8, Section 21.4), and here the reduction is a **local symmetry
+breaking** with a position-dependent choice of which time is observed, not a
+global projection. Second, the residue of the broken symmetry is the gauge
+fields, which is a published precedent for Section 19.7's treatment of the
+Maxwell field under $D$ and for `[129]`'s $U(1)$ bundle measuring the twist of the
+time axis; three independent lines now say the trace of an unobserved time
+orientation is a gauge field. Third, mass is what the hidden times leave behind,
+which is the same answer `[200]` reaches from signature oscillations and
+`[213]` from gauge fixing. The caution: his signature is $(3,3)$ and ours is
+$(3,1)$, so the count of hidden times differs, and the article must not quote his
+mass mechanism as if it applied unchanged.
+
+### [32] Piceno, Rosado, Sadurni, *Fundamental constraints on two-time physics*, Eur. Phys. J. Plus 131 (2016) 352, arXiv:1512.05345
+CHALLENGE to the intermediate region as a whole, and the direct subject of
+Section 21.4. Extending Newton's second law to $1+2$ dimensions and integrating
+it exactly gives **effective single-time evolution for any initial condition**.
+In the quantum case, imposing probability conservation on a two-time unitary
+evolution yields a generalised uncertainty relation that bounds the observability
+of the second temporal axis by level spacings, total duration and Planck's
+constant. If extra times collapse to an effective single time whenever
+probability is conserved, the far side may be far less exotic than Section 8
+claims.
+
+**Sharpened by finding 2.** Our own zero-curvature calculation says the free
+far-side theory is flat and the interior therefore records nothing, which is a
+collapse of exactly the kind this paper predicts, obtained independently and by a
+different criterion. The article's answer is not that the collapse fails but that
+it is incomplete: the curvature is nonzero at the **two threshold surfaces**, and
+only in the two planes touching the crossing slot, value $3{,}000$ against a
+return-moment shift of $1{,}6383$. So the extra times are unobservable in the
+interior, as this paper says, and observable only through the boundary. That is a
+much narrower claim than the old notes attributed to Section 8, and it is the
+correct one.
+
+### [33] Nash, *Possible consistent extra time dimensions in the early universe*, arXiv:1310.0697
+SUPPORT. An early universe with four time dimensions in which the extra times do
+not source instabilities: the perturbations have decaying quasi-normal modes. A
+counterweight to the claim that extra times are automatically fatal.
+
+### [34] Pettini, *Quantum entanglement without nonlocal causation in (3,2)-dimensional spacetime*, Phys. Rev. Research 7 (2025) 013261, arXiv:2311.17070
+SUPPORT, peer reviewed. Uses an extra time dimension with a warping factor so that
+finite-velocity information exchange reproduces entanglement correlations, and the
+warp confines massive particles in the extra time, explaining why it is not
+experienced. Proposes a Bell-type experiment. This is the only paper in the corpus
+that turns extra time into a proposed measurement, and it is therefore the closest
+model for Section 23. Note that it explains correlation by exchange, where
+Section 19.4 insists correlation is not a signal; the two positions are not
+compatible and the article should say which it holds.
+
+### [107] Dvali, Gabadadze, Senjanovic, *Constraints on extra time dimensions*, arXiv:hep-ph/9910207
+CHALLENGE for Sections 21.4 and 4.2, and quantitative. With gravity propagating
+in the extra times, the Newtonian potential is screened by tachyonic
+Kaluza-Klein gravitons and the gravitational self-energy acquires an **imaginary
+part**, read either as an amplitude to disappear into nothing, giving causality
+and probability violation in low-energy processes, or as an artefact of decay
+into unphysical negative energy tachyons. Section 4.2 and Section 19.2 let
+gravity see the far side; this is what that costs, and it is a phenomenological
+bound rather than a philosophical objection.
+
+### [223] Matsuda, Seki, *Gravitational stability and screening effect from extra timelike dimensions*, arXiv:hep-th/0105080
+CHALLENGE and SUPPORT at once, and it puts numbers on `[107]`. For one extra
+timelike dimension of scale $L$, the tachyonic graviton tower is analysed
+rigorously for the gravitational stability of spherical massive bodies. Two
+results: some spherical bodies of radius $R$ **can be stable at critical radii
+$R = 2\pi L p$** for positive integer $p$; and generically, for short distances
+$0 < R \leq \pi L$, the gravitational force from ordinary massless graviton
+exchange is **screened** by the Kaluza-Klein exchange of tachyonic gravitons.
+
+Two things for us. Stability is not lost outright, it is lost except at a
+discrete set of radii, which is a quantisation condition of the same shape as
+Section 18.9's quantised deflection spectrum and worth comparing. And screening
+at short distance is a definite prediction for the gravitational channel of
+Section 19.5, where the article computes a contrast of $4{,}0000$ at half a unit
+and reports that the channel's capacity is unknown. Screening is what this
+literature says the channel does at that scale, and the article should check
+whether its contrast has the sign of a screening effect.
+
+### [108] Foster, Muller, *Physics with two time dimensions*, arXiv:1001.2485
+SUPPORT for Section 21.4, and the paper that gives the article its escape clause.
+The standard arguments that rule out two times **do not apply if the dynamics of
+the additional time is thermal or chaotic and supports no long-lived timelike
+excitations**. That is a testable condition on our intermediate region, and the
+article's claim that the far side carries no arrow of time is close to, but not
+the same as, the condition stated here. Section 21.4 should adopt this as the
+form its answer takes rather than asserting collapse to a single time. Note that
+finding 2 gives a different and stronger reason for the same conclusion: the free
+interior is flat, so there are no long-lived excitations to record a path
+because there is no holonomy at all.
+
+## C2. Multi-time wave functions: the well-behaved cousin, and why we are not it
+
+### [75] Tumulka, *Multi-time wave functions versus multiple timelike dimensions*, Found. Phys. 47 (2017) 1582, arXiv:1708.03376
+CHALLENGE, and the paper Section 21.4 has to answer. Draws the distinction the
+article must not blur: multi-time wave functions, one time per particle, are well
+behaved and have unique solutions with a conserved probability current;
+equations on a manifold with several timelike **dimensions**, signature $++--$
+and the like, are typically ill posed and presumably unphysical. Our intermediate
+region is the second kind, not the first, and this paper says so explicitly.
+
+### [76] Petrat, Tumulka, *Multi-time Schrödinger equations cannot contain interaction potentials*, J. Math. Phys. 55 (2014) 032302, arXiv:1308.1065
+PRIOR. The consistency condition on the $N$ Hamiltonians rules out interaction by
+multiplication operators. If our three times were ever given independent evolution
+equations, interaction could not be put in as a potential, which is a structural
+constraint on any dynamics written in the intermediate region.
+
+### [77] Nickel, Deckert, *Consistency of multi-time Dirac equations with general interaction potentials*, J. Math. Phys. 57 (2016) 072301, arXiv:1603.02538
+CHALLENGE to `[76]` and therefore useful. Admissible potentials do exist once spin
+coupling is allowed, with an explicit example, but **none of them is Poincaré
+invariant**. The escape route from the no-go exists and costs the symmetry we care
+most about.
+
+### [78] Lienert, Petrat, Tumulka, *Multi-time wave functions*, J. Phys. Conf. Ser. 880 (2017) 012006, arXiv:1702.05282
+CONTEXT. The review of the whole multi-time programme, including the consistency
+condition and how probability conservation is arranged when it can be. The right
+single citation for Section 21.4.
+
+### [224] Petrat, Tumulka, *Multi-time wave functions for quantum field theory*, Annals of Physics 345 (2014) 17, arXiv:1309.0802
+PRIOR, and it supplies the reduction rule the rest of this cluster relies on. A
+quantum field theory is formulated in terms of multi-time wave functions, for a
+theory featuring particle creation and annihilation, starting from the
+particle-position representation of Fock states, with a **variable number of time
+variables**, consistent multi-time evolution equations, and an equivalence, under
+natural assumptions, with the Tomonaga-Schwinger representation and the
+Heisenberg picture. The reduction rule is that the single-time wave function is
+recovered by **setting all time arguments equal**.
+
+That rule is what Section 21.4 needs and does not state. Our three far-side times
+reduce to one on our side; the multi-time literature's answer to how is the
+diagonal restriction, and `[219]`'s answer is restriction of the endpoints to a
+hypersurface. These are the same operation seen in two formalisms, and the
+article should name one. The variable number of times is also the right structure
+for a round trip in which a particle can return as a pair.
+
+### [225] Lienert, *Multi-time propagators and the consistency condition*, arXiv:2107.06873
+PRIOR, and after finding 2 the most important entry in Part C. The $N$ time
+evolutions are built as Feynman propagators, one per time variable, and their
+mutual compatibility is expressed as a **Wilson line condition on the space of
+times**, equivalent to a **zero curvature condition** for the connection whose
+components are the $N$ Lagrangians. When the curvature vanishes, transport in the
+space of times is path independent: it does not matter along which route you move
+from the initial to the final time configuration, so an orientation among the
+times carries no physical information and the reduction to one time is
+unambiguous. When it does not vanish, and the paper notes this is what happens
+once interaction is present, transport is path dependent and the route leaves a
+measurable **holonomy** on the wave function.
+
+**This criterion was applied, and it is finding 2.** Section 24.6 computes it.
+For the free far-side field the three generators are the components of one energy
+vector, they commute, and **all three curvature components are exactly zero**;
+the holonomy of a closed path vanishes for any path length, tested to $1000$
+units. The interior therefore records nothing, and the orientation dependence
+found by scattering in Section 24.4 cannot originate there. The curvature is
+instead supplied by the **two threshold surfaces**, whose matching mixes the
+crossing direction into the transverse directions so that the generators stop
+commuting; the curvature is proportional to the coupling strength and vanishes
+with it, so the whole effect belongs to the surfaces. Case by case:
+
+| Case | Surface curvature | Shift of the return moment |
+|------|-------------------|----------------------------|
+| Vector with no weight in the crossing slot, rotated in the plane of the other two slots | $0$ | $0$ |
+| General vector, rotated in a plane touching the crossing slot | $3{,}000$ | $1{,}6383$ |
+
+And the curvature is nonzero only in the two planes touching the crossing slot;
+the plane spanned by the other two slots stays flat even with the surfaces
+included. That is the **same** selection of two planes out of three that
+Section 18.15 reaches from the transmission phase, by an independent route.
+
+Two verdicts follow, and both are changes. The reduction of three times to one is
+unambiguous **in the interior** and ambiguous **only at the boundary**, which is
+a sharper and more defensible position than the old notes' framing. And the
+article's orientation trace is located rather than merely asserted: scattering
+gives the existence of the effect, the curvature criterion gives its place.
+Neither calculation says this alone.
+
+### [226] Lienert, Tumulka, *Born's rule for arbitrary Cauchy surfaces*, Lett. Math. Phys. 110 (2020) 753, arXiv:1706.07074
+SUPPORT, and it is the entry Section 10.1 needs. Detectors placed along a Cauchy
+surface $\Sigma$ in Minkowski space, in a theory with fixed or variable particle
+number, are shown to obey a "curved Born rule": the probability distribution of
+the detected configuration on $\Sigma$ has density $|\psi_\Sigma|^2$, derived
+from Born's rule in one Lorentz frame plus a collapse rule, under two hypotheses
+on the time evolution, **no interaction faster than light and no propagation
+faster than light**. The wave function $\psi_\Sigma$ comes from the
+Tomonaga-Schwinger equation or from a multi-time wave function.
+
+Two consequences, in opposite directions. Constructively, this is how a
+probability is read on a surface that is not a constant-time slice, which is what
+the article must do at each threshold surface; the entry crossing and the exit
+crossing are exactly two such surfaces. Restrictively, the derivation assumes no
+faster-than-light propagation, which is what our configuration denies, so the
+result does not transfer without argument. The article should state that its
+detection statistics at the threshold are the curved Born rule with that
+hypothesis removed, and that removing it is not free.
+
+### [227] Höhn, Russo, Smith, *Matter relative to quantum hypersurfaces*, arXiv:2308.12912
+SUPPORT, and it builds the general apparatus for the operation the article
+performs by hand. Parameterized field theory puts the embedding $X$, the
+hypersurface itself, into the phase space and quantizes it, so the many local
+times of the Tomonaga-Schwinger description are **dynamical variables and not
+background labels**. Physical states are annihilated by the constraints, and the
+single-time description is recovered as a conditional wave functional
+$|\psi_\phi[X]\rangle$, shown to obey the Tomonaga-Schwinger equation; that is
+the precise sense in which one effective time emerges from a multi-time
+structure. The decisive result for us is the frame change: hypersurfaces are
+treated as **quantum reference frames**, explicit transformations are given
+between descriptions relative to different slices including nonclassical ones,
+and **the particle content is frame dependent, with particle creation appearing
+purely from the change of slice**.
+
+So a reorientation of the surface that defines "now" is not a relabelling; it
+changes what is observed. That is the operational answer to whether an
+orientation among times can move an event on the single time axis, and it says
+yes. It also supplies relational Dirac observables and a deparameterization map,
+so one can say what is invariant across all choices and what is orientation
+dependent, which is exactly the split Section 24.3 draws between gauge redundancy
+and physical orientation. And the frame-dependence of particle content is a
+second, independent reason for the degeneracy of Section 26.3, item four: whether
+what returns is one particle or a created pair may not have a frame-independent
+answer at all. Compare `[131]`, where the global Hilbert space is one-dimensional
+while each observer's is a Fock space.
+
+## C3. The ultrahyperbolic equation: predictability and its price
+
+### [73] Craig, Weinstein, *On determinism and well-posedness in multiple time dimensions*, arXiv:0812.0210
+PRIOR and decisive for Sections 12.1 and 21.4. For the ultrahyperbolic equation
+the Cauchy problem on a codimension-one hypersurface of mixed signature **is**
+well posed in Sobolev spaces, but only under a nonlocal constraint on the data;
+on higher-codimension hypersurfaces it is ill posed through failure of
+uniqueness. Section 12.1 says predictability collapses on the far side. The truth
+is finer: it collapses locally but can be restored by a nonlocal constraint, and
+the price of that constraint is the thing to argue about.
+
+### [74] Weinstein, *Multiple time dimensions*, arXiv:0812.3869
+CHALLENGE to the framing of Section 12.1. The companion essay states the
+conclusion bluntly: contrary to conventional wisdom there is a well-posed,
+deterministic, stable initial value problem in multiple time dimensions. If this
+is right, the loss of determinism is not a consequence of the equation type but of
+a particular choice of initial surface. Section 12.2 partially concedes this by
+restricting to the mass shell, which is a restriction of the data rather than of
+the surface, and Section 26.1 lists the unqualified claim as withdrawn.
+
+### [109] Kenig, Ponce, Rolvung, Vega, *The general quasilinear ultrahyperbolic Schrodinger equation*, arXiv:math/0503206
+SUPPORT for Sections 12.1 and 21.4, narrow but real. A local existence theory is
+established for the initial value problem of the general quasilinear
+ultrahyperbolic Schrodinger equation. Section 12.1 derives loss of determinism
+from the equation type being ultrahyperbolic; this is a theorem that the
+ultrahyperbolic initial value problem is locally well posed in a genuine class.
+The article's argument must therefore be about the global problem or about the
+choice of initial surface, and it should say which.
+
+### [123] Cobos, Guilfoyle, *An extension of Asgeirsson's mean value theorem for solutions of the ultrahyperbolic equation in dimension four*, arXiv:2011.11330
+### [124] Cobos, Guilfoyle, *A conformal mean value theorem for solutions of the ultrahyperbolic equation*, arXiv:2210.08155
+PRIOR, taken together, and they identify the nonlocality. Asgeirsson's 1937
+theorem says a solution of the ultrahyperbolic equation in four variables has
+equal integrals over certain **pairs of conjugate circles**. These two papers
+extend that to all non-degenerate conjugate conics, conjugate hyperbolae,
+parabolae and line-empty pairs, using the conformal invariance of the
+four-dimensional ultrahyperbolic equation under the conformal group of the $2+2$
+pseudo-Euclidean space, and identify the admissible pairs with the two rulings of
+a doubly ruled surface in Euclidean 3-space.
+
+Two things follow, and the second is a priority finding.
+
+First, the constructive one. The nonlocal constraint is not an arbitrary side
+condition. It is a **mean value identity over conjugate conics**, it is
+conformally covariant on a $2+2$ region, and after these two papers the full
+family of curve pairs over which it holds is classified. The datum is not a value
+at a point but an average over a conic, and the conjugate conic carries the same
+average. Our intermediate region is $(3,1)$ rather than $(2,2)$, so the
+four-variable statement applies to sections of it, not to the whole; the article
+must say which.
+
+Second, the uncomfortable one. **The origin of the constraint is that solutions of
+the ultrahyperbolic equation arise as the compatibility condition for a function
+on line space to be the line integrals of a function on Euclidean 3-space.** The
+data satisfying the constraint are exactly the data that are already the shadow of
+an object living in one dimension fewer, with one time. Imposing the nonlocal
+constraint to restore predictability therefore risks smuggling in the answer: it
+restores prediction only for far-side configurations that were secretly one-time
+configurations all along. The article can use it, but cannot claim predictability
+has been recovered for a genuinely multi-time region until it shows its admissible
+data are not of that restricted form.
+
+### [125] Guilfoyle, *From CT scans to 4-manifold topology*, arXiv:2309.14826
+SUPPORT, and the single reference to cite for the whole of the above. A survey of
+the four-dimensional ultrahyperbolic equation from the geometric, analytic and
+topological sides at once: the canonical **neutral metric on the space of oriented
+geodesics** of a three-dimensional space form, the mean value theorem, and, the
+part Section 12.1 needs, **a new solution of the Cauchy problem over a certain
+family of null hypersurfaces**. That is a positive well-posedness result on a
+class of initial surfaces which is neither the spacelike nor the mixed-signature
+class already discussed.
+
+### [126] Garetto, Tramontana, *Schrödinger ultrahyperbolic equations with singular coefficients*, arXiv:2603.03170
+SUPPORT, and it extends `[109]` in exactly the direction the threshold needs.
+$H^\infty$ well-posedness in the very weak sense is proved for the Cauchy problem
+of Schrödinger ultrahyperbolic equations whose coefficients are **less than
+continuous**, under assumptions on the distributional structure of the
+coefficients and decay of the lower-order terms, with consistency against the
+classical smooth results. Our configuration has a discontinuous metric at the
+crossing surfaces, so any well-posedness theorem requiring smooth coefficients
+does not apply to it. This one does not require them. It is the correct technical
+setting for a Cauchy problem posed **across** the threshold rather than inside one
+region.
+
+### [127] Demchenko, *On a certain representation of a solution to the characteristic problem for the ultrahyperbolic equation*, arXiv:2604.22402
+CONTEXT, narrow. A well-posed set-up for the ultrahyperbolic characteristic
+problem with data on a characteristic hyperplane, and a representation of the
+solution suitable for analysing its asymptotics at infinity. Two uses: a second
+class of surface on which the problem is well posed, adding to `[125]`, and the
+asymptotic representation is what one needs to say anything about a far-side
+solution at large parameter, which is the only regime in which the return crossing
+can be discussed.
+
+### [35] Holland, *A note on the ultrahyperbolic wave equation in 3+3 dimensions*, arXiv:1211.4164
+CONTEXT, mathematics. The ultrahyperbolic wave operator and the Xi transform form
+an exact couple. Relevant to the structure of solutions when the number of times
+exceeds one.
+
+## C4. What can be said on the far side: fields, states, and the geometry
+
+### [36] Paczos, Debski, Cedrowski, Charzynski, Turzynski, Dragan, Ekert, *Covariant quantum field theory of tachyons*, Phys. Rev. D 109 (2024) 018501, arXiv:2308.00450
+CHALLENGE to Section 10, and the one the article must answer. Claims that the
+three standard obstructions, spectrum unbounded from below, unstable
+frame-dependent vacuum, and non-covariant commutators, are artefacts of
+representing the Lorentz group in too small a Hilbert space, and that doubling
+the space to `F (x) F*` removes all three. Sections 10.1 to 10.3 list three
+obstructions of the same character. If this construction works, that section is
+answered.
+
+### [37] Jodlowski, *Covariant quantum field theory of tachyons is unphysical*, Phys. Rev. D 110 (2024) 115042, arXiv:2406.14225
+SUPPORT for Section 10, and it settles the previous entry. The doubled-space
+theory **is not quantum at all**: the tachyon field commutes at every point, so
+the canonical commutation relations fail, and what remains is a classical theory
+with no quantum dynamics in the twin space. The Feynman prescription there
+violates unitarity, and the LSZ asymptotic condition cannot be established by
+substituting non-normalisable plane waves. Section 21.2 verifies the vanishing of
+the commutator in the doubled space independently. So the obstructions survive the
+proposed cure, and this is a peer-reviewed result to lean on.
+
+### [38] Jodlowski, *Is a covariant virtual tachyon viable?*, Phys. Rev. D 113 (2026) 065016, arXiv:2602.20474
+SUPPORT, stronger. Purely virtual tachyons under the fakeon prescription do not
+cure the instability either, and their interactions with Standard Model fields
+induce Lorentz violation with a quantitative bound. Together with the previous
+paper this establishes that no covariant quantum field theory of superluminal
+objects, propagating or virtual, is currently available. Read against Section 10
+this is agreement; read against the model as a whole it is a warning that the far
+side may not admit a quantum field theory in any formulation, ours included.
+
+### [39] Ostrowski, *Casimir effect for tachyonic fields*, Found. Phys. Lett. 18 (2005) 227, arXiv:hep-th/0307051
+PRIOR to Section 10.13 and in direct numerical conflict with it. Computing the
+renormalised vacuum energy by the Abel-Plana formula in an absolute
+synchronisation scheme, the tachyonic Casimir energy and force are **not**
+monotonic: they oscillate, change sign repeatedly, are not differentiable in the
+separation, and the force has jumps to infinity. Section 10.13 quotes smooth
+numbers, $-0{,}006854$ for like conditions and $+0{,}005997$ for opposite ones,
+and Section 27.2 files the sign of the force as one of the four measurements that
+would decide a real contradiction. Either the far-side field is not tachyonic in
+Ostrowski's sense, or one of the two calculations does not apply.
+
+### [40] Rembielinski, *Quantization of the tachyonic field and the preferred frame*, arXiv:hep-ph/9509219
+PRIOR, and an alternative to our whole approach. Consistent quantisation of an
+imaginary-mass field via a choice of synchronisation that keeps absolute causality
+and exact Lorentz symmetry, at the price of a preferred frame arising from
+spontaneous breaking of the synchronisation group. The relativity principle is
+given up, Lorentz symmetry is not. Together with `[15]` this is the standing
+alternative: a preferred frame buys consistency. Our model pays a different price,
+the layer that violates the dominant energy condition. The article should say that
+these are the two known prices and that it chose one.
+
+### [41] Radzikowski, *Stable, renormalizable, scalar tachyonic quantum field theory with chronology protection*, arXiv:0804.4534
+CONTEXT. Microlocal argument that Lorentz symmetry breaking is required for a
+renormalizable tachyonic theory, then a model in a preferred tachyon frame with no
+exponentially growing modes, satisfying a chronology-protection notion of
+causality and the Hadamard condition. Another instance of the same trade.
+
+### [68] Heckman, Joyce, Sakstein, Trodden, *Exploring 2+2 answers to 3+1 questions*, arXiv:2208.02267
+SUPPORT, and the single most useful entry for Section 7.5. Kleinian signature is a
+legitimate computational arena: just as Euclidean continuation constructs the
+ground state, continuation to $(2,2)$ constructs a state of **low particle flux**
+along the continued direction, and $(2,2)$ admits its own supersymmetry algebra
+constraining correlators. Our $(2,2)$ intermediate region therefore has a
+defensible status, but as an auxiliary continuation rather than as a region
+anything lives in. Compare Section 10.8, whose main finding is that the two regions
+are analytic continuations of one Euclidean theory; that is this paper's framing
+adopted as a result.
+
+### [69] Crawley, Guevara, Miller, Strominger, *Black holes in Klein space*, arXiv:2112.03954
+SUPPORT for Section 7.2. Kerr-Taub-NUT continued to $(2,2)$ has a global structure
+with a toric Penrose diagram resembling its Lorentzian counterpart, and the
+continuation is induced naturally by continuation of the S-matrix. The Kleinian
+side of a black hole is a well-defined geometry, not a breakdown.
+
+### [70] Atanasov, Ball, Melton, Raclariu, Strominger, *(2,2) scattering and the celestial torus*, arXiv:2101.09591
+CONTEXT for Sections 7.5 and 12. In $(2,2)$, null infinity has only one connected
+component and becomes a null interval times a celestial torus; there is no clean
+separation into past and future infinity. That is the asymptotic statement of what
+Section 12 says about predictability: an ultrahyperbolic region has no
+in-state/out-state split to hang a Cauchy problem on.
+
+### [71] Pavšič, *Quantum field theories in spaces with neutral signatures*, arXiv:1210.6820
+SUPPORT with a caveat, for Sections 10.3 and 10.13. In neutral signature the
+positive and negative energy contributions cancel and the vacuum energy vanishes,
+so there is no cosmological constant problem. Stability under interactions is the
+open issue, and the toy oscillator in $M_{1,1}$ stays bounded for some
+interactions and runs away for others. The best available answer to Section 10.3's
+missing stable vacuum, and it is a conditional one.
+
+### [72] Sabra, *Flow equations in arbitrary signature*, arXiv:2111.05141
+CONTEXT for Sections 10.5 to 10.8. Four-dimensional $N=2$ supergravity in $(t,s)$
+signature for all $(t,s)$, with the Euclidean and neutral cases governed by
+para-special Kähler geometry. The technical point: passing to neutral signature
+replaces $i$ by a para-complex unit with $e^2 = +1$, which is exactly the
+structure our $D$ has, and which the Wick rotation rule of Section 10.6 is groping
+towards. See `[211]` for the same structure obtained by compactification and
+`[174]` for its Clifford-algebraic form.
+
+### [101] Hanounah, *On completeness of certain locally symmetric pseudo-Riemannian manifolds of signature (2,2)*, arXiv:2506.13924
+SUPPORT for Section 7.5. Geodesic completeness is proved for a natural class of
+compact locally symmetric $(2,2)$ spaces, the split-signature generalisation of
+Cahen-Wallach spaces. The relevance is narrow but real: free motion inside a
+region with more than one timelike direction is objected to on the ground that it
+runs off the manifold or is ill defined. In this class it does not. A
+mathematical, not physical, defence of the $(2,2)$ interlude.
+
+### [103] Alves, Barreto, Moraes, *Implications of Kleinian relativity*, Phys. Rev. D 103 (2021) 044023, arXiv:2012.03921
+PRIOR for Sections 8.2, 9 and 16.1. A covariant particle mechanics in Kleinian
+spacetime with the relativistic momentum and energy written out, the effects being
+**time contraction and length dilatation**, that is, Section 8.2's role reversal
+derived independently; plus a constraint on the dispersion relation for Weyl
+fermions. The energy-momentum swap and the far-side dispersion relation are not
+new with us and should be presented as agreeing with this.
+
+### [104] Easson, Pezzelle, *Kleinian black holes*, arXiv:2312.00879
+PRIOR for Section 9.2. A Kleinian extension of Birkhoff's theorem: the vacuum
+solution with $SO(2,1)$ spherical symmetry in split signature is unique, locally
+isomorphic to split-signature Schwarzschild-(A)dS or Nariai, with Kerr and
+Taub-NUT forms given too. Section 9.2's closed-form spherically symmetric solution
+sits in this classification and the article should say where, since uniqueness on
+the far side is claimed there and proved here. Compare `[190]`, where Birkhoff
+fails on a brane with a timelike extra dimension.
+
+### [105] Santos, Brito, Filgueiras, *Diamonds in Klein geometry*, Eur. Phys. J. Plus 138 (2023) 1079, arXiv:2312.06611
+SUPPORT, and a partial answer to Sections 10.3 and 10.12. Using the path integral,
+an Unruh-analogue temperature is computed in Kleinian geometry once the action is
+restricted to a suitable subspace, together with a diamond temperature for a
+static observer of finite lifetime. So quantum field theory in split signature is
+not empty and does yield thermal quantities, which is the constructive side of
+Section 10.12's "the theory is not empty". The qualification: it works after
+restriction to a subspace, which is the price Section 10 says it expects to pay.
+
+### [106] Hull, *Duality and the signature of space-time*, JHEP 9811 (1998) 017, arXiv:hep-th/9807127
+CONTEXT, but the strongest available for Section 7.5's question of whether an
+exotic signature is physically defensible. M-theory admits $(9,2)$ and $(6,5)$
+versions and type II strings in $(10,0)$, $(8,2)$, $(7,3)$, $(6,4)$ and $(5,5)$,
+all linked by dualities that **change the number of time dimensions**, so each is
+a limit of one underlying theory. Our multi-time region is therefore not an
+unprecedented object, and the precedent is one where changing the number of times
+is a duality rather than a catastrophe. See `[211]` for the four-dimensional
+supergravity version of the same statement.
+
+### [79] Hirsch, Payne, Zhang, *The spacetime positive mass theorem with multiple time dimensions*, arXiv:2602.20081
+SUPPORT, and the first result we have for Section 16.1. The spacetime positive
+mass theorem survives with $m$ time dimensions: the energy is bounded below by
+the trace norm of the linear momenta $J^1,\dots,J^m$, with rigidity in the
+equality case. So a multi-time region is not automatically energetically
+pathological, and this is the shape the three-component energy vector should be
+tested against. Note that the bound is on the **trace norm** of the momenta, which
+is a length, and Section 16.3 finds that on the far side only length is physical;
+these are the same statement.
+
+### [58] Romano, *Scalar and spinor fields in signature changing spacetimes*, Phys. Rev. D 47 (1993) 4328, arXiv:gr-qc/9303033
+PRIOR, and the first real literature behind Section 10.12. Reviews the Dray et al.
+result that a signature change produces particles for a massless scalar, then
+tries to extend it to spin one half. The extension fails: of the inequivalent
+forms the Dirac equation can take across the change, **none** carries a conserved
+inner product on the solution space. A direct precedent for Section 10's
+obstruction, obtained thirty years earlier and for the same reason, and it also
+means Section 19.7's electromagnetic treatment cannot simply be assumed to carry
+over to fermions. Read with `[130]` and with `[195]` to `[197]`.
+
+### [59] Weinfurtner, White, Visser, *Trans-Planckian physics and signature change events in Bose gas hydrodynamics*, Phys. Rev. D 76 (2007) 124008, arXiv:gr-qc/0703117
+SUPPORT for the possibility of a calculation. An emergent metric in a Bose gas
+whose signature can be driven Lorentzian to Riemannian by tuning the microscopics,
+with the **number of particles produced by a finite-duration Euclidean event
+actually computed**. The concrete template for Section 10.12: the question is not
+open, it has a worked answer in an analogue system, and the answer is that
+production is large and depends on the duration of the event, not zero.
+
+### [60] Weinfurtner, White, Visser, *Signature-change events in emergent spacetimes with anisotropic scaling*, J. Phys. Conf. Ser. 189 (2009) 012046, arXiv:0905.4530
+SUPPORT. The anisotropic Lifshitz-like scaling of the microscopic theory regulates
+the particle production that would otherwise diverge. What makes a
+signature-changing surface survive is a short-distance modification, not the
+junction condition.
+
+### [29] White, Weinfurtner, Visser, *Signature change events: a challenge for quantum gravity?*, Class. Quantum Grav. 27 (2010) 045007, arXiv:0812.3744
+CHALLENGE to Sections 10.12 and 10.13. Whatever the underlying classical theory, a
+quantum field on a signature-changing background has severe problems, in
+particular the production of a naively infinite number of particles, related to
+quantum tunnelling half-way up a barrier with WKB estimates given. Section 10.12
+says the intermediate region is a correlation theory rather than a particle
+theory. That reads as a reformulation of their problem rather than an answer to
+it, and the article should say which.
+
+### [61] Castelló Gomar, Mena Marugán, *Uniqueness of the Fock quantization of scalar fields and processes with signature change in cosmology*, arXiv:1403.6984
+SUPPORT for Sections 10 and 10.12. Invariance of the vacuum under the spatial
+symmetries plus unitary implementability of the dynamics fixes the Fock
+representation uniquely, and the criterion still applies through a signature
+change. Our vacuum is currently chosen by hand, and there is a uniqueness theorem
+that says how to choose it.
+
+### [62] Darabi, Setare, *Casimir effect in a two dimensional signature changing spacetime*, J. Math. Phys. 47 (2006) 032501, arXiv:gr-qc/0507043
+PRIOR, and the closest existing result to Section 10.13. A massless scalar on a
+two-dimensional cylinder with a signature-changing metric gives a **nonzero
+pressure on the surface of signature change**, which destabilises the
+signature-changing region and back-reacts on the spectrum. Two consequences: the
+Casimir number is not on an unreachable surface in this setting, and the quantum
+stability question is answered negatively in the analogous two-dimensional case.
+
+### [112] Setare, *Casimir stress on parallel plates in de Sitter space with signature change*, Int. J. Mod. Phys. A 22 (2007) 1771, arXiv:gr-qc/0611151
+SUPPORT for Section 10.13, together with arXiv:hep-th/0511077 (spherical shell)
+and arXiv:gr-qc/0703153 (concentric spheres, where the Euclidean region is
+**between** the shells and the Lorentzian region outside). All three compute a
+Casimir stress where the signature differs on the two sides of the boundary, and
+all three find a **nonvanishing contribution attributable to the signature change
+itself**: attraction of the plates in the first, a transient rapid expansion in
+the second, an extra constant pressure in the third. Section 10.13 asks what the
+Casimir signature of a threshold surface is; the answer in the literature is that
+there is one, it is finite, and its sign depends on the geometry. The
+concentric-sphere configuration is the closest existing analogue of our slab.
+

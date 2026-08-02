@@ -8,6 +8,7 @@
 #include "horizon/SurfaceLayer.h"
 #include "intermediate/DwellTime.h"
 #include "intermediate/IntermediateRegion.h"
+#include "intermediate/TraversalClocks.h"
 #include "particle/AsymmetricFaces.h"
 #include "particle/CellDistribution.h"
 #include "signal/GravitationalChannel.h"
@@ -127,6 +128,12 @@ namespace slm
                !Reconciliation::returnedEnergy(2.0).disagree();
     }
 
+    bool OpenQuestions::physicalReadingSettled()
+    {
+        return TraversalClocks::readingsAgreeAgainstLight(IntermediateRegion::Kind::Euclidean, 2.8,
+                                                          kC, kMu, kTransverse, 16.0);
+    }
+
     int OpenQuestions::openCount()
     {
         int count = 0;
@@ -134,6 +141,7 @@ namespace slm
         count += gravitationalCapacityKnown() ? 0 : 1;
         count += allowabilityCriterionAdopted() ? 0 : 1;
         count += pairDegeneracyBroken() ? 0 : 1;
+        count += physicalReadingSettled() ? 0 : 1;
         return count;
     }
 
@@ -194,8 +202,15 @@ namespace slm
         report.check("a returning particle and a created pair are not told apart, "
                      "since they differ in count while agreeing in energy magnitude",
                      !OpenQuestions::pairDegeneracyBroken());
+        report.check(std::format("  {} of the five readings of the crossing time put it above "
+                                 "the speed of light and the rest below, and which reading is "
+                                 "the physical one is not settled",
+                                 TraversalClocks::readingsFasterThanLight(
+                                     IntermediateRegion::Kind::Euclidean, 2.8, kC, kMu, kTransverse,
+                                     16.0)),
+                     !OpenQuestions::physicalReadingSettled());
         report.check(std::format("  {} questions open", OpenQuestions::openCount()),
-                     OpenQuestions::openCount() == 4);
+                     OpenQuestions::openCount() == 5);
 
         report.subsection("Disagreements an experiment could close");
         report.check(std::format("  {} disagreements give different numbers for one "
