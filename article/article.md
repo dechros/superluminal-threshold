@@ -3111,6 +3111,7 @@ ne bölüm numarası ne kaynak numarası bulunur.
 | Eklem koşulunun yerçekimi tarafı, dış eğrilik | `src/horizon/SurfaceLayer` |
 | Katmanın enerji koşulları karşısındaki durumu | `src/horizon/LayerEnergyConditions` |
 | Literatürün bütün itirazlarının sicili | `src/critique/LiteratureObjections` |
+| Rakip yaklaşımların ortak formülleri | `src/critique/CommonFormulas` |
 | Normal türevin lapse'e göre sönme oranı | `src/horizon/RateCondition` |
 | Nedensel geçişin akı sorusundan ayrılması | `src/boundary/CausalCrossing` |
 | Sonlu kalınlıkta dilimden tünelleme | `src/boundary/SlabTunnelling` |
@@ -3527,7 +3528,7 @@ tarif edilmemiştir. Gidiş dönüşün gözlenebilir olması buna bağlıdır.
 
 ### 26.4 Tartışmalılar
 
-Dört tanedir ve Bölüm 27.2'de iki rakip sayısıyla birlikte verilmiştir; burada
+Dört tanedir ve Bölüm 27.3'te iki rakip sayısıyla birlikte verilmiştir; burada
 tekrarlanmaz. Ayırt edici özellikleri, bakış açısı değiştirilerek
 kaldırılamamalarıdır.
 
@@ -3564,7 +3565,53 @@ içindeki ve literatürle olan anlaşmazlıklarını bu ölçüte göre ikiye ay
 parametre çevrilerek elde edilebiliyorsa uzlaşmış sayılır. İki tarafın
 birbirini ikna edebilmesi yeterli değildir.
 
-### 27.1 Tek bir madalyonun iki yüzü olan beş anlaşmazlık
+### 27.1 Ortak formüller: parametresi serbest bırakılmış hâlleri
+
+Birbiriyle tartışan konumlar çoğu zaman tek bir ifadenin farklı parametre
+değerlerinde okunmuş hâlleridir. Öyle olduğu yerde bunu yazmak iki şeye yarar:
+anlaşmazlığın tam olarak neyle ilgili olduğunu, yani o parametrenin değeriyle ve
+başka hiçbir şeyle ilgili olduğunu söyler; ve rakip konumu farklı bir fizik
+sanma eğilimini ortadan kaldırır.
+
+Dört indirgeme kurulmuştur (`src/critique/CommonFormulas`). Her birinde özel
+durumların **tam olarak**, yaklaşık değil, geri geldiği ayrıca denetlenir; özel
+durumlarını ancak yaklaşık üreten bir birleştirme hiçbir şeyi birleştirmemiş
+olur.
+
+**Bir: eklem koşulu, tek ağırlık.** Güçlü ve zayıf seçim tek bir koşulun iki
+ağırlık değeridir. Ağırlık sıfırda koşul dış eğriliğin sıfırlanmasını, birde
+yalnızca sürekliliğini ister; ara değerler bir aile oluşturur. Yayımlanmış
+anlaşmazlık, bu ifade içinde yalnızca o ağırlığın değeriyle ilgilidir.
+
+**İki: iç dalga sayısı, dört bölge tipi.** Ara bölgenin dört tipi, **çevrilen
+yön sayısının** tek bir ifadesidir; kayma, çevrilen yön sayısının üçte ikisi
+çarpı enine dalga sayısının karesidir. Sıfır çevrilmiş yön ara bölgesizliği,
+bir çevrilmiş yön Kleinian'ı, üç çevrilmiş yön Öklid'i verir.
+
+| Çevrilen yön | İç kare dalga sayısı | Literatürdeki adı |
+|--------------|----------------------|--------------------|
+| $0$ | $+31{,}0000$ | ara bölge yok |
+| $1$ | $+28{,}3333$ | Kleinian $(2,2)$ |
+| $2$ | $+25{,}6667$ | adı yok |
+| $3$ | $+23{,}0000$ | Öklid $(4,0)$ |
+
+Üçüncü satırın literatürde bir adı yoktur. Yani aile, tartışılan durumlardan
+**daha geniştir**, ve bu kapsayıcı yöntemin bir ürünüdür: ortak formül
+yazıldığında arada boş bir yer görünür hâle gelir.
+
+**Üç: geçiş saati, tek genlik.** Bölüm 14.11'de otuz kat farkla ayrışan
+okumalar tek bir fonksiyondan gelir; farkları yalnızca hangi parametreye göre
+türev alındığıdır. Frekansa göre türev $1{,}462864$, engel yüksekliğine göre
+türev $0{,}519317$ verir. Aynı fonksiyon, iki parametre.
+
+**Dört: dağılım bağıntısı, iki imza.** Bizim imzamız ile öte taraf, geçiş
+yönüne metriğin verdiği **işaretin** iki değeridir. Kütle kabuğunun eşikte
+sürekli olmasının nedeni budur: iki ayrı kuram değil, bir işaretin iki değeri.
+
+Dört indirgemenin dördü de özel durumlarını makine duyarlığında geri vermektedir.
+Bu, her anlaşmazlığı çözmez; çözülmeyenler aşağıda ayrıca durmaktadır.
+
+### 27.2 Tek bir madalyonun iki yüzü olan beş anlaşmazlık
 
 | Anlaşmazlık | Çevirilen parametre | Sonuç |
 |-------------|--------------------|-------|
@@ -3577,7 +3624,7 @@ birbirini ikna edebilmesi yeterli değildir.
 Beşinin hiçbiri muhakeme ile kapatılmamıştır. Her birinde iki okuma da
 hesaplanmış ve aralarındaki parametre gösterilmiştir.
 
-### 27.2 Yönteme direnen dört çelişki
+### 27.3 Yönteme direnen dört çelişki
 
 Aşağıdaki dördünde iki konum **aynı ölçüm için farklı sayılar** verir. Bakış
 açısı değiştirerek bu fark kalkmaz. Her satırda iki sayı da hesaplanmış ve
@@ -3597,7 +3644,7 @@ değildir. Modelin bugünkü hâli bunlardan hiçbirine karar vermemektedir.
 dört satırın her birinde iki sayının gerçekten farklı olduğu ayrı ayrı
 sınanmakta ve farklı çıkanlar sayılmaktadır.
 
-### 27.3 Yöntemin bilançosu
+### 27.4 Yöntemin bilançosu
 
 Dokuz anlaşmazlıktan beşi tek bir hesabın iki okuması olarak birleştirilmiş,
 dördü gerçek çelişki olarak ayakta bırakılmıştır. Kapsayıcı yöntem
