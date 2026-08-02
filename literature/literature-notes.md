@@ -1,6 +1,6 @@
 # Literature notes
 
-Working notes taken while reading `literature/` (170 papers). One entry per
+Working notes taken while reading `literature/` (172 papers). One entry per
 paper that bears on the article, grouped by theme. Each entry records what the
 paper establishes, how it relates to a section of `article/article.md`, and
 whether it precedes, supports, or contradicts that section.
@@ -760,3 +760,1004 @@ geometrically rather than matricially.
 14. Bölüm 15.6 has three separate derivations of signature change from a
     theory now, [81], [82] and [80]. The article can no longer say the
     transition has never been derived.
+
+---
+
+## Group 9: the crossable threshold
+
+This group was collected after the article was retargeted. The thesis under test
+is no longer that the threshold reflects, but that it transmits: the weak
+junction condition is adopted, crossing is controlled by finite thickness and by
+the mode content of the incident field, and the region beyond carries no arrow
+of time. Entries that damage that thesis are marked and put first within each
+sub-block, because they are the ones the article has to answer.
+
+### The weak junction condition, which is now the load-bearing choice
+
+### [87] Dray, Manogue, Tucker, *The scalar field equation in the presence of signature change*, Phys. Rev. D 48 (1993) 2587, arXiv:gr-qc/9303002
+PRIOR, and the paper the new Bölüm 9.1 is a special case of. Demanding a
+conserved momentum in the homogeneous case selects one propagation rule across
+the surface, and that rule is shown to give the unique solutions of the
+distributional wave equation, reachable also from a Lagrangian. Two things
+matter for us. First, the selection principle is the same one our Bölüm 9.1
+uses, flux conservation, but it selects **transmission**, not total reflection.
+Second, what comes out the far side is a **mix of positive and negative
+frequencies** whose ratio depends only on the total conformal size of the
+spacelike region and not on the profile of the metric. If the article is going
+to argue the threshold is crossable, this is the result to build 9.1 on, and the
+frequency mixing is a prediction it inherits whether it wants it or not.
+
+### [88] Dray, Hellaby, *The patchwork divergence theorem*, J. Math. Phys. 35 (1994) 5922, arXiv:gr-qc/9404002
+PRIOR for the machinery of Bölüm 9.1. The divergence theorem for piecewise
+smooth fields, derived so that it holds independently of the signature on either
+side and therefore across a change of signature. Our flux argument at $V = c$ is
+an application of this theorem and should cite it rather than rederive it. The
+important structural point is that the patched theorem carries a boundary term.
+A flux balance written without that term is not the conservation law.
+
+### [89] Hellaby, Dray, *Failure of standard conservation laws at a classical change of signature*, Phys. Rev. D 49 (1994) 5096, arXiv:gr-qc/9404001
+CHALLENGE, and the most serious single objection to the article in either its
+old or its new form. The Israel identities that normally force conservation of
+matter across a junction do not hold when the signature changes; the modified
+identities carry a finite source on the surface itself, physical vector fields
+jump in at least one component, and current is not conserved either. The
+authors' own conclusion is that recovering standard conservation laws requires
+restrictions no realistic model satisfies. Consequence for Bölüm 9.1: the
+premise "the flux must balance, therefore the amplitude is fixed" is not
+available. Under the weak condition the surface is allowed to be a source, so
+flux conservation determines neither total reflection nor a specific
+transmission coefficient. The article's new thesis is not defeated by this, but
+its derivation is, and Bölüm 9.1 must be rewritten to say what fixes the
+amplitude if conservation does not.
+
+### [90] Hayward, *Comment on 'Failure of standard conservation laws at a classical change of signature'*, Phys. Rev. D 52 (1995) 7331, arXiv:gr-qc/9606045
+CHALLENGE to the new thesis, from the opposite direction to [89]. Hayward's
+reply is that nothing fails: if the field equations are satisfied then the
+junction conditions and the conservation equations both hold, and the reported
+failure is an artefact of not making sense of equations that are singular at the
+surface. Read with [89] and his own gr-qc/9303034, this is the strong-condition
+camp asserting that the weak condition is not a legitimate alternative but a
+mistake. Bölüm 9.1 cannot adopt the weak condition by preference; it has to
+engage this specific claim, that the strong condition is a theorem once the
+field equations are imposed rather than a choice.
+
+### [91] Dray, Hellaby, *Comment on 'Smooth and discontinuous signature type change in general relativity'*, Gen. Rel. Grav. 28 (1996) 1401, arXiv:gr-qc/9610062
+SUPPORT, and the best single citation for the flip in Bölüm 9.1. Against
+Kossowski and Kriele's boundary conditions, the authors show the derivation rests
+on a postulated form of the field equations, that there is **no canonical form of
+the Einstein equations at a change of signature**, and that a weaker formulation
+exists in which the field equations still hold, the smoothness assumptions are
+milder, and the energy-momentum tensor stays bounded **without** the extrinsic
+curvature having to vanish. Vanishing extrinsic curvature is exactly the strong
+condition the old Bölüm 9.1 imposed. This paper is the licence for dropping it,
+and it should be cited at the point of the choice rather than in passing.
+
+### [92] Kriele, Martin, *Black holes, cosmological singularities and change of signature*, Class. Quantum Grav. 12 (1995) 503, arXiv:gr-qc/9411063
+CHALLENGE, and a second priority finding. Signature change cannot be used to
+remove a singularity **unless the Einstein equation is abandoned at the surface
+of change**. The paper also shows to what extent smooth and discontinuous
+signature-changing solutions are equivalent, which speaks directly to Bölüm 9.4:
+if the two are equivalent in the relevant sense, then a finite-thickness slab
+does not buy the article as much freedom as it hopes. The article's new backbone
+wants a real tear, a crossable one, and the field equations to survive it. This
+paper says pick two.
+
+### [93] Kamleh, *Signature changing space-times and the new generalised functions*, arXiv:gr-qc/0004057
+CHALLENGE by removing an escape route from Bölüm 9.1. The Colombeau algebra,
+which is the standard tool for giving distributional sense to products of
+singular objects, is analysed for both continuous and discontinuous signature
+change and found **insufficient to exclude either, and unable to settle the
+dispute over the junction conditions**. So the article cannot justify the weak
+condition by saying the distributional formulation forces it. The choice stays a
+choice, and has to be defended physically.
+
+### [94] Martin, *Cosmological perturbations and classical change of signature*, Phys. Rev. D 52 (1995) 6708, arXiv:gr-qc/9509053
+CHALLENGE for Bölüm 9.4. For FLRW with a constant scalar field, **no regular
+perturbation solution exists that satisfies the junction conditions at the
+surface of change**. This is the closest thing in the literature to a
+non-existence result for the configuration the article now wants, and it is a
+perturbative statement, so it is about exactly the mode-by-mode analysis Bölüm
+9.4 will perform. The article should either show its case falls outside the
+hypotheses or accept a restriction on which incident modes can be posed at all.
+
+### [95] Dray, *Piecewise conserved quantities*, in Gravity and the Quantum, Springer 2017, arXiv:1701.02863
+CONTEXT, the settled modern statement of [88] and [89]. Conservation laws on
+glued spacetimes acquire a boundary term, worked through for junctions of
+Schwarzschild regions of different mass and for junctions between regions of
+different signature. The right single reference when Bölüm 9.1 states what its
+conservation law actually is.
+
+### Crossing: geodesics, slabs and mode selectivity
+
+### [96] Pavlova, Remizov, *Singularities of geodesic flows in smooth signature changing metrics on 2-surfaces*, arXiv:1801.09815
+SUPPORT with a hard constraint attached, and the most directly useful result in
+this group for the new Bölüm 9.4 and for the question of whether a massive body
+can cross. In two dimensions, at a generic point of the degeneracy curve,
+geodesics **can** pass through, so the surface is not an absolute barrier for
+worldlines; but they cannot pass in arbitrary tangential directions, only in a
+finite set of **admissible directions, numbering one, two or three**. That is
+the mode-content dependence of Bölüm 9.4 appearing at the classical level and in
+the sharpest possible form: crossing is not forbidden, it is direction-selected.
+The article should take this as its model statement and be explicit that the
+theorem is two-dimensional, so the count in four dimensions is not established.
+
+### [97] Smolyaninov, Narimanov, *Metric signature transitions in optical metamaterials*, Phys. Rev. Lett. 105 (2010) 067402, arXiv:1007.1130
+SUPPORT for Bölüm 16.2 and for the article's need for something measurable.
+Extraordinary waves in an indefinite metamaterial see an effective $(-,-,+,+)$
+metric, and during a signature-change transition in that medium a Minkowski
+spacetime is created **together with a large number of particles populating
+it**. Peer reviewed in PRL and realisable on a bench. Bölüm 16.2 can no longer
+be phrased as an open question: particle production at a signature change is a
+measured-in-analogue effect, not a conjecture. The companion arXiv:0908.2407
+states the same effect and identifies the indefinite medium explicitly with two
+times physics in $2+2$; arXiv:1301.6060 makes the signature depend on a lattice
+periodicity, that is, gives a knob.
+
+### [98] Nissinen, Volovik, *Effective Minkowski to Euclidean signature change of the magnon BEC pseudo-Goldstone mode in polar 3He*, JETP Lett. 106 (2017) 234, arXiv:1707.00905
+SUPPORT, and a second, independent laboratory system. In the coherently
+precessing spin-superfluid state of polar 3He in aerogel, the phonon of the
+magnon condensate sees an effective metric whose signature changes from
+Minkowski to Euclidean at a critical tilting angle of the applied field. The
+signature change is an **instability threshold controlled by an external
+parameter**, which is the closest existing analogue of our $V = c$ surface being
+approached rather than postulated. Bears on Bölüm 16.4: this is a preparable
+apparatus, which is what the article said its distinguishing prediction needs.
+
+### [99] Zhang, *Alternative route towards the change of metric signature*, Phys. Rev. D 100 (2019) 064043, arXiv:1909.10669
+PRIOR and structurally the closest paper in the corpus to our construction. The
+traditional route flips the sign of the lapse, so the far side is Euclidean.
+Zhang instead flips the sign of the **spatial** metric eigenvalues, so that the
+far side is **purely timelike**, and then derives the junction conditions for
+that case. That is our $D$ matrix's effect stated in the language of the
+signature-change literature: our region II is three times and one space, and it
+is reached by turning spatial directions timelike, not by turning time
+spacelike. Bölüm 9.1 and Bölüm 15.6 should both cite this, and the article
+should state plainly which of Zhang's junction conditions it is adopting.
+
+### Beyond the threshold: no arrow, and what motion means there
+
+### [100] Lemos, Muller, Reboucas, *Probing time orientability of spacetime*, Eur. Phys. J. C 83 (2023) 461, arXiv:2211.00816
+SUPPORT for Bölüm 7.4, and it converts a stipulation into an observable. Time
+non-orientability of Minkowski spacetime is shown to be **locally detectable**
+through the stochastic motion of a charged particle in the electromagnetic
+vacuum, via a statistical orientability indicator that shows an inversion
+pattern absent in the orientable case. The article's claim that the far side
+carries no future/past split is exactly a claim of time non-orientability, and
+this paper says such a claim has a local signature in vacuum fluctuations rather
+than being a global convention. This is the second concrete route, after [98],
+to the distinguishing measurement Bölüm 16.4 asks for.
+
+### [101] Hanounah, *On completeness of certain locally symmetric pseudo-Riemannian manifolds of signature (2,2)*, arXiv:2506.13924
+SUPPORT for Bölüm 13.5. Geodesic completeness is proved for a natural class of
+compact locally symmetric $(2,2)$ spaces, the split-signature generalisation of
+Cahen-Wallach spaces. The relevance is narrow but real: the article's new
+backbone requires free motion inside a region with more than one timelike
+direction, and the objection to be answered is that such motion runs off the
+manifold or is otherwise ill defined. In this class it does not. It is a
+mathematical, not physical, defence of the $(2,2)$ interlude.
+
+### [102] Bais, May Custodio, Torres, *Existence results of Spin(2,n-1) pseudo-Riemannian cobordisms*, arXiv:2306.02749
+SUPPORT for Bölüm 13.5, and it makes the tear a computable question. Necessary
+and sufficient conditions are given for a spin cobordism carrying a nondegenerate
+metric of signature $(2, n-1)$ whose boundary restriction is a nonsingular
+time-orientable Lorentzian metric, and the cobordism groups are computed. Bölüm
+13.5 asserts a two-time interlude between the two signatures; this is the
+framework in which "does such an interlude exist for these boundary data" has an
+answer rather than an argument. The article should at least state which
+cobordism class its configuration falls into.
+
+### [103] Alves, Barreto, Moraes, *Implications of Kleinian relativity*, Phys. Rev. D 103 (2021) 044023, arXiv:2012.03921
+PRIOR for Bölüm 4, 5.1 and 8. A covariant particle mechanics in Kleinian
+spacetime with the relativistic momentum and energy written out, the effects
+being **time contraction and length dilatation**, that is, our Bölüm 7.2 role
+reversal derived independently; plus a constraint on the dispersion relation for
+Weyl fermions. The article's energy-momentum swap and its far-side dispersion
+relation are not new with us and should be presented as agreeing with this.
+
+### [104] Easson, Pezzelle, *Kleinian black holes*, arXiv:2312.00879
+PRIOR for Bölüm 10. A Kleinian extension of Birkhoff's theorem: the vacuum
+solution with $SO(2,1)$ spherical symmetry in split signature is unique, locally
+isomorphic to split-signature Schwarzschild-(A)dS or Nariai, with Kerr and
+Taub-NUT forms given too. Our Bölüm 10 closed-form spherically symmetric solution
+sits in this classification and the article should say where, since uniqueness on
+the far side is claimed there and proved here.
+
+### [105] Santos, Brito, Filgueiras, *Diamonds in Klein geometry*, Eur. Phys. J. Plus 138 (2023) 1079, arXiv:2312.06611
+SUPPORT, and a partial answer to Bölüm 14.3 and 16.1. Using the path integral,
+an Unruh-analogue temperature is computed in Kleinian geometry once the action
+is restricted to a suitable subspace, together with a diamond temperature for a
+static observer of finite lifetime. So quantum field theory in split signature is
+not empty and does yield thermal quantities, which is the constructive side of
+Bölüm 16.2's "the theory is not empty". Note the qualification: it works after
+restriction to a subspace, which is the price the article's Bölüm 14 says it
+expects to pay.
+
+### [106] Hull, *Duality and the signature of space-time*, JHEP 9811 (1998) 017, arXiv:hep-th/9807127
+CONTEXT, but the strongest one available for Bölüm 13.5's open question of
+whether an exotic signature is physically defensible. M-theory admits $(9,2)$ and
+$(6,5)$ versions and type II strings in $(10,0)$, $(8,2)$, $(7,3)$, $(6,4)$ and
+$(5,5)$, all linked by dualities that **change the number of time dimensions**,
+so each is a limit of one underlying theory. The article's multi-time region is
+therefore not an unprecedented object, and, more usefully, the precedent is a
+case where changing the number of times is a duality rather than a catastrophe.
+
+### The multi-time objections, which the retarget does not remove
+
+### [107] Dvali, Gabadadze, Senjanovic, *Constraints on extra time dimensions*, arXiv:hep-ph/9910207
+CHALLENGE for Bölüm 7.3 and 9.2. With gravity propagating in the extra times,
+the Newtonian potential is screened by tachyonic Kaluza-Klein gravitons and the
+gravitational self-energy acquires an **imaginary part**, read either as an
+amplitude to disappear into nothing, giving causality and probability violation
+in low-energy processes, or as an artefact of decay into unphysical negative
+energy tachyons. Bölüm 9.2 lets gravity see the far side; this is what that
+costs, and it is a quantitative phenomenological bound rather than a philosophical
+objection.
+
+### [108] Foster, Muller, *Physics with two time dimensions*, arXiv:1001.2485
+SUPPORT for Bölüm 7.3, and the paper that gives the article its escape clause.
+The standard arguments that rule out two times **do not apply if the dynamics of
+the additional time is thermal or chaotic and supports no long-lived timelike
+excitations**. That is a testable condition on our region II, and the article's
+claim of no arrow of time on the far side is close to, but not the same as, the
+condition stated here. Bölüm 7.3 should adopt this as the form its answer has to
+take rather than asserting collapse to a single time.
+
+### [109] Kenig, Ponce, Rolvung, Vega, *The general quasilinear ultrahyperbolic Schrodinger equation*, arXiv:math/0503206
+SUPPORT for Bölüm 6.1 and 7.3, narrow but real. A local existence theory is
+established for the initial value problem of the general quasilinear
+ultrahyperbolic Schrodinger equation. Our Bölüm 6.1 derives loss of determinism
+from the equation type being ultrahyperbolic; this is a theorem that the
+ultrahyperbolic initial value problem is locally well posed in a genuine class.
+The article's argument must therefore be about the global problem or about the
+choice of initial surface, and it should say which.
+
+### Deriving the transition instead of postulating it
+
+### [110] Bojowald, Duque, *Emergent modified gravity*, Class. Quantum Grav. 41 (2024) 095008, arXiv:2404.06375
+PRIOR for Bölüm 15.6, and the foundation of the paper already in the corpus at
+arXiv:2312.09217. A complete canonical formulation of general covariance allows
+the fundamental gravitational fields to differ from an **emergent** spacetime
+metric, evading the usual uniqueness theorems. This is the structure inside which
+signature change comes out of the theory rather than being imposed on it, and it
+is the mechanism the article's Bölüm 15.6 open question is asking for. Citing
+2312.09217 without this is citing a consequence without its premise.
+
+### [111] Tartaglia, *On the emergence of the Lorentz signature in an expanding universe*, arXiv:1207.0626
+SUPPORT for Bölüm 15.6 by an elementary route. Adding the strain of the manifold
+as a field in the Lagrangian produces a boundary that divides the manifold into a
+Euclidean and a Lorentzian region, and the boundary survives the presence of
+homogeneous matter. The point for us is the cheapness of the mechanism: one extra
+term in the action, no quantum gravity. arXiv:1707.07235 gets a signature change
+even more cheaply, as an automatic consequence of Ricci flow through a critical
+point. Bölüm 15.6 should note that derivations of signature change now exist at
+several very different levels of sophistication, which weakens any claim that the
+transition is exotic.
+
+### Casimir and vacuum energy at the surface
+
+### [112] Setare, *Casimir stress on parallel plates in de Sitter space with signature change*, Int. J. Mod. Phys. A 22 (2007) 1771, arXiv:gr-qc/0611151
+SUPPORT for Bölüm 16.3, together with arXiv:hep-th/0511077 (spherical shell) and
+arXiv:gr-qc/0703153 (concentric spheres, where the Euclidean region is **between**
+the shells and the Lorentzian region outside). All three compute a Casimir stress
+in a configuration where the signature differs on the two sides of the boundary,
+and all three find a **nonvanishing contribution attributable to the signature
+change itself**: an attraction of the plates in the first, a transient rapid
+expansion in the second, an extra constant pressure in the third. Bölüm 16.3 asks
+what the Casimir signature of a threshold surface is; the answer in the
+literature is that there is one, it is finite, and its sign depends on the
+geometry. The concentric-sphere configuration is the one closest to our Bölüm
+9.4 slab and is the natural template for computing the slab's vacuum energy.
+
+### What this group changes
+
+15. Bölüm 9.1's derivation cannot survive the flip as it stands. [89] shows the
+    Israel identities fail at a signature change and the surface may carry a
+    source, so flux conservation no longer determines an amplitude, in either
+    direction. The section has to name a different principle. [87] shows what
+    that principle looked like when it worked: conserved momentum plus the
+    distributional wave equation, selecting transmission with a definite
+    positive/negative frequency mix.
+16. The licence to drop the strong condition exists and is precise. [91] shows
+    there is no canonical form of the field equations at a signature change and
+    that a formulation with bounded energy-momentum and nonvanishing extrinsic
+    curvature is available. That, not preference, is the citation for the flip.
+17. Two papers stand directly against the new thesis and must be answered, not
+    cited in passing. [90] holds that the junction conditions and conservation
+    follow from the field equations, so the weak condition is an error rather
+    than an option. [92] holds that the field equations must be abandoned at the
+    surface for signature change to do any work, and additionally that smooth and
+    discontinuous changes are equivalent to an extent that limits what Bölüm 9.4
+    gains from finite thickness.
+18. The distributional escape route is closed. [93] shows Colombeau theory
+    settles neither the continuity of the metric nor the junction conditions, so
+    the article cannot argue the weak condition is forced by a rigorous
+    formalism.
+19. Bölüm 9.4's mode dependence has a classical precedent with a number attached.
+    [96] proves that geodesics cross a degeneracy curve only along one, two or
+    three admissible directions. Crossing is direction-selected, not free, and
+    that is the correct shape for the new central claim. The theorem is
+    two-dimensional; the four-dimensional count is not known.
+20. [94] is a non-existence result in the perturbative regime Bölüm 9.4 will work
+    in, and the article has to show it falls outside its hypotheses.
+21. Bölüm 16.2 is settled in the analogue setting. [97] has particle creation at
+    a metamaterial signature transition in PRL, and [98] has a signature change
+    driven across a threshold by an external field in polar 3He. Together with
+    [100], which makes time non-orientability locally detectable in the
+    electromagnetic vacuum, Bölüm 16.4 now has three candidate preparable
+    apparatuses instead of none.
+22. Bölüm 9.1 and 15.6 both need [99]. It changes the signature by flipping the
+    **spatial** eigenvalues, so its far side is purely timelike as ours is, and
+    it works out the junction conditions for that specific case rather than for
+    the Euclidean case the rest of the literature treats.
+23. The Kleinian far side is better furnished than the article assumes. [104]
+    gives a uniqueness theorem our Bölüm 10 solution must be placed inside, [103]
+    derives our Bölüm 7.2 role reversal independently, [105] shows a thermal
+    quantum field theory can be built there after restriction, and [101] and
+    [102] answer, in a mathematical sense, whether free motion and the tear
+    itself are well defined.
+24. The multi-time objections are unaffected by the retarget and one of them is
+    quantitative. [107] gives an imaginary gravitational self-energy and a
+    low-energy probability violation once gravity sees the extra times, which is
+    the price of Bölüm 9.2. [108] states the only known condition under which the
+    no-go arguments lapse, and Bölüm 7.3 should be rewritten to meet that
+    condition rather than to assert collapse to one time. [109] shows the
+    ultrahyperbolic initial value problem is locally well posed, so Bölüm 6.1's
+    loss of determinism must be a global or initial-surface claim.
+25. Bölüm 16.3 has a template. The three Setare and Darabi calculations in [112]
+    all obtain a nonzero Casimir contribution from the signature change itself,
+    and the concentric-sphere geometry is the closest existing analogue of the
+    finite-thickness slab that Bölüm 9.4 is being promoted to a main chapter.
+
+---
+
+## Group 10: the round trip
+
+Collected after the aim was sharpened to a round trip: cross the threshold, act on
+the far side, come back, and place the return on our own time axis. The two
+deliverables that organise this group are (a) where on our time axis the particle
+lands when it returns, which has to come from the matching at the two crossings
+because no duration can be read on a side with no time orientation, and (b) the
+dictionary that turns a far-side orientation into a statement in our terms. The
+weak junction condition is now load-bearing, so entries that damage it come
+first. Two further requirements were added while this group was being collected:
+predictability on the far side must be recovered rather than conceded, and the
+signalling chapter must not rest on photons alone.
+
+### The weak junction condition: the case against it, stated by its principal opponent
+
+### [113] Hayward, *Signature change at material layers and step potentials*, arXiv:gr-qc/9509052
+CHALLENGE, and the single most damaging paper in this group for the new thesis.
+This is the paper Bölüm 9.1 has to answer before it adopts the weak condition,
+and it has not been cited anywhere in the corpus so far. For a contravariant
+4-metric changing from Lorentzian to Riemannian across a spacelike hypersurface,
+the mixed Einstein tensor is manifestly non-singular; in Gaussian normal
+coordinates the metric contains a step function and the Einstein tensor contains
+a Dirac delta supported at the junction, whose coefficient is a linear
+combination of the second fundamental form. Hayward then draws the consequence
+in the sharpest possible terms: **unless the junction has vanishing extrinsic
+curvature, the metric describes a layer of matter at the junction** (with
+stresses but no energy or momentum), and in particular **such metrics do not
+satisfy the vacuum Einstein equations, nor the Einstein-Klein-Gordon
+equations**. The scalar counterpart is the same: the d'Alembertian of a
+Klein-Gordon field carries a Dirac delta whose coefficient is the momentum of
+the field, so **if the field momentum does not vanish at the junction the field
+does not satisfy the massless Klein-Gordon equation**; there is a source with a
+step potential sitting there.
+
+Translated into our terms, this is not a claim that the crossing is impossible.
+It is a claim about what the crossing costs. The weak condition is exactly the
+choice to let the extrinsic curvature not vanish and to let the field momentum
+at the surface not vanish. Hayward's calculation says the price of that choice
+is a matter layer and a source layer at $V = c$ which have to be supplied by
+something, and that away from them the field equations we started from are not
+the equations being solved. The article can accept the price and say what
+supplies the layer, or it can go back to the strong condition. What it cannot do
+is present the weak condition as a free alternative.
+
+### [114] Hayward, *Comment on 'Comparison of approaches to classical signature change'*, arXiv:gr-qc/9606044
+CHALLENGE, the closing move of the exchange already recorded as [63], [64],
+[65] and [90], and it should be read together with [113]. Hayward restates that
+the Hellaby-Dray solutions do not satisfy the Einstein-Klein-Gordon equations at
+the change, that substituting them in unit normal coordinates yields delta terms
+describing source layers, and that this calculation involves no imaginary time,
+no modified field equations, and nothing but classical objects. He further
+charges that the attempt to remove the delta terms is mathematically invalid,
+involving division by zero and products of distributions.
+
+The bearing on us is procedural and it matters. Our licence for the weak
+condition is [91], a Dray and Hellaby paper. This is the specific technical
+accusation against that line of work, and it is not answered anywhere in the
+corpus. Bölüm 9.1 should state which side of this exchange it is standing on and
+why, rather than citing one side.
+
+### [115] Racskó, *Variational formalism for generic shells in general relativity*, arXiv:2203.03049
+SUPPORT, and the machinery Bölüm 9.1 currently lacks. A variational principle
+for thin shells of **completely unconstrained signature**, unifying the timelike
+and null treatments. The shell equation appears as the natural boundary
+condition of a broken extremal problem along a hypersurface where the metric is
+allowed to be non-differentiable, and since the second-order Einstein-Hilbert
+action makes that boundary value problem ill defined, several regularisation
+schemes are introduced and proved equivalent. The results reproduce
+Barrabes-Israel for fixed causal type and Mars-Senovilla for generic shells.
+
+This is the right frame for our threshold. A surface where the causal character
+is not fixed is precisely what $V = c$ is, and here it is treated by a
+variational principle rather than by picking a distributional convention. The
+equivalence of the regularisations is the answer to [93], which showed that
+Colombeau theory settles nothing: the ambiguity is real, but here it is shown
+not to affect the shell equation.
+
+### [116] Senovilla, *Junction conditions for general gravitational theories*, arXiv:2603.04645
+SUPPORT and CHALLENGE at once, and it supplies the one theory-independent
+constraint in this whole area. Working distributionally for actions built from
+arbitrary functions of curvature scalar invariants, shells arise if the $m$th
+covariant derivative of the Riemann tensor is continuous at the matching
+hypersurface, and a proper junction without shells needs the $(m+1)$th
+derivative continuous as well. Two results bear directly on us.
+
+First, and this is the part Bölüm 9.2 and the signalling chapter both need:
+**General Relativity and $F(R)$ are extraordinary in admitting shells of
+curvature, that is, impulsive gravitational waves**, because every other theory
+in the class requires the jump of the second fundamental form to vanish across
+the matching hypersurface. So the freedom the weak condition asks for, a
+non-vanishing jump in the extrinsic curvature, exists in general relativity and
+essentially nowhere else, and what it buys is exactly an impulsive gravitational
+wave at the surface. That is a carrier: the price [113] identifies as a matter
+layer is, on the gravitational side, radiation emitted at the crossing.
+
+Second, the universal statement: **continuity of the normal components of the
+energy-momentum tensor across the matching hypersurface is proved to be a
+property independent of the field equations**. This is a necessary condition our
+crossing has to satisfy no matter which version of the field equations Bölüm 9.2
+adopts, and it is the only constraint in the corpus with that status.
+
+### Two crossings, and where the return lands
+
+### [117] Dray, Hellaby, *Mirror symmetry and double signature change*, arXiv:2606.21805
+PRIOR, and the closest thing in the literature to the geometry the round trip
+needs. Already in the corpus, never entered. The black mirror spacetime connects
+the two exterior regions of extended Schwarzschild directly, with no interior
+region between them, and the authors re-examine it **as a model of double
+signature change**, using signature-change techniques. They ask whether there is
+a surface layer at the horizon, that is a distributional curvature singularity
+corresponding to an impulsive gravitational wave, and confirm that there is
+none. They then discuss the global structure and **examine what happens to
+worldlines and curves passing through**.
+
+For us this is the template for the whole construction: two changes rather than
+one, the question of the surface layer posed at both, and the fate of worldlines
+through the pair treated explicitly. It should be read alongside [24], where two
+Lorentzian universes are joined through a Euclidean bounce, which is the same
+double-crossing topology reached from the cosmological side. Note also the
+tension with [113] and [116]: here the double crossing is found to carry **no**
+surface layer, which is the outcome the article wants and which [113] says is
+available only when the extrinsic curvature vanishes. Whether the black mirror
+achieves that by satisfying the strong condition after all is the question to
+put to this paper.
+
+### [118] Hayward, *Complex lapse, complex action and path integrals*, arXiv:gr-qc/9511007
+PRIOR, and the best existing machinery for the placement deliverable. Instead of
+imaginary time, Hayward allows the **lapse function to be complex**. In the 3+1
+action for gravity minimally coupled to a Klein-Gordon field this gives a complex
+action generating both the Lorentzian theory and its Riemannian analogue, and in
+particular **allows a change of signature between the two**; the action and the
+variational equations are manifestly well defined in the Hamiltonian
+representation, at the price of complex momenta, and the complex action
+interpolates between the Lorentzian and Riemannian actions as they appear in the
+respective path integrals. Applied to the observed quantum tunnelling of
+particles, the theory determines that the argument of the lapse for the universe
+now is extremely small but negative.
+
+Why this is the right shape for deliverable (a). Our problem is that no elapsed
+duration can be read on the far side, so the return event cannot be placed by
+integrating a proper time there. The complex-lapse formulation does not ask for
+one: the phase of the lapse is what carries the interpolation, and the placement
+of an event on the real time axis follows from the phase acquired between the two
+crossings rather than from a duration accumulated between them. It also answers
+the objection that a signature change forces imaginary time and is therefore not
+classical, which is the objection [63] records against Hayward's own earlier
+route. The article should adopt the complex lapse as the variable in which the
+two matching conditions are written and read the return placement off its
+argument.
+
+### [119] Hayward, *On cosmological isotropy, quantum cosmology and the Weyl curvature hypothesis*, arXiv:gr-qc/9212006
+CONTEXT with one framing sentence that the article should take over: signature
+change **is a classical model of quantum tunnelling** in quantum cosmology. The
+paper's own content, that the signature-change hypothesis implies an initial
+inflationary epoch, the magnetic half of the Weyl curvature hypothesis, and a
+close analogue of the conformal singularity hypothesis, and that adding the
+electric half leaves only homogeneous and isotropic perfect-fluid cosmologies
+with the Vilenkin tunnelling solution unique in the cosmological-constant case,
+is cosmological and peripheral to us. The framing is not. If the far-side
+interlude is the classical model of a tunnelling event, then the placement
+question is the tunnelling-time question, and the article inherits both the
+machinery and the known difficulties of that subject.
+
+### The finite layer with two interfaces, realised and measured
+
+These three are not signature changes and the article must not present them as
+such. What they are is the only place where a wave crossing **two** interfaces
+bounding a finite layer, entering and leaving, has been solved with explicit
+coefficients and then built. The layer there is a slab in time rather than in
+space, which is the dual of our configuration, and the formal structure carries
+over.
+
+### [120] Ramaccia, Toscano, Bilotti, *Propagation through metamaterial temporal slabs: transmission, reflection and special cases*, arXiv:1911.04280
+SUPPORT, methodological, and the closest worked analogue of Bölüm 9.4. A uniform
+medium present in all space for a **limited time**, that is a slab bounded by two
+temporal interfaces. The scattering coefficients are derived as functions of the
+refractive indices and of the application time, and the response is shown to be
+controlled by the application time, **which acts as the electrical thickness of a
+conventional spatial slab acts**. That last equivalence is the point for us:
+Bölüm 9.4 argues that a finite-thickness threshold transmits and that the
+transmission depends on the thickness. Here the same dependence is derived in
+closed form for the dual configuration, and thickness is duration. Note honestly
+that only the abstract could be retrieved for this file.
+
+### [121] Moussa, Xu, Yin, Galiffi, Radi, Alu, *Observation of temporal reflections and broadband frequency translations at photonic time interfaces*, arXiv:2208.07236
+SUPPORT, and it turns [120] into an experiment. Photonic time reflection and the
+associated broadband frequency translation are observed in a switched
+transmission-line metamaterial. Decisive detail for us: **a pair of temporal
+interfaces is combined to demonstrate time-reflection-induced interference,
+realising the temporal counterpart of a Fabry-Perot cavity**. So the two-crossing
+interference that our round trip predicts has been measured, in the dual
+geometry, and what it produces is a cavity resonance condition relating the
+phases picked up at the two interfaces. That resonance condition is the analogue
+of the matching relation that deliverable (a) wants. Abstract only for this file.
+
+### [122] Molero, Zapata-Cano, Alex-Amor, *Transfer ABCD matrix for time-varying media and time crystals*, arXiv:2503.15063
+SUPPORT, and it gives the transfer matrix by name. ABCD parameters are defined
+for temporal systems by rearranging $D$ and $B$ at the input and output of the
+temporal boundary, the parameters of a temporal slab are derived, the associated
+reflection and transmission coefficients are computed from them, and the
+formalism is then used to obtain the dispersion diagram of a time crystal. The
+value to us is that it makes **multilayer** temporal configurations a matter of
+multiplying matrices. If Bölüm 9.4 is to be extended from one slab to a crossing,
+an interlude and a return crossing, this is the algebra to copy, and the
+composition rule is where the two matchings of deliverable (a) meet.
+
+### Predictability on the far side: what the nonlocal constraint actually is
+
+The requirement is now to recover prediction beyond the threshold rather than
+concede its loss. The known route is [73] and [74], where the ultrahyperbolic
+Cauchy problem is well posed on a mixed-signature hypersurface **under a nonlocal
+constraint**. Those two papers state the constraint but do not say what it is
+made of. The following do, and the answer is not comfortable.
+
+### [123] Cobos, Guilfoyle, *An extension of Asgeirsson's mean value theorem for solutions of the ultrahyperbolic equation in dimension four*, arXiv:2011.11330
+### [124] Cobos, Guilfoyle, *A conformal mean value theorem for solutions of the ultrahyperbolic equation*, arXiv:2210.08155
+PRIOR, taken together, and they identify the nonlocality. Asgeirsson's 1937 theorem
+says that a solution of the ultrahyperbolic equation in four variables has equal
+integrals over certain **pairs of conjugate circles**. These two papers extend
+that to all non-degenerate conjugate conics, conjugate hyperbolae, parabolae and
+line-empty pairs, using the conformal invariance of the four-dimensional
+ultrahyperbolic equation under the conformal group of the $2+2$ pseudo-Euclidean
+space, and identify the admissible pairs with the two rulings of a doubly ruled
+surface in Euclidean 3-space.
+
+Two things follow for Bölüm 6.1 and 7.3, and the second is a priority finding.
+
+First, the constructive one. The nonlocal constraint is not an arbitrary side
+condition. It is a **mean value identity over conjugate conics**, it is
+conformally covariant on a $2+2$ region, and after these two papers the full
+family of curve pairs over which it holds is classified. If the article wants a
+physical reading of the constraint, this is where it has to come from: the datum
+is not a value at a point but an average over a conic, and the conjugate conic
+carries the same average. Our region II is $(3,1)$ rather than $(2,2)$, so the
+four-variable statement applies to sections of it, not to the whole; the article
+must say which.
+
+Second, the uncomfortable one, and it should be stated plainly rather than
+buried. **The origin of the constraint is that solutions of the ultrahyperbolic
+equation arise as the compatibility condition for a function on line space to be
+the line integrals of a function on Euclidean 3-space.** In other words, the
+data satisfying the constraint are exactly the data that are already the shadow
+of an object living in one dimension fewer, with one time. Imposing the nonlocal
+constraint to restore predictability therefore risks smuggling in the answer: it
+restores prediction on the far side by restricting to the far-side
+configurations that were secretly one-time configurations all along. The article
+can still use it, but it cannot claim that predictability has been recovered for
+a genuinely multi-time region until it shows its admissible data are not of this
+restricted form.
+
+### [125] Guilfoyle, *From CT scans to 4-manifold topology*, arXiv:2309.14826
+SUPPORT, and the single reference to cite for the whole of the above. A survey of
+the four-dimensional ultrahyperbolic equation from the geometric, analytic and
+topological sides at once: the canonical **neutral metric on the space of
+oriented geodesics** of a three-dimensional space form, the mean value theorem,
+and, the part Bölüm 6.1 needs, **a new solution of the Cauchy problem over a
+certain family of null hypersurfaces**. That is a positive well-posedness result
+on a class of initial surfaces which is neither the spacelike nor the
+mixed-signature class already discussed, and it strengthens the case that the
+loss of determinism in Bölüm 6.1 is a statement about the choice of initial
+surface rather than about the equation.
+
+### [126] Garetto, Tramontana, *Schrödinger ultrahyperbolic equations with singular coefficients*, arXiv:2603.03170
+SUPPORT, and it extends [109] in exactly the direction the threshold needs.
+$H^\infty$ well-posedness in the very weak sense is proved for the Cauchy problem
+of Schrödinger ultrahyperbolic equations whose coefficients are **less than
+continuous**, under assumptions on the distributional structure of the
+coefficients and decay of the lower-order terms, with consistency against the
+classical smooth results. The relevance is direct: our configuration has a
+discontinuous metric at the crossing surfaces, so any well-posedness theorem
+requiring smooth coefficients does not apply to it. This one does not require
+them. It is the correct technical setting for a Cauchy problem posed across the
+threshold rather than inside one region.
+
+### [127] Demchenko, *On a certain representation of a solution to the characteristic problem for the ultrahyperbolic equation*, arXiv:2604.22402
+CONTEXT, narrow. A well-posed set-up is discussed for the ultrahyperbolic
+characteristic problem with data on a characteristic hyperplane, and a
+representation of the solution is obtained that is suitable for analysing its
+asymptotics at infinity. Two uses: it is a second class of surface on which the
+problem is well posed, adding to [125], and the asymptotic representation is what
+one needs to say anything about a far-side solution at large parameter, which is
+the only regime in which the return crossing can be discussed.
+
+### No time orientation: what it costs, what it looks like from our side
+
+### [128] Hadley, *The orientability of spacetime*, arXiv:gr-qc/0202031
+CHALLENGE, and a priority finding for the observation deliverables. Hadley
+considers an experimental test of time orientability and shows that **a failure
+of time orientability of a spacetime region would be indistinguishable from a
+particle-antiparticle annihilation event**.
+
+This lands squarely on two of the eleven scope items, observing the particle
+while it is there and determining after the return what was lost. Our far side is
+posited to have no time orientation. This result says that from our side, the
+signature of that region is an annihilation, not a departure and a return: what
+an observer who never crossed records is a particle and an antiparticle
+disappearing. Read constructively it is the dictionary entry the project wants,
+because it gives a definite thing to look for. Read as an objection it is severe,
+because it says the observation cannot distinguish the round trip from an
+ordinary annihilation event, and the article must say what breaks that
+degeneracy. Compare [28], where the loops at the change hypersurface may appear
+to a nearby observer as **the creation of a particle-antiparticle pair at two
+distinct points**: the two results are the same phenomenon seen at the two ends,
+and taken together they suggest that the entire observable content of a round
+trip is a pair creation at the entry and an annihilation at the exit.
+
+### [129] Hadley, *Electrodynamics and time orientability*, arXiv:1703.05573
+SUPPORT, and the most concrete dictionary in the corpus. On a spacetime that is
+not time orientable, a $U(1)$ bundle is constructed to **measure the twisting of
+the time axis**, and from that single assumption Maxwell's equations, the Lorentz
+force law and the Einstein-Maxwell equations follow, along Kaluza-Klein lines but
+with the constraints of a $U(1)$ connection rather than a fifth dimension. The
+result that matters to us: **apparent net electric charge arises naturally,
+because the direction of the electric field reverses along a time-reversing path,
+so the boundary of a time-reversing region carries a net electric flux and looks
+exactly like a region containing a charge**.
+
+This is a dictionary entry of the kind deliverable (b) asks for, and it is
+quantitative. A far-side orientation, which has no meaning in our terms, shows up
+on our side as a flux through the threshold surface, that is as an apparent
+charge. It also gives the signalling chapter a carrier that is not a photon in
+the ordinary sense: the channel is the $U(1)$ connection measuring the twist, and
+what crosses is a flux. The treatment is purely classical, which suits the two
+layer model.
+
+### [130] Hadley, *Spin half in classical general relativity*, arXiv:gr-qc/0004029
+SUPPORT for the scope item on what matter means on the far side. Models of
+elementary particles as geons in classical general relativity acquire **the
+transformation properties of a spinor precisely when the spacetime manifold is
+not time orientable**. So a body defined in a region with no time orientation is
+not the same object as a body defined here; the absence of the orientation is
+what makes it a spinor rather than a scalar. This is the best available answer to
+"define the particle there" that does not require a quantum field theory on the
+far side, which [37] and [38] say is not available anyway. It should be read with
+[58], where the Dirac equation across a signature change was found to carry no
+conserved inner product: this paper says the far-side object is spinorial, that
+one says the spinorial object has no conserved product across the crossing.
+
+### [131] Dulac, Wei, *No boundary density matrix in elliptic de Sitter*, arXiv:2512.00704
+SUPPORT, and it puts a number on the information question. Elliptic de Sitter is
+$dS/\mathbb{Z}_2$, non-time-orientable by antipodal identification. Unlike global
+de Sitter, whose vacuum is prepared by a no-boundary Euclidean path integral, the
+Euclidean elliptic space **does not define a wavefunction; the proposal is that
+the path integral there defines a no-boundary density matrix instead**, and for a
+free Dirac fermion in two dimensions the von Neumann and Renyi entropies of that
+density matrix are computed analytically, reducing to correlators of vertex
+operators on non-orientable surfaces.
+
+This is the closest the corpus comes to the fifth scope item, how much
+information survives when the time orientation is gone, and the answer has the
+right form: what you get back is a mixed state, and the information lost is its
+entropy, computable. The article should take this as the shape of its own
+statement, a density matrix rather than a state, with the loss quantified by an
+entropy rather than asserted.
+
+There is a second observation in the paper which is a challenge and should not be
+passed over: in this setting the **global Hilbert space is one-dimensional**,
+while the Hilbert space associated with each individual observer is a nontrivial
+Fock space. If that carries over, then there is no global state of the far side
+to speak of at all, and every statement about what happens there is necessarily
+relative to an observer who is not there. That is a sharper form of the
+objection our Bölüm 14 already concedes.
+
+### The degenerate surface: making the crossing calculable rather than arguing about it
+
+### [132] Stoica, *On singular semi-Riemannian manifolds*, arXiv:1105.0201
+### [133] Stoica, *Spacetimes with singularities*, arXiv:1108.5099
+SUPPORT, taken together, and the most useful pair of tools in this group for Bölüm 13.3 and 9.4.
+The standing difficulty at the threshold is that when the metric degenerates the
+inverse metric, the contraction of covariant indices, the Levi-Civita connection
+and the curvature all stop being defined, which is why the literature argues
+about conventions instead of computing. Stoica constructs an invariant, canonical
+contraction of covariant indices valid for degenerate metrics, applicable to
+radical-annihilator tensor fields; uses it with the Koszul form to define a
+covariant derivative on radical-stationary singular semi-Riemannian manifolds;
+builds the Riemann curvature from it; and shows that on the class he calls
+semi-regular **the Riemann curvature is smooth even where the metric
+degenerates**. From this he writes a densitized Einstein tensor whose weight-2
+density stays smooth through the degeneracy, giving a densitized Einstein
+equation that is smooth everywhere and equivalent to the standard one wherever
+the metric is non-degenerate.
+
+The second paper carries the same apparatus explicitly to **metrics which change
+signature**, states that the operations usually prohibited can still be
+performed in this framework, and, the part that matters for the round trip,
+obtains spacelike foliations of the globally hyperbolic regions of the extended
+solutions with the consequence that **the initial data can be preserved in
+reasonable situations**.
+
+That last clause is the one to hold onto. Preservation of initial data through a
+degenerate surface is exactly what deliverable (a) needs and exactly what [89]
+denied by a different route. The two are not in direct contradiction, because
+Stoica changes the objects rather than the physics: it is the densitized Einstein
+equation that stays smooth, not the ordinary one. Bölüm 9.1 should say which
+equation it is imposing. But this is the only construction in the corpus in which
+something is carried through the degeneracy rather than matched across it, and it
+is therefore the natural setting for a transfer relation between the two
+crossings.
+
+### [134] Holdom, *Cosmologies with turning points*, arXiv:2302.10716
+SUPPORT, and a sharp warning about coordinates. Singularity-free,
+geodesically-complete cosmologies are built on manifolds that are **not quite
+Lorentzian**: the metric can be smooth everywhere or non-degenerate everywhere,
+but not both, and which of the two you see depends on the coordinate system. In
+the smooth chart the Einstein tensor is first order in derivatives; in the
+non-degenerate chart the metric has a piecewise FLRW form. On such a manifold the
+universe can **turn around, expanding to contracting or the reverse, with the
+Einstein equations satisfied everywhere and no violation of the standard energy
+conditions**, and a corresponding extension of the Kasner vacuum solutions is
+given.
+
+Two consequences. First, the article's Bölüm 13.3 argument that no continuous
+bridge can be built, and the counter-model [44], are both partly arguments about
+which chart is being used; this paper shows that smoothness and
+non-degeneracy are not simultaneously available, so a claim that the interpolation
+fails must say in which chart. Second, and directly for the round trip, this is a
+worked example of a **turning point** on a not-quite-Lorentzian manifold with the
+field equations intact and no exotic matter: the geometry goes in one sense,
+turns, and comes back. That is the round trip's shape in the cosmological
+setting, and the article should compare its two crossings against this single
+turning point.
+
+### [135] Rieger, *Möbius structures and non-orientable semi-Riemannian manifolds*, arXiv:2601.10009
+CHALLENGE, a priority finding, and already in the corpus without an entry. The
+question is global: which signature-changing metrics are admissible on a
+non-orientable manifold. The main result is that **on non-orientable compact
+surfaces the radical of a signature-changing metric cannot be everywhere
+transverse along the hypersurface of signature change**. In particular metrics
+built by the transformation prescription $\tilde g = g + f V^\flat \otimes
+V^\flat$, with $g$ Lorentzian and $f$ a smooth interpolation, **necessarily fail
+the transversality condition**. The obstruction is purely global and is tied to
+the Euler characteristic and the non-existence of nowhere-vanishing vector
+fields.
+
+This bears on the article at a point it has not defended. The prescription named
+here is the one of [27], the transformation theorem the corpus relies on to
+produce signature-changing manifolds at all, and the transverse radical is the
+hypothesis under which [28] and [45] work. So: the far side is posited to have no
+time orientation; orientability failures obstruct exactly the transversality that
+the corpus's construction of the change surface assumes; and the obstruction is
+topological, so no local smoothing removes it. The article cannot simultaneously
+help itself to a non-orientable far side and to the transverse-radical machinery
+without saying why its configuration escapes this theorem. The theorem is proved
+for compact surfaces, which is the escape route to examine first.
+
+### [136] Kuhfittig, *Periodic signature change and embedding class one*, arXiv:2204.14222
+CONTEXT, already in the corpus without an entry, and relevant only for its
+structure. A four-dimensional spacetime of embedding class two is reduced to
+class one by a coordinate transformation whose extra dimension may be spacelike
+or timelike; making the free parameter of the transformation a **periodic
+function of time** produces a model interpretable as a **periodic change in the
+signature of the embedding space**. The content is an oscillating-universe model
+and is not ours, but the construction is the only one in the corpus that produces
+a **repeated** signature change rather than one or two, and the parameter that
+drives it is explicit. If the article ever wants more than a single round trip,
+this is the existing template.
+
+### [137] Andrew, Steinfelds, Andrew, *Interpolated topology change and spin cobordism*, arXiv:2601.05957
+CONTEXT, already in the corpus without an entry, and the companion to [102].
+Regulated topology change is built from smooth Lorentzian spin cobordisms with
+interpolating metrics, allowing a **transient failure of global hyperbolicity**
+while keeping smoothness, Lorentz signature and spin compatibility, with a
+curvature functional weighting the admissible interpolations and a
+Stiefel-Whitney constraint enforcing spin consistency. The signature never
+changes here, so it is not our configuration. Its use to us is the licence it
+formalises: a transient loss of global hyperbolicity between two well-behaved
+Lorentzian ends is treated as something to regulate and weight, not as a
+prohibition. Our Bölüm 14.1 complaint that region II has no Cauchy surface is
+exactly a transient failure of that kind, bracketed by two Lorentzian regions.
+
+### The analogue that has now been measured
+
+### [138] Smolyaninova, Cartelli, Augstein, Spickard, Devadas, Smolyaninov, *Experimental observation of effective gravity and two times physics in ferrofluid-based hyperbolic metamaterials*, arXiv:2003.01564
+SUPPORT, and it upgrades [97] from proposal to observation. The two-times
+behaviour of extraordinary waves in hyperbolic metamaterials, proposed in the PRL
+recorded as [97], is **reported as experimentally observed** in iron- and
+cobalt-based ferrofluid hyperbolic metamaterials via gravity-like nonlinear
+optics: alongside the ordinary temporal coordinate, the spatial coordinate along
+the optical axis also acquires timelike character.
+
+This is the strongest item the article has for the observation scope items. A
+region with more than one timelike direction is not only constructible but has
+been built and probed, and the knob is the ferrofluid. Bölüm 16.4 should name
+this system. The honest qualification is that the effective metric is $(2,2)$
+rather than our $(3,1)$, and that what is observed is the two-times character of
+the medium, not a particle making a round trip through it. Only the abstract
+could be retrieved for this file.
+
+### Re-read under the new scope
+
+### [24 revisited] Hellaby, Sumeruk, Ellis, arXiv:gr-qc/9907042
+The entry in Group 2 files this as a black hole result. Under the round trip it
+is something else: **two Lorentzian universes joined through a Euclidean bounce**
+is the round trip's topology, with the two crossings explicit and the interlude
+finite. The condition it records is the one that now costs us most, that removing
+all surface effects needs not only vanishing extrinsic curvature but also
+vanishing three-dimensional Ricci scalar. Read with [113], that is the same
+statement twice: a crossing with no surface layer is a crossing under the strong
+condition, and the weak condition buys transmission by accepting the layer.
+
+### [28 revisited] Rieger, Hasse, arXiv:2409.02403
+Group 2 files this as support for the original motivation. Under the round trip
+it is a direct threat to deliverable (a), and should be moved. If there are
+locally time-reversing loops through **every** point of the transition
+hypersurface, and no consistent distinction between future- and past-directed
+vectors around them, then the two crossings cannot be labelled "outward" and
+"return" by anything intrinsic to the surface. The placement of the exit event on
+our time axis then cannot be read off the matching alone; it needs a labelling
+imported from the Lorentzian side, and the article has to say what supplies it.
+This is the same degeneracy that [128] describes from the observational side.
+
+### What this group changes
+
+26. **The weak junction condition is not free, and the price is now named.**
+    [113] shows that a junction with non-vanishing extrinsic curvature *is* a
+    matter layer, and that such metrics do not satisfy the vacuum Einstein or
+    the Einstein-Klein-Gordon equations; correspondingly, a field with
+    non-vanishing momentum at the surface does not satisfy the massless
+    Klein-Gordon equation there. Bölüm 9.1 adopts exactly those two
+    non-vanishings. It must therefore either supply the layer and the source, or
+    return to the strong condition. This is the largest open liability in the
+    new article and it is not addressed anywhere in it.
+27. The Hellaby-Dray line, on which our licence [91] rests, stands accused in
+    [114] of a specific technical error, division by zero and products of
+    distributions. Bölüm 9.1 has to take a side in that exchange explicitly.
+28. There is now a variational treatment of shells of **unconstrained
+    signature**, [115], with several regularisations proved equivalent. That is
+    a better foundation for the threshold than any distributional convention,
+    and it answers [93]'s point that the formalism settles nothing: the
+    ambiguity does not reach the shell equation.
+29. One constraint on the crossing is theory-independent. [116] proves that
+    continuity of the normal components of the energy-momentum tensor across
+    the matching hypersurface holds whatever the field equations. The same paper
+    shows that general relativity and $F(R)$ are the only theories in a wide
+    class that admit a jump in the second fundamental form, and that what such a
+    jump produces is an impulsive gravitational wave. So the freedom Bölüm 9.1
+    wants exists essentially only in general relativity, and it has a
+    gravitational emission attached to it.
+30. Deliverable (a), the placement on our time axis, has a mechanism and it is
+    not a duration. [118] replaces imaginary time with a **complex lapse**, gets
+    a single complex action interpolating between the Lorentzian and Riemannian
+    theories with a signature change between them, and locates events by the
+    argument of the lapse. Since no elapsed time can be read on the far side,
+    the phase of the lapse acquired between the two crossings is the right
+    carrier of the placement. This should become the variable of Bölüm 9.4.
+31. The two-crossing geometry exists in the literature: [117] treats a spacetime
+    as a **double** signature change, asks after a surface layer at both
+    crossings, finds none, and follows worldlines through. It should be read
+    with [24], the Euclidean bounce between two Lorentzian universes, and
+    against [113]: an absence of surface layer is the signature of the strong
+    condition, so the article must explain how a crossable threshold gets one
+    without the other.
+32. The finite layer with two interfaces has been solved and built, in the dual
+    geometry. [120] gives the scattering coefficients of a temporal slab with
+    the application time playing the role of thickness, [122] gives the transfer
+    matrix so that multilayer configurations compose, and [121] reports the
+    **experimental** observation of interference between two temporal
+    interfaces, a temporal Fabry-Perot. Bölüm 9.4 should be written as a
+    transfer-matrix calculation and should say plainly that its analogue is a
+    time slab, not a signature change.
+33. **The nonlocal constraint that restores predictability may smuggle in the
+    answer, and the article must say so.** [123], [124] and [125] identify it:
+    it is Asgeirsson's mean value identity over conjugate conics, conformally
+    covariant on a $2+2$ region. But its origin is John's theorem that solutions
+    of the ultrahyperbolic equation are the compatibility condition for a
+    function on line space to be the line integrals of a function on Euclidean
+    3-space. Data satisfying the constraint are the shadow of a one-time object.
+    Recovering prediction that way restores it only for far-side configurations
+    that were secretly single-time configurations. The article can use the
+    constraint but must show its admissible data are not of that form.
+34. Predictability nonetheless has three positive results that Bölüm 6.1 does
+    not yet use: [125] solves the Cauchy problem over a family of null
+    hypersurfaces, [127] gives a well-posed characteristic problem with an
+    asymptotic representation, and [126] proves very weak $H^\infty$
+    well-posedness for ultrahyperbolic Schrödinger equations with
+    **discontinuous coefficients**, which is the only such theorem that applies
+    to a problem posed across our threshold rather than inside one region.
+    Together with [109] and [73], the article can no longer say prediction
+    collapses on the far side; it must say on which initial surfaces it does.
+35. **What a round trip looks like from our side may be an annihilation.** [128]
+    shows a failure of time orientability is indistinguishable from a
+    particle-antiparticle annihilation event, and [28] notes that loops at the
+    change hypersurface may appear as a pair creation at two distinct points.
+    Taken together, the entire observable content of the round trip is a pair
+    creation at the entry and an annihilation at the exit, and the article must
+    say what distinguishes that from an ordinary pair event. This is
+    simultaneously the concrete prediction the observation scope items want and
+    the sharpest degeneracy threatening them.
+36. Deliverable (b) has its first quantitative dictionary entry. [129] shows
+    that on a non-time-orientable spacetime the twisting of the time axis is
+    measured by a $U(1)$ bundle, that Maxwell's equations and the Lorentz force
+    follow from it, and that **the boundary of a time-reversing region carries a
+    net electric flux and therefore looks exactly like a charge**. A far-side
+    orientation, meaningless in our terms, appears here as an apparent charge at
+    the threshold. This is also a signalling carrier that is not a photon: the
+    channel is the connection, and what crosses is flux.
+37. What a particle is on the far side has a classical answer. [130]: geons on a
+    manifold that is not time orientable transform as **spinors**. So the object
+    defined there is spinorial precisely because the orientation is missing,
+    which is the constructive counterpart of [58]'s finding that no conserved
+    inner product exists for the Dirac equation across the change.
+38. The information question has the right form and a computed example. [131]:
+    on a non-time-orientable spacetime the Euclidean path integral gives a
+    **density matrix rather than a wavefunction**, and its von Neumann and Renyi
+    entropies are computed. The article should state its own loss as an entropy
+    of a returned mixed state. The same paper's remark that the global Hilbert
+    space is one-dimensional while each observer's is a Fock space is a warning:
+    there may be no observer-independent state of the far side at all.
+39. The degeneracy can be computed through rather than matched across. [132] and
+    [133] give an invariant contraction, connection and curvature for degenerate
+    metrics, a densitized Einstein equation that stays smooth through the
+    change, and, critically, spacelike foliations under which **initial data can
+    be preserved**. This is the only construction in the corpus that carries
+    something through the surface, and it is therefore the natural home for a
+    transfer relation between the two crossings. The catch is that what stays
+    smooth is the densitized equation, not the ordinary one.
+40. [134] shows smoothness and non-degeneracy cannot both hold in one chart, so
+    Bölüm 13.3's claim that no continuous bridge exists, and its counter-model
+    [44], must both specify a chart. It also exhibits a **turning point** with
+    the Einstein equations intact and the standard energy conditions unviolated,
+    which is the round trip's shape reduced to one surface.
+41. **A global obstruction stands against combining a non-orientable far side
+    with the corpus's own construction of the change surface.** [135] proves the
+    radical cannot be everywhere transverse on non-orientable compact surfaces,
+    and that the transformation prescription of [27], on which [28] and [45]
+    depend, necessarily fails transversality. The obstruction is topological, so
+    no local smoothing removes it. The article must show its configuration
+    escapes the theorem, and the compactness hypothesis is the place to look.
+42. The two-times region has been observed, not merely proposed. [138] reports
+    experimental observation of two-times behaviour in ferrofluid hyperbolic
+    metamaterials, which upgrades [97]. Bölüm 16.4 should name this apparatus
+    alongside [98] and [100], with the qualification that the effective
+    signature is $(2,2)$ and that no round trip has been made through it.
+43. Gaps that this sweep did not fill, and that should be recorded rather than
+    papered over. First, **wave packets** crossing a signature change: nothing
+    exists. The whole literature is plane modes, and [96]'s geodesics; the
+    packet-level questions of distortion, delay and what survives have to be
+    answered by our own calculation, with [120] and [122] as the only formal
+    guide. This is a scope-level finding, not a search gap: the article models
+    the particle as a wave packet and interprets it as a point body, and the
+    packet layer of that model has no literature behind it at all.
+    Second, **gravitational signalling across the surface**: apart from
+    [116]'s impulsive wave and [113]'s matter layer, there is no treatment of a
+    gravitational wave crossing a signature change, and no treatment of what a
+    mass on one side does to the other. Third, the **originating weak-condition
+    paper**, Ellis, Sumeruk, Hellaby and Roberts 1992, cited as the source of
+    the condition by [66] and others, was not found on arXiv in this sweep and
+    is not in the corpus; it is a 1992 journal paper and may simply predate the
+    archive, but that was not verified.
+    The load-bearing citation of the new article is currently reached only
+    through papers that discuss it.

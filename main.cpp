@@ -1,11 +1,11 @@
 #include "boundary/CausalCrossing.h"
 #include "boundary/JunctionScattering.h"
+#include "boundary/ModeFilter.h"
 #include "boundary/SlabTunnelling.h"
 #include "boundary/ThresholdSurface.h"
 #include "core/Report.h"
 #include "core/Section.h"
 #include "critique/AlternativeRoutes.h"
-#include "critique/DirectionDependentD.h"
 #include "critique/ObjectionTests.h"
 #include "critique/SylvesterObstruction.h"
 #include "dynamics/Dispersion.h"
@@ -16,7 +16,9 @@
 #include "horizon/BlackHoleHorizon.h"
 #include "horizon/DegeneratePath.h"
 #include "horizon/SurfaceLayer.h"
+#include "intermediate/IntermediateRegion.h"
 #include "literature/LiteraturePosition.h"
+#include "particle/WavePacket.h"
 #include "quantum/CanonicalQuantization.h"
 #include "quantum/CasimirDiscriminant.h"
 #include "quantum/DerivedTransition.h"
@@ -39,9 +41,12 @@ namespace
         std::vector<std::unique_ptr<slm::Section>> sections;
         sections.push_back(std::make_unique<slm::InvolutionD>());
         sections.push_back(std::make_unique<slm::PermutationScan>());
+        sections.push_back(std::make_unique<slm::IntermediateRegionSection>());
+        sections.push_back(std::make_unique<slm::WavePacketSection>());
         sections.push_back(std::make_unique<slm::EnergyMomentum>());
         sections.push_back(std::make_unique<slm::DispersionSection>());
         sections.push_back(std::make_unique<slm::KleinGordonField>());
+        sections.push_back(std::make_unique<slm::ModeFilterSection>());
         sections.push_back(std::make_unique<slm::TimeOrientationSection>());
         sections.push_back(std::make_unique<slm::SuperluminalRest>());
         sections.push_back(std::make_unique<slm::ThresholdSurface>());
@@ -60,7 +65,6 @@ namespace
         sections.push_back(std::make_unique<slm::VacuumCasimir>());
         sections.push_back(std::make_unique<slm::CasimirDiscriminantSection>());
         sections.push_back(std::make_unique<slm::SylvesterObstruction>());
-        sections.push_back(std::make_unique<slm::DirectionDependentD>());
         sections.push_back(std::make_unique<slm::ObjectionTestsSection>());
         sections.push_back(std::make_unique<slm::AlternativeRoutesSection>());
         return sections;

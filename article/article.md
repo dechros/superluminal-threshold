@@ -1,56 +1,29 @@
-# Superluminal eşik: imza değişen bir arayüzün eklem koşulları ve sonuçları
+# Superluminal eşik: kütleli bir parçacığın gidiş dönüş yolculuğu
 
-> Bu metin, modelin kendi sonuçlarını literatürdeki konumuyla birlikte verir.
-> Köşeli parantez içindeki numaralar sondaki kaynakçaya gönderir. Bir sonucun
-> daha önce elde edilmiş olduğu durumlarda bu açıkça belirtilir.
+> Bu metin yeniden yapılandırma aşamasındadır. Bölüm numaraları aşağıdaki
+> yeni sıraya göredir; gövde metinlerinin içinde geçen eski bölüm
+> numaralarına yapılan atıflar, yazım bittikten sonra topluca
+> güncellenecektir. `[YAZILACAK]` işaretli yerler henüz kurulmamış
+> bölümlerdir.
 
 ## Özet
 
-Işık hızının aşıldığı bir geçişte uzay ile zamanın rol değiştirdiği, yani
-metriğin imzasının 1+3'ten 3+1'e döndüğü bir çerçeve ele alınıyor. Bu geçişi
-yapan dönüşüm iki bağımsız çarpana ayrılıyor:
+[YAZILACAK] Gidiş dönüş tezine göre yeniden yazılacak. Eski özet eşiğin
+yansıtıcı olduğunu söylüyordu; yeni özet geçirgen olduğunu söyleyecek.
 
-$$M(V) = D \cdot B(c^2/V)$$
+---
 
-Burada $D$ sabit ve parametresiz bir involüsyondur, imza değişimini tek başına
-yapan parça. $B(c^2/V)$ ise sıradan bir subluminal Lorentz boostudur ve hız
-bilgisini taşıyan parçadır. Bu ayrım, aşağıdaki bütün sonuçların dayanağıdır:
-grup yapısının kapanması, enerji ile momentumun takası, öte tarafta öngörünün
-denklem tipinden ötürü çökmesi, superluminal durgunluğun bir ayar fazlalığı
-olduğunun gösterilmesi, ve eşik yüzeyinin akı geçirmemesi.
+## Modelin maddeleri
 
-Çalışma kendi sınırını da içerir: Sylvester atalet yasası, reel bir dönüşümün bir
-metriğin imzasını doğrudan çevirmesini yasaklar. Dolayısıyla $D$, tek bir metriğin
-imzasını çeviren bir operatör değil, iki farklı metrik arasında bir eşlemedir. Bu
-sınır Bölüm 17'de açıkça ele alınıyor.
+[YAZILACAK] Eski yedi madde listesinin yedincisi "eşik yansıtıcıdır"
+diyordu ve artık geçersizdir. Liste gidiş dönüş omurgasına göre
+yeniden kurulacak.
 
-**Bu çalışmanın kapsamı.** Burada kurulan şey, iki bölgenin her birinin tam bir
-teorisi değil, aralarındaki **arayüzün** teorisidir. Metrikler sabit arka plan
-olarak alınır, Einstein denklemleri çözülmez, ve geçişin neden $v = c$ değerinde
-gerçekleştiği türetilmez. Buna karşılık arayüzün kendisi hakkında söylenebilecek
-şeyler sonuna kadar götürülür: ne geçer, ne geçmez, hangi koşulla, hangi
-kalınlıkta ne olur, ve bunların hangisi seçime hangisi zorunluluğa bağlıdır. Bu
-yöntem, genel görelilikte eklem koşulları literatürünün yöntemidir ve modelin
-sağlam çekirdeği oradadır (Bölüm 17).
+---
 
-Öncelik konusunda baştan açık olmak gerekir. Superluminal çerçevelerin 1+3
-boyuttaki kuruluşu [2]'ye, çarpanlamanın kendisi yine [2]'ye aittir; imza
-değişiminde eklem koşulları literatürü [5], [6], [7] ile 1990'ların başına
-dayanır. Bu çalışmanın iddiası yeni bir parça bulmak değil, bu iki literatürü
-birleştirmek ve birleşimin sonuçlarını sonuna kadar takip etmektir. Hangi
-sonucun kime ait olduğu ilgili bölümlerde tek tek belirtilmiştir.
+# Bölüm I. Kuruluş
 
-## Modelin yedi maddesi
-
-1. $c$ aşılırsa uzay ve zaman rol değiştirir; bu değişim anidir ve hızdan bağımsızdır.
-2. Bunu yapan tek dönüşüm $D$'dir; involüsyondur, pariteyi korur, ışık hızını korur.
-3. Ötede hız bir skaler değil, bir yönelimdir.
-4. Enerji ve momentum takas olur.
-5. Hız dönüşümü $v' = c^2/v$.
-6. Ötede öngörü çöker, denklem tipinin doğrudan sonucu olarak.
-7. Eşik geçirgen değil, yansıtıcıdır (güçlü eklem koşulu altında; bkz. Bölüm 9.1).
-
-## Gösterim ve konvansiyonlar
+## 1. İki bölge, metrikleri ve gösterim
 
 Bölge I bizim tarafımızdır: bir zaman, üç uzay. Bölge II ışık hızının ötesidir:
 üç zaman, bir uzay.
@@ -64,7 +37,7 @@ Kütle parametresi $\mu = (mc/\hbar)^2$ ile yazılır.
 
 ---
 
-## 1. Çarpanlama
+## 2. Geçişi yapan yapı
 
 Superboost dönüşümü iki bağımsız parçanın çarpımıdır:
 
@@ -90,7 +63,6 @@ sağlanır: çarpanlama geçerlidir ve imza değişimi bütünüyle $D$'nin üze
 
 ---
 
-## 2. $D$ matrisi
 
 $$D = \begin{pmatrix} 0&0&0&1 \\ 0&0&1&0 \\ 0&1&0&0 \\ 1&0&0&0 \end{pmatrix}
 \qquad\text{yani}\qquad (ct, x, y, z) \longmapsto (z, y, x, ct)$$
@@ -135,7 +107,6 @@ geçtikleri için ayrı fiziksel içerik taşımazlar.
 
 ---
 
-## 3. Grup kapanması
 
 Doğrulanan iki olgu:
 
@@ -178,297 +149,141 @@ ortaya konmaz, çünkü orada zaten kapalı bir grup inşa edilmiştir.
 
 ---
 
-## 4. Enerji ve momentum
+## 3. Parçacık nedir: iki katmanlı model
 
-$D$ dört-momentuma uygulandığında:
+Bu çalışmanın konusu kütleli bir parçacığın eşiği geçmesi, öte tarafta bir süre
+bulunması ve geri dönmesidir. Dolayısıyla "parçacık" sözcüğünün ne anlama
+geldiği bir ayrıntı değil, bütün hesabın dayanağıdır ve önce sabitlenmelidir.
 
-$$(E/c,\; p_x,\; p_y,\; p_z) \longmapsto (p_z,\; p_y,\; p_x,\; E/c)$$
+Sabitlemek zorunludur, çünkü Bölge II'de parçacık kavramı olağan anlamıyla
+mevcut değildir. Bölüm 11'de gösterildiği gibi orada pozitif ile negatif frekans
+ayrımı, Hamiltonyenin alttan sınırlı olması ve Poincaré grubunun üniter temsili,
+yani parçacık kavramının dayandığı üç yapının üçü de yoktur. Bölge I'de doğal
+görünen bir tanımı öte tarafa taşımak bu yüzden serbest değildir.
 
-Öte tarafta enerji üç bileşenli, momentum tek bileşenlidir. Değişmez de
-koordinatlardaki davranışla tutarlı biçimde işaret çevirir:
+Burada benimsenen çözüm, tek bir tanım aramak yerine **iki okumayı birlikte
+yürütmektir**. Bu, yalnızca bu bölümün değil, metnin tamamının yöntemidir:
+parçacık hakkında bir şey söyleyen her bölüm, söylediğini iki kez söyler.
 
-$$\frac{E^2}{c^2} - p^2 \;\longmapsto\; -\left(\frac{E^2}{c^2} - p^2\right)$$
+**Dalga okuması.** Parçacık, kütleli reel skaler alanın dar bir mod demetidir.
+Enine dalga sayısı üzerinde Gauss ağırlıklı bir paket alınır,
 
-Kütle kabuğu koşulu buna göre dönüşür:
+$$A(k) = \exp\!\left[-\frac{(k - k_0)^2}{2\sigma^2}\right]$$
 
-$$E^2 = p^2c^2 + m^2c^4 \;\longmapsto\; E'^2 = p'^2c^2 - m^2c^4$$
+ve fiziksel yoğunluk bu genliğin karesidir. Yoğunluğun genişliği bu nedenle
+genliğinkinden $\sqrt{2}$ kat dardır; aşağıdaki bütün nicelikler yoğunluk
+üzerinden tanımlanır. Eşikten geçiş Bölüm 6'da mod diliyle kurulduğu için,
+geçişle ilgili her nicelik bu okumada doğrudan hesaplanabilir.
 
-**Korunum.** Genel bir $2 \to 2$ çarpışmada bizim tarafta korunum sağlanıyorsa öte
-tarafta da otomatik sağlanır; fark tam olarak sıfırdır. Bunun nedeni $D$'nin
-doğrusal olmasıdır: toplamların görüntüsü, görüntülerin toplamına eşittir.
+**Parçacık okuması.** Parçacık, konumu, momentumu ve bir yörüngesi olan bir
+cisimdir. Bu okumada sorular "nereye gitti", "ne zaman döndü", "hangi yönelimi
+kazandı" biçimindedir ve cevapları tek tek sayılardır.
 
-**Karışık çarpışma.** Duran bir subluminal cisim ile sonsuz hızlı bir takyon
-çarpıştığında cisim momentum kazanır, enerjisi değişmez. Başlangıç durumu
-$(E_1, p_1) = (mc^2, 0)$ ve $(E_2, p_2) = (0, Mc)$ alınır; çarpışma sonrasında
-takyon yine sonsuz hızlıdır ($E_4 = 0$) ve momentumu $M'c$ olur.
+İki okuma birbirinin sadeleştirilmiş hâli değildir; ikisi de kendi içinde
+eksiksizdir ve metin boyunca yan yana yürütülür. Uyuştukları yerde uyuşmalarının
+nedeni yazılır. Ayrıldıkları yerde ayrılma **gizlenmez, sonuç olarak kaydedilir**;
+çünkü bu modelde ikisinin ayrıldığı yerler tam olarak öte tarafın kendine özgü
+davrandığı yerlerdir.
 
-**Sonsuz hız limiti.** $V \to \infty$ iken $E \to 0$ ve $p \to mc$.
+Aralarındaki bağ, aşağıda kurulan sözlüktür, ve bu sözlüğün nerede geçerli olduğu
+hesaplanabilir bir sorudur.
 
-**Enerji pozitifliği üzerine not.** Bizim tarafta enerji tek bir sayıdır ve işareti
-bellidir. Öte tarafta "enerji" üç bileşenli bir vektördür; tek bir pozitif enerji
-koşulu yazılamaz, ancak büyüklüğü
+### 3.1 Sözlük
 
-$$|E'| = \sqrt{E_1^2 + E_2^2 + E_3^2} \;\geq\; 0$$
+| Nokta cisim dili | Dalga paketi karşılığı |
+|------------------|------------------------|
+| Konum | Yoğunluğun birinci momenti |
+| Momentum | Ortalama dalga sayısı $\langle k \rangle$ |
+| Parçacığın var olması | Paketin toplam ağırlığı |
+| Parçacığın tekliği | Paketin dar olması, $\sigma \ll k_0$ |
+| Parçacığın aynı parçacık kalması | Momentlerin geçiş boyunca korunması |
 
-kullanılabilir. Bu gözlem, Bölüm 14'teki "kararlı vakum yok" sonucunun klasik
-habercisidir. Aynı sorun, superluminal boost sonrası parçacıkların negatif enerji
-kazanması biçiminde [32]'de ele alınmış ve kuantum referans çerçeveleri
-genişletilerek çözülmüştür; oradaki çözüm ile buradaki vektör-enerji okuması
-birbirine alternatiftir.
+Son satır belirleyicidir ve bu bölümün asıl sonucu oradan çıkar.
 
----
+### 3.2 Eşik paketi yeniden ağırlıklandırır
 
-## 5. Hız kavramı ve dispersiyon
+Bölüm 6'nın sonucu, geçirgenliğin moda bağlı olmasıdır. Bir paket birçok moddan
+oluştuğuna göre, eşik paketin bazı bileşenlerini diğerlerinden daha çok geçirir.
+Geçen şey, gelenin sönümlenmiş bir kopyası değil, **başka bir dağılımdır**.
 
-$D$'de $V$ geçmez. Bu bir eksiklik değildir; hız kavramının kendisi türetilerek
-gösterilir ki gerekli değildir.
+Geçen ağırlık oranı hesaplanmıştır. $\mu = 1$, dilim kalınlığı $d = 1$ ve paket
+merkezi $k_0 = 2$ için:
 
-Bizim tarafta hız zaten temel bir büyüklük olmayıp dispersiyondan çıkar:
+| Paket genişliği $\sigma$ | Geçen ağırlık oranı |
+|--------------------------|---------------------|
+| $0{,}1$ | $0{,}638$ |
+| $0{,}4$ | $0{,}634$ |
+| $1{,}0$ | $0{,}618$ |
 
-$$\omega(k) = c\sqrt{k^2 + \mu}, \qquad
-  v_{\text{faz}} = \frac{\omega}{k}, \qquad
-  v_{\text{grup}} = \frac{d\omega}{dk}, \qquad
-  v_{\text{faz}} \cdot v_{\text{grup}} = c^2$$
+Geçen oran her durumda sıfır ile bir arasındadır: paket ne tamamen yansır ne
+tamamen geçer.
 
-Öte tarafta aynı türev alınır, ancak payda vektördür, zaman üç boyutludur:
+Asıl etki oranda değil, dağılımın kaymasındadır. Ağırlık merkezinin kayması,
+paketin kendi genişliği birimiyle ölçülmüştür:
 
-$$\frac{dq}{d\kappa} \;\longrightarrow\; \text{skaler/vektör} = \text{gradyan} = \text{VEKTÖR}$$
+| Paket genişliği $\sigma$ | Merkez kayması (genişlik birimiyle) |
+|--------------------------|--------------------------------------|
+| $1{,}0$ | $0{,}413$ |
+| $0{,}5$ | $0{,}256$ |
+| $0{,}25$ | $0{,}138$ |
+| $0{,}125$ | $0{,}071$ |
 
-**Sonuç:** Hız skaler olmaktan çıkıp yönelime dönüşür. "Ne kadar hızlı" sorusu
-"hangi yönelimde" sorusuna dönüşür. $V$ bilgisi $B$ boostunda, yani üç-zaman
-uzayındaki yönelimde yaşar.
+Kayma daima pozitiftir, yani büyük dalga sayısına doğrudur; çünkü dilim orada
+daha geçirgendir. Geniş bir paket için kayma kendi genişliğinin yarısına
+yaklaşır, ki bu paketin kimliğini yitirmesi demektir.
 
-Hız dönüşümü $v' = c^2/v$'dir; ışık hızı sabit noktadır ve subluminal ile
-superluminal bölgeleri birbirine eşler.
+### 3.3 Nokta cisim katmanı ne zaman meşrudur
 
-### 5.1 Karşı tarafta dispersiyon ve grup hızı
+Tablodaki kayma, paket genişliğiyle **doğru orantılıdır**: genişlik yarıya
+indiğinde kayma da yarıya iner. Bu, sayısal olarak ardışık genişliklerde
+doğrulanmıştır.
 
-Düzlem dalga koşulu:
+Orantının sonucu şudur: kaymanın bir alt sınırı yoktur. Yeterince dar bir paket
+için merkez kayması istenildiği kadar küçüktür.
 
-$$k_1^2 + k_2^2 + k_3^2 - \frac{q^2}{c^2} + \mu = 0
-  \quad\Longrightarrow\quad q = \pm\, c\sqrt{k^2 + \mu}$$
+> Nokta cisim dili yaklaşık bir kolaylık değil, dar paket limitinde **tam**
+> geçerlidir. Geçen cisim, giden cismin aynısıdır; yalnızca paket dar tutulduğu
+> sürece.
 
-$q$ her zaman reeldir: $r$ ekseninde salınım vardır, sönümlenme yoktur.
+Bu, bütün gidiş dönüş anlatısının dayandığı meşruiyet belgesidir. Paket dar
+tutulmadığı sürece "parçacık gitti ve geri döndü" cümlesi anlamlı değildir,
+çünkü dönen şey gidenden farklı bir mod dağılımıdır.
 
-Durgun cisim ($k = 0$) için $q = mc^2/\hbar \neq 0$. Yani orada duran bir cisim bile
-$r$ ekseninde ilerler, bizim taraftaki "duran cisim zamanda ilerler" ifadesinin
-tam aynasıdır.
+### 3.4 Dar paketin de ödediği bedel
 
-Grup hızı:
+Dar paket limiti merkezi korur, ama her şeyi korumaz. İki bedel kalır.
 
-$$\frac{dq}{dk} = \frac{c\,\hbar k}{\sqrt{c^2m^2 + \hbar^2k^2}}
-  \qquad (\text{vektör, } k \text{ doğrultusunda})$$
+Birincisi, geçen ağırlık oranı hiçbir zaman bire ulaşmaz. Dar bir paket için de
+geçen oran birden küçüktür: dönen cisim, gidenden **daha soluktur**. Bu bir
+konum ya da momentum kaybı değil, varlık ağırlığının kaybıdır ve Bölüm 16'daki
+bilgi muhasebesinin ilk kalemidir.
 
-$|dq/dk| < c$ ve $k \to \infty$ limitinde $c$'ye yaklaşır. Karşı tarafta da bir hız
-sınırı vardır; yalnızca hangi eksende olduğu değişmiştir. Sınır davranışı her iki
-tarafta aynıdır: $\kappa \to 0$'da sıfır, $\kappa \to \infty$'da $c$.
+İkincisi, paketin genişliği de değişir, dar limitte kendi büyüklüğünün binde
+biri mertebesinde. Merkez kadar temiz korunmaz, ancak merkeze göre ikinci
+mertebeden küçüktür.
 
----
+Bu iki bedel, Bölüm 14'te mod içeriği karşılaştırmasının ölçeceği niceliklerdir.
 
-## 6. Lagrangian, alan denklemi ve determinizm kaybı
+### 3.5 Bu tanımın sınırları
 
-Bizim taraf (Klein-Gordon):
+Üç çekince açıkça kaydedilmelidir.
 
-$$L = \tfrac{1}{2}\left[\frac{(\partial_t \phi)^2}{c^2} - (\nabla \phi)^2 - \mu \phi^2\right]$$
+Paket burada tek bir enine dalga sayısı değişkeni üzerinde alınmıştır. Gerçek bir
+üç boyutlu paket için aynı hesap üç değişkende yapılmalıdır; sonucun niteliksel
+olarak değişmesi beklenmez, ancak gösterilmemiştir.
 
-Euler-Lagrange:
+Hesap doğrusaldır ve alanın kendisiyle etkileşimi yoktur. Etkileşen bir alanda
+paketin geçiş sırasında dağılması ayrı bir olgudur.
 
-$$\frac{1}{c^2}\partial_t^2 \phi - \nabla^2 \phi + \mu \phi = 0$$
-
-$D$ uygulanmış hali:
-
-$$L' = \tfrac{1}{2}\left[(\partial_{t_1}\psi)^2 + (\partial_{t_2}\psi)^2
-      + (\partial_{t_3}\psi)^2 - \frac{(\partial_r \psi)^2}{c^2} + \mu \psi^2\right]$$
-
-Euler-Lagrange:
-
-$$\left(\partial_{t_1}^2 + \partial_{t_2}^2 + \partial_{t_3}^2\right)\psi
-  - \frac{1}{c^2}\partial_r^2 \psi - \mu \psi = 0$$
-
-İki denklem $D$ ile birbirine geçer; Klein-Gordon operatörü işaret çevirerek
-dönüşür: $\Box \to -\Box'$.
-
-### 6.1 Determinizm kaybı denklem tipinden çıkar
-
-| | Bölge I | Bölge II |
-|---|---------|----------|
-| İmza | 1 zaman + 3 uzay | 3 zaman + 1 uzay |
-| Başlangıç değer problemi | İyi konumlanmış | Hadamard anlamında kötü konumlanmış |
-| Sonuç | Determinist | Öngörü çöker |
-
-Sayısal gösterim: bir modu Bölge I'de $e^{i k \cdot x} f(t)$ biçiminde alırsak
-
-$$\partial_t^2 f = -c^2(k^2 + \mu)\, f$$
-
-elde edilir; katsayı **her zaman negatiftir**, dolayısıyla çözüm salınımlıdır ve
-büyüme sınırlıdır. Bölge II'de aynı modu $e^{i(k_2 t_2 + k_3 t_3 + q r)} f(t_1)$
-biçiminde alırsak
-
-$$\partial_{t_1}^2 f = \left(k_2^2 + k_3^2 - \frac{q^2}{c^2} + \mu\right) f$$
-
-elde edilir; bu katsayı **pozitif olabilir** ve $k_2, k_3 \to \infty$ iken sınırsız
-büyür. Çözüm $\exp\!\big(\sqrt{\text{katsayı}}\; t_1\big)$ tipinde patlar. Başlangıç
-verisindeki keyfi küçük bir bozulma, keyfi büyük bir çözüm değişimi verir: problem
-Hadamard anlamında kötü konumlanmıştır.
-
-Bu sonuç bir yorum değil, denklem tipinin doğrudan sonucudur.
-
-**Öncelik ve yöntem.** Bu sonucun kesin hâli [7]'ye aittir ve yöntemi
-buradakinden farklıdır. Orada iki boyutlu bir imza-değişen uzay-zamanda sınır
-koşulları Schrödinger Hamiltonyeninin öz-eşlenik genişlemelerinden çıkarılır,
-alanın sürekli olması ve koşulların eklem koşulu biçiminde olması talebi tek bir
-küme seçer, Klein-Gordon başlangıç değer problemi bu kümede kötü konumlanmış
-bulunur, ve değişim yüzeyinden uzakta düzgün ve tıkız destekli başlangıç verisi
-için çözümün $L^2$ normunun **sonlu zamanda ıraksadığı** ispatlanır. Yukarıdaki
-mod hesabı aynı sonuca çok daha basit bir yoldan varır ve bir ispat değil,
-bağımsız bir doğrulamadır.
+Nokta cisim katmanı Bölge I'de tanımlıdır. Bölge II'de "konum" kavramı tek bir
+uzay ekseni olan $r$ üzerinde daralır ve üç zaman yönü boyunca karşılığı yoktur.
+Öte tarafta parçacığın nerede olduğu sorusu bu nedenle Bölüm 9'a bırakılmıştır.
 
 ---
 
-## 7. Karşı tarafta dinamik ve zamanın oku
+# Bölüm II. Gidiş
 
-### 7.1 Noether yükleri
-
-$L'$ dört koordinatın hiçbirine açıkça bağlı değildir, dolayısıyla dört öteleme
-simetrisi vardır:
-
-- üç "enerji" bileşeni ($t_1, t_2, t_3$ ötelemeleri),
-- tek "momentum" ($r$ ötelemesi).
-
-$L'$ ayrıca üç zaman ekseninde $O(3)$ altında değişmezdir; buradan üç korunan
-"zamansal açı momentumu" çıkar, bizim uzaysal açı momentumumuzun aynası.
-
-### 7.2 Roller tam tersine dönmüştür
-
-| | Bölge I (bizim) | Bölge II |
-|---|-----------------|----------|
-| Serbest hareket | Uzayda, üç yönde | Üç zamanda serbestçe |
-| Tek yönlü zorunluluk | Zamanda | Tek uzay ekseninde |
-| $O(3)$ dönme simetrisi | Uzaysal | Zamansal |
-| Temel nesne | Yörünge (eğri) | Cephe (üç boyutlu hiperyüzey) |
-
-### 7.3 Zamanın oku sorusu
-
-Bölge II'de zamanın oku **yoktur**. Ok, ilgili boyutun **tek** olmasının sonucudur.
-Üç boyutlu olan eksen kümesi uzay gibi davranır ve yön ayrımı ortadan kalkar.
-Buna karşılık Bölge II'de bir **uzay oku** vardır, çünkü orada $r$ tek eksendir.
-
-Ok entropiden değil, boyut sayısından çıkar.
-
-### 7.4 Zaman yönelimi: neden öte tarafta gelecek ve geçmiş yok
-
-Yukarıdaki ifade sezgiseldir; burada kesinleştirilir. Bir bölgede tutarlı bir
-gelecek-geçmiş ayrımı yapılabilmesi için, zaman-benzeri vektörler kümesinin
-**iki ayrı bileşene** ayrılması gerekir. Ancak o zaman bileşenlerden birine
-"gelecek", diğerine "geçmiş" denebilir. Bu, tek bir pozitif yön bulunmasının
-tam karşılığıdır.
-
-**Bölge I.** $v = (1,0,0,0)$ ve $-v = (-1,0,0,0)$ vektörlerinin ikisi de
-zaman-benzeridir. Birini diğerine götüren $(x^0, x^1)$ düzlemindeki dönme
-
-$$v(\theta) = (\cos\theta,\, \sin\theta,\, 0,\, 0), \qquad
-  v(\theta)^T \eta\, v(\theta) = \cos 2\theta$$
-
-verir; bu ifade $\theta = \pi/4$'te sıfırlanır ve sonra negatife geçer. Dönme
-zaman-benzeri kümeden çıkar. Dolayısıyla iki uç aynı bileşende değildir ve
-gelecek ile geçmiş iyi tanımlıdır.
-
-**Bölge II.** Aynı dönme, $\eta' = \mathrm{diag}(+1,+1,+1,-1)$ ile
-
-$$v(\theta)^T \eta'\, v(\theta) = \cos^2\theta + \sin^2\theta = 1$$
-
-verir; aralık **hiç** değişmez ve daima pozitiftir. $\theta = \pi$'de
-$v(\pi) = -v(0)$ olur. Yani bir zaman-benzeri vektör, zaman-benzeri kümeden hiç
-çıkmadan kendi negatifine sürekli olarak taşınmıştır. Böyle bir taşıma varken
-ikili bir etiketleme yapılamaz: gelecek ile geçmiş ayrımı **yoktur**.
-
-**Ara bölge.** Bölüm 13.5'teki kademeli yolun geçtiği $(2,2)$ imzasında da
-durum aynıdır; iki pozitif yön bulunması yeterlidir. Dolayısıyla yönelim,
-kademeli yolun daha **ilk ayağında** kaybolur, ikinci ayağı beklemez.
-
-| Bölge | Zaman yönü sayısı | Zaman-benzeri küme | Gelecek/geçmiş |
-|-------|-------------------|--------------------|----------------|
-| Bölge I, $(1,3)$ | 1 | İki bileşen | Var |
-| Ara bölge, $(2,2)$ | 2 | Bağlantılı | Yok |
-| Bölge II, $(3,1)$ | 3 | Bağlantılı | Yok |
-
-Ok, entropiden değil, zaman yönü **sayısından** çıkar; ve eşik değeri birdir.
-
-**Literatürdeki karşılığı.** [16], imza değiştiren bir manifoldun geçiş
-hiperyüzeyinde, her noktadan geçen ve zaman yönünü tersine çeviren kapalı
-sözde-zaman-benzeri ilmekler bulunduğunu ispatlar. Vardıkları sonuç kelimesi
-kelimesine buradakiyle aynıdır: gelecek ve geçmiş yönlü vektörler arasında
-tutarlı bir ayrım yapılamaz.
-
-Yollar farklıdır. [16] sonucu geçiş hiperyüzeyinin geometrisinden, Lorentzian
-bölgede global hiperboliklik varsayarak elde eder; burada ise yalnızca zaman
-yönlerinin sayısından, hiperyüzey hakkında hiçbir varsayım yapmadan çıkar.
-
-İki çekince belirtilmelidir. Birincisi, [16]'nın hipotezleri bu modelin geçişi
-tarafından **sağlanmaz**: orada bir taraf Riemann imzalıdır ve dejenerelik
-transvers radikal tipindedir, buradaki doğrudan geçişte ise rank iki düşer
-(Bölüm 13.5). Ortak olan sonuçtur, ispat değildir. Buna karşılık Bölüm 13.5'in
-kademeli yolu her ayakta rank-1 dejenereliğe sahiptir, yani [15] ve [16]'nın
-geometrik çerçevesine buradan bakıldığından daha yakındır.
-
-İkincisi, [16]'nın ilmekleri alışıldık anlamda kapalı zaman-benzeri eğriler
-**değildir**: kesişim noktalarında hareket yönünün aynı olması gerekmez. Bu
-nedenle sonuç, maddenin zamanda geriye gitmesi biçiminde okunamaz. [16] kendi
-fiziksel yorumunu da verir: hiperyüzey yakınındaki bir gözlemciye böyle bir
-ilmek, iki ayrı noktada bir parçacık-karşıparçacık çiftinin yaratılması gibi
-görünebilir.
-
-Görünüşte bir gerilim vardır: Bölüm 9.1 eşiğin geçirgen olmadığını söylerken,
-[16] yüzeyden geçen ilmeklerden söz eder. Gerilim görünüştedir ve Bölüm 9.3'te
-çözülmüştür: iki metrik arasındaki fark bir kareler toplamı olduğundan, Bölge
-I'de zaman-benzeri olan her yön Bölge II'de de zaman-benzeridir, yani eşikte bir
-eğriyi durduran nedensel engel yoktur. Yasaklanan şey akıdır. Geometrik eğriler
-ile alan akısı farklı nesnelerdir ve iki sonuç aynı anda doğru olabilir.
-
-**Bir itiraz.** [21], iki zamanlı dinamikte olasılık korunumu dayatıldığında
-fazladan zaman ekseninin gözlenebilirliğinin sınırlandığını gösterir: klasik
-$1+2$ boyutta Newton'un ikinci yasası tam olarak integre edilebilir ve her
-başlangıç koşulu için **etkin tek zamanlı** bir evrim verir; kuantum tarafta ise
-düzey aralıkları, toplam süre ve $\hbar$ içeren genelleştirilmiş bir belirsizlik
-bağıntısı çıkar. Bu, üç zamanlı Bölge II'nin dışarıdan bakıldığında tek zamanlı
-görünebileceği anlamına gelir. Buradaki kuruluş ile arasındaki fark, [21]'in
-evrimin üniter ve olasılık koruyan olmasını istemesidir; Bölüm 14'te gösterildiği
-gibi Bölge II'de bu talebin dayandığı yapı zaten mevcut değildir. Yine de bu
-itiraz açık bir sorudur ve modelin lehine kapatılmış sayılmamalıdır.
-
----
-
-## 8. Superluminal durgunluk
-
-Durgun superluminal dört-momentum $p' = (mc\,\mathbf{s},\, 0)$ biçimindedir ve her
-$\mathbf{s}$ seçimi ayrı bir dünya çizgisi demeti veriyormuş gibi görünür.
-
-Hesap:
-
-- Kütle kabuğu koşulu $s_1^2 + s_2^2 + s_3^2 = 1$ verir, yani $\mathbf{s} \in S^2$.
-- $\eta' = \mathrm{diag}(+1,+1,+1,-1)$ içinde ilk üç slot **aynı** işaretlidir;
-  onları koruyan grup $O(3)$'tür.
-- $O(3)$ hem metriği korur hem de durgunluğu bozmaz (doğrulandı).
-- $O(3)$, $S^2$ üzerinde geçişli (transitif) etki eder: herhangi bir $\mathbf{s}$'yi
-  herhangi bir $\mathbf{s}'$ye götüren bir dönme her zaman vardır.
-
-**Sonuç:** Bütün $\mathbf{s}$ seçimleri aynı yörüngededir. Sonsuz sayıda fiziksel
-durum yoktur; **tek bir durumu yazmanın sonsuz yolu** vardır. Bu bir ayar (gauge)
-fazlalığıdır.
-
-$$\text{Stabilizatör} = O(2), \qquad \text{Yörünge uzayı} = O(3)/O(2) = S^2$$
-
-**Öncelik.** Fazladan zaman boyutunun bir ayar simetrisiyle elenmesi [20]'nin
-kurduğu mekanizmadır: $Sp(2,\mathbb{R})$ ayar simetrisi altında tek-zamanlı
-sistemler aynı iki-zamanlı sistemin farklı ayar sabitlemeleri olarak ortaya
-çıkar, ve bu alan teorisine, etkileşimlere ve ayar arka planlarına kadar
-götürülmüştür. Yukarıdaki $O(3)$ fazlalığı aynı türden ve çok daha dar bir
-olgudur. Buradaki katkı mekanizma değil, mekanizmanın bu modeldeki durgunluk
-sorusuna uygulanmasıdır.
-
----
-
-## 9. Eşik yüzeyi: $V = c$
+## 4. Eşik yüzeyi ve eklem koşulu seçimi
 
 İki bölge arasındaki $\Sigma$ yüzeyi için eklem koşulları:
 
@@ -615,7 +430,7 @@ dağılım teorisini sabit imzadaki hâllerinin doğrudan genellemesi olarak
 kullanılabilir kılar. Modelin yerçekimi tarafına daha ileri götürülmesi
 istenirse başlangıç noktası burasıdır.
 
-### 9.3 Geometrinin izin verdiği geçişi alan yasaklıyor
+## 5. Geometrinin izin verdiği geçiş
 
 Bölüm 9.1'in sonucu akı hakkındadır. Bundan ayrı ve daha zayıf bir soru vardır:
 bir eğrinin teğeti, yüzeyi geçerken nedensel karakterini koruyor mu. Bu yalnızca
@@ -645,7 +460,7 @@ Bu ayrım, Bölüm 7.4'te değinilen ilmek teoremiyle bu modelin eşik sonucunun
 anda doğru olabilmesinin nedenidir: o teorem geometrik eğriler hakkındadır, buradaki
 sonuç alan akısı hakkındadır.
 
-### 9.4 Sonlu kalınlıkta bir dilim bir şeyler geçirir
+## 6. Sonlu kalınlıkta dilimden geçiş
 
 Bölüm 9.1 öte tarafı **sınırsız** kabul eder. Sonlu kalınlıkta bir dilim ayrı
 bir problemdir ve sonucu farklıdır.
@@ -701,148 +516,60 @@ sorudur ve burada karara bağlanmamıştır.
 
 ---
 
-## 10. Küresel simetrik çözüm
+## 7. Yırtığın yapısı
+### 13.5 İki imza arasında sürekli yol ne kadar dejenere olmak zorunda
 
-Genel hareket denklemi küresel simetriye indirgendiğinde
+Soru şudur: $(1,3)$'ten $(3,1)$'e giden sürekli bir yol boyunca aynı noktada kaç
+öz-değerin birden sıfırlanması gerekir. Dejenereliğin kendisi kaçınılmazdır,
+çünkü pozitif öz-değer sayısının birden üçe çıkması gerekir ve her değişim sıfırdan
+geçer; ancak bu sayının **kaç tane birden** sıfırlandığını söylemez.
 
-$$r'' + \frac{2}{t} r' - \frac{2}{c^2 t}\,(r')^3 = 0$$
+**Doğrudan yol.** İki bileşen birlikte çevrilirse
 
-elde edilir.
+$$g(\lambda) = \mathrm{diag}(1,\, -\cos\lambda,\, -\cos\lambda,\, -1)$$
 
-İndirgeme adımları. Genel denklem
+elde edilir. $\lambda = 0$'da $(1,3)$, $\lambda = \pi$'de $(3,1)$ verir, yani
+hedefe varır. $\lambda = \pi/2$'de **iki öz-değer birden** sıfırlanır: rank iki
+düşer. Bütün yol boyunca en kötü nokta budur.
 
-$$\left[\left(\frac{1}{c^2}(\nabla_{t'} r')^2 - 1\right)\delta_{ij}
-  - \frac{1}{c^2}\frac{\partial r'}{\partial t'_i}\frac{\partial r'}{\partial t'_j}\right]
-  \frac{\partial^2 r'}{\partial t'_i \partial t'_j} = 0$$
+**Kademeli yol.** Bileşenler teker teker çevrilirse iki ayaklı bir yol çıkar:
 
-biçimindedir. Küresel simetride $\nabla_{t'} r' = r'(t)\,\hat{t}$ olduğundan
-$(\nabla r')^2 = r'^2$ olur; ikinci türev operatörü radyal $r''$ ile iki teğetsel
-$r'/t$ terimine ayrışır. Sonuç
+$$g_1(\lambda) = \mathrm{diag}(1,\, -\cos\lambda,\, -1,\, -1)
+  \;:\; (1,3) \longrightarrow (2,2)$$
+$$g_2(\lambda) = \mathrm{diag}(1,\, 1,\, -\cos\lambda,\, -1)
+  \;:\; (2,2) \longrightarrow (3,1)$$
 
-$$A\left(r'' + \frac{2r'}{t}\right) - \frac{r'^2}{c^2} r'' = 0,
-  \qquad A = \frac{r'^2}{c^2} - 1$$
+Her iki ayakta da rank yalnızca **bir** düşer.
 
-olur ve $r''$ katsayısı $-1$ olduğundan yukarıdaki denklem çıkar.
+| Yol | Varış | En kötü rank düşüşü |
+|-----|-------|---------------------|
+| $\mathrm{diag}(1,-\cos\lambda,-\cos\lambda,-\cos\lambda)$, Bölüm 13.3 | $(4,0)$, hedef değil | 3 |
+| Doğrudan, iki bileşen birlikte | $(3,1)$ | 2 |
+| Kademeli, $(2,2)$ üzerinden | $(3,1)$ | **1** |
 
-### 10.1 Kapalı form çözüm
+**Sonuç.** Dejenerelik kaçınılmazdır, ama rank-2 dejenerelik **kaçınılmaz
+değildir.** $(1,3)$'ten $(3,1)$'e, her noktada yalnızca tek bir öz-değerin
+sıfırlandığı sürekli bir yol vardır.
 
-$$p = \frac{dr}{dt} = \pm\,\frac{c\,a}{\sqrt{a^2 - t^4}}$$
+Bunun önemi şuradadır: literatürün dejenere yüzeyle çalışan araçları tam olarak
+rank-1 dejenerelik için kuruludur. [15] ve [16]'nın "transvers radikal" dediği
+yapı budur, ve [35]'in kink modeli, [37]'nin Colombeau kuruluşu, [13]'ün Hadamard
+düzenlemesi bu sınıfta çalışır. Dolayısıyla bu modelin geçişi, o araçların
+erişemeyeceği bir yerde **değildir**.
 
-Bu ifadenin denklemi sağladığı doğrulanmıştır; eliptik fonksiyona gerek yoktur.
+Bedeli vardır: kademeli yol $(2,2)$ imzasından, yani iki zamanlı bir bölgeden
+geçer. Bu, Bölüm 14'teki sıralama sorunlarının orada da geçerli olacağı anlamına
+gelir, ancak üç zaman yerine iki zamanla ve yalnızca ara bölgede. Bu ara bölgenin
+fiziksel olarak var sayılıp sayılamayacağı burada karara bağlanmamıştır.
 
-**Denge noktaları.** $p' = 0$ koşulu $p\,(p^2 - c^2) = 0$ verir, yani
-$p \in \{0, +c, -c\}$, sabit çözüm ve ışık hızında genişleyen kabuk.
-
-**Davranış.** $t = 0$'da $p = c$; $t \to \sqrt{a}$ iken $p \to \infty$.
-
-**Alınan toplam yol sonludur:**
-
-$$r = \int_0^{\sqrt{a}} p\, dt
-    = \frac{\sqrt{\pi}\,\sqrt{a}\,c\,\Gamma(1/4)}{4\,\Gamma(3/4)}
-    \approx 1{,}311\, c \sqrt{a}$$
-
-İntegral sayısal olarak da hesaplanır. Uçtaki tekillik iki değişken dönüşümüyle
-tamamen kaldırılır:
-
-$$t = \sqrt{a}\,u \;\Rightarrow\; c\sqrt{a}\int_0^1 \frac{du}{\sqrt{1-u^4}},
-\qquad
-u = \sin\theta \;\Rightarrow\; c\sqrt{a}\int_0^{\pi/2} \frac{d\theta}{\sqrt{1+\sin^2\theta}}$$
-
-**Fiziksel okuma.** Bu bir nokta parçacık yörüngesi değil, **küresel bir cephedir**.
-Işık hızıyla başlar, hızlanarak genişler, sonlu sürede ve sonlu yarıçapta sonsuz
-hıza ulaşır; ötesinde tanımsızdır.
-
----
-
-## 11. Elektromanyetizma
-
-$D$ Maxwell teorisine uygulandığında bütün sonuçlar tek bir matris çarpımından
-çıkar.
-
-**Potansiyel ve akım:**
-
-$$A^\mu = (\phi/c,\, \mathbf{A}) \;\longmapsto\; A'^\mu = (A_z,\, A_y,\, A_x,\, \phi/c)$$
-$$j^\mu = (\rho c,\, \mathbf{j}) \;\longmapsto\; j'^\mu = (j_z,\, j_y,\, j_x,\, \rho c)$$
-
-Elektrik potansiyeli öte tarafta bir uzaysal bileşene dönüşür; yük yoğunluğu ile
-akım yoğunluğu takas olur.
-
-**Etkileşim terimi:**
-
-$$A' \cdot j' = -\,A \cdot j$$
-
-**Alan tensörü:** $F' = D^T F D$ altında elektrik ve manyetik bileşenler yer
-değiştirir.
-
-**Kritik sonuç, değişmez korunur:**
-
-$$F_{\mu\nu}F^{\mu\nu} = F'_{\mu\nu}F'^{\mu\nu}$$
-
-Tam eşitlik. Maxwell Lagrangian'ının kinetik terimi $D$ altında **değişmezdir**;
-yalnızca kaynak terimi işaret çevirir:
-
-$$L = -\frac{1}{4\mu_0}F_{\mu\nu}F^{\mu\nu} - A_\mu j^\mu
-\qquad\longmapsto\qquad
-L' = -\frac{1}{4\mu_0}F'_{\mu\nu}F'^{\mu\nu} + A'_\mu j'^\mu$$
-
-**Dalga denklemi ve korunum:**
-
-$$\Box A^\nu = \mu_0 j^\nu \;\longmapsto\; -\Box' A'^\nu = \mu_0 j'^\nu$$
-$$\partial_\mu j^\mu = 0 \;\longmapsto\; \partial'_\mu j'^\mu = 0 \quad(\text{otomatik})$$
-
-Korunumun doğrusallıkla taşındığı somut olarak da gösterilir: iki akımın toplamının
-görüntüsü, görüntülerinin toplamına eşittir.
-
-**Öncelik.** Superluminal uzay-zamanda elektromanyetizma [27]'de kurulmuştur.
-Orada Maxwell denklemleri ve tek foton dalga denklemi, sıradan denklemlerin
-superluminal dönüşümüyle ve kompleks nicelik kullanılmadan elde edilir; dahası
-dönüşmüş denklemler **çözülür** ve sonsuz ışık konisi ile ona dik iki yapraklı
-hiperboloit arasında kalan bölgede X biçimli çözümler bulunur. Bu bölümdeki
-sonuçlar o çalışmanın kapsamı içindedir ve burada bağımsız olarak, tek bir
-kongruans işleminden yeniden üretilmiştir. Özgünlük iddiası taşımaz; korunmasının
-nedeni, modelin elektromanyetizmayı bozmadığının kendi araçlarıyla
-gösterilebilmesidir.
+Bölüm 13.3'ün "iki imza sınıfı arasında dejenere olmayan sürekli bir yol yoktur"
+ifadesi doğrudur ve Sylvester'ın sonucudur. Ondan çıkarılan "dolayısıyla geçiş
+sağlanmaz" ifadesi ise **doğru değildir** ve geri çekilmektedir.
 
 ---
 
-## 12. İşaret seçimi
 
-$\pm D$ ayrımı test edildi: her iki işaret de $\det = +1$ ve $M^2 = I$ koşullarını
-sağlar, dolayısıyla bu koşullarla ayırt edilemezler. Ancak Bölüm 7'deki bulgu
-işaretin anlamını netleştirir:
-
-1. Her iki bölgede birer ok seçimi vardır (bizde zaman, ötede uzay).
-2. $D$ bizim ok eksenimizi onların ok eksenine gönderir, seçimler bağımsız
-   değildir, biri diğerini belirler.
-3. Fiziksel olarak anlamlı olan tek büyüklük **bağıl işarettir**: iki okun
-   hizalanması. Tek başına hiçbiri anlamlı değildir.
-4. $\Sigma$ geçirgen olmadığı için iki bölge haberleşemez; dolayısıyla bağıl işaret
-   **prensip olarak ölçülemez**.
-
-**Sonuç:** İşaret belirsizliği bir eksiklik değil, yapısal bir özelliktir. Bizim
-tarafta da zamanın oku denklemlerden türetilmez, Newton, Maxwell ve Schrödinger
-denklemlerinin hepsi $T$-simetriktir; ok başlangıç koşulundan gelir.
-
-### 12.1 $D$'nin yapısı: yön-bağımlı bir involüsyonla karşılaştırma
-
-$D$'yi yön-bağımlı bir involüsyonla karşılaştırmak, onun grup içindeki yerini
-netleştirir. $\theta = \varphi = 0$ ekseni için yön-bağımlı involüsyon $t$ ile $z$'yi
-işaretli olarak takas eder ve $\Lambda_{\inf}^2 = I$ sağlar; yani o da bir
-involüsyondur, ancak yalnızca iki koordinatı değiştirir.
-
-$D$ ise dört koordinatı birden değiştirir ve içinde bir $x \leftrightarrow y$ takası
-barındırır. Bu takasın üç boyuttaki determinantı $-1$'dir, dolayısıyla bir $SO(3)$
-elemanı değildir. Bunun doğrudan sonucu şudur:
-
-> $D$, yön-bağımlı involüsyonun ürettiği genişletilmiş grup $L_{\text{ext}}$ içinde
-> **bulunmaz**.
-
-Yani $D$ ile yön-bağımlı formlar aynı ailenin iki üyesi değildir; farklı yapılardır.
-Bölüm 18'de yön-bağımlı adayların neden $D$'nin yerini alamadığı ayrıca gösterilir.
-
----
-
-## 13. Kara delik ufkuyla karşılaştırma
+### 7.1 Kara delik ufkuyla karşılaştırma
 
 Schwarzschild metriğinde ufkun içinde $dt^2$ ve $dr^2$ terimlerinin işaretleri yer
 değiştirir: $r$ zaman-benzeri, $t$ uzay-benzeri olur. Merkeze düşmek kaçınılmaz hale
@@ -908,58 +635,361 @@ Aralarında sürekli köprü kurmak dejenere bir nokta gerektirir; ancak bu nokt
 ne kadar kötü olduğu Bölüm 13.5'te hesaplanmıştır ve sanıldığı kadar kötü
 değildir.
 
-### 13.5 İki imza arasında sürekli yol ne kadar dejenere olmak zorunda
+# Bölüm III. Karşı taraf
 
-Soru şudur: $(1,3)$'ten $(3,1)$'e giden sürekli bir yol boyunca aynı noktada kaç
-öz-değerin birden sıfırlanması gerekir. Dejenereliğin kendisi kaçınılmazdır,
-çünkü pozitif öz-değer sayısının birden üçe çıkması gerekir ve her değişim sıfırdan
-geçer; ancak bu sayının **kaç tane birden** sıfırlandığını söylemez.
+## 8. Orada zaman ve mekân, ve yolculuğun tanımı
 
-**Doğrudan yol.** İki bileşen birlikte çevrilirse
+### 7.1 Noether yükleri
 
-$$g(\lambda) = \mathrm{diag}(1,\, -\cos\lambda,\, -\cos\lambda,\, -1)$$
+$L'$ dört koordinatın hiçbirine açıkça bağlı değildir, dolayısıyla dört öteleme
+simetrisi vardır:
 
-elde edilir. $\lambda = 0$'da $(1,3)$, $\lambda = \pi$'de $(3,1)$ verir, yani
-hedefe varır. $\lambda = \pi/2$'de **iki öz-değer birden** sıfırlanır: rank iki
-düşer. Bütün yol boyunca en kötü nokta budur.
+- üç "enerji" bileşeni ($t_1, t_2, t_3$ ötelemeleri),
+- tek "momentum" ($r$ ötelemesi).
 
-**Kademeli yol.** Bileşenler teker teker çevrilirse iki ayaklı bir yol çıkar:
+$L'$ ayrıca üç zaman ekseninde $O(3)$ altında değişmezdir; buradan üç korunan
+"zamansal açı momentumu" çıkar, bizim uzaysal açı momentumumuzun aynası.
 
-$$g_1(\lambda) = \mathrm{diag}(1,\, -\cos\lambda,\, -1,\, -1)
-  \;:\; (1,3) \longrightarrow (2,2)$$
-$$g_2(\lambda) = \mathrm{diag}(1,\, 1,\, -\cos\lambda,\, -1)
-  \;:\; (2,2) \longrightarrow (3,1)$$
+### 7.2 Roller tam tersine dönmüştür
 
-Her iki ayakta da rank yalnızca **bir** düşer.
+| | Bölge I (bizim) | Bölge II |
+|---|-----------------|----------|
+| Serbest hareket | Uzayda, üç yönde | Üç zamanda serbestçe |
+| Tek yönlü zorunluluk | Zamanda | Tek uzay ekseninde |
+| $O(3)$ dönme simetrisi | Uzaysal | Zamansal |
+| Temel nesne | Yörünge (eğri) | Cephe (üç boyutlu hiperyüzey) |
 
-| Yol | Varış | En kötü rank düşüşü |
-|-----|-------|---------------------|
-| $\mathrm{diag}(1,-\cos\lambda,-\cos\lambda,-\cos\lambda)$, Bölüm 13.3 | $(4,0)$, hedef değil | 3 |
-| Doğrudan, iki bileşen birlikte | $(3,1)$ | 2 |
-| Kademeli, $(2,2)$ üzerinden | $(3,1)$ | **1** |
+### 7.3 Zamanın oku sorusu
 
-**Sonuç.** Dejenerelik kaçınılmazdır, ama rank-2 dejenerelik **kaçınılmaz
-değildir.** $(1,3)$'ten $(3,1)$'e, her noktada yalnızca tek bir öz-değerin
-sıfırlandığı sürekli bir yol vardır.
+Bölge II'de zamanın oku **yoktur**. Ok, ilgili boyutun **tek** olmasının sonucudur.
+Üç boyutlu olan eksen kümesi uzay gibi davranır ve yön ayrımı ortadan kalkar.
+Buna karşılık Bölge II'de bir **uzay oku** vardır, çünkü orada $r$ tek eksendir.
 
-Bunun önemi şuradadır: literatürün dejenere yüzeyle çalışan araçları tam olarak
-rank-1 dejenerelik için kuruludur. [15] ve [16]'nın "transvers radikal" dediği
-yapı budur, ve [35]'in kink modeli, [37]'nin Colombeau kuruluşu, [13]'ün Hadamard
-düzenlemesi bu sınıfta çalışır. Dolayısıyla bu modelin geçişi, o araçların
-erişemeyeceği bir yerde **değildir**.
+Ok entropiden değil, boyut sayısından çıkar.
 
-Bedeli vardır: kademeli yol $(2,2)$ imzasından, yani iki zamanlı bir bölgeden
-geçer. Bu, Bölüm 14'teki sıralama sorunlarının orada da geçerli olacağı anlamına
-gelir, ancak üç zaman yerine iki zamanla ve yalnızca ara bölgede. Bu ara bölgenin
-fiziksel olarak var sayılıp sayılamayacağı burada karara bağlanmamıştır.
+### 7.4 Zaman yönelimi: neden öte tarafta gelecek ve geçmiş yok
 
-Bölüm 13.3'ün "iki imza sınıfı arasında dejenere olmayan sürekli bir yol yoktur"
-ifadesi doğrudur ve Sylvester'ın sonucudur. Ondan çıkarılan "dolayısıyla geçiş
-sağlanmaz" ifadesi ise **doğru değildir** ve geri çekilmektedir.
+Yukarıdaki ifade sezgiseldir; burada kesinleştirilir. Bir bölgede tutarlı bir
+gelecek-geçmiş ayrımı yapılabilmesi için, zaman-benzeri vektörler kümesinin
+**iki ayrı bileşene** ayrılması gerekir. Ancak o zaman bileşenlerden birine
+"gelecek", diğerine "geçmiş" denebilir. Bu, tek bir pozitif yön bulunmasının
+tam karşılığıdır.
+
+**Bölge I.** $v = (1,0,0,0)$ ve $-v = (-1,0,0,0)$ vektörlerinin ikisi de
+zaman-benzeridir. Birini diğerine götüren $(x^0, x^1)$ düzlemindeki dönme
+
+$$v(\theta) = (\cos\theta,\, \sin\theta,\, 0,\, 0), \qquad
+  v(\theta)^T \eta\, v(\theta) = \cos 2\theta$$
+
+verir; bu ifade $\theta = \pi/4$'te sıfırlanır ve sonra negatife geçer. Dönme
+zaman-benzeri kümeden çıkar. Dolayısıyla iki uç aynı bileşende değildir ve
+gelecek ile geçmiş iyi tanımlıdır.
+
+**Bölge II.** Aynı dönme, $\eta' = \mathrm{diag}(+1,+1,+1,-1)$ ile
+
+$$v(\theta)^T \eta'\, v(\theta) = \cos^2\theta + \sin^2\theta = 1$$
+
+verir; aralık **hiç** değişmez ve daima pozitiftir. $\theta = \pi$'de
+$v(\pi) = -v(0)$ olur. Yani bir zaman-benzeri vektör, zaman-benzeri kümeden hiç
+çıkmadan kendi negatifine sürekli olarak taşınmıştır. Böyle bir taşıma varken
+ikili bir etiketleme yapılamaz: gelecek ile geçmiş ayrımı **yoktur**.
+
+**Ara bölge.** Bölüm 13.5'teki kademeli yolun geçtiği $(2,2)$ imzasında da
+durum aynıdır; iki pozitif yön bulunması yeterlidir. Dolayısıyla yönelim,
+kademeli yolun daha **ilk ayağında** kaybolur, ikinci ayağı beklemez.
+
+| Bölge | Zaman yönü sayısı | Zaman-benzeri küme | Gelecek/geçmiş |
+|-------|-------------------|--------------------|----------------|
+| Bölge I, $(1,3)$ | 1 | İki bileşen | Var |
+| Ara bölge, $(2,2)$ | 2 | Bağlantılı | Yok |
+| Bölge II, $(3,1)$ | 3 | Bağlantılı | Yok |
+
+Ok, entropiden değil, zaman yönü **sayısından** çıkar; ve eşik değeri birdir.
+
+**Literatürdeki karşılığı.** [16], imza değiştiren bir manifoldun geçiş
+hiperyüzeyinde, her noktadan geçen ve zaman yönünü tersine çeviren kapalı
+sözde-zaman-benzeri ilmekler bulunduğunu ispatlar. Vardıkları sonuç kelimesi
+kelimesine buradakiyle aynıdır: gelecek ve geçmiş yönlü vektörler arasında
+tutarlı bir ayrım yapılamaz.
+
+Yollar farklıdır. [16] sonucu geçiş hiperyüzeyinin geometrisinden, Lorentzian
+bölgede global hiperboliklik varsayarak elde eder; burada ise yalnızca zaman
+yönlerinin sayısından, hiperyüzey hakkında hiçbir varsayım yapmadan çıkar.
+
+İki çekince belirtilmelidir. Birincisi, [16]'nın hipotezleri bu modelin geçişi
+tarafından **sağlanmaz**: orada bir taraf Riemann imzalıdır ve dejenerelik
+transvers radikal tipindedir, buradaki doğrudan geçişte ise rank iki düşer
+(Bölüm 13.5). Ortak olan sonuçtur, ispat değildir. Buna karşılık Bölüm 13.5'in
+kademeli yolu her ayakta rank-1 dejenereliğe sahiptir, yani [15] ve [16]'nın
+geometrik çerçevesine buradan bakıldığından daha yakındır.
+
+İkincisi, [16]'nın ilmekleri alışıldık anlamda kapalı zaman-benzeri eğriler
+**değildir**: kesişim noktalarında hareket yönünün aynı olması gerekmez. Bu
+nedenle sonuç, maddenin zamanda geriye gitmesi biçiminde okunamaz. [16] kendi
+fiziksel yorumunu da verir: hiperyüzey yakınındaki bir gözlemciye böyle bir
+ilmek, iki ayrı noktada bir parçacık-karşıparçacık çiftinin yaratılması gibi
+görünebilir.
+
+Görünüşte bir gerilim vardır: Bölüm 9.1 eşiğin geçirgen olmadığını söylerken,
+[16] yüzeyden geçen ilmeklerden söz eder. Gerilim görünüştedir ve Bölüm 9.3'te
+çözülmüştür: iki metrik arasındaki fark bir kareler toplamı olduğundan, Bölge
+I'de zaman-benzeri olan her yön Bölge II'de de zaman-benzeridir, yani eşikte bir
+eğriyi durduran nedensel engel yoktur. Yasaklanan şey akıdır. Geometrik eğriler
+ile alan akısı farklı nesnelerdir ve iki sonuç aynı anda doğru olabilir.
+
+**Bir itiraz.** [21], iki zamanlı dinamikte olasılık korunumu dayatıldığında
+fazladan zaman ekseninin gözlenebilirliğinin sınırlandığını gösterir: klasik
+$1+2$ boyutta Newton'un ikinci yasası tam olarak integre edilebilir ve her
+başlangıç koşulu için **etkin tek zamanlı** bir evrim verir; kuantum tarafta ise
+düzey aralıkları, toplam süre ve $\hbar$ içeren genelleştirilmiş bir belirsizlik
+bağıntısı çıkar. Bu, üç zamanlı Bölge II'nin dışarıdan bakıldığında tek zamanlı
+görünebileceği anlamına gelir. Buradaki kuruluş ile arasındaki fark, [21]'in
+evrimin üniter ve olasılık koruyan olmasını istemesidir; Bölüm 14'te gösterildiği
+gibi Bölge II'de bu talebin dayandığı yapı zaten mevcut değildir. Yine de bu
+itiraz açık bir sorudur ve modelin lehine kapatılmış sayılmamalıdır.
 
 ---
 
-## 14. Kanonik kuantumlama: üç bağımsız engel
+### 8.5 Yolculuk ne demek: davranış ihtimallerinin sınıflandırılması
+
+[YAZILACAK] Yönelim ile çıkış yüzünün çarpımı olarak tam bir durum tablosu kurulacak; her durum dönüşte ayrı ayrı ele alınacak.
+
+---
+
+## 9. Orada hareket ve yönelim
+
+$D$'de $V$ geçmez. Bu bir eksiklik değildir; hız kavramının kendisi türetilerek
+gösterilir ki gerekli değildir.
+
+Bizim tarafta hız zaten temel bir büyüklük olmayıp dispersiyondan çıkar:
+
+$$\omega(k) = c\sqrt{k^2 + \mu}, \qquad
+  v_{\text{faz}} = \frac{\omega}{k}, \qquad
+  v_{\text{grup}} = \frac{d\omega}{dk}, \qquad
+  v_{\text{faz}} \cdot v_{\text{grup}} = c^2$$
+
+Öte tarafta aynı türev alınır, ancak payda vektördür, zaman üç boyutludur:
+
+$$\frac{dq}{d\kappa} \;\longrightarrow\; \text{skaler/vektör} = \text{gradyan} = \text{VEKTÖR}$$
+
+**Sonuç:** Hız skaler olmaktan çıkıp yönelime dönüşür. "Ne kadar hızlı" sorusu
+"hangi yönelimde" sorusuna dönüşür. $V$ bilgisi $B$ boostunda, yani üç-zaman
+uzayındaki yönelimde yaşar.
+
+Hız dönüşümü $v' = c^2/v$'dir; ışık hızı sabit noktadır ve subluminal ile
+superluminal bölgeleri birbirine eşler.
+
+### 5.1 Karşı tarafta dispersiyon ve grup hızı
+
+Düzlem dalga koşulu:
+
+$$k_1^2 + k_2^2 + k_3^2 - \frac{q^2}{c^2} + \mu = 0
+  \quad\Longrightarrow\quad q = \pm\, c\sqrt{k^2 + \mu}$$
+
+$q$ her zaman reeldir: $r$ ekseninde salınım vardır, sönümlenme yoktur.
+
+Durgun cisim ($k = 0$) için $q = mc^2/\hbar \neq 0$. Yani orada duran bir cisim bile
+$r$ ekseninde ilerler, bizim taraftaki "duran cisim zamanda ilerler" ifadesinin
+tam aynasıdır.
+
+Grup hızı:
+
+$$\frac{dq}{dk} = \frac{c\,\hbar k}{\sqrt{c^2m^2 + \hbar^2k^2}}
+  \qquad (\text{vektör, } k \text{ doğrultusunda})$$
+
+$|dq/dk| < c$ ve $k \to \infty$ limitinde $c$'ye yaklaşır. Karşı tarafta da bir hız
+sınırı vardır; yalnızca hangi eksende olduğu değişmiştir. Sınır davranışı her iki
+tarafta aynıdır: $\kappa \to 0$'da sıfır, $\kappa \to \infty$'da $c$.
+
+---
+
+
+Durgun superluminal dört-momentum $p' = (mc\,\mathbf{s},\, 0)$ biçimindedir ve her
+$\mathbf{s}$ seçimi ayrı bir dünya çizgisi demeti veriyormuş gibi görünür.
+
+Hesap:
+
+- Kütle kabuğu koşulu $s_1^2 + s_2^2 + s_3^2 = 1$ verir, yani $\mathbf{s} \in S^2$.
+- $\eta' = \mathrm{diag}(+1,+1,+1,-1)$ içinde ilk üç slot **aynı** işaretlidir;
+  onları koruyan grup $O(3)$'tür.
+- $O(3)$ hem metriği korur hem de durgunluğu bozmaz (doğrulandı).
+- $O(3)$, $S^2$ üzerinde geçişli (transitif) etki eder: herhangi bir $\mathbf{s}$'yi
+  herhangi bir $\mathbf{s}'$ye götüren bir dönme her zaman vardır.
+
+**Sonuç:** Bütün $\mathbf{s}$ seçimleri aynı yörüngededir. Sonsuz sayıda fiziksel
+durum yoktur; **tek bir durumu yazmanın sonsuz yolu** vardır. Bu bir ayar (gauge)
+fazlalığıdır.
+
+$$\text{Stabilizatör} = O(2), \qquad \text{Yörünge uzayı} = O(3)/O(2) = S^2$$
+
+**Öncelik.** Fazladan zaman boyutunun bir ayar simetrisiyle elenmesi [20]'nin
+kurduğu mekanizmadır: $Sp(2,\mathbb{R})$ ayar simetrisi altında tek-zamanlı
+sistemler aynı iki-zamanlı sistemin farklı ayar sabitlemeleri olarak ortaya
+çıkar, ve bu alan teorisine, etkileşimlere ve ayar arka planlarına kadar
+götürülmüştür. Yukarıdaki $O(3)$ fazlalığı aynı türden ve çok daha dar bir
+olgudur. Buradaki katkı mekanizma değil, mekanizmanın bu modeldeki durgunluk
+sorusuna uygulanmasıdır.
+
+---
+
+
+Genel hareket denklemi küresel simetriye indirgendiğinde
+
+$$r'' + \frac{2}{t} r' - \frac{2}{c^2 t}\,(r')^3 = 0$$
+
+elde edilir.
+
+İndirgeme adımları. Genel denklem
+
+$$\left[\left(\frac{1}{c^2}(\nabla_{t'} r')^2 - 1\right)\delta_{ij}
+  - \frac{1}{c^2}\frac{\partial r'}{\partial t'_i}\frac{\partial r'}{\partial t'_j}\right]
+  \frac{\partial^2 r'}{\partial t'_i \partial t'_j} = 0$$
+
+biçimindedir. Küresel simetride $\nabla_{t'} r' = r'(t)\,\hat{t}$ olduğundan
+$(\nabla r')^2 = r'^2$ olur; ikinci türev operatörü radyal $r''$ ile iki teğetsel
+$r'/t$ terimine ayrışır. Sonuç
+
+$$A\left(r'' + \frac{2r'}{t}\right) - \frac{r'^2}{c^2} r'' = 0,
+  \qquad A = \frac{r'^2}{c^2} - 1$$
+
+olur ve $r''$ katsayısı $-1$ olduğundan yukarıdaki denklem çıkar.
+
+### 10.1 Kapalı form çözüm
+
+$$p = \frac{dr}{dt} = \pm\,\frac{c\,a}{\sqrt{a^2 - t^4}}$$
+
+Bu ifadenin denklemi sağladığı doğrulanmıştır; eliptik fonksiyona gerek yoktur.
+
+**Denge noktaları.** $p' = 0$ koşulu $p\,(p^2 - c^2) = 0$ verir, yani
+$p \in \{0, +c, -c\}$, sabit çözüm ve ışık hızında genişleyen kabuk.
+
+**Davranış.** $t = 0$'da $p = c$; $t \to \sqrt{a}$ iken $p \to \infty$.
+
+**Alınan toplam yol sonludur:**
+
+$$r = \int_0^{\sqrt{a}} p\, dt
+    = \frac{\sqrt{\pi}\,\sqrt{a}\,c\,\Gamma(1/4)}{4\,\Gamma(3/4)}
+    \approx 1{,}311\, c \sqrt{a}$$
+
+İntegral sayısal olarak da hesaplanır. Uçtaki tekillik iki değişken dönüşümüyle
+tamamen kaldırılır:
+
+$$t = \sqrt{a}\,u \;\Rightarrow\; c\sqrt{a}\int_0^1 \frac{du}{\sqrt{1-u^4}},
+\qquad
+u = \sin\theta \;\Rightarrow\; c\sqrt{a}\int_0^{\pi/2} \frac{d\theta}{\sqrt{1+\sin^2\theta}}$$
+
+**Fiziksel okuma.** Bu bir nokta parçacık yörüngesi değil, **küresel bir cephedir**.
+Işık hızıyla başlar, hızlanarak genişler, sonlu sürede ve sonlu yarıçapta sonsuz
+hıza ulaşır; ötesinde tanımsızdır.
+
+---
+
+## 10. Orada madde, enerji ve öngörü
+
+$D$ dört-momentuma uygulandığında:
+
+$$(E/c,\; p_x,\; p_y,\; p_z) \longmapsto (p_z,\; p_y,\; p_x,\; E/c)$$
+
+Öte tarafta enerji üç bileşenli, momentum tek bileşenlidir. Değişmez de
+koordinatlardaki davranışla tutarlı biçimde işaret çevirir:
+
+$$\frac{E^2}{c^2} - p^2 \;\longmapsto\; -\left(\frac{E^2}{c^2} - p^2\right)$$
+
+Kütle kabuğu koşulu buna göre dönüşür:
+
+$$E^2 = p^2c^2 + m^2c^4 \;\longmapsto\; E'^2 = p'^2c^2 - m^2c^4$$
+
+**Korunum.** Genel bir $2 \to 2$ çarpışmada bizim tarafta korunum sağlanıyorsa öte
+tarafta da otomatik sağlanır; fark tam olarak sıfırdır. Bunun nedeni $D$'nin
+doğrusal olmasıdır: toplamların görüntüsü, görüntülerin toplamına eşittir.
+
+**Karışık çarpışma.** Duran bir subluminal cisim ile sonsuz hızlı bir takyon
+çarpıştığında cisim momentum kazanır, enerjisi değişmez. Başlangıç durumu
+$(E_1, p_1) = (mc^2, 0)$ ve $(E_2, p_2) = (0, Mc)$ alınır; çarpışma sonrasında
+takyon yine sonsuz hızlıdır ($E_4 = 0$) ve momentumu $M'c$ olur.
+
+**Sonsuz hız limiti.** $V \to \infty$ iken $E \to 0$ ve $p \to mc$.
+
+**Enerji pozitifliği üzerine not.** Bizim tarafta enerji tek bir sayıdır ve işareti
+bellidir. Öte tarafta "enerji" üç bileşenli bir vektördür; tek bir pozitif enerji
+koşulu yazılamaz, ancak büyüklüğü
+
+$$|E'| = \sqrt{E_1^2 + E_2^2 + E_3^2} \;\geq\; 0$$
+
+kullanılabilir. Bu gözlem, Bölüm 14'teki "kararlı vakum yok" sonucunun klasik
+habercisidir. Aynı sorun, superluminal boost sonrası parçacıkların negatif enerji
+kazanması biçiminde [32]'de ele alınmış ve kuantum referans çerçeveleri
+genişletilerek çözülmüştür; oradaki çözüm ile buradaki vektör-enerji okuması
+birbirine alternatiftir.
+
+---
+
+
+Bizim taraf (Klein-Gordon):
+
+$$L = \tfrac{1}{2}\left[\frac{(\partial_t \phi)^2}{c^2} - (\nabla \phi)^2 - \mu \phi^2\right]$$
+
+Euler-Lagrange:
+
+$$\frac{1}{c^2}\partial_t^2 \phi - \nabla^2 \phi + \mu \phi = 0$$
+
+$D$ uygulanmış hali:
+
+$$L' = \tfrac{1}{2}\left[(\partial_{t_1}\psi)^2 + (\partial_{t_2}\psi)^2
+      + (\partial_{t_3}\psi)^2 - \frac{(\partial_r \psi)^2}{c^2} + \mu \psi^2\right]$$
+
+Euler-Lagrange:
+
+$$\left(\partial_{t_1}^2 + \partial_{t_2}^2 + \partial_{t_3}^2\right)\psi
+  - \frac{1}{c^2}\partial_r^2 \psi - \mu \psi = 0$$
+
+İki denklem $D$ ile birbirine geçer; Klein-Gordon operatörü işaret çevirerek
+dönüşür: $\Box \to -\Box'$.
+
+### 6.1 Determinizm kaybı denklem tipinden çıkar
+
+| | Bölge I | Bölge II |
+|---|---------|----------|
+| İmza | 1 zaman + 3 uzay | 3 zaman + 1 uzay |
+| Başlangıç değer problemi | İyi konumlanmış | Hadamard anlamında kötü konumlanmış |
+| Sonuç | Determinist | Öngörü çöker |
+
+Sayısal gösterim: bir modu Bölge I'de $e^{i k \cdot x} f(t)$ biçiminde alırsak
+
+$$\partial_t^2 f = -c^2(k^2 + \mu)\, f$$
+
+elde edilir; katsayı **her zaman negatiftir**, dolayısıyla çözüm salınımlıdır ve
+büyüme sınırlıdır. Bölge II'de aynı modu $e^{i(k_2 t_2 + k_3 t_3 + q r)} f(t_1)$
+biçiminde alırsak
+
+$$\partial_{t_1}^2 f = \left(k_2^2 + k_3^2 - \frac{q^2}{c^2} + \mu\right) f$$
+
+elde edilir; bu katsayı **pozitif olabilir** ve $k_2, k_3 \to \infty$ iken sınırsız
+büyür. Çözüm $\exp\!\big(\sqrt{\text{katsayı}}\; t_1\big)$ tipinde patlar. Başlangıç
+verisindeki keyfi küçük bir bozulma, keyfi büyük bir çözüm değişimi verir: problem
+Hadamard anlamında kötü konumlanmıştır.
+
+Bu sonuç bir yorum değil, denklem tipinin doğrudan sonucudur.
+
+**Öncelik ve yöntem.** Bu sonucun kesin hâli [7]'ye aittir ve yöntemi
+buradakinden farklıdır. Orada iki boyutlu bir imza-değişen uzay-zamanda sınır
+koşulları Schrödinger Hamiltonyeninin öz-eşlenik genişlemelerinden çıkarılır,
+alanın sürekli olması ve koşulların eklem koşulu biçiminde olması talebi tek bir
+küme seçer, Klein-Gordon başlangıç değer problemi bu kümede kötü konumlanmış
+bulunur, ve değişim yüzeyinden uzakta düzgün ve tıkız destekli başlangıç verisi
+için çözümün $L^2$ normunun **sonlu zamanda ıraksadığı** ispatlanır. Yukarıdaki
+mod hesabı aynı sonuca çok daha basit bir yoldan varır ve bir ispat değil,
+bağımsız bir doğrulamadır.
+
+---
+
+### 10.5 Eşik bir mod filtresidir
+
+[YAZILACAK] Hesap yapıldı ve C++ tarafında 6.2 olarak duruyor: karşı tarafın denklemini sağlayan bir modun büyüme katsayısı tam olarak -k1 karedir, dolayısıyla asla pozitif değildir. Eşikten geçerek gelen her mod bu denklemi sağladığı için patlayan mod enjekte edilemez. Sınırdaki k1 = 0 modları marjinaldir ve doğrusal büyür; bu ayrıca ele alınacak.
+
+---
+
+## 11. Orada gözlem
 
 Bölge II'de kanonik yapı çalışmaz. Üç ayrı engel vardır ve üçü de aynı köke bağlıdır.
 
@@ -1020,7 +1050,6 @@ Cauchy yüzeyi gerektirmediği için tanımlıdır.
 
 ---
 
-## 15. Yol integrali ve Öklid yapısı
 
 ### 15.1 Wick dönüşü zorunlu bir seçim veriyor
 
@@ -1118,7 +1147,6 @@ Bölüm 21'de öyle listelenmiştir.
 
 ---
 
-## 16. Vakum yorumu ve Casimir imzası
 
 ### 16.1 Parçacık kavramı neden tanımsız
 
@@ -1238,7 +1266,142 @@ değildir. Dolayısıyla bu, prensipte var olan ama pratikte ölçülemeyen bir 
 
 ---
 
-## 17. Sylvester engeli ve modelin duruşu
+# Bölüm IV. Dönüş
+
+## 12. İkinci geçiş ve iki yüzeyin eşleşmesi
+
+[YAZILACAK] İki yüzeydeki eklem koşulları birlikte çözülecek, transfer matrisi kurulacak. Dilimin öbür yüzünden çıkan dalganın genliği ve fazı buradan gelecek.
+
+---
+
+## 13. Dönüş anı
+
+[YAZILACAK] Tezin en kritik bölümü. Eşikte duran ve hiç geçmeyen bir gözlemcinin saatinde parçacık nereye düşüyor, parçacığın kendi öz-zamanı karşı tarafta nasıl tanımlanır, ve ikisinin farkı ne. Öz-zamanın karşıda tanımsız olması bu bölümün ilk işidir.
+
+---
+
+# Bölüm V. Muhasebe
+
+## 14. Ne geçti, ne kaldı: mod içeriği
+
+[YAZILACAK] Giren dalga paketinin mod dağılımı ile çıkanınki karşılaştırılacak. Hangi modlar geçti, hangileri söndü, faz nasıl kaydı.
+
+---
+
+## 15. Korunan yüklerin muhasebesi
+
+[YAZILACAK] Enerji, momentum ve Noether yükleri gidişte ve dönüşte karşılaştırılacak. Karşıda enerjinin üç bileşenli olması, takas sırasında neyin düştüğünü gösterecek yer burasıdır.
+
+---
+
+## 16. Bilgi farkı
+
+[YAZILACAK] Giren ve çıkan durumlar arasında bir bilgi kuramı ölçüsü kurulacak. Temeli en zayıf olan ölçü budur, çünkü karşıda vakum ve parçacık tanımsızdır; bu çekince metinde açıkça yazılacaktır.
+
+---
+
+## 17. Yönelim sözlüğü
+
+[YAZILACAK] Karşıdaki her davranış ihtimalinin bizim evrendeki karşılığı tek tek yazılacak, Bölüm 8.5in durum tablosuyla birebir eşleşerek. Aşağıdaki işaret tartışması bu sözlüğün bir parçasıdır ve sonucu tersine dönmüştür: eşik geçirgen olduğu için bağıl işaret artık prensip olarak ölçülebilirdir.
+
+
+$\pm D$ ayrımı test edildi: her iki işaret de $\det = +1$ ve $M^2 = I$ koşullarını
+sağlar, dolayısıyla bu koşullarla ayırt edilemezler. Ancak Bölüm 7'deki bulgu
+işaretin anlamını netleştirir:
+
+1. Her iki bölgede birer ok seçimi vardır (bizde zaman, ötede uzay).
+2. $D$ bizim ok eksenimizi onların ok eksenine gönderir, seçimler bağımsız
+   değildir, biri diğerini belirler.
+3. Fiziksel olarak anlamlı olan tek büyüklük **bağıl işarettir**: iki okun
+   hizalanması. Tek başına hiçbiri anlamlı değildir.
+4. $\Sigma$ geçirgen olmadığı için iki bölge haberleşemez; dolayısıyla bağıl işaret
+   **prensip olarak ölçülemez**.
+
+**Sonuç:** İşaret belirsizliği bir eksiklik değil, yapısal bir özelliktir. Bizim
+tarafta da zamanın oku denklemlerden türetilmez, Newton, Maxwell ve Schrödinger
+denklemlerinin hepsi $T$-simetriktir; ok başlangıç koşulundan gelir.
+
+### 12.1 $D$'nin yapısı: yön-bağımlı bir involüsyonla karşılaştırma
+
+$D$'yi yön-bağımlı bir involüsyonla karşılaştırmak, onun grup içindeki yerini
+netleştirir. $\theta = \varphi = 0$ ekseni için yön-bağımlı involüsyon $t$ ile $z$'yi
+işaretli olarak takas eder ve $\Lambda_{\inf}^2 = I$ sağlar; yani o da bir
+involüsyondur, ancak yalnızca iki koordinatı değiştirir.
+
+$D$ ise dört koordinatı birden değiştirir ve içinde bir $x \leftrightarrow y$ takası
+barındırır. Bu takasın üç boyuttaki determinantı $-1$'dir, dolayısıyla bir $SO(3)$
+elemanı değildir. Bunun doğrudan sonucu şudur:
+
+> $D$, yön-bağımlı involüsyonun ürettiği genişletilmiş grup $L_{\text{ext}}$ içinde
+> **bulunmaz**.
+
+Yani $D$ ile yön-bağımlı formlar aynı ailenin iki üyesi değildir; farklı yapılardır.
+
+---
+
+# Bölüm VI. Bilgi gönderme
+
+## 18. İki bölge arasında sinyal
+
+[YAZILACAK] Dört taşıyıcı ayrı ayrı ele alınacak: elektromanyetik alan, yer çekimi ve kütle çekimi, kütleli skaler alan, ve korelasyon ile dolanıklık. Aşağıdaki elektromanyetik hesap bunlardan yalnızca birincisidir.
+
+
+$D$ Maxwell teorisine uygulandığında bütün sonuçlar tek bir matris çarpımından
+çıkar.
+
+**Potansiyel ve akım:**
+
+$$A^\mu = (\phi/c,\, \mathbf{A}) \;\longmapsto\; A'^\mu = (A_z,\, A_y,\, A_x,\, \phi/c)$$
+$$j^\mu = (\rho c,\, \mathbf{j}) \;\longmapsto\; j'^\mu = (j_z,\, j_y,\, j_x,\, \rho c)$$
+
+Elektrik potansiyeli öte tarafta bir uzaysal bileşene dönüşür; yük yoğunluğu ile
+akım yoğunluğu takas olur.
+
+**Etkileşim terimi:**
+
+$$A' \cdot j' = -\,A \cdot j$$
+
+**Alan tensörü:** $F' = D^T F D$ altında elektrik ve manyetik bileşenler yer
+değiştirir.
+
+**Kritik sonuç, değişmez korunur:**
+
+$$F_{\mu\nu}F^{\mu\nu} = F'_{\mu\nu}F'^{\mu\nu}$$
+
+Tam eşitlik. Maxwell Lagrangian'ının kinetik terimi $D$ altında **değişmezdir**;
+yalnızca kaynak terimi işaret çevirir:
+
+$$L = -\frac{1}{4\mu_0}F_{\mu\nu}F^{\mu\nu} - A_\mu j^\mu
+\qquad\longmapsto\qquad
+L' = -\frac{1}{4\mu_0}F'_{\mu\nu}F'^{\mu\nu} + A'_\mu j'^\mu$$
+
+**Dalga denklemi ve korunum:**
+
+$$\Box A^\nu = \mu_0 j^\nu \;\longmapsto\; -\Box' A'^\nu = \mu_0 j'^\nu$$
+$$\partial_\mu j^\mu = 0 \;\longmapsto\; \partial'_\mu j'^\mu = 0 \quad(\text{otomatik})$$
+
+Korunumun doğrusallıkla taşındığı somut olarak da gösterilir: iki akımın toplamının
+görüntüsü, görüntülerinin toplamına eşittir.
+
+**Öncelik.** Superluminal uzay-zamanda elektromanyetizma [27]'de kurulmuştur.
+Orada Maxwell denklemleri ve tek foton dalga denklemi, sıradan denklemlerin
+superluminal dönüşümüyle ve kompleks nicelik kullanılmadan elde edilir; dahası
+dönüşmüş denklemler **çözülür** ve sonsuz ışık konisi ile ona dik iki yapraklı
+hiperboloit arasında kalan bölgede X biçimli çözümler bulunur. Bu bölümdeki
+sonuçlar o çalışmanın kapsamı içindedir ve burada bağımsız olarak, tek bir
+kongruans işleminden yeniden üretilmiştir. Özgünlük iddiası taşımaz; korunmasının
+nedeni, modelin elektromanyetizmayı bozmadığının kendi araçlarıyla
+gösterilebilmesidir.
+
+---
+
+# Bölüm VII. Sınırlar
+
+> Bu bölümün tamamı sıfırdan yeniden yazılacaktır. Aşağıdaki metinler eski
+> tezin sınırlarını tarif ediyor ve yeni teze göre geçersizdir; yalnızca
+> malzeme kaybolmasın diye tutulmaktadır.
+
+## 19. Sylvester engeli ve modelin duruşu
 
 Bu bölüm modelin kendi sınırını belirler.
 
@@ -1297,39 +1460,7 @@ takılmaz.
 
 ---
 
-## 18. Yön-bağımlı $D$ denemesi
-
-$D$'nin belirli bir ekseni sabit tutması, koordinat-bağımlı olduğu yönünde bir
-itiraza açıktır. Bunu gidermek için $D$'nin yön-bağımlı hale getirilmesi denendi.
-$n$ boost yönü birim vektörü ve $P = n n^T$ olmak üzere:
-
-| Aday | $M^2 = I$ | $\det$ | $\eta$-çevirme |
-|------|-----------|--------|----------------|
-| $\begin{pmatrix} 0 & -n^T \\ -n & I-P\end{pmatrix}$ | Evet | $-1$ | Hayır |
-| $\begin{pmatrix} 0 & n^T \\ n & I-P\end{pmatrix}$ | Evet | $-1$ | Hayır |
-| $\begin{pmatrix} 0 & n^T \\ n & P-I\end{pmatrix}$ | Evet | $-1$ | Hayır |
-
-Üç form da her $n$ yönü için involüsyondur; bu cebirsel olarak da görülür, çünkü
-$n^T n = 1$, $(I-P)n = 0$ ve hem $(I-P)^2$ hem $(P-I)^2$ ile $P$'nin toplamı $I$
-verir. Dolayısıyla involüsyon olmak bu adayları ayırt eden bir özellik değildir;
-ayırt edici olan hiçbirinin imzayı çevirmemesidir. Buna karşılık Householder tipi
-$\begin{pmatrix} 0 & n^T \\ n & I-2P\end{pmatrix}$ formu involüsyon bile değildir ve
-o da imzayı çevirmez.
-
-Sonuç: bu formlar aralığı yalnızca $t$ ile $n$'nin gerdiği iki boyutlu alt uzayda
-çevirir; $n$'ye dik yönlerde çevirmez. Üç ayrı olay üzerinde doğrulandı:
-
-- $t$ ve $n$'nin gerdiği düzlemde kalan bir olay,
-- $n$'ye dik yönde kalan bir olay ($I - P$ bloğu orada birim gibi davranır),
-- genel bir olay: aralık ne korunur ne çevrilir.
-
-Yani yön-kovaryant formlar aralığı **korur** ($s'^2 = s^2$), işaret çevirmez. İşaret
-çevirme ancak metrik bileşenlerinin yeniden sıralanmasıyla elde edilir, bu da
-Bölüm 17'deki sonucun bir başka görünümüdür.
-
----
-
-## 19. Modele yöneltilebilecek itirazlar ve bunlara cevaplar
+## 20. İtirazlar ve cevaplar
 
 Aşağıdaki maddeler, literatürde bu modelin çekirdeğini hedefleyen ya da hedefleme
 potansiyeli taşıyan argümanlardır. Her madde önce itirazı olabildiğince güçlü
@@ -1486,7 +1617,7 @@ fiziksel olarak kabul edilip edilemeyeceğidir.
 
 ---
 
-## 20. Yöntem
+## 21. Yöntem ve doğrulama
 
 Bütün doğrulamalar önce sembolik cebirle yapıldı:
 
@@ -1508,7 +1639,7 @@ matrislerinde irrasyonel girdiler oluşur; oralarda bir tolerans kullanılır.
 
 ---
 
-## 21. Kapanan ve açık kalan noktalar
+## 22. Açık kalanlar ve simülasyona giden yol
 
 | Konu | Durum |
 |------|-------|
