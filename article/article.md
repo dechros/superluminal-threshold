@@ -1661,19 +1661,122 @@ geçerli olan sayılardır.
 
 ## 15. Ne geçti, ne kaldı: mod içeriği
 
-[YAZILACAK] Giren dalga paketinin mod dağılımı ile çıkanınki karşılaştırılacak. Hangi modlar geçti, hangileri söndü, faz nasıl kaydı.
+Gidiş dönüş, aynı ara bölgenin iki kez geçilmesidir. Mod süzgeci bu nedenle
+paketin üzerine **iki kez** uygulanır ve etkiler çarpılır, toplanmaz.
+
+### 15.1 Geri dönen ağırlık
+
+$\mu = 1$, $d = 1$, paket genişliği $0{,}3$ için:
+
+| Ara bölge | Tek geçişte kalan | Gidiş dönüşte kalan |
+|-----------|-------------------|---------------------|
+| Kleinian | $0{,}870$ | $0{,}757$ |
+| Öklid | $0{,}122$ | $0{,}018$ |
+| Dejenere | $0$ | $0$ |
+
+Dönüş ayağı, gidiş ayağının bedelini yeniden ödetir. Öklid bölgede gidiş dönüş
+paketin yüzde ikisinden azını geri getirir.
+
+### 15.2 Geri dönen paketin merkezi kaymıştır
+
+Süzgeç iki kez uygulandığı için ağırlık merkezinin kayması da büyür:
+
+| Paket genişliği | Gidiş dönüş kayması (genişlik birimiyle) |
+|-----------------|-------------------------------------------|
+| $0{,}4$ | $1{,}092$ |
+| $0{,}2$ | $0{,}578$ |
+| $0{,}1$ | $0{,}292$ |
+| $0{,}05$ | $0{,}146$ |
+
+Genişliği $0{,}4$ olan bir paket kendi genişliğinden fazla kayar; böyle bir
+paket için "aynı parçacık geri döndü" ifadesi savunulamaz.
+
+Kayma yine genişlikle **doğru orantılıdır** ve alt sınırı yoktur. Dolayısıyla
+Bölüm 11.3'ün sonucu gidiş dönüş için de geçerlidir: yeterince dar bir paket
+kendisi olarak geri döner. Bu, yolculuğun bir yolculuk olmasını, yani gidenle
+gelenin aynı şey sayılabilmesini sağlayan koşuldur.
 
 ---
 
 ## 16. Korunan yüklerin muhasebesi
 
-[YAZILACAK] Enerji, momentum ve Noether yükleri gidişte ve dönüşte karşılaştırılacak. Karşıda enerjinin üç bileşenli olması, takas sırasında neyin düştüğünü gösterecek yer burasıdır.
+Bir öncekinin karşıtı olan soru: geçişin **dokunamadığı** nedir.
+
+Üç nicelik değişmeden geçer ve üçü de hesapla doğrulanmıştır.
+
+**Frekans.** Eklem koşulları sabit frekansta dayatıldığı için, ara bölgenin
+dayattığı dalga sayısı adımı frekanstan bağımsızdır. Üç ayrı frekansta adım
+aynı çıkar.
+
+**Enine dalga sayısı.** Yüzey kendi boyunca homojen olduğundan enine dalga
+sayısı korunur; adım yalnızca onun tarafından belirlenir. Üç ayrı enine dalga
+sayısında doğrulanmıştır.
+
+**Kütle.** Kütle parametresi iki tarafa da aynı miktarda girer; geçiş dalga
+operatörüne etki eder, kütleye değil.
+
+| Nicelik | Gidiş dönüşte |
+|---------|---------------|
+| Frekans | Değişmez |
+| Enine dalga sayısı | Değişmez |
+| Kütle | Değişmez |
+| Normal dalga sayısı | Ara bölgede sanal olabilir |
+| Genlik | Azalır |
+| Mod dağılımı | Yeniden ağırlıklanır |
+| Faz | Kayar, ve dönüş anını taşır |
+
+Sol sütun parçacığın kimliğini, sağ sütun ise başına gelenleri tarif eder.
+Kimlik korunur, geçmiş değişir.
+
+**Çekince.** Bu muhasebe doğrusal ve durağan saçılma kurgusundadır. Bölge II'de
+enerjinin üç bileşenli olması, yani Bölüm 12'deki takas, buradaki listeye
+katılmamıştır; üç bileşenli bir enerjinin gidiş dönüş boyunca nasıl izleneceği
+açık kalmıştır.
 
 ---
 
 ## 17. Bilgi farkı
 
-[YAZILACAK] Giren ve çıkan durumlar arasında bir bilgi kuramı ölçüsü kurulacak. Temeli en zayıf olan ölçü budur, çünkü karşıda vakum ve parçacık tanımsızdır; bu çekince metinde açıkça yazılacaktır.
+Üçüncü defter, geri dönen dağılımın gidenden ne kadar uzaklaştığını ölçer.
+
+### 17.1 Göreli entropi
+
+Giden ve dönen mod dağılımları arasındaki göreli entropi:
+
+| Paket genişliği | Göreli entropi (nat) |
+|-----------------|----------------------|
+| $0{,}1$ | $0{,}0425$ |
+| $0{,}5$ | $0{,}8319$ |
+| $1{,}0$ | $1{,}2548$ |
+
+Geniş paket yolculuktan daha çok etkilenir. Ara bölge yokken göreli entropi tam
+olarak sıfırdır, ki bu hesabın tutarlılık sınamasıdır.
+
+### 17.2 Yolculuk bulandırmıyor, keskinleştiriyor
+
+Beklenen şey, bir engelden geçen paketin bilgi kaybederek **bulanması**
+olurdu. Hesap bunun tersini veriyor. Genişliği $0{,}8$ olan bir paket için
+dağılımın Shannon entropisi gidişte $6{,}726$, dönüşte $6{,}414$'tür.
+
+Nedeni şudur: süzgeç mod **eklemez**, yalnızca çıkarır. Geri dönen paket daha
+az moddan oluşur, dolayısıyla daha dar bir betimlemedir.
+
+> Gidiş dönüşte kaybolan bilgi, parçacığın kendisi hakkındaki belirsizlik
+> değildir; parçacığın **hangi modlardan kurulduğu** bilgisidir. Dönen şey daha
+> belirli, ama daha eksiktir.
+
+Bu, senaryonun sezgiye aykırı ama tutarlı yanıdır: yolculuk parçacığı
+bozmaz, budar.
+
+### 17.3 Bu ölçünün sınırı
+
+Göreli entropi mod dağılımları arasında tanımlıdır ve bu iyi tanımlı bir
+niceliktir. Ancak bir **durum** entropisi değildir. Bölge II'de parçacık sayısı
+ve vakum tanımsız olduğu için, orada sayılacak bir durum kümesi yoktur.
+
+Dolayısıyla bu defter üç defterin en zayıfıdır ve öyle sunulmaktadır: "ne kadar
+bilgi kayboldu" sorusuna verdiği cevap, "mod dağılımı ne kadar değişti"
+sorusunun cevabıdır, daha fazlası değil.
 
 ---
 
