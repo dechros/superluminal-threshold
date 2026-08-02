@@ -3634,14 +3634,23 @@ Engel rejiminde ($\omega = 2{,}8$, Öklid ara bölge):
 
 | Kalınlık $d$ | Işığın gerektirdiği | Parçacığın dönüş anı | Fark |
 |--------------|--------------------|--------------------|------|
-| $2$ | $4{,}00$ | $1{,}4629$ | $+2{,}5371$ |
-| $4$ | $8{,}00$ | $1{,}4629$ | $+6{,}5371$ |
-| $8$ | $16{,}00$ | $1{,}4629$ | $+14{,}5371$ |
-| $16$ | $32{,}00$ | $1{,}4629$ | $+30{,}5371$ |
+| $2$ | $4{,}00$ | $2{,}9258$ | $+1{,}0742$ |
+| $4$ | $8{,}00$ | $2{,}9257$ | $+5{,}0743$ |
+| $8$ | $16{,}00$ | $2{,}9257$ | $+13{,}0743$ |
+| $16$ | $32{,}00$ | $2{,}9257$ | $+29{,}0743$ |
+
+Buradaki iki sütun **aynı ayakta** ölçülmektedir ve bu bir düzeltmedir. Işık
+süresi gidiş dönüştür, yani $2d/c$; dolayısıyla parçacığın geçen süresi de
+bölgenin iki kez katedilmesidir, yani tek geçişin iki katıdır. Önceki bir
+sürümde gidiş dönüş ışık süresi, **tek geçişlik** bir gecikmeyle
+karşılaştırılıyordu ve bu, geçişi tam bir geçiş kadar kayırıyordu. Bölüm
+25.7'nin kapalı biçimi hangisinin hangisi olduğunu kesinleştirir: tek bir
+engel için doymuş faz süresi $2\omega/(c^2\kappa\beta)$'dır, yani $1{,}4629$
+tek geçiştir.
 
 Dönüş anı kalınlıkla doyduğu, ışık süresi ise doymadığı için **fark sınırsız
-büyür**. Bölge ne kadar kalınlaştırılırsa, dönüş olayı ışığın varabileceği
-andan o kadar öne düşer.
+büyür**; fark $2d - 2{,}9257$ olarak gider. Bölge ne kadar kalınlaştırılırsa,
+dönüş olayı ışığın varabileceği andan o kadar öne düşer.
 
 ### 25.6 Bu farkın ne olduğu, ve ne olmadığı
 
@@ -3660,7 +3669,7 @@ paketin **tepe noktasının** nereye düştüğüdür.
 olarak kapatılmaktadır. Bölüm 14.12'de cephe tepeden ayrı olarak hesaplanmıştır:
 cephe hızı frekans büyüdükçe ışık hızına düşer, bölge cepheyi hiçbir kalınlıkta
 öne almaz, ve öne alma büyürken onu taşıyan genlik $d = 32$ için
-$5{,}2 \times 10^{-32}$'ye çöker. Yukarıdaki $+30{,}5371$, bir mesajın ışığı
+$5{,}2 \times 10^{-32}$'ye çöker. Yukarıdaki $+29{,}0743$, bir mesajın ışığı
 geçtiği anlamına gelmez ve bu çalışma öyle bir iddiada bulunmamaktadır.
 
 **Ayrıca tek okuma da değildir.** Bölüm 14.11'de aynı genlikten türetilen beş
@@ -3701,11 +3710,19 @@ eşitsizliktir. Öklid ara bölge için ($n = 3$):
 
 $$\text{engel} \iff 2(E_2^2 + E_3^2) > E_1^2$$
 
-**Geçen süre, kapalı biçimde.** Engel rejiminde:
+**Geçen süre, kapalı biçimde.** Engel rejiminde, **tek geçiş** için:
 
 $$\boxed{\; t(\mathbf{E}) \;=\; \frac{2\,\omega}{c^2\,\kappa\,\beta} \;=\; \frac{2\sqrt{E_1^2+E_2^2+E_3^2+\mu}}{|E_1|\;\sqrt{2(E_2^2+E_3^2)-E_1^2}} \;}$$
 
 (son eşitlik $c = 1$ ve Öklid ara bölge içindir.)
+
+Gidiş dönüş bölgeyi iki kez kateder, dolayısıyla dönüş olayının zaman
+koordinatı bunun **iki katıdır**:
+
+$$t_{\text{gidiş dönüş}}(\mathbf{E}) \;=\; \frac{4\,\omega}{c^2\,\kappa\,\beta}$$
+
+Bölüm 25.5'in tablosu bu nicelikle kurulur; ışık süresi de gidiş dönüş olduğu
+için ikisi aynı ayaktadır.
 
 **İçinde kalınlık yoktur.** Doyum burada bir tabloda fark edilen bir şey değil,
 bir **özdeşliktir**. Saçılma hesabıyla karşılaştırıldığında:
@@ -3733,7 +3750,7 @@ de her iki yoldan aynı.
 **Dört koordinatın tamamı.** Öte taraftaki durum, üç zamandaki enerji vektörü
 $\mathbf{E}$ ile tek uzay eksenindeki dal $\sigma = \pm 1$'dir. Dönüş olayı:
 
-$$t = \frac{2\omega}{c^2\,|E_1|\,\beta}, \qquad
+$$t = \frac{4\omega}{c^2\,|E_1|\,\beta}, \qquad
 x_\perp = d\,\frac{1+\sigma}{2}, \qquad
 y = S(d)\,\frac{E_2}{|\mathbf{E}|}, \qquad
 z = S(d)\,\frac{E_3}{|\mathbf{E}|}$$
