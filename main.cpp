@@ -3,6 +3,7 @@
 #include "boundary/ThresholdSurface.h"
 #include "core/Report.h"
 #include "core/Section.h"
+#include "critique/AlternativeRoutes.h"
 #include "critique/DirectionDependentD.h"
 #include "critique/ObjectionTests.h"
 #include "critique/SylvesterObstruction.h"
@@ -16,6 +17,7 @@
 #include "horizon/SurfaceLayer.h"
 #include "literature/LiteraturePosition.h"
 #include "quantum/CanonicalQuantization.h"
+#include "quantum/CasimirDiscriminant.h"
 #include "quantum/DerivedTransition.h"
 #include "quantum/PathIntegral.h"
 #include "quantum/VacuumCasimir.h"
@@ -54,9 +56,11 @@ namespace
         sections.push_back(std::make_unique<slm::PathIntegral>());
         sections.push_back(std::make_unique<slm::DerivedTransitionSection>());
         sections.push_back(std::make_unique<slm::VacuumCasimir>());
+        sections.push_back(std::make_unique<slm::CasimirDiscriminantSection>());
         sections.push_back(std::make_unique<slm::SylvesterObstruction>());
         sections.push_back(std::make_unique<slm::DirectionDependentD>());
         sections.push_back(std::make_unique<slm::ObjectionTestsSection>());
+        sections.push_back(std::make_unique<slm::AlternativeRoutesSection>());
         return sections;
     }
 

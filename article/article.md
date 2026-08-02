@@ -442,11 +442,13 @@ fazlalığıdır.
 
 $$\text{Stabilizatör} = O(2), \qquad \text{Yörünge uzayı} = O(3)/O(2) = S^2$$
 
-Mekanizma olarak bu, iki-zaman fiziğindeki duruma benzer: [20]'de fazladan zaman
-boyutu bir $Sp(2,\mathbb{R})$ ayar simetrisiyle elenir ve tek-zamanlı sistemler
-aynı iki-zamanlı sistemin farklı ayar sabitlemeleri olarak ortaya çıkar. Buradaki
-$O(3)$ fazlalığı aynı türden, ancak çok daha dar bir olgudur; [20] alan teorisini,
-etkileşimleri ve ayar arka planlarını da kapsar.
+**Öncelik.** Fazladan zaman boyutunun bir ayar simetrisiyle elenmesi [20]'nin
+kurduğu mekanizmadır: $Sp(2,\mathbb{R})$ ayar simetrisi altında tek-zamanlı
+sistemler aynı iki-zamanlı sistemin farklı ayar sabitlemeleri olarak ortaya
+çıkar, ve bu alan teorisine, etkileşimlere ve ayar arka planlarına kadar
+götürülmüştür. Yukarıdaki $O(3)$ fazlalığı aynı türden ve çok daha dar bir
+olgudur. Buradaki katkı mekanizma değil, mekanizmanın bu modeldeki durgunluk
+sorusuna uygulanmasıdır.
 
 ---
 
@@ -1106,6 +1108,39 @@ kareli, yani takyonik bir alandır; burada Bölge II alanı **reel kütlelidir**
 tuhaflık kütlede değil imzadadır. İki hesabın aynı fiziksel duruma ait olmadığı,
 dolayısıyla çelişmedikleri kanısındayız; ancak bu ayrımın kendisi sınanmamıştır.
 
+### 16.4 İki eşik yüzeyinin ayırt edeceği şey
+
+Bölüm 19.5, tek bir duvarda hangi öz-eşlenik koşul seçilirse seçilsin tam
+yansıma olduğunu gösterdi. Tek yüzey hiçbir şeyi ayırt etmez. **İki** yüzey eder.
+
+İki duvar arasındaki mod spektrumu, duvarların aynı koşulu mu yoksa karşıt
+koşulları mı taşıdığına bağlıdır. Aynı koşul durumunda modlar $n\pi/L$,
+karşıt koşul durumunda $(n+\tfrac{1}{2})\pi/L$ olur. İki toplamı bağlayan
+özdeşlik
+
+$$\sum_{n\geq 0}\Big(n+\tfrac{1}{2}\Big)^{-s} = (2^{s}-1)\sum_{n\geq 1} n^{-s}$$
+
+sayısal olarak yakınsadığı bölgede doğrulanmış, ardından Casimir enerjisinin
+ihtiyaç duyduğu $s = -3$ değerine sürdürülmüştür. Orada çarpan
+
+$$2^{-3} - 1 = -\tfrac{7}{8}$$
+
+olur. Sonuç:
+
+| Yapılandırma | $E/A$ | Kuvvet |
+|--------------|-------|--------|
+| İki duvar **aynı** koşulu taşıyor | $-\dfrac{\pi^2\hbar c}{1440\,L^3}$ | Çekici |
+| Duvarlar **karşıt** koşulları taşıyor | $+\dfrac{7}{8}\cdot\dfrac{\pi^2\hbar c}{1440\,L^3}$ | İtici |
+
+**Bu modelin öngörüsü.** Eşik koşulu iki $\Sigma$ yüzeyinde de aynıdır,
+dolayısıyla model **çekici** bir kuvvet öngörür. Kuvvetin **işareti** ayırt
+edicidir, yalnızca büyüklüğü değil; ve büyüklük $L^{-3}$ ölçeklenmesini taşır.
+
+Bu, çalışmanın ayırt edici tek öngörüsüdür. Koşulludur ve koşulu ağırdır:
+$v = c$ değerinde iki yüzey gerekir, ki bugün hiçbir deney bunu hazırlayamaz.
+Öngörünün varlığı ile sınanabilirliği ayrı şeylerdir ve burada yalnızca birincisi
+sağlanmaktadır.
+
 **Değerlendirme.** $\Sigma$, $v = c$ yüzeyidir ve laboratuvarda erişilebilir
 değildir. Dolayısıyla bu, prensipte var olan ama pratikte ölçülemeyen bir imzadır.
 
@@ -1283,7 +1318,71 @@ buradaki model reel kütleyi ve görelilik ilkesini korur, karşılığında ge�
 olmayan bir eşik alır. Hangi bedelin daha kabul edilebilir olduğu burada
 kararlaştırılmamıştır.
 
-**10. "Dejenere yüzeyden geçilemeyeceği gösterilmemiştir."** İtiraz haklıydı ve
+### 19.1 Çizgi elemanını koruyan permütasyonların sayımı
+
+[3]'ün sayımı kendi araçlarımızla doğrulanmıştır: dört koordinatın 24
+permütasyonundan **6**'sı Bölge I çizgi elemanını korur, **18**'i değiştirir, ve
+koruyanlar tam olarak zaman slotunu yerinde bırakanlardır. Sayım doğrudur ve
+kabul edilmektedir. $D$ bu on sekizin içindedir.
+
+Ayrım şuradadır: $D$ tek bir metriği korumaz, iki metrik arasındaki
+$D^T \eta' D = -\eta$ bağıntısını sağlar. İki taraf aritmetikte anlaşır,
+hangi bağıntının fiziksel olduğunda ayrılır.
+
+### 19.2 İkiye katlanmış uzayda komütatörün yok olması
+
+[22]'nin önerdiği onarım sayısal olarak sınanmıştır. Takyonik eşik üzerindeki
+modlar toplanarak tek bir sektörün komütatör fonksiyonu hesaplanır ve her
+ayrımda sıfırdan farklı çıkar; yıldızlı sektör ters işaretle eklendiğinde toplam
+**tam olarak** sıfırlanır. Her ayrımda komüte eden bir alan kanonik komütasyon
+bağıntılarını taşımaz. Onarım, engelleri kuantum dinamiğini kaldırarak
+kaldırmaktadır. Bölüm 14'ün üç engeli ayaktadır.
+
+### 19.3 Vakum Cherenkov sınırı
+
+Superluminal yayılımı sınırlayan çift ışıma mekanizması, $\delta = v^2/c^2 - 1$
+parametresi pozitif olduğunda işler. Bu modelde hiçbir uyarım $\delta > 0$ ile
+yayılmaz; grup hızı her zaman $c$'nin altında ya da ona eşittir. Dolayısıyla
+sınır bu modeli yalnızca boş biçimde kısıtlar. Bu bir üstünlük değil, öngörü
+yoksunluğunun bir başka görünümüdür.
+
+### 19.4 Fazladan zamanın tek zamana çökmesi
+
+[21]'in itirazı serbest hareket için doğrudur ve doğrulanmıştır: iki zamanlı
+serbest hareket, hız bileşenlerinin belirlediği **tek bir bileşime** bağlıdır,
+ikinci zaman bağımsız bir dinamik içerik taşımaz. Bu, sınanan bütün hız ve zaman
+değerlerinde tam olarak sağlanır.
+
+İtirazın karşılamadığı nokta şudur: Bölüm 7'deki iddia tek bir yörünge hakkında
+değil, Lagrangian'ın simetrisi hakkındadır. Üç zaman ekseninde $O(3)$ değişmezliği
+ve ondan çıkan üç korunan yük, tek bir serbest yörüngenin tek bileşime bağlı
+olmasıyla ortadan kalkmaz. Yine de itiraz kısmen isabetlidir ve tam olarak
+karşılanmamıştır.
+
+### 19.5 Duvarda hangi sınır koşulu seçilirse seçilsin
+
+[8]'in Dirichlet koşulu ile burada kullanılan Neumann koşulu arasındaki tercih
+sınanmıştır. Duvarda öz-eşlenikliği sağlayan koşullar tek parametreli bir Robin
+ailesi oluşturur,
+
+$$\cos(a)\,\psi + \sin(a)\,\psi' = 0$$
+
+ve $a = 0$ Dirichlet, $a = \pi/2$ Neumann koşuludur. Bu ailenin **her** üyesi
+için, sınanan bütün dalga sayılarında
+
+$$|R| = 1$$
+
+çıkar. Yani tam yansıma, hangi öz-eşlenik genişlemenin seçildiğine **duyarlı
+değildir**. Seçimin değiştirdiği tek şey yansıyan dalganın fazıdır; gözlenebilir
+bir fark aranacaksa orada aranmalıdır.
+
+Bu, Bölüm 9.1'deki sonucun üçüncü bağımsız desteğidir: akı korunumu tam yansımayı
+zorluyordu, Dirichlet ve Neumann aynı yere çıkıyordu, ve şimdi aradaki bütün
+koşullar da aynı yere çıkmaktadır.
+
+### 19.6 Kapatılamayan itiraz
+
+**"Dejenere yüzeyden geçilemeyeceği gösterilmemiştir."** İtiraz haklıydı ve
 Bölüm 13.5'te karşılanmıştır. Dejenerelik kaçınılmazdır, ancak rank-2 dejenerelik
 değildir: $(2,2)$ üzerinden giden kademeli bir yolda her noktada yalnızca tek bir
 öz-değer sıfırlanır, ki bu tam olarak [15], [16], [35], [37] ve [13]'ün
@@ -1345,7 +1444,8 @@ tek zamana çökmesi itirazı
 (Bölüm 7.3), imza değiştiren arka planda parçacık üretimi (Bölüm 16.2), eşik
 duvarlarının kuantum kararlılığı (Bölüm 9.1), bu modelin geçişinin de bir teoriden türetilip
 türetilemeyeceği (Bölüm 15.6), yerçekiminin ancak eklem koşulu düzeyinde ele
-alınmış olması (Bölüm 9.2), ve ölçülebilir bir öngörünün bulunmaması.
+alınmış olması (Bölüm 9.2), ve tek ayırt edici öngörünün (Bölüm 16.4)
+hazırlanamayan bir düzenek gerektirmesi.
 
 ---
 
