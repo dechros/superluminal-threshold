@@ -6,6 +6,7 @@
 #include "core/Report.h"
 #include "core/Section.h"
 #include "critique/AlternativeRoutes.h"
+#include "critique/LiteratureObjections.h"
 #include "critique/ObjectionTests.h"
 #include "critique/OpenQuestions.h"
 #include "critique/Reconciliation.h"
@@ -100,6 +101,7 @@ namespace
         sections.push_back(std::make_unique<slm::MaxwellSection>());
         sections.push_back(std::make_unique<slm::SylvesterObstruction>());
         sections.push_back(std::make_unique<slm::ObjectionTestsSection>());
+        sections.push_back(std::make_unique<slm::LiteratureObjectionsSection>());
         sections.push_back(std::make_unique<slm::AlternativeRoutesSection>());
         sections.push_back(std::make_unique<slm::ReconciliationSection>());
         sections.push_back(std::make_unique<slm::OpenQuestionsSection>());
