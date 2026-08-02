@@ -552,60 +552,6 @@ Buna karşılık [8] bir uyarı da içerir: kuantum alanların varlığı bu duv
 **kararsız** kılar, Kleinian bölge ya çöker ya sınırsız genişler. Burada bu
 soruya girilmemiştir ve açık bırakılmaktadır.
 
-### 9.4 Sonlu kalınlıkta bir dilim bir şeyler geçirir
-
-Bölüm 9.1 öte tarafı **sınırsız** kabul eder. Sonlu kalınlıkta bir dilim ayrı
-bir problemdir ve sonucu farklıdır.
-
-Bu ayrım [41]'de kurulmuştur ve o çalışma bu bölümün öncülüdür. Orada
-Klein-Gordon parçacıklarının Lorentzian imzadan Kleinian imzaya geçişi
-incelenir, düzlemsel bir sınırda parçacık akısı için **ayna davranışı** bulunur,
-ve ardından sonlu kalınlıkta bir çift eklem ele alınarak **tünelleme
-olasılığı** gösterilir. Dikkat çekici olan, oradaki geçişin
-$(-,+,+,+) \to (-,+,+,-)$ olması, yani Bölüm 13.5'teki kademeli yolun tam
-olarak birinci ayağıdır.
-
-Aynı hesap bu modelin değişkenleriyle yapıldığında şu çıkar. Dilimin dışında
-normal doğrultudaki dalga sayısı karesi daima pozitiftir; içeride ise işaret
-değiştiren yön yeterince dalga sayısı taşıdığında negatife döner, yani iç mod
-**yayılmaz, söner**. Bu durumda geçirgenlik
-
-$$T(d) = \left[1 + \frac{(\kappa^2+q^2)^2}{4\kappa^2 q^2}\,
-        \sinh^2(q d)\right]^{-1}$$
-
-olur. Hesaplanan değerler:
-
-| Kalınlık $d$ | $T$ |
-|--------------|-----|
-| $0{,}5$ | $5{,}50 \times 10^{-1}$ |
-| $1$ | $1{,}48 \times 10^{-1}$ |
-| $2$ | $6{,}70 \times 10^{-3}$ |
-| $4$ | $1{,}20 \times 10^{-5}$ |
-| $8$ | $3{,}87 \times 10^{-11}$ |
-
-**Sonuç ve Bölüm 9.1'in yeniden okunması.** Geçirgenlik hiçbir sonlu kalınlıkta
-sıfır değildir, ancak kalınlıkla üstel olarak bastırılır. Dolayısıyla Bölüm
-9.1'in tam yansıması ayrı bir ifade değil, bu ifadenin **kalın dilim limitidir**.
-Sıfır kalınlıkta her şey geçer, kalın dilimde hiçbir şey geçmez.
-
-Bir ikinci koşul daha vardır: iç modun sönümlü olması, gelen alanın mod
-içeriğine bağlıdır. İşaret değiştiren yön az dalga sayısı taşıyorsa iç mod
-yayılmaya devam eder ve geçirgenlik bastırılmak yerine **salınır**, rezonansta
-bire ulaşır. Yani engeli yaratan imza değişiminin kendisi değil, gelen alanın
-hangi modlardan oluştuğudur.
-
-Bu, Bölüm 9.1'in sonucunu geçersiz kılmaz ama kapsamını daraltır: eşiğin
-yansıtıcı olması, öte tarafın sınırsız olduğu ve gelen modun uygun içerikte
-olduğu durum için geçerlidir.
-
-[41] ayrıca bu geometrinin bir **analog gerçeklemesini** verir: anizotropik bir
-yarı iletken ile elektronik bir metamalzeme arasındaki eklemde elektron
-yayılımı, aynı denklemi sağlar. Bu, modelin sınanabilirliği açısından Bölüm
-16.4'te belirtilen çıkmaza bir alternatif sunar: $v = c$ yüzeyi hazırlanamaz,
-ancak aynı denklemi sağlayan bir malzeme ekleminde ayna davranışı ve tünelleme
-ölçülebilir. Bunun bu modelin bir sınaması sayılıp sayılamayacağı ayrı bir
-sorudur ve burada karara bağlanmamıştır.
-
 ### 9.2 Aynı seçimin yerçekimi tarafındaki görünümü
 
 Yukarıdaki tercih madde tarafında, konjuge momentum üzerinden yapıldı. Aynı
@@ -689,6 +635,60 @@ eğrinin teğetinin değil, alanın ve eklem koşulunun bir özelliğidir. Dolay
 Bu ayrım, Bölüm 7.4'te değinilen ilmek teoremiyle bu modelin eşik sonucunun aynı
 anda doğru olabilmesinin nedenidir: o teorem geometrik eğriler hakkındadır, buradaki
 sonuç alan akısı hakkındadır.
+
+### 9.4 Sonlu kalınlıkta bir dilim bir şeyler geçirir
+
+Bölüm 9.1 öte tarafı **sınırsız** kabul eder. Sonlu kalınlıkta bir dilim ayrı
+bir problemdir ve sonucu farklıdır.
+
+Bu ayrım [41]'de kurulmuştur ve o çalışma bu bölümün öncülüdür. Orada
+Klein-Gordon parçacıklarının Lorentzian imzadan Kleinian imzaya geçişi
+incelenir, düzlemsel bir sınırda parçacık akısı için **ayna davranışı** bulunur,
+ve ardından sonlu kalınlıkta bir çift eklem ele alınarak **tünelleme
+olasılığı** gösterilir. Dikkat çekici olan, oradaki geçişin
+$(-,+,+,+) \to (-,+,+,-)$ olması, yani Bölüm 13.5'teki kademeli yolun tam
+olarak birinci ayağıdır.
+
+Aynı hesap bu modelin değişkenleriyle yapıldığında şu çıkar. Dilimin dışında
+normal doğrultudaki dalga sayısı karesi daima pozitiftir; içeride ise işaret
+değiştiren yön yeterince dalga sayısı taşıdığında negatife döner, yani iç mod
+**yayılmaz, söner**. Bu durumda geçirgenlik
+
+$$T(d) = \left[1 + \frac{(\kappa^2+q^2)^2}{4\kappa^2 q^2}\,
+        \sinh^2(q d)\right]^{-1}$$
+
+olur. Hesaplanan değerler:
+
+| Kalınlık $d$ | $T$ |
+|--------------|-----|
+| $0{,}5$ | $5{,}50 \times 10^{-1}$ |
+| $1$ | $1{,}48 \times 10^{-1}$ |
+| $2$ | $6{,}70 \times 10^{-3}$ |
+| $4$ | $1{,}20 \times 10^{-5}$ |
+| $8$ | $3{,}87 \times 10^{-11}$ |
+
+**Sonuç ve Bölüm 9.1'in yeniden okunması.** Geçirgenlik hiçbir sonlu kalınlıkta
+sıfır değildir, ancak kalınlıkla üstel olarak bastırılır. Dolayısıyla Bölüm
+9.1'in tam yansıması ayrı bir ifade değil, bu ifadenin **kalın dilim limitidir**.
+Sıfır kalınlıkta her şey geçer, kalın dilimde hiçbir şey geçmez.
+
+Bir ikinci koşul daha vardır: iç modun sönümlü olması, gelen alanın mod
+içeriğine bağlıdır. İşaret değiştiren yön az dalga sayısı taşıyorsa iç mod
+yayılmaya devam eder ve geçirgenlik bastırılmak yerine **salınır**, rezonansta
+bire ulaşır. Yani engeli yaratan imza değişiminin kendisi değil, gelen alanın
+hangi modlardan oluştuğudur.
+
+Bu, Bölüm 9.1'in sonucunu geçersiz kılmaz ama kapsamını daraltır: eşiğin
+yansıtıcı olması, öte tarafın sınırsız olduğu ve gelen modun uygun içerikte
+olduğu durum için geçerlidir.
+
+[41] ayrıca bu geometrinin bir **analog gerçeklemesini** verir: anizotropik bir
+yarı iletken ile elektronik bir metamalzeme arasındaki eklemde elektron
+yayılımı, aynı denklemi sağlar. Bu, modelin sınanabilirliği açısından Bölüm
+16.4'te belirtilen çıkmaza bir alternatif sunar: $v = c$ yüzeyi hazırlanamaz,
+ancak aynı denklemi sağlayan bir malzeme ekleminde ayna davranışı ve tünelleme
+ölçülebilir. Bunun bu modelin bir sınaması sayılıp sayılamayacağı ayrı bir
+sorudur ve burada karara bağlanmamıştır.
 
 ---
 
