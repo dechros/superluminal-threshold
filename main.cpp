@@ -11,6 +11,7 @@
 #include "field/TimeOrientation.h"
 #include "horizon/BlackHoleHorizon.h"
 #include "horizon/DegeneratePath.h"
+#include "horizon/SurfaceLayer.h"
 #include "literature/LiteraturePosition.h"
 #include "quantum/CanonicalQuantization.h"
 #include "quantum/PathIntegral.h"
@@ -39,6 +40,7 @@ namespace
         sections.push_back(std::make_unique<slm::SuperluminalRest>());
         sections.push_back(std::make_unique<slm::ThresholdSurface>());
         sections.push_back(std::make_unique<slm::JunctionScattering>());
+        sections.push_back(std::make_unique<slm::SurfaceLayerSection>());
         sections.push_back(std::make_unique<slm::SphericalSolution>());
         sections.push_back(std::make_unique<slm::MaxwellSection>());
         sections.push_back(std::make_unique<slm::LiteraturePosition>());

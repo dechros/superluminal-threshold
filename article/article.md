@@ -515,6 +515,53 @@ Buna karşılık [8] bir uyarı da içerir: kuantum alanların varlığı bu duv
 **kararsız** kılar, Kleinian bölge ya çöker ya sınırsız genişler. Burada bu
 soruya girilmemiştir ve açık bırakılmaktadır.
 
+### 9.2 Aynı seçimin yerçekimi tarafındaki görünümü
+
+Yukarıdaki tercih madde tarafında, konjuge momentum üzerinden yapıldı. Aynı
+tercih geometri tarafında geçiş yüzeyinin **dış eğriliği** üzerinde bir koşul
+olarak yeniden ortaya çıkar: güçlü koşul onun yüzeyde sıfırlanmasını, zayıf
+koşul yalnızca sürekli olmasını ister [6]. [9]'un genelleştirilmiş Lanczos
+denklemine göre gerilim tensöründe dağılımsal bir terim, yani bir **yüzey
+katmanı**, tam olarak dış eğrilik sürekli olduğunda yoktur.
+
+Bunu somutlaştırmak için Bölüm 13.5'in ilk ayağı bir koordinatın fonksiyonu
+yapılır:
+
+$$g(\xi) = \mathrm{diag}\big(1,\, -\cos\lambda(\xi),\, -1,\, -1\big),
+  \qquad \xi \in [-1, 1]$$
+
+İmza, $\lambda$'nın $\pi/2$'yi geçtiği yerde değişir. Sabit $\xi$ yüzeylerinin
+dış eğriliğinin tek önemsiz bileşeni
+
+$$K = \tfrac{1}{2}\,\frac{d g_{11}}{d\xi}
+    = \tfrac{1}{2}\,\lambda'(\xi)\,\sin\lambda(\xi)$$
+
+olur ve geçiş noktasında $\sin\lambda = 1$ olduğundan orada
+$K = \lambda'/2$'ye indirgenir. Üç profil karşılaştırılmıştır:
+
+| Profil | Geçişte $K$ | Güçlü koşul | Zayıf koşul |
+|--------|-------------|-------------|-------------|
+| Doğrusal, $\lambda = \pi(\xi+1)/2$ | $0{,}785$ | Sağlanmıyor | Sağlanıyor |
+| $\tanh$ basamağı | $2{,}368$ | Sağlanmıyor | Sağlanıyor |
+| $\lambda = \pi/2 + (\pi/2)\sin^3(\pi\xi/2)$ | $0$ | **Sağlanıyor** | Sağlanıyor |
+
+**Sonuç.** Güçlü koşul, ulaşılan metrik hakkında değil, ona **nasıl
+yaklaşıldığı** hakkında bir kısıttır: geçiş profilinin tam o noktada durağan
+olmasını ister. Doğrusal ya da $\tanh$ tipi bir geçiş bunu sağlamaz;
+$\tanh$ en kötüsüdür, çünkü en dik olduğu yer tam geçiş noktasıdır.
+
+Üç profilin hiçbirinde yüzey katmanı doğmaz, çünkü dış eğrilik her üçünde de
+süreklidir. Yani Bölüm 9.1'deki ayrım, gerilim tensöründe dağılımsal bir terim
+olup olmaması meselesi değildir; profilin geçişe teğet gelip gelmediği
+meselesidir.
+
+Bu, modelin yerçekimi tarafına atılmış ilk adımdır ve sınırlıdır: Einstein
+denklemleri çözülmemiş, yalnızca eklem koşulunun geometrik karşılığı
+hesaplanmıştır. [9] ve [11]'in uyarısı burada da geçerlidir, imza değişiminde
+kanonik bir alan denklemi kümesi yoktur ve hangi kuruluşun kullanıldığı
+belirtilmek zorundadır; burada kullanılan, dış eğriliğin süreksizliğini gerilim
+tensörünün dağılımsal terimine bağlayan [9] kuruluşudur.
+
 ---
 
 ## 10. Küresel simetrik çözüm
