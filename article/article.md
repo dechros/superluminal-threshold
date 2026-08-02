@@ -21,7 +21,7 @@ yeniden kurulacak.
 
 ---
 
-# Bölüm I. Kuruluş
+# Kısım I. Bizim evrenimiz nedir
 
 ## 1. İki bölge, metrikleri ve gösterim
 
@@ -62,7 +62,6 @@ $$M(V)^T \eta' M(V) = -\eta$$
 sağlanır: çarpanlama geçerlidir ve imza değişimi bütünüyle $D$'nin üzerindedir.
 
 ---
-
 
 $$D = \begin{pmatrix} 0&0&0&1 \\ 0&0&1&0 \\ 0&1&0&0 \\ 1&0&0&0 \end{pmatrix}
 \qquad\text{yani}\qquad (ct, x, y, z) \longmapsto (z, y, x, ct)$$
@@ -107,7 +106,6 @@ geçtikleri için ayrı fiziksel içerik taşımazlar.
 
 ---
 
-
 Doğrulanan iki olgu:
 
 - $D^2 = I$, dolayısıyla $\langle D \rangle = \mathbb{Z}_2$, **kapalı**.
@@ -149,139 +147,145 @@ ortaya konmaz, çünkü orada zaten kapalı bir grup inşa edilmiştir.
 
 ---
 
-## 3. Parçacık nedir: iki katmanlı model
+# Kısım II. Ara bölge nedir
 
-Bu çalışmanın konusu kütleli bir parçacığın eşiği geçmesi, öte tarafta bir süre
-bulunması ve geri dönmesidir. Dolayısıyla "parçacık" sözcüğünün ne anlama
-geldiği bir ayrıntı değil, bütün hesabın dayanağıdır ve önce sabitlenmelidir.
+## 3. Ara bölge nedir: dört tip, beş kalınlık
 
-Sabitlemek zorunludur, çünkü Bölge II'de parçacık kavramı olağan anlamıyla
-mevcut değildir. Bölüm 11'de gösterildiği gibi orada pozitif ile negatif frekans
-ayrımı, Hamiltonyenin alttan sınırlı olması ve Poincaré grubunun üniter temsili,
-yani parçacık kavramının dayandığı üç yapının üçü de yoktur. Bölge I'de doğal
-görünen bir tanımı öte tarafa taşımak bu yüzden serbest değildir.
+Önceki iki bölüm iki bölgeyi tarif etti. Aralarında ne olduğu ayrı bir sorudur ve
+bu çalışmada onu bir yüzey değil, kendi başına bir **bölge** olarak ele alıyoruz.
+Nedeni şudur: geçişin nasıl olacağını belirleyen şey iki uçtaki metrikler değil,
+aralarındaki bölgenin karakteridir.
 
-Burada benimsenen çözüm, tek bir tanım aramak yerine **iki okumayı birlikte
-yürütmektir**. Bu, yalnızca bu bölümün değil, metnin tamamının yöntemidir:
-parçacık hakkında bir şey söyleyen her bölüm, söylediğini iki kez söyler.
+Soru iki bağımsız eksene ayrılır ve biri diğerini belirlemez:
 
-**Dalga okuması.** Parçacık, kütleli reel skaler alanın dar bir mod demetidir.
-Enine dalga sayısı üzerinde Gauss ağırlıklı bir paket alınır,
+- **Ara bölge neyden yapılmıştır?** Yani hangi imzayı taşır.
+- **Ne kadar kalındır?** Sıfır kalınlıktan sınırsıza.
 
-$$A(k) = \exp\!\left[-\frac{(k - k_0)^2}{2\sigma^2}\right]$$
+Bu çalışma hiçbir tipi baştan seçmez. Dört tip ve beş kalınlık için hesap ayrı
+ayrı yapılır ve sonuçlar yan yana konur. Hangi tipin doğru olduğu bu modelin
+içinden çıkmaz; çıkan şey, her tipin neye yol açtığıdır.
 
-ve fiziksel yoğunluk bu genliğin karesidir. Yoğunluğun genişliği bu nedenle
-genliğinkinden $\sqrt{2}$ kat dardır; aşağıdaki bütün nicelikler yoğunluk
-üzerinden tanımlanır. Eşikten geçiş Bölüm 6'da mod diliyle kurulduğu için,
-geçişle ilgili her nicelik bu okumada doğrudan hesaplanabilir.
+### 3.1 Dört aday
 
-**Parçacık okuması.** Parçacık, konumu, momentumu ve bir yörüngesi olan bir
-cisimdir. Bu okumada sorular "nereye gitti", "ne zaman döndü", "hangi yönelimi
-kazandı" biçimindedir ve cevapları tek tek sayılardır.
+**Ara bölge yok.** İki bölge doğrudan birbirine değer, aralarında yalnızca bir
+yüzey vardır. Bölüm 7'de gösterildiği gibi bu yüzeyde rank iki düşer.
 
-İki okuma birbirinin sadeleştirilmiş hâli değildir; ikisi de kendi içinde
-eksiksizdir ve metin boyunca yan yana yürütülür. Uyuştukları yerde uyuşmalarının
-nedeni yazılır. Ayrıldıkları yerde ayrılma **gizlenmez, sonuç olarak kaydedilir**;
-çünkü bu modelde ikisinin ayrıldığı yerler tam olarak öte tarafın kendine özgü
-davrandığı yerlerdir.
+**Kleinian, $(2,2)$.** İki zaman ve iki uzay taşıyan bir ara bölge. Enine
+yönlerden yalnızca biri karakter değiştirmiştir. Bölüm 7'deki kademeli yolun
+durağıdır ve her ayakta rank yalnızca bir düşer.
 
-Aralarındaki bağ, aşağıda kurulan sözlüktür, ve bu sözlüğün nerede geçerli olduğu
-hesaplanabilir bir sorudur.
+**Öklid, $(4,0)$.** Bütün enine yönler karakter değiştirmiştir; bölgede zaman
+yönü kalmamıştır. İmza değişimi literatürünün büyük bölümünün ele aldığı geçiş
+budur.
 
-### 3.1 Sözlük
+**Dejenere katman.** Metriğin tersinin bulunmadığı bir tabaka. Diğer üçünden
+farklı olarak burada bir imza yoktur, yayılım operatörünün kendisi tanımsızdır.
 
-| Nokta cisim dili | Dalga paketi karşılığı |
-|------------------|------------------------|
-| Konum | Yoğunluğun birinci momenti |
-| Momentum | Ortalama dalga sayısı $\langle k \rangle$ |
-| Parçacığın var olması | Paketin toplam ağırlığı |
-| Parçacığın tekliği | Paketin dar olması, $\sigma \ll k_0$ |
-| Parçacığın aynı parçacık kalması | Momentlerin geçiş boyunca korunması |
+### 3.2 İçerideki mod ne yapıyor
 
-Son satır belirleyicidir ve bu bölümün asıl sonucu oradan çıkar.
+Enine dalga sayısının yönler arasında eşit paylaşıldığı durumda, ara bölge
+içindeki normal dalga sayısının karesi
 
-### 3.2 Eşik paketi yeniden ağırlıklandırır
+$$q_{\text{iç}}^2 = c^2\left(\frac{3 - 2n}{3}\,k_T^2 + \mu\right)$$
 
-Bölüm 6'nın sonucu, geçirgenliğin moda bağlı olmasıdır. Bir paket birçok moddan
-oluştuğuna göre, eşik paketin bazı bileşenlerini diğerlerinden daha çok geçirir.
-Geçen şey, gelenin sönümlenmiş bir kopyası değil, **başka bir dağılımdır**.
+olur; burada $n$ karakter değiştiren enine yön sayısıdır. Sonuçlar niteliksel
+olarak birbirinden ayrılır:
 
-Geçen ağırlık oranı hesaplanmıştır. $\mu = 1$, dilim kalınlığı $d = 1$ ve paket
-merkezi $k_0 = 2$ için:
+| Tip | $n$ | İç mod | Koşul |
+|-----|-----|--------|-------|
+| Yok | $0$ | Yayılır | Her zaman |
+| Kleinian | $1$ | Yayılır | Her zaman, bu paylaşımda |
+| Öklid | $3$ | Söner | $k_T^2 > \mu$ olduğunda |
+| Dejenere | - | Yayılamaz | Her zaman |
 
-| Paket genişliği $\sigma$ | Geçen ağırlık oranı |
-|--------------------------|---------------------|
-| $0{,}1$ | $0{,}638$ |
-| $0{,}4$ | $0{,}634$ |
-| $1{,}0$ | $0{,}618$ |
+Kleinian bölgenin kendi başına bir engel **olmaması** dikkate değerdir: iki
+zamanlı bir bölge, madde için otomatik olarak kapalı değildir.
 
-Geçen oran her durumda sıfır ile bir arasındadır: paket ne tamamen yansır ne
-tamamen geçer.
+### 3.3 Geçirgenlik tablosu
 
-Asıl etki oranda değil, dağılımın kaymasındadır. Ağırlık merkezinin kayması,
-paketin kendi genişliği birimiyle ölçülmüştür:
+$\mu = 1$, $k_T^2 = 4$ için dört tip ve beş kalınlıkta hesaplanan geçirgenlik:
 
-| Paket genişliği $\sigma$ | Merkez kayması (genişlik birimiyle) |
-|--------------------------|--------------------------------------|
-| $1{,}0$ | $0{,}413$ |
-| $0{,}5$ | $0{,}256$ |
-| $0{,}25$ | $0{,}138$ |
-| $0{,}125$ | $0{,}071$ |
+| Tip | $d = 0$ | $d = 0{,}1$ | $d = 1$ | $d = 4$ | $d = 40$ |
+|-----|---------|-------------|---------|---------|----------|
+| Yok | $1$ | $1$ | $1$ | $1$ | $1$ |
+| Kleinian | $1$ | $0{,}996$ | $0{,}868$ | $0{,}996$ | $0{,}871$ |
+| Öklid | $1$ | $0{,}969$ | $0{,}111$ | $3{,}6\times10^{-6}$ | $2{,}5\times10^{-60}$ |
+| Dejenere | $1$ | $0$ | $0$ | $0$ | $0$ |
 
-Kayma daima pozitiftir, yani büyük dalga sayısına doğrudur; çünkü dilim orada
-daha geçirgendir. Geniş bir paket için kayma kendi genişliğinin yarısına
-yaklaşır, ki bu paketin kimliğini yitirmesi demektir.
+Tablodan üç sonuç doğrudan okunur.
 
-### 3.3 Nokta cisim katmanı ne zaman meşrudur
+**Sıfır kalınlıkta tip önemsizdir.** Dört satır da bir verir. Kalınlığı olmayan
+bir ara bölge, neyden yapıldığından bağımsız olarak her şeyi geçirir. Ara
+bölgenin tipi ancak kalınlığı varsa fizik taşır.
 
-Tablodaki kayma, paket genişliğiyle **doğru orantılıdır**: genişlik yarıya
-indiğinde kayma da yarıya iner. Bu, sayısal olarak ardışık genişliklerde
-doğrulanmıştır.
+**Öklid bölge kalınlıkla üstel olarak kapanır.** Dört birim kalınlıkta
+geçirgenlik milyonda üçe iner. Yeterince kalın bir Öklid bölge, dejenere
+katmandan ayırt edilemez.
 
-Orantının sonucu şudur: kaymanın bir alt sınırı yoktur. Yeterince dar bir paket
-için merkez kayması istenildiği kadar küçüktür.
+**Kleinian bölge hiçbir kalınlıkta kapanmaz, ama salınır.** Geçirgenlik kalınlıkla
+tekdüze azalmaz; artıp azalır. İç mod yayıldığı için bölge bir engel değil, bir
+**girişim odası** gibi davranır. Kırk birim kalınlıkta bile geçirgenlik yüzde
+seksen yediye yakındır.
 
-> Nokta cisim dili yaklaşık bir kolaylık değil, dar paket limitinde **tam**
-> geçerlidir. Geçen cisim, giden cismin aynısıdır; yalnızca paket dar tutulduğu
-> sürece.
+### 3.4 Eşiğin taşıdığı madde katmanı
 
-Bu, bütün gidiş dönüş anlatısının dayandığı meşruiyet belgesidir. Paket dar
-tutulmadığı sürece "parçacık gitti ve geri döndü" cümlesi anlamlı değildir,
-çünkü dönen şey gidenden farklı bir mod dağılımıdır.
+Geçirgenlik hikâyenin yarısıdır. Diğer yarısı, geçişin yüzeyde bıraktığı izdir.
 
-### 3.4 Dar paketin de ödediği bedel
+Zayıf eklem koşulu seçildiğinde geçiş yüzeyinde dış eğrilik sıfırlanmaz, ve
+sıfırlanmayan bir dış eğrilik gerilim tensöründe dağılımsal bir terime, yani bir
+**madde katmanına** karşılık gelir. Bu, zayıf koşulun bedelidir ve gizlenmemesi
+gerekir: geçişe izin veren seçim, aynı zamanda yüzeye bir madde katmanı koyan
+seçimdir.
 
-Dar paket limiti merkezi korur, ama her şeyi korumaz. İki bedel kalır.
+Katmanın gücü, imzanın döndüğü mesafeyle ters orantılıdır. Hesaplanan değerler:
 
-Birincisi, geçen ağırlık oranı hiçbir zaman bire ulaşmaz. Dar bir paket için de
-geçen oran birden küçüktür: dönen cisim, gidenden **daha soluktur**. Bu bir
-konum ya da momentum kaybı değil, varlık ağırlığının kaybıdır ve Bölüm 16'daki
-bilgi muhasebesinin ilk kalemidir.
+| Tip | $d = 0{,}1$ | $d = 1$ | $d = 4$ |
+|-----|-------------|---------|---------|
+| Kleinian | $10{,}0$ | $1{,}0$ | $0{,}25$ |
+| Öklid | $30{,}0$ | $3{,}0$ | $0{,}75$ |
 
-İkincisi, paketin genişliği de değişir, dar limitte kendi büyüklüğünün binde
-biri mertebesinde. Merkez kadar temiz korunmaz, ancak merkeze göre ikinci
-mertebeden küçüktür.
+Kalınlık on kat arttığında katman gücü on kata iner. Sıfır kalınlık limitinde
+katman sınırsız büyür.
 
-Bu iki bedel, Bölüm 14'te mod içeriği karşılaştırmasının ölçeceği niceliklerdir.
+**Buradan çıkan gerilim.** İki eğilim birbirine terstir:
 
-### 3.5 Bu tanımın sınırları
+- Ara bölge inceldikçe geçiş kolaylaşır, ama madde katmanı sertleşir.
+- Ara bölge kalınlaştıkça katman yumuşar, ama çoğu tip kapanır.
 
-Üç çekince açıkça kaydedilmelidir.
+Onaltı hücrelik tabloda bu iki isteği aynı anda karşılayan tek hücre **kalın
+Kleinian** bölgedir: geçirgenliği yüksek kalır ve katman gücü kalınlıkla düşer.
+Bu bir seçim değil, tablonun kendisinden çıkan bir elemedir. Yine de bu çalışma
+diğer üç tipi kapatmaz; sonraki bölümlerde gidiş dönüş hesabı dört tip için de
+ayrı ayrı yürütülür.
 
-Paket burada tek bir enine dalga sayısı değişkeni üzerinde alınmıştır. Gerçek bir
-üç boyutlu paket için aynı hesap üç değişkende yapılmalıdır; sonucun niteliksel
-olarak değişmesi beklenmez, ancak gösterilmemiştir.
+### 3.5 Katmandan tümüyle kaçınmanın tek yolu
 
-Hesap doğrusaldır ve alanın kendisiyle etkileşimi yoktur. Etkileşen bir alanda
-paketin geçiş sırasında dağılması ayrı bir olgudur.
+Bölüm 4.2'de üç geçiş profili karşılaştırılmıştır. Katmanın sıfırlanması, ancak
+geçiş profilinin tam dönüm noktasında **durağan** olmasıyla mümkündür. Doğrusal
+ya da $\tanh$ tipi bir profil bunu sağlamaz.
 
-Nokta cisim katmanı Bölge I'de tanımlıdır. Bölge II'de "konum" kavramı tek bir
-uzay ekseni olan $r$ üzerinde daralır ve üç zaman yönü boyunca karşılığı yoktur.
-Öte tarafta parçacığın nerede olduğu sorusu bu nedenle Bölüm 9'a bırakılmıştır.
+Dolayısıyla madde katmanı taşımayan bir geçiş vardır, ancak ince ayarlanmış bir
+profil gerektirir. Sıradan bir profil için katman kaçınılmazdır. Modelin duruşu
+şudur: katman genel durumda vardır, gücü kalınlıkla azalır, ve yalnızca özel bir
+profilde tümüyle kaybolur.
+
+### 3.6 Çekinceler
+
+Üç varsayım açıkça kaydedilmelidir.
+
+Yukarıdaki tablo, enine dalga sayısının yönler arasında eşit paylaşıldığını
+varsayar. Parçacık dalga sayısının çoğunu tam da karakter değiştiren yönde
+taşıyorsa Kleinian bölge de kapanır. Kleinian bölgenin açık olması bu nedenle
+mutlak değil, **mod içeriğine bağlıdır**; bu, Bölüm 12'deki mod filtresi
+sonucunun aynı olgunun başka bir yüzüdür.
+
+Dejenere katman, içeride hiçbir modun yayılamayacağı biçiminde modellenmiştir.
+Gerçek bir dejenere metrik hesabı daha incedir ve tam sıfır vermeyebilir.
+
+Madde katmanının gücü, imza dönüşünün dik eğimi üzerinden bir vekil ölçüyle
+alınmıştır. Tam gerilim tensörü hesaplanmamıştır.
 
 ---
-
-# Bölüm II. Gidiş
 
 ## 4. Eşik yüzeyi ve eklem koşulu seçimi
 
@@ -568,7 +572,6 @@ sağlanmaz" ifadesi ise **doğru değildir** ve geri çekilmektedir.
 
 ---
 
-
 ### 7.1 Kara delik ufkuyla karşılaştırma
 
 Schwarzschild metriğinde ufkun içinde $dt^2$ ve $dr^2$ terimlerinin işaretleri yer
@@ -635,7 +638,7 @@ Aralarında sürekli köprü kurmak dejenere bir nokta gerektirir; ancak bu nokt
 ne kadar kötü olduğu Bölüm 13.5'te hesaplanmıştır ve sanıldığı kadar kötü
 değildir.
 
-# Bölüm III. Karşı taraf
+# Kısım III. Karşı taraf nedir
 
 ## 8. Orada zaman ve mekân, ve yolculuğun tanımı
 
@@ -803,7 +806,6 @@ tarafta aynıdır: $\kappa \to 0$'da sıfır, $\kappa \to \infty$'da $c$.
 
 ---
 
-
 Durgun superluminal dört-momentum $p' = (mc\,\mathbf{s},\, 0)$ biçimindedir ve her
 $\mathbf{s}$ seçimi ayrı bir dünya çizgisi demeti veriyormuş gibi görünür.
 
@@ -831,7 +833,6 @@ olgudur. Buradaki katkı mekanizma değil, mekanizmanın bu modeldeki durgunluk
 sorusuna uygulanmasıdır.
 
 ---
-
 
 Genel hareket denklemi küresel simetriye indirgendiğinde
 
@@ -884,112 +885,7 @@ hıza ulaşır; ötesinde tanımsızdır.
 
 ---
 
-## 10. Orada madde, enerji ve öngörü
-
-$D$ dört-momentuma uygulandığında:
-
-$$(E/c,\; p_x,\; p_y,\; p_z) \longmapsto (p_z,\; p_y,\; p_x,\; E/c)$$
-
-Öte tarafta enerji üç bileşenli, momentum tek bileşenlidir. Değişmez de
-koordinatlardaki davranışla tutarlı biçimde işaret çevirir:
-
-$$\frac{E^2}{c^2} - p^2 \;\longmapsto\; -\left(\frac{E^2}{c^2} - p^2\right)$$
-
-Kütle kabuğu koşulu buna göre dönüşür:
-
-$$E^2 = p^2c^2 + m^2c^4 \;\longmapsto\; E'^2 = p'^2c^2 - m^2c^4$$
-
-**Korunum.** Genel bir $2 \to 2$ çarpışmada bizim tarafta korunum sağlanıyorsa öte
-tarafta da otomatik sağlanır; fark tam olarak sıfırdır. Bunun nedeni $D$'nin
-doğrusal olmasıdır: toplamların görüntüsü, görüntülerin toplamına eşittir.
-
-**Karışık çarpışma.** Duran bir subluminal cisim ile sonsuz hızlı bir takyon
-çarpıştığında cisim momentum kazanır, enerjisi değişmez. Başlangıç durumu
-$(E_1, p_1) = (mc^2, 0)$ ve $(E_2, p_2) = (0, Mc)$ alınır; çarpışma sonrasında
-takyon yine sonsuz hızlıdır ($E_4 = 0$) ve momentumu $M'c$ olur.
-
-**Sonsuz hız limiti.** $V \to \infty$ iken $E \to 0$ ve $p \to mc$.
-
-**Enerji pozitifliği üzerine not.** Bizim tarafta enerji tek bir sayıdır ve işareti
-bellidir. Öte tarafta "enerji" üç bileşenli bir vektördür; tek bir pozitif enerji
-koşulu yazılamaz, ancak büyüklüğü
-
-$$|E'| = \sqrt{E_1^2 + E_2^2 + E_3^2} \;\geq\; 0$$
-
-kullanılabilir. Bu gözlem, Bölüm 14'teki "kararlı vakum yok" sonucunun klasik
-habercisidir. Aynı sorun, superluminal boost sonrası parçacıkların negatif enerji
-kazanması biçiminde [32]'de ele alınmış ve kuantum referans çerçeveleri
-genişletilerek çözülmüştür; oradaki çözüm ile buradaki vektör-enerji okuması
-birbirine alternatiftir.
-
----
-
-
-Bizim taraf (Klein-Gordon):
-
-$$L = \tfrac{1}{2}\left[\frac{(\partial_t \phi)^2}{c^2} - (\nabla \phi)^2 - \mu \phi^2\right]$$
-
-Euler-Lagrange:
-
-$$\frac{1}{c^2}\partial_t^2 \phi - \nabla^2 \phi + \mu \phi = 0$$
-
-$D$ uygulanmış hali:
-
-$$L' = \tfrac{1}{2}\left[(\partial_{t_1}\psi)^2 + (\partial_{t_2}\psi)^2
-      + (\partial_{t_3}\psi)^2 - \frac{(\partial_r \psi)^2}{c^2} + \mu \psi^2\right]$$
-
-Euler-Lagrange:
-
-$$\left(\partial_{t_1}^2 + \partial_{t_2}^2 + \partial_{t_3}^2\right)\psi
-  - \frac{1}{c^2}\partial_r^2 \psi - \mu \psi = 0$$
-
-İki denklem $D$ ile birbirine geçer; Klein-Gordon operatörü işaret çevirerek
-dönüşür: $\Box \to -\Box'$.
-
-### 6.1 Determinizm kaybı denklem tipinden çıkar
-
-| | Bölge I | Bölge II |
-|---|---------|----------|
-| İmza | 1 zaman + 3 uzay | 3 zaman + 1 uzay |
-| Başlangıç değer problemi | İyi konumlanmış | Hadamard anlamında kötü konumlanmış |
-| Sonuç | Determinist | Öngörü çöker |
-
-Sayısal gösterim: bir modu Bölge I'de $e^{i k \cdot x} f(t)$ biçiminde alırsak
-
-$$\partial_t^2 f = -c^2(k^2 + \mu)\, f$$
-
-elde edilir; katsayı **her zaman negatiftir**, dolayısıyla çözüm salınımlıdır ve
-büyüme sınırlıdır. Bölge II'de aynı modu $e^{i(k_2 t_2 + k_3 t_3 + q r)} f(t_1)$
-biçiminde alırsak
-
-$$\partial_{t_1}^2 f = \left(k_2^2 + k_3^2 - \frac{q^2}{c^2} + \mu\right) f$$
-
-elde edilir; bu katsayı **pozitif olabilir** ve $k_2, k_3 \to \infty$ iken sınırsız
-büyür. Çözüm $\exp\!\big(\sqrt{\text{katsayı}}\; t_1\big)$ tipinde patlar. Başlangıç
-verisindeki keyfi küçük bir bozulma, keyfi büyük bir çözüm değişimi verir: problem
-Hadamard anlamında kötü konumlanmıştır.
-
-Bu sonuç bir yorum değil, denklem tipinin doğrudan sonucudur.
-
-**Öncelik ve yöntem.** Bu sonucun kesin hâli [7]'ye aittir ve yöntemi
-buradakinden farklıdır. Orada iki boyutlu bir imza-değişen uzay-zamanda sınır
-koşulları Schrödinger Hamiltonyeninin öz-eşlenik genişlemelerinden çıkarılır,
-alanın sürekli olması ve koşulların eklem koşulu biçiminde olması talebi tek bir
-küme seçer, Klein-Gordon başlangıç değer problemi bu kümede kötü konumlanmış
-bulunur, ve değişim yüzeyinden uzakta düzgün ve tıkız destekli başlangıç verisi
-için çözümün $L^2$ normunun **sonlu zamanda ıraksadığı** ispatlanır. Yukarıdaki
-mod hesabı aynı sonuca çok daha basit bir yoldan varır ve bir ispat değil,
-bağımsız bir doğrulamadır.
-
----
-
-### 10.5 Eşik bir mod filtresidir
-
-[YAZILACAK] Hesap yapıldı ve C++ tarafında 6.2 olarak duruyor: karşı tarafın denklemini sağlayan bir modun büyüme katsayısı tam olarak -k1 karedir, dolayısıyla asla pozitif değildir. Eşikten geçerek gelen her mod bu denklemi sağladığı için patlayan mod enjekte edilemez. Sınırdaki k1 = 0 modları marjinaldir ve doğrusal büyür; bu ayrıca ele alınacak.
-
----
-
-## 11. Orada gözlem
+## 10. Orada gözlem
 
 Bölge II'de kanonik yapı çalışmaz. Üç ayrı engel vardır ve üçü de aynı köke bağlıdır.
 
@@ -1049,7 +945,6 @@ $$Z = \int \mathcal{D}[\psi]\; e^{\,i S'[\psi]/\hbar},
 Cauchy yüzeyi gerektirmediği için tanımlıdır.
 
 ---
-
 
 ### 15.1 Wick dönüşü zorunlu bir seçim veriyor
 
@@ -1146,7 +1041,6 @@ Bölüm 21'de öyle listelenmiştir.
 İki bölge ayrı yapılar değil, tek bir yapının iki dalıdır.
 
 ---
-
 
 ### 16.1 Parçacık kavramı neden tanımsız
 
@@ -1266,44 +1160,337 @@ değildir. Dolayısıyla bu, prensipte var olan ama pratikte ölçülemeyen bir 
 
 ---
 
-# Bölüm IV. Dönüş
+# Kısım IV. Madde: burada, arada, orada
 
-## 12. İkinci geçiş ve iki yüzeyin eşleşmesi
+## 11. Parçacık nedir: dalga okuması ve parçacık okuması
+
+Bu çalışmanın konusu kütleli bir parçacığın eşiği geçmesi, öte tarafta bir süre
+bulunması ve geri dönmesidir. Dolayısıyla "parçacık" sözcüğünün ne anlama
+geldiği bir ayrıntı değil, bütün hesabın dayanağıdır ve önce sabitlenmelidir.
+
+Sabitlemek zorunludur, çünkü Bölge II'de parçacık kavramı olağan anlamıyla
+mevcut değildir. Bölüm 11'de gösterildiği gibi orada pozitif ile negatif frekans
+ayrımı, Hamiltonyenin alttan sınırlı olması ve Poincaré grubunun üniter temsili,
+yani parçacık kavramının dayandığı üç yapının üçü de yoktur. Bölge I'de doğal
+görünen bir tanımı öte tarafa taşımak bu yüzden serbest değildir.
+
+Burada benimsenen çözüm, tek bir tanım aramak yerine **iki okumayı birlikte
+yürütmektir**. Bu, yalnızca bu bölümün değil, metnin tamamının yöntemidir:
+parçacık hakkında bir şey söyleyen her bölüm, söylediğini iki kez söyler.
+
+**Dalga okuması.** Parçacık, kütleli reel skaler alanın dar bir mod demetidir.
+Enine dalga sayısı üzerinde Gauss ağırlıklı bir paket alınır,
+
+$$A(k) = \exp\!\left[-\frac{(k - k_0)^2}{2\sigma^2}\right]$$
+
+ve fiziksel yoğunluk bu genliğin karesidir. Yoğunluğun genişliği bu nedenle
+genliğinkinden $\sqrt{2}$ kat dardır; aşağıdaki bütün nicelikler yoğunluk
+üzerinden tanımlanır. Eşikten geçiş Bölüm 6'da mod diliyle kurulduğu için,
+geçişle ilgili her nicelik bu okumada doğrudan hesaplanabilir.
+
+**Parçacık okuması.** Parçacık, konumu, momentumu ve bir yörüngesi olan bir
+cisimdir. Bu okumada sorular "nereye gitti", "ne zaman döndü", "hangi yönelimi
+kazandı" biçimindedir ve cevapları tek tek sayılardır.
+
+İki okuma birbirinin sadeleştirilmiş hâli değildir; ikisi de kendi içinde
+eksiksizdir ve metin boyunca yan yana yürütülür. Uyuştukları yerde uyuşmalarının
+nedeni yazılır. Ayrıldıkları yerde ayrılma **gizlenmez, sonuç olarak kaydedilir**;
+çünkü bu modelde ikisinin ayrıldığı yerler tam olarak öte tarafın kendine özgü
+davrandığı yerlerdir.
+
+Aralarındaki bağ, aşağıda kurulan sözlüktür, ve bu sözlüğün nerede geçerli olduğu
+hesaplanabilir bir sorudur.
+
+### 3.1 Sözlük
+
+| Nokta cisim dili | Dalga paketi karşılığı |
+|------------------|------------------------|
+| Konum | Yoğunluğun birinci momenti |
+| Momentum | Ortalama dalga sayısı $\langle k \rangle$ |
+| Parçacığın var olması | Paketin toplam ağırlığı |
+| Parçacığın tekliği | Paketin dar olması, $\sigma \ll k_0$ |
+| Parçacığın aynı parçacık kalması | Momentlerin geçiş boyunca korunması |
+
+Son satır belirleyicidir ve bu bölümün asıl sonucu oradan çıkar.
+
+### 3.2 Eşik paketi yeniden ağırlıklandırır
+
+Bölüm 6'nın sonucu, geçirgenliğin moda bağlı olmasıdır. Bir paket birçok moddan
+oluştuğuna göre, eşik paketin bazı bileşenlerini diğerlerinden daha çok geçirir.
+Geçen şey, gelenin sönümlenmiş bir kopyası değil, **başka bir dağılımdır**.
+
+Geçen ağırlık oranı hesaplanmıştır. $\mu = 1$, dilim kalınlığı $d = 1$ ve paket
+merkezi $k_0 = 2$ için:
+
+| Paket genişliği $\sigma$ | Geçen ağırlık oranı |
+|--------------------------|---------------------|
+| $0{,}1$ | $0{,}638$ |
+| $0{,}4$ | $0{,}634$ |
+| $1{,}0$ | $0{,}618$ |
+
+Geçen oran her durumda sıfır ile bir arasındadır: paket ne tamamen yansır ne
+tamamen geçer.
+
+Asıl etki oranda değil, dağılımın kaymasındadır. Ağırlık merkezinin kayması,
+paketin kendi genişliği birimiyle ölçülmüştür:
+
+| Paket genişliği $\sigma$ | Merkez kayması (genişlik birimiyle) |
+|--------------------------|--------------------------------------|
+| $1{,}0$ | $0{,}413$ |
+| $0{,}5$ | $0{,}256$ |
+| $0{,}25$ | $0{,}138$ |
+| $0{,}125$ | $0{,}071$ |
+
+Kayma daima pozitiftir, yani büyük dalga sayısına doğrudur; çünkü dilim orada
+daha geçirgendir. Geniş bir paket için kayma kendi genişliğinin yarısına
+yaklaşır, ki bu paketin kimliğini yitirmesi demektir.
+
+### 3.3 Nokta cisim katmanı ne zaman meşrudur
+
+Tablodaki kayma, paket genişliğiyle **doğru orantılıdır**: genişlik yarıya
+indiğinde kayma da yarıya iner. Bu, sayısal olarak ardışık genişliklerde
+doğrulanmıştır.
+
+Orantının sonucu şudur: kaymanın bir alt sınırı yoktur. Yeterince dar bir paket
+için merkez kayması istenildiği kadar küçüktür.
+
+> Nokta cisim dili yaklaşık bir kolaylık değil, dar paket limitinde **tam**
+> geçerlidir. Geçen cisim, giden cismin aynısıdır; yalnızca paket dar tutulduğu
+> sürece.
+
+Bu, bütün gidiş dönüş anlatısının dayandığı meşruiyet belgesidir. Paket dar
+tutulmadığı sürece "parçacık gitti ve geri döndü" cümlesi anlamlı değildir,
+çünkü dönen şey gidenden farklı bir mod dağılımıdır.
+
+### 3.4 Dar paketin de ödediği bedel
+
+Dar paket limiti merkezi korur, ama her şeyi korumaz. İki bedel kalır.
+
+Birincisi, geçen ağırlık oranı hiçbir zaman bire ulaşmaz. Dar bir paket için de
+geçen oran birden küçüktür: dönen cisim, gidenden **daha soluktur**. Bu bir
+konum ya da momentum kaybı değil, varlık ağırlığının kaybıdır ve Bölüm 16'daki
+bilgi muhasebesinin ilk kalemidir.
+
+İkincisi, paketin genişliği de değişir, dar limitte kendi büyüklüğünün binde
+biri mertebesinde. Merkez kadar temiz korunmaz, ancak merkeze göre ikinci
+mertebeden küçüktür.
+
+Bu iki bedel, Bölüm 14'te mod içeriği karşılaştırmasının ölçeceği niceliklerdir.
+
+### 3.5 Bu tanımın sınırları
+
+Üç çekince açıkça kaydedilmelidir.
+
+Paket burada tek bir enine dalga sayısı değişkeni üzerinde alınmıştır. Gerçek bir
+üç boyutlu paket için aynı hesap üç değişkende yapılmalıdır; sonucun niteliksel
+olarak değişmesi beklenmez, ancak gösterilmemiştir.
+
+Hesap doğrusaldır ve alanın kendisiyle etkileşimi yoktur. Etkileşen bir alanda
+paketin geçiş sırasında dağılması ayrı bir olgudur.
+
+Nokta cisim katmanı Bölge I'de tanımlıdır. Bölge II'de "konum" kavramı tek bir
+uzay ekseni olan $r$ üzerinde daralır ve üç zaman yönü boyunca karşılığı yoktur.
+Öte tarafta parçacığın nerede olduğu sorusu bu nedenle Bölüm 9'a bırakılmıştır.
+
+---
+
+## 12. Orada madde, enerji ve öngörü
+
+$D$ dört-momentuma uygulandığında:
+
+$$(E/c,\; p_x,\; p_y,\; p_z) \longmapsto (p_z,\; p_y,\; p_x,\; E/c)$$
+
+Öte tarafta enerji üç bileşenli, momentum tek bileşenlidir. Değişmez de
+koordinatlardaki davranışla tutarlı biçimde işaret çevirir:
+
+$$\frac{E^2}{c^2} - p^2 \;\longmapsto\; -\left(\frac{E^2}{c^2} - p^2\right)$$
+
+Kütle kabuğu koşulu buna göre dönüşür:
+
+$$E^2 = p^2c^2 + m^2c^4 \;\longmapsto\; E'^2 = p'^2c^2 - m^2c^4$$
+
+**Korunum.** Genel bir $2 \to 2$ çarpışmada bizim tarafta korunum sağlanıyorsa öte
+tarafta da otomatik sağlanır; fark tam olarak sıfırdır. Bunun nedeni $D$'nin
+doğrusal olmasıdır: toplamların görüntüsü, görüntülerin toplamına eşittir.
+
+**Karışık çarpışma.** Duran bir subluminal cisim ile sonsuz hızlı bir takyon
+çarpıştığında cisim momentum kazanır, enerjisi değişmez. Başlangıç durumu
+$(E_1, p_1) = (mc^2, 0)$ ve $(E_2, p_2) = (0, Mc)$ alınır; çarpışma sonrasında
+takyon yine sonsuz hızlıdır ($E_4 = 0$) ve momentumu $M'c$ olur.
+
+**Sonsuz hız limiti.** $V \to \infty$ iken $E \to 0$ ve $p \to mc$.
+
+**Enerji pozitifliği üzerine not.** Bizim tarafta enerji tek bir sayıdır ve işareti
+bellidir. Öte tarafta "enerji" üç bileşenli bir vektördür; tek bir pozitif enerji
+koşulu yazılamaz, ancak büyüklüğü
+
+$$|E'| = \sqrt{E_1^2 + E_2^2 + E_3^2} \;\geq\; 0$$
+
+kullanılabilir. Bu gözlem, Bölüm 14'teki "kararlı vakum yok" sonucunun klasik
+habercisidir. Aynı sorun, superluminal boost sonrası parçacıkların negatif enerji
+kazanması biçiminde [32]'de ele alınmış ve kuantum referans çerçeveleri
+genişletilerek çözülmüştür; oradaki çözüm ile buradaki vektör-enerji okuması
+birbirine alternatiftir.
+
+---
+
+Bizim taraf (Klein-Gordon):
+
+$$L = \tfrac{1}{2}\left[\frac{(\partial_t \phi)^2}{c^2} - (\nabla \phi)^2 - \mu \phi^2\right]$$
+
+Euler-Lagrange:
+
+$$\frac{1}{c^2}\partial_t^2 \phi - \nabla^2 \phi + \mu \phi = 0$$
+
+$D$ uygulanmış hali:
+
+$$L' = \tfrac{1}{2}\left[(\partial_{t_1}\psi)^2 + (\partial_{t_2}\psi)^2
+      + (\partial_{t_3}\psi)^2 - \frac{(\partial_r \psi)^2}{c^2} + \mu \psi^2\right]$$
+
+Euler-Lagrange:
+
+$$\left(\partial_{t_1}^2 + \partial_{t_2}^2 + \partial_{t_3}^2\right)\psi
+  - \frac{1}{c^2}\partial_r^2 \psi - \mu \psi = 0$$
+
+İki denklem $D$ ile birbirine geçer; Klein-Gordon operatörü işaret çevirerek
+dönüşür: $\Box \to -\Box'$.
+
+### 6.1 Determinizm kaybı denklem tipinden çıkar
+
+| | Bölge I | Bölge II |
+|---|---------|----------|
+| İmza | 1 zaman + 3 uzay | 3 zaman + 1 uzay |
+| Başlangıç değer problemi | İyi konumlanmış | Hadamard anlamında kötü konumlanmış |
+| Sonuç | Determinist | Öngörü çöker |
+
+Sayısal gösterim: bir modu Bölge I'de $e^{i k \cdot x} f(t)$ biçiminde alırsak
+
+$$\partial_t^2 f = -c^2(k^2 + \mu)\, f$$
+
+elde edilir; katsayı **her zaman negatiftir**, dolayısıyla çözüm salınımlıdır ve
+büyüme sınırlıdır. Bölge II'de aynı modu $e^{i(k_2 t_2 + k_3 t_3 + q r)} f(t_1)$
+biçiminde alırsak
+
+$$\partial_{t_1}^2 f = \left(k_2^2 + k_3^2 - \frac{q^2}{c^2} + \mu\right) f$$
+
+elde edilir; bu katsayı **pozitif olabilir** ve $k_2, k_3 \to \infty$ iken sınırsız
+büyür. Çözüm $\exp\!\big(\sqrt{\text{katsayı}}\; t_1\big)$ tipinde patlar. Başlangıç
+verisindeki keyfi küçük bir bozulma, keyfi büyük bir çözüm değişimi verir: problem
+Hadamard anlamında kötü konumlanmıştır.
+
+Bu sonuç bir yorum değil, denklem tipinin doğrudan sonucudur.
+
+**Öncelik ve yöntem.** Bu sonucun kesin hâli [7]'ye aittir ve yöntemi
+buradakinden farklıdır. Orada iki boyutlu bir imza-değişen uzay-zamanda sınır
+koşulları Schrödinger Hamiltonyeninin öz-eşlenik genişlemelerinden çıkarılır,
+alanın sürekli olması ve koşulların eklem koşulu biçiminde olması talebi tek bir
+küme seçer, Klein-Gordon başlangıç değer problemi bu kümede kötü konumlanmış
+bulunur, ve değişim yüzeyinden uzakta düzgün ve tıkız destekli başlangıç verisi
+için çözümün $L^2$ normunun **sonlu zamanda ıraksadığı** ispatlanır. Yukarıdaki
+mod hesabı aynı sonuca çok daha basit bir yoldan varır ve bir ispat değil,
+bağımsız bir doğrulamadır.
+
+---
+
+### 12.5 Eşik bir mod filtresidir: öngörü neden çökmez
+
+Yukarıdaki kötü konumlanmışlık sonucu doğrudur, ancak eksik okunmuştur. Bir
+adım daha atıldığında kapsamı büyük ölçüde daralır.
+
+**Argümanın dayandığı serbestlik.** Bölüm 12.4'teki hesap, bir modun
+$k_2$, $k_3$ ve $q$ dalga sayılarını **birbirinden bağımsız** seçer ve
+$k_2^2 + k_3^2 + \mu > q^2/c^2$ olduğunda katsayının pozitif olduğunu bulur. Bu
+serbestlik altında patlayan modlar gerçekten vardır ve katsayı yukarıdan
+sınırsızdır.
+
+**Eşikten gelen modun bu serbestliği yoktur.** Yüzeydeki eşleştirmeden doğan
+geçen dalga, tanımı gereği Bölge II'nin alan denklemini çözer, dolayısıyla dört
+dalga sayısı öte tarafın dispersiyon bağıntısını sağlar:
+
+$$q^2 = c^2\left(k_1^2 + k_2^2 + k_3^2 + \mu\right)$$
+
+Bu bağıntı büyüme katsayısına konduğunda çarpıcı bir sadeleşme olur:
+
+$$k_2^2 + k_3^2 + \mu - \frac{q^2}{c^2}
+  = k_2^2 + k_3^2 + \mu - \left(k_1^2 + k_2^2 + k_3^2 + \mu\right)
+  = -\,k_1^2$$
+
+Yani dispersiyon bağıntısını sağlayan bir mod için büyüme katsayısı **tam olarak
+$-k_1^2$'dir** ve hiçbir reel $k_1$ için pozitif olamaz. Bu özdeşlik sayısal
+olarak da doğrulanmıştır.
+
+**Sonuç.** Patlama, ancak $k_1^2 < 0$ ile, yani $t_1$ ekseninde hiç salınmayan,
+öte tarafın kütle kabuğu dışındaki bir veriyle mümkündür. Böyle bir veri eşikten
+geçerek oluşamaz; elle konması gerekir.
+
+> Bölge II kendi başına kötü konumlanmıştır, ancak **eşikten erişilebilir olan
+> alt küme** kötü konumlanmış değildir. Öngörünün çökmesi, oradan gelen bir
+> parçacık için gerçekleşmez.
+
+Dispersiyon bağıntısını sağlayan 2197 mod tarandığında patlayan mod sayısı
+sıfırdır.
+
+**Marjinal durum ve dürüst sınır.** Taranan modların 169 tanesinde katsayı tam
+olarak sıfırdır; bunların hepsi $k_1 = 0$ modlarıdır. Katsayı sıfır olduğunda
+$\partial_{t_1}^2 f = 0$ olur ve çözüm $t_1$'de **doğrusal** büyür. Bu üstel bir
+patlama değildir, ancak sınırlı da değildir.
+
+Dolayısıyla iddia şu biçimde sınırlandırılmalıdır: eşikten geçen bir uyarım için
+üstel kararsızlık **yoktur**; sıfır ölçülü bir marjinal alt kümede doğrusal
+büyüme kalır ve bu ayrıca ele alınmayı gerektirir.
+
+**Ara bölge tipine bağlılığı.** Bu sonuç, ara bölgenin hangi tipte olduğundan
+bağımsızdır, çünkü yalnızca Bölge II'nin dispersiyon bağıntısını kullanır. Dört
+adayın hangisi doğru olursa olsun, öte tarafa erişen mod kümesi kütle kabuğu
+üzerindedir.
+
+**Literatürdeki alternatif ve neden izlenmedi.** Ultrahiperbolik başlangıç değer
+probleminin veriye konan **nonlokal** bir kısıt altında iyi konumlanmış olduğu
+bilinmektedir. Ancak o kısıtın kökeni incelendiğinde, kısıtı sağlayan verilerin
+tek zamanlı bir nesnenin izdüşümü olduğu görülür; yani öngörü, veriyi örtük
+biçimde tek zamanlı kılarak kurtarılmaktadır. Buradaki sonuç o yolu izlemez ve
+ona ihtiyaç duymaz: hiçbir kısıt konmamakta, yalnızca eşiğin hangi modları
+enjekte edebildiği hesaplanmaktadır.
+
+---
+
+# Kısım V. Gidip gelince ne değişir
+
+## 13. İkinci geçiş ve iki yüzeyin eşleşmesi
 
 [YAZILACAK] İki yüzeydeki eklem koşulları birlikte çözülecek, transfer matrisi kurulacak. Dilimin öbür yüzünden çıkan dalganın genliği ve fazı buradan gelecek.
 
 ---
 
-## 13. Dönüş anı
+## 14. Dönüş anı
 
 [YAZILACAK] Tezin en kritik bölümü. Eşikte duran ve hiç geçmeyen bir gözlemcinin saatinde parçacık nereye düşüyor, parçacığın kendi öz-zamanı karşı tarafta nasıl tanımlanır, ve ikisinin farkı ne. Öz-zamanın karşıda tanımsız olması bu bölümün ilk işidir.
 
 ---
 
-# Bölüm V. Muhasebe
-
-## 14. Ne geçti, ne kaldı: mod içeriği
+## 15. Ne geçti, ne kaldı: mod içeriği
 
 [YAZILACAK] Giren dalga paketinin mod dağılımı ile çıkanınki karşılaştırılacak. Hangi modlar geçti, hangileri söndü, faz nasıl kaydı.
 
 ---
 
-## 15. Korunan yüklerin muhasebesi
+## 16. Korunan yüklerin muhasebesi
 
 [YAZILACAK] Enerji, momentum ve Noether yükleri gidişte ve dönüşte karşılaştırılacak. Karşıda enerjinin üç bileşenli olması, takas sırasında neyin düştüğünü gösterecek yer burasıdır.
 
 ---
 
-## 16. Bilgi farkı
+## 17. Bilgi farkı
 
 [YAZILACAK] Giren ve çıkan durumlar arasında bir bilgi kuramı ölçüsü kurulacak. Temeli en zayıf olan ölçü budur, çünkü karşıda vakum ve parçacık tanımsızdır; bu çekince metinde açıkça yazılacaktır.
 
 ---
 
-## 17. Yönelim sözlüğü
+# Kısım VI. Orada yapılanlar burada ne anlama geliyor
+
+## 18. Yönelim sözlüğü
 
 [YAZILACAK] Karşıdaki her davranış ihtimalinin bizim evrendeki karşılığı tek tek yazılacak, Bölüm 8.5in durum tablosuyla birebir eşleşerek. Aşağıdaki işaret tartışması bu sözlüğün bir parçasıdır ve sonucu tersine dönmüştür: eşik geçirgen olduğu için bağıl işaret artık prensip olarak ölçülebilirdir.
-
 
 $\pm D$ ayrımı test edildi: her iki işaret de $\det = +1$ ve $M^2 = I$ koşullarını
 sağlar, dolayısıyla bu koşullarla ayırt edilemezler. Ancak Bölüm 7'deki bulgu
@@ -1339,12 +1526,9 @@ Yani $D$ ile yön-bağımlı formlar aynı ailenin iki üyesi değildir; farklı
 
 ---
 
-# Bölüm VI. Bilgi gönderme
-
-## 18. İki bölge arasında sinyal
+## 19. İki bölge arasında sinyal
 
 [YAZILACAK] Dört taşıyıcı ayrı ayrı ele alınacak: elektromanyetik alan, yer çekimi ve kütle çekimi, kütleli skaler alan, ve korelasyon ile dolanıklık. Aşağıdaki elektromanyetik hesap bunlardan yalnızca birincisidir.
-
 
 $D$ Maxwell teorisine uygulandığında bütün sonuçlar tek bir matris çarpımından
 çıkar.
@@ -1395,13 +1579,12 @@ gösterilebilmesidir.
 
 ---
 
-# Bölüm VII. Sınırlar
+# Kısım VII. Sınırlar
 
-> Bu bölümün tamamı sıfırdan yeniden yazılacaktır. Aşağıdaki metinler eski
-> tezin sınırlarını tarif ediyor ve yeni teze göre geçersizdir; yalnızca
-> malzeme kaybolmasın diye tutulmaktadır.
+> Bu kısmın tamamı sıfırdan yeniden yazılacaktır. Aşağıdaki metinler eski
+> tezin sınırlarını tarif ediyor ve yeni teze göre geçersizdir.
 
-## 19. Sylvester engeli ve modelin duruşu
+## 20. Sylvester engeli ve modelin duruşu
 
 Bu bölüm modelin kendi sınırını belirler.
 
@@ -1460,7 +1643,7 @@ takılmaz.
 
 ---
 
-## 20. İtirazlar ve cevaplar
+## 21. İtirazlar ve cevaplar
 
 Aşağıdaki maddeler, literatürde bu modelin çekirdeğini hedefleyen ya da hedefleme
 potansiyeli taşıyan argümanlardır. Her madde önce itirazı olabildiğince güçlü
@@ -1617,7 +1800,7 @@ fiziksel olarak kabul edilip edilemeyeceğidir.
 
 ---
 
-## 21. Yöntem ve doğrulama
+## 22. Yöntem ve doğrulama
 
 Bütün doğrulamalar önce sembolik cebirle yapıldı:
 
@@ -1639,7 +1822,7 @@ matrislerinde irrasyonel girdiler oluşur; oralarda bir tolerans kullanılır.
 
 ---
 
-## 22. Açık kalanlar ve simülasyona giden yol
+## 23. Açık kalanlar ve simülasyona giden yol
 
 | Konu | Durum |
 |------|-------|
