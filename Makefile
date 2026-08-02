@@ -1,16 +1,16 @@
 # ============================================================================
 #  superluminal-threshold
 # ----------------------------------------------------------------------------
-#  Kaynaklar ayri ayri derlenip .o olarak build/obj altinda tutulur; boylece
-#  hem paralel derleme (-j) hem de artimli derleme mumkun olur. Tek bir g++
-#  cagrisiyla 20 kaynagi seri derlemek ~50 sn suruyordu; burada 8 is parcacigi
-#  ile ~7 sn, degisen tek dosyada ise ~3 sn.
+#  Each source compiles to its own object under build/obj, which buys both
+#  parallel and incremental builds. A single g++ invocation over all sources
+#  took about 50 s; this takes about 7 s on 8 jobs, and about 3 s when one file
+#  has changed.
 #
-#  .vscode/tasks.json bu hedefleri cagirir. Elle kullanim:
-#     make -j        release derlemesi (varsayilan)
-#     make -j debug  debug derlemesi
-#     make run       release derleyip calistirir
-#     make clean     ciktilari siler
+#  .vscode/tasks.json calls these targets. By hand:
+#     make -j        release build, the default
+#     make -j debug  debug build
+#     make run       build release and run it
+#     make clean     remove the build output
 # ============================================================================
 
 CXX      := g++
@@ -31,7 +31,7 @@ DEBUG_OBJS     := $(SOURCES:%.cpp=$(DEBUG_OBJDIR)/%.o)
 RELEASE_BIN := build/superluminal
 DEBUG_BIN   := build/superluminal-debug
 
-# Basliklar degistiginde de yeniden derlensin diye bagimlilik dosyalari.
+# Dependency files, so a changed header also triggers a rebuild.
 DEPFLAGS = -MMD -MP
 
 .PHONY: all release debug run clean
