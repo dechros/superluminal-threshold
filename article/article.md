@@ -3157,8 +3157,6 @@ ne bölüm numarası ne kaynak numarası bulunur.
 | Sylvester engeli ve itirazların hesabı | `src/critique/SylvesterObstruction`, `src/critique/ObjectionTests`, `src/critique/AlternativeRoutes` |
 | Anlaşmazlıkların uzlaşan ve çelişen olarak ayrılması | `src/critique/Reconciliation` |
 | Literatürün bıraktığı soruların sınıflandırılması | `src/critique/OpenQuestions` |
-| Literatürün bütün itirazlarının sicili ve hükümleri | `src/critique/LiteratureObjections` |
-| Rakip yaklaşımların ortak formülleri | `src/critique/CommonFormulas` |
 
 **Sayısal güvenilirlik.** Modelin matrislerinin büyük kısmı tamsayı girdilidir
 ($0, +1, -1$) ve bu girdiler ikilik tabanda tam temsil edildiğinden permütasyon,
@@ -3238,10 +3236,15 @@ sıfır eğrilik ölçütü.
 | Kuantumlama | Kapandı (Bölüm 10) |
 | Takyonların varlığı | Açık, deneysel soru |
 
-Modele özgü olduğu düşünülen sonuçlar: eşikte tam yansımanın akı korunumunun tek
-çözümü olması (Bölüm 4.1), $D$'nin 384 aday arasından zorunlu çıkması (Bölüm 2.1),
-Wick dönüşünde "tek olan ekseni döndür" kuralı ve iki bölgenin ortak bir Öklid
-teorisinin analitik devamları olması (Bölüm 10.8), ve iki literatürün birleştirilmesi.
+Modele özgü olduğu düşünülen sonuçlar: $D$'nin 384 aday arasından zorunlu
+çıkması (Bölüm 2.1), Wick dönüşünde "tek olan ekseni döndür" kuralı ve iki
+bölgenin ortak bir Öklid teorisinin analitik devamları olması (Bölüm 10.8), öte
+taraftaki yönelimden dönüş olayına giden eşlemenin kurulup taranmış olması
+(Bölüm 25), ve iki literatürün ortak formüllerle birleştirilmesi (Bölüm 27.1).
+
+Eskiden bu listede olan "eşikte tam yansımanın akı korunumunun tek çözümü
+olması" maddesi **çıkarılmıştır**; eşik geçirgen okunduğundan beri o iddia
+taşınmamaktadır.
 
 **Bölüm 7.1'de kapanan nokta.** İki imza arasındaki sürekli yolun ne kadar
 dejenere olmak zorunda olduğu sorusu cevaplanmıştır: her noktada yalnızca tek bir
@@ -3256,7 +3259,9 @@ bir geçirgenlik verir; ayrıca engelin varlığı gelen alanın mod içeriğine
 
 | Soru | Nerede |
 |------|--------|
-| Güçlü ile zayıf eklem koşulu arasındaki tercihin gerekçesi | Bölüm 4.1 |
+| Güçlü ile zayıf eklem koşulu arasındaki tercihin gerekçesi | Bölüm 3.7 ve 4.1; oran koşulu hesaplanmış, sonuç zayıf seçimin aleyhinedir |
+| Geçirgen okumanın daha geniş bir metrik ailesinde temsilcisi | Bölüm 3.7 |
+| Geçiş süresinin beş okumasından hangisinin fiziksel olduğu | Bölüm 14.11 |
 | $(2,2)$ ara bölgesinin fiziksel olarak savunulabilirliği | Bölüm 7.1 |
 | Üç zamanın olasılık korunumu altında tek zamana çökmesi | Bölüm 8.3 |
 | İmza değiştiren arka planda parçacık üretimi | Bölüm 10.12 |
