@@ -1728,10 +1728,71 @@ operatörüne etki eder, kütleye değil.
 Sol sütun parçacığın kimliğini, sağ sütun ise başına gelenleri tarif eder.
 Kimlik korunur, geçmiş değişir.
 
-**Çekince.** Bu muhasebe doğrusal ve durağan saçılma kurgusundadır. Bölge II'de
-enerjinin üç bileşenli olması, yani Bölüm 12'deki takas, buradaki listeye
-katılmamıştır; üç bileşenli bir enerjinin gidiş dönüş boyunca nasıl izleneceği
-açık kalmıştır.
+### 16.1 Üç bileşenli enerji bizim neyimizdir
+
+Bölge II'nin üç enerji bileşeni soyut bir nesne değildir; bizim bildiğimiz bir
+şeyin başka adıdır. $D$ dört-momentuma uygulandığında
+
+$$(E/c,\; p_x,\; p_y,\; p_z) \longmapsto (p_z,\; p_y,\; p_x,\; E/c)$$
+
+olur. Yani:
+
+> Öte tarafın **enerji vektörü** bizim **üç-momentumumuzdur**; öte tarafın tek
+> **momentumu** ise bizim **enerjimizdir**.
+
+Bu, iki niceliğin sayısal olarak eşit olması değil, aynı nesne olmasıdır.
+Enerji vektörünün uzunluğu bizim momentumumuzun büyüklüğüne tam olarak eşittir
+ve bu doğrulanmıştır.
+
+### 16.2 Dönüşümün kendisi hiçbir şey kaybetmez
+
+$D$ bir involüsyondur, dolayısıyla iki kez uygulanınca dört-momentumun dört
+bileşeni de **tam olarak** başlangıç değerine döner; sayısal artık sıfırdır.
+
+Bunun önemi şudur: modelin raporladığı bütün kayıplar dönüşümden değil,
+**arayüzden** gelir. Cebir kusursuzdur; bedeli ödeten şey eklem koşullarıdır.
+
+### 16.3 Öte tarafta yalnızca uzunluk fizikseldir
+
+Bölüm 9'da gösterildiği gibi üç zaman ekseni arasında bir $O(3)$ simetrisi
+vardır ve enerji vektörünün **yönü** orada fiziksel değildir, bir ayar
+fazlalığıdır. Fiziksel olan tek şey uzunluğudur.
+
+Üç ayrı dönme açısında doğrulanmıştır: dönme enerji vektörünün uzunluğunu, öte
+tarafın momentumunu ve değişmezi değiştirmez.
+
+### 16.4 Ama o dönme bize bir şey yapar
+
+Parçacık öte tarafta bir $O(3)$ dönmesi geçirip geri döndüğünde:
+
+| Nicelik | Sonuç |
+|---------|-------|
+| Enerjimiz | Tam olarak korunur |
+| Momentumumuzun büyüklüğü | Tam olarak korunur |
+| Kütle | Tam olarak korunur |
+| Momentumumuzun **yönü** | **Değişir** |
+
+Hesaplanan sapmalar:
+
+| Öte taraftaki dönme açısı | Bizdeki sapma (radyan) |
+|---------------------------|------------------------|
+| $0{,}3$ | $0{,}289$ |
+| $1{,}0$ | $0{,}961$ |
+| $2{,}5$ | $2{,}308$ |
+
+> Öte tarafta **hiçbir fiziksel içeriği olmayan** bir ayar dönmesi, bu tarafta
+> **gözlenebilir bir sapma** olarak görünür. Parçacık aynı enerjiyle, aynı
+> süratle, aynı kütleyle, ama farklı bir yöne bakarak geri döner.
+
+Bu, Bölüm 18'de kurulan sözlüğün en somut maddesidir ve gidiş dönüşün bedelsiz
+yapabildiği tek şeydir: yön değiştirmek.
+
+**Çekince.** Bu sonuç dönüşüm düzeyindedir ve arayüzün mod süzgecinden
+bağımsızdır. Bir $O(3)$ dönmesinin öte tarafta gerçekten gerçekleşip
+gerçekleşmediği, yani parçacığın orada ne yaptığı, bu hesabın konusu değildir;
+hesaplanan şey, gerçekleşirse bize ne göründüğüdür.
+
+**Kalan çekince.** Bu muhasebe doğrusal ve durağan saçılma kurgusundadır.
 
 ---
 
