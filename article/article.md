@@ -402,6 +402,13 @@ fiziksel yorumunu da verir: hiperyüzey yakınındaki bir gözlemciye böyle bir
 ilmek, iki ayrı noktada bir parçacık-karşıparçacık çiftinin yaratılması gibi
 görünebilir.
 
+Görünüşte bir gerilim vardır: Bölüm 9.1 eşiğin geçirgen olmadığını söylerken,
+[16] yüzeyden geçen ilmeklerden söz eder. Gerilim görünüştedir ve Bölüm 9.3'te
+çözülmüştür: iki metrik arasındaki fark bir kareler toplamı olduğundan, Bölge
+I'de zaman-benzeri olan her yön Bölge II'de de zaman-benzeridir, yani eşikte bir
+eğriyi durduran nedensel engel yoktur. Yasaklanan şey akıdır. Geometrik eğriler
+ile alan akısı farklı nesnelerdir ve iki sonuç aynı anda doğru olabilir.
+
 **Bir itiraz.** [21], iki zamanlı dinamikte olasılık korunumu dayatıldığında
 fazladan zaman ekseninin gözlenebilirliğinin sınırlandığını gösterir: klasik
 $1+2$ boyutta Newton'un ikinci yasası tam olarak integre edilebilir ve her
@@ -535,6 +542,36 @@ aynı yere varır: orada da Minkowski bölgesi Kleinian bölgeden kopar. Dolayı
 Buna karşılık [8] bir uyarı da içerir: kuantum alanların varlığı bu duvarları
 **kararsız** kılar, Kleinian bölge ya çöker ya sınırsız genişler. Burada bu
 soruya girilmemiştir ve açık bırakılmaktadır.
+
+### 9.3 Geometrinin izin verdiği geçişi alan yasaklıyor
+
+Bölüm 9.1'in sonucu akı hakkındadır. Bundan ayrı ve daha zayıf bir soru vardır:
+bir eğrinin teğeti, yüzeyi geçerken nedensel karakterini koruyor mu. Bu yalnızca
+iki metriğe bakan bir sorudur.
+
+İki metrik arasındaki fark hesaplanır:
+
+$$v^T \eta' v - v^T \eta\, v = 2\,(v_1^2 + v_2^2) \;\geq\; 0$$
+
+Fark daima negatif değildir. Sonuç doğrudan çıkar:
+
+> Bölge I'de zaman-benzeri olan **her** yön, Bölge II'de de zaman-benzeridir.
+
+Kapsama tek yönlüdür, tersi doğru değildir: örneğin $(0,1,0,0)$ Bölge I'de
+uzay-benzeri, Bölge II'de zaman-benzeridir. Bölge II'nin zaman-benzeri yönleri
+kesin olarak daha fazladır.
+
+**Ayrımın önemi.** Eşikte bir eğriyi durduran nedensel bir engel **yoktur**;
+teğeti karakterini koruyarak geçer. Bölüm 9.1'in yasakladığı şey akıdır, ve akı
+eğrinin teğetinin değil, alanın ve eklem koşulunun bir özelliğidir. Dolayısıyla
+şu iki ifade birbiriyle çelişmez:
+
+- Yüzeyden geçen geometrik eğriler vardır.
+- Yüzeyden akı geçmez.
+
+Bu ayrım, Bölüm 7.4'te değinilen ilmek teoremiyle bu modelin eşik sonucunun aynı
+anda doğru olabilmesinin nedenidir: o teorem geometrik eğriler hakkındadır, buradaki
+sonuç alan akısı hakkındadır.
 
 ### 9.2 Aynı seçimin yerçekimi tarafındaki görünümü
 

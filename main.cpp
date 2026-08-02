@@ -1,3 +1,4 @@
+#include "boundary/CausalCrossing.h"
 #include "boundary/JunctionScattering.h"
 #include "boundary/ThresholdSurface.h"
 #include "core/Report.h"
@@ -43,6 +44,7 @@ namespace
         sections.push_back(std::make_unique<slm::ThresholdSurface>());
         sections.push_back(std::make_unique<slm::JunctionScattering>());
         sections.push_back(std::make_unique<slm::SurfaceLayerSection>());
+        sections.push_back(std::make_unique<slm::CausalCrossingSection>());
         sections.push_back(std::make_unique<slm::SphericalSolution>());
         sections.push_back(std::make_unique<slm::MaxwellSection>());
         sections.push_back(std::make_unique<slm::LiteraturePosition>());
