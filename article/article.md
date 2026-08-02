@@ -3177,6 +3177,7 @@ ne bölüm numarası ne kaynak numarası bulunur.
 | İki geçişin ortak genliği ve dönüş anı | `src/intermediate/TwoCrossings` |
 | Oyalanma süresi ile fazdan gecikmenin karşılaştırılması | `src/intermediate/DwellTime` |
 | Lapse konturunun dejenere noktanın hangi tarafından geçtiği | `src/quantum/LapseContour` |
+| Yönlendirilebilirlik ile zorunluluğun ayrılması | `src/particle/FlowAssumption` |
 | Geçiş süresinin beş okumasının yan yana hesabı | `src/intermediate/TraversalClocks` |
 | Sinyal cephesinin tepeden ayrılması | `src/intermediate/SignalFront` |
 | Gidiş dönüş muhasebesi: mod, yük, entropi | `src/particle/RoundTrip` |
@@ -3366,21 +3367,86 @@ bakışta beklenenin tersidir ve hesabın verdiği sonuçtur.
 | Öte tarafta yuva | Orada | Taşıdığı yuvada, burada |
 |------------------|-------|--------------------------|
 | $0,1,2$ (üç zaman) | serbest hareket | serbest hareket (üç uzay yönümüz) |
-| $3$ (tek uzay) | tek yönlü akış | tek yönlü akış (bizim zamanımız) |
+| $3$ (tek uzay) | tek yönlü | tek yönlü (bizim zamanımız) |
 
 Okunuşu şudur. Onlar üç zamanda serbestçe hareket eder; o üç zaman bizim üç
 uzay yönümüzdür ve biz de onlarda serbestçe hareket ederiz. Onların tek uzay
-ekseninde ilerlemek zorunludur ve yön seçilemez; o eksen bizim zamanımızdır ve
-bizim için de aynı şey geçerlidir.
+ekseninde yön seçilemez; o eksen bizim zamanımızdır ve bizim için de aynı şey
+geçerlidir.
 
-> **Tek yönlü zorunluluk iki tarafta da vardır ve aynı koordinattadır.** Bizim
-> zamanımızın su gibi akması ile onların tek uzay ekseninde ilerlemek zorunda
-> olmaları, tek bir olgunun iki okunuşudur.
+### 24.2.1 "Tek yönlü" derken ne söylendiği: iki ayrı iddia
 
-Buradan çıkan sonuç, senin evreninde "zamanda ilerlemek zorundasın" demenin,
-öte tarafta "o tek uzay ekseninde ilerlemek zorundasın" demekle aynı cümle
-olduğudur. Yer değiştiren şey zorunluluk değil, zorunluluğun hangi tür
-koordinata düştüğüdür.
+Bu tabloyu yazmak kolaydı; ne iddia edildiğini söylemek zor. "Akış" kelimesinin
+içinde **iki ayrı** ifade saklıdır ve statüleri farklıdır
+(`src/particle/FlowAssumption`).
+
+**Yönlendirilebilirlik.** Belirli bir nedensel türdeki doğrultular, o türden
+çıkmadan birleştirilemeyen iki parçaya ayrılır; dolayısıyla bir uç ötekinden
+ayırt edilebilir ve hiçbir hareket cismi birinden ötekine taşımaz. Bu, metriğe
+dair bir ifadedir ve **karar verilebilir**: o türden birim bir vektör yarım tur
+döndürülür, ki bu onu kendi negatifine taşır, ve yolda aralığın işaret değiştirip
+değiştirmediğine bakılır.
+
+**Zorunluluk.** Bir cisim o koordinat boyunca, seçemediği bir hızla, ilerlemek
+**zorundadır**. Bu, metriğe dair bir ifade **değildir**. Hiçbir metrik bir dünya
+çizgisinin ilerlemek zorunda olduğunu söylemez, ve kendi zamanımızın bizi
+taşıdığı duygusu bunun delili değildir.
+
+Bu ikisi alışkanlıkla birbirine karıştırılır, ve karıştırmanın bedeli gizli bir
+varsayımdır. Burada ayrılırlar.
+
+**Birincisi hesaplanmıştır.** Her iki bölgede her nedensel tür için:
+
+| Bölge, tür | Doğrultu sayısı | Kendi negatifine ulaşır mı | Sonuç |
+|------------|------------------|-----------------------------|-------|
+| Burası, zamansı | $1$ | hayır | yönlendirilebilir |
+| Burası, uzaysı | $3$ | evet | yönlendirilemez |
+| Öte taraf, pozitif | $3$ | evet | yönlendirilemez |
+| Öte taraf, negatif | $1$ | hayır | yönlendirilebilir |
+
+İki bölge bu bakımdan **tam dualdir**. Dolayısıyla:
+
+> Öte tarafın tek uzay ekseninin tek yönlü olması, modele sonradan eklenmiş bir
+> varsayım **değildir**. Bizim kendi zaman okumuzu veren teoremin, öteki türe
+> uygulanmış hâlidir.
+
+Ayrıca başka yerlerde kullanılan kestirme, yani "sayı bir ise yönlendirilebilir",
+dört durumun dördünde de döndürme hesabıyla uyuşmaktadır; yani kestirme bir tanım
+değil, **denetlenmiş** bir kestirmedir.
+
+**İkincisi hesaplanmamıştır, ve hiçbir yerde kullanılmamaktadır.** Yukarıdaki
+hiçbir satır bir cismin yönlendirilebilir bir koordinat boyunca ilerlemek
+zorunda olduğunu söylemez; yalnızca üzerinde geri dönemeyeceğini söyler. Ve bu
+çalışmada böyle bir zorunluluk kullanılmamaktadır: geçiş miktarı dönüş
+eşlemesine bir **girdi** olarak girer, dolayısıyla bir cisim yerinde durabilseydi
+hiçbir sonuç değişmezdi. Bu, kodda denetlenmektedir.
+
+> Zamanın nehir gibi aktığı duygusu, burada hesaplananın **dışındadır** ve
+> hiçbir iddia ona dayanmamaktadır.
+
+**Ayrımdan sonra ayakta kalan şey, ikisinden de keskindir.** Onların tek uzay
+ekseni boyunca yer değiştirme, bizim zaman eksenimize **bire bir** düşer:
+
+| Orada yer değiştirme | Bizim zaman eksenimizde |
+|----------------------|--------------------------|
+| $0{,}5$ | $+0{,}5000$ |
+| $1$ | $+1{,}0000$ |
+| $2$ | $+2{,}0000$ |
+| $7{,}25$ | $+7{,}2500$ |
+
+Bağıntı miktarda tam doğrusaldır. Yani bir cismin o eksende **ne kadar**
+gittiği kendi seçimidir ve saatimizde belirli bir karşılığı vardır; seçemediği
+şey **hangi yöne** gittiğidir.
+
+> Öte tarafta mekânda hareket etmek, bizim zaman çizgimizde konum değiştirmektir.
+> Miktar serbest, yön değil. Bu yolla parçacık daha **ileri** bir ana konur, ve
+> hiçbir zaman daha geriye.
+
+Buradan çıkan sonuç, senin evreninde "zamanda geri dönemezsin" demenin, öte
+tarafta "o tek uzay ekseninde geri dönemezsin" demekle aynı cümle olduğudur.
+Yer değiştiren şey yasak değil, yasağın hangi tür koordinata düştüğüdür. Ve
+"ilerlemek zorundasın" cümlesi, iki tarafta da hesabın söylediği bir şey
+değildir.
 
 ### 24.3 Yönelim var, hareket gözlenmez: ayar fazlalığı
 
