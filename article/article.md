@@ -51,7 +51,15 @@ açıları ayrık bir esnek sapmadır.
 Eşlemenin bugünkü hâli şudur: dönüş olayının zaman bileşeni geçiş genliğinin
 fazından, uzay bileşenleri ise çıkış yüzü ile nicelenmiş sapmadan gelir. Öte
 taraftaki yönelim, çıkış anına üç zaman düzleminden ikisi üzerinden ulaşır ve
-çıkış yüzüne hiç ulaşmaz.
+çıkış yüzüne hiç ulaşmaz. Eşlemenin tanım kümesi taranmıştır ve tek yönlüdür:
+$312$ öte taraf durumu $158$ farklı dönüş olayına gitmektedir.
+
+Zaman bileşeni hakkındaki sonuç şudur. Engel rejiminde dönüş anı kalınlıkla
+doyar, ışığın aynı gidiş dönüşü için gereken süre ise doymaz; aradaki fark
+kalınlıkla sınırsız büyür. Dönüş olayı, kesintisiz hiçbir ışık sinyalinin
+ulaşamayacağı bir zaman koordinatına düşer. Bunun bir yayılma hızı iddiası
+**olmadığı**, aynı rejimde içeride grup hızının tanımsız olmasıyla birlikte
+kaydedilmiştir.
 
 Neyin gösterilmediği de kaydedilir: ulaşılabilir altı sonucun dördü sıradan
 fiziğinkiyle aynı ölçümü verir, tayf üzerindeki olasılık dağılımı
@@ -2763,6 +2771,7 @@ ne bölüm numarası ne kaynak numarası bulunur.
 | Sonuçlar arasındaki dağılım | `src/particle/CellDistribution` |
 | Yüzlerin farklı olması ve nicelenmiş dönme | `src/particle/AsymmetricFaces` |
 | Öte taraftaki hareketin gözlenebilirlere etkisi | `src/particle/FarSideMotion` |
+| Çekirdek eşleme: yönelimden dönüş olayına | `src/particle/ReturnEvent` |
 | Dört sinyal taşıyıcısı ve yerçekimi kanalı | `src/signal/Channels`, `src/signal/GravitationalChannel` |
 | Maxwell alanının $D$ altındaki davranışı | `src/field/MaxwellField` |
 | Sylvester engeli ve itirazların hesabı | `src/critique/SylvesterObstruction`, `src/critique/ObjectionTests`, `src/critique/AlternativeRoutes` |
@@ -2829,7 +2838,100 @@ kaydı olarak verilmektedir.
 
 ---
 
-## 24. Anlaşmazlıkların iki türü ve hangisinin hangisi olduğu
+## 24. Çekirdek eşleme: yönelimden dönüş olayına
+
+Önceki bölümler eşlemenin parçalarını ayrı ayrı kurdu. Bu bölüm onları tek bir
+hesapta birleştirir ve eşlemenin tanım kümesini baştan sona tarar.
+
+### 24.1 Tanım kümesi
+
+Öte taraftaki bir durum iki veriden oluşur:
+
+1. **Yönelim.** Üç zaman uzayındaki enerji vektörünün doğrultusu. Uzunluk kütle
+   kabuğu tarafından sabitlendiğinden, doğrultu bir **iki-küre** üzerinde
+   değişir.
+2. **Dal.** Tek uzay ekseni boyunca dalga sayısının işareti. İki değer alır.
+
+Dolayısıyla yönelim uzayı $S^2 \times \mathbb{Z}_2$'dir. Taramada bu uzay $312$
+duruma ayrıklaştırılmıştır.
+
+### 24.2 Değer kümesi
+
+Dönüş olayı bizim bölgemizin bir noktasıdır ve giriş olayına göre dört
+koordinatı vardır:
+
+$$(t,\; x_{\perp},\; y,\; z)_{\text{dönüş}}$$
+
+Burada $t$ geçen süre, $x_{\perp}$ geçiş doğrultusundaki yer değiştirme, $y$ ve
+$z$ enine yer değiştirmelerdir. Her dördü de öte taraftaki durumdan hesaplanır:
+
+| Koordinat | Nereden gelir |
+|-----------|---------------|
+| $t$ | İki geçişin ortak genliğinin fazından; içeride saat taşınamadığı için |
+| $x_{\perp}$ | Daldan: sıfır ya da kalınlık, yani hangi yüzden çıktığı |
+| $y,\, z$ | Paket merkezinin kayması, yönelimin enine bileşenlerine dağıtılmış |
+
+Taranan $312$ durumun tamamı sonlu ve belirli bir olaya gider; eşlemede tanımsız
+nokta yoktur.
+
+### 24.3 Hangi koordinat durumun neyini görür
+
+Eşlemenin yapısı, koordinatların birbirinden bağımsız kaynaklara bağlanmasıdır:
+
+| Koordinat | Yönelimi görür mü | Dalı görür mü |
+|-----------|-------------------|---------------|
+| $t$ | Evet | **Hayır** |
+| $x_{\perp}$ | **Hayır** | Evet |
+| $y,\, z$ | Evet | Hayır |
+
+Bu tablonun en önemli satırı ilkidir: **parçacığın ne zaman döndüğü ile nereden
+döndüğü ayrı şeyler tarafından belirlenir.** Zaman bileşeni dala tümüyle kör,
+geçiş yer değiştirmesi ise yönelime tümüyle kördür.
+
+### 24.4 Eşleme tanım kümesini sıkıştırır
+
+$312$ durum $158$ farklı olaya gitmektedir. Eşleme birebir değildir; öte
+taraftaki farklı durumlar burada aynı olaya varır. Bu sıkışma, kapsamın
+"boyut değişiminde kaybolan bilgi" maddesinin niceliksel karşılığıdır ve
+Bölüm 18.16'daki sapma tayfının sürekliden ayrığa düşmesiyle aynı olgunun bir
+başka görünümüdür.
+
+### 24.5 Zaman bileşeni ve kesintisiz bir sinyalle karşılaştırma
+
+Çekirdek sorunun asıl hedefi zaman bileşenidir. Karşılaştırma ölçütü, aynı gidiş
+dönüşü ışığın yapması için gereken süredir, yani $2d/c$.
+
+Engel rejiminde ($\omega = 2{,}8$, Öklid ara bölge):
+
+| Kalınlık $d$ | Işığın gerektirdiği | Parçacığın dönüş anı | Fark |
+|--------------|--------------------|--------------------|------|
+| $2$ | $4{,}00$ | $1{,}4629$ | $+2{,}5371$ |
+| $4$ | $8{,}00$ | $1{,}4629$ | $+6{,}5371$ |
+| $8$ | $16{,}00$ | $1{,}4629$ | $+14{,}5371$ |
+| $16$ | $32{,}00$ | $1{,}4629$ | $+30{,}5371$ |
+
+Dönüş anı kalınlıkla doyduğu, ışık süresi ise doymadığı için **fark sınırsız
+büyür**. Bölge ne kadar kalınlaştırılırsa, dönüş olayı ışığın varabileceği
+andan o kadar öne düşer.
+
+### 24.6 Bu farkın ne olduğu, ve ne olmadığı
+
+Bu sonuç dikkatle okunmalıdır ve çalışmanın kendi çekincesi burada kayda geçer.
+
+**Olduğu şey.** Dönüş olayının zaman koordinatı, kesintisiz hiçbir ışık
+sinyalinin ulaşamayacağı bir yerdedir. Çekirdek sorunun "zamanda yolculuk"
+kısmı, bu koordinatın konumu olarak tanımlanmıştır ve hesap onu vermektedir.
+
+**Olmadığı şey.** Bu, ışıktan hızlı bir **yayılma** değildir. Aynı rejimde
+içeride grup hızı diye bir nicelik yoktur, çünkü mod sönümlüdür ve Bölüm
+18.13'te gösterildiği gibi kat edilen bir mesafe bulunmaz. Ölçülen şey, dönen
+paketin **tepe noktasının** nereye düştüğüdür. Engel geçişlerinde bilinen bu
+olgunun sinyal hızıyla ilişkisi, modelin kapatamadığı noktalardan biridir ve
+Bölüm 14.6'da açıkça bırakılmıştır.
+
+---
+
+## 25. Anlaşmazlıkların iki türü ve hangisinin hangisi olduğu
 
 Rakip kuruluşları doğrulamak ya da yanlışlamak bir yöntemdir. Bu çalışma
 bunun yerine kapsayıcı bir yöntem izler: iki konum, bakılan yön farklı olduğu
@@ -2846,7 +2948,7 @@ içindeki ve literatürle olan anlaşmazlıklarını bu ölçüte göre ikiye ay
 parametre çevrilerek elde edilebiliyorsa uzlaşmış sayılır. İki tarafın
 birbirini ikna edebilmesi yeterli değildir.
 
-### 24.1 Tek bir madalyonun iki yüzü olan beş anlaşmazlık
+### 25.1 Tek bir madalyonun iki yüzü olan beş anlaşmazlık
 
 | Anlaşmazlık | Çevirilen parametre | Sonuç |
 |-------------|--------------------|-------|
@@ -2859,7 +2961,7 @@ birbirini ikna edebilmesi yeterli değildir.
 Beşinin hiçbiri muhakeme ile kapatılmamıştır. Her birinde iki okuma da
 hesaplanmış ve aralarındaki parametre gösterilmiştir.
 
-### 24.2 Yönteme direnen dört çelişki
+### 25.2 Yönteme direnen dört çelişki
 
 Aşağıdaki dördünde iki konum **aynı ölçüm için farklı sayılar** verir. Bakış
 açısı değiştirerek bu fark kalkmaz. Her satırda iki sayı da hesaplanmış ve
@@ -2879,7 +2981,7 @@ değildir. Modelin bugünkü hâli bunlardan hiçbirine karar vermemektedir.
 dört satırın her birinde iki sayının gerçekten farklı olduğu ayrı ayrı
 sınanmakta ve farklı çıkanlar sayılmaktadır.
 
-### 24.3 Yöntemin bilançosu
+### 25.3 Yöntemin bilançosu
 
 Dokuz anlaşmazlıktan beşi tek bir hesabın iki okuması olarak birleştirilmiş,
 dördü gerçek çelişki olarak ayakta bırakılmıştır. Kapsayıcı yöntem
