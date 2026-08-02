@@ -9,7 +9,7 @@ journal_ref: "Phys.Rev. D49 (1994) 5096-5104"
 doi: "10.1103/PhysRevD.49.5096"
 comments: "15pp, figures available on request from Charles Hellaby at cwh@maths.uct.ac.za"
 url: https://arxiv.org/abs/gr-qc/9404001
-stance: opposition
+stance: similiar
 body_source: "arXiv LaTeX source (gr-qc-9404001.tex); equations preserved as LaTeX"
 equation_blocks: 56
 figures: 0

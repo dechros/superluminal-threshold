@@ -1988,3 +1988,1208 @@ Casimir signature of a threshold surface is; the answer in the literature is tha
 there is one, it is finite, and its sign depends on the geometry. The
 concentric-sphere configuration is the closest existing analogue of our slab.
 
+---
+
+# Part D. Matter as wave packet and point body
+
+The article carries every step in two readings, a wave packet and a point body,
+and treats divergences between them as results. Bears on Sections 11, 11.1 to
+11.5, 12, 12.2, 14.3 to 14.5.
+
+### [172] The signature-change wave-packet gap stands
+CONTEXT, a search result rather than a paper, and it is the evidence behind
+Section 26.2's second row. A direct search confirms it: `abs:"signature change"
+AND abs:"wave packet"` returns only `[83]` and one unrelated quantum-cosmology
+paper; `abs:"degenerate metric" AND abs:propagation` and `abs:"signature change"
+AND abs:transmission` return nothing. The mode-level machinery exists, junction
+conditions and propagation rules in the Dray-Manogue-Tucker and Hayward lineage,
+and particle creation at a signature change exists in `[61]`. What does not exist
+anywhere is a **superposition of those modes into a packet** with a **timing
+observable** read off the transmission phase. That is the narrow, defensible form
+of the gap and the one the article should claim. This search is closed.
+
+**The gap, stated in its narrow and defensible form.** See `[172]`. What is
+missing from the literature is not a solution of the field equation across a
+signature change, which exists in the Dray-Manogue-Tucker and Hayward lineage,
+nor particle creation at such a surface, which exists in `[61]` and `[59]`. What
+is missing is a **superposition of those modes into a packet** with a **timing
+observable read off the transmission phase**. That is the article's own
+contribution in Sections 11 and 14, and it is what Section 26.2 records as having
+no published counterpart.
+
+### [144] Marinov, Segev, *On the concept of the tunneling time*, arXiv:quant-ph/9603018
+PRIOR, and the reference to cite when Section 11 goes from plane modes to packets.
+The asymptotic time evolution of a wave packet incident on a barrier is worked out
+with the **Wigner phase-space distribution**, and the distortion of the
+transmitted packet is determined by **two time-like parameters given by the energy
+derivative of the complex transmission amplitude**. The treatment is consistent
+with the Buttiker-Landauer time, the complex time and Wigner's phase time at once,
+and the speed-up effect and the negative dispersion are discussed.
+
+This is the machinery the packet layer was missing. Our transmission amplitude
+across the slab is complex and thickness-dependent; its energy derivative gives,
+by this construction, both the delay of the returning packet and its distortion,
+from one object. That is exactly the output Section 15 wants, what returns and
+what is left behind.
+
+### [145] Saxton, Harris, *Control of arrival time using structured wave packets*, arXiv:2007.11676
+SUPPORT with a hard consequence for the return moment. Gaussian and non-Gaussian
+packets with **identical momentum densities** are scattered from a square barrier,
+and the non-Gaussian packets show **different average arrival time delays**. The
+difference comes from the non-linear terms in the phase of the momentum wave
+function, which change the self-interaction time of the packet, so the average
+arrival delay can be **controlled through the momentum wave function phase,
+independently of the packet's energy and momentum density**.
+
+Read against the round trip this is a constraint, not a convenience. **The return
+placement is not fixed by the particle's energy.** Two particles prepared with the
+same energy and the same momentum distribution, differing only in packet phase
+structure, come back at different times. So the core map of Section 25 cannot be a
+function of the incident energy alone; it is a functional of the prepared packet.
+That is a genuine prediction and also a warning, because any single number quoted
+for the return offset is underdetermined until the preparation is specified.
+Abstract only for this file.
+
+### [146] Frentz, Lunardi, Manzoni, *Average clock times for scattering through asymmetric barriers*, arXiv:1312.4000
+SUPPORT, and the one that connects packets to the saturation. Salecker-Wigner-Peres
+clock times for reflection and transmission, averaged over the post-selected
+reflected and transmitted sub-ensembles, are computed for a localised wave packet
+scattering off an **asymmetric** barrier, together with the dwell time over the
+same sub-ensembles. Negative average reflection times are examined; averaging over
+the reflected sub-ensemble removes the negative peaks at resonance but still
+permits negative values for transparent barriers; and **the saturation of the
+average times with barrier width, the Hartman effect, is addressed** in the same
+framework.
+
+Two reasons to keep it. The barrier is **asymmetric**, which is our case: the
+entry and exit crossings are not the same, since the particle enters from a
+Lorentzian region and leaves into one but the interior orientation is undefined.
+And the clock is a physical clock read on post-selected sub-ensembles, which is
+the operational form the article needs: what a thing done on the far side means
+here is what a clock here records for the sub-ensemble that came back.
+
+### [11.3 support] `[130]`, filed in Part F, is the entry that decides when a point
+body may be posited at all: a body in a region with no time orientation transforms
+as a spinor, so the point-body reading of Section 11.3 is not the same object as
+the point-body reading here.
+
+### [163] Macke, Segard, *Simple asymptotic forms for Sommerfeld and Brillouin precursors*, Phys. Rev. A 86 (2012) 013837, arXiv:1203.4461
+CONTEXT, the classical reason a group delay never constrains the front. Closed
+forms for both precursors in an opaque Lorentz medium: the Sommerfeld shape
+depends only on the order of the initial discontinuity, the Brillouin shape is
+fixed by the attenuation dispersion alone. Warns that a discontinuous initial
+packet is the worst case for a front check, which is a direct instruction for how
+Section 11's packet must be prepared if the article ever tests a front.
+
+### [164] Sokolovski, *On causality, apparent 'superluminality' and reshaping in barrier penetration*, Phys. Rev. A 81 (2010) 042115, arXiv:1002.1673
+CHALLENGE. The barrier is an effective beam splitter recombining **backward**
+shifted copies of the free envelope, weighted by the delay amplitude
+distribution. No copy is advanced; the interference is. A high barrier gives a
+delta-like distribution, a superoscillatory `T(p)`, and an advance of the reduced
+envelope by exactly the barrier width, that is Hartman without any transit time.
+
+### [165] Sokolovski, Akhmatskaya, *"Superluminal paradox" in wavepacket propagation*, Ann. Phys. 339 (2013), arXiv:1309.4990
+CHALLENGE, the general form of `[164]`. In momentum space the advance is a
+**bandwidth** effect: the packet probes only the local analytic behaviour of
+`T(p)`, and the advance appears when `T(p)` locally mimics an exponential, a Berry
+superoscillation. Two consequences. It is testable in our own numerics and it has
+**not** been tested: our advance must depend on the spectral width of the packet,
+and that dependence has not been computed. And the paper argues no single
+tunnelling time can exist, which makes the **frequency mixing** result of
+Section 14.9 more robust than the delay result of Section 14.4, a conclusion
+finding 1 reaches independently.
+
+### [166] Muga, Egusquiza, Damborenea, Delgado, *Bounds and enhancements for the Hartman effect*, Phys. Rev. A 66 (2002) 042115, arXiv:quant-ph/0206181
+CHALLENGE by quantification. Causality conditions bound the negative delay, and
+the bound is tightest when there are **no bound states**. Wells, and barriers near
+a new bound-state threshold, permit much larger advances at large transmission.
+So the bound-state spectrum of our effective potential must be computed before the
+size of our advance can be called anomalous. Still not done, and it is cheap.
+Relevant also to Section 27.1's first row: whether the intermediate region is a
+cavity or a barrier is exactly the question of whether it has bound states.
+
+## D1. Thickness, and which clock carries it
+
+### [147] Lunardi, Manzoni, *Relativistic tunneling through two successive barriers*, arXiv:0708.3507
+CHALLENGE to the return moment, and the closest configuration in this part to the
+round trip. A **Dirac particle**, so massive and relativistic, tunnelling through
+**two successive barriers**, which is two crossings with a region between them.
+Both the phase (group) tunnelling time and the dwell time are computed, and **in
+the opaque limit the relativistic theory also allows the emergence of the
+Generalized Hartman Effect**.
+
+The Generalized Hartman Effect is the statement that the tunnelling time through
+two successive barriers becomes independent not only of the widths of the barriers
+but **of the separation between them**. If that carried over, the delay
+accumulated on the round trip would carry no information about how thick the
+intermediate region is nor how long the particle was in it. The return placement
+would be a fixed offset and every thickness in the grid would give the same
+answer.
+
+### [148] Kudaka, Matsumoto, *A mathematically rigorous approach raises questions concerning the generalized Hartman effect*, arXiv:1105.2159
+CHALLENGE to `[147]`, the first escape route. The claim that the tunnelling time
+does not depend on the separation between two successive barriers is argued to
+rest on **a lack of mathematical rigour in the original reasoning**, and a
+rigorous treatment is said to show that **the tunnelling time does depend on the
+length of the free space between the barriers**.
+
+### [149] Chuprikov, *On the generalized Hartman effect and transmission time for a particle tunnelling through two identical rectangular potential barriers*, arXiv:1005.1323
+CHALLENGE to `[147]` by a different and more informative route, and the most
+useful single entry for the thickness axis. The subprocesses, transmission and
+reflection, are modelled separately at all stages of scattering, and dwell times
+together with local and asymptotic group times are defined for each. The
+asymptotic transmission group time reproduces the Wigner phase time in the opaque
+limit and hence reproduces both the usual and the generalized Hartman effects; but
+**the transmission dwell time predicts monotonic growth of the tunnelling time as
+the distance between the opaque barriers increases**, and the authors argue that
+only this time scale is the true average time spent by transmitted particles in
+the region. All transmission times admit only indirect measurement.
+
+So the saturation and the growth are properties of **two different clocks**, not
+two different physical situations.
+
+**Confirmed on our own numbers, finding 1.** Section 14.7 computed the stored norm
+independently of the phase and got $0{,}31567$, $0{,}31269$, $0{,}31256$,
+$0{,}31256$, $0{,}31256$ at $d = 1, 2, 4, 8, 16$: the dwell quantity saturates too,
+in the barrier regime, and the ratio of phase delay to dwell time is fixed at
+$2{,}817$ across $d = 2, 4, 8$ to one part in $10^{6}$. Two consequences, and they
+pull in opposite directions. Chuprikov's separation of the clocks is vindicated as
+a distinction, since the two quantities are not equal. But his hope that the dwell
+time carries the thickness is **not** vindicated in our configuration, because in
+the barrier regime both saturate together, so the two quantities differ by a
+normalisation factor and not by a mechanism. In the propagating regime the stored
+norm grows linearly, $1{,}000$, $2{,}000$, $4{,}000$ at $d = 1, 2, 4$, so there
+the two cannot saturate together and the transit reading survives. Which of
+Chuprikov's two regimes we are in is the same question Section 27.1's first row
+asks, and the answer is that it depends on which axis turns.
+
+### [150] Bhattacharya, Roy, *Hartman effect and dissipative quantum systems*, arXiv:1209.0993
+CHALLENGE to `[147]`, the third escape route, and the physically cheapest. For a
+dissipative quantum system with an inverted parabolic barrier, **the dwell time
+increases with barrier width, which precludes the Hartman effect outright**.
+Saturation is a property of the unitary, dissipation-free idealisation. Our
+crossing is not obviously dissipation-free: `[113]` puts a matter layer at the
+junction and `[89]` allows the surface to be a source, both couplings to something
+outside the mode.
+
+**Weakened by finding 1.** This was recorded as the most promising escape route,
+because the liability of `[113]` would become the thing that rescues the return
+reading. Our own barrier-regime numbers show both the phase delay and the stored
+norm saturating with a fixed ratio, which is the dissipation-free behaviour, so
+whatever dissipation the layer supplies is not enough to lift the saturation in the
+regime computed. The route is not closed, since the layer's coupling has not been
+put into the scattering calculation, but it can no longer be presented as the
+likely rescue.
+
+### [151] Hasan, Mandal, *General(ized) Hartman effect*, arXiv:2010.02755
+PRIOR, and it fixes how the thickness axis behaves under repetition. If the
+Hartman effect holds for an arbitrary unit-cell potential then it holds for a
+periodic system built from repeated copies, and **the tunnelling time for a
+sufficiently thick single cell equals that of the whole periodic system, for any
+value of the intervening gap**. That is the formal statement of the grid's
+right-hand column: once the intermediate region is thick enough, adding more of
+it, or adding more regions, changes nothing. "Thick" and "unbounded" collapse into
+one cell, and by `[149]` and finding 1 the collapse is a property of both clocks
+in the barrier regime, not of the group time alone.
+
+### [152] Olkhovsky, Recami, Zaichenko, *Resonant and non-resonant tunnelling through a double barrier*, arXiv:quant-ph/0410128
+CONTEXT, and it supplies the exception. An explicit phase time for a
+non-relativistic particle tunnelling through two rectangular barriers, resonant
+and non-resonant. Near a resonance the transmission coefficient and the phase time
+have Breit-Wigner type denominators; away from resonance and at low transmission
+probability, the phase time depends on the barrier width and on the separation
+only **exponentially weakly**. The exception is the resonance: there the
+double-barrier system has structure, a Breit-Wigner line with a width, and the
+placement is no longer flat. If the article wants the return to carry information
+about the interlude, resonant crossing is the regime, and `[121]`'s temporal
+Fabry-Perot is where it has been realised. Abstract only for this file.
+
+### [153] Klos, Dadoenkova, Rychly, Dadoenkova, Lyubchanskii, Barnas, *Hartman effect for spin waves in the exchange regime*, arXiv:1801.05876
+SUPPORT, and the only preparable apparatus in this cluster. The group delay of a
+spin-wave packet tunnelling through a barrier in a thin magnetic film, the barrier
+being a locally increased magnetic anisotropy field, is derived and **shown to
+saturate with increasing barrier width**, with general boundary exchange
+conditions allowing different coupling strengths between the barrier and its
+surroundings. A CoFeB layer with perpendicular anisotropy induced by an MgO
+overlayer is proposed as the system to observe it in.
+
+Two uses. It is a magnon system, so it sits alongside `[98]`, the polar 3He magnon
+condensate whose effective metric changes signature: the same class of material
+supports both an effective signature change and a measurable tunnelling
+saturation, which is the nearest thing to a bench on which the thickness question
+could be asked. And the boundary exchange conditions are a **tunable junction
+condition**, the analogue knob for the strong-versus-weak choice of Section 4.1
+and therefore for the first row of Section 27.2.
+
+## D2. Is the delay a transit time at all
+
+### [158] Winful, *The meaning of group delay in barrier tunneling*, New J. Phys. 8 (2006) 101, arXiv:quant-ph/0601085
+CHALLENGE, and after finding 1 the entry that has changed most. The group delay is
+the dwell time, and the dwell time is the lifetime of stored probability leaking
+from **both** faces, `tau_d = U / P_in`. It is therefore not a one-way transit
+time and cannot be divided by the thickness to get a velocity. Hartman saturation
+follows trivially, since the stored norm under an evanescent profile saturates.
+
+**Verdict changed: the test was run and Winful's reading applies in the barrier
+regime.** The old note said "compute `U / P_in` and compare with the phase delay;
+if they agree in the barrier regime, the article has to concede the reading." It
+was computed, in `src/`, and reported in Section 14.7. In the barrier regime the
+phase delay is $1{,}4629$ and the stored-norm dwell time is $0{,}5193$ at
+$d = 2, 4, 8$, so they are not numerically equal, but their **ratio is fixed at
+$2{,}817$ independent of thickness**, with the residual of order $10^{-6}$. Two
+quantities that differ by a thickness-independent normalisation are not
+independent observables. The conclusion Section 14.7 draws, and it is the right
+one:
+
+> In the barrier regime the delay read from the phase carries no information that
+> the stored norm does not carry. Reading the return moment as a travel time is
+> **not supported** in that regime.
+
+Section 26.1 lists "a saturating delay is a fast crossing" among the claims this
+work has withdrawn, and this entry is the reason.
+
+**And the reading has a limit, which is also new.** In the propagating regime,
+with no intermediate region, the stored norm grows **linearly** with thickness,
+$1{,}000$, $2{,}000$, $4{,}000$ at $d = 1, 2, 4$. The two quantities cannot then
+saturate together, the ratio is not fixed, and the transit reading survives. So
+Winful's argument is not a general refutation of transit readings; it is a
+statement about evanescent interiors. That matches Section 18.13 independently:
+the particle reading is legitimate only when the interior propagates.
+
+### [159] Winful, *Do single photons tunnel faster than light?*, arXiv:0708.3889
+CHALLENGE, strengthened by finding 1. The same argument applied to the
+Steinberg-Kwiat-Chiao and FTIR experiments: the measured delays are cavity
+lifetimes, not transit times. Since our own configuration now exhibits exactly the
+fixed-ratio behaviour Winful predicts, the analogy between our barrier-regime
+delay and those experiments is closer than the old notes allowed, and the article
+should draw it explicitly rather than treating those experiments as a separate
+subject.
+
+### [160] Winful, *Comment on "Macroscopic violation of special relativity"*, arXiv:0709.2736
+CHALLENGE. Nimtz and Stahlhofen's zero-time claim is a transverse Goos-Haenchen
+shift described entirely by Maxwell's equations. Sets the standard of evidence: a
+shifted peak with no independent front and no independent clock is not evidence
+that anything crossed. Section 14.6 and Section 25.6 both accept this standard.
+
+### [161] Nimtz, *Tunneling violates special relativity*, Found. Phys. 41 (2011) 1193, arXiv:1003.3944
+The minority position, kept as the other half of the debate. Claims a superluminal
+**signal** velocity for evanescent modes and a universal barrier front scattering
+time of order `1/nu` set by the carrier frequency.
+
+**Verdict changed by finding 1, against him.** That frequency-set law is a
+different saturation law from `[158]`'s stored-energy law, and the two were said
+to be distinguishable in our own numerics. They now have been distinguished. A
+saturation time set by the carrier frequency alone would have no reason to stand
+in a fixed ratio to the stored norm as the thickness varies; a stored-energy
+lifetime would, and does, with ratio $2{,}817$ across $d = 2, 4, 8$. The numbers
+favour Winful's law over Nimtz's in our configuration. This is one of the few
+places where our own calculation adjudicates between two published positions
+rather than being adjudicated by them, and it should be said plainly.
+
+### [162] Dumont, Rivlin, *Superluminal tunneling times without superluminal signaling*, Phys. Rev. A 107 (2023) 052212, arXiv:2205.15375
+CHALLENGE to the signalling reading, SUPPORT for the timing one, and the
+formulation the article should adopt. Accepts the mean-time advance, then shows
+the time to send one bit with `N` particles is governed by the **early-time tail**
+of the arrival distribution, not the mean, and exceeds the free-photon time. The
+peak is advanced; the bit is not. Read together with finding 1 the position is
+now doubly safe: the advance is not a signal, and in the barrier regime it is not
+even an independent clock.
+
+### [167] Anastopoulos, Savvidou, *Time-of-arrival probabilities II: tunneling times*, J. Math. Phys. 49 (2008) 022101, arXiv:0706.2492
+SUPPORT, partly. A POVM for time of arrival at a detector at distance `L`,
+depending only on the initial state, the Hamiltonian and the detector position.
+For localised initial states the detection probability **recovers the phase
+time**, so the Wigner reading is a limit of an operational observable, with limits
+of definability established outside that class. The return moment should be
+defined at a fixed detector outside the region, with the width of the distribution
+reported alongside the mean. Note the tension with finding 1: this says the phase
+time is operationally meaningful as an arrival statistic, while Winful says it is
+not a transit time. Both hold. It is an arrival time at a detector and not a
+duration inside the region, and Section 14.7 should keep those apart.
+
+### [168] Flores, Galapon, *Quantized relativistic time-of-arrival operators for spin-0 particles*, arXiv:2212.00343
+PRIOR and closest in kind. A time-of-arrival operator for a **Klein-Gordon**
+particle, our field exactly, built by a modified Weyl ordering, with no proper
+time and no internal clock. Finds the tunnelling time **instantaneous** when the
+barrier height is below `mc^2`. Their conclusion is stronger than ours: a
+saturating but nonzero delay and an exactly vanishing one are different claims
+about the same regime. After finding 1 the comparison sharpens rather than
+softens, because our saturating delay is now known to be a normalisation of a
+stored norm; whether their instantaneous result is the same statement with the
+normalisation set to zero is a computation the article could do.
+
+### [169] Maccone, Sacha, *Quantum measurements of time*, Phys. Rev. Lett. 124 (2020) 110402, arXiv:1810.12869
+SUPPORT, methodological, and the entry Section 14.1 needs. A Hermitian
+time-of-arrival operator obtained by conditioning on an explicit **quantum
+clock**, bypassing the self-adjointness obstruction. Since our particle has no
+proper time inside the region, and Section 14.1 argues no clock can be carried
+through, this is the framework in which any claim of a return **moment**, as
+opposed to a return **phase**, has to be phrased. The gap between the two is
+itself a result, and finding 1 widens it: in the barrier regime we have a phase
+and a stored norm and no independent clock at all.
+
+---
+
+# Part E. The round trip, the return moment, and the information ledgers
+
+Bears on Sections 13, 13.1, 13.2, 14, 14.1 to 14.10, 15, 15.1, 15.2, 16, 16.1 to
+16.4, 17, 17.1 to 17.3, 25, 25.1 to 25.6.
+
+## E1. Two crossings as one object
+
+### [117] Dray, Hellaby, *Mirror symmetry and double signature change*, arXiv:2606.21805
+PRIOR, and the closest thing in the literature to the geometry the round trip
+needs. The black mirror spacetime connects the two exterior regions of extended
+Schwarzschild directly, with no interior region between them, and the authors
+re-examine it **as a model of double signature change**, using signature-change
+techniques. They ask whether there is a surface layer at the horizon, that is a
+distributional curvature singularity corresponding to an impulsive gravitational
+wave, and confirm that there is **none**. They then discuss the global structure
+and **examine what happens to worldlines and curves passing through**.
+
+The template for the whole construction: two changes rather than one, the surface
+layer question posed at both, and the fate of worldlines through the pair treated
+explicitly. Read alongside `[24]`, where two Lorentzian universes are joined
+through a Euclidean bounce, the same double-crossing topology reached from the
+cosmological side. Note the tension with `[113]`, `[116]` and now `[186]`: here
+the double crossing carries **no** surface layer, which is the outcome the article
+wants and which `[113]` says is available only when the extrinsic curvature
+vanishes. Whether the black mirror achieves that by satisfying the strong
+condition after all is the question to put to this paper, and after finding 3 it
+is the sharpest question in this part, because a layer-free double crossing is
+also the only energetically acceptable one.
+
+### [24] Hellaby, Sumeruk, Ellis, *Classical signature change in the black hole topology*, Int. J. Mod. Phys. D 6 (1997) 211, arXiv:gr-qc/9907042
+PRIOR, and under the round trip it is a two-crossing result rather than a black
+hole one. **Two Lorentzian universes joined through a Euclidean bounce** is the
+round trip's topology, with the two crossings explicit and the interlude finite.
+Modelled as the rebirth of a Schwarzschild black hole, viable with and without
+matter, with realistic models hiding the change surfaces inside the horizon. The
+condition it records is the one that now costs most: removing all surface effects
+needs not only vanishing extrinsic curvature but also **vanishing
+three-dimensional Ricci scalar**, which rules out realistic cosmological models.
+Read with `[113]` and `[186]`, that is the same statement three times: a crossing
+with no surface layer is a crossing under the strong condition; the weak condition
+buys transmission by accepting a layer; and the layer it accepts violates the
+dominant energy condition.
+
+### [25] Capozziello, De Bianchi, Battista, *Avoiding singularities in Lorentzian-Euclidean black holes*, arXiv:2404.17267
+PRIOR to Section 7.2 and strong. A Schwarzschild metric changing signature across
+the horizon, regularised by Hadamard partie finie, **proved to solve the vacuum
+Einstein equations**, with atemporality as the mechanism that removes the
+singularity, quantified by a regularised Kretschmann invariant.
+
+### [26] Bartolo, Caponio, Germinario, Sanchez, *Lorentzian-Euclidean black holes and Lorentzian to Riemannian metric transitions*, Phys. Rev. D 111 (2025) 104058, arXiv:2502.14108
+PRIOR and partially corrective of `[25]`: proper time to reach the horizon stays
+finite, so the Lorentzian-Euclidean model needs revision. Also observes that the
+change hypersurface is naturally spacelike and identifiable with the causal
+boundary of the Lorentzian sector, that degeneracy of the metric collapses the
+causal cones to a line while degeneracy of the dual metric collapses them to a
+hyperplane. The cone-collapse picture is the geometric content of Section 7.1's
+degeneracy argument, stated far more precisely. Note also that a spacelike change
+hypersurface is a non-timelike shell, which is `[186]`'s hypothesis.
+
+### [120] Ramaccia, Toscano, Bilotti, *Propagation through metamaterial temporal slabs*, arXiv:1911.04280
+### [121] Moussa, Xu, Yin, Galiffi, Radi, Alu, *Observation of temporal reflections and broadband frequency translations at photonic time interfaces*, arXiv:2208.07236
+### [122] Molero, Zapata-Cano, Alex-Amor, *Transfer ABCD matrix for time-varying media and time crystals*, arXiv:2503.15063
+SUPPORT, three entries, and the only place where a wave crossing **two**
+interfaces bounding a finite layer, entering and leaving, has been solved with
+explicit coefficients and then built. These are not signature changes and the
+article must not present them as such; the layer is a slab in time rather than in
+space, the dual of our configuration, and the formal structure carries over.
+
+`[120]`: a uniform medium present in all space for a **limited time**, a slab
+bounded by two temporal interfaces, with scattering coefficients derived as
+functions of the refractive indices and of the application time, the response
+controlled by the application time **which acts as the electrical thickness of a
+conventional spatial slab acts**. Section 6 argues that a finite-thickness
+threshold transmits and that transmission depends on thickness; here the same
+dependence is in closed form for the dual configuration. Abstract only.
+
+`[121]`: photonic time reflection and broadband frequency translation observed in
+a switched transmission-line metamaterial, and, decisively, **a pair of temporal
+interfaces is combined to demonstrate time-reflection-induced interference,
+realising the temporal counterpart of a Fabry-Perot cavity**. The two-crossing
+interference the round trip predicts has been measured, in the dual geometry, and
+what it produces is a cavity resonance condition relating the phases picked up at
+the two interfaces. Abstract only.
+
+`[122]`: ABCD parameters defined for temporal systems by rearranging $D$ and $B$
+at the input and output of the temporal boundary, the parameters of a temporal
+slab derived, reflection and transmission computed from them, and the dispersion
+diagram of a time crystal obtained. This makes **multilayer** temporal
+configurations a matter of multiplying matrices, which is the algebra
+Sections 6 and 13.1 should copy, and the composition rule is where the two
+matchings meet.
+
+### [84] Figueiredo, Gomes, Fumeron, Berche, Moraes, *Modeling Kleinian cosmology with electronic metamaterials*, Phys. Rev. D 94 (2016) 044039, arXiv:1608.03812
+SUPPORT, and the single most useful existing entry for the grid, because it
+occupies two cells in one paper and passes between them by varying one parameter.
+Klein-Gordon particles crossing a **discontinuous** change from $(-,+,+,+)$ to
+Kleinian $(-,+,+,-)$, realised as electrons at a junction between an anisotropic
+semiconductor and an electronic metamaterial. At the planar boundary onto a
+half-space the result is **mirror-like behaviour for the particle flux**, which is
+total reflection obtained independently and in a system that can be built. The
+paper then examines a slab of finite thickness and finds **tunnelling** through
+it. So total reflection is the thick limit of tunnelling, which is exactly what
+Section 27.1's third row records as a disagreement resolved by turning one
+parameter, the thickness.
+
+The dispersion relation inside, $\omega^2/c^2 = k_x^2 + k_y^2 - k_z^2 + \mu^2$
+with $k_z \to ip$ and $|r|^2 + |t|^2 = 1$, is the fact stated at the top of
+Part B, and it is what licenses importing the whole barrier literature of Part D.
+
+## E2. Where the return lands, and whether that is determined
+
+### [118] Hayward, *Complex lapse, complex action and path integrals*, arXiv:gr-qc/9511007
+PRIOR, and the best existing machinery for the placement. Instead of imaginary
+time, Hayward allows the **lapse function to be complex**. In the 3+1 action for
+gravity minimally coupled to a Klein-Gordon field this gives a complex action
+generating both the Lorentzian theory and its Riemannian analogue, and in
+particular **allows a change of signature between the two**; the action and the
+variational equations are manifestly well defined in the Hamiltonian
+representation, at the price of complex momenta, and the complex action
+interpolates between the Lorentzian and Riemannian actions as they appear in the
+respective path integrals. Applied to observed quantum tunnelling, the theory
+determines that the argument of the lapse for the universe now is extremely small
+but negative.
+
+Why this is the right shape. No elapsed duration can be read on the far side, so
+the return event cannot be placed by integrating a proper time there. The
+complex-lapse formulation does not ask for one: the phase of the lapse carries the
+interpolation, and the placement of an event on the real time axis follows from
+the phase acquired between the two crossings rather than from a duration
+accumulated between them. It also answers the objection that a signature change
+forces imaginary time and is therefore not classical, which is what `[63]` records
+against Hayward's own earlier route.
+
+Section 14.10 records that the article has **not** adopted an allowability
+criterion for this construction, and Section 26.3 lists that as open. The next
+four entries are why that matters.
+
+### [139] Briscese, *Note on complex metrics, complex time and periodic universes*, arXiv:2206.09767
+CHALLENGE, and the priority finding against `[118]`. If complex metrics are
+admitted, then **for any solution $g_{\mu\nu}$ of Einstein's equations, a complex
+change of time constructs infinitely many periodic or bouncing complex solutions
+$\hat g_{\mu\nu}$ that are physically indistinguishable from $g_{\mu\nu}$ over an
+arbitrarily long time interval.** The construction is by complex diffeomorphism,
+and the author's verdict is that this is an unacceptable arbitrariness. He then
+shows that the Kontsevich-Segal condition on physically meaningful complex
+metrics, as discussed by Witten, **restricts the family of admissible complex
+diffeomorphisms and removes the arbitrariness**, and argues the condition is a
+quantum-gravity generalisation of the equivalence principle to complex spacetimes.
+
+Constructive rather than fatal, and exactly on target: the return placement is
+read off a complex-time construction, and this says a complex change of time can
+manufacture a bouncing solution at will, so **the placement is not determined by
+the complex-lapse machinery alone**. What it manufactures at will is precisely a
+**bouncing** solution, and our round trip is a bounce.
+
+### [140] Witten, *A note on complex spacetime metrics*, arXiv:2111.06514
+PRIOR, and the criterion `[139]` appeals to. Complex saddle points seem necessary
+in the "Euclidean" path integral of general relativity, but some restriction on
+the allowed ones is needed to exclude unphysical examples; a proposal is made,
+motivated by Kontsevich and Segal's work on complex metrics in quantum field
+theory and by Louko and Sorkin's earlier work on **topology change from a real
+time point of view**. The Louko-Sorkin lineage matters for us: the criterion's
+ancestry is in exactly the problem of interpolating between geometries in real
+time. Whether our interpolation is an allowable complex metric in this sense is a
+computation, not a matter of taste, and it is the check that makes `[118]` usable.
+
+### [141] Lehners, *Allowable complex metrics in minisuperspace quantum cosmology*, arXiv:2111.07816
+CHALLENGE, and it says the check is tight. Applying the criterion in
+minisuperspace, **the saddle points of the gravitational path integral lie right
+at the edge of the allowable domain of metrics**, even when the saddles are
+complex or Euclidean, and **the Lefschetz thimbles, in particular the steepest
+descent contours for the lapse integral, are cut off as they intrude into the
+domain of non-allowable metrics**. In the de Sitter case the lapse integral is
+forced to become asymptotically Euclidean. So the complex lapse contour of
+`[118]` and `[142]` is not free, the physically interesting configurations sit on
+the boundary of what is allowed, and the contour one would naturally deform to is
+truncated.
+
+### [142] Banihashemi, Jacobson, *On the lapse contour in the gravitational path integral*, arXiv:2405.10307
+SUPPORT, and the most directly usable technical result for `[118]`. The
+gravitational path integrand has an **essential singularity at zero lapse, which
+is where the spacetime metric degenerates**; the lapse contour must run from
+$-\infty$ to $+\infty$ and must not pass through zero. Starting from the reduced
+phase space path integral, which has no essential singularity, the authors observe
+that if the momenta are integrated before the lapse then **the lapse contour
+should pass below the origin in the complex lapse plane**, and that this same
+contour is consistent with quantum field fluctuation amplitudes having the usual
+short-distance vacuum form and with obtaining the Bekenstein-Hawking entropy from
+a Lorentzian path integral.
+
+Three things. Zero lapse **is** our degenerate threshold surface, so the essential
+singularity sits exactly where $V = c$ sits, and the statement that the contour
+must not pass through zero is the path-integral form of the statement that the
+threshold cannot be crossed along the real axis. Going **below** the origin is a
+definite prescription: it fixes the sign of the phase acquired at the crossing,
+and with two crossings the two contributions either add or cancel depending on
+whether the same side is taken both times. That is a computation the article can
+do and has not done. And the prescription is derived rather than postulated, from
+the reduced phase space, which is the standard `[63]` says the subject lacks.
+
+### [143] Jonas, Lehners, Quintin, *Uses of complex metrics in cosmology*, arXiv:2205.15332
+CHALLENGE, and the sharpest consequence of the criterion for a round trip. Complex
+metrics let one replace singular spacetimes with regular ones, but also describe
+unphysical solutions in which quantum transitions become more probable than
+ordinary classical evolution. Deciding allowability in general is a complicated
+optimisation problem because of contour freedom, and a fast method is given for
+minisuperspace. Classical transitions always sit **on the boundary** of the
+allowable domain; no-boundary solutions are allowable; and **the proposed quantum
+tunnelling transitions from a contracting to an expanding universe violate the
+allowability criterion and may thus be unphysical**.
+
+A contracting-to-expanding transition is a turnaround through a complex region,
+the cosmological form of our round trip. This says that particular class is the
+one the criterion rejects. The article has to show its configuration is not of the
+rejected type, and `[134]`'s turning point is the natural comparison.
+
+### [119] Hayward, *On cosmological isotropy, quantum cosmology and the Weyl curvature hypothesis*, arXiv:gr-qc/9212006
+CONTEXT with one framing sentence the article should take over: signature change
+**is a classical model of quantum tunnelling** in quantum cosmology. The paper's
+own cosmological content is peripheral to us. The framing is not. If the far-side
+interlude is the classical model of a tunnelling event, then the placement
+question is the tunnelling-time question, and the article inherits both the
+machinery of Part D and its known difficulties, including finding 1.
+
+## E3. The ledgers: what returns, and what is lost
+
+### [131] Dulac, Wei, *No boundary density matrix in elliptic de Sitter*, arXiv:2512.00704
+SUPPORT, and it puts a number on the information question. Elliptic de Sitter is
+$dS/\mathbb{Z}_2$, non-time-orientable by antipodal identification. Unlike global
+de Sitter, whose vacuum is prepared by a no-boundary Euclidean path integral, the
+Euclidean elliptic space **does not define a wavefunction; the proposal is that
+the path integral there defines a no-boundary density matrix instead**, and for a
+free Dirac fermion in two dimensions the von Neumann and Renyi entropies of that
+density matrix are computed analytically, reducing to correlators of vertex
+operators on non-orientable surfaces.
+
+This is the closest the corpus comes to the information ledger of Section 17, and
+the answer has the right form: what you get back is a mixed state, and the
+information lost is its entropy, computable. Note that Section 17.2 finds the
+journey **sharpens** rather than blurs, by a relative entropy, which is the
+opposite sign to what one expects from a decoherence picture; this entry is the
+right frame in which to check whether that survives, since the object to compare
+is a density matrix and not a state.
+
+A second observation is a challenge and should not be passed over: in this
+setting the **global Hilbert space is one-dimensional**, while the Hilbert space
+associated with each individual observer is a nontrivial Fock space. If that
+carries over, there is no global state of the far side at all, and every statement
+about what happens there is relative to an observer who is not there. That is a
+sharper form of what Section 10 already concedes, and it is the same conclusion
+`[227]` reaches from quantum hypersurfaces.
+
+### [15.1 and 15.2] The returning weight and the shifted centre have no published
+counterpart. See `[172]` and Section 26.2: the packet-level questions of returned
+weight, centre shift, distortion and delay are answered here by our own
+calculation, with `[144]` for the machinery and `[120]` and `[122]` for the formal
+structure of a two-interface layer, and nothing for the signature-changing case.
+
+### [87 for the ledger] The frequency mixing of `[87]` is, after finding 1, the
+observable that carries the thickness when the delay does not. Its ratio depends
+only on the **total conformal size** of the crossed region and not on the profile,
+which is the strongest available statement that the mixing is a property of the
+interlude rather than of the profile chosen to model it. Section 14.9 is built on
+it and Section 27.1's second row files delay and mixing as complementary rather
+than rival readings of one amplitude.
+
+### [170] Mirmoosa, Setälä, Norrman, *Quantum theory of wave scattering from electromagnetic time interfaces*, arXiv:2312.15178
+SUPPORT, the Bogoliubov side, with a caveat: the matching condition is not ours,
+since a time interface conserves wavenumber where our spatial slab conserves
+frequency, so the transfer must be argued. A sudden index change conserves
+wavenumber, not frequency, so the mode operators transform by a **two-mode squeeze
+operator** mixing forward and backward modes at the same `k`, with `alpha = cosh
+r`, `beta = sinh r`. Consequence: what returns may be one member of a created
+pair, correlated with a counter-propagating partner, with squeezed-state
+statistics. Our classical frequency mixing is the same `beta` seen from outside.
+
+This is directly relevant to finding 4 and to Section 27.2's fourth row, where the
+two competing readings of a far-face return are one quantum of energy $-2{,}2361$
+against two quanta of energy $+2{,}2361$, to be decided by a coincidence count.
+Squeezed pair statistics is what the second reading predicts, and the correlation
+between partners is what a coincidence count would see.
+
+### [171] Prain, Vezzoli, Westerberg, Roger, Faccio, *Spontaneous photon production in time-dependent epsilon-near-zero materials*, Phys. Rev. Lett. 118 (2017) 133904, arXiv:1702.08228
+SUPPORT. Pair production from a homogeneous but time-varying medium, enhanced by
+orders of magnitude in ENZ media, and **peaked at the ENZ wavelength** rather than
+at the inverse timescale of the perturbation. A signature change is exactly such a
+degeneracy of the dispersion relation, so this predicts creation is the dominant
+channel near the degenerate frequency, with a definite spectral signature to look
+for in our own Bogoliubov coefficients. Combined with `[170]`, the pair branch of
+Section 18.4's recount has both a mechanism and a predicted spectrum.
+
+---
+
+# Part F. What far-side orientation means here
+
+The dictionary from an orientation on the far side to a statement in our terms.
+Bears on Sections 8.4, 18, 18.1 to 18.16, 24.1 to 24.6, 25.
+
+**Finding 4 governs this part.** The nine cells of the old orientation table were
+built on the assumption that the exit face and the turn are independent labels.
+Section 18.7 invalidates that: the exit face is the sign of the crossing
+wavenumber, which has the same magnitude as our energy, and the turn is the
+composite of the matrices realised at the entry and the exit face. One ordered
+pair of matrices fixes both labels, so they cannot be multiplied. Counting the
+distinct $(\text{energy sign}, \text{deflection})$ outcomes reached by the
+$8 \times 8 = 64$ ordered pairs of the eight admissible matrices gives:
+
+| Count | Value |
+|-------|-------|
+| If the two labels were independent | $9$ |
+| Actually reached by the face pairings | $6$ |
+| Of those, keeping our energy | $3$ |
+| Returning it with the opposite sign | $3$ |
+
+The six split exactly in half. The three energy-preserving outcomes are the three
+elements of the quantised deflection spectrum of Section 18.9. The three
+opposite-sign outcomes are the negative-energy arrival branch of Section 18.7,
+and they are the set the pair-creation reading claims. The row in which the
+particle never emerges is empty, by flux conservation rather than by argument.
+The **number** of genuinely distinguishing cells is unchanged at two; what changed
+is the whole they sit inside.
+
+### [128] Hadley, *The orientability of spacetime*, arXiv:gr-qc/0202031
+CHALLENGE, and a priority finding for the observation question. Hadley considers
+an experimental test of time orientability and shows that **a failure of time
+orientability of a spacetime region would be indistinguishable from a
+particle-antiparticle annihilation event**.
+
+Our far side is posited to have no time orientation (Section 8.4). This result
+says that from our side, the signature of that region is an annihilation, not a
+departure and a return: what an observer who never crossed records is a particle
+and an antiparticle disappearing. Read constructively it is the dictionary entry
+the project wants, because it names a definite thing to look for. Read as an
+objection it is severe, because the observation cannot distinguish the round trip
+from an ordinary annihilation, and the article must say what breaks the
+degeneracy.
+
+**Sharpened, not removed, by finding 4.** The recount does not dissolve the
+degeneracy; it locates it. The three opposite-sign outcomes are exactly the branch
+that looks like a pair event, and the three energy-preserving outcomes are the
+branch that does not. So the degeneracy is now known to afflict **half** the
+outcome set rather than the whole of it, and the discriminating question is
+narrowed to: given that the particle came back with our energy sign, was it the
+same particle. Section 26.3 lists the returning particle versus the created pair
+as open, with the note that the two agree in the magnitude of the energy and
+differ in the count, and that no apparatus for the count has been described.
+Compare `[28]`, where the loops at the change hypersurface may appear to a nearby
+observer as **the creation of a particle-antiparticle pair at two distinct
+points**: the two results are the same phenomenon seen at the two ends, and
+together they suggest the entire observable content of a round trip is a pair
+creation at the entry and an annihilation at the exit.
+
+### [156] Hadley, *A gravitational explanation for quantum theory: non-time-orientable manifolds*, arXiv:gr-qc/0703150, and [157] Diemer, Hadley, *Charge and the topology of spacetime*, arXiv:gr-qc/9905069
+CONTEXT, and they explain why the degeneracy is hard rather than removing it.
+`[156]` states the programme: manifolds that are not time orientable allow topology
+change and have, as additional properties, **net charge from source-free
+equations** and spin-half transformation properties, and the logical structure and
+probabilities of quantum theory are argued to arise from such acausal spacetimes.
+`[157]` gives the concrete geometry: a class of electrically charged wormholes
+whose outer two-sphere is not spanned by a compact co-orientable hypersurface,
+which can therefore **display net electric charge from the source-free Maxwell
+equations**, extending Sorkin's non-space-orientable construction to spacetimes
+admitting no time orientation; the simplest example is spherically symmetric.
+
+It is tempting to read the net charge as the discriminator, since an ordinary pair
+creation is charge-neutral overall. That reading is wrong and the article should
+not use it. On this programme an ordinary charged particle **is** a
+non-time-orientable region, and two regions of opposite twist are exactly a pair.
+The charge is what makes the far-side region look like a particle, not what makes
+it look like something else. `[128]`, `[156]` and `[157]` are by one author and
+are one position, not three.
+
+What `[157]` does give is quantitative rather than categorical: the charged
+non-time-orientable region has a **definite geometry**, spherically symmetric in
+the simplest case, with the charge fixed by the topology rather than by a source.
+So if a discriminator exists it will be geometric, in the field configuration
+around the threshold, not a conservation-law one. Section 23 should look there. As
+matters stand the degeneracy is not broken by anything in the literature, and the
+article says so.
+
+### [129] Hadley, *Electrodynamics and time orientability*, arXiv:1703.05573
+SUPPORT, and the most concrete dictionary in the corpus. On a spacetime that is
+not time orientable, a $U(1)$ bundle is constructed to **measure the twisting of
+the time axis**, and from that single assumption Maxwell's equations, the Lorentz
+force law and the Einstein-Maxwell equations follow, along Kaluza-Klein lines but
+with the constraints of a $U(1)$ connection rather than a fifth dimension. The
+result that matters: **apparent net electric charge arises naturally, because the
+direction of the electric field reverses along a time-reversing path, so the
+boundary of a time-reversing region carries a net electric flux and looks exactly
+like a region containing a charge**.
+
+This is a dictionary entry of the kind Section 18.2 asks for, and it is
+quantitative. A far-side orientation, which has no meaning in our terms, shows up
+on our side as a flux through the threshold surface, that is as an apparent
+charge. It also gives Section 19 a carrier that is not a photon in the ordinary
+sense: the channel is the $U(1)$ connection measuring the twist, and what crosses
+is a flux. The treatment is purely classical, which suits the two-layer model of
+Section 11. Read with `[222]`, where local breaking of $SO(3,3)$ to $SO(1,3)$ is
+perceived as the existence of gauge fields: two independent lines say the residue
+of an unobserved time direction is a gauge field.
+
+### [130] Hadley, *Spin half in classical general relativity*, arXiv:gr-qc/0004029
+SUPPORT for what matter means on the far side, and the entry Section 11.3 needs.
+Models of elementary particles as geons in classical general relativity acquire
+**the transformation properties of a spinor precisely when the spacetime manifold
+is not time orientable**. So a body defined in a region with no time orientation
+is not the same object as a body defined here; the absence of the orientation is
+what makes it a spinor rather than a scalar. This is the best available answer to
+"define the particle there" that does not require a quantum field theory on the
+far side, which `[37]` and `[38]` say is not available. Read with `[58]`, where
+the Dirac equation across a signature change carries no conserved inner product:
+this paper says the far-side object is spinorial, that one says the spinorial
+object has no conserved product across the crossing. Read with `[212]`, where a
+worldsheet Dirac operator exists in $(2,2)$ and not in $(3,1)$.
+
+### [100] Lemos, Muller, Reboucas, *Probing time orientability of spacetime*, Eur. Phys. J. C 83 (2023) 461, arXiv:2211.00816
+SUPPORT for Section 8.4, and it converts a stipulation into an observable. Time
+non-orientability of Minkowski spacetime is shown to be **locally detectable**
+through the stochastic motion of a charged particle in the electromagnetic
+vacuum, via a statistical orientability indicator showing an inversion pattern
+absent in the orientable case. The article's claim that the far side carries no
+future/past split is exactly a claim of time non-orientability, and this says such
+a claim has a local signature in vacuum fluctuations rather than being a global
+convention. A concrete route to the distinguishing measurement of Section 23.
+
+### [225 for the orientation trace] The zero-curvature criterion, finding 2, is the
+entry that decides where the orientation trace comes from. It is filed in Part C
+because it is a multi-time result, but Section 24.6 is its application and
+Section 18.15 is its independent confirmation from the transmission phase. The
+statement to carry into Part F: **an orientation among the far-side times leaves
+no trace in the interior, and leaves a trace at the boundary, in exactly two of
+the three planes, the two that touch the crossing slot.**
+
+### [103 for the dictionary] `[103]`'s time contraction and length dilatation is
+the kinematic half of the dictionary and is filed in Part C. Section 16.3's
+finding that only length is physical on the far side is the same statement, and
+`[79]`'s bound on the energy by the trace norm of the momenta is the third
+appearance of it.
+
+---
+
+# Part G. Signalling
+
+Bears on Sections 19, 19.1 to 19.7, and on Section 25.5's comparison with an
+uninterrupted signal.
+
+### [162 for signalling] `[162]` is the formulation the article adopts: the
+mean-time advance is accepted and the **bit** is shown to travel no faster,
+because the time to send one bit with `N` particles is governed by the early-time
+tail of the arrival distribution and exceeds the free time. Section 19 should
+state the no-signalling result in this form rather than by construction, because a
+construction can be revised and a tail argument cannot.
+
+### [51] Cohen, Glashow vacuum-Cherenkov constraint, as developed in arXiv:1110.4591, arXiv:1201.1322, arXiv:1112.0264, arXiv:1201.5363, arXiv:1711.02660
+CHALLENGE, and the decisive experimental instrument in this whole area. A
+superluminal particle radiates pairs, `nu -> nu + e+ + e-`, and loses energy; the
+absence of that loss bounds the superluminality. It is what killed the OPERA
+reading and what constrains every tachyonic neutrino proposal since. Under the old
+reflecting thesis the model was immune because nothing crossed. **That immunity is
+gone**: the article now claims a transmitted flux of $0{,}868$ for a $d = 1$ slab.
+Section 21.3 addresses the bound directly, and it is the first constraint the
+transmitting thesis has to survive.
+
+### [52] *Velocity requirements for causality violation*, arXiv:1304.5522
+CONTEXT. An explicit formula for the relative velocity required to produce a
+causal contradiction. Useful for stating precisely how far our threshold sits from
+any regime where the usual paradoxes bite.
+
+### [53] The OPERA aftermath, arXiv:1111.7050, arXiv:1109.6562, arXiv:1110.0424, arXiv:1109.6160, arXiv:1201.4147, arXiv:1110.1790, arXiv:1112.1324
+CONTEXT. The measurement, the constraints that contradicted it, and the mundane
+explanations: synchronisation conventions, non-inertial frames, weak values,
+damped pulses. Collectively, apparent superluminal velocities have so far always
+had a subluminal explanation. Finding 1 is a small instance of the same pattern
+turned on our own numbers, and the article should say so.
+
+### [54] Modern Lorentz invariance tests, arXiv:gr-qc/0502097, arXiv:1304.5795, arXiv:0909.4927, arXiv:1906.05933, arXiv:hep-ph/0407232
+CONTEXT. The standing bounds. Any coupling between the far side and ordinary
+matter has to hide inside these.
+
+### [55] *Impossibility of superluminal signalling in Minkowski space-time does not rule out causal loops*, arXiv:2206.12887
+CONTEXT, and it matters more under the new thesis than the old. Separates
+relativistic causality from operational causality. Section 19 rules out signalling
+by construction and by `[162]`'s tail argument, which is not the same as ruling
+out causal loops, and `[28]`'s time-reversing loops at the hypersurface are
+exactly the object this distinction is about.
+
+### [56] *k-essence, superluminal propagation, causality and emergent geometry*, arXiv:0708.0561, and *Attractor scenarios and superluminal signals in k-essence cosmology*, arXiv:0706.3994
+CONTEXT. Superluminal propagation on a classical background without causal
+paradoxes, because the effective cone differs from the light cone. The standard
+example of how superluminality can be harmless, and a useful contrast to the
+article's sharper claim.
+
+### [57] Chronology protection, arXiv:gr-qc/0009061, arXiv:hep-th/0602293, and the closed timelike curve surveys arXiv:2101.08592, arXiv:1008.1127, arXiv:gr-qc/0405114
+CONTEXT. Background for any claim about time reversal at the threshold. Read with
+`[28]`: the loops found there are local and at the hypersurface, which is exactly
+the regime these protection arguments are least decisive about.
+
+### [116 for the gravitational channel] `[116]` is the entry Section 19.5 needs. The
+jump in the second fundamental form that the weak condition permits exists in
+general relativity and $F(R)$ and essentially nowhere else, and what it produces
+is an **impulsive gravitational wave** at the surface. That is a named carrier for
+the gravitational channel, and it is the same object `[113]` calls a matter layer,
+seen on the gravitational side. Section 19.5 computes a contrast of $4{,}0000$ at
+half a unit and reports the channel's capacity as unknown; `[223]`'s screening
+result is the closest existing statement of what such a channel does at short
+range, and `[107]`'s imaginary self-energy is what it costs.
+
+### [129 for a non-photon carrier] `[129]`, filed in Part F, supplies the second
+carrier: the $U(1)$ connection measuring the twist of the time axis, with a flux
+crossing rather than a photon. Section 19.1 finds that being massless does not
+help; this is the entry that says the channel need not be a massless particle at
+all.
+
+### [12 and 19.7] `[12]` is the precedent for Section 19.7's treatment of the
+Maxwell field under $D$, and it goes further than we do, solving the transformed
+equations rather than checking the invariant.
+
+### [34 for correlation] `[34]` explains entanglement correlations by
+finite-velocity exchange through an extra time. Section 19.4 insists correlation
+is not a signal. These are incompatible positions and the article should say which
+it holds rather than citing `[34]` as support.
+
+---
+
+# Part H. Obstacles and objections
+
+Bears on Sections 20, 20.1 to 20.4, 21, 21.1 to 21.6, 22, 23.
+
+The load-bearing entries here are filed where their subject matter is, and are
+listed by number with a one-line statement of the objection so that Section 21 can
+be checked against them.
+
+- **The transformation is nothing new.** `[4]`, `[86]`. Section 20.4 concedes the
+  substance. Section 21.1's independent recount of the line-element-preserving
+  permutations reproduces `[4]`'s six.
+- **The transformation is not direction covariant.** `[3]`. Our $D$ has
+  three-dimensional determinant $-1$ and is not in his extended group. Narrow but
+  real.
+- **The branches are not connected by any formalism.** `[5]`. Answered with a
+  number, $0{,}868$, not with a formalism.
+- **Indeterminism is not derivable, and if it is it is expensive.** `[6]`, `[8]`,
+  `[9]`. The last is a theorem and the article must say which of the four things
+  it gives up.
+- **The junction condition adopted is an error, not an option.** `[90]`, `[114]`.
+  Answered only by taking a side, which Section 4.1 must do explicitly.
+- **The layer cannot be made acceptable.** `[186]`, with `[113]`, `[155]`. This is
+  the heaviest cost of the transmitting reading and Section 3.6 records it without
+  softening. Finding 3.
+- **Signature change plus surviving field equations plus a real tear: pick two.**
+  `[92]`. The braneworld answer `[189]` is that the singular description is the
+  induced one; the price is a bulk.
+- **No covariant quantum field theory of superluminal objects exists.** `[37]`,
+  `[38]`, with `[36]` as the attempted cure and Section 21.2 as our own check.
+- **Extra times collapse to one whenever probability is conserved.** `[32]`.
+  Section 21.4. Finding 2 supplies the sharper version: flat interior, curvature
+  at the boundary only.
+- **Several timelike dimensions are presumably unphysical, unlike multi-time wave
+  functions.** `[75]`. We are the second kind.
+- **Gravity seeing the extra times costs an imaginary self-energy.** `[107]`,
+  quantified in `[223]`.
+- **The vacuum-Cherenkov bound.** `[51]`. Section 21.3. No longer evaded, since
+  something now crosses.
+- **The return placement is not determined by the complex-lapse machinery
+  alone.** `[139]`, with `[140]`, `[141]`, `[143]`. Section 14.10 and
+  Section 26.3 record the criterion as not adopted.
+- **A saturating delay is not a transit time.** `[158]`, `[164]`, `[165]`.
+  Finding 1. Withdrawn in Section 26.1.
+- **The round trip may be observationally identical to a pair event.** `[128]`,
+  `[156]`, `[157]`. Not broken by anything in the literature. Narrowed but not
+  removed by finding 4.
+- **A global obstruction to combining a non-orientable far side with the corpus's
+  own construction of the change surface.** `[135]`. Compactness is the escape
+  route to examine.
+- **Whichever boundary condition is chosen at the wall.** `[19]`, `[39]`.
+  Section 21.5 and Section 27.2's third row. Both signs computed, neither chosen.
+- **The unclosable objection.** Section 21.6, and `[11]` is its literature form:
+  writing coordinate maps is not providing a physical theory until a closed-loop
+  interference is computed.
+
+## Templates for something measurable
+
+### [49] *Inflation from covariant signature change: a geometric mechanism*, arXiv:2607.01274
+SUPPORT, and the single most useful paper for Section 23. A smooth Euclidean to
+Lorentzian signature change, encoded by a scalar interpolator along a timelike
+direction, **drives a finite interval of accelerated expansion**. Signature change
+is turned into an inflationary mechanism with observable consequences rather than
+a kinematic curiosity. If our threshold is to predict anything measurable, this is
+the shape the argument has to take: put the transition somewhere it can act, then
+compute what it does to something we already observe.
+
+### [50] Bojowald et al., *Signature change in loop quantum cosmology*, arXiv:1207.4657
+SUPPORT. Also derives corrections to the inflationary scalar and tensor power
+spectra from the signature change. Same lesson.
+
+### [97] Smolyaninov, Narimanov, *Metric signature transitions in optical metamaterials*, Phys. Rev. Lett. 105 (2010) 067402, arXiv:1007.1130
+SUPPORT for Section 10.12 and for Section 23. Extraordinary waves in an indefinite
+metamaterial see an effective $(-,-,+,+)$ metric, and during a signature-change
+transition in that medium a Minkowski spacetime is created **together with a large
+number of particles populating it**. Peer reviewed in PRL and realisable on a
+bench. Particle production at a signature change is a measured-in-analogue effect,
+not a conjecture. The companion arXiv:0908.2407 states the same effect and
+identifies the indefinite medium explicitly with two-times physics in $2+2$;
+arXiv:1301.6060 makes the signature depend on a lattice periodicity, that is,
+gives a knob.
+
+### [138] Smolyaninova, Cartelli, Augstein, Spickard, Devadas, Smolyaninov, *Experimental observation of effective gravity and two times physics in ferrofluid-based hyperbolic metamaterials*, arXiv:2003.01564
+SUPPORT, and it upgrades `[97]` from proposal to observation. The two-times
+behaviour of extraordinary waves in hyperbolic metamaterials is **reported as
+experimentally observed** in iron- and cobalt-based ferrofluid hyperbolic
+metamaterials via gravity-like nonlinear optics: alongside the ordinary temporal
+coordinate, the spatial coordinate along the optical axis also acquires timelike
+character. The strongest item the article has for Section 23: a region with more
+than one timelike direction has been built and probed, and the knob is the
+ferrofluid. The honest qualification is that the effective metric is $(2,2)$
+rather than our $(3,1)$, and that what is observed is the two-times character of
+the medium, not a particle making a round trip through it. Abstract only.
+
+### [98] Nissinen, Volovik, *Effective Minkowski to Euclidean signature change of the magnon BEC pseudo-Goldstone mode in polar 3He*, JETP Lett. 106 (2017) 234, arXiv:1707.00905
+SUPPORT, a second independent laboratory system. In the coherently precessing
+spin-superfluid state of polar 3He in aerogel, the phonon of the magnon condensate
+sees an effective metric whose signature changes from Minkowski to Euclidean at a
+critical tilting angle of the applied field. The signature change is an
+**instability threshold controlled by an external parameter**, the closest
+existing analogue of our $V = c$ surface being approached rather than postulated.
+Read with `[153]`, the magnon tunnelling saturation, the same class of material
+supports both effects.
+
+### [85] Fumeron, Berche, Santos, Pereira, Moraes, *Optics near a hyperbolic defect*, Phys. Rev. A 92 (2015) 063806, arXiv:1510.06868
+SUPPORT. In a hyperbolic metamaterial the effective metric has Kleinian signature,
+two timelike coordinates, and light near a disclination follows Poinsot spirals
+and is trapped for any impact parameter. A second, optical realisation of a
+$(2,2)$ region with a measurable geodesic structure. In the analogue sense a
+$(2,2)$ region is demonstrably physically defensible.
+
+---
+
+# What the literature settles, and what it leaves open
+
+This section is the notes' counterpart to Sections 26 and 27 of the article, and
+it uses the same four classes so that the two can be checked against each other.
+The classes are not interchangeable and should not be merged: **priority** is
+where a published result precedes ours and we must cite rather than claim;
+**no counterpart** is where nothing published addresses the question at all, so
+there is nobody to agree or disagree with; **open** is where the question is
+unsolved here and outside alike; **live disagreement** is where two papers give
+different answers to the same question, which is the only class an experiment can
+close.
+
+## 1. Where the literature has priority over this work
+
+These are results we must cite as precedent, not present as new.
+
+| Our claim | Prior published result |
+|-----------|------------------------|
+| The factorisation of a superboost into a flip and a dual-velocity boost | `[2]`, used as a lemma by `[4]` |
+| The extension of the transformation to a group, with representations | `[3]`, far more complete and direction covariant |
+| The junction condition as the delta coefficient in the field equations | `[16]` |
+| Ill-posedness of the Klein-Gordon initial value problem across the change | `[18]`, proved where we demonstrate |
+| Transmission selected by flux conservation, with a positive/negative frequency mix fixed by conformal size alone | `[87]` |
+| Reaching a purely timelike far side by flipping the **spatial** eigenvalues | `[99]`, the only paper whose far side is ours |
+| Time contraction and length dilatation as the far-side role reversal | `[103]` |
+| Uniqueness of the spherically symmetric far-side vacuum solution | `[104]`, a Kleinian Birkhoff theorem |
+| Crossing is direction-selected, not free | `[96]`, one, two or three admissible directions, in two dimensions |
+| The far side has a $(2,2)$ status as an auxiliary continuation | `[68]` |
+| Total reflection as the thick limit of tunnelling through a Kleinian slab | `[84]` |
+| Delay saturation as the lifetime of stored probability, not a transit time | `[158]`, and our finding 1 concedes it in the barrier regime |
+| The two-clock resolution of the thickness question | `[149]` |
+| Packet distortion and delay from the energy derivative of the transmission amplitude | `[144]` |
+| Placement by the phase of a complex lapse rather than by a duration | `[118]` |
+| The lapse contour must pass below the origin and not through zero | `[142]`, derived from the reduced phase space |
+| Zero curvature on the space of times as the criterion for whether orientation matters | `[225]`, and our finding 2 is its application |
+| The dominant energy condition is violated by any non-timelike shell | `[186]`, and our finding 3 is its instance |
+| One-over-thickness scaling of the layer strength as generic | `[179]` |
+| A failure of time orientability looks like a pair annihilation | `[128]` |
+| A time-reversing region's boundary carries a net flux, that is, an apparent charge | `[129]` |
+| A body in a non-time-orientable region transforms as a spinor | `[130]` |
+| Information loss stated as the entropy of a returned density matrix | `[131]` |
+| Three times reduced to one observable time by local symmetry breaking, with gauge fields as the residue | `[222]` |
+| The extra time removed by gauge rather than by fiat | `[31]`, `[213]` to `[221]` |
+| Particle creation at a signature change, computed | `[59]`, `[61]`, `[97]` |
+| Two Lorentzian regions joined through a finite interlude, worldlines followed through | `[24]`, `[117]` |
+
+## 2. Where this work has no published counterpart
+
+Three questions have no interlocutor in the corpus. This is a record of
+**solitude**, not a claim of correctness: the numbers may be right or wrong and
+there is nothing published to check them against.
+
+1. **A transmission coefficient across a signature change.** The mode-level
+   machinery exists in the Dray-Manogue-Tucker and Hayward lineage, and the
+   junction conditions are argued over at length, but no published calculation
+   produces a number for what fraction of an incident field crosses a
+   signature-changing layer of given thickness. Our $0{,}868$ at $d = 1$ stands
+   alone. The nearest neighbour is `[84]`, which computes tunnelling through a
+   Kleinian slab but in an analogue medium and without the junction-condition
+   dispute attached.
+2. **A wave packet crossing a signature change.** Confirmed by direct search in
+   `[172]`: `abs:"signature change" AND abs:"wave packet"` returns only `[83]` and
+   one unrelated quantum-cosmology paper; `abs:"degenerate metric" AND
+   abs:propagation` and `abs:"signature change" AND abs:transmission` return
+   nothing. What is missing is not the modes and not the particle creation, both
+   of which exist, but the **superposition of those modes into a packet with a
+   timing observable read off the transmission phase**. Everything in Part D is
+   barrier literature whose transfer to the signature-changing case has to be
+   argued, not assumed.
+3. **The map from a far-side orientation to the return event.** Section 25's core
+   map has no published counterpart in any form. `[219]` is the closest structural
+   analogue, an invariant amplitude restricted to endpoints on a chosen
+   hypersurface, and `[227]` is the closest conceptual one, conditioning a
+   multi-time state on a quantum hypersurface. Neither is the same object. This is
+   the centre of the work, and the centre is the part with no literature.
+
+A fourth, narrower gap: **gravitational signalling across the surface**. Apart
+from `[116]`'s impulsive wave and `[113]`'s matter layer there is no treatment of
+a gravitational wave crossing a signature change, and no treatment of what a mass
+on one side does to the other. `[223]`'s screening is the nearest thing and it is
+a Kaluza-Klein calculation, not a crossing.
+
+A fifth, bibliographic: the **originating weak-condition paper**, Ellis, Sumeruk,
+Hellaby and Roberts 1992, cited as the source of the condition by `[66]` and
+others, is not in the corpus and was not found on arXiv. It is a 1992 journal
+paper and may predate the archive, but that was not verified. The load-bearing
+citation for the article's junction choice is currently reached only through
+papers that discuss it.
+
+## 3. Live disagreements: two papers, two answers, same question
+
+These are the ones an experiment could close. Each row names both positions and
+what would decide.
+
+| Question | One answer | The other | What decides |
+|----------|-----------|-----------|--------------|
+| Is the strong condition a theorem or a choice | `[90]`, `[114]`, `[16]`: the junction conditions follow from the field equations, so the weak condition is an error | `[91]`, `[23]`, `[63]`: there is no canonical form of the field equations at a signature change, so it is a postulate either way | The transmitted flux at the threshold: $0$ against $0{,}868$ for $d = 1$ |
+| Which boundary condition holds at the wall | `[19]`: Dirichlet, from self-adjoint extensions, with the region unstable | `[16]`, and our Section 4.1: Neumann | The sign of the Casimir force: $-0{,}006854$ attractive against $+0{,}005997$ repulsive |
+| Is the far-side Casimir energy smooth | `[39]`: oscillating, sign-changing, non-differentiable, with jumps to infinity | `[112]`, `[62]`, and our Section 10.13: finite, smooth, sign fixed by geometry | The same sign measurement |
+| Is a signature-changing surface quantum mechanically stable | `[19]`, `[62]`: no, the region collapses or expands | `[60]`, `[191]`: yes, once short-distance structure or dynamical signature change is included | Particle production rate at the surface |
+| Does the tunnelling time through two barriers depend on their separation | `[147]`: no, the generalized Hartman effect, for a Dirac particle | `[148]`: yes, the effect rests on non-rigorous reasoning; `[149]`: yes in the dwell time, no in the group time; `[150]`: yes once dissipation is present | Our finding 1 partially adjudicates: in the barrier regime **both** clocks saturate with a fixed ratio $2{,}817$, so `[149]`'s hoped-for dwell-time dependence does not appear, while in the propagating regime the stored norm grows linearly and the dependence returns |
+| Is the delay a transit time | `[161]`: yes, a superluminal signal velocity with a frequency-set scattering time | `[158]`, `[159]`, `[164]`, `[165]`: no, a stored-energy lifetime, a reshaping, a bandwidth effect | Our finding 1 adjudicates in our own configuration: a thickness-independent ratio to the stored norm is the stored-energy law, not the frequency-set law |
+| Is the tunnelling time through a low barrier zero or merely saturating | `[168]`: exactly instantaneous below `mc^2` | `[147]`, `[151]`, and our Section 14.4: saturating but nonzero | A direct comparison at the same parameters, not yet done |
+| Are extra times observable | `[32]`: no, probability conservation forces effective single-time evolution | `[74]`, `[108]`, `[220]`: yes, under stated conditions; `[34]`: yes, in a Bell-type experiment | Our finding 2 splits the question: unobservable in the interior, observable at the boundary |
+| Is the multi-time initial value problem well posed | `[75]`: several timelike dimensions are typically ill posed and presumably unphysical | `[73]`, `[74]`, `[109]`, `[125]`, `[126]`, `[127]`: well posed under a nonlocal constraint, or locally, or on null hypersurfaces, or with discontinuous coefficients | Which initial surface is posed, and whether the constraint of `[123]`/`[124]` smuggles in a one-time answer |
+| Does a double crossing carry a surface layer | `[117]`: none, in the black mirror | `[113]`, `[24]`: only if the extrinsic curvature and the three-dimensional Ricci scalar both vanish | Whether the black mirror satisfies the strong condition; this is the sharpest unanswered question in Part E |
+| Can the layer be energetically acceptable | `[188]`: yes, positive-energy asymmetric shells in Palatini $f(R)$; `[175]`: yes, regular in a braneworld | `[186]`: no, the dominant condition is violated by any non-timelike shell in any theory; `[155]`: and the double-layer route violates the null condition | Our finding 3 sides with `[186]`: every layer-carrying profile violates the dominant condition, at every thickness from $0{,}5$ to $40$ |
+| What returns from the far face | Our Section 27.2: one quantum, energy $-2{,}2361$ | Our Section 27.2 and `[170]`, `[171]`: two quanta, energy $+2{,}2361$, squeezed pair statistics | A coincidence count |
+| Is a round trip distinguishable from a pair event | `[128]`, `[156]`, `[157]`: no | Nothing in the corpus | Finding 4 narrows it to the three energy-preserving outcomes; no apparatus described |
+
+## 4. What is open on both sides
+
+Four questions are unresolved here and unresolved in the literature.
+
+1. **The weight distribution across the outcomes.** Finding 4 gives six outcomes
+   in two groups of three, and Section 18.9 gives a three-valued quantised
+   deflection spectrum, but the weight falling on each value is not computed.
+   Nothing published computes it either; `[96]`'s one, two or three admissible
+   directions is the nearest classical statement and carries no weights.
+2. **The capacity of the gravitational channel.** Section 19.5 finds the channel
+   responds, contrast $4{,}0000$ at half a unit, and does not bound its capacity.
+   `[116]` names the carrier, `[223]` gives a screening behaviour, `[107]` gives a
+   cost. None gives a capacity.
+3. **An allowability criterion for the complex-time construction.** `[140]` is the
+   criterion, `[141]` shows it is tight, `[143]` shows the transition most like
+   ours fails it, and `[139]` shows the placement is arbitrary without one. The
+   article has not adopted one. This is the largest single gap between the
+   machinery it uses and the machinery that machinery requires.
+4. **Whether the returning object is the same object.** Open in the literature by
+   `[128]` and open here by Section 26.3. `[227]`'s frame-dependence of particle
+   content and `[131]`'s one-dimensional global Hilbert space both suggest the
+   question may not have an observer-independent answer, which would be a fifth
+   kind of resolution and is not currently considered.
+
+## 5. The balance
+
+| Class | Count |
+|-------|-------|
+| Where the literature has priority | $24$ |
+| No published counterpart | $3$, plus two narrower gaps |
+| Live disagreements | $13$ |
+| Open on both sides | $4$ |
+
+The priority list is the longest, and that is the correct shape for a set of notes
+whose purpose is to keep the article from claiming what is already published. Of
+the four verdicts changed by our own calculations since the previous version,
+three go **against** earlier readings of this work: the delay is not a transit
+time in the barrier regime, the layer cannot be made energetically acceptable, and
+the outcome table reaches six results rather than nine. Only the fourth, the
+location of the orientation trace at the boundary rather than the interior, adds
+something. A ledger in which the corrections outnumber the additions is the one to
+trust.
+
+---
+
+# Appendix. The numbered items, 1 to 59, and where they now live
+
+The previous version of these notes ended each historical group with a numbered
+list of "what this changes". The numbers are cross-referenced, so they are kept.
+The substance of each item has been folded into the entry it concerns; this table
+says where, and marks the ones a later finding has overturned.
+
+| Item | Substance | Now in | Status |
+|------|-----------|--------|--------|
+| 1 | The factorisation is not new | `[2]`, `[4]`, Part A | stands |
+| 2 | Ill-posedness was proved, not just shown | `[18]`, Part B1 | stands |
+| 3 | The junction condition is the strong choice among alternatives | `[16]`, `[17]`, `[19]` | superseded: the weak condition is now adopted, items 15 to 18 |
+| 4 | Cite the double-change and continuous-bridge models | `[24]`, `[25]`, `[26]`, `[44]` | stands; the continuous bridge is now conceded, Section 26.1 |
+| 5 | The three obstructions are strengthened, not weakened | `[37]`, `[38]`, Part C4 | stands |
+| 6 | The Casimir number conflicts numerically | `[39]`, `[112]` | stands, and is now a live disagreement with both signs computed |
+| 7 | Extra times may collapse to one | `[32]`, Part C1 | refined by finding 2: flat interior, curved boundary |
+| 8 | The time-reversing loops deserve their own treatment | `[28]`, Part B3 | stands |
+| 9 | Follow the inflation template for a measurable prediction | `[49]`, Part H | stands, unattempted |
+| 10 | Particle production at a signature change is computed, and never zero | `[58]`, `[59]`, `[60]`, `[62]` | stands |
+| 11 | The junction choice must be presented as a documented choice | `[63]`, `[64]`, `[65]`, `[66]` | stands |
+| 12 | Multi-time wave functions are not several timelike dimensions | `[75]`, `[73]`, `[74]` | stands, presented as a disagreement |
+| 13 | Total reflection has independent confirmation, with a tunnelling correction | `[84]` | stands; reflection is the thick limit, Section 27.1 |
+| 14 | Signature change has been derived from a theory three times | `[80]`, `[81]`, `[82]` | stands, now five times with `[191]` and `[111]` |
+| 15 | Flux conservation no longer fixes an amplitude | `[89]`, `[87]` | stands |
+| 16 | The licence to drop the strong condition is precise | `[91]` | stands |
+| 17 | Two papers stand against the weak condition and must be answered | `[90]`, `[92]` | stands, answered only in part |
+| 18 | The distributional escape route is closed | `[93]` | partly reopened by `[115]`, `[180]`, `[181]` |
+| 19 | Crossing is direction-selected, with a count | `[96]` | stands, two-dimensional only |
+| 20 | A perturbative non-existence result must be faced | `[94]` | stands, unanswered |
+| 21 | Particle production is settled in the analogue setting | `[97]`, `[98]`, `[100]` | stands, upgraded to observation by `[138]` |
+| 22 | The purely timelike far side has its own junction conditions | `[99]` | stands |
+| 23 | The Kleinian far side is better furnished than assumed | `[101]` to `[105]` | stands |
+| 24 | The multi-time objections survive the retarget, and one is quantitative | `[107]`, `[108]`, `[109]` | stands, quantified further by `[223]` |
+| 25 | The Casimir calculation has a template | `[112]` | stands |
+| 26 | The weak condition is not free, and the price is a matter layer | `[113]` | **overturned in severity by finding 3**: the price is a layer violating the dominant energy condition, `[186]` |
+| 27 | The licence rests on a line accused of a technical error | `[114]` | answered by `[180]`, `[181]` |
+| 28 | Shells of unconstrained signature have a variational treatment | `[115]` | stands |
+| 29 | One constraint on the crossing is theory-independent | `[116]` | stands |
+| 30 | The placement mechanism is a complex lapse, not a duration | `[118]` | stands, but see item 45 |
+| 31 | The two-crossing geometry exists | `[117]`, `[24]` | stands, with the surface-layer tension unresolved |
+| 32 | The two-interface layer is solved and built, in the dual geometry | `[120]`, `[121]`, `[122]` | stands |
+| 33 | The nonlocal constraint may smuggle in the answer | `[123]`, `[124]`, `[125]` | stands, unaddressed |
+| 34 | Predictability has three positive results not yet used | `[125]`, `[126]`, `[127]` | stands; Section 12.2 now uses the mass-shell restriction instead |
+| 35 | A round trip may look like an annihilation | `[128]`, `[28]` | narrowed by finding 4 to the three opposite-sign outcomes |
+| 36 | The first quantitative dictionary entry: orientation appears as an apparent charge | `[129]` | stands |
+| 37 | A far-side body is a spinor | `[130]`, `[58]` | stands |
+| 38 | Information loss has the form of an entropy of a density matrix | `[131]` | stands; Section 17.2's sharpening is the surprise |
+| 39 | The degeneracy can be computed through, in the densitized equation | `[132]`, `[133]` | stands |
+| 40 | Smoothness and non-degeneracy are not simultaneously available | `[134]` | stands |
+| 41 | A global obstruction to a non-orientable far side plus a transverse radical | `[135]` | stands, unanswered |
+| 42 | The two-times region has been observed | `[138]` | stands |
+| 43 | Gaps: wave packets, gravitational signalling, the originating weak-condition paper | Part H, closing section 2 | amended by 58, superseded by 59 |
+| 44 | The crossing direction inside the layer is evanescent | `[84]` | stands, conditional on which axis turns, Section 14.8 |
+| 45 | The return placement is undetermined without an allowability criterion | `[139]`, `[140]` | stands; Section 26.3 records the criterion as not adopted |
+| 46 | The criterion is tight, and rejects the transition most like ours | `[141]`, `[143]` | stands, unanswered |
+| 47 | There is a derived prescription for the lapse contour, below the origin | `[142]` | stands; the two-crossing add-or-cancel computation is not done |
+| 48 | The thickness may be unreadable from the return | `[147]` | stands |
+| 49 | Three escape routes from the generalized Hartman effect | `[148]`, `[149]`, `[150]` | **weakened by finding 1**: in the barrier regime both clocks saturate with a fixed ratio, so the dwell-time route does not open and the dissipation route is not the likely rescue |
+| 50 | Thickness is recoverable only in a clock we cannot read directly | `[149]` | **overturned by finding 1** in the barrier regime: it is not recoverable from either clock there, and recoverable from both in the propagating regime |
+| 51 | The frequency mix is the other thickness readout, and points the other way | `[87]` | **promoted by finding 1** to the primary readout; Section 14.9 |
+| 52 | Thick and unbounded are one cell | `[151]` | stands |
+| 53 | Resonance is the exception where the placement has structure | `[152]`, `[121]` | stands, unexploited |
+| 54 | The return placement depends on how the packet was prepared | `[145]` | stands |
+| 55 | The packet layer has machinery: delay and distortion from one object | `[144]`, `[146]` | stands |
+| 56 | A transmitting junction carries either a matter layer or a pure double layer, and both fail something | `[154]`, `[155]`, `[116]` | **sharpened by finding 3**: the matter-layer branch fails the dominant condition at every thickness |
+| 57 | The pair-creation degeneracy is not broken | `[156]`, `[157]` | narrowed by finding 4, not broken |
+| 58 | The packet gap is narrower than stated: the barrier literature supplies the machinery | Part D | superseded by 59 |
+| 59 | The gap in its final form: no packet built from signature-change modes with a timing observable | `[172]` | stands, and is Section 26.2's second row |
+
+Item numbers beyond 59 are not used. The four findings recorded at the head of
+this file are the successors, and they are referenced as findings 1 to 4 rather
+than as items so that the two series stay distinguishable.

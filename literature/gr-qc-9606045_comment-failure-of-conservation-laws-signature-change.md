@@ -9,7 +9,7 @@ journal_ref: "Phys.Rev. D52 (1995) 7331"
 doi: "10.1103/PhysRevD.52.7331"
 comments: "3 pages, TeX"
 url: https://arxiv.org/abs/gr-qc/9606045
-stance: similiar
+stance: opposition
 body_source: "arXiv LaTeX source (gr-qc-9606045.tex); equations preserved as LaTeX"
 equation_blocks: 4
 figures: 0
