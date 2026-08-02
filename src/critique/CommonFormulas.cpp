@@ -1,6 +1,7 @@
 #include "critique/CommonFormulas.h"
 
 #include "core/Report.h"
+#include "horizon/SurfaceLayer.h"
 #include "intermediate/TraversalClocks.h"
 #include "intermediate/TwoCrossings.h"
 
@@ -24,18 +25,25 @@ namespace slm
         return jump + (1.0 - weight) * level;
     }
 
-    bool CommonFormulas::recoversStrongChoice(double curvatureBefore, double curvatureAfter)
+    bool CommonFormulas::recoversStrongChoice(SurfaceLayer::Profile shape)
     {
-        const double residual = junctionResidual(0.0, curvatureBefore, curvatureAfter);
-        const double demanded = curvatureAfter - curvatureBefore +
-                                0.5 * (curvatureAfter + curvatureBefore);
-        return std::abs(residual - demanded) < kExact;
+        const double crossing = SurfaceLayer::crossing(shape);
+        const double delta = 1e-4;
+        const double before = SurfaceLayer::extrinsicCurvature(shape, crossing - delta);
+        const double after = SurfaceLayer::extrinsicCurvature(shape, crossing + delta);
+        const bool weightZeroIsSatisfied =
+            std::abs(junctionResidual(0.0, before, after)) < 1e-6;
+        return weightZeroIsSatisfied == SurfaceLayer::satisfiesStrongCondition(shape);
     }
 
-    bool CommonFormulas::recoversWeakChoice(double curvatureBefore, double curvatureAfter)
+    bool CommonFormulas::recoversWeakChoice(SurfaceLayer::Profile shape)
     {
-        const double residual = junctionResidual(1.0, curvatureBefore, curvatureAfter);
-        return std::abs(residual - (curvatureAfter - curvatureBefore)) < kExact;
+        const double crossing = SurfaceLayer::crossing(shape);
+        const double delta = 1e-4;
+        const double before = SurfaceLayer::extrinsicCurvature(shape, crossing - delta);
+        const double after = SurfaceLayer::extrinsicCurvature(shape, crossing + delta);
+        const bool weightOneIsSatisfied = std::abs(junctionResidual(1.0, before, after)) < 1e-6;
+        return weightOneIsSatisfied == SurfaceLayer::satisfiesWeakCondition(shape);
     }
 
     double CommonFormulas::interiorSquared(int turnedDirections, double omega, double c, double mu,
@@ -109,7 +117,12 @@ namespace slm
     int CommonFormulas::exactReductionCount()
     {
         int count = 0;
-        count += (recoversStrongChoice(1.0, 2.0) && recoversWeakChoice(1.0, 2.0)) ? 1 : 0;
+        count += (recoversStrongChoice(SurfaceLayer::Profile::Linear) &&
+                  recoversWeakChoice(SurfaceLayer::Profile::Linear) &&
+                  recoversStrongChoice(SurfaceLayer::Profile::FlatAtCrossing) &&
+                  recoversWeakChoice(SurfaceLayer::Profile::FlatAtCrossing))
+                     ? 1
+                     : 0;
         count += (reproducesKind(IntermediateRegion::Kind::None, 6.0, 1.0, 1.0, 4.0) &&
                   reproducesKind(IntermediateRegion::Kind::Kleinian, 6.0, 1.0, 1.0, 4.0) &&
                   reproducesKind(IntermediateRegion::Kind::Euclidean, 6.0, 1.0, 1.0, 4.0))
@@ -136,14 +149,26 @@ namespace slm
                                      weight, CommonFormulas::junctionResidual(weight, 1.0, 2.0)),
                          std::isfinite(CommonFormulas::junctionResidual(weight, 1.0, 2.0)));
         }
-        report.check("at weight zero the condition is the strong one, recovered exactly",
-                     CommonFormulas::recoversStrongChoice(1.0, 2.0));
-        report.check("at weight one it is the weak one, recovered exactly",
-                     CommonFormulas::recoversWeakChoice(1.0, 2.0));
+        for (SurfaceLayer::Profile shape : {SurfaceLayer::Profile::Linear,
+                                            SurfaceLayer::Profile::FlatAtCrossing,
+                                            SurfaceLayer::Profile::Tanh})
+        {
+            report.check("  at weight zero the condition agrees with the strong test built "
+                         "separately, profile by profile",
+                         CommonFormulas::recoversStrongChoice(shape));
+            report.check("  at weight one it agrees with the weak test built separately",
+                         CommonFormulas::recoversWeakChoice(shape));
+        }
+        report.check("the agreement is with an independent test rather than with the "
+                     "same expression restated, so the reduction is checked and not "
+                     "assumed",
+                     CommonFormulas::recoversStrongChoice(SurfaceLayer::Profile::FlatAtCrossing) &&
+                         !SurfaceLayer::satisfiesStrongCondition(SurfaceLayer::Profile::Linear) &&
+                         SurfaceLayer::satisfiesStrongCondition(
+                             SurfaceLayer::Profile::FlatAtCrossing));
         report.check("so the published disagreement is about the value of one weight "
                      "and about nothing else in this expression",
-                     CommonFormulas::recoversStrongChoice(1.0, 2.0) &&
-                         CommonFormulas::recoversWeakChoice(1.0, 2.0));
+                     CommonFormulas::exactReductionCount() >= 1);
 
         report.subsection("One interior wavenumber, four kinds of region");
         for (int turned : {0, 1, 2, 3})

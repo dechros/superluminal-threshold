@@ -1,6 +1,7 @@
 #pragma once
 
 #include "core/Section.h"
+#include "horizon/SurfaceLayer.h"
 #include "intermediate/IntermediateRegion.h"
 
 namespace slm
@@ -40,11 +41,15 @@ namespace slm
         static double junctionResidual(double weight, double curvatureBefore,
                                        double curvatureAfter);
 
-        /// Whether the strong choice is recovered exactly at weight zero.
-        static bool recoversStrongChoice(double curvatureBefore, double curvatureAfter);
+        /// Whether the condition at weight zero agrees, profile by profile,
+        /// with the strong test built separately from the extrinsic curvature.
+        /// The comparison is against an independent construction rather than
+        /// against the same expression restated, so it can fail.
+        static bool recoversStrongChoice(SurfaceLayer::Profile shape);
 
-        /// Whether the weak choice is recovered exactly at weight one.
-        static bool recoversWeakChoice(double curvatureBefore, double curvatureAfter);
+        /// Whether the condition at weight one agrees with the weak test built
+        /// separately, on the same terms.
+        static bool recoversWeakChoice(SurfaceLayer::Profile shape);
 
         /// The interior squared wavenumber as one expression in the number of
         /// turned directions, which runs from none through the Kleinian case to

@@ -3179,9 +3179,15 @@ sonucun makaleye hiç girmemesi anlamına gelebilir. Bu nedenle makinece bir
 denetim yapılmıştır: test takımının çıktısındaki üç ya da daha çok ondalıklı her
 sayı toplanmış, makale metninde aranmış, bulunmayanlar tek tek incelenmiştir.
 
+**Denetimin kapsamı.** Süpürme, test takımı çıktısında **üç ile altı ondalık
+basamakla basılmış** sayıları toplar. Tamsayılar, iki ondalıklı değerler ve
+sayımlar ($312$ durum, $158$ olay gibi) bu tarama tarafından görülmez;
+dolayısıyla aşağıdaki sayı kütüphanelerin ürettiği her sayı değil, bu biçimde
+basılanların sayısıdır.
+
 Denetim üç turda yürütülmüştür. Birinci turda $43$ sayı makaleye ulaşmıyordu.
-İkinci turda bu sayı $32$, üçüncü turda $23$'e indi. Şu anda kütüphanelerin
-ürettiği $172$ farklı sayıdan $23$'ü makalede geçmemektedir.
+İkinci turda bu sayı $32$, üçüncü turda $23$'e indi. Bu biçimde basılan $172$
+farklı sayıdan $23$'ü makalede geçmemektedir.
 
 Kalan $23$'ün tamamı **girdi ya da ara değerdir**, sonuç değil: sonda değerleri
 (kütle kabuğunun sabitlediği dalga sayıları, örnek ayrımlar, yol uzunlukları) ve
@@ -3205,21 +3211,39 @@ koşulları, imza değiştiren zarlar, korunum yasaları tartışmasının dört
 ve çok zamanlı tutarlılık. Dokuzu da eklenmiştir; kaynakça $41$'den $50$'ye
 çıkmıştır.
 
-| Sınıf | Kaç kaynak | Ne anlama gelir |
-|-------|------------|------------------|
-| Kendi araçlarımızla yeniden üretilmiş | $17$ | Merkezi hesaplanabilir iddiası `src/` altında bağımsız olarak kurulmuş ve sayısı karşılaştırılmıştır |
-| İtibara alınmış | $24$ | Sonucu kullanılmış, burada yeniden hesaplanmamıştır |
-| Yalnızca bağlam | $9$ | Bir sonuç için değil, konumlandırma için anılmıştır |
+Sınıflandırma, sayıyla değil **kaynak numarasıyla** verilir; yoksa denetlenemez
+bir sayım olur, ki bu tam da Bölüm 22.1'in yakalamak için var olduğu şeydir.
 
-Yeniden üretilenler, kütüphanelerin karşılık geldiği kaynaklardır: permütasyon
-sayımı, öz-eşlenik sınır koşulu ailesi, başlangıç değer problemi, dejenere yol,
-iki zamanlı indirgeme, tachyonic komütatör, Casimir, vakum Cherenkov sınırı,
-Maxwell alanı, eklem koşulu ve enerji koşulları, oyalanma süresi, ve çok zamanlı
-sıfır eğrilik ölçütü.
+| Sınıf | Kaynaklar | Kaç |
+|-------|-----------|-----|
+| Kendi araçlarımızla yeniden üretilmiş | 3, 4, 5, 7, 8, 10, 11, 13, 14, 24, 25, 28, 29, 31, 34, 35, 36, 39, 42, 43, 46, 48, 49 | $23$ |
+| İtibara alınmış | 1, 2, 6, 9, 12, 15, 30, 32, 33, 37, 38, 40, 41, 44, 45, 47, 50 | $17$ |
+| Yalnızca bağlam | 16, 17, 18, 19, 20, 21, 22, 23, 26, 27 | $10$ |
 
-> İtibara alınanların sayısı yeniden üretilenlerin sayısını **aşmaktadır**. Bu
-> bir eksiklik olarak kaydedilir. Bu çalışmanın kendi güvencesi altındaki alan,
-> makalenin dayandığı alandan dardır.
+Yeniden üretilenlerde, o kaynağın merkezi hesaplanabilir iddiası `src/` altında
+bağımsız olarak kurulmuş ve sayısı karşılaştırılmıştır: permütasyon sayımı,
+genişletilmiş grup, eklem koşulu, başlangıç değer problemi, öz-eşlenik sınır
+koşulu ailesi, dejenere yol, iki zamanlı indirgeme, tachyonic komütatör,
+Casimir, vakum Cherenkov sınırı, Maxwell alanı, belirlenimsizlik, oyalanma
+süresi, zamansal olmayan kabukların enerji koşulları, oran koşulu, ve çok
+zamanlı sıfır eğrilik ölçütü.
+
+**Yöntem tarafındaki eksik.** Bu denetimin ikinci bulgusu şudur: literatür
+notlarının öncelik tablosundaki $24$ satırdan dördünün burada bir C++ karşılığı
+**yoktur** ve makalede yalnızca sözle kullanılmaktadır. Bunlar açıkça
+kaydedilir, çünkü aksi hâlde Bölüm 22 sağlanmamış bir bütünlük iddia etmiş olur:
+
+| Yalnızca sözle kullanılan yöntem | Neden kurulmadı |
+|----------------------------------|------------------|
+| Lapse konturunun başlangıç noktasının altından geçmesi gerektiği | Kabul edilebilirlik ölçütü benimsenmediği için; Bölüm 26.3'te açık madde |
+| Zaman yönlendirilebilirliğinin çökmesinin bir çift yok oluşuna benzemesi | Sayım düzeneği tarif edilmediği için; Bölüm 26.3'te açık madde |
+| Zamanı ters çeviren bir bölgenin sınırının net akı, yani görünür yük taşıması | Kapsam dışı; yer çekimi kanalı dışındaki taşıyıcılar kurulmadı |
+| Zaman yönlendirilemez bölgede cismin spinör gibi dönüşmesi | Spin bu çalışmada hiçbir yere sokulmamıştır, kapsam kararı gereği |
+
+> Yeniden üretilenlerin sayısı itibara alınanların sayısını aşmaktadır, ama
+> bütün kaynakların yarısından azıdır. Bu çalışmanın kendi güvencesi altındaki
+> alan, makalenin dayandığı alandan **dardır**, ve yukarıdaki dört yöntem o
+> darlığın adı konmuş kısmıdır.
 
 ---
 
