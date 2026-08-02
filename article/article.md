@@ -3,9 +3,24 @@
 ## Özet
 
 Bu çalışmanın konusu, kütleli bir parçacığın ışık hızı eşiğini geçip öte
-tarafta bulunması ve geri dönmesidir. Sorulan altı soru şudur: bizim bölgemiz
-nedir, ara bölge nedir, öte taraf nedir, madde bu üçünde ne demektir, gidip
-gelen ne kaybeder, ve orada olanlar burada ne anlama gelir.
+tarafta bulunması ve geri dönmesidir.
+
+**Çekirdek soru.** Öte tarafta parçacığın alabileceği her dört boyutlu yönelim
+ve yapabileceği her hareket ne anlama gelir, ve bu parçacık geri döndüğünde
+bizim dört boyutumuzda **nereye** konumlanır. İkinci yarıdaki "nerede", uzaydaki
+yeriyle sınırlı değildir: dönüş olayının zaman koordinatı da cevabın bir
+parçasıdır ve çalışmanın asıl hedefi odur. Bütün metin tek bir eşlemeyi kurmak
+üzere düzenlenmiştir:
+
+$$(\text{öte taraftaki yönelim ve hareket}) \;\longmapsto\; (t, x, y, z)_{\text{dönüş olayı}}$$
+
+Zamanda yolculuk bu eşlemeden **okunur**, varsayılmaz. Dönüş olayının zaman
+bileşeni, kesintisiz bir dünya çizgisinin koyacağı yerden farklı bir yere
+düşebiliyorsa, gösterim odur; düşemiyorsa bu da hesabın sonucudur.
+
+Bu çekirdeği açan altı soru şudur: bizim bölgemiz nedir, ara bölge nedir, öte
+taraf nedir, madde bu üçünde ne demektir, gidip gelen ne kaybeder, ve orada
+olanlar burada ne anlama gelir.
 
 Model iki bölge değil **üç** bölge üzerine kuruludur. Aradaki geçiş bir yüzey
 değil, kendi kalınlığı ve kendi imzası olan bir bölgedir; hesaplar bu bölgenin
@@ -33,13 +48,22 @@ taşır.
 Çalışmanın ayırt edici öngörüsü, geri tepen bir hedef olmaksızın gerçekleşen,
 açıları ayrık bir esnek sapmadır.
 
-Neyin gösterilmediği de kaydedilir: dokuz olası sonucun yedisi sıradan
+Eşlemenin bugünkü hâli şudur: dönüş olayının zaman bileşeni geçiş genliğinin
+fazından, uzay bileşenleri ise çıkış yüzü ile nicelenmiş sapmadan gelir. Öte
+taraftaki yönelim, çıkış anına üç zaman düzleminden ikisi üzerinden ulaşır ve
+çıkış yüzüne hiç ulaşmaz.
+
+Neyin gösterilmediği de kaydedilir: ulaşılabilir altı sonucun dördü sıradan
 fiziğinkiyle aynı ölçümü verir, tayf üzerindeki olasılık dağılımı
 hesaplanmamıştır, ve yer çekimi kanalının kapasitesi bilinmemektedir.
 
 ---
 
 ## Modelin maddeleri
+
+Aşağıdaki maddelerin hepsi çekirdek eşlemenin bir parçasıdır: öte taraftaki
+yönelimi dönüş olayının dört koordinatına bağlayan eşlemenin. Her madde, o
+eşlemenin ya bir girdisini, ya bir kısıtını, ya da bir sonucunu kaydeder.
 
 1. Bölge sayısı üçtür: bizim taraf, ara bölge, öte taraf.
 2. Ara bölgenin **neyden yapıldığı** ile **ne kadar kalın olduğu** bağımsız iki
@@ -57,6 +81,9 @@ hesaplanmamıştır, ve yer çekimi kanalının kapasitesi bilinmemektedir.
    açıları niceliklenmiştir.
 9. Yer çekimi, hiçbir alanın geçemediği bir ara bölgede bile bağlanır ve sinyal
    taşır.
+10. Dönüş olayının dört koordinatı ayrı kaynaklardan gelir: zaman bileşeni
+    fazdan, uzay bileşenleri çıkış yüzü ile nicelenmiş sapmadan. Öte taraftaki
+    yönelim bu koordinatların hepsine değil, yalnızca bir kısmına ulaşır.
 
 ---
 
@@ -178,7 +205,7 @@ yan yana konursa:
 Kapsam bakımından [4] bu bölümü içerir ve aşar. İki kuruluş **aynı grup
 değildir**: $D$, [4]'ün genişletilmiş grubunda bulunmaz, çünkü içerdiği
 $x \leftrightarrow y$ takasının üç boyuttaki determinantı $-1$'dir ve dolayısıyla
-$SO(3)$ elemanı değildir. Bu, Bölüm 18.10'da hesaplanmıştır.
+$SO(3)$ elemanı değildir. Bu, Bölüm 18.11'de hesaplanmıştır.
 
 Bu bölümün taşıdığı tek fark, kapanma bozulmasının hangi katmandan geldiğinin
 ayrıştırılmasıdır: $D$ kapalıdır, $B$ değildir. [4]'te sorun bu biçimde
@@ -1506,6 +1533,10 @@ enjekte edebildiği hesaplanmaktadır.
 
 # Kısım V. Gidip gelince ne değişir
 
+Bu kısım çekirdek eşlemenin **zaman** bileşenini kurar. Dönüş olayının bizim
+zaman eksenimizdeki yeri burada belirlenir, ve içeride taşınan bir saatten
+değil, iki geçişin ortak genliğinin fazından okunur.
+
 ## 13. İkinci geçiş ve iki yüzeyin eşleşmesi
 
 Gidiş tek bir yüzeyin problemidir; gidiş dönüş iki yüzeyin problemidir ve
@@ -1893,9 +1924,15 @@ sorusunun cevabıdır, daha fazlası değil.
 
 # Kısım VI. Orada yapılanlar burada ne anlama geliyor
 
+Bu kısım çekirdek eşlemenin **uzay** bileşenlerini kurar ve eşlemenin girdi
+tarafını, yani öte taraftaki yönelimin ne anlama geldiğini tanımlar. Kısım V
+dönüş olayının ne zaman olduğunu verdi; burada nerede olduğu ve hangi yöne
+bakarak olduğu belirlenir.
+
 ## 18. Yönelim sözlüğü
 
-Bu bölüm Bölüm 8.5'in dokuz hücresini tek tek bu tarafa çevirir.
+Bu bölüm Bölüm 8.5'in dokuz hücresini tek tek bu tarafa çevirir, sonra o
+dokuzun gerçekte kaç tane olduğunu yeniden sayar.
 
 ### 18.1 Her hücrede korunan şeyler
 
@@ -1932,7 +1969,38 @@ görürüz. Sapmadan karşı yüzden çıkıyorsa, sıradan bir geçiş görür�
 
 Yedi hücre, öte taraf hiç olmasaydı da aynı ölçümü verirdi.
 
-### 18.4 İki hücre gerçekten ayırt edici
+### 18.4 Tablonun yeniden sayımı: iki etiket bağımsız değildir
+
+Yukarıdaki dokuz hücre, iki etiketin bağımsız olduğu varsayımıyla kurulmuştur.
+Bölüm 18.7 o varsayımı geçersiz kılar: çıkış yüzü, geçiş dalga sayısının
+işaretidir ve bu işaret bizim enerjimizin işaretiyle aynı büyüklüktür. Dönme ise
+giriş ve çıkış yüzlerinin gerçeklediği matrislerin bileşkesidir. Her iki etiketi
+de **tek bir sıralı matris çifti** belirler; dolayısıyla bunlar çarpılamaz.
+
+Sekiz kabul edilebilir matrisin sıralı çiftleri $8 \times 8 = 64$ tanedir. Bu 64
+çiftin ürettiği farklı $(\text{enerji işareti}, \text{sapma})$ sonucu sayılırsa:
+
+| Sayım | Değer |
+|-------|-------|
+| İki etiket bağımsız sayılırsa | $9$ |
+| Yüz çiftlerinin gerçekten ulaştığı | $6$ |
+| Bunlardan enerjimizi koruyanlar | $3$ |
+| Enerjiyi ters işaretle döndürenler | $3$ |
+
+Altı sonuç tam ortadan ikiye ayrılır. Enerjiyi koruyan üç sonuç, Bölüm 18.9'un
+nicelenmiş sapma tayfının üç elemanıdır. Enerjiyi ters işaretle döndüren üç
+sonuç, Bölüm 18.7'de tarif edilen dalın, yani negatif enerjili varışın
+karşılığıdır ve çift yaratımı okumasının sahiplendiği kümedir.
+
+**Boş satır.** Parçacığın hiç çıkmadığı satır dokuz hücrenin üçüdür ve boştur.
+Kayıpsız bir bölgede iki çıkış ağırlığı toplam bire gelir; artan bir olasılık
+kalmaz. Bu, muhakeme değil akı korunumunun sonucudur.
+
+Dolayısıyla dokuz hücrenin üçü akı tarafından boşaltılır, kalanın ikisi sıradan
+fizikte karşılığı olmayan hücrelerdir. Ayırt edici hücrelerin **sayısı**
+değişmemiştir; değişen, hangi bütünün içinde durduklarıdır.
+
+### 18.5 İki hücre gerçekten ayırt edici
 
 Geriye kalan iki hücre şudur: parçacık **karşı yüzden çıkar ve sapmıştır**.
 
@@ -1944,7 +2012,7 @@ tam olarak korunur, yalnızca yön değişir.
 > Modelin ayırt edici imzası, **geri tepen bir hedef olmaksızın** gerçekleşen
 > esnek bir sapmadır.
 
-### 18.5 Bu tablonun statüsü
+### 18.6 Bu tablonun statüsü
 
 Bir çekince açıkça belirtilmelidir. Sapma açıları ve korunan nicelikler
 hesaplanmıştır; hangi hücrenin sıradan fizikle örtüştüğü ise **hesaplanmamış,
@@ -1956,7 +2024,7 @@ söylemez. Tablo koşulludur: olursa ne görünür, onu verir. Dönmenin hangi
 koşullarda ve hangi açıyla gerçekleştiği, yani hücreler arasındaki olasılık
 dağılımı, hesaplanmamıştır ve modelin en büyük eksiğidir.
 
-### 18.6 Çıkış yüzünü ne belirliyor
+### 18.7 Çıkış yüzünü ne belirliyor
 
 Bölüm 8.5'in iki etiketinden biri çıkış yüzüydü ve orada bağımsız bir etiket
 gibi ele alındı. Değil.
@@ -1999,7 +2067,7 @@ kabul ettiği ve yönelim yönünün geçiş dalga sayısını değiştirmediği
 taraf dal seçemez" ifadesi bir hesap değil, zaman yöneliminin yokluğundan çıkan
 bir muhakemedir; dayanağı Bölüm 8'de hesaplanmıştır.
 
-### 18.7 Hücreler arasındaki dağılım: çatal
+### 18.8 Hücreler arasındaki dağılım: çatal
 
 Yukarıdaki tablo hangi sonucun ne göründüğünü söyler, hangisinin gerçekleşeceğini
 söylemez. Bu bölüm o eksiği kapatır ve cevabın ikiye ayrıldığını bulur.
@@ -2054,7 +2122,7 @@ Ayrıca "hiç çıkmaz" satırının sıfır olması, geçişin kayıpsız oldu�
 dayanır. Bölüm 3.4'teki madde katmanı geçişi sönümlü kılarsa bu satır sıfır
 olmaktan çıkar.
 
-### 18.8 Çatalın kapanması: dönme nicelenmiştir
+### 18.9 Çatalın kapanması: dönme nicelenmiştir
 
 Önceki bölümün iki ucu da varsayımdı. Modelin içinde, varsayım gerektirmeyen
 üçüncü bir cevap zaten duruyor.
@@ -2098,7 +2166,7 @@ bir grup oluşturur.
 çalışmada gösterilmemiştir. Tayf hesaplanmıştır, tayf üzerindeki olasılık
 dağılımı hesaplanmamıştır.
 
-### 18.9 İşaret sorusunun yeniden okunması
+### 18.10 İşaret sorusunun yeniden okunması
 
 Aşağıdaki tartışma bu sözlüğün bir parçasıdır ve sonucu tersine dönmüştür.
 Eski kuruluşta iki bölgedeki okların bağıl işareti prensip olarak ölçülemezdi,
@@ -2114,14 +2182,16 @@ işaretin anlamını netleştirir:
    değildir, biri diğerini belirler.
 3. Fiziksel olarak anlamlı olan tek büyüklük **bağıl işarettir**: iki okun
    hizalanması. Tek başına hiçbiri anlamlı değildir.
-4. $\Sigma$ geçirgen olmadığı için iki bölge haberleşemez; dolayısıyla bağıl işaret
-   **prensip olarak ölçülemez**.
+4. Eşik geçirgen olduğuna göre iki bölge arasında bir kanal vardır; bağıl işaret
+   bu nedenle prensip olarak ölçülebilirdir. Ölçümü yapacak nicelik Bölüm 18.7'de
+   belirlenmiştir: parçacığın hangi yüzden döndüğü, yani enerjisinin işareti.
 
-**Sonuç:** İşaret belirsizliği bir eksiklik değil, yapısal bir özelliktir. Bizim
+**Sonuç:** İşaret belirsizliği denklemlerin düzeyinde yapısaldır, ölçümün
+düzeyinde değil. Bizim
 tarafta da zamanın oku denklemlerden türetilmez, Newton, Maxwell ve Schrödinger
 denklemlerinin hepsi $T$-simetriktir; ok başlangıç koşulundan gelir.
 
-### 18.10 $D$'nin yapısı: yön-bağımlı bir involüsyonla karşılaştırma
+### 18.11 $D$'nin yapısı: yön-bağımlı bir involüsyonla karşılaştırma
 
 $D$'yi yön-bağımlı bir involüsyonla karşılaştırmak, onun grup içindeki yerini
 netleştirir. $\theta = \varphi = 0$ ekseni için yön-bağımlı involüsyon $t$ ile $z$'yi
@@ -2136,6 +2206,112 @@ elemanı değildir. Bunun doğrudan sonucu şudur:
 > **bulunmaz**.
 
 Yani $D$ ile yön-bağımlı formlar aynı ailenin iki üyesi değildir; farklı yapılardır.
+
+### 18.12 Öte tarafta hareket ne demektir
+
+Çıkış yüzü Bölüm 18.7'de enerjimizin işareti olarak belirlendi, çıkış anı ise
+Bölüm 14'te genliğin fazından okundu. İkisi de parçacığın ara bölgede **ne
+yaptığına** bağlanmamıştı. Bu bölüm o bağlantıyı kurar; simülasyonun
+canlandıracağı nicelik tam olarak budur.
+
+Öte taraf üç zaman ve bir uzay yönü taşır. Bir durum, üç zaman uzayındaki bir
+enerji vektörü ile tek uzay ekseni boyunca bir dalga sayısından oluşur.
+Parçacığın yapabileceği iki şey vardır ve yalnızca ikisi:
+
+1. **Geçiş yönünde yer değiştirme.** Tek uzay ekseni boyunca ilerlemek. Ara
+   bölgeyi kat etmek budur.
+2. **Enerji vektörünün dönmesi.** Üç zaman düzleminden birinde bir açı süpürmek.
+   Dönme vektörün uzunluğunu korur; doğrulanmıştır.
+
+Birinci hareket bir yolculuktur, ikincisi bir yönelimdir. Sorulacak soru şudur:
+iki gözlenebilir, yani çıkış yüzü ve çıkış anı, bu iki hareketten hangisini
+görür.
+
+### 18.13 Çıkış anı, ancak içeride yayılım varsa bir yolculuk süresidir
+
+Ara bölge yayılıma izin veriyorsa geçiş ekseni boyunca bir grup hızı tanımlıdır
+ve kalınlığın bu hıza bölümü bir yol süresi verir. Fazdan okunan çıkış anıyla
+karşılaştırıldığında ikisi birebir tutar:
+
+| Kalınlık $d$ | Yol süresi | Fazdan okunan an |
+|--------------|------------|------------------|
+| $1$ | $1{,}0776$ | $1{,}0776$ |
+| $2$ | $2{,}1553$ | $2{,}1553$ |
+| $4$ | $4{,}3105$ | $4{,}3105$ |
+
+Artık $10^{-12}$ mertebesindedir. Bu rejimde çıkış anı gerçekten bir yolculuk
+süresidir ve parçacık dili tam anlamıyla meşrudur.
+
+Engel rejiminde durum niteliksel olarak değişir. İçerideki mod sönümlüyse grup
+hızı **yoktur**, dolayısıyla yol süresi tanımsızdır. Buna karşılık faz hâlâ
+belirli bir an verir:
+
+| Kalınlık $d$ | Yol süresi | Fazdan okunan an |
+|--------------|------------|------------------|
+| $2$ | tanımsız | $1{,}4629$ |
+| $4$ | tanımsız | $1{,}4629$ |
+| $8$ | tanımsız | $1{,}4629$ |
+
+Bu, Bölüm 14.4'teki Hartman doyumunun hareket dilindeki karşılığıdır ve okunuşu
+şudur: gecikmenin kalınlıkla artmaması **hızlı bir yolculuk** değil, **yolculuğun
+yokluğudur**. Kat edilen bir mesafe yoktur; elde yalnızca faz vardır.
+
+Bu ayrımın modelin geneli açısından sonucu şudur: parçacık okuması ile dalga
+okuması burada ayrışır. Dalga okuması her iki rejimde de tanımlıdır, parçacık
+okuması yalnızca yayılımlı rejimde tanımlıdır. Ayrışmanın kendisi bir sonuçtur.
+
+### 18.14 Çıkış yüzü içerideki dönmeyi görmez
+
+Enerji vektörünün üç zaman düzleminden herhangi birinde, herhangi bir açıyla
+döndürülmesi geçiş dalga sayısını değiştirmez. Kütle kabuğu o dalga sayısının
+büyüklüğünü vektörün yalnızca **uzunluğundan** belirler, dönme ise uzunluğu
+korur.
+
+Üç düzlemin her birinde yirmi dört açı ve üç farklı vektör uzunluğu tarandığında
+geçiş dalga sayısındaki en büyük değişim $10^{-9}$'un altındadır. Dolayısıyla
+çıkış yüzü, parçacığın orada izlediği yola tümüyle kördür. Yüz, ara bölgenin
+içinde değil, yüzeylerde belirlenir.
+
+### 18.15 Çıkış anı üç düzlemden ikisini görür
+
+Çıkış anı ise dönmeye kör değildir, ancak seçicidir. Öte tarafın enerji vektörü,
+geçiş altında bizim üç momentumumuzdur; bileşenlerinden biri geçiş yönüne, ikisi
+enine yönlere karşılık gelir. Bir dönme, ancak geçiş yönüyle enine yönler
+arasında ağırlık taşırsa çıkış anını değiştirir.
+
+| Dönme düzlemi | Çıkış anına etkisi |
+|---------------|--------------------|
+| İki enine yuvanın gerdiği düzlem | Yok |
+| Geçiş yuvasına dokunan iki düzlem | Var |
+
+Enine düzlemdeki dönme enine bileşenlerin kare toplamını korur; artık
+$10^{-12}$ mertebesindedir. Diğer iki düzlemde dönme o toplamı değiştirir ve
+çıkış anı kayar.
+
+Bu, gözlemsel olarak anlamlı bir ayrımdır: parçacığın öte tarafta **hangi
+düzlemde döndüğü** buradan çıkarılabilir, çıkış anına bakılarak. Buna karşılık
+**hangi yüzden çıktığı** hiçbir düzleme bağlı değildir.
+
+### 18.16 İçerideki yolun geriye bıraktığı
+
+İçeride süpürülen açı süreklidir; dönme açısı serbest bir parametredir ve
+birbirine ne kadar yakın iki değer seçilirse seçilsin farklı iki yol elde edilir.
+Buna karşılık buraya ulaşan sapma, Bölüm 18.9'un nicelenmiş tayfının bir
+elemanıdır ve momentum $(1,2,3)$ için o tayf **üç** değerlidir.
+
+Sürekli bir küme, üç elemanlı bir kümeye düşürülmektedir. Bu düşme, kapsamın
+dördüncü maddesinin, yani "zaman ile mekân rol değiştirirken kaybolan bilgi"
+sorusunun somut karşılığıdır: kaybolan şey, parçacığın öte tarafta izlediği
+yolun kendisidir. Geriye kalan, o yolun iki uç noktası arasındaki bileşke
+dönmenin nicelenmiş izidir.
+
+**Bağlantının özeti.**
+
+| Gözlenebilir | Neyi görür | Nerede belirlenir |
+|--------------|------------|-------------------|
+| Çıkış yüzü | Hiçbir içeri hareketini | Yüzeylerde |
+| Çıkış anı | Yayılım varsa yolculuğu; dönmeyi üç düzlemden ikisinde | İçeride ve yüzeylerde |
+| Sapma | Yolun yalnızca bileşkesini, nicelenmiş olarak | Yüzeylerde |
 
 ---
 
@@ -2571,7 +2747,7 @@ matrislerinde irrasyonel girdiler oluşur; oralarda bir tolerans kullanılır.
 | Konu | Durum |
 |------|-------|
 | Üç zamanda zamanın oku | Kapandı (Bölüm 8 ve 8.4), ok zaman yönü sayısından çıkar, eşik değeri birdir |
-| Dönüşümdeki $\pm$ işareti | Kapanamaz olduğu gösterildi (Bölüm 18.9) |
+| Dönüşümdeki $\pm$ işareti | Kapanamaz olduğu gösterildi (Bölüm 18.10) |
 | Grup yapısı | Kapandı (Bölüm 2.2), sorun $B$ katmanında |
 | Küresel simetrik çözüm | Kapandı (Bölüm 9.2), kapalı form ve yorumu |
 | Superluminal durgunluk | Kapandı (Bölüm 9.1), ayar fazlalığı |
@@ -2608,6 +2784,65 @@ bir geçirgenlik verir; ayrıca engelin varlığı gelen alanın mod içeriğine
 
 Bu listenin uzunluğu bir kusur olarak değil, çalışmanın bulunduğu aşamanın
 kaydı olarak verilmektedir.
+
+---
+
+## 24. Anlaşmazlıkların iki türü ve hangisinin hangisi olduğu
+
+Rakip kuruluşları doğrulamak ya da yanlışlamak bir yöntemdir. Bu çalışma
+bunun yerine kapsayıcı bir yöntem izler: iki konum, bakılan yön farklı olduğu
+için ayrışıyorsa, ikisi de doğrudur ve yapılacak iş her birinin hangi yönden
+baktığını bulmaktır. Bir bozuk paraya bir açıdan bakıldığında düz bir çizgi,
+başka bir açıdan çember görünür; ikisi de yanlış değildir.
+
+Bu yöntemin dürüst hâli, nerede uygulanamayacağını da söylemesini gerektirir.
+İki konum aynı ölçüm için farklı sayılar veriyorsa ortada tek bir nesne yoktur
+ve kapsayıcı okuma gerçek bir anlaşmazlığı bulandırır. Bu bölüm, modelin kendi
+içindeki ve literatürle olan anlaşmazlıklarını bu ölçüte göre ikiye ayırır.
+
+**Ölçüt.** Bir anlaşmazlık, ancak iki okuma da **tek bir hesaptan** bir
+parametre çevrilerek elde edilebiliyorsa uzlaşmış sayılır. İki tarafın
+birbirini ikna edebilmesi yeterli değildir.
+
+### 24.1 Tek bir madalyonun iki yüzü olan beş anlaşmazlık
+
+| Anlaşmazlık | Çevirilen parametre | Sonuç |
+|-------------|--------------------|-------|
+| Ara bölge bir oyuk mudur, bir engel midir | Hangi eksenin döndüğü | Geçiş ekseni dönerse engel, enine eksen dönerse oyuk; ikisi de aynı formülden |
+| Gecikme mi karışım mı kalınlığı taşır | Aynı genliğin hangi gözlenebilirinin okunduğu | Tamamlayıcıdırlar, rakip değil |
+| Tam yansıma mı tünelleme mi | Kalınlık | Yansıma, tünellemenin kalın limitidir |
+| Öte taraf kötü mü iyi mi konumlanmıştır | Verinin kütle kabuğu üzerinde olup olmadığı | Kabuk dışında kötü, kabuk üzerinde iyi; ikisi de doğru, farklı verinin |
+| Çıkış yüzü ile dönme iki ayrı etiket midir | Yok, ikisi tek bir vektörün parçalarıdır | Bölüm 18.4'te yeniden sayıldı |
+
+Beşinin hiçbiri muhakeme ile kapatılmamıştır. Her birinde iki okuma da
+hesaplanmış ve aralarındaki parametre gösterilmiştir.
+
+### 24.2 Yönteme direnen dört çelişki
+
+Aşağıdaki dördünde iki konum **aynı ölçüm için farklı sayılar** verir. Bakış
+açısı değiştirerek bu fark kalkmaz. Her satırda iki sayı da hesaplanmış ve
+kararı verecek ölçüm adlandırılmıştır.
+
+| Çelişki | Birinci konum | İkinci konum | Kararı verecek ölçüm |
+|---------|---------------|--------------|----------------------|
+| Eklem koşulu | Güçlü koşul: geçen akı $0$ | Zayıf koşul, $d=1$ dilim: $0{,}868$ | Eşikten geçen akı |
+| Madde katmanı | Sıradan profil: katman gücü $1{,}000$ | Dönüm noktasında durağan profil: $0$ | Yüzey enerji yoğunluğu |
+| İki duvar arasındaki Casimir | Aynı koşul: $-0{,}006854$, çekici | Karşıt koşul: $+0{,}005997$, itici | Kuvvetin işareti |
+| Karşı yüzden dönüş | Tek kuantum, enerji $-2{,}2361$ | İki kuantum, enerji $+2{,}2361$ | Çakışmalı sayım |
+
+Dördü de ilkece ölçülebilir niceliklere dayanır; hiçbiri tanım tartışması
+değildir. Modelin bugünkü hâli bunlardan hiçbirine karar vermemektedir.
+
+**Sayımın kendisi.** Dört sayısı beyan edilmemiş, hesaplanmıştır: yukarıdaki
+dört satırın her birinde iki sayının gerçekten farklı olduğu ayrı ayrı
+sınanmakta ve farklı çıkanlar sayılmaktadır.
+
+### 24.3 Yöntemin bilançosu
+
+Dokuz anlaşmazlıktan beşi tek bir hesabın iki okuması olarak birleştirilmiş,
+dördü gerçek çelişki olarak ayakta bırakılmıştır. Kapsayıcı yöntem
+anlaşmazlıkların yarısından fazlasını soğurmakta, geri kalanı hakkında ise
+sessiz kalmak yerine hangi ölçümün karar vereceğini söylemektedir.
 
 ---
 
