@@ -21,6 +21,7 @@
 #include "horizon/SurfaceLayer.h"
 #include "intermediate/DwellTime.h"
 #include "intermediate/IntermediateRegion.h"
+#include "intermediate/TraversalClocks.h"
 #include "intermediate/TwoCrossings.h"
 #include "transform/ExtendedLorentzGroup.h"
 #include "particle/AsymmetricFaces.h"
@@ -82,6 +83,7 @@ namespace
         sections.push_back(std::make_unique<slm::ModeFilterSection>());
         sections.push_back(std::make_unique<slm::TwoCrossingsSection>());
         sections.push_back(std::make_unique<slm::DwellTimeSection>());
+        sections.push_back(std::make_unique<slm::TraversalClocksSection>());
         sections.push_back(std::make_unique<slm::RoundTripSection>());
         sections.push_back(std::make_unique<slm::EnergyBookkeepingSection>());
         sections.push_back(std::make_unique<slm::StateTableSection>());

@@ -364,3 +364,114 @@ but it is not inevitable that scientific journals publish the resulting drivel.
 \endgroup
 \bye
 ```
+
+## What the paper argues
+
+**Where this sits in the exchange.** This is a comment on a reply to a comment:
+Hellaby and Dray's 1994 paper, Hayward's 1995 comment (gr-qc/9606045), their
+1995 reply (gr-qc/9601040), and now this. Its purpose is to repeat the
+substitution and to answer the four "comparisons" the reply had made.
+
+**Convention.** The line element is $ds^2 = -\lambda^{-1}dt^2 + a^2(dr^2/(1-kr^2)
++ r^2 d\Omega^2)$. Hayward changes notation from his earlier comment, writing
+$\lambda$ where he had written $N$, to avoid clashing with Hellaby and Dray's
+$N = \lambda^{-1}$; and their $\epsilon$ is minus his $\varepsilon$.
+
+**The calculation, restated with components named.** The formal expressions are
+$G^t_t = -3a^{-2}(k + \lambda(a')^2)$,
+$G^r_r = -a^{-1}(\lambda' a' + 2\lambda a'') - a^{-2}(k + \lambda(a')^2)$,
+$T^t_t = -\tfrac12\lambda(\phi')^2 - V$, $T^r_r = \tfrac12\lambda(\phi')^2 - V$,
+$\nabla^2\phi = -\tfrac12\lambda'\phi' - \lambda\phi'' - 3\lambda a^{-1}a'\phi'$.
+Taking $\lambda = \varepsilon = \mathrm{sign}(\tau)$ describes a change of
+signature of the contravariant metric in unit normal coordinates, and since
+$\dot\varepsilon = 2\delta$, direct substitution gives
+
+$$G^r_r - \kappa T^r_r = -2a^{-1}(\delta\dot a + \varepsilon \ddot a)
+  - a^{-2}(k + \varepsilon \dot a^2) + \kappa(V - \tfrac12 \varepsilon
+  \dot\phi^2)$$
+$$\nabla^2\phi - \partial V/\partial\phi = -\delta\dot\phi
+  - \varepsilon\ddot\phi - 3\varepsilon a^{-1}\dot a\dot\phi
+  - \partial V/\partial\phi$$
+
+The delta terms force the junction conditions
+$\dot a \delta = 0 \Rightarrow \dot a|_{\tau = 0} = 0$ and
+$\dot\phi\delta = 0 \Rightarrow \dot\phi|_{\tau = 0} = 0$. For the proposed
+solutions, which satisfy only the remaining parts, the residuals are
+
+$$G^r_r - \kappa T^r_r = -2a^{-1}\dot a\,\delta, \qquad
+  \nabla^2\phi - \partial V/\partial\phi = -\dot\phi\,\delta.$$
+
+Hayward reads these physically: the delta in the Einstein equation "describes a
+spatial layer of matter with pressure but no energy or momentum", and the delta
+in the Klein-Gordon equation is a step potential. His summary of the whole
+dispute is one sentence: "the proposed solutions violate conservation because
+they violate the field equations".
+
+**The four rebuttals.** (i) He has never used imaginary time; $t$ and $\tau$
+are real in this calculation and in all his papers. (ii) The calculation is
+purely classical; only the classical field equations appear. (iii) It uses no
+"modified form" of the field equations. (iv) Their claim that no rigorous
+derivation of distributional field equations exists is answered by this
+calculation being one, and he notes that the claim would also indict their own
+attempted derivations.
+
+**The technical attack on the reply.** Hellaby and Dray's equations (26) to (28)
+set $[a]\delta$, $[\phi]\delta$ and $[a']\delta$ to zero, but substituting them
+into the field equations requires multiplying such distributions by themselves
+and dividing by zero: "there should be a term $[a]^2\delta^2/a^2N$ involving the
+ill defined square of $\delta$. There should also be a term $[a']\delta/aN$
+which is of the form $0/0$, since the authors are assuming here that $N \to 0$
+as $t \to 0$." He then gives the escape route explicitly: "One cannot simply
+set $0/0$ equal to $0$; one must show that the numerator approaches zero faster
+than the denominator. For instance, the term $[a']\delta/N$ is zero if
+$a' = O(N)$ as $N \to 0$, which gives the junction condition (5a) above."
+Their resulting identity $\epsilon\ddot a = N'a'/2N^2 - a''/N$ is shown to be
+inconsistent by substituting $t = \tau$, which reduces it to
+$\epsilon\ddot a = -\delta\dot a + \epsilon\ddot a$. The correct identity is
+
+$$\tilde\nabla^2 f = -\lambda f'' - \tfrac12\lambda' f'
+  = -\varepsilon\ddot f - \delta\dot f$$
+
+"The $\delta$ term cannot be argued away."
+
+**Conclusion.** Their derivation of "alternative" field equations is invalid,
+their criticisms of the earlier comment are false, and their proposed solutions
+fail the field equations by well defined Dirac delta terms with a standard
+interpretation as sources at the junction. He closes by calling the controversy
+fruitless and complaining that journals published it.
+
+## Why this matters here
+
+Together with gr-qc/9606045 this is the strongest statement of the case against
+the project's choice, and it is stronger than the earlier comment in one
+respect that the article must confront: it names what the weak condition
+actually is, physically. A solution that carries $\dot a|_\Sigma \ne 0$ is not
+a solution of the Einstein equations with a different matching convention; it
+is a solution with a source at the junction, specifically "a spatial layer of
+matter with pressure but no energy or momentum", plus a step potential in the
+scalar sector. A transmitting threshold in this language is a thin layer of
+exotic matter sitting at $\Sigma$. That is a legitimate object, thin shells are
+standard, but it must be declared as one rather than presented as a free choice
+of junction condition.
+
+The rebuttals in section III also close three defences the project might have
+been tempted by. Hayward's calculation is in real time, is purely classical,
+and uses the unmodified Einstein-Klein-Gordon equations in unit normal
+coordinates, which is the same formalism the project works in. The article
+therefore cannot dismiss the strong condition as an artefact of Euclidean
+quantum cosmology or of a preference for Lichnerowicz-type matching in special
+coordinates. Hellaby and Dray's counterclaim, that the whole difference is
+"imaginary versus real time", is made in gr-qc/9601040 and is denied here point
+by point.
+
+The single most useful sentence for this project is in section IV: the term
+$[a']\delta/N$ vanishes if $a' = O(N)$ as $N \to 0$. That is a concrete,
+checkable condition, and it says that a nonvanishing normal derivative at the
+threshold is admissible only if it vanishes at the same rate as the lapse,
+which is the strong condition recovered as a limit. If the project wants a
+transmitting threshold with a finite conjugate momentum at $\Sigma$, this is
+the inequality it fails, and the article should compute the rate rather than
+argue about philosophy. What the paper does not settle is uniqueness of the
+distributional form of the equations, which is the point Hellaby and Dray press
+in reply and which remains genuinely open; but the burden after this exchange
+is clearly on the weak side.

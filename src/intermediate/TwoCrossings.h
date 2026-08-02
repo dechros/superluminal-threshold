@@ -57,6 +57,17 @@ namespace slm
                                               double mu, double transverseSquared,
                                               double thickness);
 
+        /// The same amplitude with the interior squared wavenumber lowered by a
+        /// given offset, which is the barrier height as a free parameter. At
+        /// zero offset it reduces identically to the amplitude above. It exists
+        /// so that derivatives with respect to the barrier height can be taken,
+        /// which is what the clocks built on a modulated barrier require.
+        static std::complex<double> amplitudeWithInteriorOffset(IntermediateRegion::Kind kind,
+                                                                double omega, double c, double mu,
+                                                                double transverseSquared,
+                                                                double thickness,
+                                                                double interiorOffset);
+
         /// Phase accumulated between the two crossings.
         static double phase(IntermediateRegion::Kind kind, double omega, double c, double mu,
                             double transverseSquared, double thickness);

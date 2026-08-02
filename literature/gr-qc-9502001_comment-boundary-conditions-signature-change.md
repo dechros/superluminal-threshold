@@ -279,3 +279,107 @@ at a classical change of signature''}{(preprint)}
 \endgroup
 \bye
 ```
+
+## What the paper argues
+
+**What is being commented on.** Dray, Manogue and Tucker (gr-qc/9501034) had
+argued that their signature-changing scalar field solutions are legitimate and
+that Hayward's criticisms are untenable. This comment attacks that defence on
+four fronts, and its interest here is that the disagreement is reduced to a
+substitution anyone can check.
+
+**The example.** For the equation
+
+$$2t\ddot\Phi = \dot\Phi$$
+
+the authors had written the "general solution" as
+$\Phi = A(-t)^{3/2} + B$ for $t < 0$ and $\Phi = Ct^{3/2} + D$ for $t > 0$.
+Hayward's reply is that this is simply not a solution: verifying it requires
+differentiating $\Phi$ twice, and $\Phi$ is not twice differentiable "unless
+$A = C = 0$ and $B = D$". Their preferred restriction $A = -C$, $B = D$ still
+fails unless $A = 0$. He also notes an internal inconsistency: the matching
+choice that gives $A = -C$ in the first section is the opposite of the choice
+made in the next two sections, and of the choice made in their original 1991
+paper, both of which correspond to $A = C$. The electrostatic analogy the
+authors offer, a hollow charged conductor, is dismissed as irrelevant because
+there the Maxwell equations carry a distributional source proportional to the
+normal derivative of a delta at the dipole layer, which forces the
+discontinuity, whereas "there is no distributional source in equation (1)".
+
+**The variational objection.** The four proposed actions "are not integrals of
+a Lagrangian form, but are each the sum of separate integrals over the two
+domains", so the resulting variational equations are well defined only away
+from the junction. "However, the problem was to make sense of the field
+equations *at* the junction, where they are singular. Otherwise, one has not
+described a *change* of signature." He notes that the standard ADM action does
+yield well defined Lagrange or Hamilton equations.
+
+**The distributional objection.** Written out, the authors' distributional field
+equation reads $d(\Theta^+ {*}d\Phi|_{U^+} + \Theta^- {*}d\Phi|_{U^-}) = 0$,
+which multiplies distributions $\Theta^\pm$ defined on $M$ by forms defined
+only on part of $M$. The underlying difficulty is that $d{*}d\Phi = 0$ is
+singular at the junction because $*$ acting on 1-forms carries factors of
+$t^{-1/2}$ or $|t|^{-1/2}$, and Hayward's verdict is that the authors "have not
+solved this problem, merely hidden it away in formalism". He also points out
+that their equations defining the Hodge dual imply ${*}{*}1 = \mathrm{sgn}(t)$,
+whereas ${*}{*}1 = 1$.
+
+**The five-point restatement, which is the substantive core.** Correcting what
+he says is a misattribution, Hayward restates his own position:
+
+(i) the proposed solutions do not satisfy the field equations;
+(ii) they *can* be reinterpreted as **weak** solutions, meaning $\Phi$ is taken
+as a distribution rather than a real function, but only if the field equation
+is written in a particular form;
+(iii) there are many more weak solutions than the authors suspected, "this is
+where non-uniqueness and lack of predictability enter";
+(iv) there is no preferred way to restore uniqueness, only arbitrary
+restrictions;
+(v) there was never much reason to look for weak solutions;
+and he adds (vi) that field equations such as the Einstein or Klein-Gordon
+equations have kinetic terms quadratic in the velocities, which in a
+distributional approach "would involve meaningless products of distributions",
+so "such weak solutions will not exist in general".
+
+**Conclusion.** The authors' choices of solution are mutually inconsistent
+between sections, neither choice satisfies the equation, their variational
+equations are singular, and their distributional field equations are ill
+defined; the claim that "our approach is completely consistent and makes sense
+of our field equation" is therefore rejected.
+
+## Why this matters here
+
+The reason this comment matters to a project that chose the weak condition is
+point (ii), and it is a partial concession that cuts both ways. Hayward does
+not say weak solutions are illegitimate as objects; he grants that the
+signature-changing solutions can be read as weak solutions once the field is
+treated as a distribution and the equation is written in the right form. That
+is the formal opening the project's transmitting threshold occupies. But he
+immediately attaches the two objections that any weak-condition model has to
+carry: (iii) the weak class is much larger than its proponents realise, so the
+solution is underdetermined and predictability is lost, and (iv) there is no
+principled way to cut it back down, only arbitrary restrictions.
+
+The article already records the same structure from its own side. In the mode
+scattering at $\Sigma$, the strong branch gives total reflection as the unique
+flux-conserving solution, while the weak branch conserves flux for *every*
+reflection amplitude $R$: transmission is permitted but its magnitude is not
+determined. That is Hayward's non-uniqueness objection recovered
+independently, from the project's own algebra rather than from his. It should
+be stated as such, because the coincidence is strong evidence that the
+indeterminacy is a real feature of the weak condition and not an artefact of
+how the project set up its scattering problem.
+
+Point (vi) is the harder one and should not be softened. Hayward's argument is
+that equations with kinetic terms quadratic in the velocities, which includes
+Klein-Gordon and Einstein, would require products of distributions in a
+distributional treatment, so weak solutions "will not exist in general". A
+project whose central object is a massive particle governed by exactly such an
+equation is squarely inside the scope of that objection. Answering it requires
+either an algebra in which those products are defined, of the Colombeau kind
+already collected in this bibliography, or a demonstration that the specific
+solutions used never form the offending products. Neither is supplied by
+asserting that the weak condition assumes less. Note finally that this comment
+is directed at the scalar field papers rather than at the conservation law
+paper, so it constrains the project's field-theoretic construction more
+directly than gr-qc/9404001 does.

@@ -74,6 +74,16 @@ namespace slm
                                                  double c, double mu, double transverseSquared,
                                                  double thickness)
     {
+        return amplitudeWithInteriorOffset(kind, omega, c, mu, transverseSquared, thickness, 0.0);
+    }
+
+    std::complex<double> TwoCrossings::amplitudeWithInteriorOffset(IntermediateRegion::Kind kind,
+                                                                   double omega, double c,
+                                                                   double mu,
+                                                                   double transverseSquared,
+                                                                   double thickness,
+                                                                   double interiorOffset)
+    {
         const std::complex<double> i(0.0, 1.0);
         const double outside = outsideSquared(omega, c, mu, transverseSquared);
         if (outside <= 0.0)
@@ -81,12 +91,14 @@ namespace slm
             return {0.0, 0.0};
         }
         const double kappa = std::sqrt(outside);
-        if (thickness <= 0.0 || kind == IntermediateRegion::Kind::None)
+        if (thickness <= 0.0 ||
+            (kind == IntermediateRegion::Kind::None && interiorOffset == 0.0))
         {
             return std::exp(i * kappa * thickness);
         }
 
-        const double inside = insideSquared(kind, omega, c, mu, transverseSquared);
+        const double inside =
+            insideSquared(kind, omega, c, mu, transverseSquared) - interiorOffset;
         const std::complex<double> q =
             inside >= 0.0 ? std::complex<double>(std::sqrt(inside), 0.0)
                           : std::complex<double>(0.0, std::sqrt(-inside));
