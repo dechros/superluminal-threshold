@@ -2074,8 +2074,12 @@ $16{,}000005$ gecikir, yani **tam ışık süresi kadar**. Cephe hiçbir kalınl
 **İlerlemiş tepenin üzerinde taşındığı şey.** Öne alma büyürken onu taşıyan
 genlik çöker:
 
-| $d$ | Geçen genlik | Tepenin öne alınması |
-|-----|--------------|----------------------|
+Aşağıdaki tablo **tek geçiş** ayağındadır: öne alma, tek geçişlik gecikmenin
+$d/c$ ile karşılaştırılmasıdır. Bölüm 25.5'in tablosu gidiş dönüş ayağındadır ve
+sayıları bu nedenle farklıdır; ikisi karıştırılmamalıdır.
+
+| $d$ | Geçen genlik | Tepenin tek geçişte öne alınması |
+|-----|--------------|----------------------------------|
 | $2$ | $2{,}0364 \times 10^{-2}$ | $+0{,}5371$ |
 | $8$ | $2{,}4532 \times 10^{-8}$ | $+6{,}5371$ |
 | $32$ | $5{,}1651 \times 10^{-32}$ | $+30{,}5371$ |
@@ -3596,9 +3600,9 @@ uzunluk kütle kabuğundan):
 
 | Kutup açısı | $t$ | $x_{\perp}$ | $(y,\, z)$ |
 |-------------|-----|--------------|-------------|
-| $0{,}4$ | $11{,}9350$ | $2{,}0000$ | $(+0{,}0015,\; +0{,}0041)$ |
-| $1{,}2$ | $4{,}9866$ | $2{,}0000$ | $(+0{,}0037,\; +0{,}0016)$ |
-| $2{,}5$ | $7{,}7660$ | $2{,}0000$ | $(+0{,}0024,\; -0{,}0036)$ |
+| $0{,}4$ | $23{,}8700$ | $2{,}0000$ | $(+0{,}0015,\; +0{,}0041)$ |
+| $1{,}2$ | $9{,}9732$ | $2{,}0000$ | $(+0{,}0037,\; +0{,}0016)$ |
+| $2{,}5$ | $15{,}5319$ | $2{,}0000$ | $(+0{,}0024,\; -0{,}0036)$ |
 
 Geçiş doğrultusundaki yer değiştirme üçünde de aynıdır, çünkü yalnızca dalı
 görür; geçen süre ile enine yer değiştirmeler ise yönelimle birlikte
