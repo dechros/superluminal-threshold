@@ -1972,7 +1972,51 @@ Ayrıca "hiç çıkmaz" satırının sıfır olması, geçişin kayıpsız oldu�
 dayanır. Bölüm 3.4'teki madde katmanı geçişi sönümlü kılarsa bu satır sıfır
 olmaktan çıkar.
 
-### 18.7 İşaret sorusunun yeniden okunması
+### 18.7 Çatalın kapanması: dönme nicelenmiştir
+
+Önceki bölümün iki ucu da varsayımdı. Modelin içinde, varsayım gerektirmeyen
+üçüncü bir cevap zaten duruyor.
+
+**Yapı.** Bölüm 2.1'de bütün filtreleri geçen sekiz matris kalmıştı; aralarındaki
+tek fark uzay eksenlerinin etiketlenmesiydi. Ara bölgenin **her yüzü bunlardan
+birini gerçekler**. İki yüz aynı matrisi gerçeklerse gidiş dönüş bileşkesi
+özdeşliktir. Farklı matrisleri gerçeklerse bileşke belirli bir dönmedir.
+
+Dolayısıyla dönme ne serbest bir parametredir ne de düzgün dağılmıştır; sekiz
+matrisin bileşkelerinin oluşturduğu **sonlu bir kümeden** değer alır.
+
+**Hesap.** Altmış dört eşleşmenin 32'si enerjimizi korur, ve bunların 24'ü
+momentumu döndürür. Gelen momentum $(1,2,3)$ için ortaya çıkan sapma tayfı:
+
+$$\theta \in \{0{,}\ 0{,}873{,}\ 1{,}281\}$$
+
+Üç değer, süreklilik değil.
+
+**Sonuç.**
+
+| Okuma | Durumu |
+|-------|--------|
+| Ayar okuması, sapma yok | Özel hâl: iki yüz eşleştiğinde çıkar |
+| Bilgisizlik okuması, düzgün dağılım | **Dışlanır**: süreklilik mevcut değil |
+| Nicelenmiş dönme | Modelin kendi yapısından çıkar |
+
+Ayar okuması bir rakip değil, tayfın sıfır elemanıdır. Bilgisizlik okuması ise
+elenir, çünkü sürekli bir sapma dağılımı bu yapıda bulunmaz.
+
+> Model, gelişigüzel bir sapma değil, **belirli açılarda** sapma öngörür. Bu,
+> çatalın iki ucundan da keskin bir iddiadır ve sınanması da daha kolaydır:
+> sapma açılarının dağılımı sürekli değil, ayrık çıkmalıdır.
+
+**Çekince.** Tayftaki açılar evrensel değildir; gelen parçacığın hangi
+doğrultuda geldiğine bağlıdır. Eksen boyunca gelen bir parçacık için farklı bir
+tayf çıkar. Evrensel olan, tayfın **sonlu** olmasıdır, çünkü bileşkeler sonlu
+bir grup oluşturur.
+
+İkinci çekince: hangi yüzün hangi matrisi gerçeklediğini belirleyen şey bu
+çalışmada gösterilmemiştir. Tayf hesaplanmıştır, tayf üzerindeki olasılık
+dağılımı hesaplanmamıştır.
+
+### 18.8 İşaret sorusunun yeniden okunması
 
 Aşağıdaki tartışma bu sözlüğün bir parçasıdır ve sonucu tersine dönmüştür.
 Eski kuruluşta iki bölgedeki okların bağıl işareti prensip olarak ölçülemezdi,

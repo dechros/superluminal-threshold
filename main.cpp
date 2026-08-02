@@ -19,6 +19,7 @@
 #include "intermediate/IntermediateRegion.h"
 #include "intermediate/TwoCrossings.h"
 #include "literature/LiteraturePosition.h"
+#include "particle/AsymmetricFaces.h"
 #include "particle/CellDistribution.h"
 #include "particle/EnergyBookkeeping.h"
 #include "particle/StateTable.h"
@@ -65,6 +66,7 @@ namespace
         sections.push_back(std::make_unique<slm::EnergyBookkeepingSection>());
         sections.push_back(std::make_unique<slm::StateTableSection>());
         sections.push_back(std::make_unique<slm::CellDistributionSection>());
+        sections.push_back(std::make_unique<slm::AsymmetricFacesSection>());
         sections.push_back(std::make_unique<slm::MaxwellSection>());
         sections.push_back(std::make_unique<slm::LiteraturePosition>());
         sections.push_back(std::make_unique<slm::BlackHoleHorizon>());
