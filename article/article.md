@@ -3178,6 +3178,7 @@ ne bölüm numarası ne kaynak numarası bulunur.
 | Oyalanma süresi ile fazdan gecikmenin karşılaştırılması | `src/intermediate/DwellTime` |
 | Lapse konturunun dejenere noktanın hangi tarafından geçtiği | `src/quantum/LapseContour` |
 | Yönlendirilebilirlik ile zorunluluğun ayrılması | `src/particle/FlowAssumption` |
+| Dönüş olayının kapalı biçimi | `src/particle/ReturnFormula` |
 | Geçiş süresinin beş okumasının yan yana hesabı | `src/intermediate/TraversalClocks` |
 | Sinyal cephesinin tepeden ayrılması | `src/intermediate/SignalFront` |
 | Gidiş dönüş muhasebesi: mod, yük, entropi | `src/particle/RoundTrip` |
@@ -3666,6 +3667,86 @@ geçtiği anlamına gelmez ve bu çalışma öyle bir iddiada bulunmamaktadır.
 okumadan üçü geçişi ışığın üstüne, ikisi altına koyar. Yukarıdaki tablo faz
 okumasıyla kurulmuştur, çünkü sorulan soru dışarıdaki bir dedektörde tepenin ne
 zaman göründüğüdür; ama bu bir seçimdir ve gerekçesi 14.11'de verilmiştir.
+
+---
+
+### 25.7 Eşlemenin kapalı biçimi
+
+Bölüm 25.1 ile 25.6 arası eşlemeyi **tarayarak** verir. Tarama bir cevap
+değildir: bu durumların nereye döndüğünü söyler, eşlemenin **ne olduğunu**
+söylemez. Bu bölüm onu formül olarak yazar (`src/particle/ReturnFormula`).
+Bildiğimiz kadarıyla literatürde bu eşlemenin hiçbir biçimi bulunmamaktadır;
+aşağıdaki bu çalışmada üretilmiştir.
+
+**İki özdeşlik formülü kısaltıyor, ve ikisi de yaklaşık değil tamdır.**
+
+**Birinci özdeşlik.** Dış normal dalga sayısı, enerji vektörünün **birinci
+bileşenidir**. Kütle kabuğu frekansı uzunluktan sabitler, enine dalga sayısı
+öteki iki bileşenin uzunluğudur, ve fark birinci bileşeni yalnız bırakır:
+
+$$\kappa^2 = \frac{\omega^2}{c^2} - k_\perp^2 - \mu = (E_1^2 + E_2^2 + E_3^2 + \mu) - (E_2^2 + E_3^2) - \mu = E_1^2$$
+
+$$\boxed{\;\kappa = |E_1|\;}$$
+
+Yani modun yüzeyle nasıl karşılaştığına karar veren nicelik, yönelimin bir
+fonksiyonu değil, **bir koordinatıdır**. Bu, tüm formülü kısaltan şeydir.
+
+**İkinci özdeşlik.** İç sönüm sabiti aynı üç bileşenden, tek ek girdi olarak
+çevrilen yön sayısı $n$ ile kurulur:
+
+$$\beta^2 = \frac{2n}{3}\,(E_2^2 + E_3^2) - E_1^2$$
+
+Dolayısıyla geçişin engel mi geçit mi olduğu, bileşenler arasında düz bir
+eşitsizliktir. Öklid ara bölge için ($n = 3$):
+
+$$\text{engel} \iff 2(E_2^2 + E_3^2) > E_1^2$$
+
+**Geçen süre, kapalı biçimde.** Engel rejiminde:
+
+$$\boxed{\; t(\mathbf{E}) \;=\; \frac{2\,\omega}{c^2\,\kappa\,\beta} \;=\; \frac{2\sqrt{E_1^2+E_2^2+E_3^2+\mu}}{|E_1|\;\sqrt{2(E_2^2+E_3^2)-E_1^2}} \;}$$
+
+(son eşitlik $c = 1$ ve Öklid ara bölge içindir.)
+
+**İçinde kalınlık yoktur.** Doyum burada bir tabloda fark edilen bir şey değil,
+bir **özdeşliktir**. Saçılma hesabıyla karşılaştırıldığında:
+
+| $d$ | Saçılma hesabı | Kapalı biçim | Artık |
+|-----|----------------|--------------|-------|
+| $4$ | $1{,}462864$ | $1{,}462864$ | $3{,}9 \times 10^{-8}$ |
+| $8$ | $1{,}462864$ | $1{,}462864$ | $6{,}6 \times 10^{-11}$ |
+| $16$ | $1{,}462864$ | $1{,}462864$ | $7{,}1 \times 10^{-11}$ |
+| $32$ | $1{,}462864$ | $1{,}462864$ | $7{,}2 \times 10^{-11}$ |
+
+**Sonlu kalınlık biçimi.** Doyum henüz kurulmamışken de geçerli olan tam
+biçim, doyuran çarpanı açıkça taşır. $u = 2\kappa\beta / [(\kappa^2-\beta^2)\tanh(\beta d)]$
+olmak üzere:
+
+$$\arg T = \frac{\pi}{2} - \arctan u, \qquad t = -\frac{1}{1+u^2}\,\frac{du}{d\omega}$$
+
+$$\frac{d\kappa}{d\omega} = \frac{\omega}{c^2\kappa}, \qquad \frac{d\beta}{d\omega} = -\frac{\omega}{c^2\beta}$$
+
+$\tanh(\beta d) \to 1$ limitinde $u \to 2\kappa\beta/(\kappa^2-\beta^2)$ olur, kalınlık
+düşer, ve yukarıdaki kapalı biçim geri gelir. Sonlu kalınlıkta da saçılma
+hesabıyla örtüşür: $d = 1$ için $1{,}451403$, $d = 2$ için $1{,}462898$, ikisi
+de her iki yoldan aynı.
+
+**Dört koordinatın tamamı.** Öte taraftaki durum, üç zamandaki enerji vektörü
+$\mathbf{E}$ ile tek uzay eksenindeki dal $\sigma = \pm 1$'dir. Dönüş olayı:
+
+$$t = \frac{2\omega}{c^2\,|E_1|\,\beta}, \qquad
+x_\perp = d\,\frac{1+\sigma}{2}, \qquad
+y = S(d)\,\frac{E_2}{|\mathbf{E}|}, \qquad
+z = S(d)\,\frac{E_3}{|\mathbf{E}|}$$
+
+Burada $S(d)$ paket merkezinin kaymasıdır ve iki enine koordinatın **ortak**
+çarpanıdır. Okunuşu:
+
+> **Ne zaman** döndüğü yalnızca yönelime bakar, dala hiç bakmaz. **Nereden**
+> çıktığı yalnızca dala bakar, yönelime hiç bakmaz. **Ne kadar saptığı** ise
+> yönelimin enine bileşenlerine bakar, ve iki sapma tek bir çarpanı paylaşır.
+
+Taranan olayın her koordinatı bu formülle yeniden üretilmektedir. Dolayısıyla
+tarama artık cevaba giden tek yol değil, **formülün üzerindeki bir denetimdir**.
 
 ---
 
