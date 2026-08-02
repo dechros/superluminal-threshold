@@ -2840,6 +2840,7 @@ ne bölüm numarası ne kaynak numarası bulunur.
 | Yüzlerin farklı olması ve nicelenmiş dönme | `src/particle/AsymmetricFaces` |
 | Öte taraftaki hareketin gözlenebilirlere etkisi | `src/particle/FarSideMotion` |
 | Koordinat sözlüğü ve üç zamanın izdüşümü | `src/particle/TimeProjection` |
+| Zamanlar uzayının eğriliği ve yönelim izinin yeri | `src/particle/TimeHolonomy` |
 | Çekirdek eşleme: yönelimden dönüş olayına | `src/particle/ReturnEvent` |
 | Dört sinyal taşıyıcısı ve yerçekimi kanalı | `src/signal/Channels`, `src/signal/GravitationalChannel` |
 | Maxwell alanının $D$ altındaki davranışı | `src/field/MaxwellField` |
@@ -3009,6 +3010,53 @@ ve gecikme ıraksar. Bu nedenle $62{,}4$ sayısı fiziksel bir manevra kabiliyet
 değil, bir limit davranışıdır. Teğetlikten uzakta da yönelim dönüş anını
 değiştirmeye devam eder, dolayısıyla etki bir ıraksama artefaktı değildir;
 ancak büyüklüğü bu sayının verdiği izlenimden küçüktür.
+
+### 24.6 Yönelim izi nereden geliyor: zamanlar uzayının eğriliği
+
+Bölüm 24.4 yönelimin dönüş anını değiştirdiğini saçılma yoluyla buldu. Bu
+alt bölüm aynı soruyu bağımsız bir yoldan sorar ve **etkinin nerede
+doğduğunu** belirler.
+
+**Ölçüt.** Bir durum aynı anda birden çok zaman değişkeninde evriliyorsa, her
+biri kendi üretecini taşır ve bu evrimler ancak zamanlar uzayındaki taşımanın
+yoldan bağımsız olması hâlinde tutarlıdır. Bu koşul, bileşenleri üreteçlerin
+ikişerli komütatörleri olan bir eğriliğin sıfırlanmasıdır. Eğrilik sıfırsa yol
+hiçbir bilgi taşımaz ve tek zamana indirgeme belirsizlik içermez; sıfır
+değilse kapalı bir yol durumun üzerinde bir holonomi bırakır ve zamanlar
+arasındaki yönelim gözlenebilir hâle gelir.
+
+**Serbest kuram düzdür.** Öte tarafın serbest alanı için üç üreteç, tek bir
+enerji vektörünün bileşenleridir ve komüte ederler; üç eğrilik bileşeninin
+üçü de tam olarak sıfırdır. Kapalı bir yolun holonomisi, yolun uzunluğu ne
+olursa olsun kaybolur; $1000$ birimlik yol için de sınanmıştır.
+
+> İçerideki yol, serbest evrim tarafından **kaydedilmez**. Dolayısıyla
+> Bölüm 24.4'te bulunan yönelim bağımlılığının kaynağı ara bölgenin içi
+> olamaz.
+
+**Eğriliği yüzeyler getiriyor.** İki eşik yüzeyindeki eşleşme, geçiş
+doğrultusunu enine doğrultulara karıştırır ve üreteçler bu karışım altında
+komüte etmeyi bırakır. Eğrilik bağlaşım gücüyle doğru orantılıdır ve bağlaşım
+sıfırlandığında tümüyle kaybolur, dolayısıyla etkinin **tamamı** yüzeylere
+aittir.
+
+**İki hesabın örtüşmesi.** Bu, bağımsız bir sınamadır ve durum durum tutar:
+
+| Durum | Yüzey eğriliği | Saçılmanın dönüş anını oynatması |
+|-------|----------------|----------------------------------|
+| Geçiş yuvasında ağırlığı olmayan vektör, diğer iki yuvanın düzleminde döndürülür | $0$ | $0$ |
+| Genel bir vektör, geçiş yuvasına dokunan düzlemde döndürülür | $3{,}000$ | $1{,}6383$ |
+
+Ayrıca eğrilik yalnızca geçiş yuvasına dokunan iki düzlemde sıfırdan farklıdır;
+diğer iki yuvanın gerdiği düzlem, yüzeyler dâhil edildiğinde bile düzdür. Bu,
+Bölüm 18.15'te fazdan bağımsız olarak bulunan seçimin **aynısıdır**: çıkış anı
+üç zaman düzleminden ikisini görür, birini görmez. İki ayrı yoldan aynı iki
+düzleme varılmıştır.
+
+**Sonuç.** Yönelimin bizim zaman eksenimizdeki izi gerçektir, ancak ara
+bölgenin içinde değil, **sınırında** doğar. Bunu iki hesaptan hiçbiri tek
+başına söyleyemez: saçılma etkinin varlığını verir, eğrilik ölçütü yerini
+verir.
 
 ---
 
