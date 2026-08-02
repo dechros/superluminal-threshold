@@ -33,10 +33,10 @@ namespace slm
     {
         const FarSideMotion::Three energy{state.orientation[0], state.orientation[1],
                                           state.orientation[2]};
-        const double elapsed = FarSideMotion::momentFromEnergy(kind, c, mu, energy, thickness);
+        const double elapsed =
+            2.0 * FarSideMotion::momentFromEnergy(kind, c, mu, energy, thickness);
         const double crossing = state.branch > 0 ? thickness : 0.0;
-        const double shift = WavePacket::centroidShiftInSpreads(kPacketCentre, kPacketSpread,
-                                                                thickness, c, mu, kFlipped);
+        const double shift = transverseFactor(thickness, c, mu);
         const double length = FarSideMotion::vectorLength(energy);
         if (length <= 0.0)
         {
@@ -44,6 +44,12 @@ namespace slm
         }
         return {elapsed, crossing, shift * state.orientation[1] / length,
                 shift * state.orientation[2] / length};
+    }
+
+    double ReturnEvent::transverseFactor(double thickness, double c, double mu)
+    {
+        return WavePacket::centroidShiftInSpreads(kPacketCentre, kPacketSpread, thickness, c, mu,
+                                                  kFlipped);
     }
 
     double ReturnEvent::lightRoundTrip(double thickness, double c)
@@ -64,7 +70,7 @@ namespace slm
         for (double thickness : {2.0, 4.0, 8.0, 16.0})
         {
             const double elapsed =
-                TwoCrossings::returnDelay(kind, omega, c, mu, 4.0, thickness);
+                2.0 * TwoCrossings::returnDelay(kind, omega, c, mu, 4.0, thickness);
             const double advance = lightRoundTrip(thickness, c) - elapsed;
             if (advance <= previous)
             {
@@ -228,7 +234,7 @@ namespace slm
         for (double d : {2.0, 4.0, 8.0, 16.0})
         {
             const double elapsed =
-                TwoCrossings::returnDelay(Kind::Euclidean, barrierOmega, c, mu, 4.0, d);
+                2.0 * TwoCrossings::returnDelay(Kind::Euclidean, barrierOmega, c, mu, 4.0, d);
             const double light = ReturnEvent::lightRoundTrip(d, c);
             report.check(std::format("  d = {:4g} : light needs {:6.2f}, the particle returns at "
                                      "{:.4f}, advance {:+.4f}",

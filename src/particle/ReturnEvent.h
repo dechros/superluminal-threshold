@@ -59,7 +59,19 @@ namespace slm
 
         /// Time an uninterrupted signal at the speed of light would need to
         /// cover the same round trip.
+        /// Time an uninterrupted light signal needs for the same journey, out
+        /// and back, which is twice the thickness over the speed of light. The
+        /// elapsed coordinate of the event is measured on the same footing:
+        /// the region is crossed twice, so it is twice the single traversal
+        /// delay. Comparing a round trip against a single traversal would
+        /// flatter the crossing by one whole traversal, which is why the
+        /// doubling is done in the map rather than left to the caller.
         static double lightRoundTrip(double thickness, double c);
+
+        /// Common factor scaling both transverse displacements, exposed so that
+        /// anything rewriting this map uses the same packet rather than a copy
+        /// of its constants.
+        static double transverseFactor(double thickness, double c, double mu);
 
         /// How much earlier than that signal the particle returns. Positive
         /// means the return event lies inside the light cone of nothing that

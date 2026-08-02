@@ -77,7 +77,11 @@ namespace slm
         {
             return false;
         }
-        const int partner = firstSlotWithSign(metric, sign, start);
+        int partner = firstSlotWithSign(metric, sign, start);
+        if (partner < 0)
+        {
+            partner = firstSlotWithSign(metric, -sign);
+        }
         if (partner < 0)
         {
             return false;

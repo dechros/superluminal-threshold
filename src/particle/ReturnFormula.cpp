@@ -3,20 +3,12 @@
 #include "core/Report.h"
 #include "intermediate/TwoCrossings.h"
 #include "particle/ReturnEvent.h"
-#include "particle/WavePacket.h"
 
 #include <cmath>
 #include <format>
 
 namespace slm
 {
-    namespace
-    {
-        constexpr double kPacketCentre = 2.0;
-        constexpr double kPacketSpread = 0.3;
-        constexpr double kFlipped = 1.0;
-    }
-
     double ReturnFormula::length(const Three &energy)
     {
         return std::sqrt(energy[0] * energy[0] + energy[1] * energy[1] + energy[2] * energy[2]);
@@ -103,8 +95,7 @@ namespace slm
 
     double ReturnFormula::transverseFactor(double thickness, double c, double mu)
     {
-        return WavePacket::centroidShiftInSpreads(kPacketCentre, kPacketSpread, thickness, c, mu,
-                                                  kFlipped);
+        return ReturnEvent::transverseFactor(thickness, c, mu);
     }
 
     std::array<double, 2> ReturnFormula::transverseDisplacement(const Three &energy,

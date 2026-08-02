@@ -47,6 +47,13 @@ namespace slm
         /// Whether a unit vector of the given causal type can be carried into
         /// its own negative without ever leaving that type. When it cannot, the
         /// type is orientable.
+        ///
+        /// The rotation plane is spanned with a second direction of the same
+        /// type where one exists, and otherwise with a direction of the other
+        /// type, which is the only plane available when the type has a single
+        /// direction. That case is the one the result is about, so it is run
+        /// rather than short circuited: the interval is watched along the whole
+        /// half turn and the answer can come out either way.
         static bool canReachOwnNegative(const Matrix4 &metric, int sign, int samples = 4001);
 
         /// Whether the given causal type is orientable, decided by the rotation
