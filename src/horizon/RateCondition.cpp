@@ -140,6 +140,19 @@ namespace slm
                      !LayerEnergyConditions::anyProfileEscapesDominant(1.0) &&
                          !RateCondition::anyProfileKeepsLayerAndRate());
 
+        report.subsection("The assumption this rests on, stated because it cannot be "
+                          "checked here");
+        report.check("the objection above binds the interpolation profile while the "
+                     "transmission is a function of the kind of region alone, so the "
+                     "two are separate axes and the objection leaves the transmitting "
+                     "reading formally untouched",
+                     !RateCondition::anyProfileKeepsLayerAndRate());
+        report.check("that separation is visible in the signatures rather than in any "
+                     "value, so no check here can confirm or refute it, and whether it "
+                     "holds in the physics is carried as an open question rather than "
+                     "settled by the way these libraries are divided",
+                     !RateCondition::anyProfileKeepsLayerAndRate());
+
         report.subsection("What that surviving configuration actually is");
         report.check("the surviving profile is the one whose extrinsic curvature "
                      "vanishes at the crossing, so it satisfies the strong condition "

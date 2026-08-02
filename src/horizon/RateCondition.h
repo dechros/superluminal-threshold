@@ -66,10 +66,20 @@ namespace slm
         /// carrying a layer, which is what the weak choice would need in order
         /// to be a generic option rather than a tuned one.
         static bool anyProfileKeepsLayerAndRate();
+
     };
 
     /// Section computing the rate at which the normal derivative dies against
     /// the rate at which the lapse does.
+    ///
+    /// One thing this section states cannot be checked at run time and is
+    /// therefore stated and not checked: the rate above is a function of the
+    /// interpolation profile alone and the transmission is a function of the
+    /// kind of region alone, so the two are separate axes. That is visible in
+    /// the signatures rather than in any value, and every transmitting result
+    /// in this work rests on it. Whether they are separate in the physics as
+    /// well as in these libraries is a different question and is carried as
+    /// open.
     class RateConditionSection : public Section
     {
     public:
