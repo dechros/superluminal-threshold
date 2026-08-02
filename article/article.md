@@ -97,6 +97,13 @@ Doğrulanan özellikler:
 | Grup | $\mathbb{Z}_2$ |
 | $V$ bağımlılığı | Yok |
 
+$D$'nin yaptığı şey, aralığın **genel işaretinin** çevrilmesidir. Metriğin genel
+işaretinin değişmesi ve bunun fiziksel sonuçları [40]'ta ayrıca ele alınmıştır;
+orada bu, göreliliğin farklı formülasyonlarında klasik bir imza değişimi türü
+olarak incelenir ve kozmolojik sabitle ilişkilendirilir. Buradaki kullanım ondan
+dardır: genel işaret çevrilmesi tek başına ele alınmaz, iki metrik arasındaki
+eşlemenin bir özelliği olarak ortaya çıkar.
+
 Işık konisi testi $(1,1,0,0)$, $(1,0,1,0)$, $(1,0,0,1)$ ve
 $(1, 1/\sqrt{3}, 1/\sqrt{3}, 1/\sqrt{3})$ ışınları üzerinde yapılır; her birinde
 $s'^2 = -s^2 = 0$ çıkar. Genel bir aralık için de $s'^2 = -s^2$ tam olarak sağlanır.
@@ -545,35 +552,59 @@ Buna karşılık [8] bir uyarı da içerir: kuantum alanların varlığı bu duv
 **kararsız** kılar, Kleinian bölge ya çöker ya sınırsız genişler. Burada bu
 soruya girilmemiştir ve açık bırakılmaktadır.
 
-### 9.3 Geometrinin izin verdiği geçişi alan yasaklıyor
+### 9.4 Sonlu kalınlıkta bir dilim bir şeyler geçirir
 
-Bölüm 9.1'in sonucu akı hakkındadır. Bundan ayrı ve daha zayıf bir soru vardır:
-bir eğrinin teğeti, yüzeyi geçerken nedensel karakterini koruyor mu. Bu yalnızca
-iki metriğe bakan bir sorudur.
+Bölüm 9.1 öte tarafı **sınırsız** kabul eder. Sonlu kalınlıkta bir dilim ayrı
+bir problemdir ve sonucu farklıdır.
 
-İki metrik arasındaki fark hesaplanır:
+Bu ayrım [41]'de kurulmuştur ve o çalışma bu bölümün öncülüdür. Orada
+Klein-Gordon parçacıklarının Lorentzian imzadan Kleinian imzaya geçişi
+incelenir, düzlemsel bir sınırda parçacık akısı için **ayna davranışı** bulunur,
+ve ardından sonlu kalınlıkta bir çift eklem ele alınarak **tünelleme
+olasılığı** gösterilir. Dikkat çekici olan, oradaki geçişin
+$(-,+,+,+) \to (-,+,+,-)$ olması, yani Bölüm 13.5'teki kademeli yolun tam
+olarak birinci ayağıdır.
 
-$$v^T \eta' v - v^T \eta\, v = 2\,(v_1^2 + v_2^2) \;\geq\; 0$$
+Aynı hesap bu modelin değişkenleriyle yapıldığında şu çıkar. Dilimin dışında
+normal doğrultudaki dalga sayısı karesi daima pozitiftir; içeride ise işaret
+değiştiren yön yeterince dalga sayısı taşıdığında negatife döner, yani iç mod
+**yayılmaz, söner**. Bu durumda geçirgenlik
 
-Fark daima negatif değildir. Sonuç doğrudan çıkar:
+$$T(d) = \left[1 + \frac{(\kappa^2+q^2)^2}{4\kappa^2 q^2}\,
+        \sinh^2(q d)\right]^{-1}$$
 
-> Bölge I'de zaman-benzeri olan **her** yön, Bölge II'de de zaman-benzeridir.
+olur. Hesaplanan değerler:
 
-Kapsama tek yönlüdür, tersi doğru değildir: örneğin $(0,1,0,0)$ Bölge I'de
-uzay-benzeri, Bölge II'de zaman-benzeridir. Bölge II'nin zaman-benzeri yönleri
-kesin olarak daha fazladır.
+| Kalınlık $d$ | $T$ |
+|--------------|-----|
+| $0{,}5$ | $5{,}50 \times 10^{-1}$ |
+| $1$ | $1{,}48 \times 10^{-1}$ |
+| $2$ | $6{,}70 \times 10^{-3}$ |
+| $4$ | $1{,}20 \times 10^{-5}$ |
+| $8$ | $3{,}87 \times 10^{-11}$ |
 
-**Ayrımın önemi.** Eşikte bir eğriyi durduran nedensel bir engel **yoktur**;
-teğeti karakterini koruyarak geçer. Bölüm 9.1'in yasakladığı şey akıdır, ve akı
-eğrinin teğetinin değil, alanın ve eklem koşulunun bir özelliğidir. Dolayısıyla
-şu iki ifade birbiriyle çelişmez:
+**Sonuç ve Bölüm 9.1'in yeniden okunması.** Geçirgenlik hiçbir sonlu kalınlıkta
+sıfır değildir, ancak kalınlıkla üstel olarak bastırılır. Dolayısıyla Bölüm
+9.1'in tam yansıması ayrı bir ifade değil, bu ifadenin **kalın dilim limitidir**.
+Sıfır kalınlıkta her şey geçer, kalın dilimde hiçbir şey geçmez.
 
-- Yüzeyden geçen geometrik eğriler vardır.
-- Yüzeyden akı geçmez.
+Bir ikinci koşul daha vardır: iç modun sönümlü olması, gelen alanın mod
+içeriğine bağlıdır. İşaret değiştiren yön az dalga sayısı taşıyorsa iç mod
+yayılmaya devam eder ve geçirgenlik bastırılmak yerine **salınır**, rezonansta
+bire ulaşır. Yani engeli yaratan imza değişiminin kendisi değil, gelen alanın
+hangi modlardan oluştuğudur.
 
-Bu ayrım, Bölüm 7.4'te değinilen ilmek teoremiyle bu modelin eşik sonucunun aynı
-anda doğru olabilmesinin nedenidir: o teorem geometrik eğriler hakkındadır, buradaki
-sonuç alan akısı hakkındadır.
+Bu, Bölüm 9.1'in sonucunu geçersiz kılmaz ama kapsamını daraltır: eşiğin
+yansıtıcı olması, öte tarafın sınırsız olduğu ve gelen modun uygun içerikte
+olduğu durum için geçerlidir.
+
+[41] ayrıca bu geometrinin bir **analog gerçeklemesini** verir: anizotropik bir
+yarı iletken ile elektronik bir metamalzeme arasındaki eklemde elektron
+yayılımı, aynı denklemi sağlar. Bu, modelin sınanabilirliği açısından Bölüm
+16.4'te belirtilen çıkmaza bir alternatif sunar: $v = c$ yüzeyi hazırlanamaz,
+ancak aynı denklemi sağlayan bir malzeme ekleminde ayna davranışı ve tünelleme
+ölçülebilir. Bunun bu modelin bir sınaması sayılıp sayılamayacağı ayrı bir
+sorudur ve burada karara bağlanmamıştır.
 
 ### 9.2 Aynı seçimin yerçekimi tarafındaki görünümü
 
@@ -621,6 +652,43 @@ hesaplanmıştır. [9] ve [11]'in uyarısı burada da geçerlidir, imza değişi
 kanonik bir alan denklemi kümesi yoktur ve hangi kuruluşun kullanıldığı
 belirtilmek zorundadır; burada kullanılan, dış eğriliğin süreksizliğini gerilim
 tensörünün dağılımsal terimine bağlayan [9] kuruluşudur.
+
+Bu kuruluşun pratik aracı [10]'da verilmiştir: öz-zaman koordinat olarak
+alındığında imza değişimi boyunca düzgün genelleştirilmiş ortonormal çatılar
+tanımlanabilir, ve bu hem Einstein denklemlerinin varyasyonel türetimini hem
+dağılım teorisini sabit imzadaki hâllerinin doğrudan genellemesi olarak
+kullanılabilir kılar. Modelin yerçekimi tarafına daha ileri götürülmesi
+istenirse başlangıç noktası burasıdır.
+
+### 9.3 Geometrinin izin verdiği geçişi alan yasaklıyor
+
+Bölüm 9.1'in sonucu akı hakkındadır. Bundan ayrı ve daha zayıf bir soru vardır:
+bir eğrinin teğeti, yüzeyi geçerken nedensel karakterini koruyor mu. Bu yalnızca
+iki metriğe bakan bir sorudur.
+
+İki metrik arasındaki fark hesaplanır:
+
+$$v^T \eta' v - v^T \eta\, v = 2\,(v_1^2 + v_2^2) \;\geq\; 0$$
+
+Fark daima negatif değildir. Sonuç doğrudan çıkar:
+
+> Bölge I'de zaman-benzeri olan **her** yön, Bölge II'de de zaman-benzeridir.
+
+Kapsama tek yönlüdür, tersi doğru değildir: örneğin $(0,1,0,0)$ Bölge I'de
+uzay-benzeri, Bölge II'de zaman-benzeridir. Bölge II'nin zaman-benzeri yönleri
+kesin olarak daha fazladır.
+
+**Ayrımın önemi.** Eşikte bir eğriyi durduran nedensel bir engel **yoktur**;
+teğeti karakterini koruyarak geçer. Bölüm 9.1'in yasakladığı şey akıdır, ve akı
+eğrinin teğetinin değil, alanın ve eklem koşulunun bir özelliğidir. Dolayısıyla
+şu iki ifade birbiriyle çelişmez:
+
+- Yüzeyden geçen geometrik eğriler vardır.
+- Yüzeyden akı geçmez.
+
+Bu ayrım, Bölüm 7.4'te değinilen ilmek teoremiyle bu modelin eşik sonucunun aynı
+anda doğru olabilmesinin nedenidir: o teorem geometrik eğriler hakkındadır, buradaki
+sonuç alan akısı hakkındadır.
 
 ---
 
@@ -991,6 +1059,14 @@ Lorentz bölgesine geri dönerken hangi eksenin döndürüldüğünde ortaya ç�
 
 Burada Wick dönüşü elle yapılan bir seçimdir.
 
+### 15.5 Kalan açık
+
+Vakum problemi (Bölüm 14.3) Öklid bölgesinde çözülür, pozitif tanımlı çekirdek iyi
+tanımlı bir ölçüm verir. Ancak Lorentz bölgesine analitik devam yapıldığında
+Hamiltonyenin vektör olması sorunu geri gelir. Yani Bölge II'de **hesap
+yapılabilir, ama sonuçların parçacık yorumu tanımsızdır.** Korelasyon fonksiyonları
+hesaplanabilir; "kaç parçacık var" sorusu cevaplanamaz.
+
 ### 15.6 Türetilmiş bir geçişle karşılaştırma
 
 Bu modelde geçiş **varsayılır**: ışık hızında olur, anidir, hızdan bağımsızdır.
@@ -1030,14 +1106,6 @@ Bu modelin geçişinin de benzer biçimde türetilebilmesi açık bir sorudur ve
 Bölüm 21'de öyle listelenmiştir.
 
 İki bölge ayrı yapılar değil, tek bir yapının iki dalıdır.
-
-### 15.5 Kalan açık
-
-Vakum problemi (Bölüm 14.3) Öklid bölgesinde çözülür, pozitif tanımlı çekirdek iyi
-tanımlı bir ölçüm verir. Ancak Lorentz bölgesine analitik devam yapıldığında
-Hamiltonyenin vektör olması sorunu geri gelir. Yani Bölge II'de **hesap
-yapılabilir, ama sonuçların parçacık yorumu tanımsızdır.** Korelasyon fonksiyonları
-hesaplanabilir; "kaç parçacık var" sorusu cevaplanamaz.
 
 ---
 
@@ -1140,6 +1208,21 @@ Bu, çalışmanın ayırt edici tek öngörüsüdür. Koşulludur ve koşulu ağ
 $v = c$ değerinde iki yüzey gerekir, ki bugün hiçbir deney bunu hazırlayamaz.
 Öngörünün varlığı ile sınanabilirliği ayrı şeylerdir ve burada yalnızca birincisi
 sağlanmaktadır.
+
+**Karşılaştırma.** Literatürde imza değişiminin sınanabilir hâle getirildiği iki
+örnek vardır ve ikisi de burada izlenmeyen bir yol tutar. [36], pürüzsüz bir
+Öklid-Lorentz geçişinin sonlu bir hızlanan genişleme aralığı **sürdüğünü**
+gösterir; yani geçişi etkiyebileceği bir yere, erken evrene koyar ve gözlenen bir
+niceliğe, enflasyon gözlemlerine bağlar. [17] benzer biçimde skaler ve tensör güç
+spektrumlarına düzeltmeler türetir. [34] ise fazladan bir zaman boyutunu Bell
+tipi bir deney önerisine bağlar.
+
+Ortak yöntem şudur: geçişi kozmolojik ya da laboratuvar bağlamına yerleştirip
+zaten ölçtüğümüz bir şeye etkisini hesaplamak. Bu çalışmada geçiş $v = c$
+yüzeyine sabitlenmiştir ve o yüzey hiçbir gözlemin içinde bulunmadığı için aynı
+yol izlenememiştir. Modelin sınanabilir hâle gelmesi, geçişin nerede
+gerçekleşebileceği sorusunun yeniden açılmasına bağlıdır; bu Bölüm 21'de açık
+olarak kaydedilmiştir.
 
 **Değerlendirme.** $\Sigma$, $v = c$ yüzeyidir ve laboratuvarda erişilebilir
 değildir. Dolayısıyla bu, prensipte var olan ama pratikte ölçülemeyen bir imzadır.
@@ -1340,8 +1423,10 @@ kaldırmaktadır. Bölüm 14'ün üç engeli ayaktadır.
 
 ### 19.3 Vakum Cherenkov sınırı
 
-Superluminal yayılımı sınırlayan çift ışıma mekanizması, $\delta = v^2/c^2 - 1$
-parametresi pozitif olduğunda işler. Bu modelde hiçbir uyarım $\delta > 0$ ile
+Superluminal yayılımı sınırlayan çift ışıma mekanizması [38], $\delta = v^2/c^2 - 1$
+parametresi pozitif olduğunda işler; superluminal bir parçacık
+$\nu \to \nu + e^+ + e^-$ süreciyle enerji kaybeder ve bu kaybın gözlenmemesi
+superluminaliteye sıkı bir üst sınır koyar. Bu modelde hiçbir uyarım $\delta > 0$ ile
 yayılmaz; grup hızı her zaman $c$'nin altında ya da ona eşittir. Dolayısıyla
 sınır bu modeli yalnızca boş biçimde kısıtlar. Bu bir üstünlük değil, öngörü
 yoksunluğunun bir başka görünümüdür.
@@ -1432,20 +1517,30 @@ Modele özgü olduğu düşünülen sonuçlar: eşikte tam yansımanın akı kor
 Wick dönüşünde "tek olan ekseni döndür" kuralı ve iki bölgenin ortak bir Öklid
 teorisinin analitik devamları olması (Bölüm 15), ve iki literatürün birleştirilmesi.
 
-Bölüm 13.5'te kapanan nokta: iki imza arasındaki sürekli yolun ne kadar dejenere
-olmak zorunda olduğu. Cevap, her noktada tek bir öz-değerin sıfırlandığı bir yolun
-var olduğu, bedelinin ise $(2,2)$ imzalı iki zamanlı bir ara bölgeden geçmek
-olduğudur. Bölüm 13.3'ün "geçiş sağlanmaz" sonucu geri çekilmiştir.
+**Bölüm 13.5'te kapanan nokta.** İki imza arasındaki sürekli yolun ne kadar
+dejenere olmak zorunda olduğu sorusu cevaplanmıştır: her noktada yalnızca tek bir
+öz-değerin sıfırlandığı bir yol vardır, bedeli $(2,2)$ imzalı iki zamanlı bir ara
+bölgeden geçmektir. Bölüm 13.3'ün "geçiş sağlanmaz" sonucu geri çekilmiştir.
 
-Kapatılamamış noktalar, oldukları gibi: güçlü ile zayıf eklem koşulu arasındaki
-tercihin gerekçesi (Bölüm 9.1), $(2,2)$ ara bölgesinin fiziksel olarak
-savunulabilir olup olmadığı (Bölüm 13.5), üç zamanın olasılık korunumu altında
-tek zamana çökmesi itirazı
-(Bölüm 7.3), imza değiştiren arka planda parçacık üretimi (Bölüm 16.2), eşik
-duvarlarının kuantum kararlılığı (Bölüm 9.1), bu modelin geçişinin de bir teoriden türetilip
-türetilemeyeceği (Bölüm 15.6), yerçekiminin ancak eklem koşulu düzeyinde ele
-alınmış olması (Bölüm 9.2), ve tek ayırt edici öngörünün (Bölüm 16.4)
-hazırlanamayan bir düzenek gerektirmesi.
+**Bölüm 9.4'te daraltılan nokta.** Eşiğin yansıtıcı olması sınırsız bir öte taraf
+varsayar. Sonlu kalınlıkta bir dilim, üstel olarak bastırılmış ama sıfır olmayan
+bir geçirgenlik verir; ayrıca engelin varlığı gelen alanın mod içeriğine bağlıdır.
+
+**Açık kalanlar.**
+
+| Soru | Nerede |
+|------|--------|
+| Güçlü ile zayıf eklem koşulu arasındaki tercihin gerekçesi | Bölüm 9.1 |
+| $(2,2)$ ara bölgesinin fiziksel olarak savunulabilirliği | Bölüm 13.5 |
+| Üç zamanın olasılık korunumu altında tek zamana çökmesi | Bölüm 7.3 |
+| İmza değiştiren arka planda parçacık üretimi | Bölüm 16.2 |
+| Eşik duvarlarının kuantum kararlılığı | Bölüm 9.1 |
+| Geçişin varsayılmak yerine türetilebilmesi | Bölüm 15.6 |
+| Yerçekiminin eklem koşulunun ötesine götürülmesi | Bölüm 9.2 |
+| Ayırt edici öngörünün hazırlanabilir bir düzenek gerektirmesi | Bölüm 16.4 |
+
+Bu listenin uzunluğu bir kusur olarak değil, çalışmanın bulunduğu aşamanın
+kaydı olarak verilmektedir.
 
 ---
 
@@ -1491,3 +1586,4 @@ hazırlanamayan bir düzenek gerektirmesi.
 38. F. L. Villante, F. Vissani. *On the generality of the Cohen and Glashow constraints on the neutrino velocity*. arXiv:1110.4591
 39. V. F. Perepelitsa. *Looking for a theory of faster-than-light particles*. arXiv:1407.3245
 40. B. Alexandre, S. Gielen, J. Magueijo. *Overall signature of the metric and the cosmological constant*. arXiv:2306.11502
+41. F. Figueiredo, F. Moraes, S. Fumeron, B. Berche. *Modeling Kleinian cosmology with electronic metamaterials*. Phys. Rev. D **94** (2016) 044039. arXiv:1608.03812

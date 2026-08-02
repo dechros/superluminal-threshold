@@ -489,3 +489,274 @@ exactly the regime these protection arguments are least decisive about.
 7. Section 7 has to face [32], where extra times collapse to one.
 8. A new section is needed on [28], the time-reversing loops.
 9. Priority D should follow the template of [49].
+
+---
+
+## Group 8: added by the background sweep
+
+Twenty-nine papers read in a targeted sweep of the four cells that Bölüm 21
+leaves empty: particle production on a signature-changing background, the
+strong versus weak junction condition, the field theory of a (2,2) region, and
+probability conservation with more than one time.
+
+### Particle production and quantum fields on a signature-changing background
+
+### [58] Romano, *Scalar and spinor fields in signature changing spacetimes*, Phys. Rev. D 47 (1993) 4328, arXiv:gr-qc/9303033
+PRIOR, and the first real literature behind Bölüm 16.2. Reviews the Dray et al.
+result that a signature change produces particles for a massless scalar, then
+tries to extend it to spin one half. The extension fails: of the inequivalent
+forms the Dirac equation can take across the change, **none** carries a
+conserved inner product on the solution space. That is a direct precedent for
+our Bölüm 14 obstruction, obtained thirty years earlier and for the same
+reason, and it also means our Bölüm 11 electromagnetic treatment cannot simply
+be assumed to carry over to fermions.
+
+### [59] Weinfurtner, White, Visser, *Trans-Planckian physics and signature change events in Bose gas hydrodynamics*, Phys. Rev. D 76 (2007) 124008, arXiv:gr-qc/0703117
+SUPPORT for the possibility of a calculation, CHALLENGE to Bölüm 9.1's wall.
+An emergent metric in a Bose gas whose signature can be driven Lorentzian to
+Riemannian by tuning the microscopics, with the **number of particles produced
+by a finite-duration Euclidean event actually computed**. This is the concrete
+template for Bölüm 16.2: the question we leave open has a worked answer in an
+analogue system, and the answer is that production is large and depends on the
+duration of the event, not zero.
+
+### [60] Weinfurtner, White, Visser, *Signature-change events in emergent spacetimes with anisotropic scaling*, J. Phys. Conf. Ser. 189 (2009) 012046, arXiv:0905.4530
+SUPPORT. The companion analysis. The anisotropic (Lifshitz-like) scaling of the
+microscopic theory regulates the particle production that would otherwise
+diverge. Bears on Bölüm 9.1's quantum stability question: what makes a
+signature-changing surface survive is a short-distance modification, not the
+junction condition.
+
+### [61] Castelló Gomar, Mena Marugán, *Uniqueness of the Fock quantization of scalar fields and processes with signature change in cosmology*, arXiv:1403.6984
+SUPPORT for Bölüm 14 and 16. Invariance of the vacuum under the spatial
+symmetries plus unitary implementability of the dynamics fixes the Fock
+representation uniquely, and the criterion still applies through a signature
+change. This is the missing piece of Bölüm 16: our vacuum is currently chosen
+by hand, and there is a uniqueness theorem that says how to choose it.
+
+### [62] Darabi, Setare, *Casimir effect in a two dimensional signature changing spacetime*, J. Math. Phys. 47 (2006) 032501, arXiv:gr-qc/0507043
+PRIOR, and the closest existing result to Bölüm 16's Casimir signature. A
+massless scalar on a two-dimensional cylinder with a signature-changing metric
+gives a **nonzero pressure on the surface of signature change**, which
+destabilises the signature-changing region and back-reacts on the spectrum.
+Two consequences for us: our Bölüm 16 Casimir number is not on an unreachable
+surface in this setting, and Bölüm 9.1's quantum stability question is answered
+negatively in the analogous two-dimensional case.
+
+### Strong versus weak junction condition, the Bölüm 9.1 dispute
+
+### [63] Hellaby, Dray, *Comparison of approaches to classical signature change* (reply comment), Phys. Rev. D 52 (1995) 7333, arXiv:gr-qc/9601040
+PRIOR, and the paper Bölüm 9.1 most needs. It sets out explicitly the two
+philosophies our article has to choose between: Hayward's Lagrangian route,
+which amounts to an imaginary proper time on one side, versus a strictly
+classical route, and Darmois-Israel junction conditions versus Lichnerowicz
+ones. It also states plainly that there is as yet **no rigorous derivation** of
+the distributional field equations, so both sides are postulates. Our Bölüm 9.1
+must present its strong condition as a postulate of this kind rather than as a
+derivation.
+
+### [64] Dray, Manogue, Tucker, *Boundary conditions for the scalar field in the presence of signature change*, Class. Quantum Grav. 12 (1995) 2767, arXiv:gr-qc/9501034, and [65] Hayward, *Comment*, arXiv:gr-qc/9502001
+CHALLENGE, taken together the sharpest exchange in this literature. Hayward's
+comment charges that the proposed solutions do not satisfy the equation, that
+the variational equations are singular at the change, and that the
+distributional field equations are ill defined. Whichever side one takes, the
+exchange shows that the choice of boundary condition at a signature change is
+contested at the level of whether the objects exist, not merely of which is
+preferable. Bölüm 9.1 currently reads as if the strong condition were the
+obvious one.
+
+### [66] Kriele, *Distinguished solutions for discontinuous signature change with weak junction conditions*, arXiv:gr-qc/9610016
+CHALLENGE, directly to Bölüm 9.1. Takes the **weak** junction condition, the
+alternative we reject, imposes regularity, and shows the solution space for
+dust and scalar field models is still controlled, a one-parameter family of
+Riemannian three-manifolds. So the weak condition is not degenerate or empty;
+it is a live competitor with its own uniqueness structure. Our argument that
+total reflection is the only flux-conserving option holds only under the strong
+condition, and this paper is what forces us to say so.
+
+### [67] Hartley, Tucker, Tuckey, Dray, *Tensor distributions on signature-changing space-times*, Gen. Rel. Grav. 32 (2000) 491, arXiv:gr-qc/9701046
+SUPPORT for Bölüm 9. Establishes that covariant differentiation can be defined
+on a class of tensor distributions wide enough to be physically interesting,
+for both continuous and discontinuous signature change. This is the technical
+licence Bölüm 9 uses implicitly when it writes distributional quantities at the
+threshold, and it should be cited there.
+
+### The (2,2) region: what is actually known about Kleinian field theory
+
+### [68] Heckman, Joyce, Sakstein, Trodden, *Exploring 2+2 answers to 3+1 questions*, arXiv:2208.02267
+SUPPORT, and the single most useful addition for Bölüm 13.5. Argues that
+Kleinian signature is a legitimate computational arena: just as Euclidean
+continuation constructs the ground state, continuation to (2,2) constructs a
+state of **low particle flux** along the continued direction, and (2,2) admits
+its own supersymmetry algebra constraining correlators. Our (2,2) intermediate
+region therefore has a defensible status, but as an auxiliary continuation
+rather than as a region anything lives in.
+
+### [69] Crawley, Guevara, Miller, Strominger, *Black holes in Klein space*, arXiv:2112.03954
+SUPPORT for Bölüm 13. Kerr-Taub-NUT continued to (2,2) has a global structure
+with a toric Penrose diagram resembling its Lorentzian counterpart, and the
+continuation is induced naturally by continuation of the S-matrix. Directly
+relevant to Bölüm 13's horizon comparison: the Kleinian side of a black hole
+is a well-defined geometry, not a breakdown.
+
+### [70] Atanasov, Ball, Melton, Raclariu, Strominger, *(2,2) scattering and the celestial torus*, arXiv:2101.09591
+CONTEXT for Bölüm 13.5 and 6. In (2,2), null infinity has only one connected
+component and becomes a null interval times a celestial torus; there is no
+clean separation into past and future infinity. That is the asymptotic
+statement of the same thing Bölüm 6 says about predictability: an
+ultrahyperbolic region has no in-state/out-state split to hang a Cauchy problem
+on.
+
+### [71] Pavšič, *Quantum field theories in spaces with neutral signatures*, arXiv:1210.6820
+SUPPORT with a caveat, for Bölüm 14 and 16. In neutral signature the positive
+and negative energy contributions cancel and the vacuum energy vanishes, so
+there is no cosmological constant problem. Stability under interactions is the
+open issue, and the toy oscillator in $M_{1,1}$ stays bounded for some
+interactions and runs away for others. This is the best available answer to
+Bölüm 14's third obstacle, and it is a conditional one.
+
+### [72] Sabra, *Flow equations in arbitrary signature*, arXiv:2111.05141
+CONTEXT for Bölüm 12 and 15. Four-dimensional N=2 supergravity written in
+$(t,s)$ signature for all $(t,s)$, with the Euclidean and neutral cases governed
+by para-special Kähler geometry (para-complex rather than complex structures).
+The technical point that matters to us: passing to neutral signature replaces
+$i$ by a para-complex unit with $e^2 = +1$, which is exactly the structure our
+$D$ has, and which Bölüm 15's Wick rotation rule is groping towards.
+
+### Multiple times: well-posedness and probability conservation
+
+### [73] Craig, Weinstein, *On determinism and well-posedness in multiple time dimensions*, arXiv:0812.0210
+PRIOR and decisive for Bölüm 6 and 7.3. For the ultrahyperbolic equation the
+Cauchy problem on a codimension-one hypersurface of mixed signature **is** well
+posed in Sobolev spaces, but only under a nonlocal constraint on the data; on
+higher-codimension hypersurfaces it is ill posed through failure of uniqueness.
+Bölüm 6 says predictability collapses on the far side. This paper says the
+truth is finer: it collapses locally but can be restored by a nonlocal
+constraint, and the price of that constraint is what we should be arguing about.
+
+### [74] Weinstein, *Multiple time dimensions*, arXiv:0812.3869
+CHALLENGE to the framing of Bölüm 6. The companion essay, stating the
+conclusion bluntly: contrary to conventional wisdom there is a well-posed,
+deterministic, stable initial value problem in multiple time dimensions. If
+this is right, then item 6 of our seven-point list is not a consequence of the
+equation type but of a particular choice of initial surface.
+
+### [75] Tumulka, *Multi-time wave functions versus multiple timelike dimensions*, Found. Phys. 47 (2017) 1582, arXiv:1708.03376
+CHALLENGE, and the paper Bölüm 7.3 has to answer. Draws the distinction our
+article blurs: multi-time wave functions, one time per particle, are well
+behaved and have unique solutions with a conserved probability current;
+equations on a manifold with several timelike **dimensions**, signature
+$++--$ and the like, are typically ill posed and presumably unphysical. Our
+region II is the second kind, not the first, and this paper says so explicitly.
+
+### [76] Petrat, Tumulka, *Multi-time Schrödinger equations cannot contain interaction potentials*, J. Math. Phys. 55 (2014) 032302, arXiv:1308.1065
+PRIOR. The consistency condition on the $N$ Hamiltonians rules out interaction
+by multiplication operators. Read against Bölüm 11: if our three times were
+ever given independent evolution equations, interaction could not be put in as
+a potential, which is a structural constraint on any dynamics we write in
+region II.
+
+### [77] Nickel, Deckert, *Consistency of multi-time Dirac equations with general interaction potentials*, J. Math. Phys. 57 (2016) 072301, arXiv:1603.02538
+CHALLENGE to [76] and therefore useful to us. Shows admissible potentials do
+exist once spin coupling is allowed, gives an explicit example, but then shows
+that **none of them is Poincaré invariant**. The escape route from the no-go
+exists and costs the symmetry we care most about.
+
+### [78] Lienert, Petrat, Tumulka, *Multi-time wave functions*, J. Phys. Conf. Ser. 880 (2017) 012006, arXiv:1702.05282
+CONTEXT. The review of the whole multi-time programme, including the
+consistency condition and how probability conservation is arranged when it can
+be. The right single citation for Bölüm 7.3.
+
+### [79] Hirsch, Payne, Zhang, *The spacetime positive mass theorem with multiple time dimensions*, arXiv:2602.20081
+SUPPORT, and the first result we have for Bölüm 9.2. The spacetime positive
+mass theorem survives with $m$ time dimensions: the energy is bounded below by
+the trace norm of the linear momenta $J^1,\dots,J^m$, with rigidity in the
+equality case. So a multi-time region is not automatically energetically
+pathological, and this is the shape our Bölüm 4 energy-momentum swap should be
+tested against.
+
+### Deriving the transition rather than assuming it
+
+### [80] Bojowald, Mielczarek, *Some implications of signature change in cosmological models of loop quantum gravity*, JCAP 08 (2015) 052, arXiv:1503.09154
+SUPPORT and CHALLENGE at once, for Bölüm 6 and 15.6. The effective equations
+that produce signature change are locally regular, so the derivation is
+reliable; but the resulting problem is of **mixed type**, and the article works
+out what that means by importing the Tricomi problem. This is the precise
+mathematical name for our region I / region II split, and it comes with global
+obstructions the paper spells out.
+
+### [81] Bojowald, Brahma, *Signature change in loop quantum gravity: general midisuperspace models and dilaton gravity*, Phys. Rev. D 95 (2017) 124014, arXiv:1610.08840
+PRIOR for Bölüm 15.6. Signature change is derived, not postulated, for **all**
+midisuperspace models without local degrees of freedom, as a consequence of
+deformed covariance with holonomy modifications. The strongest existing answer
+to our open question of whether a transition can come out of a theory rather
+than be put in by hand.
+
+### [82] Magueijo, Rodriguez-Vazquez, Westman, Zlosnik, *Cosmological signature change in Cartan gravity with dynamical symmetry breaking*, Phys. Rev. D 89 (2014) 063542, arXiv:1311.4481
+SUPPORT for Bölüm 15.6 by a second and independent route. In a first-order
+$SO(1,4)$ gauge theory with a symmetry-breaking Higgs field and no presupposed
+metric, the signature is whatever the Higgs norm makes it, so a change of
+signature is a change of phase of the symmetry breaking. This is the closest
+thing in the literature to a mechanism for our transition, and it is
+gauge-theoretic rather than kinematic.
+
+### [83] Pedram, Jalalzadeh, *Signature change from Schutz's canonical quantum cosmology and its classical analogue*, Phys. Rev. D 77 (2008) 123529, arXiv:0805.4099
+SUPPORT. Wave packets built from the Schrödinger-Wheeler-DeWitt equation with
+a perfect fluid exhibit a transition from a finite Euclidean to a Lorentzian
+domain, with a classical analogue in which the effect is reproduced by a
+repulsive fluid. Relevant to Bölüm 15: a signature change can be read off a
+quantum cosmological wave packet, and it has an effective-source description on
+the other side.
+
+### Analogue systems, the one route to something measurable
+
+### [84] Figueiredo, Gomes, Fumeron, Berche, Moraes, *Modeling Kleinian cosmology with electronic metamaterials*, Phys. Rev. D 94 (2016) 044039, arXiv:1608.03812
+SUPPORT, and the most important paper here for the article's missing testable
+prediction. Klein-Gordon particles crossing a **discontinuous** change from
+$(-,+,+,+)$ to Kleinian $(-,+,+,-)$, realised as electrons at a junction
+between an anisotropic semiconductor and an electronic metamaterial. The result
+at the planar boundary is a **mirror-like behaviour for the particle flux**,
+which is Bölüm 9.1's total reflection obtained independently and in a system
+that can be built. The paper then does what we do not: it examines a slab of
+finite thickness and finds **tunnelling** through it. That is the experimental
+handle, and it says our threshold is perfectly reflecting only if it is
+infinitely thick.
+
+### [85] Fumeron, Berche, Santos, Pereira, Moraes, *Optics near a hyperbolic defect*, Phys. Rev. A 92 (2015) 063806, arXiv:1510.06868
+SUPPORT. In a hyperbolic metamaterial the effective metric has Kleinian
+signature, two timelike coordinates, and light near a disclination follows
+Poinsot spirals and is trapped for any impact parameter. A second, optical
+realisation of a (2,2) region with a geodesic structure one can measure.
+Bears on Bölüm 13.5's question of whether a (2,2) region is physically
+defensible: in the analogue sense it demonstrably is.
+
+### The Dragan branch, one recent item
+
+### [86] Lake, *Towards a group structure for superluminal velocity boosts*, arXiv:2409.01773
+PRIOR and directly aimed at Bölüm 3, by the author of [4]. Constructs superluminal boosts as an
+explicit map between the two-sheeted hyperboloids inside the light cone and the
+one-sheeted hyperboloids outside it, and asks what group structure the
+resulting operators carry, with the implications for the Dragan-Ekert quantum
+principle of relativity spelled out. Our Bölüm 3 closure failure should be
+compared against this construction directly; it is the same question posed
+geometrically rather than matricially.
+
+### What this group changes
+
+10. Bölüm 16.2 is no longer an open question with no literature. [58], [59],
+    [60] and [62] all compute particle production or vacuum pressure at a
+    signature change, and none of them gets zero.
+11. Bölüm 9.1 must be rewritten as a choice between documented alternatives,
+    citing [63] for the two philosophies, [64]/[65] for the dispute over
+    whether the distributional equations exist at all, and [66] for the weak
+    condition's own solution space.
+12. Bölüm 7.3's objection is now sharpened by [75], which separates our case,
+    several timelike dimensions, from the well-behaved multi-time case, and
+    calls ours presumably unphysical. [73] and [74] argue the opposite. That
+    disagreement should be presented, not resolved by assertion.
+13. Bölüm 9.1's total reflection has independent confirmation in [84], and
+    with it a finite-thickness correction, tunnelling, that we have not
+    considered.
+14. Bölüm 15.6 has three separate derivations of signature change from a
+    theory now, [81], [82] and [80]. The article can no longer say the
+    transition has never been derived.
