@@ -755,7 +755,18 @@ itiraz açık bir sorudur ve modelin lehine kapatılmış sayılmamalıdır.
 
 ### 8.5 Yolculuk ne demek: davranış ihtimallerinin sınıflandırılması
 
-[YAZILACAK] Yönelim ile çıkış yüzünün çarpımı olarak tam bir durum tablosu kurulacak; her durum dönüşte ayrı ayrı ele alınacak.
+Parçacığın öte tarafta yapabilecekleri iki bağımsız etiketle tükenir.
+
+**Hangi yüzden çıktığı.** Ara bölgenin iki yüzü vardır ve parçacık girdiği
+yüzden geri dönebilir, karşı yüzden çıkabilir, ya da hiç çıkmayabilir.
+
+**Enerji vektörünün ne kadar döndüğü.** Bölüm 16.3'te gösterildiği gibi
+yönelimin kendisi öte tarafta ayar fazlalığıdır; fiziksel olan tek şey giriş
+ile çıkış arasındaki **bağıl** dönmedir. Üç sınıf ayırt edilir: dönme yok,
+kısmi dönme, ve tam ters çevirme.
+
+Üç çarpı üç, dokuz hücrelik bir tablo. Her hücrenin bu tarafta ne göründüğü
+Bölüm 18'de tek tek hesaplanmıştır.
 
 ---
 
@@ -1845,7 +1856,73 @@ sorusunun cevabıdır, daha fazlası değil.
 
 ## 18. Yönelim sözlüğü
 
-[YAZILACAK] Karşıdaki her davranış ihtimalinin bizim evrendeki karşılığı tek tek yazılacak, Bölüm 8.5in durum tablosuyla birebir eşleşerek. Aşağıdaki işaret tartışması bu sözlüğün bir parçasıdır ve sonucu tersine dönmüştür: eşik geçirgen olduğu için bağıl işaret artık prensip olarak ölçülebilirdir.
+Bu bölüm Bölüm 8.5'in dokuz hücresini tek tek bu tarafa çevirir.
+
+### 18.1 Her hücrede korunan şeyler
+
+Dokuz hücrenin **tamamında** enerjimiz ve süratimiz tam olarak korunur; sayısal
+artık sıfırdır. Hücreleri birbirinden ayıran tek şey momentumumuzun yönüdür.
+
+| Bağıl dönme | Bizdeki sapma (radyan) |
+|-------------|------------------------|
+| Yok | $0$ |
+| Kısmi | $0{,}961$ |
+| Tam ters | $2{,}601$ |
+
+### 18.2 Sözlük
+
+| Öte tarafta olan | Bu tarafta görünen | Sıradan bir olaydan ayırt edilebilir mi |
+|------------------|--------------------|------------------------------------------|
+| Giriş yüzünden döner, dönme yok | Yansıma | Hayır |
+| Giriş yüzünden döner, kısmi dönme | Esnek geri saçılma | Hayır |
+| Giriş yüzünden döner, ters çevirme | Tam geri saçılma | Hayır |
+| Karşı yüzden çıkar, dönme yok | Gecikmeli geçiş | Hayır |
+| Karşı yüzden çıkar, kısmi dönme | **Bedelsiz sapma** | **Evet** |
+| Karşı yüzden çıkar, ters çevirme | **Bedelsiz tam sapma** | **Evet** |
+| Hiç çıkmaz, dönme yok | Soğurulma | Hayır |
+| Hiç çıkmaz, kısmi dönme | Soğurulma | Hayır |
+| Hiç çıkmaz, ters çevirme | Soğurulma | Hayır |
+
+### 18.3 Dokuz hücrenin yedisi sıradan fizikle örtüşüyor
+
+Bu, modelin lehine bir sonuç değildir ve öyle sunulmamaktadır.
+
+Parçacık hiç çıkmıyorsa, içeride ne olduğundan bağımsız olarak bir soğurulma
+görürüz. Girdiği yüzden geri dönüyorsa, saparak ya da sapmadan, bir yansıma
+görürüz. Sapmadan karşı yüzden çıkıyorsa, sıradan bir geçiş görürüz.
+
+Yedi hücre, öte taraf hiç olmasaydı da aynı ölçümü verirdi.
+
+### 18.4 İki hücre gerçekten ayırt edici
+
+Geriye kalan iki hücre şudur: parçacık **karşı yüzden çıkar ve sapmıştır**.
+
+Ayırt ediciliğin nedeni sapmanın kendisi değil, **bedelsiz** olmasıdır. Sıradan
+bir sapma bir hedef gerektirir ve hedef geri tepme alır; enerji ve momentum
+hedefe dağılır. Burada hedef yoktur: enerji tam olarak, sürat tam olarak, kütle
+tam olarak korunur, yalnızca yön değişir.
+
+> Modelin ayırt edici imzası, **geri tepen bir hedef olmaksızın** gerçekleşen
+> esnek bir sapmadır.
+
+### 18.5 Bu tablonun statüsü
+
+Bir çekince açıkça belirtilmelidir. Sapma açıları ve korunan nicelikler
+hesaplanmıştır; hangi hücrenin sıradan fizikle örtüştüğü ise **hesaplanmamış,
+muhakeme edilmiştir**. Üçüncü sütun bir sınıflandırma kararıdır, bir türetim
+değildir.
+
+Ayrıca bu çalışma, öte tarafta bir dönmenin gerçekten olup olmadığını
+söylemez. Tablo koşulludur: olursa ne görünür, onu verir. Dönmenin hangi
+koşullarda ve hangi açıyla gerçekleştiği, yani hücreler arasındaki olasılık
+dağılımı, hesaplanmamıştır ve modelin en büyük eksiğidir.
+
+### 18.6 İşaret sorusunun yeniden okunması
+
+Aşağıdaki tartışma bu sözlüğün bir parçasıdır ve sonucu tersine dönmüştür.
+Eski kuruluşta iki bölgedeki okların bağıl işareti prensip olarak ölçülemezdi,
+çünkü eşik geçirgen değildi. Eşik geçirgen olduğuna göre o gerekçe düşmüştür ve
+bağıl işaret ilke olarak ölçülebilirdir.
 
 $\pm D$ ayrımı test edildi: her iki işaret de $\det = +1$ ve $M^2 = I$ koşullarını
 sağlar, dolayısıyla bu koşullarla ayırt edilemezler. Ancak Bölüm 7'deki bulgu

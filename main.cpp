@@ -20,6 +20,7 @@
 #include "intermediate/TwoCrossings.h"
 #include "literature/LiteraturePosition.h"
 #include "particle/EnergyBookkeeping.h"
+#include "particle/StateTable.h"
 #include "particle/RoundTrip.h"
 #include "particle/WavePacket.h"
 #include "quantum/CanonicalQuantization.h"
@@ -61,6 +62,7 @@ namespace
         sections.push_back(std::make_unique<slm::SphericalSolution>());
         sections.push_back(std::make_unique<slm::RoundTripSection>());
         sections.push_back(std::make_unique<slm::EnergyBookkeepingSection>());
+        sections.push_back(std::make_unique<slm::StateTableSection>());
         sections.push_back(std::make_unique<slm::MaxwellSection>());
         sections.push_back(std::make_unique<slm::LiteraturePosition>());
         sections.push_back(std::make_unique<slm::BlackHoleHorizon>());
