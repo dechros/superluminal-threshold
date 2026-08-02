@@ -2571,7 +2571,7 @@ hâliyle aktarır, ardından bu çalışmanın cevabını verir. Cevabın bulunm
 durumlarda bu açıkça yazılmıştır.
 
 Sayısal ya da yapısal bir iddia taşıyan maddeler, tartışılmakla kalmayıp
-**hesaplanmıştır**; ilgili doğrulamalar 19.1, 19.2 ve 19.3 alt bölümlerinde
+**hesaplanmıştır**; ilgili doğrulamalar Bölüm 21.1, 21.2 ve 21.3'te
 verilmiştir. Yalnızca kavramsal olan maddeler, örneğin işlemsel içeriğin
 bulunmaması, bir hesaba dönüştürülemediği için metinde bırakılmıştır.
 
@@ -2722,23 +2722,65 @@ fiziksel olarak kabul edilip edilemeyeceğidir.
 
 ## 22. Yöntem ve doğrulama
 
-Bütün doğrulamalar önce sembolik cebirle yapıldı:
+Bu metindeki her sayısal ve cebirsel iddia, C++ ile kurulmuş bir doğrulamaya
+karşılık gelir. Doğrulamalar `src/` altında genel amaçlı kütüphaneler hâlinde
+yazılmıştır ve `main.cpp` bunların üzerinde bir test takımı olarak çalışır.
 
-- matris özellikleri: metrik testi, involüsyon, determinant, grup mertebesi,
-- 384 permütasyon taraması,
-- dört-momentum dönüşümü ve genel $2 \to 2$ korunum,
-- Euler-Lagrange türetmeleri,
-- $O(3)$ stabilizatör hesabı,
-- dispersiyon ve limit hesapları.
+**Kaynağa atıf yönü.** Makale koda **dosya ve sınıf adıyla** atıf yapar; kod
+makaleye hiç atıf yapmaz. Bunun nedeni bakımdır: bölüm numaraları yeniden
+düzenlendiğinde dosya adları değişmez, dolayısıyla bu yön çürümez. Kodun içinde
+ne bölüm numarası ne kaynak numarası bulunur.
 
-Elle yapılan iki hesap, parite argümanı ve boyut sayımı, sembolik kontrolde
+**Doğrulamaların kapsadığı alanlar.**
+
+| Alan | Kurulduğu yer |
+|------|---------------|
+| Çarpanlama, $D$ matrisi ve grup kapanması | `src/transform/InvolutionD` |
+| 384 işaretli permütasyonun taranması | `src/scan/PermutationScan` |
+| $D$'nin genişletilmiş Lorentz grubuna göre yeri | `src/transform/ExtendedLorentzGroup` |
+| Ara bölge: dört tip, beş kalınlık, madde katmanı | `src/intermediate/IntermediateRegion` |
+| Eşik yüzeyi ve eklem koşullarının saçılması | `src/boundary/ThresholdSurface`, `src/boundary/JunctionScattering` |
+| Eklem koşulunun yerçekimi tarafı, dış eğrilik | `src/horizon/SurfaceLayer` |
+| Nedensel geçişin akı sorusundan ayrılması | `src/boundary/CausalCrossing` |
+| Sonlu kalınlıkta dilimden tünelleme | `src/boundary/SlabTunnelling` |
+| İmzalar arası yolun dejenerelik derecesi | `src/horizon/DegeneratePath` |
+| Kara delik ufkuyla karşılaştırma | `src/horizon/BlackHoleHorizon` |
+| Lagrangian, alan denklemi, determinizm, zamanın oku | `src/field/KleinGordonField`, `src/field/TimeOrientation` |
+| Enerji ile momentumun takası | `src/dynamics/EnergyMomentum` |
+| Dispersiyon, grup hızı, $O(3)$ ayar fazlalığı | `src/dynamics/Dispersion`, `src/rest/SuperluminalRest` |
+| Küresel simetrik kapalı form çözüm | `src/spherical/SphericalSolution` |
+| Kanonik kuantumlamanın üç engeli | `src/quantum/CanonicalQuantization` |
+| Yol integrali, Wick dönüşü, ortak Öklid teorisi | `src/quantum/PathIntegral` |
+| Türetilmiş geçişle karşılaştırma | `src/quantum/DerivedTransition` |
+| Vakum okuması ve Casimir ayırt ediciliği | `src/quantum/VacuumCasimir`, `src/quantum/CasimirDiscriminant` |
+| Dalga paketi ile nokta cisim arasındaki sözlük | `src/particle/WavePacket` |
+| Eşiğin mod filtresi olması | `src/boundary/ModeFilter` |
+| İki geçişin ortak genliği ve dönüş anı | `src/intermediate/TwoCrossings` |
+| Gidiş dönüş muhasebesi: mod, yük, entropi | `src/particle/RoundTrip` |
+| Üç bileşenli enerji ve dönmenin bedeli | `src/particle/EnergyBookkeeping` |
+| Sonuç tablosu ve yeniden sayımı | `src/particle/StateTable` |
+| Çıkış yüzünün belirlenmesi | `src/particle/ExitFace` |
+| Sonuçlar arasındaki dağılım | `src/particle/CellDistribution` |
+| Yüzlerin farklı olması ve nicelenmiş dönme | `src/particle/AsymmetricFaces` |
+| Öte taraftaki hareketin gözlenebilirlere etkisi | `src/particle/FarSideMotion` |
+| Dört sinyal taşıyıcısı ve yerçekimi kanalı | `src/signal/Channels`, `src/signal/GravitationalChannel` |
+| Maxwell alanının $D$ altındaki davranışı | `src/field/MaxwellField` |
+| Sylvester engeli ve itirazların hesabı | `src/critique/SylvesterObstruction`, `src/critique/ObjectionTests`, `src/critique/AlternativeRoutes` |
+| Anlaşmazlıkların uzlaşan ve çelişen olarak ayrılması | `src/critique/Reconciliation` |
+
+**Sayısal güvenilirlik.** Modelin matrislerinin büyük kısmı tamsayı girdilidir
+($0, +1, -1$) ve bu girdiler ikilik tabanda tam temsil edildiğinden permütasyon,
+involüsyon ve determinant testleri cebirsel hesapla birebir aynı sonucu verir.
+Boost, dönme, faz türevi ve mod toplamı hesaplarında irrasyonel ya da yakınsak
+nicelikler oluşur; oralarda açıkça belirtilen bir tolerans kullanılır.
+
+**Doğrulama disiplini.** Bir kontrolün sonucunu hesaplamadan bildirmesine izin
+verilmez. Sonucunu iddia edip hiçbir şey hesaplamayan kontroller tespit edilip
+ya gerçek bir hesapla değiştirilmiş ya da kaldırılmıştır; kaldırılanlar fiziksel
+değil yorum niteliğindeydi.
+
+Elle yapılan iki hesap, parite argümanı ve boyut sayımı, cebirsel kontrolde
 **yanlış çıktı** ve düzeltildi. Modelin bugünkü hâli bu düzeltmeleri içerir.
-
-Aynı doğrulamalar daha sonra C++ ile sayısal/cebirsel olarak yeniden kuruldu.
-Modelin matrislerinin büyük kısmı tamsayı girdilidir ($0, +1, -1$) ve bu girdiler
-ikilik tabanda tam temsil edildiğinden permütasyon, involüsyon ve determinant
-testleri sembolik hesapla birebir aynı sonucu verir. Yalnızca boost ve dönme
-matrislerinde irrasyonel girdiler oluşur; oralarda bir tolerans kullanılır.
 
 ---
 
