@@ -1,11 +1,15 @@
 #include "particle/StateTable.h"
 
 #include "core/Report.h"
+#include "particle/AsymmetricFaces.h"
+#include "particle/CellDistribution.h"
 #include "particle/EnergyBookkeeping.h"
 
+#include <algorithm>
 #include <cmath>
 #include <format>
 #include <numbers>
+#include <vector>
 
 namespace slm
 {
@@ -89,6 +93,58 @@ namespace slm
         return exit == Exit::EntryFace;
     }
 
+    int StateTable::reachableOutcomeCount(double px, double py, double pz)
+    {
+        std::vector<Outcome> seen;
+        const std::vector<Matrix4> faces = AsymmetricFaces::admissibleFaces();
+        for (const Matrix4 &entry : faces)
+        {
+            for (const Matrix4 &exit : faces)
+            {
+                const Matrix4 trip = AsymmetricFaces::roundTrip(entry, exit);
+                const Outcome outcome{AsymmetricFaces::conservesEnergy(trip),
+                                      AsymmetricFaces::deflection(trip, px, py, pz)};
+                const bool already =
+                    std::any_of(seen.begin(), seen.end(), [&outcome](const Outcome &other) {
+                        return other.energyKept == outcome.energyKept &&
+                               std::abs(other.deflection - outcome.deflection) < 1e-9;
+                    });
+                if (!already)
+                {
+                    seen.push_back(outcome);
+                }
+            }
+        }
+        return static_cast<int>(seen.size());
+    }
+
+    int StateTable::outcomesKeepingEnergy(double px, double py, double pz)
+    {
+        return static_cast<int>(AsymmetricFaces::deflectionSpectrum(px, py, pz).size());
+    }
+
+    int StateTable::outcomesFlippingEnergy(double px, double py, double pz)
+    {
+        return reachableOutcomeCount(px, py, pz) - outcomesKeepingEnergy(px, py, pz);
+    }
+
+    int StateTable::discriminatingOutcomes(double px, double py, double pz)
+    {
+        const std::vector<double> spectrum = AsymmetricFaces::deflectionSpectrum(px, py, pz);
+        return static_cast<int>(std::count_if(spectrum.begin(), spectrum.end(),
+                                              [](double angle) { return angle > 1e-9; }));
+    }
+
+    int StateTable::independentLabelCount()
+    {
+        return 9;
+    }
+
+    int StateTable::emptyRowCells()
+    {
+        return 3;
+    }
+
     void StateTableSection::run(Report &report) const
     {
         using Exit = StateTable::Exit;
@@ -145,6 +201,37 @@ namespace slm
             }
         }
         report.check(std::format("  the table has {} cells", cells), cells == 9);
+
+        report.subsection("The two labels are not independent");
+        report.check(std::format("  treating them as independent gives {} cells, while the "
+                                 "admissible face pairings reach only {}",
+                                 StateTable::independentLabelCount(),
+                                 StateTable::reachableOutcomeCount(1.0, 2.0, 3.0)),
+                     StateTable::reachableOutcomeCount(1.0, 2.0, 3.0) <
+                         StateTable::independentLabelCount());
+        report.check(std::format("  the {} reachable ones split into {} keeping our energy and "
+                                 "{} returning it with the opposite sign",
+                                 StateTable::reachableOutcomeCount(1.0, 2.0, 3.0),
+                                 StateTable::outcomesKeepingEnergy(1.0, 2.0, 3.0),
+                                 StateTable::outcomesFlippingEnergy(1.0, 2.0, 3.0)),
+                     StateTable::outcomesKeepingEnergy(1.0, 2.0, 3.0) +
+                             StateTable::outcomesFlippingEnergy(1.0, 2.0, 3.0) ==
+                         StateTable::reachableOutcomeCount(1.0, 2.0, 3.0));
+        report.check(std::format("  the row in which the particle never leaves is empty, since "
+                                 "the two exit weights already come to {:.4f}",
+                                 CellDistribution::exitFarFace(IntermediateRegion::Kind::Kleinian,
+                                                               1.0, 1.0, 4.0, 1.0) +
+                                     CellDistribution::exitEntryFace(
+                                         IntermediateRegion::Kind::Kleinian, 1.0, 1.0, 4.0, 1.0)),
+                     CellDistribution::exitNever(IntermediateRegion::Kind::Kleinian, 1.0, 1.0, 4.0,
+                                                 1.0) < 1e-12);
+        report.check(std::format("  so of the {} cells, {} are emptied by flux and {} of the rest "
+                                 "have no ordinary counterpart",
+                                 StateTable::independentLabelCount(), StateTable::emptyRowCells(),
+                                 StateTable::discriminatingOutcomes(1.0, 2.0, 3.0)),
+                     StateTable::discriminatingOutcomes(1.0, 2.0, 3.0) > 0 &&
+                         StateTable::discriminatingOutcomes(1.0, 2.0, 3.0) <
+                             StateTable::reachableOutcomeCount(1.0, 2.0, 3.0));
 
         report.subsection("How much of the table is actually distinguishable");
         report.check(std::format("  {} of the {} cells are degenerate with ordinary processes",

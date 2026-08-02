@@ -4,6 +4,7 @@
 
 #include <array>
 #include <string>
+#include <vector>
 
 namespace slm
 {
@@ -53,6 +54,40 @@ namespace slm
 
         /// Change in the magnitude of our momentum, also zero.
         static double speedChange(const Four &ours, Turn turn);
+
+        /// One reachable outcome of a round trip, as the two faces produce it:
+        /// whether our energy came back with the sign it left with, and how far
+        /// the momentum turned.
+        struct Outcome
+        {
+            bool energyKept;
+            double deflection;
+        };
+
+        /// Distinct outcomes the admissible face pairings actually produce.
+        /// The two labels of the table are not independent, since one pair of
+        /// faces fixes both, so this is smaller than their product.
+        static int reachableOutcomeCount(double px, double py, double pz);
+
+        /// Outcomes counted by treating the two labels as independent, which
+        /// is what a full table of cells would assume.
+        static int independentLabelCount();
+
+        /// Cells the flux calculation empties, namely the row in which the
+        /// particle never leaves.
+        static int emptyRowCells();
+
+        /// Reachable outcomes in which our energy came back with the sign it
+        /// left with, which is the number of quantised turns available.
+        static int outcomesKeepingEnergy(double px, double py, double pz);
+
+        /// Reachable outcomes that return the energy with the opposite sign,
+        /// which is the branch a pair-creation reading claims.
+        static int outcomesFlippingEnergy(double px, double py, double pz);
+
+        /// Outcomes with no ordinary counterpart: energy kept and the momentum
+        /// nonetheless turned.
+        static int discriminatingOutcomes(double px, double py, double pz);
 
         /// Deflection of our momentum, in radians.
         static double deflection(const Four &ours, Turn turn);
