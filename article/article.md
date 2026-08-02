@@ -1458,13 +1458,146 @@ enjekte edebildiği hesaplanmaktadır.
 
 ## 13. İkinci geçiş ve iki yüzeyin eşleşmesi
 
-[YAZILACAK] İki yüzeydeki eklem koşulları birlikte çözülecek, transfer matrisi kurulacak. Dilimin öbür yüzünden çıkan dalganın genliği ve fazı buradan gelecek.
+Gidiş tek bir yüzeyin problemidir; gidiş dönüş iki yüzeyin problemidir ve
+farklıdır. İki yüzey arasındaki bölge, dalganın bir kez geçtiği bir engel değil,
+içinde ileri geri yansımaların üst üste bindiği bir **oyuk** gibi davranır.
+
+### 13.1 Geçiş genliği
+
+Normal doğrultudaki dalga sayısı dışarıda $\kappa$, ara bölgede $q$ olmak üzere,
+iki yüzeyin birlikte çözümü tek bir karmaşık genlik verir:
+
+$$A = \frac{4\kappa q}
+     {(\kappa+q)^2 e^{-i q d} - (\kappa-q)^2 e^{i q d}}$$
+
+Bu ifade dört ara bölge tipini birden kapsar, çünkü $q$'nun karmaşık olmasına
+izin verilmiştir. Ara bölge yayılımlı ise $q$ reeldir ve payda salınır; ara bölge
+söndürücü ise $q$ sanaldır, üstel terimler reel hiperbolik fonksiyonlara döner ve
+genlik bastırılır. İki durum ayrı formüller değil, aynı formülün iki dalıdır.
+
+Ara bölge yokken $q = \kappa$ olur ve $A$ serbest yayılma fazına indirgenir; bu,
+hesabın tutarlılık sınamasıdır ve sağlanmaktadır.
+
+### 13.2 Genliğin taşıdığı iki bilgi
+
+Genliğin **büyüklüğü** ne kadarının geçtiğini söyler ve Bölüm 3'ün geçirgenlik
+tablosunu verir.
+
+Genliğin **fazı** ise dönüş anını taşır ve asıl konu odur. Bir sonraki bölümün
+tamamı bu fazın nasıl okunacağı üzerinedir.
 
 ---
 
 ## 14. Dönüş anı
 
-[YAZILACAK] Tezin en kritik bölümü. Eşikte duran ve hiç geçmeyen bir gözlemcinin saatinde parçacık nereye düşüyor, parçacığın kendi öz-zamanı karşı tarafta nasıl tanımlanır, ve ikisinin farkı ne. Öz-zamanın karşıda tanımsız olması bu bölümün ilk işidir.
+Bu bölümün sorusu şudur: parçacık geri döndüğünde, hiç geçmemiş bir gözlemcinin
+saatinde nereye oturur.
+
+### 14.1 Neden bir saat taşınamaz
+
+İlk akla gelen yol, parçacığın kendi saatini okumaktır. Bu yol kapalıdır. Ara
+bölgede zaman yönelimi yoktur; Öklid durumunda zaman ekseni hiç yoktur. Bir
+süre okunacak bir yapı bulunmadığı için "içeride şu kadar kaldı" ifadesi
+tanımsızdır.
+
+Dolayısıyla dönüş anı, taşınan bir süreden değil, başka bir yerden gelmek
+zorundadır.
+
+### 14.2 Fazın taşıdığı yer bilgisi
+
+Bölüm 13'ün genliği karmaşıktır. Fazının frekansa göre türevi, dışarıda kalan
+gözlemcinin ölçtüğü gecikmedir:
+
+$$\tau = \frac{d}{d\omega}\,\arg A(\omega)$$
+
+Bu ifade ara bölgenin içinde hiçbir saat gerektirmez. Yalnızca dışarıda, iki
+yüzeyin de dışında tanımlı olan bir niceliğin, geçiş genliğinin, frekansa
+duyarlılığını kullanır. Süreyi bilmeden yeri veren şey budur.
+
+Tutarlılık sınaması: ara bölge yokken $\tau$ tam olarak serbest uçuş süresine
+eşit çıkar. Bu, üç ayrı kalınlıkta doğrulanmıştır.
+
+### 14.3 Ara bölgenin engel olup olmaması frekansa bağlıdır
+
+Hesabın ilk sonucu beklenmedik biçimde basittir. Aynı ara bölge, yüksek
+frekansta yayılımlı, düşük frekansta söndürücüdür. Öklid bölge için sınır,
+
+$$\omega^2 < k_T^2\left(1 + \tfrac{2n}{3}\right) + \mu$$
+
+koşuluyla verilir. Yani "ara bölge bir duvar mıdır" sorusunun tek bir cevabı
+yoktur; gelen parçacığın frekansına bağlıdır. Bu, Bölüm 12.5'teki mod filtresi
+sonucunun aynı olgunun başka bir yüzü olduğunu bir kez daha gösterir.
+
+### 14.4 Engel rejiminde gecikme doyuma ulaşır
+
+Ara bölge söndürücü olduğunda gecikme kalınlıkla artmayı bırakır:
+
+| Kalınlık $d$ | Gecikme $\tau$ | Işığın alacağı süre |
+|--------------|----------------|---------------------|
+| $1$ | $1{,}451$ | $1$ |
+| $2$ | $1{,}463$ | $2$ |
+| $4$ | $1{,}463$ | $4$ |
+| $8$ | $1{,}463$ | $8$ |
+
+Gecikme ikinci basamaktan sonra sabitlenir. Kalınlık sekiz kat arttığında dönüş
+anı değişmez.
+
+Bunun iki sonucu vardır ve ikisi de önemlidir.
+
+**Birincisi, geçiş ışıktan hızlı görünür.** Sekiz birim kalınlıkta gecikme
+ışığın alacağı sürenin beşte biri kadardır. Bu, bu modelde bir uyarımın
+ışıktan hızlı **yayılması** anlamına gelmez; Bölüm 12'de grup hızının daima
+$c$'nin altında olduğu gösterilmiştir. Anlamı, geçen paketin tepe noktasının
+beklenenden erken çıkmasıdır ve bu, engel geçişlerinde bilinen bir olgudur.
+
+**İkincisi, ve bu modelin aleyhinedir, dönüş anı kalınlığı unutur.** Bir
+birimlik ara bölgeyle sekiz birimlik ara bölge parçacığı bizim saatimizde
+**aynı ana** koyar. Dolayısıyla dönüş anına bakarak ara bölgenin ne kadar kalın
+olduğu söylenemez.
+
+### 14.5 Yayılımlı ara bölgede durum tersine döner
+
+İç mod yayıldığında doyum yoktur; gecikme kalınlıkla salınır. Kalınlık
+taranınca gecikme $0{,}225$ ile $9{,}009$ arasında gidip gelir. Yayılımlı bir
+ara bölgede dönüş anı kalınlığa **duyarlıdır**, ancak tek değerli değildir:
+aynı gecikmeyi veren birden çok kalınlık vardır.
+
+| Ara bölge | Dönüş anının kalınlığa bağlılığı |
+|-----------|-----------------------------------|
+| Yok | Doğrusal, tek değerli |
+| Yayılımlı | Salınımlı, çok değerli |
+| Söndürücü | Doyuma ulaşır, kalınlıktan bağımsız |
+| Dejenere | Tanımsız, geçiş yok |
+
+### 14.6 Kapatılamayan üç nokta
+
+**Doyum, kalınlık bilgisini yok ediyor.** Yukarıdaki tablo dönüş anının tek
+başına yeterli bir gözlenebilir olmadığını söylüyor. Literatürde iki ardışık
+engel için gecikmenin yalnızca kalınlıklardan değil, aralarındaki **mesafeden**
+de bağımsız hâle geldiği savunulmuştur; doğruysa bu, gidiş dönüş kurgusunun
+tamamı için geçerlidir.
+
+Bunun karşısında üç çıkış yolu vardır ve hiçbiri burada kapatılmamıştır:
+doyumun dayandığı akıl yürütmenin kesin olmadığı yönündeki itiraz; doyumun
+yalnızca grup saatine ait olduğu, oyalanma süresinin kalınlıkla tekdüze arttığı
+yönündeki ayrım; ve sönümün doyumu tümüyle ortadan kaldırdığı sonucu. Sonuncusu
+bu model için özellikle ilgi çekicidir, çünkü Bölüm 3.4'teki madde katmanı tam
+olarak geçişi sönümlü kılacak türden bir bağlaşımdır. Modelin bir yükümlülüğü
+olarak görünen şey, burada bir kurtarıcı olabilir.
+
+**Frekans karışımı daha iyi bir gözlenebilir olabilir.** Öklid bölgeden çıkan
+dalgada pozitif ve negatif frekans karışımının, bölgenin toplam boyutuna
+bağlı olduğu bilinmektedir. Gecikme kalınlığı unuturken frekans içeriği onu
+korur. Dönüş anının frekans karışımından okunması, bu çalışmada yapılmamıştır
+ve doğal devamıdır.
+
+**Karmaşık zaman kurgusu tek başına belirleyici değildir.** Fazın karmaşık
+yapıdan okunması, keyfilik taşır: karmaşık bir zaman değişimi, özgün çözümden
+uzun bir aralık boyunca ayırt edilemeyen sonsuz sayıda çözüm üretebilir.
+Bu keyfilik ancak bir kabul edilebilirlik ölçütü benimsenerek kaldırılır ve
+böyle bir ölçütün bu modelin geçişi tarafından sağlanıp sağlanmadığı burada
+gösterilmemiştir. Dolayısıyla yukarıdaki sayılar, ölçüt benimsendiğinde
+geçerli olan sayılardır.
 
 ---
 

@@ -17,6 +17,7 @@
 #include "horizon/DegeneratePath.h"
 #include "horizon/SurfaceLayer.h"
 #include "intermediate/IntermediateRegion.h"
+#include "intermediate/TwoCrossings.h"
 #include "literature/LiteraturePosition.h"
 #include "particle/WavePacket.h"
 #include "quantum/CanonicalQuantization.h"
@@ -54,6 +55,7 @@ namespace
         sections.push_back(std::make_unique<slm::SurfaceLayerSection>());
         sections.push_back(std::make_unique<slm::CausalCrossingSection>());
         sections.push_back(std::make_unique<slm::SlabTunnellingSection>());
+        sections.push_back(std::make_unique<slm::TwoCrossingsSection>());
         sections.push_back(std::make_unique<slm::SphericalSolution>());
         sections.push_back(std::make_unique<slm::MaxwellSection>());
         sections.push_back(std::make_unique<slm::LiteraturePosition>());
