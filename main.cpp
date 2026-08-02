@@ -36,6 +36,7 @@
 #include "particle/FlowAssumption.h"
 #include "particle/StateTable.h"
 #include "particle/ReturnEvent.h"
+#include "particle/ReturnFormula.h"
 #include "particle/RoundTrip.h"
 #include "particle/TimeHolonomy.h"
 #include "particle/TimeProjection.h"
@@ -115,6 +116,7 @@ namespace
         sections.push_back(std::make_unique<slm::FlowAssumptionSection>());
         sections.push_back(std::make_unique<slm::TimeHolonomySection>());
         sections.push_back(std::make_unique<slm::ReturnEventSection>());
+        sections.push_back(std::make_unique<slm::ReturnFormulaSection>());
         return sections;
     }
 
