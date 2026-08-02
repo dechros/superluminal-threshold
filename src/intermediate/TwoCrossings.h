@@ -27,9 +27,31 @@ namespace slm
         /// Squared normal wavenumber outside, as a function of frequency.
         static double outsideSquared(double omega, double c, double mu, double transverseSquared);
 
+        /// Which directions the intermediate region turns over. The literature
+        /// on the Kleinian slab takes the crossing direction itself to be the
+        /// one that turns, which forces the interior wavenumber to be imaginary
+        /// and makes every crossing a tunnelling. The model's own construction
+        /// turns transverse directions instead, which leaves the interior able
+        /// to propagate. The two are computed separately and compared.
+        enum class FlipAxis
+        {
+            Transverse,
+            Crossing
+        };
+
         /// Squared normal wavenumber inside, which the kind shifts downwards.
         static double insideSquared(IntermediateRegion::Kind kind, double omega, double c,
                                     double mu, double transverseSquared);
+
+        /// Squared normal wavenumber inside for either choice of turning axis.
+        static double insideSquaredOn(FlipAxis axis, IntermediateRegion::Kind kind, double omega,
+                                      double c, double mu, double transverseSquared);
+
+        /// Ratio of the counter-propagating to the co-propagating interior
+        /// amplitude, which is the mixing the region imposes. Unlike the delay,
+        /// this is the quantity that can retain the thickness.
+        static double mixingRatio(IntermediateRegion::Kind kind, double omega, double c, double mu,
+                                  double transverseSquared, double thickness);
 
         /// Complex transmission amplitude across both crossings.
         static std::complex<double> amplitude(IntermediateRegion::Kind kind, double omega, double c,

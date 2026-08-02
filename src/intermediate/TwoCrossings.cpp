@@ -26,6 +26,50 @@ namespace slm
         return outsideSquared(omega, c, mu, transverseSquared) - shift;
     }
 
+    double TwoCrossings::insideSquaredOn(FlipAxis axis, IntermediateRegion::Kind kind,
+                                         double omega, double c, double mu,
+                                         double transverseSquared)
+    {
+        if (axis == FlipAxis::Transverse)
+        {
+            return insideSquared(kind, omega, c, mu, transverseSquared);
+        }
+        if (kind == IntermediateRegion::Kind::None)
+        {
+            return outsideSquared(omega, c, mu, transverseSquared);
+        }
+        if (IntermediateRegion::flippedDirections(kind) < 0)
+        {
+            return -1e12;
+        }
+        return -outsideSquared(omega, c, mu, transverseSquared);
+    }
+
+    double TwoCrossings::mixingRatio(IntermediateRegion::Kind kind, double omega, double c,
+                                     double mu, double transverseSquared, double thickness)
+    {
+        const std::complex<double> i(0.0, 1.0);
+        const double outside = outsideSquared(omega, c, mu, transverseSquared);
+        if (outside <= 0.0 || thickness <= 0.0)
+        {
+            return 0.0;
+        }
+        const double kappa = std::sqrt(outside);
+        const double inside = insideSquared(kind, omega, c, mu, transverseSquared);
+        if (inside <= -1e11)
+        {
+            return 0.0;
+        }
+        const std::complex<double> q =
+            inside >= 0.0 ? std::complex<double>(std::sqrt(inside), 0.0)
+                          : std::complex<double>(0.0, std::sqrt(-inside));
+        if (std::abs(kappa + q) == 0.0)
+        {
+            return 0.0;
+        }
+        return std::abs(((kappa - q) / (kappa + q)) * std::exp(-2.0 * i * q * thickness));
+    }
+
     std::complex<double> TwoCrossings::amplitude(IntermediateRegion::Kind kind, double omega,
                                                  double c, double mu, double transverseSquared,
                                                  double thickness)
@@ -182,7 +226,66 @@ namespace slm
                      "thickness periodically rather than monotonically",
                      largest - smallest > 0.05);
 
-        report.subsection("13.7  The placement is set by phase, not by duration");
+        report.subsection("13.7  Which axis turns over decides whether it is a barrier");
+        using Axis = TwoCrossings::FlipAxis;
+        for (double testOmega : {2.8, 6.0, 12.0})
+        {
+            const double transverseCase = TwoCrossings::insideSquaredOn(
+                Axis::Transverse, Kind::Kleinian, testOmega, c, mu, transverse);
+            const double crossingCase = TwoCrossings::insideSquaredOn(
+                Axis::Crossing, Kind::Kleinian, testOmega, c, mu, transverse);
+            report.check(std::format("  omega = {:g} : turning the crossing axis is evanescent "
+                                     "while turning a transverse axis gives {:.2f}",
+                                     testOmega, transverseCase),
+                         crossingCase < 0.0);
+        }
+        report.check("so on the crossing-axis reading a Kleinian region is a "
+                     "barrier at every frequency, and never a cavity",
+                     TwoCrossings::insideSquaredOn(Axis::Crossing, Kind::Kleinian, 50.0, c, mu,
+                                                   transverse) < 0.0);
+        report.check("while on the transverse reading it propagates once the "
+                     "frequency is high enough",
+                     TwoCrossings::insideSquaredOn(Axis::Transverse, Kind::Kleinian, 50.0, c, mu,
+                                                   transverse) > 0.0);
+        report.check("on the crossing-axis reading the Kleinian and Euclidean "
+                     "interiors coincide, so the four kinds collapse to two",
+                     std::abs(TwoCrossings::insideSquaredOn(Axis::Crossing, Kind::Kleinian, omega,
+                                                            c, mu, transverse) -
+                              TwoCrossings::insideSquaredOn(Axis::Crossing, Kind::Euclidean, omega,
+                                                            c, mu, transverse)) < 1e-12);
+
+        report.subsection("13.8  Mixing keeps the thickness the delay forgets");
+        double previousMixing = 0.0;
+        bool mixingGrows = true;
+        for (double thickness : {1.0, 2.0, 4.0, 8.0})
+        {
+            const double mixing = TwoCrossings::mixingRatio(Kind::Euclidean, barrierOmega, c, mu,
+                                                            transverse, thickness);
+            report.check(std::format("  d = {:g} : mixing {:.4e}", thickness, mixing),
+                         mixing > 0.0);
+            if (mixing <= previousMixing)
+            {
+                mixingGrows = false;
+            }
+            previousMixing = mixing;
+        }
+        report.check("the mixing keeps growing with thickness where the delay had "
+                     "already saturated, so the thickness is recoverable from it",
+                     mixingGrows);
+        report.checkNear("meanwhile the delay at the same two thicknesses is the same number",
+                         TwoCrossings::returnDelay(Kind::Euclidean, barrierOmega, c, mu, transverse,
+                                                   4.0) -
+                             TwoCrossings::returnDelay(Kind::Euclidean, barrierOmega, c, mu,
+                                                       transverse, 8.0),
+                         1e-6);
+        report.check("so the two observables are complementary rather than "
+                     "redundant, and the return needs both",
+                     TwoCrossings::mixingRatio(Kind::Euclidean, barrierOmega, c, mu, transverse,
+                                               8.0) >
+                         TwoCrossings::mixingRatio(Kind::Euclidean, barrierOmega, c, mu, transverse,
+                                                   4.0));
+
+        report.subsection("13.9  The placement is set by phase, not by duration");
         report.check("the delay is the frequency derivative of the phase, and is "
                      "obtained without any clock inside the region",
                      std::abs(TwoCrossings::returnDelay(Kind::Euclidean, omega, c, mu, transverse,

@@ -1585,11 +1585,69 @@ bu model için özellikle ilgi çekicidir, çünkü Bölüm 3.4'teki madde katma
 olarak geçişi sönümlü kılacak türden bir bağlaşımdır. Modelin bir yükümlülüğü
 olarak görünen şey, burada bir kurtarıcı olabilir.
 
-**Frekans karışımı daha iyi bir gözlenebilir olabilir.** Öklid bölgeden çıkan
-dalgada pozitif ve negatif frekans karışımının, bölgenin toplam boyutuna
-bağlı olduğu bilinmektedir. Gecikme kalınlığı unuturken frekans içeriği onu
-korur. Dönüş anının frekans karışımından okunması, bu çalışmada yapılmamıştır
-ve doğal devamıdır.
+**Frekans karışımı kalınlığı koruyor.** Bu, Bölüm 14.8'de hesaplanmıştır ve
+gecikmenin kaybettiği bilgiyi geri veriyor.
+
+### 14.7 Hangi eksen dönüyor: tablonun en kırılgan varsayımı
+
+Bölüm 3'ün tablosu, karakter değiştiren yönlerin **enine** yönler olduğunu, yani
+geçiş doğrultusunun kendisinin dönmediğini varsayar. Bu varsayım altında Kleinian
+bölge yayılımlıdır ve tablodaki tek açık hücreyi verir.
+
+Varsayım tartışmalıdır. Kleinian dilim üzerine yapılmış çalışmalarda dönen yön
+**geçiş doğrultusunun kendisidir**; o durumda iç dalga sayısının karesi dışarıdaki
+değerin işaretçe tersi olur ve her frekansta negatiftir.
+
+İki okuma yan yana hesaplanmıştır:
+
+| Frekans | Enine eksen döner | Geçiş ekseni döner |
+|---------|-------------------|--------------------|
+| $2{,}8$ | $+0{,}17$, yayılımlı | Negatif, söndürücü |
+| $6$ | $+28{,}33$, yayılımlı | Negatif, söndürücü |
+| $12$ | $+136{,}33$, yayılımlı | Negatif, söndürücü |
+| $50$ | Yayılımlı | Negatif, söndürücü |
+
+Sonuç keskindir. **Geçiş ekseni döndüğünde Kleinian bölge her frekansta bir
+engeldir ve hiçbir zaman bir oyuk değildir.** Dahası, o okumada Kleinian ile
+Öklid bölgenin iç dalga sayıları **birbirinin aynıdır**: dört tip ikiye iner ve
+her geçiş tünellemedir.
+
+Bu çalışma iki okumadan birini seçmemektedir. Kaydedilen şudur: Bölüm 3'ün
+"kalın Kleinian tek çalışan hücredir" gözlemi, enine okumaya bağlıdır ve geçiş
+ekseni okumasında geçerli değildir.
+
+### 14.8 Frekans karışımı: gecikmenin unuttuğunu hatırlayan nicelik
+
+Bölüm 14.4'ün sorunu, gecikmenin kalınlığı unutmasıydı. Ara bölgenin iki dalı
+arasındaki karışım oranı bu bilgiyi korur:
+
+$$\left|\frac{A_-}{A_+}\right|
+  = \left|\frac{\kappa - q}{\kappa + q}\right| \, \left|e^{-2 i q d}\right|$$
+
+Söndürücü durumda $q$ sanaldır ve üstel terim reeldir, dolayısıyla oran
+kalınlıkla üstel olarak büyür. Hesaplanan değerler:
+
+| Kalınlık $d$ | Gecikme | Karışım oranı |
+|--------------|---------|---------------|
+| $1$ | $1{,}451$ | $9{,}40 \times 10^{1}$ |
+| $2$ | $1{,}463$ | $8{,}83 \times 10^{3}$ |
+| $4$ | $1{,}463$ | $7{,}80 \times 10^{7}$ |
+| $8$ | $1{,}463$ | $6{,}09 \times 10^{15}$ |
+
+Dört ve sekiz birim kalınlıkta gecikme aynı sayıdır, karışım oranı ise sekiz
+mertebe farklıdır.
+
+> Gecikme ile karışım **birbirini tamamlar, tekrarlamaz**. Dönüş anı için
+> gecikme, ara bölgenin kalınlığı için karışım gerekir. Tek bir gözlenebilir
+> gidiş dönüşü tarif etmeye yetmez.
+
+**Çekince.** Karışım oranı ara bölgenin içindeki iki dalın oranıdır. Kalınlık
+bilgisini ilke olarak taşıması, dışarıdan ölçülebilir olduğu anlamına gelmez;
+geçen genlik aynı kalınlıkta üstel olarak küçüldüğü için, bilginin taşındığı
+kanal aynı zamanda zayıflayan kanaldır. Ölçülebilirlik ayrı bir sorudur ve
+burada gösterilmemiştir.
+
+### 14.9 Karmaşık zaman kurgusunun keyfiliği
 
 **Karmaşık zaman kurgusu tek başına belirleyici değildir.** Fazın karmaşık
 yapıdan okunması, keyfilik taşır: karmaşık bir zaman değişimi, özgün çözümden
