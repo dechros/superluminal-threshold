@@ -2130,7 +2130,52 @@ alıcı tarafta görünen bir şey yoktur.
 | Yer çekimi | **Bağlanır** | Açık soru |
 | Korelasyon | **Kalır** | Hayır |
 
-### 19.5 Çekinceler
+### 19.5 Yer çekimi kanalı gerçekten sinyal taşıyor mu
+
+Bir kanalın var olması ile bilgi taşıması ayrı şeylerdir. Taşıması için iki şey
+gerekir: katmanın gönderenin yaptığına **tepki vermesi**, ve tepkinin öbür
+taraftan **okunabilmesi**.
+
+**Tepki var ve niceldir.** Bizim tarafa konan bir kütle metriği büker, o yüzdeki
+dış eğriliği değiştirir ve dolayısıyla sıçramayı değiştirir. Zayıf alan
+yaklaşımında katkı $M/r^2$ biçimindedir. Hesaplanan tepki:
+
+| Kütlenin uzaklığı | Katmanın birim kütle başına değişimi |
+|-------------------|---------------------------------------|
+| $1$ | $-1{,}000$ |
+| $2$ | $-0{,}250$ |
+| $4$ | $-0{,}0625$ |
+
+Tepki kütlede doğrusal, uzaklıkta ters karedir; ikisi de doğrulanmıştır.
+
+**Kapalı bölgede de çalışır.** Dejenere katman her alana kapalıdır, ama kütleye
+verdiği tepki sıfır değildir. Öklid bölge için de aynısı geçerlidir.
+
+**Nedensellik bozulmuyor.** Gönderenin eylemi yüzeye ulaşmak için kendi
+bölgesinde yol almak zorundadır ve bu ışık hızıyla olur; gecikme uzaklıkla
+doğrusal artar. Bu kanal, bizim tarafımızda hiçbir şeyi ışıktan hızlı yapmaz.
+
+**Okunabilirlik kanalın zayıf yanıdır.** Öbür tarafın ayırt etmesi gereken şey,
+katmanın değişen kısmının durağan kısmına oranıdır:
+
+| Kütlenin uzaklığı | Zıtlık |
+|-------------------|--------|
+| $0{,}5$ | $4{,}00$ |
+| $1$ | $1{,}00$ |
+| $4$ | $0{,}0625$ |
+
+Zıtlık uzaklıkla hızla düşer. On birim uzaklıkta yüzde ikinin altına iner.
+
+Buradan iki tasarım kuralı çıkar. Gönderen **yüzeye yakın** olmalıdır. Ve ara
+bölge **kalın** olmalıdır, çünkü ölçümün karşılaştırıldığı durağan katman o
+zaman zayıftır.
+
+**Sonuç.** Yer çekimi kanalı yalnızca var olmakla kalmaz, **sinyal taşır**.
+Buna karşılık kurulması en zor kanaldır: gönderenin yüzeye yapışması ve ara
+bölgenin kalın olması gerekir, ki bu ikincisi Bölüm 19.3'teki takasın öbür
+ucudur.
+
+### 19.6 Çekinceler
 
 Yer çekimi bağlaşımı, Bölüm 3.4'teki vekil ölçüyle, yani imza dönüşünün dik
 eğimiyle alınmıştır. Gerçek bir gravitasyonel sinyal hesabı yapılmamıştır; tam

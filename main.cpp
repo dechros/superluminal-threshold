@@ -33,6 +33,7 @@
 #include "rest/SuperluminalRest.h"
 #include "scan/PermutationScan.h"
 #include "signal/Channels.h"
+#include "signal/GravitationalChannel.h"
 #include "spherical/SphericalSolution.h"
 #include "transform/InvolutionD.h"
 
@@ -69,6 +70,7 @@ namespace
         sections.push_back(std::make_unique<slm::CellDistributionSection>());
         sections.push_back(std::make_unique<slm::AsymmetricFacesSection>());
         sections.push_back(std::make_unique<slm::ChannelsSection>());
+        sections.push_back(std::make_unique<slm::GravitationalChannelSection>());
         sections.push_back(std::make_unique<slm::MaxwellSection>());
         sections.push_back(std::make_unique<slm::LiteraturePosition>());
         sections.push_back(std::make_unique<slm::BlackHoleHorizon>());
