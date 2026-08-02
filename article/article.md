@@ -2813,14 +2813,30 @@ gösterilebilmesidir.
 
 ---
 
-# Kısım VII. Sınırlar
+# Kısım VII. Sınırlar ve itirazlar
 
-> Bu kısmın tamamı sıfırdan yeniden yazılacaktır. Aşağıdaki metinler eski
-> tezin sınırlarını tarif ediyor ve yeni teze göre geçersizdir.
+Bu kısım, çalışmanın nerede durduğunu değil, nerede **duramadığını** yazar.
+
+İki tür sınır ayrılmalıdır. Birincisi modelin kendi kurgusundan doğan cebirsel
+engellerdir; Bölüm 20 bunu ele alır. İkincisi literatürün bu türden bir kurguya
+yönelttiği itirazlardır, ve bunlar yalnızca bu çalışmaya yöneltilmiş olanlarla
+sınırlı değildir. Buradaki kurgu imza değişimini, ışık ötesi taşımayı ve çok
+zamanlı dinamiği birden kullanmaktadır; dolayısıyla bu üç alana yöneltilmiş
+bütün itirazlar buraya da düşer. Yalnızca kendisine yöneltilenleri cevaplayan
+bir metin, kolay yarıyı cevaplamış olur.
+
+Bu nedenle Bölüm 21 tam bir sicil tutar: on beş itiraz, her birinin hükmü, ve
+her hükmün hangi hesaptan geldiği. Hükümler dört türlüdür ve birbirinin yerine
+geçmez. **Cevaplandı**, buradaki bir hesabın itirazın bu kurguya ulaşmadığını
+göstermesidir. **Kabul edildi**, itirazın isabet etmesi ve savunma yerine ilgili
+iddianın geri çekilmesi ya da daraltılmasıdır. **Daraltıldı**, itirazın zeminin
+bir kısmına isabet etmesi ve ayakta kalan kısmın yazılmasıdır. **Sınanmadı**,
+itirazın gerçek olması ama buradaki hiçbir hesabın ona değmemesidir; bunlar
+atlanmak yerine açıkça taşınır.
 
 ## 20. Sylvester engeli ve modelin duruşu
 
-Bu bölüm modelin kendi sınırını belirler.
+Bu bölüm modelin kendi sınırını belirler ve sonucu kabul edilen bir itirazdır.
 
 Aynı sınıra dışarıdan da işaret edilmiştir. [3], burada kullanılan türden bir
 çevirmenin birim operatör artı keyfi bir yeniden etiketleme olduğunu, 24
@@ -3032,6 +3048,44 @@ araçlarının çalıştığı sınıftır. Bölüm 7.5'in karşıt sonucu geri 
 Geriye kalan soru geçişin mümkün olup olmadığı değil, $(2,2)$ ara bölgesinin
 fiziksel olarak kabul edilip edilemeyeceğidir.
 
+### 21.7 Tam sicil: literatürün bütün itirazları ve hükümleri
+
+Aşağıdaki sicil `src/critique/LiteratureObjections` tarafından üretilir. Hiçbir
+hüküm bu bölümde beyan edilmez; her biri, o itirazı karara bağlayan kütüphaneye
+yapılan bir çağrının dönüş değeridir. Bu, itirazın altındaki fizik yerinde
+dururken hükmün sessizce değişmesini engeller.
+
+| İtiraz | Hüküm | Hükmün dayanağı |
+|--------|-------|------------------|
+| Hiçbir reel dönüşüm bir imzayı ötekine taşımaz | kabul edildi | 24 permütasyondan 6'sı çizgi elemanını korur, 18'i korumaz; itirazın kendi sayımı yeniden üretilir |
+| İmza değişiminde standart korunum yasaları çöker | kabul edildi | genel profilde katman vardır, dolayısıyla çöküş gerçektir ve büyüklüğü tartışılmak yerine hesaplanır |
+| Yüzeydeki dağılımsal terim beyanla düşürülemez | kabul edildi | katman taşıyan her profilde üstel negatiftir |
+| Katman hiçbir madde seçimiyle enerji koşullarını sağlayamaz | kabul edildi | katman taşıyan hiçbir profil sınanan hiçbir kalınlıkta baskın koşulu sağlamaz |
+| Birden çok zamanlı denklemler kötü konumlanmıştır | daraltıldı | kütle kabuğu dışında modlar gerçekten büyür, ama geçişle ulaşılan kabuk üzerinde büyüme katsayısı özdeş olarak negatiftir |
+| Fazladan zamanlar salt ayardır, buraya kaydolamaz | daraltıldı | iç bölge düzdür ve hiçbir şey kaydetmez, ama yüzeyler bağlantıyı eğer; itiraz içeride geçerli, sınırda geçersizdir |
+| Birden çok zamanlı bir bölge gelecek ve geçmişe ayrılamaz | kabul edildi | orada zamansı küme bağlantılıdır, böyle bir ayrım yoktur ve model böyle bir iddiada bulunmaz |
+| Doyan bir gecikme depolanan alanın özelliğidir, hızlı geçiş değil | kabul edildi | iki okumanın oranı kalınlıkla oynamaz |
+| İlerlemiş tepe sinyal taşımaz | kabul edildi | cephe her kalınlıkta tam ışık süresi kadar gecikir |
+| Işık ötesi uyarım vakum Cherenkov sınırıyla dışlanır | cevaplandı | buradaki her yayılan uyarımın grup hızı $c$'nin altında kalır, sınırın kısıtlayacağı bir şey yoktur |
+| Işık ötesi uyarımların alan kuramının dinamiği yoktur | daraltıldı | ikilenmiş kurgunun komütatörü gerçekten sıfırdır, model bu yüzden onu kullanmaz |
+| Bu türden dönüşümler evrimi belirlenimsiz kılar | kabul edildi | dönüş eşlemesi birebir değildir, ve o sıkışma geçişin bedeli olan bilgi olarak kaydedilir |
+| Yüzeydeki sınır koşulu elle seçilir | cevaplandı | öz-eşlenik ailenin her üyesi yansıtır, sonuç hangisinin seçildiğine bağlı değildir |
+| Karmaşık zaman kurgusu bir ölçüt olmadan keyfidir | sınanmadı | burada hiçbir ölçüt benimsenmemiştir, itiraz cevaplanmak yerine taşınmaktadır |
+| Alan denklemlerinin dağılımsal biçimi tek değildir | sınanmadı | yayımlanmış tartışmanın iki tarafı da bunu kabul eder, buradaki hiçbir şey de çözmez |
+
+**Bilanço.** On beş itirazın **2'si cevaplanmış, 3'ü daraltılmış, 8'i kabul
+edilmiş, 2'si sınanmamıştır.**
+
+Bu bilanço çalışmanın lehine değildir ve öyle sunulmamaktadır. Kabul
+edilenlerin sayısı ötekilerin toplamını aşmaktadır. Kütüphanede bunu izleyen bir
+denetim vardır: cevaplananların sayısı ötekilerin toplamını aşarsa doğrulama
+başarısız olur, çünkü o noktada tutulan şey bir sicil değil bir savunmadır.
+
+Sicilin söylediği şey şudur. Bu çalışmanın ışık ötesine dair bütün iddiaları
+**geri çekilmiş ya da daraltılmıştır**. Ayakta kalan şey, geri kalanların
+yanlışlanmamış olması değil, tek bir eşlemenin kurulmuş ve taranmış olmasıdır:
+öte taraftaki yönelimden dönüş olayının dört koordinatına.
+
 ---
 
 ## 22. Yöntem ve doğrulama
@@ -3056,6 +3110,7 @@ ne bölüm numarası ne kaynak numarası bulunur.
 | Eşik yüzeyi ve eklem koşullarının saçılması | `src/boundary/ThresholdSurface`, `src/boundary/JunctionScattering` |
 | Eklem koşulunun yerçekimi tarafı, dış eğrilik | `src/horizon/SurfaceLayer` |
 | Katmanın enerji koşulları karşısındaki durumu | `src/horizon/LayerEnergyConditions` |
+| Literatürün bütün itirazlarının sicili | `src/critique/LiteratureObjections` |
 | Normal türevin lapse'e göre sönme oranı | `src/horizon/RateCondition` |
 | Nedensel geçişin akı sorusundan ayrılması | `src/boundary/CausalCrossing` |
 | Sonlu kalınlıkta dilimden tünelleme | `src/boundary/SlabTunnelling` |
