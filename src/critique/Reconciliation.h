@@ -45,7 +45,43 @@ namespace slm
         /// Number of disagreements this section reconciles by calculation.
         static int reconciledCount();
 
-        /// Number left standing as genuine contradictions.
+        /// The two numbers two rival positions give for one measurement. A
+        /// disagreement counts as a genuine contradiction exactly when the two
+        /// differ, so the count is derived rather than declared.
+        struct Rivals
+        {
+            double first;
+            double second;
+            /// Whether the two positions actually disagree numerically.
+            bool disagree(double tolerance = 1e-9) const;
+        };
+
+        /// Transmitted flux fraction through the threshold, under the strong
+        /// junction condition and under the weak one with a slab present.
+        /// Decided by measuring how much gets through.
+        static Rivals transmittedFlux(double thickness);
+
+        /// Strength of the surface layer the junction carries, for a generic
+        /// transition profile and for one stationary at the crossing. Decided
+        /// by measuring the surface energy density.
+        static Rivals surfaceLayer(double thickness);
+
+        /// Casimir energy per unit area between two threshold surfaces, when
+        /// they carry the same self-adjoint condition and when they carry
+        /// opposite ones. Decided by measuring the sign of the force.
+        static Rivals casimirEnergy(double separation);
+
+        /// Quanta arriving at the entry face after a return through the
+        /// opposite face, read as one particle of negative energy and as a
+        /// created pair. Decided by counting arrivals in coincidence.
+        static Rivals returnedQuanta();
+
+        /// Net energy delivered here by that same return, under the same two
+        /// readings. Decided by measuring the sign of the energy deposited.
+        static Rivals returnedEnergy(double magnitude);
+
+        /// How many of the four disagreements above come out with different
+        /// numbers, and therefore stand as contradictions.
         static int standingContradictionCount();
     };
 

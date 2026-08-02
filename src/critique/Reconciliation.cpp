@@ -1,10 +1,12 @@
 #include "critique/Reconciliation.h"
 
+#include "boundary/JunctionScattering.h"
 #include "boundary/ModeFilter.h"
 #include "core/Report.h"
 #include "intermediate/IntermediateRegion.h"
 #include "intermediate/TwoCrossings.h"
 #include "particle/ExitFace.h"
+#include "quantum/CasimirDiscriminant.h"
 
 #include <cmath>
 #include <format>
@@ -81,9 +83,53 @@ namespace slm
         return 5;
     }
 
+    bool Reconciliation::Rivals::disagree(double tolerance) const
+    {
+        return std::abs(first - second) > tolerance;
+    }
+
+    Reconciliation::Rivals Reconciliation::transmittedFlux(double thickness)
+    {
+        const double strong =
+            JunctionScattering::fluxRegionII(JunctionScattering::Matching::Strong, {1.0, 0.0});
+        const double weak = IntermediateRegion::transmission(IntermediateRegion::Kind::Kleinian, kC,
+                                                             kMu, kTransverse, thickness);
+        return {strong, weak};
+    }
+
+    Reconciliation::Rivals Reconciliation::surfaceLayer(double thickness)
+    {
+        using Kind = IntermediateRegion::Kind;
+        return {IntermediateRegion::layerStrength(Kind::Kleinian, thickness),
+                IntermediateRegion::layerStrengthStationaryProfile(Kind::Kleinian, thickness)};
+    }
+
+    Reconciliation::Rivals Reconciliation::casimirEnergy(double separation)
+    {
+        return {CasimirDiscriminant::energySameCondition(1.0, kC, separation),
+                CasimirDiscriminant::energyOppositeConditions(1.0, kC, separation)};
+    }
+
+    Reconciliation::Rivals Reconciliation::returnedQuanta()
+    {
+        return {1.0, 2.0};
+    }
+
+    Reconciliation::Rivals Reconciliation::returnedEnergy(double magnitude)
+    {
+        const double q = std::sqrt(ExitFace::crossingWavenumberSquared(kC, kMu, magnitude, 0.0,
+                                                                       0.0));
+        return {ExitFace::ourEnergyFromBranch(-q), ExitFace::ourEnergyFromBranch(q)};
+    }
+
     int Reconciliation::standingContradictionCount()
     {
-        return 4;
+        int standing = 0;
+        standing += transmittedFlux(1.0).disagree() ? 1 : 0;
+        standing += surfaceLayer(1.0).disagree() ? 1 : 0;
+        standing += casimirEnergy(1.0).disagree() ? 1 : 0;
+        standing += (returnedQuanta().disagree() && returnedEnergy(2.0).disagree()) ? 1 : 0;
+        return standing;
     }
 
     void ReconciliationSection::run(Report &report) const
@@ -117,14 +163,39 @@ namespace slm
                          Reconciliation::illPosedAndWellPosedAreOneCoin() &&
                          Reconciliation::exitFaceAndTurnAreOneVector());
 
-        report.subsection("What the method cannot absorb");
-        report.check(std::format("  {} disagreements remain genuine contradictions",
+        report.subsection("What the method cannot absorb, with both numbers computed");
+        const Reconciliation::Rivals flux = Reconciliation::transmittedFlux(1.0);
+        report.check(std::format("  transmitted flux: the strong condition gives {:.4f}, the "
+                                 "weak one with a slab gives {:.4f}, decided by measuring how "
+                                 "much gets through",
+                                 flux.first, flux.second),
+                     flux.disagree());
+
+        const Reconciliation::Rivals layer = Reconciliation::surfaceLayer(1.0);
+        report.check(std::format("  surface layer: a generic profile gives {:.4f}, one "
+                                 "stationary at the crossing gives {:.4f}, decided by measuring "
+                                 "the surface energy density",
+                                 layer.first, layer.second),
+                     layer.disagree());
+
+        const Reconciliation::Rivals casimir = Reconciliation::casimirEnergy(1.0);
+        report.check(std::format("  Casimir energy: equal wall conditions give {:+.6f}, opposite "
+                                 "ones give {:+.6f}, decided by measuring the sign of the force",
+                                 casimir.first, casimir.second),
+                     casimir.disagree() && casimir.first * casimir.second < 0.0);
+
+        const Reconciliation::Rivals quanta = Reconciliation::returnedQuanta();
+        const Reconciliation::Rivals energy = Reconciliation::returnedEnergy(2.0);
+        report.check(std::format("  a return through the opposite face: {:g} quantum carrying "
+                                 "{:+.4f} against {:g} quanta carrying {:+.4f}, decided by "
+                                 "counting arrivals in coincidence",
+                                 quanta.first, energy.first, quanta.second, energy.second),
+                     quanta.disagree() && energy.disagree());
+
+        report.check(std::format("  {} disagreements remain genuine contradictions, counted by "
+                                 "the numbers differing rather than declared",
                                  Reconciliation::standingContradictionCount()),
                      Reconciliation::standingContradictionCount() == 4);
-        report.check("a contradiction is one where the two positions give "
-                     "different numbers for the same measurement, which no change "
-                     "of viewpoint removes",
-                     Reconciliation::standingContradictionCount() > 0);
         report.check("so the inclusive method absorbs more than half of the "
                      "disagreements and is honest about the rest",
                      Reconciliation::reconciledCount() >
