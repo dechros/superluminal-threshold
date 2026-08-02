@@ -84,7 +84,9 @@ namespace slm
         static bool gravitationalCapacityKnown();
 
         /// Whether an allowability criterion has been adopted for the
-        /// complex-time construction the return uses.
+        /// complex-time construction the return uses. One has been computed
+        /// and found consistent, but in a reduced form rather than on the
+        /// amplitude itself, so this still returns false.
         static bool allowabilityCriterionAdopted();
 
         /// Whether the degeneracy between a returning particle and a created

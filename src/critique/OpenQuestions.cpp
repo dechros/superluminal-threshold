@@ -12,6 +12,7 @@
 #include "intermediate/TraversalClocks.h"
 #include "particle/AsymmetricFaces.h"
 #include "particle/CellDistribution.h"
+#include "quantum/LapseContour.h"
 #include "signal/GravitationalChannel.h"
 
 #include <cmath>
@@ -204,8 +205,12 @@ namespace slm
                                  GravitationalChannel::contrast(IntermediateRegion::Kind::Kleinian, 1.0, 1.0, 0.5)),
                      !OpenQuestions::gravitationalCapacityKnown());
         report.check("the complex-time construction the return uses needs an "
-                     "allowability criterion, and none is adopted here",
-                     !OpenQuestions::allowabilityCriterionAdopted());
+                     "allowability criterion; one has now been computed and found "
+                     "consistent with what this model does, but in the minisuperspace "
+                     "form rather than on the two-crossing amplitude itself, so the "
+                     "item is narrowed and not closed",
+                     !OpenQuestions::allowabilityCriterionAdopted() &&
+                         LapseContour::belowSelectsDecaying(8.0, 1.0));
         report.check("a returning particle and a created pair are not told apart, "
                      "since they differ in count while agreeing in energy magnitude",
                      !OpenQuestions::pairDegeneracyBroken());

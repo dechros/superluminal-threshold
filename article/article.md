@@ -1929,15 +1929,51 @@ geçen genlik aynı kalınlıkta üstel olarak küçüldüğü için, bilginin t
 kanal aynı zamanda zayıflayan kanaldır. Ölçülebilirlik ayrı bir sorudur ve
 burada gösterilmemiştir.
 
-### 14.10 Karmaşık zaman kurgusunun keyfiliği
+### 14.10 Karmaşık zaman kurgusunun keyfiliği ve bir ölçütün sınanması
 
 **Karmaşık zaman kurgusu tek başına belirleyici değildir.** Fazın karmaşık
 yapıdan okunması, keyfilik taşır: karmaşık bir zaman değişimi, özgün çözümden
 uzun bir aralık boyunca ayırt edilemeyen sonsuz sayıda çözüm üretebilir.
-Bu keyfilik ancak bir kabul edilebilirlik ölçütü benimsenerek kaldırılır ve
-böyle bir ölçütün bu modelin geçişi tarafından sağlanıp sağlanmadığı burada
-gösterilmemiştir. Dolayısıyla yukarıdaki sayılar, ölçüt benimsendiğinde
-geçerli olan sayılardır.
+Bu keyfilik ancak bir kabul edilebilirlik ölçütü benimsenerek kaldırılır.
+
+**Bir ölçüt hesaplanmıştır** (`src/quantum/LapseContour`). Lapse üzerinden
+integral almak, yeniden parametrelendirme kısıtını dayatan işlemdir ve
+integrandın **lapse sıfırken bir esas tekilliği** vardır; orası metriğin
+dejenere olduğu noktadır. Kontur bu nedenle reel ekseni baştan başa kat etmek
+ama başlangıç noktasından geçmemek zorundadır, ve hangi taraftan geçtiği bir
+zevk meselesi değildir.
+
+Üstelin iki eyer noktası vardır ve ikisi de sanal eksende, başlangıç noktasına
+**eşit uzaklıkta** oturur; hiçbiri daha yakın değildir, onları ayıran tek şey
+konturun hangi taraftan geçtiğidir. Alt eyer sönen bir genlik, üst eyer büyüyen
+bir genlik taşır:
+
+| $d$ | Alt eyerin genliği | Üst eyerin genliği |
+|-----|---------------------|---------------------|
+| $1$ | $3{,}6788 \times 10^{-1}$ | $2{,}7183$ |
+| $2$ | $1{,}3534 \times 10^{-1}$ | $7{,}3891$ |
+| $4$ | $1{,}8316 \times 10^{-2}$ | $5{,}4598 \times 10^{1}$ |
+
+**İki taraf yalnızca farklı cevap vermiyor; biri hiç cevap vermiyor.** Öz zaman
+yarı doğrusu aşağı doğru döndürüldüğünde integral yakınsar; yukarı doğru
+döndürüldüğünde yakınsamaz. Dolayısıyla ölçüt isteğe bağlı değil, zorunludur.
+
+Ayakta kalan konturun hangi eyere indiği **ölçülmüştür**, varsayılmamıştır:
+integralin kendi sönüm hızı, iki eyerin vereceği hızlarla karşılaştırılır. Ölçülen
+hız $d = 2, 4, 8, 16$ için sırasıyla $0{,}2904$, $0{,}5760$, $0{,}7496$,
+$0{,}8545$'tir ve alt eyerin verdiği $1{,}0000$'e tırmanır; fark, ön çarpanın
+sönmesidir. Her uzaklıkta eyer hızının **altında** kalır, yani eyer integrali
+sınırlar, integrale uydurulmuş değildir.
+
+> Başlangıç noktasının altından geçen kontur, **sönen genliği** seçer. Bu, bu
+> modelin geçiş hesabının zaten kullandığı genliktir. Ölçüt burada ihlal
+> edilmiyordu; **söylenmemişti**.
+
+**Bu maddeyi kapatmaz, daraltır.** Hesap, minisüperuzay biçimi üzerinde
+yapılmıştır; iki geçişin ortak genliğinin kendisi üzerinde yapılmamıştır.
+Bölüm 26.3'teki madde bu nedenle açık kalmaya devam eder, ama artık "hiçbir
+ölçüt sınanmadı" değil, "sınanan ölçüt tutarlı çıktı, ama indirgenmiş biçimde"
+demektedir.
 
 ### 14.11 Geçiş süresinin beş okuması, tek çözüm üzerinde
 
@@ -3140,6 +3176,7 @@ ne bölüm numarası ne kaynak numarası bulunur.
 | Eşiğin mod filtresi olması | `src/boundary/ModeFilter` |
 | İki geçişin ortak genliği ve dönüş anı | `src/intermediate/TwoCrossings` |
 | Oyalanma süresi ile fazdan gecikmenin karşılaştırılması | `src/intermediate/DwellTime` |
+| Lapse konturunun dejenere noktanın hangi tarafından geçtiği | `src/quantum/LapseContour` |
 | Geçiş süresinin beş okumasının yan yana hesabı | `src/intermediate/TraversalClocks` |
 | Sinyal cephesinin tepeden ayrılması | `src/intermediate/SignalFront` |
 | Gidiş dönüş muhasebesi: mod, yük, entropi | `src/particle/RoundTrip` |
@@ -3230,12 +3267,13 @@ zamanlı sıfır eğrilik ölçütü.
 
 **Yöntem tarafındaki eksik.** Bu denetimin ikinci bulgusu şudur: literatür
 notlarının öncelik tablosundaki $24$ satırdan dördünün burada bir C++ karşılığı
-**yoktur** ve makalede yalnızca sözle kullanılmaktadır. Bunlar açıkça
+yoktu ve makalede yalnızca sözle kullanılıyordu. Biri o zamandan beri
+kurulmuştur (lapse kontur ölçütü, Bölüm 14.10); **üçü** hâlâ yalnızca sözle
+kullanılmaktadır. Bunlar açıkça
 kaydedilir, çünkü aksi hâlde Bölüm 22 sağlanmamış bir bütünlük iddia etmiş olur:
 
 | Yalnızca sözle kullanılan yöntem | Neden kurulmadı |
 |----------------------------------|------------------|
-| Lapse konturunun başlangıç noktasının altından geçmesi gerektiği | Kabul edilebilirlik ölçütü benimsenmediği için; Bölüm 26.3'te açık madde |
 | Zaman yönlendirilebilirliğinin çökmesinin bir çift yok oluşuna benzemesi | Sayım düzeneği tarif edilmediği için; Bölüm 26.3'te açık madde |
 | Zamanı ters çeviren bir bölgenin sınırının net akı, yani görünür yük taşıması | Kapsam dışı; yer çekimi kanalı dışındaki taşıyıcılar kurulmadı |
 | Zaman yönlendirilemez bölgede cismin spinör gibi dönüşmesi | Spin bu çalışmada hiçbir yere sokulmamıştır, kapsam kararı gereği |
@@ -3616,7 +3654,7 @@ ikisi de kaydedilmelidir.
 |------|-----------|------------|
 | Sonuçlar arasındaki dağılım | Sapmaların üç değerli bir kümede olduğu | Her değere düşen ağırlık |
 | Yer çekimi kanalı | Tepki verdiği, yarım birimde $4{,}0000$ karşıtlık | Kanalın kapasitesi |
-| Karmaşık zaman kurgusu | Dönüş anını veren mekanizma | Kabul edilebilirlik ölçütü; benimsenmemiştir |
+| Karmaşık zaman kurgusu | Dönüş anını veren mekanizma; lapse kontur ölçütü hesaplanmış ve tutarlı çıkmıştır (Bölüm 14.10) | Ölçütün iki geçiş genliğinin kendisi üzerinde uygulanması; indirgenmiş biçimde kalmıştır |
 | Dönen parçacık ile yaratılmış çift | Sayımda ayrıştıkları | Ayırt edecek bir gözlem; yoktur |
 | Geçiş süresinin hangi okuması fiziksel | Beş okumanın hepsinin aynı genlikten hesabı | Aralarında seçim; üçü ışığın üstünde, ikisi altında |
 | Geçirgen eşiğin oran koşulu karşısındaki durumu | Bu ailede hiçbir profilin hem katman taşıyıp hem oran koşulunu sağlamadığı | Daha geniş bir geçiş ailesinde temsilci; aranmamıştır |
