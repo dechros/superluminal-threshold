@@ -56,7 +56,7 @@ namespace slm
     class ExitFaceSection : public Section
     {
     public:
-        std::string number() const override { return "17"; }
+        std::string number() const override { return "18.6"; }
         std::string title() const override
         {
             return "Which face it leaves by, and why the far side cannot say";

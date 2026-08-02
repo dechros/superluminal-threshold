@@ -45,7 +45,7 @@ namespace slm
     class SlabTunnellingSection : public Section
     {
     public:
-        std::string number() const override { return "9.4"; }
+        std::string number() const override { return "6"; }
         std::string title() const override
         {
             return "A slab of finite thickness does let something through";

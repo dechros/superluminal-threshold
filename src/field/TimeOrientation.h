@@ -56,7 +56,7 @@ namespace slm
     class TimeOrientationSection : public Section
     {
     public:
-        std::string number() const override { return "7.4"; }
+        std::string number() const override { return "8.4"; }
         std::string title() const override
         {
             return "Time orientation: why the far side carries no future and past";

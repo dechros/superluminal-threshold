@@ -46,7 +46,7 @@ namespace slm
     class ModeFilterSection : public Section
     {
     public:
-        std::string number() const override { return "6.2"; }
+        std::string number() const override { return "12.2"; }
         std::string title() const override
         {
             return "The threshold as a mode filter: which far-side modes can be reached";

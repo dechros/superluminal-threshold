@@ -23,7 +23,7 @@ namespace slm
         /// \return -1, so the swap is not an element of SO(3).
         static double xySwapDeterminant3D();
 
-        std::string number() const override { return "12"; }
+        std::string number() const override { return "18.10"; }
         std::string title() const override
         {
             return "Sign choice and the structure of D";

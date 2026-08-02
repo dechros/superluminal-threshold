@@ -62,7 +62,7 @@ namespace slm
         /// when the previous predicate is true.
         static std::complex<double> outgoingOnlyReflection(Matching matching);
 
-        std::string number() const override { return "9.1"; }
+        std::string number() const override { return "4.1"; }
         std::string title() const override
         {
             return "Scattering at Sigma: what each junction condition predicts";

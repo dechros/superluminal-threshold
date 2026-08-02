@@ -61,7 +61,7 @@ namespace slm
     class WavePacketSection : public Section
     {
     public:
-        std::string number() const override { return "3"; }
+        std::string number() const override { return "11"; }
         std::string title() const override
         {
             return "What the particle is: wave packet computed, point body spoken";

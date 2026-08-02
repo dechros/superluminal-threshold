@@ -45,7 +45,7 @@ namespace slm
     class CausalCrossingSection : public Section
     {
     public:
-        std::string number() const override { return "9.3"; }
+        std::string number() const override { return "5"; }
         std::string title() const override
         {
             return "Geometry permits the crossing that the field forbids";

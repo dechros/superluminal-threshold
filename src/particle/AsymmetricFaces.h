@@ -47,7 +47,7 @@ namespace slm
     class AsymmetricFacesSection : public Section
     {
     public:
-        std::string number() const override { return "20"; }
+        std::string number() const override { return "18.8"; }
         std::string title() const override
         {
             return "Letting the two faces differ: the turn is quantised";

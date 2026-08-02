@@ -20,7 +20,7 @@ namespace slm
         /// hbar c / z^4, which still needs renormalisation.
         static double singleSurfaceEnergyDensityScale(double hbar, double c, double distance);
 
-        std::string number() const override { return "16"; }
+        std::string number() const override { return "10.11"; }
         std::string title() const override
         {
             return "Vacuum reading: correlation theory and the Casimir signature";

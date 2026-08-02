@@ -20,7 +20,7 @@ namespace slm
         /// \return Zero only when the conjugate momentum itself vanishes.
         static double junctionResidual(double c, double timeDerivative);
 
-        std::string number() const override { return "9"; }
+        std::string number() const override { return "4"; }
         std::string title() const override
         {
             return "Threshold surface at V = c: Sigma reflects";

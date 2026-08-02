@@ -24,7 +24,7 @@ namespace slm
         /// \param axis Index of the reflected axis in [0, 2].
         static Matrix4 timeReflection(int axis);
 
-        std::string number() const override { return "8"; }
+        std::string number() const override { return "9.1"; }
         std::string title() const override
         {
             return "Superluminal rest: a gauge redundancy";

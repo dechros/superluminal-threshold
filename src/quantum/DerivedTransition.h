@@ -48,7 +48,7 @@ namespace slm
     class DerivedTransitionSection : public Section
     {
     public:
-        std::string number() const override { return "15.6"; }
+        std::string number() const override { return "10.10"; }
         std::string title() const override
         {
             return "A derived transition compared with the one assumed here";

@@ -57,7 +57,7 @@ namespace slm
     class GravitationalChannelSection : public Section
     {
     public:
-        std::string number() const override { return "22"; }
+        std::string number() const override { return "19.5"; }
         std::string title() const override
         {
             return "Does the gravitational channel carry a signal, or only exist";

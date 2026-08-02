@@ -65,7 +65,7 @@ namespace slm
     class SurfaceLayerSection : public Section
     {
     public:
-        std::string number() const override { return "9.2"; }
+        std::string number() const override { return "4.2"; }
         std::string title() const override
         {
             return "The same choice seen on the gravitational side";

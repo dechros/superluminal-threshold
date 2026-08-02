@@ -52,7 +52,7 @@ namespace slm
     class DegeneratePathSection : public Section
     {
     public:
-        std::string number() const override { return "13.5"; }
+        std::string number() const override { return "7.1"; }
         std::string title() const override
         {
             return "Interpolating between the signatures: how degenerate must it get";

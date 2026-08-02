@@ -24,7 +24,7 @@ namespace slm
         /// Energy on the mass shell, sqrt(p^2 c^2 + m^2 c^4).
         static double shellEnergy(double c, double mass, double px, double py, double pz);
 
-        std::string number() const override { return "4"; }
+        std::string number() const override { return "8.2"; }
         std::string title() const override { return "Energy and momentum swap"; }
         void run(Report &report) const override;
     };

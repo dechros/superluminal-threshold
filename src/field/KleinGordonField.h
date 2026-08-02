@@ -30,7 +30,7 @@ namespace slm
         /// Residual of the region II field equation, zero on shell.
         static double regionIIResidual(double c, double mu, double kSquared, double q);
 
-        std::string number() const override { return "6-7"; }
+        std::string number() const override { return "8 ve 12"; }
         std::string title() const override
         {
             return "Lagrangian, field equation, loss of determinism and the arrow of time";

@@ -55,7 +55,7 @@ namespace slm
     class ChannelsSection : public Section
     {
     public:
-        std::string number() const override { return "21"; }
+        std::string number() const override { return "19"; }
         std::string title() const override
         {
             return "Four carriers between the regions, and which of them signal";

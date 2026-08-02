@@ -36,7 +36,7 @@ namespace slm
         /// Total path length in closed form.
         double totalPathClosedForm() const;
 
-        std::string number() const override { return "10"; }
+        std::string number() const override { return "9.2"; }
         std::string title() const override
         {
             return "Spherically symmetric solution in closed form";

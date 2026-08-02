@@ -47,7 +47,7 @@ namespace slm
     class CasimirDiscriminantSection : public Section
     {
     public:
-        std::string number() const override { return "16.4"; }
+        std::string number() const override { return "10.14"; }
         std::string title() const override
         {
             return "What two threshold surfaces would discriminate";

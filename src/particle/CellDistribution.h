@@ -61,7 +61,7 @@ namespace slm
     class CellDistributionSection : public Section
     {
     public:
-        std::string number() const override { return "19"; }
+        std::string number() const override { return "18.7"; }
         std::string title() const override
         {
             return "How often each outcome happens, and the fork in the answer";

@@ -63,7 +63,7 @@ namespace slm
     class IntermediateRegionSection : public Section
     {
     public:
-        std::string number() const override { return "2"; }
+        std::string number() const override { return "3"; }
         std::string title() const override
         {
             return "The intermediate region: four kinds against five thicknesses";
