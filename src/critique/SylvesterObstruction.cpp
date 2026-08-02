@@ -4,6 +4,7 @@
 #include "core/Report.h"
 #include "transform/InvolutionD.h"
 
+#include <algorithm>
 #include <cmath>
 #include <format>
 #include <random>
@@ -54,6 +55,16 @@ namespace slm
         report.check("D^T eta  D + eta = 0  (DOES NOT HOLD)", withEta > 1e-9);
 
         report.subsection("The fork");
-        report.check("congruence by i*I: (i)^2 eta = -eta, available only over the complex field", true);
+        double closestRealScalar = 1e9;
+        for (int step = -4000; step <= 4000; ++step)
+        {
+            const double s = step * 0.001;
+            closestRealScalar = std::min(closestRealScalar, std::abs(s * s + 1.0));
+        }
+        report.check(std::format("scaling by s sends eta to s^2 eta, and no real s comes "
+                                 "nearer than {:.4f} to s^2 = -1, so the congruence by i*I "
+                                 "lives only over the complex field",
+                                 closestRealScalar),
+                     closestRealScalar > 0.5);
     }
 }

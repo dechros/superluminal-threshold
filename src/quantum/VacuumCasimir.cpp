@@ -1,6 +1,7 @@
 #include "quantum/VacuumCasimir.h"
 
 #include "core/Report.h"
+#include "quantum/CanonicalQuantization.h"
 
 #include <cmath>
 #include <format>
@@ -25,7 +26,12 @@ namespace slm
         const double c = 1.0;
 
         report.subsection("Why the particle concept is undefined");
-        report.check("none of the three structures exists in Region II", true);
+        report.check(std::format("the positive and negative frequency split, a Hamiltonian "
+                                 "bounded below, and a unitary representation each need one "
+                                 "time direction, and there are {} beyond the threshold",
+                                 CanonicalQuantization::conjugateMomentumCount(true)),
+                     CanonicalQuantization::conjugateMomentumCount(true) != 1 &&
+                         CanonicalQuantization::timelikeDirectionsOnSlice(true) > 0);
 
         report.subsection("Casimir: a single surface");
         report.check("diverges as z -> 0, renormalisation is required",

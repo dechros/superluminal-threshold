@@ -82,7 +82,24 @@ namespace slm
                      !CausalCrossing::timelikeInRegionI(beyond));
         report.check("but timelike in region II",
                      CausalCrossing::timelikeInRegionII(beyond));
-        report.check("so region II has strictly more timelike directions", true);
+        int timelikeHere = 0;
+        int timelikeBeyond = 0;
+        for (int a = -6; a <= 6; ++a)
+        {
+            for (int b = -6; b <= 6; ++b)
+            {
+                for (int d = -6; d <= 6; ++d)
+                {
+                    const Vector4 v(1.0, a * 0.25, b * 0.25, d * 0.25);
+                    timelikeHere += CausalCrossing::timelikeInRegionI(v) ? 1 : 0;
+                    timelikeBeyond += CausalCrossing::timelikeInRegionII(v) ? 1 : 0;
+                }
+            }
+        }
+        report.check(std::format("over the same grid of directions, {} are timelike here and "
+                                 "{} beyond, so the inclusion is strict",
+                                 timelikeHere, timelikeBeyond),
+                     timelikeBeyond > timelikeHere);
 
         report.subsection("What this separates");
         report.check("no causal obstruction stops a curve at the threshold, "

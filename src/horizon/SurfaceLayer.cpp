@@ -121,7 +121,10 @@ namespace slm
             const double slope = SurfaceLayer::profileSlope(named.shape, xc);
             report.checkNear(std::format("  {} : K equals half the profile slope", named.label),
                              k - 0.5 * slope, 1e-6);
-            report.check(std::format("  {} : K = {:+.4f}", named.label, k), true);
+            report.check(std::format("  {} : K = {:+.4f}, vanishing exactly when the profile "
+                                     "is stationary at the crossing",
+                                     named.label, k),
+                         (std::abs(k) < 1e-12) == (std::abs(slope) < 1e-12));
         }
 
         report.subsection("Which condition each profile meets");

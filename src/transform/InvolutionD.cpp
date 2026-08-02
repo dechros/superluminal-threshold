@@ -3,6 +3,7 @@
 #include "core/Report.h"
 #include "core/Vector4.h"
 
+#include <algorithm>
 #include <cmath>
 #include <format>
 
@@ -63,7 +64,15 @@ namespace slm
                          (D * D).maxAbsDifference(Matrix4::identity()));
         report.checkNear("determinant = +1, parity preserved", D.determinant() - 1.0);
         report.check("group order = 2, so <D> = Z_2", D.order() == 2);
-        report.check("no V dependence, D has constant entries", true);
+        double worstDrift = 0.0;
+        for (double V : {1.5, 2.0, 10.0, 1000.0})
+        {
+            const Matrix4 factor = superboost(c, V) * lorentzBoost(c, c * c / V).inverse();
+            worstDrift = std::max(worstDrift, factor.maxAbsDifference(D));
+        }
+        report.checkNear("the factor left after removing the boost is the same matrix at "
+                         "every V, so D carries no velocity dependence",
+                         worstDrift, 1e-9);
 
         report.subsection("Light cone: s^2 = 0 -> s'^2 = 0");
         const double s3 = 1.0 / std::sqrt(3.0);

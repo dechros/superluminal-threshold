@@ -90,7 +90,6 @@ namespace slm
                          std::array<int, 3>{1, 3, 0});
         report.check("but ends at (4,0), the Euclidean signature, not (3,1)",
                      endAllSpace == (std::array<int, 3>{4, 0, 0}));
-        report.check("so it answers the cosmological question, not ours", true);
 
         report.subsection("Direct path: both entries flip together");
         report.check("starts at (1,3)",

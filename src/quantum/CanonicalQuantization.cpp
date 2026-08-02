@@ -36,9 +36,37 @@ namespace slm
         report.check("index counting is INCONSISTENT in Region II", !commutatorIndicesConsistent(true));
 
         report.subsection("(b) The Feynman propagator is undefined");
-        report.check("with three times there is no single ordering, so no contour can be chosen", true);
+        int incomparablePairs = 0;
+        int comparablePairs = 0;
+        for (int i = 0; i < 27; ++i)
+        {
+            for (int j = i + 1; j < 27; ++j)
+            {
+                const int a[3] = {i % 3, (i / 3) % 3, i / 9};
+                const int b[3] = {j % 3, (j / 3) % 3, j / 9};
+                const bool aBeforeB = a[0] <= b[0] && a[1] <= b[1] && a[2] <= b[2];
+                const bool bBeforeA = b[0] <= a[0] && b[1] <= a[1] && b[2] <= a[2];
+                if (aBeforeB || bBeforeA)
+                {
+                    ++comparablePairs;
+                }
+                else
+                {
+                    ++incomparablePairs;
+                }
+            }
+        }
+        report.check(std::format("of {} pairs of events in three times, {} cannot be ordered "
+                                 "at all, so no single time ordering and no contour exists",
+                                 comparablePairs + incomparablePairs, incomparablePairs),
+                     incomparablePairs > 0);
 
         report.subsection("(c) No stable vacuum");
-        report.check("the Hamiltonian is a vector, not a scalar, so 'lowest energy' is undefined", true);
+        report.check(std::format("the generator of time translation has {} components beyond "
+                                 "the threshold against 1 before it, so it is a vector and "
+                                 "'lowest energy' has no meaning",
+                                 conjugateMomentumCount(true)),
+                     conjugateMomentumCount(true) > conjugateMomentumCount(false) &&
+                         conjugateMomentumCount(false) == 1);
     }
 }

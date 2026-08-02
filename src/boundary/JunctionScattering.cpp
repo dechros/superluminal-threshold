@@ -75,7 +75,6 @@ namespace slm
             report.checkNear(std::format("  k_T^2 = {:g} : kappa^2 = c^2(k_T^2 + mu)", transverse),
                              kappa * kappa - c * c * (transverse + mu));
         }
-        report.check("no impedance step at the surface, both sides share kappa", true);
 
         report.subsection("Outgoing-only solution in region II");
         report.check("strong matching admits none, the system is over-determined",
