@@ -2059,7 +2059,91 @@ Yani $D$ ile yön-bağımlı formlar aynı ailenin iki üyesi değildir; farklı
 
 ## 19. İki bölge arasında sinyal
 
-[YAZILACAK] Dört taşıyıcı ayrı ayrı ele alınacak: elektromanyetik alan, yer çekimi ve kütle çekimi, kütleli skaler alan, ve korelasyon ile dolanıklık. Aşağıdaki elektromanyetik hesap bunlardan yalnızca birincisidir.
+Bir alanın geçişte hayatta kalması ile bilgi taşıması aynı şey değildir. Bu
+bölüm dört taşıyıcıyı ayrı ayrı ele alır ve birlikte ayakta durmadıklarını
+bulur.
+
+### 19.1 Kütlesiz olmak işe yaramıyor
+
+Sezgi, kütlesiz alanın engeli daha kolay aşacağı yönündedir. Hesap tersini
+söylüyor:
+
+| Ara bölge | Kütlesiz alan | Kütleli alan |
+|-----------|---------------|--------------|
+| Kleinian | $0{,}782$ | $0{,}868$ |
+| Öklid | $0{,}0707$ | $0{,}111$ |
+| Dejenere | $0$ | $0$ |
+
+Kütleli alan her durumda daha iyi geçiyor. Nedeni yapısaldır: iç bölgede normal
+dalga sayısının karesini pozitif tutan terimlerden biri kütle terimidir. Kütleyi
+sıfırlamak o desteği kaldırır ve engeli **derinleştirir**.
+
+Dolayısıyla ışık, madde için kapalı olan bir bölgeden geçebilen bir haberci
+değildir. Bölüm 11'de elektromanyetik değişmezin korunduğu gösterilmişti; bu
+onun geçtiği anlamına gelmez.
+
+### 19.2 Yer çekiminin geçmesi gerekmiyor
+
+Diğer üç taşıyıcı ara bölgeden **geçmek** zorundadır. Yer çekimi zorunda
+değildir.
+
+Bunun nedeni Bölüm 3.4'teki madde katmanıdır. Katman ara bölgenin içinde değil,
+**yüzeyinde** durur ve aynı anda iki tarafa birden dokunur. Geçmesi gereken bir
+mesafe yoktur.
+
+Sonuç doğrudan çıkıyor:
+
+> Dejenere bir katman **her alana kapalıdır**, kütlesiz de kütleli de sıfır
+> geçirgenlik görür. Buna karşılık yer çekimi bağlaşımı sıfır değildir.
+
+Yani hiçbir şeyin geçemediği bir ara bölgede bile yer çekimi bağlantısı durur.
+Bu, kapalı bir bölgenin kapatamadığı tek kanaldır.
+
+### 19.3 İki kanal birbirine ters çalışıyor
+
+Yer çekimi bağlaşımı kalınlıkla zayıflar, çünkü katman gücü kalınlığın tersiyle
+gider. Alan geçirgenliği ise Kleinian bölgede kalınlıkla kapanmaz.
+
+| Ara bölge kalınlaşınca | Yer çekimi kanalı | Alan kanalı |
+|------------------------|-------------------|-------------|
+| Kleinian | Zayıflar | Açık kalır |
+| Öklid | Zayıflar | Kapanır |
+
+İnce bir ara bölge yer çekimiyle konuşmaya, kalın bir Kleinian ara bölge ise
+alanla konuşmaya elverişlidir. İkisini aynı anda güçlü isteyen bir düzenek
+yoktur.
+
+### 19.4 Korelasyon bir sinyal değildir
+
+Dördüncü taşıyıcı korelasyondur ve diğerlerinden farklı bir statüdedir.
+Hesaplanan korelasyon, hiçbir şeyin geçmediği dejenere katmanda bile sıfır
+değildir.
+
+Bu bir çelişki değildir, çünkü korelasyon akı gerektirmez. Ama aynı nedenle
+**denetlenebilir bir sinyal taşımaz**: gönderen tarafın değiştirebileceği,
+alıcı tarafta görünen bir şey yoktur.
+
+| Taşıyıcı | Kapalı bölgede | Denetlenebilir sinyal |
+|----------|----------------|------------------------|
+| Kütlesiz alan | Geçmez | Hayır |
+| Kütleli alan | Geçmez | Hayır |
+| Yer çekimi | **Bağlanır** | Açık soru |
+| Korelasyon | **Kalır** | Hayır |
+
+### 19.5 Çekinceler
+
+Yer çekimi bağlaşımı, Bölüm 3.4'teki vekil ölçüyle, yani imza dönüşünün dik
+eğimiyle alınmıştır. Gerçek bir gravitasyonel sinyal hesabı yapılmamıştır; tam
+gerilim tensörü ve dalga denklemi çözülmemiştir. Dolayısıyla "yer çekimi
+geçebilir" ifadesi bir kanalın **varlığına** işaret eder, kapasitesine değil.
+
+Yer çekimi kanalının denetlenebilir bir sinyal taşıyıp taşımadığı da
+gösterilmemiştir. Katman kaynağa bağlıysa taşır; bu, modelin en somut açık
+sorularından biridir.
+
+Korelasyon için kullanılan ifade türetilmiş değil, geçirgenlikten kurulmuş bir
+vekildir. Sıfırdan farklı olması gerçek bir olgudur, sayısal değeri anlamlı
+değildir.
 
 $D$ Maxwell teorisine uygulandığında bütün sonuçlar tek bir matris çarpımından
 çıkar.
