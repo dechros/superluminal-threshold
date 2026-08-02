@@ -420,12 +420,15 @@ noktasına doğru izlenir (`src/horizon/RateCondition`):
 | Profil | Oranın uzaklıkla üsteli | Sonuç |
 |--------|--------------------------|-------|
 | Doğrusal | $-0{,}500$ | terim ayakta kalır |
-| Dönümde durağan | $+0{,}358$ | terim düşer |
+| Dönümde durağan | $+0{,}497$ | terim düşer |
 | Tanh basamağı | $-0{,}500$ | terim ayakta kalır |
 
-Üstel, üç ondalık mertebe boyunca kararlıdır; doğrusal profil için oran
-$10^{-2}$ uzaklıkta $6{,}27$, $10^{-6}$ uzaklıkta $6{,}27 \times 10^{2}$'dir.
-Genel profiller **başarısız olur**. Yani itiraz, geçişin biçimi değiştirilerek
+Üsteller iki ondalık mertebe boyunca kararlıdır; doğrusal profil için oran
+$10^{-2}$ uzaklıkta $6{,}27$, $10^{-3}$ uzaklıkta $19{,}8$, $10^{-4}$ uzaklıkta
+$62{,}7$'dir. Örnekleme bundan daha yakın alınamaz: sonlu fark kalıbının
+genişliği ve dönümde durağan profilin çift duyarlıkta temsil edilebilirliği
+oraya kadar izin verir, ötesi üstel değil yuvarlama gürültüsü verir. Genel
+profiller **başarısız olur**. Yani itiraz, geçişin biçimi değiştirilerek
 karşılanamaz; tıpkı enerji koşullarının karşılanamadığı gibi.
 
 **Ve iki itiraz aynı profilde buluşur.** Oran koşulunu geçen tek profil,
@@ -434,14 +437,26 @@ aynısıdır: dönüm noktasında durağan olan, yani hiç katman taşımayan pr
 Bu ailede, hem katman taşıyan hem de oran koşulunu sağlayan bir profil
 **yoktur**.
 
-> Bağımsız olarak yöneltilmiş iki itiraz tek bir yapılanmada buluşmaktadır ve o
-> yapılanma bir ince ayardır. Zayıf seçimin bu ailede genel bir temsilcisi
-> kalmamıştır.
+**Ve hayatta kalan yapılanma, zayıf seçimin ince ayarlanmış bir örneği
+değildir.** Dönümde durağan profilin dış eğriliği dönüm noktasında sıfırdır;
+yani o profil **güçlü koşulu sağlar**. Öteki iki profil zayıf koşulu sağlayıp
+güçlüyü sağlamaz, dolayısıyla aile iki seçimi gerçekten ayırmaktadır ve hayatta
+kalanın kimliği parametrelendirmenin bir kazası değildir. Sonuç bu nedenle
+yumuşatılmadan yazılmalıdır:
+
+> Oran koşulu zayıf seçimi daraltmakla kalmaz. Bu ailede, tutarlı tek limit
+> olarak **güçlü koşulu geri getirir**; yani yansıtan eşiği.
 
 Bu, modelin lehine olan bir sonuç değildir ve öyle sunulmamaktadır. Modelin
-geçirgen eşik okuması, ince ayarlanmış tek bir profile bağlıdır. Bu bağımlılığın
-kaldırılıp kaldırılamayacağı, metrik ailesinin genişletilmesini gerektirir ve
-burada yapılmamıştır.
+geçirgen eşik okuması, bu metrik ailesinde bir temsilci bulamamaktadır.
+
+**Ancak kapsamı da abartılmamalıdır.** Bu itiraz, geçişin **geometrisini**
+bağlar: metrik ara değerlemesinin dönüm noktasındaki davranışını. Bu çalışmada
+mod geçirgenliği ayrı bir eksende hesaplanmaktadır; ara bölgenin tipine bağlıdır,
+ara değerleme profiline değil. İki eksen kodda bağımsızdır. Bu bağımsızlığın
+fiziksel olarak savunulabilir olup olmadığı gösterilmemiştir ve Bölüm 26.3'te
+açık olarak kaydedilmiştir. Geçirgen okumanın daha geniş bir geçiş ailesinde
+ayakta kalıp kalmayacağı da orada açıktır.
 
 ### 3.8 Çekinceler
 
@@ -3435,6 +3450,7 @@ ikisi de kaydedilmelidir.
 | Karmaşık zaman kurgusu | Dönüş anını veren mekanizma | Kabul edilebilirlik ölçütü; benimsenmemiştir |
 | Dönen parçacık ile yaratılmış çift | Sayımda ayrıştıkları | Ayırt edecek bir gözlem; yoktur |
 | Geçiş süresinin hangi okuması fiziksel | Beş okumanın hepsinin aynı genlikten hesabı | Aralarında seçim; üçü ışığın üstünde, ikisi altında |
+| Geçirgen eşiğin oran koşulu karşısındaki durumu | Bu ailede hiçbir profilin hem katman taşıyıp hem oran koşulunu sağlamadığı | Daha geniş bir geçiş ailesinde temsilci; aranmamıştır |
 
 Beşincisi Bölüm 14.11'de eklenmiştir ve doğrudan çekirdek soruya dokunur:
 geçişin ışığın hangi tarafına düştüğü bile okumaya göre değişmektedir.
@@ -3455,9 +3471,9 @@ kaldırılamamalarıdır.
 |-------|------|
 | Geri çekilen | $4$ |
 | Karşılığı olmayan | $3$ |
-| Açık | $5$ |
+| Açık | $6$ |
 | Tartışmalı | $4$ |
-| **Toplam** | $16$ |
+| **Toplam** | $17$ |
 
 Geri çekilenlerin sayısı, açık ve tartışmalı olanların toplamını aşmamaktadır.
 Bu, bilançonun kasıtlı bir ölçütüdür: kapatılan soruların sayısı, açık

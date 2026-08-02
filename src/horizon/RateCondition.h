@@ -49,6 +49,12 @@ namespace slm
         /// Power with which the ratio behaves in the distance from the
         /// crossing, estimated from two distances. Negative means the ratio
         /// diverges, positive means it dies.
+        ///
+        /// The distances must stay well above the finite-difference stencil
+        /// used for the derivative, and for a profile that is stationary at the
+        /// crossing they must also stay far enough out that the profile's
+        /// departure from its crossing value is still representable. Sampling
+        /// closer than that returns rounding noise rather than the exponent.
         static double ratioExponent(SurfaceLayer::Profile shape, double nearDistance,
                                     double farDistance);
 

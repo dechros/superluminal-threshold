@@ -1,6 +1,6 @@
 # Literature notes
 
-Working notes taken while reading `literature/` (200 paper files). One entry per
+Working notes taken while reading `literature/` (228 paper files). One entry per
 paper that bears on the article, filed under the part of `article/article.md`
 it speaks to. Each entry records what the paper establishes, how it relates to a
 section of the article, and whether it precedes, supports, or contradicts that
@@ -1503,7 +1503,7 @@ finite-velocity information exchange reproduces entanglement correlations, and t
 warp confines massive particles in the extra time, explaining why it is not
 experienced. Proposes a Bell-type experiment. This is the only paper in the corpus
 that turns extra time into a proposed measurement, and it is therefore the closest
-model for Section 23. Note that it explains correlation by exchange, where
+model for Section 10.14. Note that it explains correlation by exchange, where
 Section 19.4 insists correlation is not a signal; the two positions are not
 compatible and the article should say which it holds.
 
@@ -2234,8 +2234,8 @@ follows trivially, since the stored norm under an evanescent profile saturates.
 regime.** The old note said "compute `U / P_in` and compare with the phase delay;
 if they agree in the barrier regime, the article has to concede the reading." It
 was computed, in `src/`, and reported in Section 14.7. In the barrier regime the
-phase delay is $1{,}4629$ and the stored-norm dwell time is $0{,}5193$ at
-$d = 2, 4, 8$, so they are not numerically equal, but their **ratio is fixed at
+phase delay is $1{,}4629$ and the stored-norm dwell time is $0{,}5195$ at $d = 2$ and
+$0{,}5193$ at $d = 4$ and $8$, so they are not numerically equal, but their **ratio is fixed at
 $2{,}817$ independent of thickness**, with the residual of order $10^{-6}$. Two
 quantities that differ by a thickness-independent normalisation are not
 independent observables. The conclusion Section 14.7 draws, and it is the right
@@ -2706,7 +2706,7 @@ What `[157]` does give is quantitative rather than categorical: the charged
 non-time-orientable region has a **definite geometry**, spherically symmetric in
 the simplest case, with the charge fixed by the topology rather than by a source.
 So if a discriminator exists it will be geometric, in the field configuration
-around the threshold, not a conservation-law one. Section 23 should look there. As
+around the threshold, not a conservation-law one. Section 10.14 should look there. As
 matters stand the degeneracy is not broken by anything in the literature, and the
 article says so.
 
@@ -2753,7 +2753,7 @@ vacuum, via a statistical orientability indicator showing an inversion pattern
 absent in the orientable case. The article's claim that the far side carries no
 future/past split is exactly a claim of time non-orientability, and this says such
 a claim has a local signature in vacuum fluctuations rather than being a global
-convention. A concrete route to the distinguishing measurement of Section 23.
+convention. A concrete route to the distinguishing measurement of Section 10.14.
 
 ### [225 for the orientation trace] The zero-curvature criterion, finding 2, is the
 entry that decides where the orientation trace comes from. It is filed in Part C
@@ -2912,7 +2912,7 @@ be checked against them.
 ## Templates for something measurable
 
 ### [49] *Inflation from covariant signature change: a geometric mechanism*, arXiv:2607.01274
-SUPPORT, and the single most useful paper for Section 23. A smooth Euclidean to
+SUPPORT, and the single most useful paper for Section 10.14. A smooth Euclidean to
 Lorentzian signature change, encoded by a scalar interpolator along a timelike
 direction, **drives a finite interval of accelerated expansion**. Signature change
 is turned into an inflationary mechanism with observable consequences rather than
@@ -2925,7 +2925,7 @@ SUPPORT. Also derives corrections to the inflationary scalar and tensor power
 spectra from the signature change. Same lesson.
 
 ### [97] Smolyaninov, Narimanov, *Metric signature transitions in optical metamaterials*, Phys. Rev. Lett. 105 (2010) 067402, arXiv:1007.1130
-SUPPORT for Section 10.12 and for Section 23. Extraordinary waves in an indefinite
+SUPPORT for Section 10.12 and for Section 10.14. Extraordinary waves in an indefinite
 metamaterial see an effective $(-,-,+,+)$ metric, and during a signature-change
 transition in that medium a Minkowski spacetime is created **together with a large
 number of particles populating it**. Peer reviewed in PRL and realisable on a
@@ -2941,7 +2941,7 @@ behaviour of extraordinary waves in hyperbolic metamaterials is **reported as
 experimentally observed** in iron- and cobalt-based ferrofluid hyperbolic
 metamaterials via gravity-like nonlinear optics: alongside the ordinary temporal
 coordinate, the spatial coordinate along the optical axis also acquires timelike
-character. The strongest item the article has for Section 23: a region with more
+character. The strongest item the article has for Section 10.14: a region with more
 than one timelike direction has been built and probed, and the knob is the
 ferrofluid. The honest qualification is that the effective metric is $(2,2)$
 rather than our $(3,1)$, and that what is observed is the two-times character of
@@ -2963,6 +2963,81 @@ two timelike coordinates, and light near a disclination follows Poinsot spirals
 and is trapped for any impact parameter. A second, optical realisation of a
 $(2,2)$ region with a measurable geodesic structure. In the analogue sense a
 $(2,2)$ region is demonstrably physically defensible.
+
+---
+
+# Appendix. The numbered items, 1 to 59, and where they now live
+
+The previous version of these notes ended each historical group with a numbered
+list of "what this changes". The numbers are cross-referenced, so they are kept.
+The substance of each item has been folded into the entry it concerns; this table
+says where, and marks the ones a later finding has overturned.
+
+| Item | Substance | Now in | Status |
+|------|-----------|--------|--------|
+| 1 | The factorisation is not new | `[2]`, `[4]`, Part A | stands |
+| 2 | Ill-posedness was proved, not just shown | `[18]`, Part B1 | stands |
+| 3 | The junction condition is the strong choice among alternatives | `[16]`, `[17]`, `[19]` | superseded: the weak condition is now adopted, items 15 to 18 |
+| 4 | Cite the double-change and continuous-bridge models | `[24]`, `[25]`, `[26]`, `[44]` | stands; the continuous bridge is now conceded, Section 26.1 |
+| 5 | The three obstructions are strengthened, not weakened | `[37]`, `[38]`, Part C4 | stands |
+| 6 | The Casimir number conflicts numerically | `[39]`, `[112]` | stands, and is now a live disagreement with both signs computed |
+| 7 | Extra times may collapse to one | `[32]`, Part C1 | refined by finding 2: flat interior, curved boundary |
+| 8 | The time-reversing loops deserve their own treatment | `[28]`, Part B3 | stands |
+| 9 | Follow the inflation template for a measurable prediction | `[49]`, Part H | stands, unattempted |
+| 10 | Particle production at a signature change is computed, and never zero | `[58]`, `[59]`, `[60]`, `[62]` | stands |
+| 11 | The junction choice must be presented as a documented choice | `[63]`, `[64]`, `[65]`, `[66]` | stands |
+| 12 | Multi-time wave functions are not several timelike dimensions | `[75]`, `[73]`, `[74]` | stands, presented as a disagreement |
+| 13 | Total reflection has independent confirmation, with a tunnelling correction | `[84]` | stands; reflection is the thick limit, Section 27.1 |
+| 14 | Signature change has been derived from a theory three times | `[80]`, `[81]`, `[82]` | stands, now five times with `[191]` and `[111]` |
+| 15 | Flux conservation no longer fixes an amplitude | `[89]`, `[87]` | stands |
+| 16 | The licence to drop the strong condition is precise | `[91]` | stands |
+| 17 | Two papers stand against the weak condition and must be answered | `[90]`, `[92]` | stands, answered only in part |
+| 18 | The distributional escape route is closed | `[93]` | partly reopened by `[115]`, `[180]`, `[181]` |
+| 19 | Crossing is direction-selected, with a count | `[96]` | stands, two-dimensional only |
+| 20 | A perturbative non-existence result must be faced | `[94]` | stands, unanswered |
+| 21 | Particle production is settled in the analogue setting | `[97]`, `[98]`, `[100]` | stands, upgraded to observation by `[138]` |
+| 22 | The purely timelike far side has its own junction conditions | `[99]` | stands |
+| 23 | The Kleinian far side is better furnished than assumed | `[101]` to `[105]` | stands |
+| 24 | The multi-time objections survive the retarget, and one is quantitative | `[107]`, `[108]`, `[109]` | stands, quantified further by `[223]` |
+| 25 | The Casimir calculation has a template | `[112]` | stands |
+| 26 | The weak condition is not free, and the price is a matter layer | `[113]` | **overturned in severity by finding 3**: the price is a layer violating the dominant energy condition, `[186]` |
+| 27 | The licence rests on a line accused of a technical error | `[114]` | answered by `[180]`, `[181]` |
+| 28 | Shells of unconstrained signature have a variational treatment | `[115]` | stands |
+| 29 | One constraint on the crossing is theory-independent | `[116]` | stands |
+| 30 | The placement mechanism is a complex lapse, not a duration | `[118]` | stands, but see item 45 |
+| 31 | The two-crossing geometry exists | `[117]`, `[24]` | stands, with the surface-layer tension unresolved |
+| 32 | The two-interface layer is solved and built, in the dual geometry | `[120]`, `[121]`, `[122]` | stands |
+| 33 | The nonlocal constraint may smuggle in the answer | `[123]`, `[124]`, `[125]` | stands, unaddressed |
+| 34 | Predictability has three positive results not yet used | `[125]`, `[126]`, `[127]` | stands; Section 12.2 now uses the mass-shell restriction instead |
+| 35 | A round trip may look like an annihilation | `[128]`, `[28]` | narrowed by finding 4 to the three opposite-sign outcomes |
+| 36 | The first quantitative dictionary entry: orientation appears as an apparent charge | `[129]` | stands |
+| 37 | A far-side body is a spinor | `[130]`, `[58]` | stands |
+| 38 | Information loss has the form of an entropy of a density matrix | `[131]` | stands; Section 17.2's sharpening is the surprise |
+| 39 | The degeneracy can be computed through, in the densitized equation | `[132]`, `[133]` | stands |
+| 40 | Smoothness and non-degeneracy are not simultaneously available | `[134]` | stands |
+| 41 | A global obstruction to a non-orientable far side plus a transverse radical | `[135]` | stands, unanswered |
+| 42 | The two-times region has been observed | `[138]` | stands |
+| 43 | Gaps: wave packets, gravitational signalling, the originating weak-condition paper | Part H, closing section 2 | amended by 58, superseded by 59 |
+| 44 | The crossing direction inside the layer is evanescent | `[84]` | stands, conditional on which axis turns, Section 14.8 |
+| 45 | The return placement is undetermined without an allowability criterion | `[139]`, `[140]` | stands; Section 26.3 records the criterion as not adopted |
+| 46 | The criterion is tight, and rejects the transition most like ours | `[141]`, `[143]` | stands, unanswered |
+| 47 | There is a derived prescription for the lapse contour, below the origin | `[142]` | stands; the two-crossing add-or-cancel computation is not done |
+| 48 | The thickness may be unreadable from the return | `[147]` | stands |
+| 49 | Three escape routes from the generalized Hartman effect | `[148]`, `[149]`, `[150]` | **weakened by finding 1**: in the barrier regime both clocks saturate with a fixed ratio, so the dwell-time route does not open and the dissipation route is not the likely rescue |
+| 50 | Thickness is recoverable only in a clock we cannot read directly | `[149]` | **overturned by finding 1** in the barrier regime: it is not recoverable from either clock there, and recoverable from both in the propagating regime |
+| 51 | The frequency mix is the other thickness readout, and points the other way | `[87]` | **promoted by finding 1** to the primary readout; Section 14.9 |
+| 52 | Thick and unbounded are one cell | `[151]` | stands |
+| 53 | Resonance is the exception where the placement has structure | `[152]`, `[121]` | stands, unexploited |
+| 54 | The return placement depends on how the packet was prepared | `[145]` | stands |
+| 55 | The packet layer has machinery: delay and distortion from one object | `[144]`, `[146]` | stands |
+| 56 | A transmitting junction carries either a matter layer or a pure double layer, and both fail something | `[154]`, `[155]`, `[116]` | **sharpened by finding 3**: the matter-layer branch fails the dominant condition at every thickness |
+| 57 | The pair-creation degeneracy is not broken | `[156]`, `[157]` | narrowed by finding 4, not broken |
+| 58 | The packet gap is narrower than stated: the barrier literature supplies the machinery | Part D | superseded by 59 |
+| 59 | The gap in its final form: no packet built from signature-change modes with a timing observable | `[172]` | stands, and is Section 26.2's second row |
+
+Item numbers beyond 59 are not used. The four findings recorded at the head of
+this file are the successors, and they are referenced as findings 1 to 4 rather
+than as items so that the two series stay distinguishable.
 
 ---
 
@@ -3073,12 +3148,12 @@ what would decide.
 | Is the multi-time initial value problem well posed | `[75]`: several timelike dimensions are typically ill posed and presumably unphysical | `[73]`, `[74]`, `[109]`, `[125]`, `[126]`, `[127]`: well posed under a nonlocal constraint, or locally, or on null hypersurfaces, or with discontinuous coefficients | Which initial surface is posed, and whether the constraint of `[123]`/`[124]` smuggles in a one-time answer |
 | Does a double crossing carry a surface layer | `[117]`: none, in the black mirror | `[113]`, `[24]`: only if the extrinsic curvature and the three-dimensional Ricci scalar both vanish | Whether the black mirror satisfies the strong condition; this is the sharpest unanswered question in Part E |
 | Can the layer be energetically acceptable | `[188]`: yes, positive-energy asymmetric shells in Palatini $f(R)$; `[175]`: yes, regular in a braneworld | `[186]`: no, the dominant condition is violated by any non-timelike shell in any theory; `[155]`: and the double-layer route violates the null condition | Our finding 3 sides with `[186]`: every layer-carrying profile violates the dominant condition, at every thickness from $0{,}5$ to $40$ |
-| What returns from the far face | Our Section 27.2: one quantum, energy $-2{,}2361$ | Our Section 27.2 and `[170]`, `[171]`: two quanta, energy $+2{,}2361$, squeezed pair statistics | A coincidence count |
-| Is a round trip distinguishable from a pair event | `[128]`, `[156]`, `[157]`: no | Nothing in the corpus | Finding 4 narrows it to the three energy-preserving outcomes; no apparatus described |
 
 ## 4. What is open on both sides
 
-Four questions are unresolved here and unresolved in the literature.
+Six questions are unresolved here and unresolved in the literature. The last two
+were previously filed as live disagreements; they are not, because in each case
+only one side has a published proponent.
 
 1. **The weight distribution across the outcomes.** Finding 4 gives six outcomes
    in two groups of three, and Section 18.9 gives a three-valued quantised
@@ -3100,14 +3175,28 @@ Four questions are unresolved here and unresolved in the literature.
    question may not have an observer-independent answer, which would be a fifth
    kind of resolution and is not currently considered.
 
+5. **What returns from the far face, one quantum or two.** Section 27.2 computes
+   both readings and they disagree in sign as well as in count: one quantum of
+   energy $-2{,}2361$ against two quanta of energy $+2{,}2361$. `[170]` and
+   `[171]` say what the second reading predicts, squeezed pair statistics with a
+   spectral peak at the degenerate frequency, and nothing in the corpus decides
+   between them. The deciding measurement is a coincidence count and no apparatus
+   for it has been described.
+6. **Whether a round trip is distinguishable from an ordinary pair event.**
+   `[128]`, `[156]` and `[157]` say no, and there is no opposing paper, so this is
+   not a disagreement between two positions but a gap. Finding 4 narrows it to the
+   three energy-preserving outcomes of Section 18.4, and Section 18.5 names the
+   signature to look for, an elastic deflection with no recoiling target. No
+   apparatus has been described.
+
 ## 5. The balance
 
 | Class | Count |
 |-------|-------|
 | Where the literature has priority | $24$ |
 | No published counterpart | $3$, plus two narrower gaps |
-| Live disagreements | $13$ |
-| Open on both sides | $4$ |
+| Live disagreements | $11$ |
+| Open on both sides | $6$ |
 
 The priority list is the longest, and that is the correct shape for a set of notes
 whose purpose is to keep the article from claiming what is already published. Of
@@ -3118,78 +3207,3 @@ the outcome table reaches six results rather than nine. Only the fourth, the
 location of the orientation trace at the boundary rather than the interior, adds
 something. A ledger in which the corrections outnumber the additions is the one to
 trust.
-
----
-
-# Appendix. The numbered items, 1 to 59, and where they now live
-
-The previous version of these notes ended each historical group with a numbered
-list of "what this changes". The numbers are cross-referenced, so they are kept.
-The substance of each item has been folded into the entry it concerns; this table
-says where, and marks the ones a later finding has overturned.
-
-| Item | Substance | Now in | Status |
-|------|-----------|--------|--------|
-| 1 | The factorisation is not new | `[2]`, `[4]`, Part A | stands |
-| 2 | Ill-posedness was proved, not just shown | `[18]`, Part B1 | stands |
-| 3 | The junction condition is the strong choice among alternatives | `[16]`, `[17]`, `[19]` | superseded: the weak condition is now adopted, items 15 to 18 |
-| 4 | Cite the double-change and continuous-bridge models | `[24]`, `[25]`, `[26]`, `[44]` | stands; the continuous bridge is now conceded, Section 26.1 |
-| 5 | The three obstructions are strengthened, not weakened | `[37]`, `[38]`, Part C4 | stands |
-| 6 | The Casimir number conflicts numerically | `[39]`, `[112]` | stands, and is now a live disagreement with both signs computed |
-| 7 | Extra times may collapse to one | `[32]`, Part C1 | refined by finding 2: flat interior, curved boundary |
-| 8 | The time-reversing loops deserve their own treatment | `[28]`, Part B3 | stands |
-| 9 | Follow the inflation template for a measurable prediction | `[49]`, Part H | stands, unattempted |
-| 10 | Particle production at a signature change is computed, and never zero | `[58]`, `[59]`, `[60]`, `[62]` | stands |
-| 11 | The junction choice must be presented as a documented choice | `[63]`, `[64]`, `[65]`, `[66]` | stands |
-| 12 | Multi-time wave functions are not several timelike dimensions | `[75]`, `[73]`, `[74]` | stands, presented as a disagreement |
-| 13 | Total reflection has independent confirmation, with a tunnelling correction | `[84]` | stands; reflection is the thick limit, Section 27.1 |
-| 14 | Signature change has been derived from a theory three times | `[80]`, `[81]`, `[82]` | stands, now five times with `[191]` and `[111]` |
-| 15 | Flux conservation no longer fixes an amplitude | `[89]`, `[87]` | stands |
-| 16 | The licence to drop the strong condition is precise | `[91]` | stands |
-| 17 | Two papers stand against the weak condition and must be answered | `[90]`, `[92]` | stands, answered only in part |
-| 18 | The distributional escape route is closed | `[93]` | partly reopened by `[115]`, `[180]`, `[181]` |
-| 19 | Crossing is direction-selected, with a count | `[96]` | stands, two-dimensional only |
-| 20 | A perturbative non-existence result must be faced | `[94]` | stands, unanswered |
-| 21 | Particle production is settled in the analogue setting | `[97]`, `[98]`, `[100]` | stands, upgraded to observation by `[138]` |
-| 22 | The purely timelike far side has its own junction conditions | `[99]` | stands |
-| 23 | The Kleinian far side is better furnished than assumed | `[101]` to `[105]` | stands |
-| 24 | The multi-time objections survive the retarget, and one is quantitative | `[107]`, `[108]`, `[109]` | stands, quantified further by `[223]` |
-| 25 | The Casimir calculation has a template | `[112]` | stands |
-| 26 | The weak condition is not free, and the price is a matter layer | `[113]` | **overturned in severity by finding 3**: the price is a layer violating the dominant energy condition, `[186]` |
-| 27 | The licence rests on a line accused of a technical error | `[114]` | answered by `[180]`, `[181]` |
-| 28 | Shells of unconstrained signature have a variational treatment | `[115]` | stands |
-| 29 | One constraint on the crossing is theory-independent | `[116]` | stands |
-| 30 | The placement mechanism is a complex lapse, not a duration | `[118]` | stands, but see item 45 |
-| 31 | The two-crossing geometry exists | `[117]`, `[24]` | stands, with the surface-layer tension unresolved |
-| 32 | The two-interface layer is solved and built, in the dual geometry | `[120]`, `[121]`, `[122]` | stands |
-| 33 | The nonlocal constraint may smuggle in the answer | `[123]`, `[124]`, `[125]` | stands, unaddressed |
-| 34 | Predictability has three positive results not yet used | `[125]`, `[126]`, `[127]` | stands; Section 12.2 now uses the mass-shell restriction instead |
-| 35 | A round trip may look like an annihilation | `[128]`, `[28]` | narrowed by finding 4 to the three opposite-sign outcomes |
-| 36 | The first quantitative dictionary entry: orientation appears as an apparent charge | `[129]` | stands |
-| 37 | A far-side body is a spinor | `[130]`, `[58]` | stands |
-| 38 | Information loss has the form of an entropy of a density matrix | `[131]` | stands; Section 17.2's sharpening is the surprise |
-| 39 | The degeneracy can be computed through, in the densitized equation | `[132]`, `[133]` | stands |
-| 40 | Smoothness and non-degeneracy are not simultaneously available | `[134]` | stands |
-| 41 | A global obstruction to a non-orientable far side plus a transverse radical | `[135]` | stands, unanswered |
-| 42 | The two-times region has been observed | `[138]` | stands |
-| 43 | Gaps: wave packets, gravitational signalling, the originating weak-condition paper | Part H, closing section 2 | amended by 58, superseded by 59 |
-| 44 | The crossing direction inside the layer is evanescent | `[84]` | stands, conditional on which axis turns, Section 14.8 |
-| 45 | The return placement is undetermined without an allowability criterion | `[139]`, `[140]` | stands; Section 26.3 records the criterion as not adopted |
-| 46 | The criterion is tight, and rejects the transition most like ours | `[141]`, `[143]` | stands, unanswered |
-| 47 | There is a derived prescription for the lapse contour, below the origin | `[142]` | stands; the two-crossing add-or-cancel computation is not done |
-| 48 | The thickness may be unreadable from the return | `[147]` | stands |
-| 49 | Three escape routes from the generalized Hartman effect | `[148]`, `[149]`, `[150]` | **weakened by finding 1**: in the barrier regime both clocks saturate with a fixed ratio, so the dwell-time route does not open and the dissipation route is not the likely rescue |
-| 50 | Thickness is recoverable only in a clock we cannot read directly | `[149]` | **overturned by finding 1** in the barrier regime: it is not recoverable from either clock there, and recoverable from both in the propagating regime |
-| 51 | The frequency mix is the other thickness readout, and points the other way | `[87]` | **promoted by finding 1** to the primary readout; Section 14.9 |
-| 52 | Thick and unbounded are one cell | `[151]` | stands |
-| 53 | Resonance is the exception where the placement has structure | `[152]`, `[121]` | stands, unexploited |
-| 54 | The return placement depends on how the packet was prepared | `[145]` | stands |
-| 55 | The packet layer has machinery: delay and distortion from one object | `[144]`, `[146]` | stands |
-| 56 | A transmitting junction carries either a matter layer or a pure double layer, and both fail something | `[154]`, `[155]`, `[116]` | **sharpened by finding 3**: the matter-layer branch fails the dominant condition at every thickness |
-| 57 | The pair-creation degeneracy is not broken | `[156]`, `[157]` | narrowed by finding 4, not broken |
-| 58 | The packet gap is narrower than stated: the barrier literature supplies the machinery | Part D | superseded by 59 |
-| 59 | The gap in its final form: no packet built from signature-change modes with a timing observable | `[172]` | stands, and is Section 26.2's second row |
-
-Item numbers beyond 59 are not used. The four findings recorded at the head of
-this file are the successors, and they are referenced as findings 1 to 4 rather
-than as items so that the two series stay distinguishable.

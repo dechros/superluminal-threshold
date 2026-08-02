@@ -5,6 +5,7 @@
 #include "critique/Reconciliation.h"
 #include "horizon/DegeneratePath.h"
 #include "horizon/LayerEnergyConditions.h"
+#include "horizon/RateCondition.h"
 #include "horizon/SurfaceLayer.h"
 #include "intermediate/DwellTime.h"
 #include "intermediate/IntermediateRegion.h"
@@ -134,6 +135,11 @@ namespace slm
                                                           kC, kMu, kTransverse, 16.0);
     }
 
+    bool OpenQuestions::transmittingThresholdSurvivesRate()
+    {
+        return RateCondition::anyProfileKeepsLayerAndRate();
+    }
+
     int OpenQuestions::openCount()
     {
         int count = 0;
@@ -142,6 +148,7 @@ namespace slm
         count += allowabilityCriterionAdopted() ? 0 : 1;
         count += pairDegeneracyBroken() ? 0 : 1;
         count += physicalReadingSettled() ? 0 : 1;
+        count += transmittingThresholdSurvivesRate() ? 0 : 1;
         return count;
     }
 
@@ -209,8 +216,12 @@ namespace slm
                                      IntermediateRegion::Kind::Euclidean, 2.8, kC, kMu, kTransverse,
                                      16.0)),
                      !OpenQuestions::physicalReadingSettled());
+        report.check("no profile in this family both carries a layer and satisfies "
+                     "the rate condition, so whether a wider family of transitions "
+                     "would carry the transmitting reading is not known",
+                     !OpenQuestions::transmittingThresholdSurvivesRate());
         report.check(std::format("  {} questions open", OpenQuestions::openCount()),
-                     OpenQuestions::openCount() == 5);
+                     OpenQuestions::openCount() == 6);
 
         report.subsection("Disagreements an experiment could close");
         report.check(std::format("  {} disagreements give different numbers for one "

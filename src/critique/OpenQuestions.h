@@ -97,7 +97,13 @@ namespace slm
         /// agree on which side of the speed of light the crossing falls.
         static bool physicalReadingSettled();
 
-        /// Number of questions still open, counted from the five above.
+        /// Whether the transmitting threshold has been shown to survive the
+        /// rate condition in some wider family of transitions, which it has
+        /// not: in the family built here the only profile that passes is the
+        /// one satisfying the strong condition.
+        static bool transmittingThresholdSurvivesRate();
+
+        /// Number of questions still open, counted from the six above.
         static int openCount();
 
         /// Number of disagreements where two positions give different numbers

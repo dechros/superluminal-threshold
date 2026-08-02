@@ -49,7 +49,7 @@ namespace slm
 
     bool RateCondition::satisfiesRateCondition(SurfaceLayer::Profile shape)
     {
-        return ratioAtDistance(shape, 1e-6) < ratioAtDistance(shape, 1e-3);
+        return ratioAtDistance(shape, 1e-4) < ratioAtDistance(shape, 1e-2);
     }
 
     bool RateCondition::anyProfileKeepsLayerAndRate()
@@ -82,7 +82,7 @@ namespace slm
         report.subsection("The two rates, followed towards the crossing");
         for (const Named &named : profiles)
         {
-            for (double distance : {1e-2, 1e-4, 1e-6})
+            for (double distance : {1e-2, 1e-3, 1e-4})
             {
                 const double xi = SurfaceLayer::crossing(named.shape) - distance;
                 report.check(std::format("  {:22} at {:.0e} : lapse {:.4e}, normal derivative "
@@ -101,15 +101,15 @@ namespace slm
             report.check(std::format("  {:22} : the ratio goes as the distance to the power "
                                      "{:+.3f}",
                                      named.label,
-                                     RateCondition::ratioExponent(named.shape, 1e-6, 1e-3)),
-                         std::isfinite(RateCondition::ratioExponent(named.shape, 1e-6, 1e-3)));
+                                     RateCondition::ratioExponent(named.shape, 1e-4, 1e-2)),
+                         std::isfinite(RateCondition::ratioExponent(named.shape, 1e-4, 1e-2)));
         }
         report.check("a negative power means the term survives the limit and the "
                      "equations keep a piece that cannot be set to zero by hand",
-                     RateCondition::ratioExponent(Profile::Linear, 1e-6, 1e-3) < 0.0);
+                     RateCondition::ratioExponent(Profile::Linear, 1e-4, 1e-2) < 0.0);
         report.check("a positive power means the numerator dies faster than the "
                      "denominator and the term drops out as required",
-                     RateCondition::ratioExponent(Profile::FlatAtCrossing, 1e-6, 1e-3) > 0.0);
+                     RateCondition::ratioExponent(Profile::FlatAtCrossing, 1e-4, 1e-2) > 0.0);
 
         report.subsection("Which profiles pass");
         for (const Named &named : profiles)
@@ -138,6 +138,25 @@ namespace slm
         report.check("two objections raised independently therefore converge on one "
                      "configuration, and that configuration is a fine tuning",
                      !LayerEnergyConditions::anyProfileEscapesDominant(1.0) &&
+                         !RateCondition::anyProfileKeepsLayerAndRate());
+
+        report.subsection("What that surviving configuration actually is");
+        report.check("the surviving profile is the one whose extrinsic curvature "
+                     "vanishes at the crossing, so it satisfies the strong condition "
+                     "rather than being a tuned instance of the weak one",
+                     SurfaceLayer::satisfiesStrongCondition(Profile::FlatAtCrossing));
+        report.check("the two failing profiles meet the weak condition and not the "
+                     "strong one, so the family does separate the two choices and the "
+                     "survivor is not an accident of how it was parametrised",
+                     SurfaceLayer::satisfiesWeakCondition(Profile::Linear) &&
+                         !SurfaceLayer::satisfiesStrongCondition(Profile::Linear) &&
+                         !SurfaceLayer::satisfiesStrongCondition(Profile::Tanh));
+        report.check("so the rate condition does not merely narrow the weak choice: "
+                     "in this family it recovers the strong condition as the only "
+                     "consistent limit, which is the result stated rather than "
+                     "softened",
+                     RateCondition::satisfiesRateCondition(Profile::FlatAtCrossing) &&
+                         SurfaceLayer::satisfiesStrongCondition(Profile::FlatAtCrossing) &&
                          !RateCondition::anyProfileKeepsLayerAndRate());
     }
 
