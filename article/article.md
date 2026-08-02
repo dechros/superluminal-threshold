@@ -401,7 +401,49 @@ o da genel bir yapılanma değil, ince ayarlanmış bir özel durumdur.
 Bu, modelin geçirgen eşik okumasının en ağır bedelidir ve burada saklanmadan
 kaydedilmektedir.
 
-### 3.7 Çekinceler
+### 3.7 Oran koşulu: itiraz bir tercih değil, bir üstel
+
+Zayıf seçime karşı yöneltilmiş en güçlü itiraz felsefi değildir ve burada
+felsefeyle değil, hesapla karşılanmaktadır. Alan denklemleri yüzey boyunca
+yazıldığında, **normal türev çarpı delta bölü lapse** biçiminde bir terim
+doğar. Lapse dönüm noktasında sıfıra gittiği için bu terim sıfır bölü sıfır
+biçimindedir ve **beyanla sıfıra eşitlenemez**: payın paydadan daha hızlı
+sıfırlandığı gösterilmek zorundadır. Gösterilirse terim düşer ve zayıf seçim
+ayakta kalır; gösterilemezse terim kalır ve denklemler ancak normal türev
+tümüyle sıfırlanarak, yani güçlü koşul benimsenerek tutarlı olur.
+
+Böylece anlaşmazlık tek bir hesaplanabilir üstele iner. Burada kullanılan metrik
+ailesinde lapse, işaret değiştiren metrik bileşeninin karekökü gibi gider;
+normal türev ise katman için zaten hesaplanmış dış eğriliktir. Oranları, dönüm
+noktasına doğru izlenir (`src/horizon/RateCondition`):
+
+| Profil | Oranın uzaklıkla üsteli | Sonuç |
+|--------|--------------------------|-------|
+| Doğrusal | $-0{,}500$ | terim ayakta kalır |
+| Dönümde durağan | $+0{,}358$ | terim düşer |
+| Tanh basamağı | $-0{,}500$ | terim ayakta kalır |
+
+Üstel, üç ondalık mertebe boyunca kararlıdır; doğrusal profil için oran
+$10^{-2}$ uzaklıkta $6{,}27$, $10^{-6}$ uzaklıkta $6{,}27 \times 10^{2}$'dir.
+Genel profiller **başarısız olur**. Yani itiraz, geçişin biçimi değiştirilerek
+karşılanamaz; tıpkı enerji koşullarının karşılanamadığı gibi.
+
+**Ve iki itiraz aynı profilde buluşur.** Oran koşulunu geçen tek profil,
+Bölüm 3.6'da enerji koşullarının tek kaçış yolu olarak bıraktığı profilin
+aynısıdır: dönüm noktasında durağan olan, yani hiç katman taşımayan profil.
+Bu ailede, hem katman taşıyan hem de oran koşulunu sağlayan bir profil
+**yoktur**.
+
+> Bağımsız olarak yöneltilmiş iki itiraz tek bir yapılanmada buluşmaktadır ve o
+> yapılanma bir ince ayardır. Zayıf seçimin bu ailede genel bir temsilcisi
+> kalmamıştır.
+
+Bu, modelin lehine olan bir sonuç değildir ve öyle sunulmamaktadır. Modelin
+geçirgen eşik okuması, ince ayarlanmış tek bir profile bağlıdır. Bu bağımlılığın
+kaldırılıp kaldırılamayacağı, metrik ailesinin genişletilmesini gerektirir ve
+burada yapılmamıştır.
+
+### 3.8 Çekinceler
 
 Üç varsayım açıkça kaydedilmelidir.
 
@@ -2988,6 +3030,7 @@ ne bölüm numarası ne kaynak numarası bulunur.
 | Eşik yüzeyi ve eklem koşullarının saçılması | `src/boundary/ThresholdSurface`, `src/boundary/JunctionScattering` |
 | Eklem koşulunun yerçekimi tarafı, dış eğrilik | `src/horizon/SurfaceLayer` |
 | Katmanın enerji koşulları karşısındaki durumu | `src/horizon/LayerEnergyConditions` |
+| Normal türevin lapse'e göre sönme oranı | `src/horizon/RateCondition` |
 | Nedensel geçişin akı sorusundan ayrılması | `src/boundary/CausalCrossing` |
 | Sonlu kalınlıkta dilimden tünelleme | `src/boundary/SlabTunnelling` |
 | İmzalar arası yolun dejenerelik derecesi | `src/horizon/DegeneratePath` |
