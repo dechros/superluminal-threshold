@@ -131,16 +131,34 @@ Kapanma sorunu $D$'den değil, $B$ katmanından kaynaklanır. $D \cdot B$'yi tek
 dönüşüm olarak ele almak kapanmayı bozar; ayrıştırıldığında iki parça da düzgündür:
 $D$ bir $\mathbb{Z}_2$ ayrık simetrisi, $B$ ise $SO(1,3)$ içindedir.
 
-Bu sonucun daha geniş bir hâli [4]'te bağımsız olarak kurulmuştur: orada
-genişletme, kutupsal ve azimutal açılara bağlı bir Klein dörtlü grubu
-gerçeklemesiyle yapılır, genişletilmiş Poincaré grubunun üniter indirgenemez
-temsilleri sınıflandırılır ve Casimir öz-değer probleminden dalga denklemleri
-türetilir. Aşağıdaki yapı bunun yön-bağımsız ve dar bir kesitidir; ikisi
-arasındaki ilişki Bölüm 12.1'de hesaplanmıştır.
+Buradaki yapı $\langle D \rangle \ltimes SO(1,3)$ biçiminde bir yarı-doğrudan
+çarpımdır. Kapanmanın bozulması, $D B D^{-1}$ konjugasyonunun boost tipini
+korumamasından çıkar; yön-bağımlı genleşmeler bu konjugasyonun ürünüdür.
 
-Yapı, $\langle D \rangle \ltimes SO(1,3)$ biçiminde bir yarı-doğrudan çarpımdır.
-Kapanmanın bozulması, $D B D^{-1}$ konjugasyonunun boost tipini korumamasından
-çıkar; yön-bağımlı genleşmeler bu konjugasyonun ürünüdür.
+### 3.1 Daha geniş kuruluşla karşılaştırma
+
+Aynı problem [4]'te bağımsız ve çok daha geniş biçimde çözülmüştür. İki kuruluş
+yan yana konursa:
+
+| | Bu bölüm | [4] |
+|---|---|---|
+| Ayrık parça | Tek involüsyon $D$, sabit | $\Lambda_{\inf}(\theta,\varphi)$, yöne bağlı aile |
+| Üretilen grup | $\mathbb{Z}_2$ | Klein dörtlü grubu $\mathbb{Z}_2 \times \mathbb{Z}_2$ |
+| Genişletilmiş grup | $\mathbb{Z}_2 \ltimes SO(1,3)$ | $\mathcal{L}_{\text{ext}}$, birim bileşeni $O(3,1)$ ile aynı |
+| Yön kovaryansı | Yok, $z$ ekseni sabit | Var, her yön eşdeğer bir genişletme verir |
+| Determinant | $+1$ | $-1$ |
+| Değişen koordinat | Dört | İki, $t$ ve $n$ |
+| Temsil kuramı | Yok | Genişletilmiş Poincaré grubunun bütün üniter indirgenemez temsilleri sınıflandırılmış |
+| Dalga denklemleri | Yok | Casimir öz-değer probleminden türetilmiş, bilinen bütün denklemler artı yeni takyonik sınıflar |
+
+Kapsam bakımından [4] bu bölümü içerir ve aşar. İki kuruluş **aynı grup
+değildir**: $D$, [4]'ün genişletilmiş grubunda bulunmaz, çünkü içerdiği
+$x \leftrightarrow y$ takasının üç boyuttaki determinantı $-1$'dir ve dolayısıyla
+$SO(3)$ elemanı değildir. Bu, Bölüm 12.1'de hesaplanmıştır.
+
+Bu bölümün taşıdığı tek fark, kapanma bozulmasının hangi katmandan geldiğinin
+ayrıştırılmasıdır: $D$ kapalıdır, $B$ değildir. [4]'te sorun bu biçimde
+ortaya konmaz, çünkü orada zaten kapalı bir grup inşa edilmiştir.
 
 ---
 
@@ -279,12 +297,15 @@ Hadamard anlamında kötü konumlanmıştır.
 
 Bu sonuç bir yorum değil, denklem tipinin doğrudan sonucudur.
 
-Aynı sonuç [7]'de operatör teorisiyle **ispat edilmiştir**: iki boyutlu bir
-imza-değişen uzay-zamanda sınır koşulları Schrödinger Hamiltonyeninin öz-eşlenik
-genişlemelerinden çıkarılır, Klein-Gordon başlangıç değer problemi kötü
-konumlanmış bulunur, ve değişim yüzeyinden uzakta düzgün ve tıkız destekli
-başlangıç verisi için çözümün $L^2$ normunun **sonlu zamanda ıraksadığı**
-gösterilir. Yukarıdaki mod hesabı bu teoremin bir gösterimidir, ispatı değildir.
+**Öncelik ve yöntem.** Bu sonucun kesin hâli [7]'ye aittir ve yöntemi
+buradakinden farklıdır. Orada iki boyutlu bir imza-değişen uzay-zamanda sınır
+koşulları Schrödinger Hamiltonyeninin öz-eşlenik genişlemelerinden çıkarılır,
+alanın sürekli olması ve koşulların eklem koşulu biçiminde olması talebi tek bir
+küme seçer, Klein-Gordon başlangıç değer problemi bu kümede kötü konumlanmış
+bulunur, ve değişim yüzeyinden uzakta düzgün ve tıkız destekli başlangıç verisi
+için çözümün $L^2$ normunun **sonlu zamanda ıraksadığı** ispatlanır. Yukarıdaki
+mod hesabı aynı sonuca çok daha basit bir yoldan varır ve bir ispat değil,
+bağımsız bir doğrulamadır.
 
 ---
 
@@ -656,16 +677,15 @@ $$\partial_\mu j^\mu = 0 \;\longmapsto\; \partial'_\mu j'^\mu = 0 \quad(\text{ot
 Korunumun doğrusallıkla taşındığı somut olarak da gösterilir: iki akımın toplamının
 görüntüsü, görüntülerinin toplamına eşittir.
 
-**Değerlendirme.** Model elektromanyetizmayı bozmadan taşır. Bu, modelin en güçlü
-doğrulamasıdır.
-
-Aynı sonuca farklı bir yoldan [27] varmıştır: orada Maxwell denklemleri ve tek
-foton dalga denklemi, sıradan denklemlerin superluminal dönüşümüyle, kompleks
-nicelik kullanılmadan elde edilir. [27] burada durmayıp dönüşmüş denklemleri
-**çözer** ve sonsuz ışık konisi ile ona dik iki yapraklı hiperboloit arasında
-kalan bölgede X biçimli çözümler bulur. Buradaki katkı çözümler değil, değişmezin
-tam olarak korunduğunun ve yalnızca kaynak teriminin işaret çevirdiğinin tek bir
-matris çarpımından çıkarılmasıdır.
+**Öncelik.** Superluminal uzay-zamanda elektromanyetizma [27]'de kurulmuştur.
+Orada Maxwell denklemleri ve tek foton dalga denklemi, sıradan denklemlerin
+superluminal dönüşümüyle ve kompleks nicelik kullanılmadan elde edilir; dahası
+dönüşmüş denklemler **çözülür** ve sonsuz ışık konisi ile ona dik iki yapraklı
+hiperboloit arasında kalan bölgede X biçimli çözümler bulunur. Bu bölümdeki
+sonuçlar o çalışmanın kapsamı içindedir ve burada bağımsız olarak, tek bir
+kongruans işleminden yeniden üretilmiştir. Özgünlük iddiası taşımaz; korunmasının
+nedeni, modelin elektromanyetizmayı bozmadığının kendi araçlarıyla
+gösterilebilmesidir.
 
 ---
 
@@ -930,13 +950,45 @@ Lorentz bölgesine geri dönerken hangi eksenin döndürüldüğünde ortaya ç�
 > $D$, imzayı değiştiren bir dönüşüm değildir; ortak Öklid teorisinden hangi eksende
 > çıkılacağını seçen operatördür.
 
-Burada Wick dönüşü elle yapılan bir seçimdir. Buna karşılık [17] ve [18], imza
-değişimini bir teoriden **türetir**: döngü kuantum kozmolojisinde etkin kısıt
-cebiri, düşük eğrilikte Lorentzian olan metrik imzasını yüksek eğrilikte Öklid
-yapacak biçimde değişir, ve bu no-boundary önerisiyle birleşerek Lorentzian yol
-integralinde bulunan kararsızlıkları giderir. Aradaki fark yöntemseldir: orada
-imza değişimi dinamiktir ve yoğunluğa bağlıdır, burada ise ani ve hızdan
-bağımsızdır.
+Burada Wick dönüşü elle yapılan bir seçimdir.
+
+### 15.6 Türetilmiş bir geçişle karşılaştırma
+
+Bu modelde geçiş **varsayılır**: ışık hızında olur, anidir, hızdan bağımsızdır.
+[17] ve [18]'de ise geçiş **türetilir**. Holonomi düzeltmeleri etkin kısıt
+cebirini bir çarpanla deforme eder,
+
+$$\Omega(\rho) = 1 - \frac{2\rho}{\rho_c}$$
+
+ve imza bu çarpanın işaretini izler: $\Omega > 0$ iken Lorentzian, $\Omega < 0$
+iken Öklid. Dolayısıyla geçiş, teorinin kendi dinamiğinden çıkan belirli bir
+yerde, $\rho = \rho_c/2$ yoğunluğunda gerçekleşir.
+
+Hesaplanan sonuçlar:
+
+- $\Omega$, tam olarak kritik yoğunluğun yarısında sıfırlanır.
+- $\rho < \rho_c/2$ için Lorentzian, $\rho > \rho_c/2$ için Öklid.
+- $\Omega$ yoğunlukta doğrusaldır ve eğimi her yerde sonludur, yani imza
+  **sürekli** döner, sıçramaz.
+
+| | Bu model | [17], [18] |
+|---|---|---|
+| Geçişin statüsü | Varsayılır | Dinamikten türetilir |
+| Konumu belirleyen | Hız, $v = c$ | Yoğunluk, $\rho = \rho_c/2$ |
+| Geçişin biçimi | Ani, ayrık | Sürekli, deformasyon çarpanıyla |
+| Dönen koordinat sayısı | Dört | Bir |
+| Varılan imza | $(3,1)$, üç zaman | $(4,0)$, Öklid |
+| Bağlı olduğu teori | Yok | Döngü kuantum kozmolojisi |
+
+Yöntem olarak türetilmiş olan üstündür ve burada tercih edilen kuruluş değildir.
+Ancak son iki satır belirleyicidir: **iki geçiş aynı olay değildir.** Orada tek
+bir koordinat döner ve Öklid imzasına varılır; burada dört koordinat döner ve üç
+zamanlı bir imzaya varılır. Dolayısıyla [17] ve [18], bu modelin geçişi için bir
+türetim **sağlamaz**; sağladığı şey, bir imza geçişinin varsayılmak yerine
+türetilebileceğinin örneğidir.
+
+Bu modelin geçişinin de benzer biçimde türetilebilmesi açık bir sorudur ve
+Bölüm 21'de öyle listelenmiştir.
 
 İki bölge ayrı yapılar değil, tek bir yapının iki dalıdır.
 
@@ -1120,6 +1172,11 @@ potansiyeli taşıyan argümanlardır. Her madde önce itirazı olabildiğince g
 hâliyle aktarır, ardından bu çalışmanın cevabını verir. Cevabın bulunmadığı
 durumlarda bu açıkça yazılmıştır.
 
+Sayısal ya da yapısal bir iddia taşıyan maddeler, tartışılmakla kalmayıp
+**hesaplanmıştır**; ilgili doğrulamalar 19.1, 19.2 ve 19.3 alt bölümlerinde
+verilmiştir. Yalnızca kavramsal olan maddeler, örneğin işlemsel içeriğin
+bulunmaması, bir hesaba dönüştürülemediği için metinde bırakılmıştır.
+
 **1. "Superboost sıradan bir Lorentz boostudur, çevirme ise yalnızca yeniden
 etiketlemedir."** [3]. Cebirsel çekirdek kabul edilmektedir: Bölüm 17'de
 gösterildiği gibi $D$ tek bir metriğin imzasını çevirmez, iki metrik arasında bir
@@ -1249,8 +1306,9 @@ tercihin gerekçesi (Bölüm 9.1), $(2,2)$ ara bölgesinin fiziksel olarak
 savunulabilir olup olmadığı (Bölüm 13.5), üç zamanın olasılık korunumu altında
 tek zamana çökmesi itirazı
 (Bölüm 7.3), imza değiştiren arka planda parçacık üretimi (Bölüm 16.2), eşik
-duvarlarının kuantum kararlılığı (Bölüm 9.1), yerçekiminin hiç ele alınmamış
-olması, ve ölçülebilir bir öngörünün bulunmaması.
+duvarlarının kuantum kararlılığı (Bölüm 9.1), bu modelin geçişinin de bir teoriden türetilip
+türetilemeyeceği (Bölüm 15.6), yerçekiminin ancak eklem koşulu düzeyinde ele
+alınmış olması (Bölüm 9.2), ve ölçülebilir bir öngörünün bulunmaması.
 
 ---
 

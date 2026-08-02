@@ -3,6 +3,7 @@
 #include "core/Report.h"
 #include "core/Section.h"
 #include "critique/DirectionDependentD.h"
+#include "critique/ObjectionTests.h"
 #include "critique/SylvesterObstruction.h"
 #include "dynamics/Dispersion.h"
 #include "dynamics/EnergyMomentum.h"
@@ -14,6 +15,7 @@
 #include "horizon/SurfaceLayer.h"
 #include "literature/LiteraturePosition.h"
 #include "quantum/CanonicalQuantization.h"
+#include "quantum/DerivedTransition.h"
 #include "quantum/PathIntegral.h"
 #include "quantum/VacuumCasimir.h"
 #include "rest/SuperluminalRest.h"
@@ -48,9 +50,11 @@ namespace
         sections.push_back(std::make_unique<slm::DegeneratePathSection>());
         sections.push_back(std::make_unique<slm::CanonicalQuantization>());
         sections.push_back(std::make_unique<slm::PathIntegral>());
+        sections.push_back(std::make_unique<slm::DerivedTransitionSection>());
         sections.push_back(std::make_unique<slm::VacuumCasimir>());
         sections.push_back(std::make_unique<slm::SylvesterObstruction>());
         sections.push_back(std::make_unique<slm::DirectionDependentD>());
+        sections.push_back(std::make_unique<slm::ObjectionTestsSection>());
         return sections;
     }
 
