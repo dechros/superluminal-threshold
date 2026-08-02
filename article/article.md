@@ -1,4 +1,4 @@
-# Superluminal geçişte imza değişimi: ayrık involüsyon modeli
+# Superluminal eşik: imza değişen bir arayüzün eklem koşulları ve sonuçları
 
 > Bu metin, modelin kendi sonuçlarını literatürdeki konumuyla birlikte verir.
 > Köşeli parantez içindeki numaralar sondaki kaynakçaya gönderir. Bir sonucun
@@ -23,6 +23,15 @@ olduğunun gösterilmesi, ve eşik yüzeyinin akı geçirmemesi.
 metriğin imzasını doğrudan çevirmesini yasaklar. Dolayısıyla $D$, tek bir metriğin
 imzasını çeviren bir operatör değil, iki farklı metrik arasında bir eşlemedir. Bu
 sınır Bölüm 17'de açıkça ele alınıyor.
+
+**Bu çalışmanın kapsamı.** Burada kurulan şey, iki bölgenin her birinin tam bir
+teorisi değil, aralarındaki **arayüzün** teorisidir. Metrikler sabit arka plan
+olarak alınır, Einstein denklemleri çözülmez, ve geçişin neden $v = c$ değerinde
+gerçekleştiği türetilmez. Buna karşılık arayüzün kendisi hakkında söylenebilecek
+şeyler sonuna kadar götürülür: ne geçer, ne geçmez, hangi koşulla, hangi
+kalınlıkta ne olur, ve bunların hangisi seçime hangisi zorunluluğa bağlıdır. Bu
+yöntem, genel görelilikte eklem koşulları literatürünün yöntemidir ve modelin
+sağlam çekirdeği oradadır (Bölüm 17).
 
 Öncelik konusunda baştan açık olmak gerekir. Superluminal çerçevelerin 1+3
 boyuttaki kuruluşu [2]'ye, çarpanlamanın kendisi yine [2]'ye aittir; imza

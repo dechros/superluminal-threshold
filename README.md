@@ -1,16 +1,28 @@
-# superluminal-signature-change
+# superluminal-threshold
 
-C++26 console application that runs a suite of symbolic-style verifications for a discrete-involution model of signature change. Each section of the model is a class implementing a common `Section` interface; `main` runs them in order and prints a pass/fail line per claim, exiting non-zero if any claim fails. There are 191 verifications in total.
+A model of the interface between two metric signatures, and a C++26 program that verifies every claim it makes.
 
-Originally a pile of `sympy` scripts. The port replaces symbolic algebra with a small fixed-size linear algebra layer - the matrices involved are integer-valued, so involution, determinant and permutation tests are exact in `double`.
+Beyond the speed of light the metric of a superluminal frame turns from one time and three spaces into three times and one space. This project does not try to build a full theory of either region. It builds the theory of the surface between them: what crosses it, what does not, under which junction condition, at which thickness, and which of those answers are forced rather than chosen. That is the method of the junction-condition literature in general relativity, and it is where the results here are strongest.
 
-The derivations live in `article/article.md`, which is the written statement of the model; the code is its verification. The two are kept in step: every claim the article makes is checked here, and every check here appears there. Headers carry Doxygen documentation of the software only.
+The written statement of the model is `article/article.md`, in Turkish. The code is its proof. The two are kept in step in both directions: every claim the article makes is checked here, and every check here appears there. `article/article.md` is the only Turkish file; everything else, including the console output, is English.
 
-`article/article.md` is written in Turkish and is the only Turkish file in the repository. Everything else, including console output, is English.
+## What it establishes
+
+- Total reflection at the threshold is the only solution of flux conservation, not an added assumption, and it holds for every self-adjoint boundary condition rather than just the one chosen.
+- That result covers an unbounded far side. A slab of finite thickness transmits an exponentially suppressed but non-zero amount, so total reflection is the thick-slab limit.
+- A future and past split exists exactly when a region has one time direction, which is why the arrow disappears beyond the threshold rather than reversing.
+- Degeneracy on any continuous path between the two signatures is unavoidable, but a rank-two degeneracy is not: a staged path through signature (2,2) needs only rank one at every point.
+- Geometry permits the crossing that the field forbids, since the two metrics differ by a sum of squares and every timelike direction survives.
+
+The article also records what it does not establish. Gravity enters only at the level of the junction condition, the location of the transition is posited rather than derived, and the one discriminating prediction needs an apparatus nobody can build.
+
+## Literature
+
+`literature/` holds 199 papers as markdown, one file each, with front matter and full text taken from the arXiv LaTeX source so that equations survive. `literature/literature-notes.md` records what each one establishes and whether it precedes, supports, or contradicts a section of the article. Priority is stated in the article wherever a result was obtained earlier by someone else.
 
 ## Adding a section
 
-Implement `Section` - `number()`, `title()`, `run(Report&)` - and add one line to `buildSections()` in `main.cpp`. Nothing else is wired up; there is no registration macro and no global state.
+Implement `Section` - `number()`, `title()`, `run(Report&)` - and add one line to `buildSections()` in `main.cpp`. Nothing else is wired up; there is no registration macro and no global state. Verifications belong in C++ and nowhere else.
 
 ## Platform
 
@@ -44,8 +56,4 @@ Sources compile to separate objects under `build/obj`, so a full build takes abo
 ./build/superluminal
 ```
 
-Output is one block per section, each listing its verifications as pass or fail lines. The final block is a summary reporting how many passed and how many failed. Exit code is `0` only when every verification passes.
-
-## What the model is
-
-Dragan et al. (Class. Quantum Grav. 40 (2023) 025013) extend special relativity to superluminal observers in 1+3 spacetime, where the metric becomes 3+1. This project factors their superboost into `M(V) = D * B(c^2/V)`, with `D` a constant parameter-free involution carrying the signature change and `B` an ordinary subluminal Lorentz boost carrying the velocity, then works out the consequences: group closure, the energy/momentum swap, an ill-posed Cauchy problem on the far side, a reflecting threshold surface, and a closed-form spherical solution. The critique sections implement the counter-arguments too, including Sylvester's law of inertia, which rules out a real transformation flipping the signature outright.
+Output is one block per section, each listing its verifications as pass or fail lines. The final block reports how many passed and how many failed. Exit code is `0` only when every verification passes.
