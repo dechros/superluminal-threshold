@@ -2299,5 +2299,137 @@ literature, and the article should say so.
     operational clock for the asymmetric case ([146]), and the whole thickness
     dispute ([147] to [153]). The packet layer of the model is no longer without
     literature; it is without literature **for the signature-changing case**, and
-    the transfer of these results to it has to be argued rather than assumed. This
-    search is now closed.
+    the transfer of these results to it has to be argued rather than assumed. This search is now closed. **Superseded by item 59.**
+
+59. **The packet-plus-timing gap is now stated in its narrow form.** The sweep
+    of 2026-08-02 reopened item 58 and closed it more precisely. Group 12 below
+    adds the signal-velocity, reshaping, arrival-time and Bogoliubov layers that
+    the folder lacked entirely, and [172] restates the signature-change gap as
+    what it actually is: not that nobody has solved the field equation across the
+    surface, but that nobody has built a packet from those modes and read a time
+    off the transmission phase.
+
+---
+
+## Group 12: signal velocity, reshaping, arrival-time observables, Bogoliubov
+
+Added by the gap sweep of 2026-08-02. Four gaps were targeted: wave packets
+crossing a signature change; the Hartman advance versus signal velocity;
+reshaping versus genuine advance; arrival-time observables where no proper time
+exists; and pair creation at a time-dependent background.
+
+### [158] Winful, *The meaning of group delay in barrier tunneling*, New J. Phys. 8 (2006) 101, arXiv:quant-ph/0601085
+CHALLENGE, the strongest one against our central observable. The group delay is
+the dwell time, and the dwell time is the lifetime of stored probability leaking
+from **both** faces, `tau_d = U / P_in`. It is therefore not a one-way transit
+time and cannot be divided by the thickness to get a velocity. Hartman
+saturation follows trivially, since the stored norm under an evanescent profile
+saturates. Direct test for us: compute `U / P_in` in `src/` and compare with the
+phase delay. If they agree in the barrier regime, the article has to concede the
+reading.
+
+### [159] Winful, *Do single photons tunnel faster than light?*, arXiv:0708.3889
+CHALLENGE. Same argument applied to the Steinberg-Kwiat-Chiao and FTIR
+experiments: the measured delays are cavity lifetimes, not transit times.
+
+### [160] Winful, *Comment on "Macroscopic violation of special relativity"*, arXiv:0709.2736
+CHALLENGE. Nimtz and Stahlhofen's zero-time claim is a transverse
+Goos-Haenchen shift described entirely by Maxwell's equations. Sets the standard
+of evidence: a shifted peak with no independent front and no independent clock
+is not evidence that anything crossed.
+
+### [161] Nimtz, *Tunneling violates special relativity*, Found. Phys. 41 (2011) 1193, arXiv:1003.3944
+The minority position, kept as the other half of the debate. Claims a
+superluminal **signal** velocity for evanescent modes and a universal barrier
+front scattering time of order `1/nu` set by the carrier frequency. That
+frequency-set law is a different saturation law from [158]'s stored-energy law,
+and the two are distinguishable in our own numerics.
+
+### [162] Dumont, Rivlin, *Superluminal tunneling times without superluminal signaling*, Phys. Rev. A 107 (2023) 052212, arXiv:2205.15375
+CHALLENGE to the signalling reading, SUPPORT for the timing one. Accepts the
+mean-time advance, then shows the time to send one bit with `N` particles is
+governed by the **early-time tail** of the arrival distribution, not the mean,
+and exceeds the free-photon time. The peak is advanced; the bit is not. This is
+the formulation our article should adopt.
+
+### [163] Macke, Segard, *Simple asymptotic forms for Sommerfeld and Brillouin precursors*, Phys. Rev. A 86 (2012) 013837, arXiv:1203.4461
+CONTEXT, the classical reason a group delay never constrains the front. Closed
+forms for both precursors in an opaque Lorentz medium: the Sommerfeld shape
+depends only on the order of the initial discontinuity, the Brillouin shape is
+fixed by the attenuation dispersion alone. Warns that a discontinuous initial
+packet is the worst case for a front check.
+
+### [164] Sokolovski, *On causality, apparent 'superluminality' and reshaping in barrier penetration*, Phys. Rev. A 81 (2010) 042115, arXiv:1002.1673
+CHALLENGE. The barrier is an effective beam splitter recombining **backward**
+shifted copies of the free envelope, weighted by the delay amplitude
+distribution. No copy is advanced; the interference is. High barrier gives a
+delta-like DAD, a superoscillatory `T(p)`, and an advance of the reduced
+envelope by exactly the barrier width, that is Hartman without any transit time.
+
+### [165] Sokolovski, Akhmatskaya, *"Superluminal paradox" in wavepacket propagation*, Ann. Phys. 339 (2013), arXiv:1309.4990
+CHALLENGE, the general form of [164]. In momentum space the advance is a
+**bandwidth** effect: the packet probes only the local analytic behaviour of
+`T(p)`, and the advance appears when `T(p)` locally mimics an exponential, a
+Berry superoscillation. Testable for us: our advance must depend on the spectral
+width of the packet. Also argues no single tunnelling time can exist, which
+makes our **frequency mixing** result more robust than our delay result.
+
+### [166] Muga, Egusquiza, Damborenea, Delgado, *Bounds and enhancements for the Hartman effect*, Phys. Rev. A 66 (2002) 042115, arXiv:quant-ph/0206181
+CHALLENGE by quantification. Causality conditions bound the negative delay, and
+the bound is tightest when there are **no bound states**. Wells, and barriers
+near a new bound-state threshold, permit much larger advances at large
+transmission. So the bound-state spectrum of our effective potential must be
+computed before the size of our advance can be called anomalous.
+
+### [167] Anastopoulos, Savvidou, *Time-of-arrival probabilities II: tunneling times*, J. Math. Phys. 49 (2008) 022101, arXiv:0706.2492
+SUPPORT, partly. A POVM for time of arrival at a detector at distance `L`,
+depending only on the initial state, the Hamiltonian and the detector position.
+For localised initial states the detection probability **recovers the phase
+time**, so our Wigner reading is a limit of an operational observable. Limits of
+definability are established outside that class. The return moment should be
+defined at a fixed detector outside the region, with the width of the
+distribution reported alongside the mean.
+
+### [168] Flores, Galapon, *Quantized relativistic time-of-arrival operators for spin-0 particles*, arXiv:2212.00343
+PRIOR and closest in kind. A time-of-arrival operator for a **Klein-Gordon**
+particle, our field exactly, built by a modified Weyl ordering, with no proper
+time and no internal clock. Finds the tunnelling time **instantaneous** when the
+barrier height is below `mc^2`. Their conclusion is stronger than ours: a
+saturating but nonzero delay and an exactly vanishing one are different claims
+about the same regime, and ours must be compared against theirs.
+
+### [169] Maccone, Sacha, *Quantum measurements of time*, Phys. Rev. Lett. 124 (2020) 110402, arXiv:1810.12869
+SUPPORT, methodological. A Hermitian time-of-arrival operator obtained by
+conditioning on an explicit **quantum clock**, bypassing the self-adjointness
+obstruction. Since our particle has no proper time inside the region, this is
+the framework in which any claim of a return **moment**, as opposed to a return
+**phase**, has to be phrased. The gap between the two is itself a result.
+
+### [170] Mirmoosa, Setälä, Norrman, *Quantum theory of wave scattering from electromagnetic time interfaces*, arXiv:2312.15178
+SUPPORT, the Bogoliubov side, with a caveat: the matching condition is not ours,
+since a time interface conserves wavenumber where our spatial slab conserves
+frequency, so the transfer must be argued. A sudden index change conserves wavenumber, not
+frequency, so the mode operators transform by a **two-mode squeeze operator**
+mixing forward and backward modes at the same `k`, with `alpha = cosh r`,
+`beta = sinh r`. Consequence for us: what returns may be one member of a created
+pair, correlated with a counter-propagating partner, with squeezed-state
+statistics. Our classical frequency mixing is the same `beta` seen from outside.
+
+### [171] Prain, Vezzoli, Westerberg, Roger, Faccio, *Spontaneous photon production in time-dependent epsilon-near-zero materials*, Phys. Rev. Lett. 118 (2017) 133904, arXiv:1702.08228
+SUPPORT. Pair production from a homogeneous but time-varying medium, enhanced by
+orders of magnitude in ENZ media, and, crucially, **peaked at the ENZ wavelength**
+rather than at the inverse timescale of the perturbation. A signature change is
+exactly such a degeneracy of the dispersion relation, so this predicts creation
+is the dominant channel near the degenerate frequency, with a definite spectral
+signature to look for in our own Bogoliubov coefficients.
+
+### [172] The signature-change wave-packet gap stands
+Item 58's finding is confirmed by a direct search. `abs:"signature change" AND
+abs:"wave packet"` returns only [83] and one unrelated quantum-cosmology paper;
+`abs:"degenerate metric" AND abs:propagation` and `abs:"signature change" AND
+abs:transmission` return nothing. The mode-level machinery exists, junction
+conditions and propagation rules in the Dray-Manogue-Tucker and Hayward lineage,
+and particle creation at a signature change exists in [61]. What does not exist
+anywhere is a **superposition of those modes into a packet** with a **timing
+observable** read off the transmission phase. That is the narrow, defensible
+form of the gap and the one the article should claim.

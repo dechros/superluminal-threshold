@@ -67,7 +67,9 @@ doyar, ışığın aynı gidiş dönüşü için gereken süre ise doymaz; arada
 kalınlıkla sınırsız büyür. Dönüş olayı, kesintisiz hiçbir ışık sinyalinin
 ulaşamayacağı bir zaman koordinatına düşer. Bunun bir yayılma hızı iddiası
 **olmadığı**, aynı rejimde içeride grup hızının tanımsız olmasıyla birlikte
-kaydedilmiştir.
+kaydedilmiştir. Dahası, o rejimde fazdan okunan gecikmenin depolanan alanın
+ömründen bağımsız bir nicelik olmadığı hesaplanmıştır: ikisinin oranı kalınlıkla
+oynamaz, dolayısıyla gecikme bağımsız bir yolculuk saati değildir.
 
 Neyin gösterilmediği de kaydedilir: ulaşılabilir altı sonucun dördü sıradan
 fiziğinkiyle aynı ölçümü verir, tayf üzerindeki olasılık dağılımı
@@ -1682,10 +1684,67 @@ bu model için özellikle ilgi çekicidir, çünkü Bölüm 3.4'teki madde katma
 olarak geçişi sönümlü kılacak türden bir bağlaşımdır. Modelin bir yükümlülüğü
 olarak görünen şey, burada bir kurtarıcı olabilir.
 
+İkinci çıkış yolu, yani oyalanma süresi ayrımı, Bölüm 14.7'de hesaplanmış ve
+**bu modelde geçerli olmadığı** görülmüştür.
+
+### 14.7 Gecikme bir geçiş süresi mi, yoksa depolanan alanın ömrü mü
+
+Fazdan okunan gecikmeyi bir geçiş süresi saymak zorunlu değildir. Rakip okuma
+şudur: aynı nicelik bir **oyalanma süresidir**, yani bölge içinde depolanan
+olasılığın gelen akıya oranıdır ve alanın iki yüzden birden sızarak boşalma
+ömrünü verir. Bu okumada hiçbir şey bölgeyi kat etmez ve doyum bir paradoks
+değil, beklenen davranıştır.
+
+İki okuma göz kararıyla ayrılamaz, çünkü ikisi de aynı saçılma çözümünden
+türetilir. Ayırt etmenin yolu, depolanan normu iç alandan **bağımsız olarak**
+hesaplayıp fazın verdiğiyle karşılaştırmaktır. Bu bölümde yapılan budur.
+
+**Depolanan norm da doyar.** İç alan, iki yüzeyin çözümünden alınan ileri ve
+geri genliklerle kurulur ve kare modülü kalınlık boyunca integre edilir:
+
+| Kalınlık $d$ | Depolanan norm |
+|--------------|----------------|
+| $1$ | $0{,}31567$ |
+| $2$ | $0{,}31269$ |
+| $4$ | $0{,}31256$ |
+| $8$ | $0{,}31256$ |
+| $16$ | $0{,}31256$ |
+
+Dolayısıyla doyan gecikmenin, hiçbir geçiş gerektirmeyen bir açıklaması vardır:
+depolanan alan zaten doymaktadır.
+
+**İki okuma bağımsız gözlenebilir değildir.** Aynı yapılanmada iki nicelik
+karşılaştırıldığında:
+
+| Kalınlık $d$ | Fazdan gecikme | Oyalanma süresi | Oran |
+|--------------|----------------|-----------------|------|
+| $2$ | $1{,}4629$ | $0{,}5195$ | $2{,}817$ |
+| $4$ | $1{,}4629$ | $0{,}5193$ | $2{,}817$ |
+| $8$ | $1{,}4629$ | $0{,}5193$ | $2{,}817$ |
+
+İkisi sayısal olarak eşit değildir, ancak **oranları kalınlıkla oynamaz**;
+artık $10^{-6}$ mertebesindedir. İki nicelik bir normalizasyon çarpanıyla
+ayrışır, farklı bir mekanizmayla değil. Sonuç açıktır:
+
+> Engel rejiminde fazdan okunan gecikme, depolanan normun taşımadığı hiçbir
+> bilgi taşımaz. Bu rejimde dönüş anının "yolculuk süresi" olarak okunması
+> **desteklenmemektedir**.
+
+**Yayılımlı rejimde durum tersinedir.** Ara bölge yokken depolanan norm
+kalınlıkla doğrusal artar ($d = 1, 2, 4$ için $1{,}000$, $2{,}000$, $4{,}000$),
+dolayısıyla iki nicelik birlikte doyamaz ve geçiş okuması ayakta kalır. Bu,
+Bölüm 18.13'te bağımsız olarak bulunan ayrımın aynısıdır: parçacık okuması
+yalnızca yayılımlı rejimde meşrudur.
+
+Bu sonucun Bölüm 25.6'daki çekinceyi **güçlendirdiği** kaydedilmelidir. Orada
+kalınlıkla sınırsız büyüyen fark için "bu bir yayılma hızı değildir" denmişti;
+burada ek olarak, o farkın okunduğu niceliğin de bağımsız bir yolculuk saati
+olmadığı gösterilmektedir.
+
 **Frekans karışımı kalınlığı koruyor.** Bu, Bölüm 14.8'de hesaplanmıştır ve
 gecikmenin kaybettiği bilgiyi geri veriyor.
 
-### 14.7 Hangi eksen dönüyor: tablonun en kırılgan varsayımı
+### 14.8 Hangi eksen dönüyor: tablonun en kırılgan varsayımı
 
 Bölüm 3'ün tablosu, karakter değiştiren yönlerin **enine** yönler olduğunu, yani
 geçiş doğrultusunun kendisinin dönmediğini varsayar. Bu varsayım altında Kleinian
@@ -1713,7 +1772,7 @@ Bu çalışma iki okumadan birini seçmemektedir. Kaydedilen şudur: Bölüm 3'�
 "kalın Kleinian tek çalışan hücredir" gözlemi, enine okumaya bağlıdır ve geçiş
 ekseni okumasında geçerli değildir.
 
-### 14.8 Frekans karışımı: gecikmenin unuttuğunu hatırlayan nicelik
+### 14.9 Frekans karışımı: gecikmenin unuttuğunu hatırlayan nicelik
 
 Bölüm 14.4'ün sorunu, gecikmenin kalınlığı unutmasıydı. Ara bölgenin iki dalı
 arasındaki karışım oranı bu bilgiyi korur:
@@ -1744,7 +1803,7 @@ geçen genlik aynı kalınlıkta üstel olarak küçüldüğü için, bilginin t
 kanal aynı zamanda zayıflayan kanaldır. Ölçülebilirlik ayrı bir sorudur ve
 burada gösterilmemiştir.
 
-### 14.9 Karmaşık zaman kurgusunun keyfiliği
+### 14.10 Karmaşık zaman kurgusunun keyfiliği
 
 **Karmaşık zaman kurgusu tek başına belirleyici değildir.** Fazın karmaşık
 yapıdan okunması, keyfilik taşır: karmaşık bir zaman değişimi, özgün çözümden
@@ -2772,6 +2831,7 @@ ne bölüm numarası ne kaynak numarası bulunur.
 | Dalga paketi ile nokta cisim arasındaki sözlük | `src/particle/WavePacket` |
 | Eşiğin mod filtresi olması | `src/boundary/ModeFilter` |
 | İki geçişin ortak genliği ve dönüş anı | `src/intermediate/TwoCrossings` |
+| Oyalanma süresi ile fazdan gecikmenin karşılaştırılması | `src/intermediate/DwellTime` |
 | Gidiş dönüş muhasebesi: mod, yük, entropi | `src/particle/RoundTrip` |
 | Üç bileşenli enerji ve dönmenin bedeli | `src/particle/EnergyBookkeeping` |
 | Sonuç tablosu ve yeniden sayımı | `src/particle/StateTable` |

@@ -17,6 +17,7 @@
 #include "horizon/BlackHoleHorizon.h"
 #include "horizon/DegeneratePath.h"
 #include "horizon/SurfaceLayer.h"
+#include "intermediate/DwellTime.h"
 #include "intermediate/IntermediateRegion.h"
 #include "intermediate/TwoCrossings.h"
 #include "transform/ExtendedLorentzGroup.h"
@@ -76,6 +77,7 @@ namespace
         sections.push_back(std::make_unique<slm::WavePacketSection>());
         sections.push_back(std::make_unique<slm::ModeFilterSection>());
         sections.push_back(std::make_unique<slm::TwoCrossingsSection>());
+        sections.push_back(std::make_unique<slm::DwellTimeSection>());
         sections.push_back(std::make_unique<slm::RoundTripSection>());
         sections.push_back(std::make_unique<slm::EnergyBookkeepingSection>());
         sections.push_back(std::make_unique<slm::StateTableSection>());
