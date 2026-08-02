@@ -19,7 +19,7 @@
 #include "horizon/SurfaceLayer.h"
 #include "intermediate/IntermediateRegion.h"
 #include "intermediate/TwoCrossings.h"
-#include "literature/LiteraturePosition.h"
+#include "transform/ExtendedLorentzGroup.h"
 #include "particle/AsymmetricFaces.h"
 #include "particle/CellDistribution.h"
 #include "particle/EnergyBookkeeping.h"
@@ -80,7 +80,7 @@ namespace
         sections.push_back(std::make_unique<slm::ExitFaceSection>());
         sections.push_back(std::make_unique<slm::CellDistributionSection>());
         sections.push_back(std::make_unique<slm::AsymmetricFacesSection>());
-        sections.push_back(std::make_unique<slm::LiteraturePosition>());
+        sections.push_back(std::make_unique<slm::ExtendedLorentzGroup>());
         sections.push_back(std::make_unique<slm::ChannelsSection>());
         sections.push_back(std::make_unique<slm::GravitationalChannelSection>());
         sections.push_back(std::make_unique<slm::MaxwellSection>());
@@ -97,26 +97,9 @@ namespace
         std::cout << "\n";
         std::cout << "################################################################\n";
         std::cout << "#                                                              #\n";
-        std::cout << "#   SIGNATURE CHANGE ACROSS A SUPERLUMINAL TRANSITION          #\n";
-        std::cout << "#   Discrete involution model, verification of every claim     #\n";
+        std::cout << "#   SIGNATURE CHANGE LIBRARIES: TEST SUITE                     #\n";
         std::cout << "#                                                              #\n";
         std::cout << "################################################################\n";
-    }
-
-    void printModelSummary()
-    {
-        std::cout << "\n  MODEL SUMMARY\n";
-        std::cout << "  1. Three regions: ours, the intermediate one, the far side\n";
-        std::cout << "  2. Beyond c space and time swap roles; abrupt, speed independent\n";
-        std::cout << "  3. The one transformation doing it is D; involutive, parity and c preserving\n";
-        std::cout << "  4. On the far side speed is not a scalar but an orientation\n";
-        std::cout << "  5. Energy and momentum swap, and v' = c^2/v\n";
-        std::cout << "  6. The far side is ill posed in itself, but the part reachable by\n";
-        std::cout << "     crossing is not: on its mass shell nothing arriving can grow\n";
-        std::cout << "  7. The threshold transmits, under the weak junction condition, and\n";
-        std::cout << "     the price is a matter layer going as one over the thickness\n";
-        std::cout << "  8. The return moment is read off the phase, not off any duration\n";
-        std::cout << "  9. A gauge rotation over there is a free deflection here, quantised\n";
     }
 }
 
@@ -125,14 +108,13 @@ int main()
     try
     {
         printBanner();
-        printModelSummary();
 
         slm::Report report;
         const auto sections = buildSections();
 
         for (const auto &section : sections)
         {
-            report.section(section->number(), section->title());
+            report.section(section->title());
             section->run(report);
         }
 

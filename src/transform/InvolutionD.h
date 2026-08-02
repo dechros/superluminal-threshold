@@ -31,7 +31,6 @@ namespace slm
         /// \return The transformed speed; c is the fixed point.
         static double transformVelocity(double c, double v);
 
-        std::string number() const override { return "1-2"; }
         std::string title() const override
         {
             return "Factorisation, the matrix D and group closure";

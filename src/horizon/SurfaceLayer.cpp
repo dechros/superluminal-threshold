@@ -86,7 +86,7 @@ namespace slm
         using Profile = SurfaceLayer::Profile;
         const double pi = std::numbers::pi;
 
-        report.subsection("9.2  Where each profile changes signature");
+        report.subsection("Where each profile changes signature");
         struct Named
         {
             const char *label;
@@ -103,7 +103,7 @@ namespace slm
                              SurfaceLayer::profile(named.shape, xc) - pi / 2.0, 1e-9);
         }
 
-        report.subsection("9.2b  Signature does change across the crossing");
+        report.subsection("Signature does change across the crossing");
         for (const Named &named : profiles)
         {
             const double xc = SurfaceLayer::crossing(named.shape);
@@ -113,7 +113,7 @@ namespace slm
                          before.at(1, 1) * after.at(1, 1) < 0.0);
         }
 
-        report.subsection("9.2c  Extrinsic curvature at the crossing");
+        report.subsection("Extrinsic curvature at the crossing");
         for (const Named &named : profiles)
         {
             const double xc = SurfaceLayer::crossing(named.shape);
@@ -124,7 +124,7 @@ namespace slm
             report.check(std::format("  {} : K = {:+.4f}", named.label, k), true);
         }
 
-        report.subsection("9.2d  Which condition each profile meets");
+        report.subsection("Which condition each profile meets");
         report.check("linear profile fails the strong condition, K does not vanish",
                      !SurfaceLayer::satisfiesStrongCondition(Profile::Linear));
         report.check("tanh profile fails it as well, and worst of all, being "
@@ -139,7 +139,7 @@ namespace slm
                          SurfaceLayer::satisfiesWeakCondition(named.shape));
         }
 
-        report.subsection("9.2e  What this fixes");
+        report.subsection("What this fixes");
         report.check("no surface layer appears for any of them, since the "
                      "extrinsic curvature is continuous throughout",
                      SurfaceLayer::satisfiesWeakCondition(Profile::Linear) &&
@@ -149,7 +149,7 @@ namespace slm
                      "on the metric it interpolates",
                      SurfaceLayer::satisfiesStrongCondition(Profile::FlatAtCrossing) &&
                          !SurfaceLayer::satisfiesStrongCondition(Profile::Linear));
-        report.check("so the choice of section 9.1 is a statement about how the "
+        report.check("so the choice of junction condition is a statement about how the "
                      "transition is approached, not about where it ends",
                      true);
     }

@@ -8,13 +8,13 @@
 namespace slm
 {
 
-    /// Objections raised against this model, computed rather than described.
+    /// Objections to a signature-change construction, computed rather than
+    /// described.
     ///
-    /// Section 19 of the article states each objection in prose. The ones that
-    /// carry a number or a structural claim are checked here, so that an
-    /// objection is either confirmed against our own arithmetic or shown to
-    /// miss. The purely conceptual ones, such as the absence of operational
-    /// content, are not representable as a computation and stay in the text.
+    /// Each objection that carries a number or a structural claim is turned
+    /// into a quantity here, so that it is either confirmed against explicit
+    /// arithmetic or shown to miss. Purely conceptual objections are not
+    /// representable this way and are outside the scope of this class.
     class ObjectionTests
     {
     public:
@@ -46,8 +46,8 @@ namespace slm
         static double doubledSectorCommutator(double separation, double mass, int modes = 4000);
 
         /// Superluminality parameter of a propagating excitation, v^2/c^2 - 1,
-        /// which the vacuum Cherenkov bound constrains. Nothing in this model
-        /// propagates past the threshold, so this is zero by construction.
+        /// which the vacuum Cherenkov bound constrains. It vanishes for any
+        /// excitation whose group velocity stays at or below c.
         static double superluminalityParameter(double groupVelocity, double c);
     };
 
@@ -55,7 +55,6 @@ namespace slm
     class ObjectionTestsSection : public Section
     {
     public:
-        std::string number() const override { return "21"; }
         std::string title() const override
         {
             return "The objections, computed";

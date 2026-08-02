@@ -51,7 +51,7 @@ namespace slm
         const double hbar = 1.0;
         const double c = 1.0;
 
-        report.subsection("16.4  The identity behind the two mode sums");
+        report.subsection("The identity behind the two mode sums");
         for (double s : {2.0, 3.0, 4.0})
         {
             const double integer = CasimirDiscriminant::integerPowerSum(s, 400000);
@@ -65,7 +65,7 @@ namespace slm
                      "the factor becomes 2^-3 - 1 = -7/8",
                      std::abs(CasimirDiscriminant::expectedRatio(-3.0) + 7.0 / 8.0) < 1e-12);
 
-        report.subsection("16.4b  The two configurations and their energies");
+        report.subsection("The two configurations and their energies");
         for (double L : {1.0, 2.0, 5.0})
         {
             const double same = CasimirDiscriminant::energySameCondition(hbar, c, L);
@@ -82,8 +82,8 @@ namespace slm
                                  CasimirDiscriminant::energySameCondition(hbar, c, 1.0) +
                              7.0 / 8.0);
 
-        report.subsection("16.4c  What the model predicts");
-        report.check("this model puts the same condition on both threshold "
+        report.subsection("What the model predicts");
+        report.check("putting the same condition on both threshold "
                      "surfaces, so it predicts attraction",
                      CasimirDiscriminant::energySameCondition(hbar, c, 1.0) < 0.0);
         report.check("the sign of the force is therefore a discriminating "

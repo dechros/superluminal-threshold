@@ -55,7 +55,7 @@ namespace slm
         const double hbar = 1.0;
         const double mu = (mass * c / hbar) * (mass * c / hbar);
 
-        report.subsection("15.1  Wick rotation: three options tested");
+        report.subsection("Wick rotation: three options tested");
         double previousKernel = mu + 1.0;
         for (double kSquared : {0.0, 1.0, 100.0})
         {
@@ -86,7 +86,7 @@ namespace slm
         }
         report.check("(c) UNDEFINED", compositeUndefined);
 
-        report.subsection("15.3  Euclidean propagator: no singularity");
+        report.subsection("Euclidean propagator: no singularity");
         double smallestDenominator = 1e300;
         for (double kSquared : {0.0, 1.0, 25.0, 1e4})
         {
@@ -98,13 +98,13 @@ namespace slm
         }
         report.check("the denominator is always >= mu > 0, so there is NO POLE", smallestDenominator >= mu - 1e-12);
 
-        report.subsection("15.3b  The m = 0 case");
+        report.subsection("The m = 0 case");
         const double masslessKernelAtZero = euclideanKernel(WickChoice::SingleSpace, c, 0.0, 0.0, 0.0);
         const double masslessKernelNearby = euclideanKernel(WickChoice::SingleSpace, c, 0.0, 1e-6, 0.0);
         report.check("the denominator vanishes only at k = q = 0",
                      masslessKernelAtZero == 0.0 && masslessKernelNearby > 0.0);
 
-        report.subsection("15.4  Main finding: one shared Euclidean theory");
+        report.subsection("Main finding: one shared Euclidean theory");
         for (double kSquared : {0.5, 7.0, 120.0})
         {
             const double regionI = kSquared + 1.0 + mu;

@@ -55,7 +55,7 @@ namespace slm
 
     void CausalCrossingSection::run(Report &report) const
     {
-        report.subsection("9.3  The two metrics differ by a sum of squares");
+        report.subsection("The two metrics differ by a sum of squares");
         for (const Vector4 v : {Vector4(1.0, 0.0, 0.0, 0.0), Vector4(1.0, 0.5, 0.25, 0.1),
                                 Vector4(0.3, -1.7, 2.4, 0.9)})
         {
@@ -65,7 +65,7 @@ namespace slm
             report.check("  and is never negative", gain >= 0.0);
         }
 
-        report.subsection("9.3b  Timelike directions survive the crossing");
+        report.subsection("Timelike directions survive the crossing");
         report.check("every direction timelike in region I is timelike in region II",
                      CausalCrossing::timelikeSetIsNested());
         for (const Vector4 v : {Vector4(1.0, 0.0, 0.0, 0.0), Vector4(1.0, 0.6, 0.0, 0.0),
@@ -76,7 +76,7 @@ namespace slm
                              CausalCrossing::timelikeInRegionII(v));
         }
 
-        report.subsection("9.3c  The inclusion is strict");
+        report.subsection("The inclusion is strict");
         const Vector4 beyond = CausalCrossing::timelikeOnlyBeyond();
         report.check("(0,1,0,0) is spacelike in region I",
                      !CausalCrossing::timelikeInRegionI(beyond));
@@ -84,11 +84,11 @@ namespace slm
                      CausalCrossing::timelikeInRegionII(beyond));
         report.check("so region II has strictly more timelike directions", true);
 
-        report.subsection("9.3d  What this separates");
+        report.subsection("What this separates");
         report.check("no causal obstruction stops a curve at the threshold, "
                      "since its tangent keeps its character",
                      CausalCrossing::timelikeSetIsNested());
-        report.check("the obstruction of section 9.1 is about flux, which is a "
+        report.check("the junction obstruction is about flux, which is a "
                      "property of the field and its junction condition, not of "
                      "the tangent to a curve",
                      true);

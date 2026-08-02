@@ -28,7 +28,6 @@ namespace slm
         /// \param lambda Path parameter; the metric degenerates at pi/2.
         static Matrix4 interpolatedMetric(double lambda);
 
-        std::string number() const override { return "7.2"; }
         std::string title() const override
         {
             return "Full comparison with a black hole horizon";

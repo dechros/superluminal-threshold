@@ -97,7 +97,7 @@ namespace slm
         const Turn turns[] = {Turn::None, Turn::Partial, Turn::Reversal};
         const Exit exits[] = {Exit::EntryFace, Exit::FarFace, Exit::Never};
 
-        report.subsection("18.1  Energy and speed are conserved in every cell");
+        report.subsection("Energy and speed are conserved in every cell");
         for (Turn turn : turns)
         {
             report.checkNear(std::format("  {:14} : our energy is unchanged",
@@ -108,7 +108,7 @@ namespace slm
                              StateTable::speedChange(ours, turn), 1e-12);
         }
 
-        report.subsection("18.2  Only the direction distinguishes the cells");
+        report.subsection("Only the direction distinguishes the cells");
         for (Turn turn : turns)
         {
             report.check(std::format("  {:14} : deflection {:.4f} radians",
@@ -121,7 +121,7 @@ namespace slm
                      StateTable::deflection(ours, Turn::Reversal) >
                          StateTable::deflection(ours, Turn::Partial));
 
-        report.subsection("18.3  The full table of what an observer here measures");
+        report.subsection("The full table of what an observer here measures");
         int cells = 0;
         int degenerate = 0;
         for (Exit exit : exits)
@@ -146,7 +146,7 @@ namespace slm
         }
         report.check(std::format("  the table has {} cells", cells), cells == 9);
 
-        report.subsection("18.4  How much of the table is actually distinguishable");
+        report.subsection("How much of the table is actually distinguishable");
         report.check(std::format("  {} of the {} cells are degenerate with ordinary processes",
                                  degenerate, cells),
                      degenerate > cells / 2);
@@ -159,7 +159,7 @@ namespace slm
         report.check("and an undeflected crossing is just a crossing",
                      StateTable::degenerateWithOrdinaryPhysics(Exit::FarFace, Turn::None));
 
-        report.subsection("18.5  The two cells that carry the model's content");
+        report.subsection("The two cells that carry the model's content");
         report.check("emerging from the far face turned, with energy and speed "
                      "exactly conserved, has no ordinary counterpart",
                      !StateTable::degenerateWithOrdinaryPhysics(Exit::FarFace, Turn::Partial));

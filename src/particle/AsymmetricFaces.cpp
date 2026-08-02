@@ -83,11 +83,11 @@ namespace slm
         const double py = 2.0;
         const double pz = 3.0;
 
-        report.subsection("20.1  Each face realises one of the eight admissible crossings");
+        report.subsection("Each face realises one of the eight admissible crossings");
         report.check(std::format("  the scan leaves {} of them", faces.size()),
                      faces.size() == 8);
 
-        report.subsection("20.2  Matching faces give no turn at all");
+        report.subsection("Matching faces give no turn at all");
         for (std::size_t index = 0; index < faces.size(); ++index)
         {
             const Matrix4 trip = AsymmetricFaces::roundTrip(faces[index], faces[index]);
@@ -95,7 +95,7 @@ namespace slm
                          (trip - Matrix4::identity()).isZero(kEps));
         }
 
-        report.subsection("20.3  Differing faces give a definite turn");
+        report.subsection("Differing faces give a definite turn");
         int energyConserving = 0;
         int turning = 0;
         for (const Matrix4 &entry : faces)
@@ -118,7 +118,7 @@ namespace slm
                      energyConserving > 0);
         report.check(std::format("  and {} of those turn the momentum", turning), turning > 0);
 
-        report.subsection("20.4  The turn is quantised");
+        report.subsection("The turn is quantised");
         const std::vector<double> spectrum = AsymmetricFaces::deflectionSpectrum(px, py, pz);
         for (double angle : spectrum)
         {
@@ -131,7 +131,7 @@ namespace slm
         report.checkNear("and the smallest of them is exactly zero, the matched case",
                          spectrum.front(), 1e-12);
 
-        report.subsection("20.5  The angles depend on the incoming direction, the finiteness does not");
+        report.subsection("The angles depend on the incoming direction, the finiteness does not");
         const std::vector<double> other = AsymmetricFaces::deflectionSpectrum(1.0, 0.0, 0.0);
         report.check(std::format("  along an axis the spectrum has {} values instead of {}",
                                  other.size(), spectrum.size()),
@@ -144,7 +144,7 @@ namespace slm
                      "compositions form a finite group",
                      other.size() <= 12 && spectrum.size() <= 12);
 
-        report.subsection("20.6  What this does to the fork of section 18.6");
+        report.subsection("What this does to the two assumptions about the turn");
         report.check("the gauge reading is recovered when the two faces match, so "
                      "it is a special case rather than a rival",
                      spectrum.front() < 1e-12);

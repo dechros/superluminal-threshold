@@ -132,7 +132,7 @@ namespace slm
         const Kind kinds[] = {Kind::None, Kind::Kleinian, Kind::Euclidean, Kind::Degenerate};
         const double thicknesses[] = {0.0, 0.1, 1.0, 4.0, 40.0};
 
-        report.subsection("2.1  What each kind does to the interior mode");
+        report.subsection("What each kind does to the interior mode");
         report.check("with no intermediate region the interior is our own region",
                      std::abs(IntermediateRegion::insideNormalSquared(Kind::None, c, mu,
                                                                       transverse) -
@@ -149,7 +149,7 @@ namespace slm
                      IntermediateRegion::blocks(Kind::Degenerate, c, mu, transverse) &&
                          IntermediateRegion::blocks(Kind::Degenerate, c, mu, 0.01));
 
-        report.subsection("2.2  Transmission across the whole grid");
+        report.subsection("Transmission across the whole grid");
         for (Kind kind : kinds)
         {
             for (double thickness : thicknesses)
@@ -162,7 +162,7 @@ namespace slm
             }
         }
 
-        report.subsection("2.3  What the grid says");
+        report.subsection("What the grid says");
         report.check("at zero thickness every kind transmits everything, so the "
                      "kind cannot matter there",
                      IntermediateRegion::transmission(Kind::Euclidean, c, mu, transverse, 0.0) ==
@@ -183,7 +183,7 @@ namespace slm
                      IntermediateRegion::transmission(Kind::Kleinian, c, mu, transverse, 40.0) >
                          1e-3);
 
-        report.subsection("2.4  The matter layer the junction carries");
+        report.subsection("The matter layer the junction carries");
         for (Kind kind : {Kind::Kleinian, Kind::Euclidean})
         {
             for (double thickness : {0.1, 1.0, 4.0})
@@ -203,7 +203,7 @@ namespace slm
                      "is why the sharp interface is the worst case",
                      std::isinf(IntermediateRegion::layerStrength(Kind::Kleinian, 0.0)));
 
-        report.subsection("2.5  The one way to avoid the layer");
+        report.subsection("The one way to avoid the layer");
         report.checkNear("a profile stationary at the crossing carries no layer at all",
                          IntermediateRegion::layerStrengthStationaryProfile(Kind::Kleinian, 1.0));
         report.check("so transmission without a matter layer is available, but "

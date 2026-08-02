@@ -9,17 +9,17 @@ namespace slm
     /// Extrinsic curvature of the interpolation, and whether a surface layer
     /// appears at the signature change.
     ///
-    /// The junction condition of section 9 was argued on the matter side, from
-    /// the conjugate momentum. On the gravitational side the same choice
+    /// A junction condition can be stated on the matter side, from the
+    /// conjugate momentum. On the gravitational side the same choice
     /// reappears as a condition on the extrinsic curvature of the transition
     /// surface: the strong condition asks it to vanish there, the weak one only
     /// asks it to be continuous. A distributional term in the stress tensor,
     /// that is a surface layer, is absent exactly when the extrinsic curvature
     /// is continuous.
     ///
-    /// The metric is taken as diag(1, -cos(profile(xi)), -1, -1), the first leg
-    /// of the staged path of section 13.5 promoted to a function of a
-    /// coordinate. The signature changes where the profile passes pi/2.
+    /// The metric is taken as diag(1, -cos(profile(xi)), -1, -1), a one
+    /// parameter family in which the signature changes where the profile
+    /// passes pi/2.
     class SurfaceLayer
     {
     public:
@@ -60,12 +60,11 @@ namespace slm
         static bool satisfiesWeakCondition(Profile shape, double tolerance = 1e-6);
     };
 
-    /// Section relating the junction condition of section 9 to the geometry of
+    /// Section relating the junction condition to the geometry of
     /// the transition.
     class SurfaceLayerSection : public Section
     {
     public:
-        std::string number() const override { return "4.2"; }
         std::string title() const override
         {
             return "The same choice seen on the gravitational side";

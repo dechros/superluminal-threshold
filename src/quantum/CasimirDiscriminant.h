@@ -5,14 +5,14 @@
 namespace slm
 {
 
-    /// The one place where the model makes a discriminating prediction.
+    /// Casimir energy between two threshold surfaces, and what it
+    /// discriminates.
     ///
-    /// Section 19.5 showed that every self-adjoint condition at a single wall
-    /// reflects completely, so a single surface tells nothing apart. Two
-    /// surfaces do: the Casimir energy between them depends on whether the two
-    /// walls carry the same condition or opposite ones, and the two cases
-    /// differ in sign. This model puts the same condition on both walls and so
-    /// predicts attraction.
+    /// Every self-adjoint condition at a single wall reflects completely, so
+    /// one surface distinguishes nothing. Two surfaces do: the Casimir energy
+    /// between them depends on whether the walls carry the same condition or
+    /// opposite ones, and the two cases differ in sign. Equal conditions give
+    /// attraction.
     ///
     /// The mode sums are regularised through the identity
     /// sum (n + 1/2)^{-s} = (2^s - 1) zeta(s), verified numerically where it
@@ -47,7 +47,6 @@ namespace slm
     class CasimirDiscriminantSection : public Section
     {
     public:
-        std::string number() const override { return "10.14"; }
         std::string title() const override
         {
             return "What two threshold surfaces would discriminate";

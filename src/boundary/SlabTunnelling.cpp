@@ -63,7 +63,7 @@ namespace slm
         const double kT = 0.5;
         const double flipped = 2.0;
 
-        report.subsection("9.4  The interior mode can be evanescent");
+        report.subsection("The interior mode can be evanescent");
         report.check("outside the slab the squared wavenumber is positive",
                      SlabTunnelling::outsideWavenumberSquared(c, mu, kT) > 0.0);
         report.check("inside it turns negative once the flipped direction "
@@ -72,7 +72,7 @@ namespace slm
         report.check("so the interior does not propagate, it decays",
                      SlabTunnelling::decayConstant(c, mu, kT, flipped) > 0.0);
 
-        report.subsection("9.4b  Transmission falls off exponentially with thickness");
+        report.subsection("Transmission falls off exponentially with thickness");
         double previous = 2.0;
         for (double d : {0.5, 1.0, 2.0, 4.0, 8.0})
         {
@@ -86,18 +86,18 @@ namespace slm
         report.check("transmission never reaches zero at any finite thickness",
                      SlabTunnelling::transmission(c, mu, kT, flipped, 20.0) > 0.0);
 
-        report.subsection("9.4c  The two limits");
+        report.subsection("The two limits");
         report.check("a vanishing thickness transmits everything",
                      SlabTunnelling::transmission(c, mu, kT, flipped, 0.0) > 0.999);
         report.check("a thick slab transmits essentially nothing, which is the "
-                     "reflecting result of section 9.1",
+                     "reflecting result for an unbounded far side",
                      SlabTunnelling::transmission(c, mu, kT, flipped, 40.0) < 1e-30);
         report.check("so total reflection is the thick-slab limit rather than a "
                      "separate statement",
                      SlabTunnelling::transmission(c, mu, kT, flipped, 40.0) <
                          SlabTunnelling::transmission(c, mu, kT, flipped, 1.0));
 
-        report.subsection("9.4d  When the interior propagates instead");
+        report.subsection("When the interior propagates instead");
         report.check("with little wavenumber along the flipped direction the "
                      "interior stays propagating",
                      !SlabTunnelling::isEvanescent(c, mu, kT, 0.1));

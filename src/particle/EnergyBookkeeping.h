@@ -11,9 +11,9 @@ namespace slm
     ///
     /// On the far side the Lagrangian is invariant under three time
     /// translations and one spatial one, so the conserved quantities are an
-    /// energy with three components and a momentum with one. The question this
-    /// section settles is what those three components are in our own terms, and
-    /// what a rotation among them means once the particle is back.
+    /// energy with three components and a momentum with one. These functions
+    /// map those components onto subluminal quantities and measure what a
+    /// rotation among them costs after the return.
     ///
     /// The far side also carries an O(3) symmetry among its three times, so the
     /// direction of its energy vector is not physical there, only its length.
@@ -53,7 +53,6 @@ namespace slm
     class EnergyBookkeepingSection : public Section
     {
     public:
-        std::string number() const override { return "16"; }
         std::string title() const override
         {
             return "The three-component energy, and what rotating it costs here";

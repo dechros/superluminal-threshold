@@ -6,24 +6,19 @@
 namespace slm
 {
 
-    /// How often each of the nine cells occurs.
+    /// How the possible outcomes of a round trip are distributed.
     ///
-    /// The table of section 18 says what each outcome looks like here. It says
-    /// nothing about which outcomes happen, and without that it is a dictionary
-    /// rather than a prediction. This section supplies the missing half, and
-    /// finds that it splits in two.
+    /// An outcome carries two labels: which face the particle leaves by, and
+    /// how far its orientation turned. The first follows from flux
+    /// conservation, which splits a lossless region's weight between
+    /// transmission and reflection and leaves nothing over.
     ///
-    /// The exit face is settled: flux conservation across a lossless region
-    /// gives the transmitted and reflected weights and leaves nothing over, so
-    /// the particle always comes out somewhere.
-    ///
-    /// The turn is not settled, and the two readings of it disagree completely.
-    /// On the gauge reading the far-side orientation carries no physical
-    /// content, so the relative turn between the two faces is fixed by the
-    /// junction conditions and vanishes for a symmetric region. On the
-    /// ignorance reading the far side has no preferred direction at all, so the
-    /// exit orientation is distributed uniformly and the particle returns
-    /// pointing anywhere. The article computes both rather than choosing.
+    /// The second admits two incompatible assumptions, both computed here. On
+    /// the gauge assumption the orientation carries no physical content, the
+    /// relative turn is fixed by the junction conditions, and it vanishes for a
+    /// symmetric region. On the ignorance assumption no direction is preferred,
+    /// the exit orientation is uniform on the sphere, and the mean turn is the
+    /// isotropic average.
     class CellDistribution
     {
     public:
@@ -46,7 +41,7 @@ namespace slm
         /// Fraction of isotropic outcomes deflected by more than the given angle.
         static double isotropicFractionBeyond(double angle);
 
-        /// Probability of the model's signature, a deflected crossing, on the
+        /// Probability of a deflected crossing on the
         /// ignorance reading.
         static double signatureProbabilityIsotropic(IntermediateRegion::Kind kind, double c,
                                                     double mu, double transverseSquared,
@@ -57,11 +52,10 @@ namespace slm
                                                 double transverseSquared, double thickness);
     };
 
-    /// Section supplying the distribution the table of section 18 lacked.
+    /// Section computing how the outcomes are distributed.
     class CellDistributionSection : public Section
     {
     public:
-        std::string number() const override { return "18.7"; }
         std::string title() const override
         {
             return "How often each outcome happens, and the fork in the answer";

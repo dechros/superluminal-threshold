@@ -7,12 +7,11 @@ namespace slm
 
     /// Transmission through a region of changed signature of finite thickness.
     ///
-    /// Section 9.1 treats the far side as unbounded and finds total reflection.
-    /// A slab of finite thickness is a different problem: the interior mode can
-    /// be evanescent rather than propagating, and an evanescent interior does
-    /// not forbid transmission, it suppresses it exponentially. The reflecting
-    /// result is therefore the thick-slab limit of this one, and the article
-    /// has to say which of the two situations it is describing.
+    /// An unbounded far side reflects totally. A slab of finite thickness is a
+    /// different problem: the interior mode can be evanescent rather than
+    /// propagating, and an evanescent interior does not forbid transmission, it
+    /// suppresses it exponentially. Total reflection is the thick-slab limit of
+    /// this calculation rather than a separate result.
     ///
     /// The geometry is region I, then a slab of the intermediate signature of
     /// thickness d, then region I again.
@@ -45,7 +44,6 @@ namespace slm
     class SlabTunnellingSection : public Section
     {
     public:
-        std::string number() const override { return "6"; }
         std::string title() const override
         {
             return "A slab of finite thickness does let something through";

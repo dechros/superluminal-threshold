@@ -17,10 +17,9 @@ namespace slm
     /// turned between entry and exit, which is the only thing about its
     /// orientation that is not pure gauge.
     ///
-    /// The table is filled by computing, for each cell, what an observer on our
-    /// side measures. The result the article has to face is that most cells are
-    /// degenerate with ordinary processes, so the dictionary says as much about
-    /// what cannot be told apart as about what can.
+    /// Each cell is filled by computing what an observer on the subluminal
+    /// side measures. Most cells turn out degenerate with ordinary processes,
+    /// so the table records what cannot be told apart as well as what can.
     class StateTable
     {
     public:
@@ -49,7 +48,7 @@ namespace slm
         /// Our four-momentum after the journey, for a given turn.
         static Four returned(const Four &ours, Turn turn);
 
-        /// Change in our energy over the journey, which the model says is zero.
+        /// Change in our energy over the journey.
         static double energyChange(const Four &ours, Turn turn);
 
         /// Change in the magnitude of our momentum, also zero.
@@ -68,7 +67,6 @@ namespace slm
     class StateTableSection : public Section
     {
     public:
-        std::string number() const override { return "18"; }
         std::string title() const override
         {
             return "What can happen over there, and what each one looks like here";

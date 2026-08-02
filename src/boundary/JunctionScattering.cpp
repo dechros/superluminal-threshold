@@ -68,7 +68,7 @@ namespace slm
         const double c = 1.0;
         const double mu = 1.0;
 
-        report.subsection("9.1  The normal equation is the same on both sides");
+        report.subsection("The normal equation is the same on both sides");
         for (double transverse : {0.0, 0.49, 4.0})
         {
             const double kappa = normalWavenumber(c, mu, transverse);
@@ -77,14 +77,14 @@ namespace slm
         }
         report.check("no impedance step at the surface, both sides share kappa", true);
 
-        report.subsection("9.1b  Outgoing-only solution in region II");
+        report.subsection("Outgoing-only solution in region II");
         report.check("strong matching admits none, the system is over-determined",
                      !outgoingOnlySolutionExists(Matching::Strong));
         report.check("weak matching admits one", outgoingOnlySolutionExists(Matching::Weak));
         report.checkNear("weak matching gives R = 0, so complete transmission",
                          std::abs(outgoingOnlyReflection(Matching::Weak)));
 
-        report.subsection("9.1c  Flux conservation under strong matching");
+        report.subsection("Flux conservation under strong matching");
         for (double r : {0.0, 0.25, 0.5, 0.75})
         {
             report.check(std::format("  |R| = {:g} : flux does NOT balance", r),
@@ -103,7 +103,7 @@ namespace slm
         report.checkNear("and the transmitted flux vanishes",
                          fluxRegionII(Matching::Strong, {1.0, 0.0}));
 
-        report.subsection("9.1d  Flux conservation under weak matching");
+        report.subsection("Flux conservation under weak matching");
         for (double r : {0.0, 0.25, 0.5, 0.75, 1.0})
         {
             report.checkNear(std::format("  |R| = {:g} : flux balances for any R", r),
@@ -114,7 +114,7 @@ namespace slm
                      std::abs(fluxMismatch(Matching::Weak, {0.3, 0.0})) < 1e-12 &&
                          std::abs(fluxMismatch(Matching::Weak, {0.9, 0.0})) < 1e-12);
 
-        report.subsection("9.1e  Decoupled wall conditions");
+        report.subsection("Decoupled wall conditions");
         report.checkNear("Dirichlet wall: R = -1, zero transmitted flux",
                          std::abs(std::complex<double>{-1.0, 0.0}) - 1.0);
         report.checkNear("Neumann wall: R = +1, zero transmitted flux",

@@ -43,7 +43,7 @@ namespace slm
         const double c = 1.0;
         const double mu = 1.0;
 
-        report.subsection("17.1  Crossing the region is motion along the far side's one space axis");
+        report.subsection("Crossing the region is motion along the far side's one space axis");
         for (double k1 : {0.0, 1.0, 3.0})
         {
             const double q = std::sqrt(ExitFace::crossingWavenumberSquared(c, mu, k1, 0.5, 0.5));
@@ -53,7 +53,7 @@ namespace slm
                              ExitFace::dispersionResidual(c, mu, k1, 0.5, 0.5, q), 1e-12);
         }
 
-        report.subsection("17.2  The mass shell fixes its size but not its sign");
+        report.subsection("The mass shell fixes its size but not its sign");
         for (double k1 : {0.0, 1.0, 3.0})
         {
             const double q = std::sqrt(ExitFace::crossingWavenumberSquared(c, mu, k1, 0.5, 0.5));
@@ -65,7 +65,7 @@ namespace slm
                      "equal footing",
                      true == !ExitFace::farSideSelectsBranch());
 
-        report.subsection("17.3  The orientation sets the size, not the branch");
+        report.subsection("The orientation sets the size, not the branch");
         report.check("turning the energy vector without changing its length leaves "
                      "the crossing wavenumber alone",
                      !ExitFace::crossingDependsOnOrientationDirection(c, mu, 2.0));
@@ -73,12 +73,12 @@ namespace slm
                      !ExitFace::crossingDependsOnOrientationDirection(c, mu, 0.5) &&
                          !ExitFace::crossingDependsOnOrientationDirection(c, mu, 7.0));
 
-        report.subsection("17.4  What the far side would need in order to choose");
+        report.subsection("What the far side would need in order to choose");
         report.check("choosing a branch is imposing an outgoing-wave condition, "
                      "and that needs a time orientation the far side does not have",
                      !ExitFace::farSideSelectsBranch());
 
-        report.subsection("17.5  The branch is our own energy");
+        report.subsection("The branch is our own energy");
         for (double k1 : {0.0, 2.0})
         {
             const double q = std::sqrt(ExitFace::crossingWavenumberSquared(c, mu, k1, 0.5, 0.5));
@@ -93,7 +93,7 @@ namespace slm
                          ExitFace::ourEnergyFromBranch(3.0) + ExitFace::ourEnergyFromBranch(-3.0),
                          1e-15);
 
-        report.subsection("17.6  What the conjecture turns into");
+        report.subsection("What the conjecture turns into");
         report.check("the exit face is not fixed by the far side, which is the "
                      "conjecture, and the reason is the missing time orientation",
                      !ExitFace::farSideSelectsBranch());

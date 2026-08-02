@@ -29,7 +29,6 @@ namespace slm
         /// Euclidean propagator, the reciprocal of the convergent kernel.
         static double euclideanPropagator(double c, double mu, double kSquared, double q);
 
-        std::string number() const override { return "10.5"; }
         std::string title() const override
         {
             return "Path integral, Wick rotation and the shared Euclidean theory";

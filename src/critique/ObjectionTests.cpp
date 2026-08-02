@@ -84,7 +84,7 @@ namespace slm
     {
         const Matrix4 eta = metricRegionI();
 
-        report.subsection("19.1  The count of line-element preserving permutations");
+        report.subsection("The count of line-element preserving permutations");
         const int preserving = ObjectionTests::lineElementPreservingPermutations();
         const int changing = ObjectionTests::lineElementChangingPermutations();
         report.check(std::format("6 of the 24 permutations preserve the line "
@@ -100,7 +100,7 @@ namespace slm
         report.check("so the objection is arithmetically correct and is granted",
                      preserving == 6 && changing == 18);
 
-        report.subsection("19.1b  Where D sits in that split");
+        report.subsection("Where D sits in that split");
         const Matrix4 D = InvolutionD::matrix();
         report.check("D does not preserve the region I line element, it is one "
                      "of the eighteen",
@@ -108,11 +108,11 @@ namespace slm
         report.checkNear("what D does satisfy is the relation between the two "
                          "metrics, D^T eta' D = -eta",
                          (D.congruence(metricRegionII()) + eta).maxAbsDifference(Matrix4::zero()));
-        report.check("the objection and this model therefore agree on the "
+        report.check("the objection and the construction therefore agree on the "
                      "arithmetic and differ on which relation is the physical one",
                      true);
 
-        report.subsection("19.2  The doubled construction and its commutator");
+        report.subsection("The doubled construction and its commutator");
         for (double separation : {0.5, 1.0, 2.5})
         {
             const double single = ObjectionTests::singleSectorCommutator(separation, 1.0);
@@ -129,9 +129,12 @@ namespace slm
                      "commutation relations, so the repair removes the "
                      "obstructions by removing the quantum dynamics",
                      std::abs(ObjectionTests::doubledSectorCommutator(1.0, 1.0)) < 1e-12);
-        report.check("the three obstructions of section 14 therefore stand", true);
+        report.check("so the repair costs more than the three obstructions it "
+                     "was meant to remove",
+                     std::abs(ObjectionTests::doubledSectorCommutator(0.5, 1.0)) < 1e-12 &&
+                         std::abs(ObjectionTests::singleSectorCommutator(0.5, 1.0)) > 1e-12);
 
-        report.subsection("19.3  The vacuum Cherenkov bound does not bite");
+        report.subsection("The vacuum Cherenkov bound does not bite");
         for (double v : {0.5, 0.9, 1.0})
         {
             const double delta = ObjectionTests::superluminalityParameter(v, 1.0);
@@ -139,7 +142,7 @@ namespace slm
                                      v, delta),
                          delta <= 1e-12);
         }
-        report.check("nothing in this model propagates with delta > 0, so the "
+        report.check("nothing here propagates with delta > 0, so the "
                      "pair-emission bound constrains it only vacuously",
                      ObjectionTests::superluminalityParameter(1.0, 1.0) <= 1e-12);
     }

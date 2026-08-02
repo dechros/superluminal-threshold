@@ -146,7 +146,7 @@ namespace slm
         const double barrierOmega = 2.8;
         const FarSideMotion::Three energy{1.0, 2.0, 2.0};
 
-        report.subsection("25.1  What motion over there consists of");
+        report.subsection("What motion over there consists of");
         report.check("crossing the region is displacement along the far side's one "
                      "spatial axis, and it has a wavenumber",
                      FarSideMotion::crossingWavenumber(Kind::Kleinian, propagatingOmega, c, mu,
@@ -166,7 +166,7 @@ namespace slm
                              1e-12);
         }
 
-        report.subsection("25.2  The exit moment is a travel time only while the interior propagates");
+        report.subsection("The exit moment is a travel time only while the interior propagates");
         for (Kind kind : {Kind::None, Kind::Kleinian, Kind::Euclidean})
         {
             const double speed =
@@ -183,7 +183,7 @@ namespace slm
                      FarSideMotion::phaseTime(Kind::Euclidean, barrierOmega, c, mu, transverse,
                                               4.0) > 0.0);
 
-        report.subsection("25.3  Where both readings exist they agree");
+        report.subsection("Where both readings exist they agree");
         for (double thickness : {1.0, 2.0, 4.0})
         {
             const double travel = FarSideMotion::motionTime(Kind::None, propagatingOmega, c, mu,
@@ -195,7 +195,7 @@ namespace slm
                              travel - phase, 1e-4);
         }
 
-        report.subsection("25.4  Where only one exists they part company");
+        report.subsection("Where only one exists they part company");
         double previousPhase = 0.0;
         bool noTravelAnywhere = true;
         bool phaseSaturates = true;
@@ -228,7 +228,7 @@ namespace slm
                          !FarSideMotion::interiorPropagates(Kind::Euclidean, barrierOmega, c, mu,
                                                             transverse));
 
-        report.subsection("25.5  The exit face cannot see the rotation");
+        report.subsection("The exit face cannot see the rotation");
         report.check("no rotation of the energy vector in any time plane changes "
                      "the crossing wavenumber, whose sign is the exit face",
                      !FarSideMotion::rotationChangesCrossingWavenumber(c, mu, energy));
@@ -241,7 +241,7 @@ namespace slm
                          !FarSideMotion::rotationChangesCrossingWavenumber(c, mu, probe));
         }
 
-        report.subsection("25.6  The exit moment sees one of the three time planes and not the "
+        report.subsection("The exit moment sees one of the three time planes and not the "
                           "other two");
         const FarSideMotion::Three turning{2.0, 2.0, 1.0};
         const double thickness = 2.0;
@@ -270,7 +270,7 @@ namespace slm
                      "here, while the exit face stays blind to all three",
                      !FarSideMotion::rotationChangesCrossingWavenumber(c, mu, turning));
 
-        report.subsection("25.7  What the rotation does leave behind");
+        report.subsection("What the rotation does leave behind");
         const double quarter = std::acos(-1.0) / 2.0;
         report.check(std::format("  a path rotating a quarter turn sweeps {:.4f} radians",
                                  FarSideMotion::sweptAngle(
@@ -291,7 +291,7 @@ namespace slm
                      "and that compression is the information the journey loses",
                      FarSideMotion::observableTurnCount(1.0, 2.0, 3.0) < 100);
 
-        report.subsection("25.8  The linkage stated");
+        report.subsection("The linkage stated");
         report.check("the exit face is fixed at the faces and not in the interior, "
                      "since the interior motion leaves it untouched",
                      !FarSideMotion::rotationChangesCrossingWavenumber(c, mu, energy));

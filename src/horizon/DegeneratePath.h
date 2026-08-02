@@ -31,7 +31,7 @@ namespace slm
         /// diag(1, 1, -cos L, -1). Ends at region II.
         static Matrix4 stagedSecond(double lambda);
 
-        /// The path used in section 13.3, diag(1, -cos L, -cos L, -cos L).
+        /// Path turning all three space legs at once, diag(1, -cos L, -cos L, -cos L).
         static Matrix4 allSpace(double lambda);
 
         /// Counts of positive, negative and vanishing diagonal entries.
@@ -52,7 +52,6 @@ namespace slm
     class DegeneratePathSection : public Section
     {
     public:
-        std::string number() const override { return "7.1"; }
         std::string title() const override
         {
             return "Interpolating between the signatures: how degenerate must it get";

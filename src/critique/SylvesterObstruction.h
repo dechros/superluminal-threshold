@@ -16,7 +16,6 @@ namespace slm
         /// \return A value that stays far from zero.
         static double randomSearchBestResidual(int trials = 20000, unsigned seed = 20250801u);
 
-        std::string number() const override { return "20"; }
         std::string title() const override
         {
             return "Sylvester obstruction and where the model stands";

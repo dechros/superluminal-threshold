@@ -5,14 +5,13 @@
 namespace slm
 {
 
-    /// Two further objections, computed rather than described.
+    /// Two checks on constructions that would weaken a multi-time region.
     ///
-    /// The first is that extra time directions collapse to an effective single
-    /// time once probability conservation is imposed, which would make region
-    /// II less exotic than section 7 claims. The second is that self-adjointness
-    /// selects Dirichlet conditions at the wall rather than the Neumann ones
-    /// used here, which would change the boundary condition but, as it turns
-    /// out, not the conclusion.
+    /// The first asks whether imposing probability conservation collapses
+    /// several time directions to one effective time. The second asks whether
+    /// self-adjointness at a reflecting wall selects Dirichlet conditions over
+    /// Neumann ones, and whether the reflection coefficient depends on that
+    /// choice.
     class AlternativeRoutes
     {
     public:
@@ -48,7 +47,6 @@ namespace slm
     class AlternativeRoutesSection : public Section
     {
     public:
-        std::string number() const override { return "21.4"; }
         std::string title() const override
         {
             return "Two more objections, computed";

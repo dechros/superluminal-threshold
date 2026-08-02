@@ -64,7 +64,7 @@ namespace slm
     {
         const double pi = std::numbers::pi;
 
-        report.subsection("19.4  Do extra times collapse to one");
+        report.subsection("Do extra times collapse to one");
         for (const auto &[v1, v2] : {std::pair{1.0, 0.0}, std::pair{0.6, 0.8},
                                      std::pair{0.3, 0.4}})
         {
@@ -84,7 +84,7 @@ namespace slm
                      "Lagrangian rather than about a single trajectory",
                      true);
 
-        report.subsection("19.4b  Dirichlet, Neumann, and everything between");
+        report.subsection("Dirichlet, Neumann, and everything between");
         for (double k : {0.5, 1.0, 3.0})
         {
             report.checkNear(std::format("  k = {:g} : Dirichlet wall gives |R| = 1", k),

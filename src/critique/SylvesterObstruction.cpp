@@ -41,19 +41,19 @@ namespace slm
         const Matrix4 etaPrime = metricRegionII();
         const Matrix4 D = InvolutionD::matrix();
 
-        report.subsection("17.1  Numerical scan over 20000 random real matrices");
+        report.subsection("Numerical scan over 20000 random real matrices");
         const double best = randomSearchBestResidual();
         report.check("the error does NOT approach zero, confirming the theorem numerically",
                      best > 1e-3);
 
-        report.subsection("17.2  What does D actually satisfy?");
+        report.subsection("What does D actually satisfy?");
         const double withEtaPrime =
             (D.congruence(etaPrime) + eta).maxAbsDifference(Matrix4::zero());
         const double withEta = (D.congruence(eta) + eta).maxAbsDifference(Matrix4::zero());
         report.checkNear("D^T eta' D + eta = 0  (HOLDS)", withEtaPrime);
         report.check("D^T eta  D + eta = 0  (DOES NOT HOLD)", withEta > 1e-9);
 
-        report.subsection("17.3  The fork");
+        report.subsection("The fork");
         report.check("congruence by i*I: (i)^2 eta = -eta, available only over the complex field", true);
     }
 }

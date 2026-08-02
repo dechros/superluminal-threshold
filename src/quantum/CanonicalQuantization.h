@@ -23,7 +23,6 @@ namespace slm
         /// Whether the equal-time commutator balances its index count.
         static bool commutatorIndicesConsistent(bool regionII);
 
-        std::string number() const override { return "10.1"; }
         std::string title() const override
         {
             return "Quantisation: three independent obstructions to the canonical route";

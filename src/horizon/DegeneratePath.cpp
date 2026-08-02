@@ -76,14 +76,14 @@ namespace slm
         const Matrix4 etaI = metricRegionI();
         const Matrix4 etaII = metricRegionII();
 
-        report.subsection("13.5  The determinant gives no obstruction");
+        report.subsection("The determinant gives no obstruction");
         report.checkNear("det eta = -1", etaI.determinant() + 1.0);
         report.checkNear("det eta' = -1", etaII.determinant() + 1.0);
         report.check("both determinants are equal, so no sign change is forced "
                      "by the determinant alone",
                      std::abs(etaI.determinant() - etaII.determinant()) < 1e-12);
 
-        report.subsection("13.5b  The path of section 13.3 ends somewhere else");
+        report.subsection("Turning all three space legs ends somewhere else");
         const auto endAllSpace = DegeneratePath::signature(DegeneratePath::allSpace(pi));
         report.check("diag(1, -cos L, -cos L, -cos L) starts at (1,3)",
                      DegeneratePath::signature(DegeneratePath::allSpace(0.0)) ==
@@ -92,7 +92,7 @@ namespace slm
                      endAllSpace == (std::array<int, 3>{4, 0, 0}));
         report.check("so it answers the cosmological question, not ours", true);
 
-        report.subsection("13.5c  Direct path: both entries flip together");
+        report.subsection("Direct path: both entries flip together");
         report.check("starts at (1,3)",
                      DegeneratePath::signature(DegeneratePath::direct(0.0)) ==
                          std::array<int, 3>{1, 3, 0});
@@ -104,7 +104,7 @@ namespace slm
         report.check("and that is the worst point on the path",
                      DegeneratePath::worstRankDrop(&DegeneratePath::direct) == 2);
 
-        report.subsection("13.5d  Staged path: one entry at a time");
+        report.subsection("Staged path: one entry at a time");
         report.check("first leg starts at (1,3)",
                      DegeneratePath::signature(DegeneratePath::stagedFirst(0.0)) ==
                          std::array<int, 3>{1, 3, 0});
@@ -118,7 +118,7 @@ namespace slm
                      DegeneratePath::worstRankDrop(&DegeneratePath::stagedFirst) == 1 &&
                          DegeneratePath::worstRankDrop(&DegeneratePath::stagedSecond) == 1);
 
-        report.subsection("13.5e  What is unavoidable and what is not");
+        report.subsection("What is unavoidable and what is not");
         report.check("degeneracy itself is unavoidable, since the count of "
                      "positive eigenvalues must change by two and each change "
                      "passes through zero",
@@ -131,7 +131,7 @@ namespace slm
                      DegeneratePath::signature(DegeneratePath::stagedFirst(pi))[0] == 2 &&
                          DegeneratePath::signature(DegeneratePath::stagedFirst(pi))[1] == 2);
 
-        report.subsection("13.5f  Where each path degenerates");
+        report.subsection("Where each path degenerates");
         for (double lambda : {0.4 * pi, 0.5 * pi, 0.6 * pi})
         {
             report.check(std::format("  L = {:.3f} : direct path rank drop {}", lambda,

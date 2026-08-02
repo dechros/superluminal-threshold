@@ -29,7 +29,6 @@ namespace slm
         /// \return The surviving candidates, in scan order.
         static std::vector<Candidate> metricPreserving();
 
-        std::string number() const override { return "2.1"; }
         std::string title() const override
         {
             return "Scan over the 384 signed permutation matrices";

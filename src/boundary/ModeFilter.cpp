@@ -41,9 +41,9 @@ namespace slm
         const double c = 1.0;
         const double mu = 1.0;
 
-        report.subsection("6.2  Growing modes exist when the wavenumbers are free");
+        report.subsection("Growing modes exist when the wavenumbers are free");
         report.check("a mode with little normal wavenumber grows, which is the "
-                     "ill-posedness of section 6.1",
+                     "ill-posedness of the free initial value problem",
                      ModeFilter::isGrowing(c, mu, 2.0, 2.0, 0.5));
         report.check("a mode with large normal wavenumber does not grow",
                      !ModeFilter::isGrowing(c, mu, 2.0, 2.0, 8.0));
@@ -52,7 +52,7 @@ namespace slm
                      ModeFilter::growthCoefficient(c, mu, 50.0, 50.0, 0.5) >
                          ModeFilter::growthCoefficient(c, mu, 5.0, 5.0, 0.5));
 
-        report.subsection("6.2b  A mode arriving by crossing is on the far-side shell");
+        report.subsection("A mode arriving by crossing is on the far-side shell");
         for (double k1 : {0.0, 0.5, 2.0})
         {
             for (double k2 : {0.0, 1.5, 4.0})
@@ -65,7 +65,7 @@ namespace slm
             }
         }
 
-        report.subsection("6.2c  On the shell the growth coefficient collapses to -k1^2");
+        report.subsection("On the shell the growth coefficient collapses to -k1^2");
         for (double k1 : {0.0, 0.3, 1.0, 3.0, 7.0})
         {
             for (double k2 : {0.0, 2.0, 6.0})
@@ -77,7 +77,7 @@ namespace slm
             }
         }
 
-        report.subsection("6.2d  Therefore no mode reachable by crossing grows");
+        report.subsection("Therefore no mode reachable by crossing grows");
         const double tolerance = 1e-9;
         int scanned = 0;
         int growing = 0;
@@ -112,7 +112,7 @@ namespace slm
         report.check("growth needs k1^2 < 0, that is data off the far-side shell",
                      ModeFilter::onShellGrowthCoefficient(c, mu, 0.0, 3.0, 3.0) <= 0.0);
 
-        report.subsection("6.2e  The one marginal case");
+        report.subsection("The one marginal case");
         report.checkNear("k1 = 0 sits exactly on the boundary, neither growing nor decaying",
                          ModeFilter::onShellGrowthCoefficient(c, mu, 0.0, 2.0, 2.0));
         report.check("and it is marginal rather than growing, so prediction "

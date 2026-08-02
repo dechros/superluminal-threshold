@@ -37,7 +37,7 @@ namespace slm
     {
         const double rhoC = 1.0;
 
-        report.subsection("15.6  A transition that follows from the dynamics");
+        report.subsection("A transition that follows from the dynamics");
         report.checkNear("the deformation vanishes at half the critical density",
                          DerivedTransition::deformation(
                              DerivedTransition::transitionDensity(rhoC), rhoC));
@@ -54,7 +54,7 @@ namespace slm
                          !DerivedTransition::isLorentzian(rho, rhoC));
         }
 
-        report.subsection("15.6b  The transition is gradual, not abrupt");
+        report.subsection("The transition is gradual, not abrupt");
         report.checkNear("the deformation is linear in the density",
                          DerivedTransition::deformation(0.4, rhoC) -
                              (DerivedTransition::deformation(0.2, rhoC) +
@@ -65,7 +65,7 @@ namespace slm
         report.check("the transition is located by a density, not by a speed",
                      DerivedTransition::transitionDensity(rhoC) > 0.0);
 
-        report.subsection("15.6c  Where the two transitions differ");
+        report.subsection("Where the two transitions differ");
         report.check("the derived transition turns one coordinate over, reaching "
                      "Euclidean signature",
                      DerivedTransition::changingCoordinates(true) == 1);

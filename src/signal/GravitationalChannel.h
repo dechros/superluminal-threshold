@@ -9,9 +9,9 @@ namespace slm
     /// Whether the gravitational coupling across the junction carries a signal
     /// or only exists.
     ///
-    /// Section 21 found that the junction's matter layer touches both sides at
-    /// once, so it does not have to cross the region and is still coupled when
-    /// every field channel is shut. That establishes a channel. It does not
+    /// A junction's matter layer touches both sides at once, so it does not
+    /// have to cross the region and stays coupled when every field channel is
+    /// shut. That establishes a channel. It does not
     /// establish that anything can be sent along it, which needs two further
     /// things: the layer has to respond to what a sender does, and the response
     /// has to be readable from the other side.
@@ -57,7 +57,6 @@ namespace slm
     class GravitationalChannelSection : public Section
     {
     public:
-        std::string number() const override { return "19.5"; }
         std::string title() const override
         {
             return "Does the gravitational channel carry a signal, or only exist";

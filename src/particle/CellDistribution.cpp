@@ -87,7 +87,7 @@ namespace slm
         const double transverse = 4.0;
         const double thickness = 1.0;
 
-        report.subsection("19.1  The exit face is settled by flux conservation");
+        report.subsection("The exit face is settled by flux conservation");
         for (Kind kind : {Kind::Kleinian, Kind::Euclidean, Kind::Degenerate})
         {
             const double far = CellDistribution::exitFarFace(kind, c, mu, transverse, thickness);
@@ -108,7 +108,7 @@ namespace slm
                      CellDistribution::exitNever(Kind::Degenerate, c, mu, transverse, thickness) ==
                          0.0);
 
-        report.subsection("19.2  The turn on the ignorance reading");
+        report.subsection("The turn on the ignorance reading");
         report.checkNear("a uniform exit orientation gives a mean deflection of a "
                          "right angle",
                          CellDistribution::isotropicMeanDeflection() - std::numbers::pi / 2.0,
@@ -122,7 +122,7 @@ namespace slm
                      "direction is a single point on the sphere",
                      CellDistribution::isotropicFractionBeyond(0.05) > 0.999);
 
-        report.subsection("19.3  The two readings give opposite predictions");
+        report.subsection("The two readings give opposite predictions");
         for (Kind kind : {Kind::Kleinian, Kind::Euclidean})
         {
             report.check(
@@ -152,7 +152,7 @@ namespace slm
                                                            thickness),
                          1e-15);
 
-        report.subsection("19.4  What the fork means for testability");
+        report.subsection("What the fork means for testability");
         report.check("the two readings are as far apart as they can be, one "
                      "predicting the signature at the transmission rate and the "
                      "other predicting it never",

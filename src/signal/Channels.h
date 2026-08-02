@@ -8,11 +8,11 @@ namespace slm
 
     /// What can carry information between the two regions.
     ///
-    /// The article's electromagnetic chapter shows the field survives the
-    /// crossing algebraically, but survival is not the same as carrying a
-    /// signal. Four carriers are examined and they do not stand or fall
-    /// together: a massless field, a massive one, the gravitational coupling
-    /// through the junction's own matter layer, and correlation.
+    /// A field can survive a crossing algebraically and still carry no signal,
+    /// so the two questions are kept apart. Four carriers are examined and they
+    /// do not stand or fall together: a massless field, a massive one, the
+    /// gravitational coupling through the junction's own matter layer, and
+    /// correlation.
     ///
     /// The interesting case is the third. The layer sits on the surface and
     /// touches both sides at once, so it does not have to cross anything. That
@@ -55,7 +55,6 @@ namespace slm
     class ChannelsSection : public Section
     {
     public:
-        std::string number() const override { return "19"; }
         std::string title() const override
         {
             return "Four carriers between the regions, and which of them signal";

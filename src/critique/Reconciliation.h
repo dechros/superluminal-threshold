@@ -5,7 +5,7 @@
 namespace slm
 {
 
-    /// Sorting the model's disagreements into the two kinds there are.
+    /// Sorting disagreements between two treatments into the two kinds.
     ///
     /// Some are two views of one object: the positions differ in what they look
     /// at or from where, and once the parameter separating them is named, both
@@ -18,8 +18,7 @@ namespace slm
     /// talked into agreement; it is called reconciled when both readings come
     /// out of one calculation with a parameter changed.
     ///
-    /// The second kind is counted and left standing, with the measurement that
-    /// would decide it named in the article.
+    /// The second kind is counted and left standing rather than absorbed.
     class Reconciliation
     {
     public:
@@ -54,7 +53,6 @@ namespace slm
     class ReconciliationSection : public Section
     {
     public:
-        std::string number() const override { return "24"; }
         std::string title() const override
         {
             return "Which disagreements are one coin seen twice, and which are not";

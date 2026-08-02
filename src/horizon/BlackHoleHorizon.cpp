@@ -55,7 +55,7 @@ namespace slm
         const double schwarzschildRadius = 1.0;
         const double theta = std::numbers::pi / 2.0;
 
-        report.subsection("13.1  Horizon: how many coordinates turn over");
+        report.subsection("Horizon: how many coordinates turn over");
         for (double r : {3.0, 2.0, 1.5, 0.9, 0.5})
         {
             const Matrix4 metric = schwarzschildMetric(r, schwarzschildRadius, theta);
@@ -64,16 +64,16 @@ namespace slm
                          counts[0] == 1 && counts[1] == 3);
         }
 
-        report.subsection("13.1b  Sigma: all four coordinates at once");
+        report.subsection("Sigma: all four coordinates at once");
         const auto regionICounts = signature(metricRegionI());
         const auto regionIICounts = signature(metricRegionII());
         report.check("across Sigma the signature CLASS changes: (1,3) -> (3,1)",
                      regionICounts[0] == 1 && regionIICounts[0] == 3);
 
-        report.subsection("13.2  At the horizon f passes through zero continuously");
+        report.subsection("At the horizon f passes through zero continuously");
         report.checkNear("f(r_s) = 0, continuous crossing", lapse(1.0, schwarzschildRadius));
 
-        report.subsection("13.3  Can a continuous bridge be built?");
+        report.subsection("Can a continuous bridge be built?");
         const double pi = std::numbers::pi;
         for (double lambda : {0.0, pi / 4.0, pi / 2.0, 3.0 * pi / 4.0, pi})
         {

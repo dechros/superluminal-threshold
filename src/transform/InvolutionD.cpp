@@ -46,7 +46,7 @@ namespace slm
         const Matrix4 etaPrime = metricRegionII();
         const double c = 1.0;
 
-        report.subsection("1  Factorisation: M(V) = D * B(c^2/V)");
+        report.subsection("Factorisation: M(V) = D * B(c^2/V)");
 
         for (double V : {1.5, 2.0, 10.0, 1000.0})
         {
@@ -55,7 +55,7 @@ namespace slm
             report.check(std::format("V = {:g}c : M(V)^T eta' M(V) = -eta", V), metricOk);
         }
 
-        report.subsection("2  The matrix D and its properties");
+        report.subsection("The matrix D and its properties");
 
         report.checkNear("signature relation: D^T eta' D = -eta",
                          (D.congruence(etaPrime) + eta).maxAbsDifference(Matrix4::zero()));
@@ -65,7 +65,7 @@ namespace slm
         report.check("group order = 2, so <D> = Z_2", D.order() == 2);
         report.check("no V dependence, D has constant entries", true);
 
-        report.subsection("2  Light cone: s^2 = 0 -> s'^2 = 0");
+        report.subsection("Light cone: s^2 = 0 -> s'^2 = 0");
         const double s3 = 1.0 / std::sqrt(3.0);
         const Vector4 nullRays[] = {
             Vector4(1, 1, 0, 0),
@@ -80,13 +80,13 @@ namespace slm
             report.checkNear("  light cone preserved (s'^2 = -s^2 = 0)", after + before);
         }
 
-        report.subsection("2  General interval: s'^2 = -s^2");
+        report.subsection("General interval: s'^2 = -s^2");
         const Vector4 generic(0.3, -1.7, 2.4, 0.9);
         const Vector4 genericImage = D * generic;
         report.checkNear("s'^2 = -s^2",
                          genericImage.contract(etaPrime) + generic.contract(eta));
 
-        report.subsection("3  Group closure");
+        report.subsection("Group closure");
         report.check("D^2 = I  -> <D> = Z_2, CLOSED", D.isInvolution());
         for (double V : {1.5, 2.0, 10.0})
         {
@@ -95,13 +95,13 @@ namespace slm
             report.check(std::format("M({:g}c)^2 = I ?  (expected: NO)", V), !closes);
         }
 
-        report.subsection("3  Where closure breaks: D B D^-1");
+        report.subsection("Where closure breaks: D B D^-1");
         const Matrix4 B = lorentzBoost(c, 0.6 * c);
         const Matrix4 conjugated = D * B * D.inverse();
         report.check("conjugation does not keep the SO(1,3) boost of the same type",
                      !conjugated.isEqual(B, 1e-10));
 
-        report.subsection("5  Velocity transformation: v' = c^2/v");
+        report.subsection("Velocity transformation: v' = c^2/v");
         for (double v : {0.25, 0.5, 0.9, 1.0, 2.0, 4.0})
         {
             const Vector4 event(1.0, v / c, 0.0, 0.0);

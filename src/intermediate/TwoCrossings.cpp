@@ -145,7 +145,7 @@ namespace slm
         const double transverse = 4.0;
         const double omega = 6.0;
 
-        report.subsection("13.1  The amplitude across two crossings is well defined");
+        report.subsection("The amplitude across two crossings is well defined");
         for (Kind kind : {Kind::None, Kind::Kleinian, Kind::Euclidean})
         {
             const double magnitude =
@@ -155,7 +155,7 @@ namespace slm
                          magnitude > 0.0 && magnitude <= 1.0 + 1e-9);
         }
 
-        report.subsection("13.2  With no intermediate region the delay is the free flight");
+        report.subsection("With no intermediate region the delay is the free flight");
         for (double thickness : {0.5, 1.0, 4.0})
         {
             const double delay =
@@ -167,13 +167,13 @@ namespace slm
                              delay - expected, 1e-4);
         }
 
-        report.subsection("13.3  The delay is slower than light for a free crossing");
+        report.subsection("The delay is slower than light for a free crossing");
         report.check("with no intermediate region the particle is subluminal, as "
                      "it must be",
                      TwoCrossings::delayInLightTimes(Kind::None, omega, c, mu, transverse, 1.0) >
                          1.0);
 
-        report.subsection("13.4  Whether a region is a barrier depends on the frequency");
+        report.subsection("Whether a region is a barrier depends on the frequency");
         report.check("at high frequency even a Euclidean region propagates, so it "
                      "is not a barrier there",
                      TwoCrossings::insideSquared(Kind::Euclidean, omega, c, mu, transverse) > 0.0);
@@ -185,7 +185,7 @@ namespace slm
                      "crossing question is meaningful there",
                      TwoCrossings::outsideSquared(barrierOmega, c, mu, transverse) > 0.0);
 
-        report.subsection("13.5  In the barrier regime the delay saturates: the Hartman effect");
+        report.subsection("In the barrier regime the delay saturates: the Hartman effect");
         double previous = 0.0;
         bool saturating = true;
         for (double thickness : {1.0, 2.0, 4.0, 8.0})
@@ -207,7 +207,7 @@ namespace slm
                      TwoCrossings::delayInLightTimes(Kind::Euclidean, barrierOmega, c, mu,
                                                      transverse, 8.0) < 1.0);
 
-        report.subsection("13.6  A Kleinian region resonates instead of saturating");
+        report.subsection("A Kleinian region resonates instead of saturating");
         double smallest = 1e9;
         double largest = -1e9;
         for (int step = 1; step <= 40; ++step)
@@ -226,7 +226,7 @@ namespace slm
                      "thickness periodically rather than monotonically",
                      largest - smallest > 0.05);
 
-        report.subsection("13.7  Which axis turns over decides whether it is a barrier");
+        report.subsection("Which axis turns over decides whether it is a barrier");
         using Axis = TwoCrossings::FlipAxis;
         for (double testOmega : {2.8, 6.0, 12.0})
         {
@@ -254,7 +254,7 @@ namespace slm
                               TwoCrossings::insideSquaredOn(Axis::Crossing, Kind::Euclidean, omega,
                                                             c, mu, transverse)) < 1e-12);
 
-        report.subsection("13.8  Mixing keeps the thickness the delay forgets");
+        report.subsection("Mixing keeps the thickness the delay forgets");
         double previousMixing = 0.0;
         bool mixingGrows = true;
         for (double thickness : {1.0, 2.0, 4.0, 8.0})
@@ -285,7 +285,7 @@ namespace slm
                          TwoCrossings::mixingRatio(Kind::Euclidean, barrierOmega, c, mu, transverse,
                                                    4.0));
 
-        report.subsection("13.9  The placement is set by phase, not by duration");
+        report.subsection("The placement is set by phase, not by duration");
         report.check("the delay is the frequency derivative of the phase, and is "
                      "obtained without any clock inside the region",
                      std::abs(TwoCrossings::returnDelay(Kind::Euclidean, omega, c, mu, transverse,

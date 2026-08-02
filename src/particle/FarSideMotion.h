@@ -8,25 +8,23 @@
 namespace slm
 {
 
-    /// What the particle does while it is inside the intermediate region, and
-    /// how much of that reaches the exit face.
+    /// Motion inside a region of changed signature, and how much of it reaches
+    /// the exit face.
     ///
-    /// Two results were obtained without ever saying what the particle does in
-    /// between them. The exit face was shown to be the sign of the crossing
-    /// wavenumber, which is our own energy. The exit moment was read off the
-    /// frequency derivative of the transmission phase. Neither was connected to
-    /// motion. This section supplies that connection, because it is the thing a
-    /// simulation would have to animate.
+    /// Two observables of a round trip can be computed without reference to any
+    /// trajectory: the exit face, which is the sign of the crossing wavenumber,
+    /// and the exit moment, which is the frequency derivative of the
+    /// transmission phase. These functions connect both to the motion inside.
     ///
-    /// Motion over there is not motion along a time axis. The far side carries
+    /// Motion there is not motion along a time axis. The far side carries
     /// three times and one space direction, so a state is an energy vector in
     /// the three-time space together with a wavenumber along the single spatial
     /// axis. Crossing the region is displacement along that spatial axis;
     /// everything else the particle can do is a rotation of the energy vector,
     /// which sweeps out an angle in one of the three time planes.
     ///
-    /// The question the section answers is which of the two motions the two
-    /// observables see. The crossing displacement sets the exit moment, but
+    /// Which of the two motions each observable sees is the question these
+    /// functions answer. The crossing displacement sets the exit moment, but
     /// only while the interior propagates; where it does not, the moment comes
     /// from the phase and there is no journey at all. The rotation never
     /// touches the exit face, since the mass shell fixes the crossing
@@ -97,11 +95,10 @@ namespace slm
         static int observableTurnCount(double px, double py, double pz);
     };
 
-    /// Section tying the exit face and the exit moment to motion over there.
+    /// Section tying the exit face and the exit moment to interior motion.
     class FarSideMotionSection : public Section
     {
     public:
-        std::string number() const override { return "25"; }
         std::string title() const override
         {
             return "Motion over there, and which of it the exit face and the exit moment see";

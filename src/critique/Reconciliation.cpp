@@ -88,7 +88,7 @@ namespace slm
 
     void ReconciliationSection::run(Report &report) const
     {
-        report.subsection("24.1  Disagreements that are one coin seen twice");
+        report.subsection("Disagreements that are one coin seen twice");
         report.check("cavity against barrier: the parameter is which axis turns, "
                      "and both readings follow from one formula",
                      Reconciliation::cavityAndBarrierAreOneCoin());
@@ -108,7 +108,7 @@ namespace slm
                                  Reconciliation::reconciledCount()),
                      Reconciliation::reconciledCount() == 5);
 
-        report.subsection("24.2  Each reconciliation names its parameter");
+        report.subsection("Each reconciliation names its parameter");
         report.check("none of the five was settled by argument, each was settled "
                      "by turning one parameter and recovering both readings",
                      Reconciliation::cavityAndBarrierAreOneCoin() &&
@@ -117,7 +117,7 @@ namespace slm
                          Reconciliation::illPosedAndWellPosedAreOneCoin() &&
                          Reconciliation::exitFaceAndTurnAreOneVector());
 
-        report.subsection("24.3  What the method cannot absorb");
+        report.subsection("What the method cannot absorb");
         report.check(std::format("  {} disagreements remain genuine contradictions",
                                  Reconciliation::standingContradictionCount()),
                      Reconciliation::standingContradictionCount() == 4);

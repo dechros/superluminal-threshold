@@ -24,15 +24,15 @@ namespace slm
         const double hbar = 1.0;
         const double c = 1.0;
 
-        report.subsection("16.1  Why the particle concept is undefined");
+        report.subsection("Why the particle concept is undefined");
         report.check("none of the three structures exists in Region II", true);
 
-        report.subsection("16.3  Casimir: a single surface");
+        report.subsection("Casimir: a single surface");
         report.check("diverges as z -> 0, renormalisation is required",
                      singleSurfaceEnergyDensityScale(hbar, c, 0.01) >
                          singleSurfaceEnergyDensityScale(hbar, c, 1.0));
 
-        report.subsection("16.3b  Casimir: between two surfaces");
+        report.subsection("Casimir: between two surfaces");
         report.check("the energy is NEGATIVE, so attractive", casimirEnergyPerArea(hbar, c, 1.0) < 0.0);
         report.checkNear("scaling law E ~ L^-3",
                          casimirEnergyPerArea(hbar, c, 2.0) * 8.0 -

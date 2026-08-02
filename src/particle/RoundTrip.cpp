@@ -183,7 +183,7 @@ namespace slm
         const double thickness = 1.0;
         const double centre = 2.0;
 
-        report.subsection("15.1  What the crossing cannot touch");
+        report.subsection("What the crossing cannot touch");
         for (double testOmega : {2.5, 6.0, 15.0})
         {
             const double gap =
@@ -212,7 +212,7 @@ namespace slm
                               TwoCrossings::insideSquared(Kind::Euclidean, 20.0, c, 3.0, 4.0)),
                          1e-12);
 
-        report.subsection("15.2  The ledger of what came back");
+        report.subsection("The ledger of what came back");
         for (Kind kind : {Kind::Kleinian, Kind::Euclidean})
         {
             const double fraction =
@@ -236,7 +236,7 @@ namespace slm
                      RoundTrip::survivingFraction(centre, 0.3, Kind::Degenerate, c, mu,
                                                   thickness) == 0.0);
 
-        report.subsection("15.3  The body returns displaced, and twice as much");
+        report.subsection("The body returns displaced, and twice as much");
         const double singleShift = std::abs(
             WavePacket::centroidShiftInSpreads(centre, 0.5, thickness, c, mu, 2.0));
         const double roundShift =
@@ -246,7 +246,7 @@ namespace slm
                                  singleShift, roundShift),
                      roundShift > singleShift);
 
-        report.subsection("15.4  The displacement still vanishes for a narrow packet");
+        report.subsection("The displacement still vanishes for a narrow packet");
         double previous = 1e9;
         for (double width : {0.4, 0.2, 0.1, 0.05})
         {
@@ -267,7 +267,7 @@ namespace slm
                      std::abs(RoundTrip::centroidShiftInSpreads(centre, 0.01, Kind::Euclidean, c,
                                                                 mu, thickness)) < 0.05);
 
-        report.subsection("15.5  The information ledger");
+        report.subsection("The information ledger");
         for (double width : {0.1, 0.5, 1.0})
         {
             const double divergence =
@@ -284,7 +284,7 @@ namespace slm
                          RoundTrip::relativeEntropy(centre, 0.5, Kind::None, c, mu, thickness),
                          1e-12);
 
-        report.subsection("15.6  The journey sharpens rather than blurs");
+        report.subsection("The journey sharpens rather than blurs");
         const double before = RoundTrip::incomingEntropy(centre, 0.8);
         const double after =
             RoundTrip::returnedEntropy(centre, 0.8, Kind::Euclidean, c, mu, thickness);

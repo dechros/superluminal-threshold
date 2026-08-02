@@ -43,7 +43,6 @@ namespace slm
     class DispersionSection : public Section
     {
     public:
-        std::string number() const override { return "9.1"; }
         std::string title() const override
         {
             return "Velocity: from scalar to orientation";

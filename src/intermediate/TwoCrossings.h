@@ -27,12 +27,11 @@ namespace slm
         /// Squared normal wavenumber outside, as a function of frequency.
         static double outsideSquared(double omega, double c, double mu, double transverseSquared);
 
-        /// Which directions the intermediate region turns over. The literature
-        /// on the Kleinian slab takes the crossing direction itself to be the
-        /// one that turns, which forces the interior wavenumber to be imaginary
-        /// and makes every crossing a tunnelling. The model's own construction
-        /// turns transverse directions instead, which leaves the interior able
-        /// to propagate. The two are computed separately and compared.
+        /// Which directions the region turns over. Turning the crossing
+        /// direction itself forces the interior wavenumber to be imaginary and
+        /// makes every crossing a tunnelling. Turning transverse directions
+        /// instead leaves the interior able to propagate. Both are available so
+        /// that the two can be compared.
         enum class FlipAxis
         {
             Transverse,
@@ -80,7 +79,6 @@ namespace slm
     class TwoCrossingsSection : public Section
     {
     public:
-        std::string number() const override { return "13-14"; }
         std::string title() const override
         {
             return "Two crossings, and where the particle lands on our clock";

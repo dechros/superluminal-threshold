@@ -8,21 +8,16 @@
 namespace slm
 {
 
-    /// Closing the fork of section 18.6 by letting the two faces differ.
+    /// Round trips built from two independently chosen crossing matrices.
     ///
-    /// The fork was between a turn fixed at zero and a turn distributed
-    /// uniformly. Both were assumptions. There is a third answer available
-    /// inside the model already, and it is neither.
+    /// Eight signed permutation matrices preserve the line element and differ
+    /// only in how they label the space axes. A region has two faces, and each
+    /// realises one of the eight. The round trip is their composition: equal
+    /// faces compose to the identity and turn nothing, unequal faces compose to
+    /// a definite rotation.
     ///
-    /// Section 2.1 found that eight signed permutation matrices survive every
-    /// filter, differing only in how they label the space axes. Each face of
-    /// the intermediate region realises one of them. If both faces realise the
-    /// same one, the round trip composes to the identity and there is no turn.
-    /// If they realise different ones, the round trip is their composition, and
-    /// that is a definite rotation rather than a free parameter.
-    ///
-    /// So the turn is neither always zero nor uniformly distributed. It takes
-    /// values in a finite set, and this section computes that set.
+    /// The deflections reachable this way therefore form a finite set rather
+    /// than a continuum, and that set is what these functions enumerate.
     class AsymmetricFaces
     {
     public:
@@ -47,7 +42,6 @@ namespace slm
     class AsymmetricFacesSection : public Section
     {
     public:
-        std::string number() const override { return "18.8"; }
         std::string title() const override
         {
             return "Letting the two faces differ: the turn is quantised";

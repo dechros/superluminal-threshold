@@ -9,13 +9,12 @@ namespace slm
 
     /// Whether a curve can cross the threshold on causal grounds alone.
     ///
-    /// Section 9.1 forbids flux from crossing, which is a statement about the
-    /// field and its junction condition. This section asks the separate and
-    /// weaker question of whether a direction that is timelike on one side
-    /// stays timelike on the other, which is a statement about the two metrics
-    /// and nothing else. The two questions have different answers, and keeping
-    /// them apart is what allows the loops found in the literature to coexist
-    /// with a threshold that carries no flux.
+    /// Whether flux crosses a threshold is a statement about the field and its
+    /// junction condition. Whether a direction that is timelike on one side
+    /// stays timelike on the other is a separate and weaker question, settled
+    /// by the two metrics alone. The two can have different answers, so a
+    /// threshold that carries no flux may still admit causal curves through
+    /// it.
     class CausalCrossing
     {
     public:
@@ -45,7 +44,6 @@ namespace slm
     class CausalCrossingSection : public Section
     {
     public:
-        std::string number() const override { return "5"; }
         std::string title() const override
         {
             return "Geometry permits the crossing that the field forbids";

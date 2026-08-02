@@ -67,7 +67,6 @@ namespace slm
     class RoundTripSection : public Section
     {
     public:
-        std::string number() const override { return "15"; }
         std::string title() const override
         {
             return "What came back: mode content, conserved charges, information";

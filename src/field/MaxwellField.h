@@ -34,7 +34,6 @@ namespace slm
     class MaxwellSection : public Section
     {
     public:
-        std::string number() const override { return "19.7"; }
         std::string title() const override
         {
             return "Electromagnetism under D";

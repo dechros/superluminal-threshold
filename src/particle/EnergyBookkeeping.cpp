@@ -63,7 +63,7 @@ namespace slm
         using Four = EnergyBookkeeping::Four;
         const Four ours = {5.0, 1.0, 2.0, 3.0};
 
-        report.subsection("16.1  What the three far-side energies are in our terms");
+        report.subsection("What the three far-side energies are in our terms");
         const Four far = EnergyBookkeeping::across(ours);
         report.checkNear("the far-side energy vector is our three-momentum, reordered",
                          EnergyBookkeeping::farEnergyMagnitude(far) -
@@ -77,7 +77,7 @@ namespace slm
                              EnergyBookkeeping::invariant(ours, false),
                          1e-12);
 
-        report.subsection("16.2  A plain round trip returns everything exactly");
+        report.subsection("A plain round trip returns everything exactly");
         const Four back = EnergyBookkeeping::across(far);
         for (int slot = 0; slot < 4; ++slot)
         {
@@ -88,7 +88,7 @@ namespace slm
                      "the model reports comes from the interface instead",
                      back == ours);
 
-        report.subsection("16.3  Only the length of the far energy is physical");
+        report.subsection("Only the length of the far energy is physical");
         for (double angle : {0.3, 1.0, 2.5})
         {
             const Four turned = EnergyBookkeeping::rotateFarEnergy(far, angle);
@@ -106,7 +106,7 @@ namespace slm
                              1e-12);
         }
 
-        report.subsection("16.4  What that rotation costs once the particle is back");
+        report.subsection("What that rotation costs once the particle is back");
         for (double angle : {0.3, 1.0, 2.5})
         {
             const Four turned = EnergyBookkeeping::rotateFarEnergy(far, angle);
@@ -125,7 +125,7 @@ namespace slm
                          EnergyBookkeeping::momentumAngle(ours, returned) > 1e-6);
         }
 
-        report.subsection("16.5  The mass shell survives the whole journey");
+        report.subsection("The mass shell survives the whole journey");
         for (double angle : {0.0, 0.3, 1.0, 2.5})
         {
             const Four returned =
@@ -136,7 +136,7 @@ namespace slm
                              1e-12);
         }
 
-        report.subsection("16.6  The one thing a round trip can do for free");
+        report.subsection("The one thing a round trip can do for free");
         const Four turned = EnergyBookkeeping::rotateFarEnergy(far, 1.0);
         const Four returned = EnergyBookkeeping::across(turned);
         report.check("energy conserved, speed conserved, mass conserved, direction changed",

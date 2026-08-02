@@ -58,7 +58,7 @@ namespace slm
         const double transverse = 4.0;
         const Kind kinds[] = {Kind::Kleinian, Kind::Euclidean, Kind::Degenerate};
 
-        report.subsection("21.1  Being massless does not help");
+        report.subsection("Being massless does not help");
         for (Kind kind : kinds)
         {
             const double massless = Channels::masslessTransmission(kind, c, transverse, 1.0);
@@ -75,13 +75,13 @@ namespace slm
                      Channels::masslessTransmission(Kind::Euclidean, c, transverse, 1.0) <
                          Channels::massiveTransmission(Kind::Euclidean, c, mu, transverse, 1.0));
 
-        report.subsection("21.2  A Kleinian region is open to both");
+        report.subsection("A Kleinian region is open to both");
         report.check("the massless field crosses it",
                      Channels::masslessTransmission(Kind::Kleinian, c, transverse, 1.0) > 0.1);
         report.check("and so does the massive one",
                      Channels::massiveTransmission(Kind::Kleinian, c, mu, transverse, 1.0) > 0.1);
 
-        report.subsection("21.3  Gravity does not have to cross");
+        report.subsection("Gravity does not have to cross");
         for (Kind kind : kinds)
         {
             report.check(std::format("  {:22} : coupling {:.4f}",
@@ -101,7 +101,7 @@ namespace slm
                      Channels::gravityReachesWhereFieldsCannot(Kind::Degenerate, c, mu, transverse,
                                                                1.0));
 
-        report.subsection("21.4  But the gravitational channel weakens as the region opens");
+        report.subsection("But the gravitational channel weakens as the region opens");
         report.check("a thicker region couples more weakly",
                      Channels::gravitationalCoupling(Kind::Kleinian, 8.0) <
                          Channels::gravitationalCoupling(Kind::Kleinian, 0.5));
@@ -109,7 +109,7 @@ namespace slm
                      "the two channels trade against each other",
                      Channels::massiveTransmission(Kind::Kleinian, c, mu, transverse, 8.0) > 0.1);
 
-        report.subsection("21.5  Correlation is not a signal");
+        report.subsection("Correlation is not a signal");
         for (Kind kind : kinds)
         {
             report.check(std::format("  {:22} : correlation {:.4f}, non-zero even when closed",

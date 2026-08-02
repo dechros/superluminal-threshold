@@ -5,20 +5,20 @@
 namespace slm
 {
 
-    /// The two-layer definition of the massive particle.
+    /// Gaussian wave packet carried through a slab of mode-dependent
+    /// transmission.
     ///
-    /// The model computes with a wave packet, a narrow bundle of modes of the
-    /// massive field, and speaks in the language of a point body. The two are
-    /// not interchangeable, and the threshold is where they come apart: since
-    /// transmission depends on the mode, the slab reweights the packet, and the
-    /// body that leaves is not built from the same modes as the body that
-    /// arrived.
+    /// The packet is Gaussian in the transverse wavenumber. Because
+    /// transmission depends on the mode, the slab reweights it, so the outgoing
+    /// packet is not built from the same modes as the incoming one. These
+    /// functions compare the two distributions: transmitted weight, shift of
+    /// the centroid, and change of spread.
     ///
-    /// This class makes that statement quantitative. It carries a Gaussian
-    /// packet in the transverse wavenumber, pushes it through the slab of
-    /// section 9.4, and compares the outgoing distribution with the incoming
-    /// one. The point-body reading survives exactly when the centroid shift and
-    /// the change of spread are small against the spread itself.
+    /// Describing such a packet as a point body is exact only in the narrow
+    /// limit, where the centroid shift and the change of spread are small
+    /// against the spread itself. The weight supplied is an amplitude, so the
+    /// density is its square and the density spread is the amplitude spread
+    /// divided by the square root of two.
     class WavePacket
     {
     public:
@@ -61,7 +61,6 @@ namespace slm
     class WavePacketSection : public Section
     {
     public:
-        std::string number() const override { return "11"; }
         std::string title() const override
         {
             return "What the particle is: wave packet computed, point body spoken";

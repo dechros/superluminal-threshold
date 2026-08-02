@@ -121,7 +121,7 @@ namespace slm
         const double thickness = 1.0;
         const double centre = 2.0;
 
-        report.subsection("3.1  The packet is a genuine distribution over modes");
+        report.subsection("The packet is a genuine distribution over modes");
         report.check("the incoming packet carries non-zero weight",
                      WavePacket::incomingNorm(centre, 0.4) > 0.0);
         report.checkNear("its mean sits at the centre it was given",
@@ -129,7 +129,7 @@ namespace slm
         report.checkNear("its density is narrower than its amplitude by root two",
                          WavePacket::incomingSpread(centre, 0.4) - 0.4 / std::sqrt(2.0), 1e-6);
 
-        report.subsection("3.2  The slab lets only part of the packet through");
+        report.subsection("The slab lets only part of the packet through");
         for (double width : {0.1, 0.4, 1.0})
         {
             const double fraction =
@@ -140,7 +140,7 @@ namespace slm
                          fraction > 0.0 && fraction < 1.0);
         }
 
-        report.subsection("3.3  Transmission is mode selective, so the packet is reweighted");
+        report.subsection("Transmission is mode selective, so the packet is reweighted");
         const double shiftWide =
             WavePacket::centroidShiftInSpreads(centre, 1.0, thickness, c, mu, flipped);
         report.check(std::format("  a wide packet has its centroid displaced by {:.3f} spreads",
@@ -150,7 +150,7 @@ namespace slm
                      "where the slab transmits better",
                      shiftWide > 0.0);
 
-        report.subsection("3.4  The point-body reading survives only for a narrow packet");
+        report.subsection("The point-body reading survives only for a narrow packet");
         double previousShift = 1e9;
         for (double width : {1.0, 0.5, 0.25, 0.125})
         {
@@ -173,7 +173,7 @@ namespace slm
                      std::abs(WavePacket::centroidShiftInSpreads(centre, 0.02, thickness, c, mu,
                                                                  flipped)) < 0.02);
 
-        report.subsection("3.5  What the crossing costs even so");
+        report.subsection("What the crossing costs even so");
         report.check("a narrow packet still loses weight, so the body that "
                      "returns is fainter than the one that left",
                      WavePacket::transmittedFraction(centre, 0.05, thickness, c, mu, flipped) <

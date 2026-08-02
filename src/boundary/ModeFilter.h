@@ -7,17 +7,16 @@ namespace slm
 
     /// Which far-side modes grow, and which of them the threshold can inject.
     ///
-    /// Section 6.1 takes a mode on the far side, holds the data on a surface of
-    /// constant t1, and finds the coefficient of the second t1 derivative can be
-    /// positive, so that the solution grows exponentially and the initial value
-    /// problem is ill posed. That argument fixes k2, k3 and q independently of
-    /// one another.
+    /// Take a mode on the far side and hold its data on a surface of constant
+    /// t1. The coefficient of the second t1 derivative can then be positive, so
+    /// the solution grows exponentially and the initial value problem is ill
+    /// posed. That argument fixes k2, k3 and q independently of one another.
     ///
     /// A mode that arrives by crossing the threshold does not have that freedom.
     /// Matching at the surface produces a transmitted wave that solves the far
     /// side equation, so its four wavenumbers satisfy the far side dispersion
-    /// relation. The question this section settles is whether the growing modes
-    /// and the modes the threshold can inject overlap at all.
+    /// relation. Whether the growing modes and the injectable modes overlap at
+    /// all is what these functions decide.
     class ModeFilter
     {
     public:
@@ -46,7 +45,6 @@ namespace slm
     class ModeFilterSection : public Section
     {
     public:
-        std::string number() const override { return "12.2"; }
         std::string title() const override
         {
             return "The threshold as a mode filter: which far-side modes can be reached";

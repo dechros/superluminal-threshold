@@ -65,7 +65,7 @@ namespace slm
         const Matrix4 etaK = TimeOrientation::metricKleinian();
         const double pi = std::numbers::pi;
 
-        report.subsection("7.4  Region I: the timelike set falls into two pieces");
+        report.subsection("Region I: the timelike set falls into two pieces");
         const Vector4 future(1.0, 0.0, 0.0, 0.0);
         const Vector4 past(-1.0, 0.0, 0.0, 0.0);
         report.check("(1,0,0,0) is timelike", TimeOrientation::isTimelike(etaI, future));
@@ -77,7 +77,7 @@ namespace slm
                      "future and past are well defined",
                      TimeOrientation::admitsTimeOrientation(etaI));
 
-        report.subsection("7.4b  Region II: the timelike set is connected");
+        report.subsection("Region II: the timelike set is connected");
         for (int second : {1, 2})
         {
             const double worst = TimeOrientation::worstIntervalAlongRotation(etaII, 0, second);
@@ -95,16 +95,16 @@ namespace slm
         report.check("so no consistent future and past split exists in region II",
                      !TimeOrientation::admitsTimeOrientation(etaII));
 
-        report.subsection("7.4c  The intermediate Kleinian region behaves the same way");
+        report.subsection("The intermediate Kleinian region behaves the same way");
         report.check("signature (2,2) has two time directions",
                      TimeOrientation::timeDirectionCount(etaK) == 2);
         report.check("its timelike set is connected as well",
                      TimeOrientation::worstIntervalAlongRotation(etaK, 0, 1) > 0.5);
-        report.check("so the staged path of section 13.5 loses the orientation "
+        report.check("so the staged path loses the orientation "
                      "already at the first leg",
                      !TimeOrientation::admitsTimeOrientation(etaK));
 
-        report.subsection("7.4d  One time direction is exactly the condition");
+        report.subsection("One time direction is exactly the condition");
         report.check("region I, one time direction, orientation exists",
                      TimeOrientation::timeDirectionCount(etaI) == 1 &&
                          TimeOrientation::admitsTimeOrientation(etaI));

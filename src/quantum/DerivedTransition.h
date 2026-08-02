@@ -7,16 +7,14 @@ namespace slm
 
     /// Signature change as a derived consequence rather than a posited one.
     ///
-    /// In this model the transition is put in by hand at the speed of light and
-    /// is abrupt. Effective loop quantum cosmology gives a transition that is
-    /// derived instead: holonomy corrections deform the constraint algebra by a
-    /// factor that changes sign with density, so the signature follows from the
-    /// dynamics and the transition sits at a definite density rather than at a
-    /// definite speed.
+    /// A transition can be posited, abrupt and at a fixed speed, or derived
+    /// from dynamics. Effective loop quantum cosmology gives the derived case:
+    /// holonomy corrections deform the constraint algebra by a factor that
+    /// changes sign with density, so the signature follows from the dynamics
+    /// and the transition sits at a definite density.
     ///
-    /// The deformation used here is the standard one,
-    /// Omega(rho) = 1 - 2 rho / rho_c, quoted from that literature and analysed,
-    /// not derived again.
+    /// The deformation implemented is the standard Omega(rho) = 1 - 2 rho /
+    /// rho_c. It is analysed here, not derived.
     class DerivedTransition
     {
     public:
@@ -38,17 +36,15 @@ namespace slm
         static double deformationSlope(double criticalDensity);
 
         /// Number of coordinates whose causal character changes at the
-        /// transition, one for the Lorentzian to Euclidean case handled by that
-        /// literature, four for the transition assumed in this model.
+        /// transition: one for a Lorentzian to Euclidean change, four when
+        /// every coordinate changes character.
         static int changingCoordinates(bool euclideanTarget);
     };
 
-    /// Section comparing the posited transition of this model with the derived
-    /// one.
+    /// Section comparing a posited transition with a derived one.
     class DerivedTransitionSection : public Section
     {
     public:
-        std::string number() const override { return "10.10"; }
         std::string title() const override
         {
             return "A derived transition compared with the one assumed here";
