@@ -1838,6 +1838,9 @@ karşılaştırıldığında:
 | $4$ | $1{,}4629$ | $0{,}5193$ | $2{,}817$ |
 | $8$ | $1{,}4629$ | $0{,}5193$ | $2{,}817$ |
 
+Bağıl fark üç kalınlıkta da $+0{,}6449$'dur; oranın kalınlıkla oynamaması bu
+sayının sabitliği olarak da okunabilir.
+
 İkisi sayısal olarak eşit değildir, ancak **oranları kalınlıkla oynamaz**;
 artık $10^{-6}$ mertebesindedir. İki nicelik bir normalizasyon çarpanıyla
 ayrışır, farklı bir mekanizmayla değil. Sonuç açıktır:
@@ -2610,6 +2613,7 @@ düzlemde döndüğü** buradan çıkarılabilir, çıkış anına bakılarak. B
 
 İçeride süpürülen açı süreklidir; dönme açısı serbest bir parametredir ve
 birbirine ne kadar yakın iki değer seçilirse seçilsin farklı iki yol elde edilir.
+Örnek olarak, çeyrek turluk bir dönme $1{,}1102$ radyan süpürür.
 Buna karşılık buraya ulaşan sapma, Bölüm 18.9'un nicelenmiş tayfının bir
 elemanıdır ve momentum $(1,2,3)$ için o tayf **üç** değerlidir.
 
@@ -2669,7 +2673,10 @@ Sonuç doğrudan çıkıyor:
 > geçirgenlik görür. Buna karşılık yer çekimi bağlaşımı sıfır değildir.
 
 Yani hiçbir şeyin geçemediği bir ara bölgede bile yer çekimi bağlantısı durur.
-Bu, kapalı bir bölgenin kapatamadığı tek kanaldır.
+Bu, kapalı bir bölgenin kapatamadığı tek kanaldır. Sayısal olarak, bölge kapalı
+tutulduğunda bile korelasyon Kleinian ara bölgede $0{,}4045$, Öklid ara bölgede
+$0{,}7588$ değerindedir; sıfır değildir ve Öklid durumda daha büyüktür, çünkü
+katman gücü orada daha yüksektir.
 
 ### 19.3 İki kanal birbirine ters çalışıyor
 
@@ -2680,6 +2687,10 @@ gider. Alan geçirgenliği ise Kleinian bölgede kalınlıkla kapanmaz.
 |------------------------|-------------------|-------------|
 | Kleinian | Zayıflar | Açık kalır |
 | Öklid | Zayıflar | Kapanır |
+
+Kleinian bölgede geçiş doğrultusundaki grup hızı $0{,}8872\,c$, Öklid bölgede
+$0{,}7993\,c$'dir; ikisi de ışığın altındadır, dolayısıyla açık kalan alan
+kanalı da hiçbir şeyi ışıktan hızlı taşımaz.
 
 İnce bir ara bölge yer çekimiyle konuşmaya, kalın bir Kleinian ara bölge ise
 alanla konuşmaya elverişlidir. İkisini aynı anda güçlü isteyen bir düzenek
@@ -3146,6 +3157,8 @@ ne bölüm numarası ne kaynak numarası bulunur.
 | Sylvester engeli ve itirazların hesabı | `src/critique/SylvesterObstruction`, `src/critique/ObjectionTests`, `src/critique/AlternativeRoutes` |
 | Anlaşmazlıkların uzlaşan ve çelişen olarak ayrılması | `src/critique/Reconciliation` |
 | Literatürün bıraktığı soruların sınıflandırılması | `src/critique/OpenQuestions` |
+| Literatürün bütün itirazlarının sicili ve hükümleri | `src/critique/LiteratureObjections` |
+| Rakip yaklaşımların ortak formülleri | `src/critique/CommonFormulas` |
 
 **Sayısal güvenilirlik.** Modelin matrislerinin büyük kısmı tamsayı girdilidir
 ($0, +1, -1$) ve bu girdiler ikilik tabanda tam temsil edildiğinden permütasyon,
@@ -3160,6 +3173,55 @@ değil yorum niteliğindeydi.
 
 Elle yapılan iki hesap, parite argümanı ve boyut sayımı, cebirsel kontrolde
 **yanlış çıktı** ve düzeltildi. Modelin bugünkü hâli bu düzeltmeleri içerir.
+
+### 22.1 Denetim: hesaplanan her sayı makaleye ulaşıyor mu
+
+Kütüphaneler makaleden daha çok sayı üretmektedir ve bu, sessizce bırakılan bir
+sonucun makaleye hiç girmemesi anlamına gelebilir. Bu nedenle makinece bir
+denetim yapılmıştır: test takımının çıktısındaki üç ya da daha çok ondalıklı her
+sayı toplanmış, makale metninde aranmış, bulunmayanlar tek tek incelenmiştir.
+
+Denetim üç turda yürütülmüştür. Birinci turda $43$ sayı makaleye ulaşmıyordu.
+İkinci turda bu sayı $32$, üçüncü turda $23$'e indi. Şu anda kütüphanelerin
+ürettiği $172$ farklı sayıdan $23$'ü makalede geçmemektedir.
+
+Kalan $23$'ün tamamı **girdi ya da ara değerdir**, sonuç değil: sonda değerleri
+(kütle kabuğunun sabitlediği dalga sayıları, örnek ayrımlar, yol uzunlukları) ve
+$\pi$, $\sqrt{2}$, $\sqrt{3}$ gibi standart sabitler. Denetim sırasında makaleye
+eklenen gerçek sonuçlar şunlardı: çekirdek eşlemenin üç örnek olayı, yayılımlı
+rejimde faz ile yarı klasik okumanın tam örtüşmesi, kapalı bölgede yer çekimi
+korelasyonunun değerleri, Kleinian ve Öklid bölgelerin grup hızları, süpürülen
+açının bir örneği ve oyalanma karşılaştırmasındaki bağıl fark.
+
+### 22.2 Denetim: her kaynak ya yeniden üretilmiş ya da itibara alınmıştır
+
+İkinci denetim kaynakçayadır ve sorusu şudur: bir kaynağın merkezi hesaplanabilir
+iddiası burada **kendi araçlarımızla yeniden üretilmiş** midir, yoksa
+hesaplanmadan **itibara mı alınmıştır**. İkisi karıştırılmamalıdır; itibara
+alınan bir sonucun doğruluğu bu çalışmanın güvencesi altında değildir.
+
+Bu denetimin bulduğu en ağır eksik, **kaynakça boşluğuydu**. Makalenin en çok
+yaslandığı dokuz kaynak metinde kavram olarak kullanılıyor ama kaynakçada yer
+almıyordu: oyalanma süresi tartışması, zamansal olmayan kabukların enerji
+koşulları, imza değiştiren zarlar, korunum yasaları tartışmasının dört raundu,
+ve çok zamanlı tutarlılık. Dokuzu da eklenmiştir; kaynakça $41$'den $50$'ye
+çıkmıştır.
+
+| Sınıf | Kaç kaynak | Ne anlama gelir |
+|-------|------------|------------------|
+| Kendi araçlarımızla yeniden üretilmiş | $17$ | Merkezi hesaplanabilir iddiası `src/` altında bağımsız olarak kurulmuş ve sayısı karşılaştırılmıştır |
+| İtibara alınmış | $24$ | Sonucu kullanılmış, burada yeniden hesaplanmamıştır |
+| Yalnızca bağlam | $9$ | Bir sonuç için değil, konumlandırma için anılmıştır |
+
+Yeniden üretilenler, kütüphanelerin karşılık geldiği kaynaklardır: permütasyon
+sayımı, öz-eşlenik sınır koşulu ailesi, başlangıç değer problemi, dejenere yol,
+iki zamanlı indirgeme, tachyonic komütatör, Casimir, vakum Cherenkov sınırı,
+Maxwell alanı, eklem koşulu ve enerji koşulları, oyalanma süresi, ve çok zamanlı
+sıfır eğrilik ölçütü.
+
+> İtibara alınanların sayısı yeniden üretilenlerin sayısını **aşmaktadır**. Bu
+> bir eksiklik olarak kaydedilir. Bu çalışmanın kendi güvencesi altındaki alan,
+> makalenin dayandığı alandan dardır.
 
 ---
 
@@ -3394,7 +3456,18 @@ $z$ enine yer değiştirmelerdir. Her dördü de öte taraftaki durumdan hesapla
 | $y,\, z$ | Paket merkezinin kayması, yönelimin enine bileşenlerine dağıtılmış |
 
 Taranan $312$ durumun tamamı sonlu ve belirli bir olaya gider; eşlemede tanımsız
-nokta yoktur.
+nokta yoktur. Üç örnek durum, eşlemenin ne verdiğini somutlaştırır ($d = 2$,
+uzunluk kütle kabuğundan):
+
+| Kutup açısı | $t$ | $x_{\perp}$ | $(y,\, z)$ |
+|-------------|-----|--------------|-------------|
+| $0{,}4$ | $11{,}9350$ | $2{,}0000$ | $(+0{,}0015,\; +0{,}0041)$ |
+| $1{,}2$ | $4{,}9866$ | $2{,}0000$ | $(+0{,}0037,\; +0{,}0016)$ |
+| $2{,}5$ | $7{,}7660$ | $2{,}0000$ | $(+0{,}0024,\; -0{,}0036)$ |
+
+Geçiş doğrultusundaki yer değiştirme üçünde de aynıdır, çünkü yalnızca dalı
+görür; geçen süre ile enine yer değiştirmeler ise yönelimle birlikte
+değişmektedir.
 
 ### 25.3 Hangi koordinat durumun neyini görür
 
@@ -3604,6 +3677,11 @@ okumalar tek bir fonksiyondan gelir; farkları yalnızca hangi parametreye göre
 türev alındığıdır. Frekansa göre türev $1{,}462864$, engel yüksekliğine göre
 türev $0{,}519317$ verir. Aynı fonksiyon, iki parametre.
 
+**Ek gözlem: yayılımlı rejimde okumalar birleşir.** Ara bölge yokken faz
+okuması ile yarı klasik okuma tam olarak aynı sayıyı verir: $d = 2$ için
+$2{,}1553$, $d = 8$ için $8{,}6211$. Yani Bölüm 14.11'deki ayrışma yönteme
+değil, engele aittir.
+
 **Dört: dağılım bağıntısı, iki imza.** Bizim imzamız ile öte taraf, geçiş
 yönüne metriğin verdiği **işaretin** iki değeridir. Kütle kabuğunun eşikte
 sürekli olmasının nedeni budur: iki ayrı kuram değil, bir işaretin iki değeri.
@@ -3722,3 +3800,15 @@ sessiz kalmak yerine hangi ölçümün karar vereceğini söylemektedir.
 39. A. Sen, F. Del Santo. *Superluminal transformations and indeterminism*. arXiv:2601.15263
 40. A. Sen, M. Salzger, Ł. Rudnicki. *Superluminal quantum reference frames*. arXiv:2506.11787
 41. M. Sienicki, K. Sienicki. *From kinematics to interference: operational requirements for the quantum principle of relativity*. arXiv:2512.05164
+
+**Geçiş süresi, eklem koşulu tartışması ve çok zamanlı tutarlılık**
+
+42. H. G. Winful. *Do single photons tunnel faster than light?*. arXiv:0708.3889
+43. H. Maeda. *Energy conditions for non-timelike thin shells*. Class. Quantum Grav. **40** (2023) 195009. arXiv:2306.07326
+44. M. Mars, J. M. M. Senovilla, R. Vera. *Lorentzian and signature changing branes*. Phys. Rev. D **76** (2007) 044029. arXiv:0705.3380
+45. C. Hellaby, T. Dray. *Failure of standard conservation laws at a classical change of signature*. Phys. Rev. D **49** (1994) 5096. arXiv:gr-qc/9404001
+46. S. A. Hayward. *Comment on "Failure of standard conservation laws at a classical change of signature"*. Phys. Rev. D **52** (1995) 7331. arXiv:gr-qc/9606045
+47. C. Hellaby, T. Dray. *Reply comment: comparison of approaches to classical signature change*. Phys. Rev. D **52** (1995) 7333. arXiv:gr-qc/9601040
+48. S. A. Hayward. *Comment on "Comparison of approaches to classical signature change"*. arXiv:gr-qc/9606044
+49. M. Lienert, S. Petrat, R. Tumulka. *Multi-time wave functions versus multiple timelike dimensions*. Found. Phys. **47** (2017) 1582. arXiv:1708.03376
+50. D.-A. Deckert, L. Nickel. *Consistency of multi-time Dirac equations with general interaction potentials*. J. Math. Phys. **57** (2016) 072301. arXiv:1603.02538
