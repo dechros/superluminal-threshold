@@ -42,6 +42,7 @@
 #include "quantum/CanonicalQuantization.h"
 #include "quantum/CasimirDiscriminant.h"
 #include "quantum/DerivedTransition.h"
+#include "quantum/LapseContour.h"
 #include "quantum/PathIntegral.h"
 #include "quantum/VacuumCasimir.h"
 #include "rest/SuperluminalRest.h"
@@ -81,6 +82,7 @@ namespace
         sections.push_back(std::make_unique<slm::SphericalSolution>());
         sections.push_back(std::make_unique<slm::CanonicalQuantization>());
         sections.push_back(std::make_unique<slm::PathIntegral>());
+        sections.push_back(std::make_unique<slm::LapseContourSection>());
         sections.push_back(std::make_unique<slm::DerivedTransitionSection>());
         sections.push_back(std::make_unique<slm::VacuumCasimir>());
         sections.push_back(std::make_unique<slm::CasimirDiscriminantSection>());
