@@ -1,5 +1,5 @@
 # ============================================================================
-#  superluminal-signature-change
+#  superluminal-threshold
 # ----------------------------------------------------------------------------
 #  Kaynaklar ayri ayri derlenip .o olarak build/obj altinda tutulur; boylece
 #  hem paralel derleme (-j) hem de artimli derleme mumkun olur. Tek bir g++
