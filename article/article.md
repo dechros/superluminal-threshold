@@ -8,16 +8,61 @@
 
 ## Özet
 
-[YAZILACAK] Gidiş dönüş tezine göre yeniden yazılacak. Eski özet eşiğin
-yansıtıcı olduğunu söylüyordu; yeni özet geçirgen olduğunu söyleyecek.
+Bu çalışmanın konusu, kütleli bir parçacığın ışık hızı eşiğini geçip öte
+tarafta bulunması ve geri dönmesidir. Sorulan altı soru şudur: bizim bölgemiz
+nedir, ara bölge nedir, öte taraf nedir, madde bu üçünde ne demektir, gidip
+gelen ne kaybeder, ve orada olanlar burada ne anlama gelir.
+
+Model iki bölge değil **üç** bölge üzerine kuruludur. Aradaki geçiş bir yüzey
+değil, kendi kalınlığı ve kendi imzası olan bir bölgedir; hesaplar bu bölgenin
+dört tipi ve beş kalınlığı için ayrı ayrı yürütülür ve hiçbiri baştan seçilmez.
+
+Eşik geçirgen kabul edilir. Bu, zayıf eklem koşulunun seçilmesidir ve bedeli
+açıkça ödenir: geçiş yüzeyinde bir madde katmanı doğar, gücü kalınlığın tersiyle
+gider, ve yalnızca özel olarak ayarlanmış bir profilde tümüyle kaybolur.
+
+Parçacık iki okumayla birden taşınır. Hesap dalga paketiyle yapılır, anlatım
+nokta cisimle; aradaki sözlük kurulur ve nokta cisim okumasının dar paket
+limitinde **tam** olduğu gösterilir.
+
+Ana sonuçlar şunlardır. Öte tarafta öngörü, oradan bakıldığında çöker ama
+**eşikten gelen hiçbir şey için** çökmez, çünkü kütle kabuğu üzerindeki bir
+modun büyüme katsayısı özdeş olarak negatiftir. Dönüş anı içeride taşınan bir
+saatten değil, geçiş genliğinin fazından okunur; engel rejiminde kalınlığa
+doymuş hâle gelir, o bilgiyi frekans karışımı taşır. Gidiş dönüşte enerji,
+sürat ve kütle **tam olarak** korunur; korunmayan şey yöndür. Öte tarafta
+fiziksel içeriği olmayan bir ayar dönmesi, bu tarafta bedelsiz bir sapma
+olarak görünür ve sapma açıları sürekli değil, sonlu bir kümeden gelir.
+Kapalı bir ara bölgenin kapatamadığı tek kanal yer çekimidir ve o kanal sinyal
+taşır.
+
+Çalışmanın ayırt edici öngörüsü, geri tepen bir hedef olmaksızın gerçekleşen,
+açıları ayrık bir esnek sapmadır.
+
+Neyin gösterilmediği de kaydedilir: dokuz olası sonucun yedisi sıradan
+fiziğinkiyle aynı ölçümü verir, tayf üzerindeki olasılık dağılımı
+hesaplanmamıştır, ve yer çekimi kanalının kapasitesi bilinmemektedir.
 
 ---
 
 ## Modelin maddeleri
 
-[YAZILACAK] Eski yedi madde listesinin yedincisi "eşik yansıtıcıdır"
-diyordu ve artık geçersizdir. Liste gidiş dönüş omurgasına göre
-yeniden kurulacak.
+1. Bölge sayısı üçtür: bizim taraf, ara bölge, öte taraf.
+2. Ara bölgenin **neyden yapıldığı** ile **ne kadar kalın olduğu** bağımsız iki
+   sorudur; sıfır kalınlıkta tip önemsizdir, ara bölge yokken kalınlık
+   önemsizdir.
+3. Eşik geçirgendir. Bu zayıf eklem koşulunun sonucudur ve bedeli, gücü
+   kalınlığın tersiyle giden bir madde katmanıdır.
+4. Parçacık hem dalga paketi hem nokta cisimdir; ikinci okuma dar paket
+   limitinde tamdır.
+5. Öte taraf kendi içinde kötü konumlanmıştır, ancak eşikten erişilebilir olan
+   alt kümesi değildir.
+6. Dönüş anı süreden değil fazdan okunur ve engel rejiminde kalınlığa doyar.
+7. Gidiş dönüşte enerji, sürat ve kütle korunur; yön korunmaz.
+8. Öte taraftaki bir ayar dönmesi burada bedelsiz bir sapmadır, ve sapma
+   açıları niceliklenmiştir.
+9. Yer çekimi, hiçbir alanın geçemediği bir ara bölgede bile bağlanır ve sinyal
+   taşır.
 
 ---
 
