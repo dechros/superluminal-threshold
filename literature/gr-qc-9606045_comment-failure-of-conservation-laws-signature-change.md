@@ -362,7 +362,7 @@ signature-changing Einstein equations and that his form involves a rescaling.
 That is the crack the weak branch lives in, and it is a narrow one. The article
 should state Hayward's derivation in full, concede that it is a derivation and
 not a preference, and then say precisely which step it declines and why. Note
-also his own concession elsewhere, in gr-qc/9606044 section IV: a term such as
+also the rate condition he gives in gr-qc/9606044 section IV: a term such as
 $[a']\delta/N$ is zero if $a' = O(N)$ as $N \to 0$, which is the only route by
 which a nonvanishing normal derivative survives, and it recovers the strong
 condition as a limit rather than evading it.

@@ -19,7 +19,7 @@ figures: 0
 
 **Authors:** Sean A. Hayward
 
-**Source:** https://arxiv.org/abs/gr-qc/9606044 — arXiv LaTeX source (gr-qc-9606044.tex); equations preserved as LaTeX
+**Source:** https://arxiv.org/abs/gr-qc/9606044 - arXiv LaTeX source (gr-qc-9606044.tex); equations preserved as LaTeX
 
 ## Abstract
 

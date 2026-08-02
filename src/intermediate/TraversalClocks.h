@@ -95,6 +95,23 @@ namespace slm
         /// interpretation there.
         static int unsaturatedReadingCount(IntermediateRegion::Kind kind, double omega, double c,
                                            double mu, double transverseSquared);
+
+        /// Speed a given reading implies, in units of the speed of light.
+        /// Above one the reading says the crossing outran light; below one it
+        /// says the crossing fell behind it.
+        static double speedInLightUnits(double reading, double thickness, double c);
+
+        /// How many of the five readings imply a crossing faster than light at
+        /// a given thickness. The readings do not agree on this, which is why
+        /// the comparison has to be made reading by reading rather than once.
+        static int readingsFasterThanLight(IntermediateRegion::Kind kind, double omega, double c,
+                                           double mu, double transverseSquared, double thickness);
+
+        /// Whether the readings agree with one another on the sign of the
+        /// comparison with light, which they do not in the barrier regime.
+        static bool readingsAgreeAgainstLight(IntermediateRegion::Kind kind, double omega, double c,
+                                              double mu, double transverseSquared,
+                                              double thickness);
     };
 
     /// Section computing every reading of the crossing time side by side.

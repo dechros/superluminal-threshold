@@ -135,6 +135,42 @@ namespace slm
         return count;
     }
 
+    double TraversalClocks::speedInLightUnits(double reading, double thickness, double c)
+    {
+        if (reading <= 0.0 || c <= 0.0)
+        {
+            return 0.0;
+        }
+        return thickness / (reading * c);
+    }
+
+    int TraversalClocks::readingsFasterThanLight(IntermediateRegion::Kind kind, double omega,
+                                                 double c, double mu, double transverseSquared,
+                                                 double thickness)
+    {
+        const double readings[] = {
+            TwoCrossings::returnDelay(kind, omega, c, mu, transverseSquared, thickness),
+            DwellTime::dwellTime(kind, omega, c, mu, transverseSquared, thickness),
+            rotationComponent(kind, omega, c, mu, transverseSquared, thickness),
+            alignmentComponent(kind, omega, c, mu, transverseSquared, thickness),
+            semiclassicalTime(kind, omega, c, mu, transverseSquared, thickness)};
+        int count = 0;
+        for (double reading : readings)
+        {
+            count += speedInLightUnits(reading, thickness, c) > 1.0 ? 1 : 0;
+        }
+        return count;
+    }
+
+    bool TraversalClocks::readingsAgreeAgainstLight(IntermediateRegion::Kind kind, double omega,
+                                                    double c, double mu, double transverseSquared,
+                                                    double thickness)
+    {
+        const int fast =
+            readingsFasterThanLight(kind, omega, c, mu, transverseSquared, thickness);
+        return fast == 0 || fast == 5;
+    }
+
     void TraversalClocksSection::run(Report &report) const
     {
         using Kind = IntermediateRegion::Kind;
@@ -234,6 +270,65 @@ namespace slm
                                                                    mu, transverse, 8.0) -
                                TraversalClocks::semiclassicalTime(Kind::Euclidean, barrierOmega, c,
                                                                   mu, transverse, 8.0))) < 1e-2);
+
+        report.subsection("Each reading measured against light, which is what the "
+                          "comparison is for");
+        for (double thickness : {4.0, 16.0})
+        {
+            report.check(
+                std::format("  d = {:5g} : phase {:6.3f} c, dwell {:6.3f} c, rotation {:6.3f} c, "
+                            "alignment {:6.3f} c, semiclassical {:6.3f} c",
+                            thickness,
+                            TraversalClocks::speedInLightUnits(
+                                TwoCrossings::returnDelay(Kind::Euclidean, barrierOmega, c, mu,
+                                                          transverse, thickness),
+                                thickness, c),
+                            TraversalClocks::speedInLightUnits(
+                                DwellTime::dwellTime(Kind::Euclidean, barrierOmega, c, mu,
+                                                     transverse, thickness),
+                                thickness, c),
+                            TraversalClocks::speedInLightUnits(
+                                TraversalClocks::rotationComponent(Kind::Euclidean, barrierOmega, c,
+                                                                   mu, transverse, thickness),
+                                thickness, c),
+                            TraversalClocks::speedInLightUnits(
+                                TraversalClocks::alignmentComponent(Kind::Euclidean, barrierOmega,
+                                                                    c, mu, transverse, thickness),
+                                thickness, c),
+                            TraversalClocks::speedInLightUnits(
+                                TraversalClocks::semiclassicalTime(Kind::Euclidean, barrierOmega, c,
+                                                                   mu, transverse, thickness),
+                                thickness, c)),
+                std::isfinite(TraversalClocks::speedInLightUnits(
+                    DwellTime::dwellTime(Kind::Euclidean, barrierOmega, c, mu, transverse,
+                                         thickness),
+                    thickness, c)));
+        }
+        report.check(std::format("  {} of the five readings put the crossing above the speed of "
+                                 "light and the remaining {} put it below",
+                                 TraversalClocks::readingsFasterThanLight(
+                                     Kind::Euclidean, barrierOmega, c, mu, transverse, 16.0),
+                                 5 - TraversalClocks::readingsFasterThanLight(
+                                         Kind::Euclidean, barrierOmega, c, mu, transverse, 16.0)),
+                     TraversalClocks::readingsFasterThanLight(Kind::Euclidean, barrierOmega, c, mu,
+                                                              transverse, 16.0) > 0);
+        report.check("the readings do not agree on which side of light the crossing "
+                     "falls, so the comparison with light is not a property of the "
+                     "region either and has to be made reading by reading",
+                     !TraversalClocks::readingsAgreeAgainstLight(Kind::Euclidean, barrierOmega, c,
+                                                                 mu, transverse, 16.0));
+        report.check("the split is not an accident of thickness: it is the same at "
+                     "four and at sixteen",
+                     TraversalClocks::readingsFasterThanLight(Kind::Euclidean, barrierOmega, c, mu,
+                                                              transverse, 4.0) ==
+                         TraversalClocks::readingsFasterThanLight(Kind::Euclidean, barrierOmega, c,
+                                                                  mu, transverse, 16.0));
+        report.check("the three readings that saturate are the three that outrun "
+                     "light, and they saturate for the same reason they outrun it",
+                     TraversalClocks::readingsFasterThanLight(Kind::Euclidean, barrierOmega, c, mu,
+                                                              transverse, 16.0) ==
+                         5 - TraversalClocks::unsaturatedReadingCount(Kind::Euclidean, barrierOmega,
+                                                                       c, mu, transverse));
 
         report.subsection("What that costs the fast reading");
         report.check("the saturation is a property of two readings and not of the "

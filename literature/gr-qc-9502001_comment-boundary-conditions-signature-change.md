@@ -10,22 +10,22 @@ doi: ""
 comments: "4 pages. TeX."
 url: https://arxiv.org/abs/gr-qc/9502001
 stance: opposition
-body_source: "arXiv LaTeX kaynagi (gr-qc-9502001.tex) — denklemler LaTeX olarak korundu"
+body_source: "arXiv LaTeX source (gr-qc-9502001.tex); equations preserved as LaTeX"
 equation_blocks: 3
 figures: 0
 ---
 
 # COMMENT ON ``BOUNDARY CONDITIONS FOR THE SCALAR FIELD IN THE PRESENCE OF SIGNATURE CHANGE''
 
-**Yazarlar:** Sean A. Hayward
+**Authors:** Sean A. Hayward
 
-**Kaynak:** https://arxiv.org/abs/gr-qc/9502001 — arXiv LaTeX kaynagi (gr-qc-9502001.tex) — denklemler LaTeX olarak korundu
+**Source:** https://arxiv.org/abs/gr-qc/9502001 - arXiv LaTeX source (gr-qc-9502001.tex); equations preserved as LaTeX
 
 ## Abstract
 
 Fundamental errors exist in the above-mentioned article, which attempts to justify previous erroneous claims concerning signature change. In the simplest example, the authors' proposed ``solutions'' do not satisfy the relevant equation, as may be checked by substitution. These ``solutions'' are also different to the authors' originally proposed ``solutions'', which also do not satisfy the equation. The variational equations obtained from the authors' ``actions'' are singular at the change of signature. The authors' ``distributional field equations'' are manifestly ill defined.
 
-## Tam metin
+## Full text
 
 ```latex
 %Paper: gr-qc/9502001
