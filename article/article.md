@@ -1962,7 +1962,50 @@ söylemez. Tablo koşulludur: olursa ne görünür, onu verir. Dönmenin hangi
 koşullarda ve hangi açıyla gerçekleştiği, yani hücreler arasındaki olasılık
 dağılımı, hesaplanmamıştır ve modelin en büyük eksiğidir.
 
-### 18.6 Hücreler arasındaki dağılım: çatal
+### 18.6 Çıkış yüzünü ne belirliyor
+
+Bölüm 8.5'in iki etiketinden biri çıkış yüzüydü ve orada bağımsız bir etiket
+gibi ele alındı. Değil.
+
+**Kurulum.** Ara bölgeyi geçmek, öte tarafın tek uzay ekseni boyunca hareket
+etmektir. Hangi yüzden çıkıldığı, o eksendeki dalga sayısının **işaretiyle**
+belirlenir.
+
+**Kütle kabuğu büyüklüğü sabitler, işareti serbest bırakır.** Dispersiyon
+bağıntısı $q$ ile $-q$ arasında ayrım yapmaz; üç ayrı dalga sayısında her iki
+dalın da bağıntıyı sıfır artıkla sağladığı doğrulanmıştır.
+
+**Yönelim büyüklüğü belirler, dalı belirlemez.** Enerji vektörünün yönünü
+uzunluğunu değiştirmeden çevirmek, geçiş dalga sayısını değiştirmez. Üç ayrı
+uzunlukta doğrulanmıştır.
+
+**Öte tarafın dal seçecek bir aracı yoktur.** Bir dalı seçmek, dışarı giden
+dalga koşulu koymaktır; o koşul bir zaman yönelimi gerektirir ve öte tarafta
+zaman yönelimi yoktur (Bölüm 8). Bu, Bölüm 4'te iki genliğin birden tutulmasının
+nedeniyle aynı nedendir.
+
+**Ve dal bizim enerjimizdir.** Bölüm 16.1'de öte tarafın tek momentumunun bizim
+enerjimiz olduğu gösterilmişti. Geçiş dalga sayısı tam olarak o slottur.
+Dolayısıyla:
+
+> "Hangi yüzden çıktı" sorusu ile "enerjisinin işareti ne" sorusu **aynı
+> sorudur**.
+
+Karşı yüzden dönüş, bize başka bir yerden gelmiş gibi değil, **negatif
+enerjiyle** gelmiş gibi görünür.
+
+Bu, tabloyu iki yerden değiştirir. Çıkış yüzü ile yönelim bağımsız etiketler
+değildir, ikisi de aynı vektörün parçalarıdır. Ve "hiç çıkmaz" satırının yanına
+üçüncü bir okuma girer: negatif enerjili bir varış, sıradan bir gözlemciye
+parçacık yerine karşıparçacık gibi görünebilir, ki bu literatürdeki çift
+yaratımı okumasıyla aynı yere düşer.
+
+**Çekince.** Bu bölümde hesaplanan şey, dispersiyon bağıntısının iki dalı da
+kabul ettiği ve yönelim yönünün geçiş dalga sayısını değiştirmediğidir. "Öte
+taraf dal seçemez" ifadesi bir hesap değil, zaman yöneliminin yokluğundan çıkan
+bir muhakemedir; dayanağı Bölüm 8'de hesaplanmıştır.
+
+### 18.7 Hücreler arasındaki dağılım: çatal
 
 Yukarıdaki tablo hangi sonucun ne göründüğünü söyler, hangisinin gerçekleşeceğini
 söylemez. Bu bölüm o eksiği kapatır ve cevabın ikiye ayrıldığını bulur.
@@ -2017,7 +2060,7 @@ Ayrıca "hiç çıkmaz" satırının sıfır olması, geçişin kayıpsız oldu�
 dayanır. Bölüm 3.4'teki madde katmanı geçişi sönümlü kılarsa bu satır sıfır
 olmaktan çıkar.
 
-### 18.7 Çatalın kapanması: dönme nicelenmiştir
+### 18.8 Çatalın kapanması: dönme nicelenmiştir
 
 Önceki bölümün iki ucu da varsayımdı. Modelin içinde, varsayım gerektirmeyen
 üçüncü bir cevap zaten duruyor.
@@ -2061,7 +2104,7 @@ bir grup oluşturur.
 çalışmada gösterilmemiştir. Tayf hesaplanmıştır, tayf üzerindeki olasılık
 dağılımı hesaplanmamıştır.
 
-### 18.8 İşaret sorusunun yeniden okunması
+### 18.9 İşaret sorusunun yeniden okunması
 
 Aşağıdaki tartışma bu sözlüğün bir parçasıdır ve sonucu tersine dönmüştür.
 Eski kuruluşta iki bölgedeki okların bağıl işareti prensip olarak ölçülemezdi,

@@ -22,6 +22,7 @@
 #include "particle/AsymmetricFaces.h"
 #include "particle/CellDistribution.h"
 #include "particle/EnergyBookkeeping.h"
+#include "particle/ExitFace.h"
 #include "particle/StateTable.h"
 #include "particle/RoundTrip.h"
 #include "particle/WavePacket.h"
@@ -66,6 +67,7 @@ namespace
         sections.push_back(std::make_unique<slm::SphericalSolution>());
         sections.push_back(std::make_unique<slm::RoundTripSection>());
         sections.push_back(std::make_unique<slm::EnergyBookkeepingSection>());
+        sections.push_back(std::make_unique<slm::ExitFaceSection>());
         sections.push_back(std::make_unique<slm::StateTableSection>());
         sections.push_back(std::make_unique<slm::CellDistributionSection>());
         sections.push_back(std::make_unique<slm::AsymmetricFacesSection>());
