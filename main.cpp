@@ -16,6 +16,7 @@
 #include "field/TimeOrientation.h"
 #include "horizon/BlackHoleHorizon.h"
 #include "horizon/DegeneratePath.h"
+#include "horizon/LayerEnergyConditions.h"
 #include "horizon/SurfaceLayer.h"
 #include "intermediate/DwellTime.h"
 #include "intermediate/IntermediateRegion.h"
@@ -60,6 +61,7 @@ namespace
         sections.push_back(std::make_unique<slm::ThresholdSurface>());
         sections.push_back(std::make_unique<slm::JunctionScattering>());
         sections.push_back(std::make_unique<slm::SurfaceLayerSection>());
+        sections.push_back(std::make_unique<slm::LayerEnergyConditionsSection>());
         sections.push_back(std::make_unique<slm::CausalCrossingSection>());
         sections.push_back(std::make_unique<slm::SlabTunnellingSection>());
         sections.push_back(std::make_unique<slm::DegeneratePathSection>());

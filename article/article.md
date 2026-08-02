@@ -28,7 +28,9 @@ dört tipi ve beş kalınlığı için ayrı ayrı yürütülür ve hiçbiri ba�
 
 Eşik geçirgen kabul edilir. Bu, zayıf eklem koşulunun seçilmesidir ve bedeli
 açıkça ödenir: geçiş yüzeyinde bir madde katmanı doğar, gücü kalınlığın tersiyle
-gider, ve yalnızca özel olarak ayarlanmış bir profilde tümüyle kaybolur.
+gider, ve yalnızca özel olarak ayarlanmış bir profilde tümüyle kaybolur. Bedel
+bundan da ağırdır: yüzey zamansal olmadığı için o katman baskın enerji koşulunu
+ihlal eder ve bu, madde seçimiyle onarılamaz.
 
 Parçacık iki okumayla birden taşınır. Hesap dalga paketiyle yapılır, anlatım
 nokta cisimle; aradaki sözlük kurulur ve nokta cisim okumasının dar paket
@@ -88,7 +90,8 @@ eşlemenin ya bir girdisini, ya bir kısıtını, ya da bir sonucunu kaydeder.
    sorudur; sıfır kalınlıkta tip önemsizdir, ara bölge yokken kalınlık
    önemsizdir.
 3. Eşik geçirgendir. Bu zayıf eklem koşulunun sonucudur ve bedeli, gücü
-   kalınlığın tersiyle giden bir madde katmanıdır.
+   kalınlığın tersiyle giden ve **baskın enerji koşulunu ihlal eden** bir madde
+   katmanıdır; ihlal kalınlıkla zayıflar ama kaybolmaz.
 4. Parçacık hem dalga paketi hem nokta cisimdir; ikinci okuma dar paket
    limitinde tamdır.
 5. Öte taraf kendi içinde kötü konumlanmıştır, ancak eşikten erişilebilir olan
@@ -353,7 +356,52 @@ profil gerektirir. Sıradan bir profil için katman kaçınılmazdır. Modelin d
 şudur: katman genel durumda vardır, gücü kalınlıkla azalır, ve yalnızca özel bir
 profilde tümüyle kaybolur.
 
-### 3.6 Çekinceler
+### 3.6 Katmanın enerji koşulları karşısındaki durumu
+
+Katmanın **var olması** ile **fiziksel olarak kabul edilebilir** olması ayrı iki
+sorudur. İkincisi maddenin seçimiyle değil, yüzeyin nedensel karakteriyle
+belirlenir.
+
+**Bağlayıcı olan, yüzeyin zamansal olmamasıdır.** İmzanın değiştiği bir yüzeyde
+normal, karakterini değiştirir; dolayısıyla yüzey zamansal olamaz. Zamansal
+kabuklar için kurulmuş sonuçlar bu yüzeye uygulanmaz, ve zamansal olmayan
+yüzeyler için geçerli olan kısıtlar çok daha sıkıdır.
+
+**Hesap.** Katmanın taşıdığı yüzey enerji yoğunluğu ve basıncı, geçiş profili
+ailesinin her üyesi için ayrı ayrı değerlendirilmiştir ($d = 1$):
+
+| Profil | Yoğunluk | Basınç | Sıfır (null) | Zayıf | Baskın |
+|--------|----------|--------|--------------|-------|--------|
+| Doğrusal | $-1{,}000$ | $+1{,}000$ | sağlar | sağlamaz | sağlamaz |
+| Dönüm noktasında durağan | $0$ | $0$ | katman yok | katman yok | katman yok |
+| $\tanh$ basamağı | $-1{,}000$ | $+1{,}000$ | sağlar | sağlamaz | sağlamaz |
+
+Katman taşıyan hiçbir profil baskın enerji koşulunu sağlamaz. Kaçan tek profil,
+hiç katman taşımayan durağan profildir; yani kaçış, koşulu sağlayarak değil,
+kısıtlanacak bir şey bırakmayarak gerçekleşir.
+
+**Kalınlık kurtarmıyor.** Ara bölge kalınlaştırıldığında katmanın gücü
+kalınlığın tersiyle azalır, ancak yoğunluk negatif dalda kalmaya devam eder:
+
+| Kalınlık $d$ | Yoğunluk | Baskın koşul |
+|--------------|----------|--------------|
+| $0{,}5$ | $-2{,}0000$ | sağlanmaz |
+| $1$ | $-1{,}0000$ | sağlanmaz |
+| $4$ | $-0{,}2500$ | sağlanmaz |
+| $40$ | $-0{,}0250$ | sağlanmaz |
+
+İhlal zayıflar, kaybolmaz.
+
+**Sonuç ve bunun modele maliyeti.** Zayıf eklem koşulunun bedeli, daha önce
+yazıldığı gibi yalnızca "bir madde katmanı" değildir. Bedel, **baskın enerji
+koşulunu ihlal eden** bir katmandır ve bu, daha iyi bir madde seçilerek
+onarılamaz. Geriye kalan tek çıkış yolu, dönüm noktasında durağan profildir;
+o da genel bir yapılanma değil, ince ayarlanmış bir özel durumdur.
+
+Bu, modelin geçirgen eşik okumasının en ağır bedelidir ve burada saklanmadan
+kaydedilmektedir.
+
+### 3.7 Çekinceler
 
 Üç varsayım açıkça kaydedilmelidir.
 
@@ -2816,6 +2864,7 @@ ne bölüm numarası ne kaynak numarası bulunur.
 | Ara bölge: dört tip, beş kalınlık, madde katmanı | `src/intermediate/IntermediateRegion` |
 | Eşik yüzeyi ve eklem koşullarının saçılması | `src/boundary/ThresholdSurface`, `src/boundary/JunctionScattering` |
 | Eklem koşulunun yerçekimi tarafı, dış eğrilik | `src/horizon/SurfaceLayer` |
+| Katmanın enerji koşulları karşısındaki durumu | `src/horizon/LayerEnergyConditions` |
 | Nedensel geçişin akı sorusundan ayrılması | `src/boundary/CausalCrossing` |
 | Sonlu kalınlıkta dilimden tünelleme | `src/boundary/SlabTunnelling` |
 | İmzalar arası yolun dejenerelik derecesi | `src/horizon/DegeneratePath` |
@@ -3192,7 +3241,7 @@ kararı verecek ölçüm adlandırılmıştır.
 | Çelişki | Birinci konum | İkinci konum | Kararı verecek ölçüm |
 |---------|---------------|--------------|----------------------|
 | Eklem koşulu | Güçlü koşul: geçen akı $0$ | Zayıf koşul, $d=1$ dilim: $0{,}868$ | Eşikten geçen akı |
-| Madde katmanı | Sıradan profil: katman gücü $1{,}000$ | Dönüm noktasında durağan profil: $0$ | Yüzey enerji yoğunluğu |
+| Madde katmanı | Sıradan profil: katman gücü $1{,}000$, baskın koşul ihlal | Dönüm noktasında durağan profil: $0$, ihlal yok | Yüzey enerji yoğunluğu |
 | İki duvar arasındaki Casimir | Aynı koşul: $-0{,}006854$, çekici | Karşıt koşul: $+0{,}005997$, itici | Kuvvetin işareti |
 | Karşı yüzden dönüş | Tek kuantum, enerji $-2{,}2361$ | İki kuantum, enerji $+2{,}2361$ | Çakışmalı sayım |
 
