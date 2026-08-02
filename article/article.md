@@ -1917,7 +1917,62 @@ söylemez. Tablo koşulludur: olursa ne görünür, onu verir. Dönmenin hangi
 koşullarda ve hangi açıyla gerçekleştiği, yani hücreler arasındaki olasılık
 dağılımı, hesaplanmamıştır ve modelin en büyük eksiğidir.
 
-### 18.6 İşaret sorusunun yeniden okunması
+### 18.6 Hücreler arasındaki dağılım: çatal
+
+Yukarıdaki tablo hangi sonucun ne göründüğünü söyler, hangisinin gerçekleşeceğini
+söylemez. Bu bölüm o eksiği kapatır ve cevabın ikiye ayrıldığını bulur.
+
+**Çıkış yüzü belirlidir.** Akı korunumu geçen ve yansıyan ağırlıkları verir ve
+geriye bir şey bırakmaz:
+
+| Ara bölge | Karşı yüzden | Giriş yüzünden | Hiç çıkmaz |
+|-----------|--------------|----------------|------------|
+| Kleinian | $0{,}868$ | $0{,}132$ | $0$ |
+| Öklid | $0{,}111$ | $0{,}889$ | $0$ |
+| Dejenere | $0$ | $1$ | $0$ |
+
+Kayıpsız bir bölge parçacığı yutmaz. Dolayısıyla dokuz hücrenin üçü, dönme hiç
+hesaba katılmadan önce, sıfır olasılıklıdır.
+
+**Dönme belirli değildir, ve iki okuma taban tabana zıttır.**
+
+*Ayar okuması.* Öte tarafta yönelimin fiziksel içeriği yoktur (Bölüm 16.3).
+O hâlde iki yüz arasındaki bağıl dönme öte taraf tarafından değil, eklem
+koşulları tarafından belirlenir. Simetrik bir ara bölge için dönme özdeşliktir
+ve **sapma yoktur**. Bu okumada model ayırt edici hiçbir şey öngörmez.
+
+*Bilgisizlik okuması.* Öte tarafta hiçbir yön ayrıcalıklı değildir, dolayısıyla
+çıkış yönelimi küre üzerinde düzgün dağılmıştır. Bu durumda sapma açısının
+dağılımı $\tfrac{1}{2}\sin\theta$ olur; hesaplanan ortalama sapma tam olarak
+dik açıdır ve sonuçların yarısı dik açıdan fazla sapar. Sapmasız dönüş küre
+üzerinde tek bir nokta olduğundan olasılığı sıfırdır: **geçen her parçacık
+imzayı taşır**.
+
+| Okuma | İmzanın olasılığı, Kleinian | İmzanın olasılığı, Öklid |
+|-------|------------------------------|---------------------------|
+| Ayar | $0$ | $0$ |
+| Bilgisizlik | $0{,}868$ | $0{,}111$ |
+
+**Bu çatalın değeri.** İki okuma olabilecek en uzak iki tahmini veriyor: biri
+imzayı geçirgenlik oranında öngörüyor, diğeri hiç öngörmüyor. Aradaki fark
+yorum farkı değil, **ölçülebilir** bir farktır. Geçiren ve bedelsiz sapma arayan
+tek bir deney ikisini ayırır.
+
+Bu, çalışmanın ayırt edici öngörüsünün bulunduğu yerdir ve önceki hâlinden
+farklı olarak ulaşılamaz bir yüzeye değil, ara bölgenin kendisine bağlıdır.
+
+**Çekince.** İki okumanın verdiği sıfır ve bir uçları hesaplanmış değil,
+**varsayılmıştır**: ayar okumasında dönmenin özdeşlik olması ara bölgenin
+simetrik olduğu varsayımına, bilgisizlik okumasında düzgün dağılım ise hiçbir
+yönün ayrıcalıklı olmadığı varsayımına dayanır. Hesaplanan şey, bu varsayımlar
+verildiğinde ne çıktığıdır. Hangi okumanın doğru olduğunu belirlemek eklem
+koşullarının asimetrik hâlinin çözülmesini gerektirir ve burada yapılmamıştır.
+
+Ayrıca "hiç çıkmaz" satırının sıfır olması, geçişin kayıpsız olduğu varsayımına
+dayanır. Bölüm 3.4'teki madde katmanı geçişi sönümlü kılarsa bu satır sıfır
+olmaktan çıkar.
+
+### 18.7 İşaret sorusunun yeniden okunması
 
 Aşağıdaki tartışma bu sözlüğün bir parçasıdır ve sonucu tersine dönmüştür.
 Eski kuruluşta iki bölgedeki okların bağıl işareti prensip olarak ölçülemezdi,
