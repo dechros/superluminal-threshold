@@ -318,6 +318,69 @@ Buna karşılık Bölge II'de bir **uzay oku** vardır, çünkü orada $r$ tek e
 
 Ok entropiden değil, boyut sayısından çıkar.
 
+### 7.4 Zaman yönelimi: neden öte tarafta gelecek ve geçmiş yok
+
+Yukarıdaki ifade sezgiseldir; burada kesinleştirilir. Bir bölgede tutarlı bir
+gelecek-geçmiş ayrımı yapılabilmesi için, zaman-benzeri vektörler kümesinin
+**iki ayrı bileşene** ayrılması gerekir. Ancak o zaman bileşenlerden birine
+"gelecek", diğerine "geçmiş" denebilir. Bu, tek bir pozitif yön bulunmasının
+tam karşılığıdır.
+
+**Bölge I.** $v = (1,0,0,0)$ ve $-v = (-1,0,0,0)$ vektörlerinin ikisi de
+zaman-benzeridir. Birini diğerine götüren $(x^0, x^1)$ düzlemindeki dönme
+
+$$v(\theta) = (\cos\theta,\, \sin\theta,\, 0,\, 0), \qquad
+  v(\theta)^T \eta\, v(\theta) = \cos 2\theta$$
+
+verir; bu ifade $\theta = \pi/4$'te sıfırlanır ve sonra negatife geçer. Dönme
+zaman-benzeri kümeden çıkar. Dolayısıyla iki uç aynı bileşende değildir ve
+gelecek ile geçmiş iyi tanımlıdır.
+
+**Bölge II.** Aynı dönme, $\eta' = \mathrm{diag}(+1,+1,+1,-1)$ ile
+
+$$v(\theta)^T \eta'\, v(\theta) = \cos^2\theta + \sin^2\theta = 1$$
+
+verir; aralık **hiç** değişmez ve daima pozitiftir. $\theta = \pi$'de
+$v(\pi) = -v(0)$ olur. Yani bir zaman-benzeri vektör, zaman-benzeri kümeden hiç
+çıkmadan kendi negatifine sürekli olarak taşınmıştır. Böyle bir taşıma varken
+ikili bir etiketleme yapılamaz: gelecek ile geçmiş ayrımı **yoktur**.
+
+**Ara bölge.** Bölüm 13.5'teki kademeli yolun geçtiği $(2,2)$ imzasında da
+durum aynıdır; iki pozitif yön bulunması yeterlidir. Dolayısıyla yönelim,
+kademeli yolun daha **ilk ayağında** kaybolur, ikinci ayağı beklemez.
+
+| Bölge | Zaman yönü sayısı | Zaman-benzeri küme | Gelecek/geçmiş |
+|-------|-------------------|--------------------|----------------|
+| Bölge I, $(1,3)$ | 1 | İki bileşen | Var |
+| Ara bölge, $(2,2)$ | 2 | Bağlantılı | Yok |
+| Bölge II, $(3,1)$ | 3 | Bağlantılı | Yok |
+
+Ok, entropiden değil, zaman yönü **sayısından** çıkar; ve eşik değeri birdir.
+
+**Literatürdeki karşılığı.** [16], imza değiştiren bir manifoldun geçiş
+hiperyüzeyinde, her noktadan geçen ve zaman yönünü tersine çeviren kapalı
+sözde-zaman-benzeri ilmekler bulunduğunu ispatlar. Vardıkları sonuç kelimesi
+kelimesine buradakiyle aynıdır: gelecek ve geçmiş yönlü vektörler arasında
+tutarlı bir ayrım yapılamaz.
+
+Yollar farklıdır. [16] sonucu geçiş hiperyüzeyinin geometrisinden, Lorentzian
+bölgede global hiperboliklik varsayarak elde eder; burada ise yalnızca zaman
+yönlerinin sayısından, hiperyüzey hakkında hiçbir varsayım yapmadan çıkar.
+
+İki çekince belirtilmelidir. Birincisi, [16]'nın hipotezleri bu modelin geçişi
+tarafından **sağlanmaz**: orada bir taraf Riemann imzalıdır ve dejenerelik
+transvers radikal tipindedir, buradaki doğrudan geçişte ise rank iki düşer
+(Bölüm 13.5). Ortak olan sonuçtur, ispat değildir. Buna karşılık Bölüm 13.5'in
+kademeli yolu her ayakta rank-1 dejenereliğe sahiptir, yani [15] ve [16]'nın
+geometrik çerçevesine buradan bakıldığından daha yakındır.
+
+İkincisi, [16]'nın ilmekleri alışıldık anlamda kapalı zaman-benzeri eğriler
+**değildir**: kesişim noktalarında hareket yönünün aynı olması gerekmez. Bu
+nedenle sonuç, maddenin zamanda geriye gitmesi biçiminde okunamaz. [16] kendi
+fiziksel yorumunu da verir: hiperyüzey yakınındaki bir gözlemciye böyle bir
+ilmek, iki ayrı noktada bir parçacık-karşıparçacık çiftinin yaratılması gibi
+görünebilir.
+
 **Bir itiraz.** [21], iki zamanlı dinamikte olasılık korunumu dayatıldığında
 fazladan zaman ekseninin gözlenebilirliğinin sınırlandığını gösterir: klasik
 $1+2$ boyutta Newton'un ikinci yasası tam olarak integre edilebilir ve her
@@ -1115,7 +1178,7 @@ matrislerinde irrasyonel girdiler oluşur; oralarda bir tolerans kullanılır.
 
 | Konu | Durum |
 |------|-------|
-| Üç zamanda zamanın oku | Kapandı (Bölüm 7), ok boyut sayısından çıkar |
+| Üç zamanda zamanın oku | Kapandı (Bölüm 7 ve 7.4), ok zaman yönü sayısından çıkar, eşik değeri birdir |
 | Dönüşümdeki $\pm$ işareti | Kapanamaz olduğu gösterildi (Bölüm 12) |
 | Grup yapısı | Kapandı (Bölüm 3), sorun $B$ katmanında |
 | Küresel simetrik çözüm | Kapandı (Bölüm 10), kapalı form ve yorumu |
