@@ -28,6 +28,7 @@
 #include "particle/StateTable.h"
 #include "particle/ReturnEvent.h"
 #include "particle/RoundTrip.h"
+#include "particle/TimeProjection.h"
 #include "particle/WavePacket.h"
 #include "quantum/CanonicalQuantization.h"
 #include "quantum/CasimirDiscriminant.h"
@@ -90,6 +91,7 @@ namespace
         sections.push_back(std::make_unique<slm::AlternativeRoutesSection>());
         sections.push_back(std::make_unique<slm::ReconciliationSection>());
         sections.push_back(std::make_unique<slm::FarSideMotionSection>());
+        sections.push_back(std::make_unique<slm::TimeProjectionSection>());
         sections.push_back(std::make_unique<slm::ReturnEventSection>());
         return sections;
     }

@@ -48,7 +48,15 @@ taşır.
 Çalışmanın ayırt edici öngörüsü, geri tepen bir hedef olmaksızın gerçekleşen,
 açıları ayrık bir esnek sapmadır.
 
-Eşlemenin bugünkü hâli şudur: dönüş olayının zaman bileşeni geçiş genliğinin
+Eşlemenin girdi tarafı bir koordinat sözlüğüdür. Dört yuvanın dördü de eşikte
+karakter değiştirir, ama **hareket serbestliği yuva yuva korunur**: onların üç
+zamanı bizim üç uzay yönümüzü taşır ve ikisi de serbesttir; onların tek uzay
+ekseni bizim zamanımızı taşır ve ikisi de tek yönlüdür. Tümüyle üç zamanın
+içinde kalan bir hareket, involüsyon altında bizim saatimizde **sıfır** yer
+değiştirme üretir; öte taraftaki yönelim bizim zaman eksenimize koordinat
+izdüşümüyle değil, iki yüzeydeki eşleşmenin fazıyla ulaşır.
+
+Eşlemenin çıktı tarafı şudur: dönüş olayının zaman bileşeni geçiş genliğinin
 fazından, uzay bileşenleri ise çıkış yüzü ile nicelenmiş sapmadan gelir. Öte
 taraftaki yönelim, çıkış anına üç zaman düzleminden ikisi üzerinden ulaşır ve
 çıkış yüzüne hiç ulaşmaz. Eşlemenin tanım kümesi taranmıştır ve tek yönlüdür:
@@ -2771,6 +2779,7 @@ ne bölüm numarası ne kaynak numarası bulunur.
 | Sonuçlar arasındaki dağılım | `src/particle/CellDistribution` |
 | Yüzlerin farklı olması ve nicelenmiş dönme | `src/particle/AsymmetricFaces` |
 | Öte taraftaki hareketin gözlenebilirlere etkisi | `src/particle/FarSideMotion` |
+| Koordinat sözlüğü ve üç zamanın izdüşümü | `src/particle/TimeProjection` |
 | Çekirdek eşleme: yönelimden dönüş olayına | `src/particle/ReturnEvent` |
 | Dört sinyal taşıyıcısı ve yerçekimi kanalı | `src/signal/Channels`, `src/signal/GravitationalChannel` |
 | Maxwell alanının $D$ altındaki davranışı | `src/field/MaxwellField` |
@@ -2838,12 +2847,117 @@ kaydı olarak verilmektedir.
 
 ---
 
-## 24. Çekirdek eşleme: yönelimden dönüş olayına
+## 24. Koordinat sözlüğü: nerede hareket edilir, nerede sadece yönelinir
+
+Çekirdek soru şudur: öte tarafta dört koordinatın her birinde hareket etmenin
+ya da yönelmenin bizim evrenimizdeki karşılığı nedir. Bu bölüm o sözlüğü
+kurar; Bölüm 25 sözlüğü kullanarak dönüş olayını hesaplar.
+
+### 24.1 Hangi yuva hangisini taşır
+
+İki metrik $\eta = \mathrm{diag}(1,-1,-1,-1)$ ve $\eta' = \mathrm{diag}(1,1,1,-1)$,
+involüsyon ise $(ct,x,y,z) \mapsto (z,y,x,ct)$'dir. Yuva yuva okunduğunda:
+
+| Öte tarafta yuva | Orada karakteri | Bizde hangi yuvaya iner | Burada karakteri |
+|------------------|-----------------|--------------------------|------------------|
+| $0$ | zaman | $3$ | uzay |
+| $1$ | zaman | $2$ | uzay |
+| $2$ | zaman | $1$ | uzay |
+| $3$ | **uzay** | $0$ | **zaman** |
+
+Dört yuvanın dördü de karakter değiştirir; kendi türünü koruyan tek bir
+koordinat yoktur. Doğrulanmıştır.
+
+### 24.2 Hareket sözlüğü
+
+Karakter tersine döner, ama **hareket serbestliği yuva yuva korunur**. Bu, ilk
+bakışta beklenenin tersidir ve hesabın verdiği sonuçtur.
+
+| Öte tarafta yuva | Orada | Taşıdığı yuvada, burada |
+|------------------|-------|--------------------------|
+| $0,1,2$ (üç zaman) | serbest hareket | serbest hareket (üç uzay yönümüz) |
+| $3$ (tek uzay) | tek yönlü akış | tek yönlü akış (bizim zamanımız) |
+
+Okunuşu şudur. Onlar üç zamanda serbestçe hareket eder; o üç zaman bizim üç
+uzay yönümüzdür ve biz de onlarda serbestçe hareket ederiz. Onların tek uzay
+ekseninde ilerlemek zorunludur ve yön seçilemez; o eksen bizim zamanımızdır ve
+bizim için de aynı şey geçerlidir.
+
+> **Tek yönlü zorunluluk iki tarafta da vardır ve aynı koordinattadır.** Bizim
+> zamanımızın su gibi akması ile onların tek uzay ekseninde ilerlemek zorunda
+> olmaları, tek bir olgunun iki okunuşudur.
+
+Buradan çıkan sonuç, senin evreninde "zamanda ilerlemek zorundasın" demenin,
+öte tarafta "o tek uzay ekseninde ilerlemek zorundasın" demekle aynı cümle
+olduğudur. Yer değiştiren şey zorunluluk değil, zorunluluğun hangi tür
+koordinata düştüğüdür.
+
+### 24.3 Yönelim var, hareket gözlenmez: ayar fazlalığı
+
+Üç zaman arasında bir $O(3)$ simetrisi vardır ve bu bir ayar fazlalığıdır.
+Sonucu şudur: öte tarafta enerji vektörünün **yönü** fiziksel değildir,
+yalnızca **uzunluğu** fizikseldir. Vektör döndürülebilir, ama orada bu dönmenin
+gözlenebilir bir karşılığı yoktur.
+
+Yönelimin büyüklüğünü belirleyen şey kütle kabuğudur. Uzunluk, parçacığın
+enerjisi ve kütlesiyle sabitlenir; üç zaman düzlemlerinden herhangi birinde
+döndürmek uzunluğu değiştirmez, artık $10^{-16}$ mertebesindedir.
+
+> Parçacık öte tarafta **yönünü seçebilir, uzunluğunu seçemez.**
+
+### 24.4 Üç zamandaki hareket bizim saatimizi doğrudan oynatmaz
+
+Çekirdek sorunun en can alıcı yeri budur ve cevabı iki katmanlıdır.
+
+**Doğrudan yol kapalıdır.** Tümüyle üç zamanın içinde kalan bir yer değiştirme,
+involüsyon altında bizim zaman yuvamızda **sıfır** yer değiştirme üretir. Üç
+zamanın her birinde birim adım tek tek denenmiş, üçünün de bizim saatimizdeki
+izdüşümü tam olarak sıfır çıkmıştır. Buna karşılık onların tek uzay ekseninde
+atılan bir adım, doğrudan bizim zamanımızda bir adımdır.
+
+Yani "orada zamanda yürüdüm, burada zamanda kaydım" cümlesi involüsyonun kendisi
+tarafından **desteklenmez**. Involüsyon o hareketi bizim uzayımıza gönderir.
+
+**Dolaylı yol açıktır.** Aynı enerji vektörünün bileşenleri, iki yüzeydeki
+eşleşmeye girer ve dönüş anı o eşleşmenin fazından okunur. Uzunluk sabit
+tutulup yalnızca yön değiştirildiğinde dönüş anı değişir: yönelim küresi
+tarandığında ulaşılan aralık, uzunluk $3$ için $62{,}4$ birimdir.
+
+> Öte taraftaki yönelim, bizim zaman eksenimizde **başka bir konumu işaret eder**.
+> Ama bunu koordinat izdüşümüyle değil, eşleşmenin fazıyla yapar.
+
+Bu ayrım korunmalıdır, çünkü iki farklı mekanizmadır ve biri diğerinin yerine
+kullanılamaz.
+
+### 24.5 Yönelimin komuta ettiği aralık ve sınırları
+
+| Enerji vektörünün uzunluğu | Ulaşılan dönüş anı aralığı | Bizim zamanımızı taşıyan eksen boyunca dönüş anı |
+|-----------------------------|----------------------------|---------------------------------------------------|
+| $2$ | $66{,}19$ | $2{,}2361$ |
+| $3$ | $62{,}40$ | $2{,}1082$ |
+| $5$ | $60{,}37$ | $2{,}0396$ |
+
+İki çekince kayda geçirilir.
+
+**Birincisi, aralık uzunlukla daralır, genişlemez.** Daha hızlı bir parçacık
+dönüş anı üzerinde daha **dar** bir seçim aralığına sahiptir. Bu, beklenenin
+tersidir ve hesabın sonucudur.
+
+**İkincisi, aralığın büyüklüğü yanıltıcıdır.** Aralığa hâkim olan katkı,
+yüzeye teğet geçen yönelimlerden gelir; orada normal dalga sayısı sıfıra gider
+ve gecikme ıraksar. Bu nedenle $62{,}4$ sayısı fiziksel bir manevra kabiliyeti
+değil, bir limit davranışıdır. Teğetlikten uzakta da yönelim dönüş anını
+değiştirmeye devam eder, dolayısıyla etki bir ıraksama artefaktı değildir;
+ancak büyüklüğü bu sayının verdiği izlenimden küçüktür.
+
+---
+
+## 25. Çekirdek eşleme: yönelimden dönüş olayına
 
 Önceki bölümler eşlemenin parçalarını ayrı ayrı kurdu. Bu bölüm onları tek bir
 hesapta birleştirir ve eşlemenin tanım kümesini baştan sona tarar.
 
-### 24.1 Tanım kümesi
+### 25.1 Tanım kümesi
 
 Öte taraftaki bir durum iki veriden oluşur:
 
@@ -2855,7 +2969,7 @@ hesapta birleştirir ve eşlemenin tanım kümesini baştan sona tarar.
 Dolayısıyla yönelim uzayı $S^2 \times \mathbb{Z}_2$'dir. Taramada bu uzay $312$
 duruma ayrıklaştırılmıştır.
 
-### 24.2 Değer kümesi
+### 25.2 Değer kümesi
 
 Dönüş olayı bizim bölgemizin bir noktasıdır ve giriş olayına göre dört
 koordinatı vardır:
@@ -2874,7 +2988,7 @@ $z$ enine yer değiştirmelerdir. Her dördü de öte taraftaki durumdan hesapla
 Taranan $312$ durumun tamamı sonlu ve belirli bir olaya gider; eşlemede tanımsız
 nokta yoktur.
 
-### 24.3 Hangi koordinat durumun neyini görür
+### 25.3 Hangi koordinat durumun neyini görür
 
 Eşlemenin yapısı, koordinatların birbirinden bağımsız kaynaklara bağlanmasıdır:
 
@@ -2888,7 +3002,7 @@ Bu tablonun en önemli satırı ilkidir: **parçacığın ne zaman döndüğü i
 döndüğü ayrı şeyler tarafından belirlenir.** Zaman bileşeni dala tümüyle kör,
 geçiş yer değiştirmesi ise yönelime tümüyle kördür.
 
-### 24.4 Eşleme tanım kümesini sıkıştırır
+### 25.4 Eşleme tanım kümesini sıkıştırır
 
 $312$ durum $158$ farklı olaya gitmektedir. Eşleme birebir değildir; öte
 taraftaki farklı durumlar burada aynı olaya varır. Bu sıkışma, kapsamın
@@ -2896,7 +3010,7 @@ taraftaki farklı durumlar burada aynı olaya varır. Bu sıkışma, kapsamın
 Bölüm 18.16'daki sapma tayfının sürekliden ayrığa düşmesiyle aynı olgunun bir
 başka görünümüdür.
 
-### 24.5 Zaman bileşeni ve kesintisiz bir sinyalle karşılaştırma
+### 25.5 Zaman bileşeni ve kesintisiz bir sinyalle karşılaştırma
 
 Çekirdek sorunun asıl hedefi zaman bileşenidir. Karşılaştırma ölçütü, aynı gidiş
 dönüşü ışığın yapması için gereken süredir, yani $2d/c$.
@@ -2914,7 +3028,7 @@ Dönüş anı kalınlıkla doyduğu, ışık süresi ise doymadığı için **fa
 büyür**. Bölge ne kadar kalınlaştırılırsa, dönüş olayı ışığın varabileceği
 andan o kadar öne düşer.
 
-### 24.6 Bu farkın ne olduğu, ve ne olmadığı
+### 25.6 Bu farkın ne olduğu, ve ne olmadığı
 
 Bu sonuç dikkatle okunmalıdır ve çalışmanın kendi çekincesi burada kayda geçer.
 
@@ -2931,7 +3045,7 @@ Bölüm 14.6'da açıkça bırakılmıştır.
 
 ---
 
-## 25. Anlaşmazlıkların iki türü ve hangisinin hangisi olduğu
+## 26. Anlaşmazlıkların iki türü ve hangisinin hangisi olduğu
 
 Rakip kuruluşları doğrulamak ya da yanlışlamak bir yöntemdir. Bu çalışma
 bunun yerine kapsayıcı bir yöntem izler: iki konum, bakılan yön farklı olduğu
@@ -2948,7 +3062,7 @@ içindeki ve literatürle olan anlaşmazlıklarını bu ölçüte göre ikiye ay
 parametre çevrilerek elde edilebiliyorsa uzlaşmış sayılır. İki tarafın
 birbirini ikna edebilmesi yeterli değildir.
 
-### 25.1 Tek bir madalyonun iki yüzü olan beş anlaşmazlık
+### 26.1 Tek bir madalyonun iki yüzü olan beş anlaşmazlık
 
 | Anlaşmazlık | Çevirilen parametre | Sonuç |
 |-------------|--------------------|-------|
@@ -2961,7 +3075,7 @@ birbirini ikna edebilmesi yeterli değildir.
 Beşinin hiçbiri muhakeme ile kapatılmamıştır. Her birinde iki okuma da
 hesaplanmış ve aralarındaki parametre gösterilmiştir.
 
-### 25.2 Yönteme direnen dört çelişki
+### 26.2 Yönteme direnen dört çelişki
 
 Aşağıdaki dördünde iki konum **aynı ölçüm için farklı sayılar** verir. Bakış
 açısı değiştirerek bu fark kalkmaz. Her satırda iki sayı da hesaplanmış ve
@@ -2981,7 +3095,7 @@ değildir. Modelin bugünkü hâli bunlardan hiçbirine karar vermemektedir.
 dört satırın her birinde iki sayının gerçekten farklı olduğu ayrı ayrı
 sınanmakta ve farklı çıkanlar sayılmaktadır.
 
-### 25.3 Yöntemin bilançosu
+### 26.3 Yöntemin bilançosu
 
 Dokuz anlaşmazlıktan beşi tek bir hesabın iki okuması olarak birleştirilmiş,
 dördü gerçek çelişki olarak ayakta bırakılmıştır. Kapsayıcı yöntem
