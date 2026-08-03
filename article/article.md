@@ -198,9 +198,43 @@ permütasyon matrisleri tarandı: $4!$ permütasyon çarpı $2^4$ işaret, topla
 | ve $\det = +1$ | 8 |
 
 Kalan sekiz çözümün **tamamında** $ct$ tek bir uzay eksenine gider. "Bizim
-zamanımız onların uzayı olur" sonucu bir seçim değil, zorunluluktur. Sekiz çözüm
-arasındaki tek fark uzay eksenlerinin etiketlenmesidir; dönme ile birbirlerine
-geçtikleri için ayrı fiziksel içerik taşımazlar.
+zamanımız onların uzayı olur" sonucu bir seçim değil, zorunluluktur.
+
+**Ancak sekiz çözüm arasındaki fark yalnızca uzay eksenlerinin etiketlenmesi
+değildir.** Bu alt bölümün önceki hâli öyle diyordu ve eksikti. Sekizi, $ct$
+yuvasına verilen **işarete** göre dörde dört bölünür
+(`src/scan/CrossingBranches`):
+
+| Filtre | Aday | İleri ($+$) | Geri ($-$) |
+|--------|------|-------------|------------|
+| Metrik testi | $96$ | $48$ | $48$ |
+| ve involüsyon | $12$ | $6$ | $6$ |
+| ve $\det = +1$ | $8$ | $4$ | $4$ |
+
+Bölünme filtrenin **her** aşamasında eşittir, dolayısıyla bu üç koşulun
+güçlendirilmesi geri dalını elemez. Dört geri dalın her biri üç koşulun
+tamamını ayrı ayrı sağlar ve birim öte taraf yer değiştirmesini bizim
+saatimizde $-1{,}0000$'a gönderir.
+
+**İki aileyi ne ayırıyor.** Bizim zaman eksenimizi tek başına çevirmek
+ayırmıyor: determinantı negatife çeviriyor ve kapanmayı bozuyor, yani adayı
+kümeden çıkarıyor. Öte tarafın ayırt edilmiş eksenini tek başına çevirmek de
+aynı sebeple ayırmıyor. **İkisini birlikte çevirmek** ayırıyor:
+
+$$S = \mathrm{diag}(-1, +1, +1, -1)$$
+
+$S$ sekizliyi kendi üzerine gönderir ve her işareti ters çevirir; **iki
+metriğin de izometrisidir** ve determinantı birdir. Yani bir geçişe dayatılan
+koşulların tamamını sağlar. Çevirdiği çift, geçişin birbirine eşlediği çiftin
+tam olarak kendisidir: bizim zamanımız ve onların tek uzay yönü.
+
+**Sonuç.** Bu çalışmanın kullandığı $D$ sekizliden biridir ve ileri gönderen
+ailededir. Bu bir seçimdir, üç koşulun bir sonucu değildir. Aileler arasında
+seçim yapan hiçbir şey burada hesaplanmamaktadır ve onları ayıran dönüşüm iki
+tarafın metriğinin de izometrisi olduğundan, **seçim geometrik değildir**.
+Bölüm 8.4 ile birlikte okunmalıdır: orada da ayrımın iki yakası arasında
+metriğin bir tercih yapmadığı gösterilmiştir. Seçimi yapacak şey her iki yerde
+de metriğin dışındadır.
 
 ---
 
@@ -3321,6 +3355,7 @@ ne bölüm numarası ne kaynak numarası bulunur.
 | Kara delik ufkuyla karşılaştırma | `src/horizon/BlackHoleHorizon` |
 | Lagrangian, alan denklemi, determinizm, zamanın oku | `src/field/KleinGordonField`, `src/field/TimeOrientation` |
 | Nedensel ayrımın varlığı ile üzerindeki etiketin ayrılması | `src/field/ReversalSymmetry` |
+| Geçiş dönüşümlerinin zaman yuvası işaretine göre bölünmesi | `src/scan/CrossingBranches` |
 | Enerji ile momentumun takası | `src/dynamics/EnergyMomentum` |
 | Dispersiyon, grup hızı, $O(3)$ ayar fazlalığı | `src/dynamics/Dispersion`, `src/rest/SuperluminalRest` |
 | Küresel simetrik kapalı form çözüm | `src/spherical/SphericalSolution` |
