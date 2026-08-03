@@ -11,11 +11,119 @@ agreement, **CHALLENGE** direct objection, **CONTEXT** background only. Compound
 markers are used where a paper supports one reading and attacks another; that is
 information, not indecision.
 
-Reference numbers `[N]` are stable and are cited from the article, so they are
-preserved through this refiling. Entries `[1]` to `[172]` keep the numbers they
-were first given; `[173]` to `[227]` are new. The numbered items
-("What this changes", items 1 to 59, and 60 onward) are likewise preserved with
-their original numbers and redistributed under the part they bear on.
+Reference numbers `[N]` are stable within THIS FILE and are preserved through
+each refiling. Entries `[1]` to `[172]` keep the numbers they were first given;
+`[173]` to `[227]` are new. The numbered items ("What this changes", items 1 to
+59, and 60 onward) are likewise preserved with their original numbers and
+redistributed under the part they bear on.
+
+> **These numbers are not the article's numbers.** An earlier version of this
+> header claimed they were cited from the article. They are not, and following
+> that claim silently lands the reader on a different paper: of the 50 entries
+> in the article's bibliography only two, `[1]` and `[2]`, carry the same number
+> here. `[3]` and `[4]` are swapped outright (article `[3]` is Lake, here it is
+> Zaopo), and from `[5]` on the two schemes have nothing to do with each other
+> (article `[5]` is Hayward's junction conditions, here `[5]` is Horodecki's
+> comment). Cross-references written `[N]` inside this file always mean this
+> file. When citing the article, go through the concordance below.
+
+### Concordance: article bibliography → this file
+
+Built by matching arXiv identifiers, so it stays correct when either side is
+renumbered. Two article entries have no note here and no paper file in
+`literature/`: they are the only places where the article leans on something
+this corpus has not read.
+
+| Article | First author | arXiv | This file |
+|--------:|--------------|-------|----------:|
+| 1 | Dragan | `arXiv:1910.02780` | 1 |
+| 2 | Dragan | `arXiv:2209.01836` | 2 |
+| 3 | Lake | `arXiv:2410.07017` | 4 |
+| 4 | Zaopo | `arXiv:2510.25385` | 3 |
+| 5 | Hayward | `arXiv:gr-qc/9303034` | 16 |
+| 6 | Embacher | `arXiv:gr-qc/9501004` | 17 |
+| 7 | Dray | `arXiv:gr-qc/9610064` | 20 |
+| 8 | Dray | `arXiv:gr-qc/9610063` | 21 |
+| 9 | Dray | `arXiv:gr-qc/0012047` | 23 |
+| 10 | Alty | `arXiv:gr-qc/9501026` | 18 |
+| 11 | Egusquiza | `arXiv:gr-qc/9503015` | 19 |
+| 12 | White | `arXiv:0812.3744` | 29 |
+| 13 | Hasse | `arXiv:2407.09699` | 27 |
+| 14 | Rieger | `arXiv:2409.02403` | 28 |
+| 15 | Hellaby | `arXiv:gr-qc/9907042` | 24 |
+| 16 | Capozziello | `arXiv:2404.17267` | 25 |
+| 17 | Bartolo | `arXiv:2502.14108` | 26 |
+| 18 | Mielczarek | `arXiv:1207.4657` | 50 |
+| 19 | Bojowald | `arXiv:2011.02884` | 191 |
+| 20 | Bondarenko | `arXiv:2204.07828` | 44 |
+| 21 | Singh | `arXiv:2607.01274` | 49 |
+| 22 | Mansouri | `arXiv:gr-qc/9806109` | 42 |
+| 23 | Alexandre | `arXiv:2306.11502` | 47 |
+| 24 | Bars | `arXiv:hep-th/0003100` | — |
+| 25 | Piceno | `arXiv:1512.05345` | 32 |
+| 26 | Pettini | `arXiv:2311.17070` | 34 |
+| 27 | Figueiredo | `arXiv:1608.03812` | 84 |
+| 28 | Paczos | `arXiv:2308.00450` | 36 |
+| 29 | Jodlowski | `arXiv:2406.14225` | 37 |
+| 30 | Jodlowski | `arXiv:2602.20474` | 38 |
+| 31 | Ostrowski | `arXiv:hep-th/0307051` | 39 |
+| 32 | Rembielinski | `arXiv:hep-ph/9509219` | 40 |
+| 33 | Perepelitsa | `arXiv:1407.3245` | 15 |
+| 34 | Villante | `arXiv:1110.4591` | — |
+| 35 | Nanni | `arXiv:2305.12505` | 12 |
+| 36 | Horodecki | `arXiv:2301.07802` | 5 |
+| 37 | Del Santo | `arXiv:2203.03661` | 6 |
+| 38 | Grudka | `arXiv:2306.03961` | 8 |
+| 39 | Sen | `arXiv:2601.15263` | 9 |
+| 40 | Sen | `arXiv:2506.11787` | 10 |
+| 41 | Sienicki | `arXiv:2512.05164` | 11 |
+| 42 | Winful | `arXiv:0708.3889` | 159 |
+| 43 | Maeda | `arXiv:2306.07326` | 186 |
+| 44 | Mars | `arXiv:0705.3380` | 175 |
+| 45 | Hellaby | `arXiv:gr-qc/9404001` | 89 |
+| 46 | Hayward | `arXiv:gr-qc/9606045` | 90 |
+| 47 | Hellaby | `arXiv:gr-qc/9601040` | 63 |
+| 48 | Hayward | `arXiv:gr-qc/9606044` | 114 |
+| 49 | Lienert | `arXiv:1708.03376` | 75 |
+| 50 | Deckert | `arXiv:1603.02538` | 77 |
+
+### Reconciliation against the `literature/` folder
+
+Three counts that should agree and do not. Recorded here rather than repaired
+silently, because each one is a decision for the author.
+
+**Article bibliography entries 42 to 50 are never cited in the article's body.**
+Section 22.2 reports finding exactly this gap and adding the nine entries. The
+entries were added; the inline citations were not. The places where each is used
+as a concept are listed in the article's own words:
+
+| Entry | Used at | What is being claimed there |
+|-------|---------|-----------------------------|
+| 42 Winful | §14.7, lines 1809, 1854 | in the barrier regime the phase delay is a dwell time, not an independent transit clock — Winful's result, verified here against our own numbers (see `[159]`, `[149]`, `[161]`) |
+| 43 Maeda | Abstract line 32, §3.6 lines 104, 390 | a non-timelike shell violates the dominant energy condition, and no choice of matter repairs it |
+| 44 Mars, Senovilla, Vera | §3.4 to §4.1 | signature-changing branes: the layer the threshold carries |
+| 45 to 48 Hellaby / Dray / Hayward | §21 line 3112 | the four-round exchange over whether standard conservation laws fail at a classical signature change |
+| 49 Lienert / 50 Deckert | §24.6 lines 3524 to 3530 | evolution in several time variables is consistent only if transport in the space of times is path independent — the zero-curvature criterion the section applies |
+
+**Two article references have no note and no paper file:** `arXiv:hep-th/0003100`
+(Bars, two-time physics in field theory — the origin of the 2T programme, cited
+as article `[24]`) and `arXiv:1110.4591` (Villante and Vissani on the generality
+of the Cohen-Glashow constraint, article `[34]`). Both are load-bearing: the
+first is the framework the far-side region borrows its signature from, the
+second is the empirical bound on superluminal propagation.
+
+**Twelve papers in `literature/` have no entry here:** `0908.2407`, `1301.6060`,
+`1707.07235`, `2206.15247`, `2312.09217`, `2512.01486`, `gr-qc/0703150`,
+`gr-qc/0703153`, `gr-qc/9501034`, `hep-th/0003100`, `hep-th/0511077`,
+`hep-th/9809034`. The header's "one entry per paper that bears on the article"
+makes silence ambiguous: unread and judged irrelevant look identical. Note that
+`hep-th/0003100` is in this list and is also article `[24]` — a paper the
+article cites and this file has not read.
+
+**Eight entries here name a paper with no file in `literature/`:** `0706.3994`,
+`0804.4534`, `1112.1324`, `1304.5522`, `1711.02660`, `2206.12887`,
+`gr-qc/0405114`, `hep-ph/0407232`. These were presumably read before the folder
+was assembled; the note stands, but nothing in the repository backs it.
 
 The organising question is the one the article now states: from a massive
 particle's four-dimensional orientation and motion in a region of signature
