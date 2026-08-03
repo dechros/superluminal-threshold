@@ -1,0 +1,99 @@
+#pragma once
+
+#include "core/Section.h"
+#include "intermediate/IntermediateRegion.h"
+
+#include <array>
+
+namespace slm
+{
+
+    /// One massive particle carried through the whole chain, end to end, with
+    /// every number that describes the journey printed in one place.
+    ///
+    /// Every link of the chain is built and checked elsewhere. What is missing
+    /// is a single closed example: a particle with a stated energy, sent in,
+    /// carried across, moved a stated distance on the far side, brought back,
+    /// and found at a stated moment relative to its departure. That is what
+    /// this class produces. It computes nothing new; it calls the libraries
+    /// that already hold each step and refuses to restate any of their
+    /// formulas, so that a disagreement between the example and its parts is
+    /// impossible rather than unlikely.
+    ///
+    /// Three journeys are worked, and they are chosen to show that the outcome
+    /// is a matter of how far the particle goes and not of what it is. The
+    /// first falls short of the threshold and returns after it left. The
+    /// second sits on the threshold and returns at the moment it left. The
+    /// third passes the threshold and returns before it left.
+    ///
+    /// The amplitude is carried alongside at every step, because the journey is
+    /// not free and the honest form of the result states its weight in the same
+    /// breath as its timing.
+    class WorkedRoundTrip
+    {
+    public:
+        using Three = std::array<double, 3>;
+
+        /// The energy vector the worked example uses, at the given total.
+        static Three energyAtTotal(double total);
+
+        /// Frequency the mass shell assigns to that vector.
+        static double frequency(const Three &energy, double c, double mu);
+
+        /// Time the round trip spends inside the region, which is twice the
+        /// single traversal.
+        static double roundTripDelay(const Three &energy, IntermediateRegion::Kind kind, double c,
+                                     double mu, double thickness);
+
+        /// Far-side distance at which the return lands exactly on the
+        /// departure, which is that delay.
+        static double thresholdDistance(const Three &energy, IntermediateRegion::Kind kind,
+                                        double c, double mu, double thickness);
+
+        /// Moment the particle is found at, measured from its departure, after
+        /// covering the given distance on the far side. Negative means it
+        /// returned before it left.
+        static double returnMoment(const Three &energy, IntermediateRegion::Kind kind, double c,
+                                   double mu, double thickness, double farSideDistance,
+                                   int branch);
+
+        /// Whether the return falls before the departure.
+        static bool returnsBeforeDeparture(const Three &energy, IntermediateRegion::Kind kind,
+                                           double c, double mu, double thickness,
+                                           double farSideDistance, int branch);
+
+        /// Weight the particle comes back with, which is the two-way
+        /// transmission.
+        static double returnedWeight(const Three &energy, IntermediateRegion::Kind kind,
+                                     double thickness);
+
+        /// Whether the moment computed here agrees with the closed formula for
+        /// the return event, which is the check that this example is the chain
+        /// and not a retelling of it.
+        static bool agreesWithClosedFormula(const Three &energy, IntermediateRegion::Kind kind,
+                                            double c, double mu, double thickness);
+
+        /// Whether the threshold distance agrees with the one the threshold
+        /// optimum computes by its own route.
+        static bool agreesWithThresholdOptimum(double total, IntermediateRegion::Kind kind,
+                                               double c, double mu, double thickness,
+                                               double tolerance);
+
+        /// Whether raising the total energy lowers the distance the journey
+        /// needs, at an unchanged returned weight.
+        static bool higherEnergyBuysDistance(IntermediateRegion::Kind kind, double c, double mu,
+                                             double depth, double tolerance);
+    };
+
+    /// Section carrying one particle through the whole chain.
+    class WorkedRoundTripSection : public Section
+    {
+    public:
+        std::string title() const override
+        {
+            return "One massive particle carried through the whole chain, end to end";
+        }
+        void run(Report &report) const override;
+    };
+
+}

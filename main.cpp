@@ -53,6 +53,7 @@
 #include "particle/TimeProjection.h"
 #include "particle/TimeReversalSignature.h"
 #include "particle/WavePacket.h"
+#include "particle/WorkedRoundTrip.h"
 #include "quantum/CanonicalQuantization.h"
 #include "quantum/CasimirDiscriminant.h"
 #include "quantum/DerivedTransition.h"
@@ -147,6 +148,7 @@ namespace
         sections.push_back(std::make_unique<slm::FarSideMotionSection>());
         sections.push_back(std::make_unique<slm::DirectionControlSection>());
         sections.push_back(std::make_unique<slm::FarSideObservationSection>());
+        sections.push_back(std::make_unique<slm::WorkedRoundTripSection>());
         sections.push_back(std::make_unique<slm::TimeProjectionSection>());
         sections.push_back(std::make_unique<slm::FlowAssumptionSection>());
         sections.push_back(std::make_unique<slm::TimeReversalSignatureSection>());

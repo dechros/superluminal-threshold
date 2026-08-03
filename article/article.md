@@ -61,8 +61,8 @@ bir geçişin fiziksel olarak kurulabildiğinin gösterimi değildir. Üç bedel
 belirler ve türleri farklıdır. Eşiği aşan yapılanmaların genliği $d = 8$'de
 $3{,}46 \times 10^{-12}$'ye çöker; bu bir büyüklük sorunudur. İşaretin seçilebilir
 kalması global bir seçicinin bulunmaması koşuluna bağlıdır; bu bir açık sorudur.
-Ve geçirgen okumanın bu metrik ailesinde geometrik bir temsilcisi yoktur; bu,
-modelin içindeki bir boşluktur ve kapatılması bu çalışmanın dışındadır.
+Ve geçirgen okuma ile bir yüzey katmanı bir arada duramamaktadır; bu, modele
+özgü bir boşluk değil, literatürün zaten taşıdığı güçlü ile zayıf ayrımıdır.
 
 **Model.** Bölge sayısı iki değil **üçtür**: aradaki geçiş bir yüzey değil, kendi
 kalınlığı ve kendi imzası olan bir bölgedir. Hesaplar bu bölgenin dört tipi ve
@@ -3480,6 +3480,33 @@ cümlede sabitlenmesidir.
    Öklidyen ara bölge, $d = 8$, $c = \mu = 1$ için eşik $2{,}565988$'dir
    (Bölüm 2.1.3).
 
+**Zincirin tek bir parçacık üzerinde yürütülmesi.** Yukarıdaki halkalar ayrı
+ayrı kuruludur; kapanmış tek bir örnek ise şudur. Öklidyen bir ara bölge,
+kalınlık $8$, $c = \mu = 1$, toplam enerjisi $9$ olan bir parçacık; enerji
+vektörü $(1{,}8974,\ 1{,}6432,\ 1{,}6432)$, frekansı $3{,}162278$, dışarıdaki
+dalga sayısı $1{,}897367$, içerideki sönüm katsayısı $2{,}683282$. Parçacık
+bölgeyi engel olarak görmektedir, dolayısıyla gecikme doymuştur.
+
+Gidiş dönüş bölgenin içinde $2{,}484520$ harcamaktadır. Öte tarafta kat edilen
+mesafeye göre, kalkışına göre ölçülen dönüş anı:
+
+| Öte tarafta kat edilen | Dönüş anı | Sonuç |
+|------------------------|-----------|-------|
+| $1{,}000000$ | $+1{,}484520$ | kalktıktan **sonra** döner |
+| $2{,}484520$ | $0{,}000000$ | tam kalktığı anda döner |
+| $6{,}000000$ | $-3{,}515480$ | kalkmadan **önce** döner |
+
+Üç yolculuk yalnızca öte tarafta ne kadar gidildiğinde ayrışmaktadır; parçacık,
+bölge ve enerji aynıdır. Öteki dal seçildiğinde aynı yolculuk daha geç
+inmektedir, dolayısıyla işaret yolculuğun bir özelliği değil, geçişin bir
+seçimidir.
+
+**Bedeli aynı nefeste.** Bu yolculukta parçacık $6{,}47 \times 10^{-37}$
+ağırlıkla dönmektedir. Ne var ki bu ağırlık bir yasak değildir: doyum derinliği
+sabit tutulup enerji yükseltildiğinde gereken mesafe $2{,}4845$'ten $1{,}0100$,
+$0{,}3166$ ve $0{,}1000$'e inerken dönen ağırlık $4{,}772425 \times 10^{-10}$
+değerinde **kıpırdamamaktadır**. Ödenen şey enerji ve daha ince bir bölgedir.
+
 **Sonucun ifadesi.**
 
 > Öte tarafın tek uzay ekseninde $s$ kadar yer değiştirmek, Bölge I'in saatinde
@@ -3491,14 +3518,16 @@ cümlede sabitlenmesidir.
 **İddianın sınırı, aynı yerde.** Yukarıdaki zincir bir aritmetiktir ve
 aritmetiği tamdır. Zincirin ne olmadığı da tek cümlede durmalıdır: bir geçişin
 fiziksel olarak kurulabildiğinin gösterimi **değildir**. Üç ayrı yerde ödenen
-bedel bunu belirler: geçirgen okumanın bu metrik ailesinde geometrik bir
-temsilcisi yoktur (Bölüm 3.7), eşiği aşan yapılanmaların genliği $d = 8$'de
-$3{,}46 \times 10^{-12}$'ye çöker (Bölüm 2.1.5), ve işaretin seçilebilir
-kalması global bir seçicinin bulunmaması koşuluna bağlıdır (Bölüm 8.4).
+bedel bunu belirler: geçirgen okuma ile bir yüzey katmanı bir arada
+duramamaktadır (Bölüm 3.7.1), eşiği aşan yapılanmaların genliği düşüktür
+(Bölüm 2.1.5), ve işaretin seçilebilir kalması global bir seçicinin
+bulunmaması koşuluna bağlıdır (Bölüm 8.4).
 
 Bu üçü birbirinden farklı türdendir ve karıştırılmamalıdır. İkincisi bir
-büyüklük sorunudur. Üçüncüsü bir açık sorudur. **Birincisi ise bu modelin
-içindeki bir boşluktur** ve kapatılması bu çalışmanın dışındadır. Zincirin
+büyüklük sorunudur, ve Bölüm 2.1.6 bunun sabit bir bedel değil seçilmiş bir
+çalışma noktası olduğunu göstermektedir. Üçüncüsü bir açık sorudur.
+**Birincisi ise literatürün zaten taşıdığı güçlü ile zayıf ayrımıdır**;
+Bölüm 3.7.1 bunun bu modele özgü bir boşluk olmadığını hesaplamaktadır. Zincirin
 kendisi bu boşluktan bağımsız olarak doğrudur; zincirin bir deneye bağlanması
 değildir.
 
