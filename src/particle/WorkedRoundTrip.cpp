@@ -8,6 +8,7 @@
 
 #include <cmath>
 #include <format>
+#include <string>
 
 namespace slm
 {
@@ -171,6 +172,89 @@ namespace slm
         return record.returnElapsed < record.lightRoundTrip;
     }
 
+    std::string WorkedRoundTrip::outcomeName(Outcome outcome)
+    {
+        switch (outcome)
+        {
+        case Outcome::LaterThanDeparture:
+            return "later than departure";
+        case Outcome::ExactlyAtDeparture:
+            return "exactly at departure";
+        default:
+            return "earlier than departure";
+        }
+    }
+
+    WorkedRoundTrip::Outcome WorkedRoundTrip::outcomeOf(const Three &energy,
+                                                        IntermediateRegion::Kind kind, double c,
+                                                        double mu, double thickness,
+                                                        double farSideDistance, int branch)
+    {
+        const double moment =
+            returnMoment(energy, kind, c, mu, thickness, farSideDistance, branch);
+        if (std::abs(moment) < 1e-9)
+        {
+            return Outcome::ExactlyAtDeparture;
+        }
+        return moment > 0.0 ? Outcome::LaterThanDeparture : Outcome::EarlierThanDeparture;
+    }
+
+    bool WorkedRoundTrip::forwardBranchEverArrivesEarlier(const Three &energy,
+                                                          IntermediateRegion::Kind kind, double c,
+                                                          double mu, double thickness)
+    {
+        for (int i = 0; i <= 400; ++i)
+        {
+            const double distance = i * 0.5;
+            if (outcomeOf(energy, kind, c, mu, thickness, distance, 1) ==
+                Outcome::EarlierThanDeparture)
+            {
+                return true;
+            }
+        }
+        return false;
+    }
+
+    double WorkedRoundTrip::delayWithoutTravelling(const Three &energy,
+                                                   IntermediateRegion::Kind kind, double c,
+                                                   double mu, double thickness)
+    {
+        return returnMoment(energy, kind, c, mu, thickness, 0.0, -1);
+    }
+
+    bool WorkedRoundTrip::thresholdIsThicknessFree(const Three &energy,
+                                                   IntermediateRegion::Kind kind, double c,
+                                                   double mu, double tolerance)
+    {
+        const double first = thresholdDistance(energy, kind, c, mu, 6.0);
+        for (double thickness : {8.0, 12.0, 20.0})
+        {
+            const double here = thresholdDistance(energy, kind, c, mu, thickness);
+            if (std::abs(here - first) > tolerance * std::abs(first))
+            {
+                return false;
+            }
+        }
+        return first > 0.0;
+    }
+
+    bool WorkedRoundTrip::thresholdGrowsWithThickness(const Three &energy,
+                                                      IntermediateRegion::Kind kind, double c,
+                                                      double mu)
+    {
+        double previous = -1.0;
+        for (double thickness : {2.0, 4.0, 8.0})
+        {
+            const double here = thresholdDistance(energy, kind, c, mu, thickness);
+            if (here <= previous)
+            {
+                return false;
+            }
+            previous = here;
+        }
+        return true;
+    }
+
     void WorkedRoundTripSection::run(Report &report) const
     {
         const auto kind = IntermediateRegion::Kind::Euclidean;
@@ -306,6 +390,68 @@ namespace slm
                          "the mistake this work has made twice and now checks rather than "
                          "assumes",
                          std::abs(record.lightRoundTrip - 2.0 * thickness / c) < 1e-9);
+        }
+
+        report.subsection("Every outcome a round trip can have");
+        {
+            const double threshold =
+                WorkedRoundTrip::thresholdDistance(energy, kind, c, mu, thickness);
+            struct Case
+            {
+                const char *label;
+                double distance;
+                int branch;
+            };
+            const Case cases[] = {{"back branch, short of the threshold", 1.0, -1},
+                                  {"back branch, exactly at it        ", threshold, -1},
+                                  {"back branch, past it              ", 6.0, -1},
+                                  {"forward branch, same distance     ", 6.0, 1},
+                                  {"either branch, no travel at all   ", 0.0, -1}};
+            for (const Case &each : cases)
+            {
+                report.check(
+                    std::format("  {} : arrives {:+.6f}, {}", each.label,
+                                WorkedRoundTrip::returnMoment(energy, kind, c, mu, thickness,
+                                                               each.distance, each.branch),
+                                WorkedRoundTrip::outcomeName(WorkedRoundTrip::outcomeOf(
+                                    energy, kind, c, mu, thickness, each.distance, each.branch))),
+                    std::isfinite(WorkedRoundTrip::returnMoment(energy, kind, c, mu, thickness,
+                                                                 each.distance, each.branch)));
+            }
+            report.check("the forward branch never reaches an earlier moment, at any "
+                         "distance out to two hundred, so the sign is decided by which "
+                         "crossing is realised and not by how far the particle goes",
+                         !WorkedRoundTrip::forwardBranchEverArrivesEarlier(energy, kind, c, mu,
+                                                                            thickness));
+            report.check(std::format("  travelling no distance at all still costs {:.6f}, which "
+                                     "is the floor two crossings impose on any trip",
+                                     WorkedRoundTrip::delayWithoutTravelling(energy, kind, c, mu,
+                                                                              thickness)),
+                         WorkedRoundTrip::delayWithoutTravelling(energy, kind, c, mu, thickness) >
+                             0.0);
+        }
+
+        report.subsection("The threshold is a price only where the crossing is a barrier");
+        report.check("in the evanescent regime the threshold does not move with the "
+                     "thickness, which is the saturation seen from the side of the price",
+                     WorkedRoundTrip::thresholdIsThicknessFree(energy, kind, c, mu, 1e-6));
+        {
+            const auto propagating = WorkedRoundTrip::Three{3.0, 0.4, 0.4};
+            report.check(std::format("  a state that does not meet the region as a barrier "
+                                     "has interior decay {:.6f}",
+                                     ReturnFormula::interiorDecay(propagating, kind)),
+                         !ReturnFormula::isBarrier(propagating, kind));
+            report.check("and the closed form returns no delay for it at all, so there is "
+                         "no threshold to compare against and the round trip has no price "
+                         "in that regime rather than a thickness dependent one",
+                         WorkedRoundTrip::thresholdDistance(propagating, kind, c, mu,
+                                                             thickness) == 0.0 &&
+                             !WorkedRoundTrip::thresholdGrowsWithThickness(propagating, kind, c,
+                                                                            mu));
+            report.check("the article must therefore not offer a propagating row in the "
+                         "table of outcomes: what changes there is not the size of the "
+                         "price but whether the calculation applies",
+                         !ReturnFormula::isBarrier(propagating, kind));
         }
 
         report.subsection("The price is chosen, not fixed");

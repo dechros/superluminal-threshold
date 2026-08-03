@@ -4,6 +4,7 @@
 #include "intermediate/IntermediateRegion.h"
 
 #include <array>
+#include <string>
 
 namespace slm
 {
@@ -129,6 +130,48 @@ namespace slm
         /// trip, which is the comparison the article makes and which needs both
         /// sides to be a round trip.
         static bool beatsLight(const Journey &record);
+
+        /// Every outcome a round trip can have, so that the branch sending the
+        /// particle back is presented as one case of a family rather than as
+        /// the only case. Two choices are free, the branch and the distance,
+        /// and a third axis is the regime.
+        enum class Outcome
+        {
+            LaterThanDeparture,
+            ExactlyAtDeparture,
+            EarlierThanDeparture
+        };
+
+        static std::string outcomeName(Outcome outcome);
+
+        /// Which of the three a given branch and distance produce.
+        static Outcome outcomeOf(const Three &energy, IntermediateRegion::Kind kind, double c,
+                                 double mu, double thickness, double farSideDistance,
+                                 int branch);
+
+        /// Whether the forward branch ever reaches an earlier moment, at any
+        /// distance. It does not, and that is what makes the branch and not the
+        /// journey the thing that decides the sign.
+        static bool forwardBranchEverArrivesEarlier(const Three &energy,
+                                                    IntermediateRegion::Kind kind, double c,
+                                                    double mu, double thickness);
+
+        /// Delay a particle pays when it travels no distance at all over there,
+        /// which is the floor two crossings impose on any trip.
+        static double delayWithoutTravelling(const Three &energy, IntermediateRegion::Kind kind,
+                                             double c, double mu, double thickness);
+
+        /// Whether the threshold distance is independent of the thickness,
+        /// which holds in the evanescent regime and is what makes the price a
+        /// fixed number there.
+        static bool thresholdIsThicknessFree(const Three &energy, IntermediateRegion::Kind kind,
+                                             double c, double mu, double tolerance);
+
+        /// Whether the threshold grows with thickness in a propagating region,
+        /// which is the regime where the price is not a fixed number.
+        static bool thresholdGrowsWithThickness(const Three &energy,
+                                                IntermediateRegion::Kind kind, double c,
+                                                double mu);
     };
 
     /// Section carrying one particle through the whole chain.

@@ -11,8 +11,22 @@ tarafta saatte nereye düştüğü hesaplanır.
 **Sonuç.** Öte tarafta kat edilen mesafe, bu tarafta zamanda yer değiştirmedir,
 ve yeterince uzağa gidildiğinde dönüş girişten öncedir.
 
-**İddianın büyüklüğü.** Bu üç cümlenin yalnızca üçüncüsü yenidir ve bunun
-sınırları en başta çizilmelidir. Üstışık hızın geçmişe varmayı mümkün kıldığı
+**Sonucun koşulu, hemen burada.** Bu bir koşullu ifadedir ve koşulu bir alt
+bölüme bırakılmamalıdır. Geçişi yapabilecek sekiz aday vardır; cebirsel olarak
+ayırt edilemezler, **dördü ileriye dördü geriye** gönderir, ve iki aileyi
+ayıran dönüşüm her iki metriğin de izometrisidir. Yani dönüş anının **işareti,
+metrikten çıkmaz**. Bu metin geriye gönderen bir aday kullanmaktadır; bu bir
+hesap sonucu değil, bir **seçimdir** (Bölüm 2.1).
+
+Dolayısıyla ispatlanan şudur: **böyle bir geçiş gerçeklenirse** dönüş anı
+hesaplanmış bir sayıdır. Öncül ispatlanmamıştır. Buna zamanda yolculuk demek
+için gereken şey tam olarak o öncüldür, ve o öncül iki bedele bağlıdır:
+geçirgen okumanın gerektirdiği madde katmanı baskın enerji koşulunu ihlal
+etmektedir (Bölüm 3.6), ve iddiayı taşıyan rejimde parçacık öte tarafta
+gözlenememektedir (Bölüm 19.9).
+
+**İddianın büyüklüğü.** Yukarıdaki üç cümlenin yalnızca üçüncüsü yenidir, ve o
+da yukarıdaki koşulla birlikte yenidir. Üstışık hızın geçmişe varmayı mümkün kıldığı
 1962–1970'te kurulmuştur. Öte tarafın bir uzay ve üç zaman ekseni taşıdığı ve
 parçacıkların yalnızca o tek uzay ekseninde hareket ettiği gösterilmiştir. Bir
 uzay ekseninin bu geçiş altında zaman eksenine düştüğü de bilinmektedir. Kalan
@@ -190,6 +204,121 @@ arasında durur: sonucu taşımazlar ama sonucun tutarlı olması onlara bağlı
 ---
 
 # Kısım I. Bölge I nedir
+
+## 0. Çekirdek hesap: her şey tek yerde
+
+Bu bölüm, çekirdeği bağımsız olarak yeniden üretmek isteyen biri için gereken
+her şeyi taşır ve makalenin geri kalanına bakılmadan uygulanabilir. Metnin
+kalanı bu hesabın nereden geldiğini ve hangi soruları karşıladığını anlatır;
+hesabın kendisi burada, başta durur.
+
+Bu alt bölüm, çekirdeği bağımsız olarak yeniden üretmek isteyen biri için gereken
+nicelikleri tek yerde toplar. Metnin başka hiçbir yerine bakılmadan
+uygulanabilecek biçimde yazılmıştır; her satırın nerede türetildiği yanında
+verilmektedir.
+
+**Girdi.** Öte tarafın enerji vektörü $E = (E_1, E_2, E_3)$. Bu vektör Bölge I'in
+üç momentumudur (Bölüm 15.1); yönü öte tarafta fiziksel değildir, yalnızca
+uzunluğu fizikseldir (Bölüm 15.3). Ara bölge tipi, çevrilen yön sayısı $n$ ile
+girer; Öklid için $n = 3$. Kalınlık $d$, kütle parametresi $\mu$, hız $c$.
+
+**Zincir.**
+
+| Adım | Nicelik | Nerede |
+|---|---|---|
+| 1 | $\omega = c\sqrt{E_1^2 + E_2^2 + E_3^2 + \mu}$ | Bölüm 15.1 |
+| 2 | $k_\perp^2 = E_2^2 + E_3^2$ | Bölüm 19.3 |
+| 3 | $\kappa = \sqrt{\omega^2/c^2 - k_\perp^2 - \mu} = \lvert E_1 \rvert$ | Bölüm 19.7 |
+| 4 | $\beta = \sqrt{\tfrac{2n}{3}k_\perp^2 - E_1^2}$, iç sönüm sabiti | Bölüm 19.7 |
+| 5 | $q = i\beta$ söndürücü hâlde, reel yayılımlı hâlde | Bölüm 12.1 |
+| 6 | $A(\omega) = \dfrac{4\kappa q}{(\kappa+q)^2 e^{-iqd} - (\kappa-q)^2 e^{iqd}}$ | Bölüm 12.1 |
+| 7 | $\tau = \dfrac{\mathrm{d}}{\mathrm{d}\omega}\arg A(\omega)$, tek geçişin gecikmesi | Bölüm 13.2 |
+| 8 | Gidiş dönüş gecikmesi $= 2\tau$ | Bölüm 12 |
+| 9 | Varış anı $= 2\tau - s$, geri taşıyan dalda | Bölüm 2.1.2, Bölüm 2.1.3 |
+| 10 | Eşik mesafesi $s^\ast = 2\tau$ | Bölüm 2.1.3 |
+| 11 | Bedel $\Delta E / E = \Delta / s$ | Bölüm 2.1.5 |
+
+Dokuzuncu satırdaki $s$ katsayısı **birdir** ve bir hıza bölünmez; bu, çalışmanın
+çekirdeğidir (Bölüm 2.1.1, Bölüm 2.1.2). İşareti hangi geçişin gerçeklendiği
+belirler, öte tarafta hangi yöne yürünüldüğü değil (Bölüm 2.1.3).
+
+**Denetim değerleri.** Aşağıdaki yapılanma metnin bütün çekirdek sayılarını
+üretir ve bir uygulamanın doğru çalıştığı buradan sınanabilir.
+
+$$c = \mu = 1, \qquad n = 3, \qquad d = 8$$
+$$E = L(\sin\theta\cos\varphi,\; \sin\theta\sin\varphi,\; \cos\theta),
+\qquad \theta = \pi/3,\; \varphi = 0{,}7,\; L = 3$$
+
+| Nicelik | Değer |
+|---|---|
+| $E$ | $(1{,}987118,\; 1{,}673727,\; 1{,}500000)$ |
+| $\omega$ | $3{,}162278$ |
+| $k_\perp^2$ | $5{,}051361$ |
+| $\kappa$ | $1{,}987118$ |
+| $\beta$ | $2{,}480742$ |
+| $\tau$, fazın türevinden | $1{,}282994$ |
+| $\tau$, kapalı formdan $2\omega/(c^2\kappa\beta)$ | $1{,}282994$ |
+| Gidiş dönüş gecikmesi $2\tau$ | $2{,}565988$ |
+| Eşik mesafesi $s^\ast$ | $2{,}565988$ |
+
+Yedinci ile sekizinci satırın aynı çıkması bir tesadüf değil, kapalı biçimin
+doğrulanmasıdır: biri genliğin sayısal frekans türevi, diğeri kalınlık içermeyen
+kapalı formdur. Bir uygulama bu ikisini ayrı ayrı hesaplayıp
+karşılaştırmalıdır; ayrıldıkları yerde hata uygulamadadır, modelde değildir.
+
+**Ağırlık, ayrıca hesaplanmalıdır.** Yukarıdaki sayılar bir olabilirlik
+ifadesidir, bir verim ifadesi değildir. Aynı yapılanmada geçirgenlik
+$3{,}46 \times 10^{-12}$ mertebesindedir (Bölüm 2.1.3, Bölüm 2.1.5) ve dönüş anı
+ile birlikte raporlanmalıdır; yalnız başına verilen bir dönüş anı yanıltıcıdır.
+
+### 0.1 Bir gidiş dönüşün bütün ihtimalleri
+
+Yukarıdaki zincir tek bir sonucu değil, bir **sonuç kümesini** verir. Kümenin
+tamamı burada durmalıdır, çünkü yalnızca geriye götüren dalı göstermek, kadranın
+öteki konumlarını gizlemek olurdu.
+
+İki bağımsız seçim vardır. **Birincisi dal**, yani hangi geçiş eşlemesinin
+gerçeklendiği: dört aday ileriye, dört aday geriye gönderir ve metrik ikisi
+arasında seçim yapmaz. **İkincisi mesafe**, yani öte tarafta ne kadar
+gidildiği. Üçüncü bir eksen de rejimdir: ara bölge söndürücü ise gecikme
+kalınlığa doyar, yayılımlı ise doymaz.
+
+Varış anı, kalkışa göre, her durumda
+
+$$t_{\text{dönüş}} = 2\tau \;\pm\; s$$
+
+biçimindedir; işaret dalın, $s$ ise yolculuğun katkısıdır. Buradan altı hâl
+çıkar ve altısı da bu modelin içindedir:
+
+| Dal | Mesafe | Varış anı | Ne olur |
+|-----|--------|-----------|---------|
+| Geri | $s < 2\tau$ | $0 < 2\tau - s$ | Kalktıktan sonra döner, ama ışıktan erken |
+| Geri | $s = 2\tau$ | $0$ | Tam kalktığı anda döner |
+| Geri | $s > 2\tau$ | $2\tau - s < 0$ | **Kalkmadan önce döner** |
+| İleri | herhangi | $2\tau + s > 0$ | Her zaman sonra döner, mesafe gecikmeyi büyütür |
+| Her ikisi | $s = 0$ | $2\tau$ | Yolculuk yok, yalnızca iki geçişin faz gecikmesi |
+
+Beşinci satır, gecikmenin **yolculuktan bağımsız** bir taban olduğunu gösterir:
+parçacık öte tarafta hiç yürümese bile iki geçiş bir bedel yükler; bu
+yapılanmada $2{,}484520$.
+
+Dördüncü satır da beyan değil, hesaptır: ileri dal iki yüz birime kadar taranmış
+ve hiçbir mesafede daha erken bir ana varmamıştır. İşareti belirleyen şey
+yolculuk değil, hangi geçişin gerçeklendiğidir.
+
+**Rejim bir satır değildir.** Bu tablo, ara bölgenin parçacığa **engel** olduğu
+hâl içindir. Engel olmadığı hâlde eşik mesafesi büyümez; kapalı biçim o durumda
+bir gecikme **vermez**, çünkü sönüm katsayısı sıfırdır. Yani yayılımlı rejimde
+değişen şey bedelin büyüklüğü değil, hesabın **uygulanıp uygulanmadığıdır**. Bu
+ayrım, kodda ayrıca sınanmaktadır; ilk yazımında tabloya altıncı bir satır
+olarak konmuş, kod tarafından çürütülmüş ve buradaki biçimiyle düzeltilmiştir.
+
+**Kapsanmayan tek durum**, dalın yolculuk sırasında değişmesidir. Bu modelde
+dal, geçiş eşlemesinin bir özelliğidir ve yolculuk boyunca sabittir; değişmesi
+için parçacığın öte tarafta iken eşlemeyi değiştirecek bir etkileşime girmesi
+gerekirdi, ve böyle bir etkileşim burada kurulmamıştır.
+
+---
 
 ## 1. İki bölge, metrikleri ve gösterim
 
@@ -4297,64 +4426,9 @@ tekrar geçmiştir.
 
 ### 26.1 Çekirdeği hesaplamak için gereken her şey
 
-Bu alt bölüm, çekirdeği bağımsız olarak yeniden üretmek isteyen biri için gereken
-nicelikleri tek yerde toplar. Metnin başka hiçbir yerine bakılmadan
-uygulanabilecek biçimde yazılmıştır; her satırın nerede türetildiği yanında
-verilmektedir.
-
-**Girdi.** Öte tarafın enerji vektörü $E = (E_1, E_2, E_3)$. Bu vektör Bölge I'in
-üç momentumudur (Bölüm 15.1); yönü öte tarafta fiziksel değildir, yalnızca
-uzunluğu fizikseldir (Bölüm 15.3). Ara bölge tipi, çevrilen yön sayısı $n$ ile
-girer; Öklid için $n = 3$. Kalınlık $d$, kütle parametresi $\mu$, hız $c$.
-
-**Zincir.**
-
-| Adım | Nicelik | Nerede |
-|---|---|---|
-| 1 | $\omega = c\sqrt{E_1^2 + E_2^2 + E_3^2 + \mu}$ | Bölüm 15.1 |
-| 2 | $k_\perp^2 = E_2^2 + E_3^2$ | Bölüm 19.3 |
-| 3 | $\kappa = \sqrt{\omega^2/c^2 - k_\perp^2 - \mu} = \lvert E_1 \rvert$ | Bölüm 19.7 |
-| 4 | $\beta = \sqrt{\tfrac{2n}{3}k_\perp^2 - E_1^2}$, iç sönüm sabiti | Bölüm 19.7 |
-| 5 | $q = i\beta$ söndürücü hâlde, reel yayılımlı hâlde | Bölüm 12.1 |
-| 6 | $A(\omega) = \dfrac{4\kappa q}{(\kappa+q)^2 e^{-iqd} - (\kappa-q)^2 e^{iqd}}$ | Bölüm 12.1 |
-| 7 | $\tau = \dfrac{\mathrm{d}}{\mathrm{d}\omega}\arg A(\omega)$, tek geçişin gecikmesi | Bölüm 13.2 |
-| 8 | Gidiş dönüş gecikmesi $= 2\tau$ | Bölüm 12 |
-| 9 | Varış anı $= 2\tau - s$, geri taşıyan dalda | Bölüm 2.1.2, Bölüm 2.1.3 |
-| 10 | Eşik mesafesi $s^\ast = 2\tau$ | Bölüm 2.1.3 |
-| 11 | Bedel $\Delta E / E = \Delta / s$ | Bölüm 2.1.5 |
-
-Dokuzuncu satırdaki $s$ katsayısı **birdir** ve bir hıza bölünmez; bu, çalışmanın
-çekirdeğidir (Bölüm 2.1.1, Bölüm 2.1.2). İşareti hangi geçişin gerçeklendiği
-belirler, öte tarafta hangi yöne yürünüldüğü değil (Bölüm 2.1.3).
-
-**Denetim değerleri.** Aşağıdaki yapılanma metnin bütün çekirdek sayılarını
-üretir ve bir uygulamanın doğru çalıştığı buradan sınanabilir.
-
-$$c = \mu = 1, \qquad n = 3, \qquad d = 8$$
-$$E = L(\sin\theta\cos\varphi,\; \sin\theta\sin\varphi,\; \cos\theta),
-\qquad \theta = \pi/3,\; \varphi = 0{,}7,\; L = 3$$
-
-| Nicelik | Değer |
-|---|---|
-| $E$ | $(1{,}987118,\; 1{,}673727,\; 1{,}500000)$ |
-| $\omega$ | $3{,}162278$ |
-| $k_\perp^2$ | $5{,}051361$ |
-| $\kappa$ | $1{,}987118$ |
-| $\beta$ | $2{,}480742$ |
-| $\tau$, fazın türevinden | $1{,}282994$ |
-| $\tau$, kapalı formdan $2\omega/(c^2\kappa\beta)$ | $1{,}282994$ |
-| Gidiş dönüş gecikmesi $2\tau$ | $2{,}565988$ |
-| Eşik mesafesi $s^\ast$ | $2{,}565988$ |
-
-Yedinci ile sekizinci satırın aynı çıkması bir tesadüf değil, kapalı biçimin
-doğrulanmasıdır: biri genliğin sayısal frekans türevi, diğeri kalınlık içermeyen
-kapalı formdur. Bir uygulama bu ikisini ayrı ayrı hesaplayıp
-karşılaştırmalıdır; ayrıldıkları yerde hata uygulamadadır, modelde değildir.
-
-**Ağırlık, ayrıca hesaplanmalıdır.** Yukarıdaki sayılar bir olabilirlik
-ifadesidir, bir verim ifadesi değildir. Aynı yapılanmada geçirgenlik
-$3{,}46 \times 10^{-12}$ mertebesindedir (Bölüm 2.1.3, Bölüm 2.1.5) ve dönüş anı
-ile birlikte raporlanmalıdır; yalnız başına verilen bir dönüş anı yanıltıcıdır.
+Bu alt bölüm makalenin başına, Bölüm 0 olarak taşınmıştır. Çekirdeği bağımsız
+olarak yeniden üretmek isteyen okurun, ona ulaşmak için önce üç bin satır
+okuması gerekmemelidir.
 
 ### 26.2 Kapanan ve açık kalan maddeler
 
