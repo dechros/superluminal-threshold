@@ -3070,17 +3070,17 @@ These are results we must cite as precedent, not present as new.
 | Crossing is direction-selected, not free | `[96]`, one, two or three admissible directions, in two dimensions |
 | The far side has a $(2,2)$ status as an auxiliary continuation | `[68]` |
 | Total reflection as the thick limit of tunnelling through a Kleinian slab | `[84]` |
-| Delay saturation as the lifetime of stored probability, not a transit time | `[158]`, and our finding 1 concedes it in the barrier regime |
-| The two-clock resolution of the thickness question | `[149]` |
+| Delay saturation as the lifetime of stored probability, not a transit time | `[158]`, and our finding 1 concedes it in the barrier regime. The concession has since been **narrowed**: the alignment component of the barrier-height derivative is independent of the stored norm and does not saturate, so the broad claim that no independent transit clock exists there is false |
+| The two-clock resolution of the thickness question | `[149]`; now superseded here by the five-reading comparison in `src/intermediate/TraversalClocks`, where the two components of the barrier-height derivative are computed on the same amplitude |
 | Packet distortion and delay from the energy derivative of the transmission amplitude | `[144]` |
 | Placement by the phase of a complex lapse rather than by a duration | `[118]` |
-| The lapse contour must pass below the origin and not through zero | `[142]`, derived from the reduced phase space |
+| The lapse contour must pass below the origin and not through zero | `[142]`, derived from the reduced phase space; now built in `src/quantum/LapseContour`, and the criterion selects the decaying saddle, which is what the crossing calculation already used |
 | Zero curvature on the space of times as the criterion for whether orientation matters | `[225]`, and our finding 2 is its application |
 | The dominant energy condition is violated by any non-timelike shell | `[186]`, and our finding 3 is its instance |
 | One-over-thickness scaling of the layer strength as generic | `[179]` |
-| A failure of time orientability looks like a pair annihilation | `[128]` |
-| A time-reversing region's boundary carries a net flux, that is, an apparent charge | `[129]` |
-| A body in a non-time-orientable region transforms as a spinor | `[130]` |
+| A failure of time orientability looks like a pair annihilation | `[128]`; now built in `src/particle/TimeReversalSignature`, which finds the boundary count and the apparent charge identical on both readings and only the energy budget separating them |
+| A time-reversing region's boundary carries a net flux, that is, an apparent charge | `[129]`; same library, and the charge turns out not to discriminate |
+| A body in a non-time-orientable region transforms as a spinor | `[130]`; deliberately not built, since no spin is introduced anywhere and the clock components of the traversal comparison were obtained without one |
 | Information loss stated as the entropy of a returned density matrix | `[131]` |
 | Three times reduced to one observable time by local symmetry breaking, with gauge fields as the residue | `[222]` |
 | The extra time removed by gauge rather than by fiat | `[31]`, `[213]` to `[221]` |
@@ -3189,12 +3189,63 @@ only one side has a published proponent.
    signature to look for, an elastic deflection with no recoiling target. No
    apparatus has been described.
 
-## 5. The balance
+## 5. What changed on 2026-08-03
+
+Nine libraries were added in one day and every one of them cost the model
+something, which is the pattern worth recording rather than the count.
+
+1. **The rate condition, `src/horizon/RateCondition`.** The exponent Hayward's
+   objection turns on is computed rather than argued: generic profiles give
+   $-0{,}500$ and fail, and the only profile that passes is the one satisfying
+   the strong condition. So the rate condition does not narrow the weak choice,
+   it recovers the reflecting threshold as the only consistent limit in this
+   metric family. The article's goal is now stated conditionally because of it.
+2. **The five readings, `src/intermediate/TraversalClocks`.** The rotation
+   component reproduces the dwell time to six digits by a route sharing no
+   formula with it, and the alignment component does not saturate, growing by
+   $1{,}2326$ per unit thickness. Measured against light the five split three to
+   two, and the three that saturate are exactly the three that outrun light.
+3. **The front, `src/intermediate/SignalFront`.** The front is delayed by the
+   full light time at every thickness and the amplitude carrying the advanced
+   peak falls to $5{,}2 \times 10^{-32}$ at thickness thirty two. The advance
+   carries no signal, and this is conceded rather than argued around.
+4. **The closed formula, `src/particle/ReturnFormula`.** The map from a far-side
+   orientation to the return event is now an expression rather than a scan. Two
+   exact identities do it: the outside normal wavenumber is the first component
+   of the energy vector, and the interior decay constant is built from the same
+   three components, so whether the crossing is a barrier is an inequality
+   between components. The barrier elapsed time is
+   $2\omega/(c^2\kappa\beta)$ with no thickness in it, matching the scattering
+   calculation to $7 \times 10^{-11}$.
+5. **A correction the formula exposed.** The advance over light had compared a
+   round-trip light time against a single-traversal delay. Corrected, it reads
+   $2d - 2{,}9257$, so $+1{,}0742$ at $d = 2$ rather than $+2{,}5371$. It still
+   grows without bound.
+6. **The flow assumption, `src/particle/FlowAssumption`.** Orientability is
+   derived by rotation rather than stipulated, and the two regions are exact
+   duals, so the far side's one-way space axis is our own arrow's theorem
+   applied to the other causal type. Compulsion, the claim that a body must
+   advance, is in no metric and is used nowhere here. What survives is that
+   displacement along their space axis lands on our time axis one for one, the
+   amount free and the sign not.
+7. **The objection register, `src/critique/LiteratureObjections`.** Fifteen
+   objections from the whole literature, each verdict a call into the library
+   that settles it: 2 answered, 3 narrowed, 8 conceded, 2 untested.
+8. **The shared formulas, `src/critique/CommonFormulas`.** Four reductions, each
+   recovering its special cases to machine precision. Writing the interior
+   wavenumber in the number of turned directions exposes a case at two turned
+   directions that nothing in this corpus names.
+9. **The reproduction ledger, `src/critique/ReproductionLedger`.** Fifty one
+   results, each named by content rather than by citation so it does not rot,
+   split 32 reproduced, 12 used, 7 context, with a check refusing any claimed
+   reproduction that names no library.
+
+## 6. The balance
 
 | Class | Count |
 |-------|-------|
-| Where the literature has priority | $24$ |
-| No published counterpart | $3$, plus two narrower gaps |
+| Where the literature has priority | $24$, of which $23$ now have a library here and one is deliberately unbuilt |
+| No published counterpart | $3$, plus two narrower gaps; the return map is now a closed formula and still has none |
 | Live disagreements | $11$ |
 | Open on both sides | $6$ |
 
@@ -3207,3 +3258,15 @@ the outcome table reaches six results rather than nine. Only the fourth, the
 location of the orientation trace at the boundary rather than the interior, adds
 something. A ledger in which the corrections outnumber the additions is the one to
 trust.
+
+That shape held through 2026-08-03 and grew sharper. Of the nine libraries added
+that day, six produced results against earlier readings of this work: the rate
+condition leaves the transmitting threshold without a geometric representative,
+the front concedes that the advance carries no signal, the baseline correction
+cut the headline advance by a whole traversal, the objection register concedes
+eight of fifteen, the reproduction ledger records nineteen results outside this
+work's own guarantee, and the flow separation removed a claim rather than adding
+one. The two that added something are the closed formula, which is the centre of
+the work and still has no published counterpart, and the agreement between the
+rotation component and the dwell time, which confirmed an earlier calculation by
+an independent route.
