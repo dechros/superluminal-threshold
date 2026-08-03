@@ -333,7 +333,10 @@ Zayıf eklem koşulu seçildiğinde geçiş yüzeyinde dış eğrilik sıfırlan
 sıfırlanmayan bir dış eğrilik gerilim tensöründe dağılımsal bir terime, yani bir
 **madde katmanına** karşılık gelir. Bu, zayıf koşulun bedelidir ve gizlenmemesi
 gerekir: geçişe izin veren seçim, aynı zamanda yüzeye bir madde katmanı koyan
-seçimdir.
+seçimdir. Katmanın genel kuruluşu [44]'tedir: imza değiştiren bir zarın
+dağılımsal gerilimi, imzanın değiştiği yüzeyin zamansal olamaması da dahil olmak
+üzere orada tam olarak ele alınmıştır. Buradaki hesap onun bu geometrideki
+sayısal karşılığıdır.
 
 Katmanın gücü, imzanın döndüğü mesafeyle ters orantılıdır. Hesaplanan değerler:
 
@@ -376,7 +379,10 @@ belirlenir.
 **Bağlayıcı olan, yüzeyin zamansal olmamasıdır.** İmzanın değiştiği bir yüzeyde
 normal, karakterini değiştirir; dolayısıyla yüzey zamansal olamaz. Zamansal
 kabuklar için kurulmuş sonuçlar bu yüzeye uygulanmaz, ve zamansal olmayan
-yüzeyler için geçerli olan kısıtlar çok daha sıkıdır.
+yüzeyler için geçerli olan kısıtlar çok daha sıkıdır: bu sınıf [43]'te ayrı
+olarak ele alınmış ve enerji koşullarının orada zamansal duruma göre daraldığı
+gösterilmiştir. Aşağıdaki hesabın hangi çerçevede okunması gerektiğini o sonuç
+belirler.
 
 **Hesap.** Katmanın taşıdığı yüzey enerji yoğunluğu ve basıncı, geçiş profili
 ailesinin her üyesi için ayrı ayrı değerlendirilmiştir ($d = 1$):
@@ -1806,10 +1812,11 @@ olarak görünen şey, burada bir kurtarıcı olabilir.
 ### 14.7 Gecikme bir geçiş süresi mi, yoksa depolanan alanın ömrü mü
 
 Fazdan okunan gecikmeyi bir geçiş süresi saymak zorunlu değildir. Rakip okuma
-şudur: aynı nicelik bir **oyalanma süresidir**, yani bölge içinde depolanan
+[42]'dedir: aynı nicelik bir **oyalanma süresidir**, yani bölge içinde depolanan
 olasılığın gelen akıya oranıdır ve alanın iki yüzden birden sızarak boşalma
 ömrünü verir. Bu okumada hiçbir şey bölgeyi kat etmez ve doyum bir paradoks
-değil, beklenen davranıştır.
+değil, beklenen davranıştır. Orada tünelleme bağlamında kurulan bu ayrım, burada
+kendi sayılarımızla sınanmaktadır.
 
 İki okuma göz kararıyla ayrılamaz, çünkü ikisi de aynı saçılma çözümünden
 türetilir. Ayırt etmenin yolu, depolanan normu iç alandan **bağımsız olarak**
@@ -3109,13 +3116,13 @@ dururken hükmün sessizce değişmesini engeller.
 | İtiraz | Hüküm | Hükmün dayanağı |
 |--------|-------|------------------|
 | Hiçbir reel dönüşüm bir imzayı ötekine taşımaz | kabul edildi | 24 permütasyondan 6'sı çizgi elemanını korur, 18'i korumaz; itirazın kendi sayımı yeniden üretilir |
-| İmza değişiminde standart korunum yasaları çöker | kabul edildi | genel profilde katman vardır, dolayısıyla çöküş gerçektir ve büyüklüğü tartışılmak yerine hesaplanır |
+| İmza değişiminde standart korunum yasaları çöker [45], [46], [47], [48] | kabul edildi | genel profilde katman vardır, dolayısıyla çöküş gerçektir ve büyüklüğü tartışılmak yerine hesaplanır |
 | Yüzeydeki dağılımsal terim beyanla düşürülemez | kabul edildi | katman taşıyan her profilde üstel negatiftir |
 | Katman hiçbir madde seçimiyle enerji koşullarını sağlayamaz | kabul edildi | katman taşıyan hiçbir profil sınanan hiçbir kalınlıkta baskın koşulu sağlamaz |
 | Birden çok zamanlı denklemler kötü konumlanmıştır | daraltıldı | kütle kabuğu dışında modlar gerçekten büyür, ama geçişle ulaşılan kabuk üzerinde büyüme katsayısı özdeş olarak negatiftir |
 | Fazladan zamanlar salt ayardır, buraya kaydolamaz | daraltıldı | iç bölge düzdür ve hiçbir şey kaydetmez, ama yüzeyler bağlantıyı eğer; itiraz içeride geçerli, sınırda geçersizdir |
 | Birden çok zamanlı bir bölge gelecek ve geçmişe ayrılamaz | kabul edildi | orada zamansı küme bağlantılıdır, böyle bir ayrım yoktur ve model böyle bir iddiada bulunmaz |
-| Doyan bir gecikme depolanan alanın özelliğidir, hızlı geçiş değil | kabul edildi | iki okumanın oranı kalınlıkla oynamaz |
+| Doyan bir gecikme depolanan alanın özelliğidir, hızlı geçiş değil [42] | kabul edildi | iki okumanın oranı kalınlıkla oynamaz |
 | İlerlemiş tepe sinyal taşımaz | kabul edildi | cephe her kalınlıkta tam ışık süresi kadar gecikir |
 | Işık ötesi uyarım vakum Cherenkov sınırıyla dışlanır | cevaplandı | buradaki her yayılan uyarımın grup hızı $c$'nin altında kalır, sınırın kısıtlayacağı bir şey yoktur |
 | Işık ötesi uyarımların alan kuramının dinamiği yoktur | daraltıldı | ikilenmiş kurgunun komütatörü gerçekten sıfırdır, model bu yüzden onu kullanmaz |
@@ -3525,7 +3532,12 @@ doğduğunu** belirler.
 **Ölçüt.** Bir durum aynı anda birden çok zaman değişkeninde evriliyorsa, her
 biri kendi üretecini taşır ve bu evrimler ancak zamanlar uzayındaki taşımanın
 yoldan bağımsız olması hâlinde tutarlıdır. Bu koşul, bileşenleri üreteçlerin
-ikişerli komütatörleri olan bir eğriliğin sıfırlanmasıdır. Eğrilik sıfırsa yol
+ikişerli komütatörleri olan bir eğriliğin sıfırlanmasıdır. Ölçüt bu çalışmaya
+ait değildir: çok zamanlı dalga fonksiyonları için [49] ve [50]'de kurulmuş,
+ikincisinde genel etkileşim potansiyelleri için tutarlılığın tam koşulu olarak
+verilmiştir. [49] ayrıca burada önemli olan ayrımı yapar: çok zamanlı bir
+betimleme, birden çok zamansı boyut demek değildir. Burada uygulanan, o
+ölçütün kendisidir. Eğrilik sıfırsa yol
 hiçbir bilgi taşımaz ve tek zamana indirgeme belirsizlik içermez; sıfır
 değilse kapalı bir yol durumun üzerinde bir holonomi bırakır ve zamanlar
 arasındaki yönelim gözlenebilir hâle gelir.
