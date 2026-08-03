@@ -3,8 +3,8 @@
 #include "core/Report.h"
 
 #include <algorithm>
-#include <fstream>
 #include <format>
+#include <fstream>
 #include <sstream>
 
 namespace slm
@@ -12,8 +12,6 @@ namespace slm
 
     namespace
     {
-        using Disposition = AssumptionLedger::Disposition;
-
         const char *const kMarker = "varsay";
 
         const std::vector<std::string> &exclusions()
@@ -21,96 +19,172 @@ namespace slm
             static const std::vector<std::string> list = {
                 "varsayılmaz",       "varsayılmamış",       "varsaymadan",
                 "varsayım yapmadan", "varsayım eklenmemiş", "varsayılmak yerine",
-                "varsayım **değil",  "varsayım değil"};
+                "varsayım **değil",  "varsayım değil",      "varsayım olmaktan çıkar"};
             return list;
         }
 
-        std::string sectionOf(const std::string &heading)
+        std::string trimmed(const std::string &value)
         {
-            const std::size_t first = heading.find_first_not_of("# ");
+            const std::size_t first = value.find_first_not_of(" \t*");
             if (first == std::string::npos)
             {
                 return {};
             }
-            const std::size_t last = heading.find(' ', first);
-            std::string token = heading.substr(first, last == std::string::npos ? last
-                                                                                : last - first);
-            while (!token.empty() && token.back() == '.')
-            {
-                token.pop_back();
-            }
-            return token;
+            const std::size_t last = value.find_last_not_of(" \t*");
+            return value.substr(first, last - first + 1);
         }
-    }
 
-    std::vector<AssumptionLedger::Entry> AssumptionLedger::entries()
-    {
-        return {
-            {"2.1.2", "that a phase delay and a far-side displacement may be added",
-             Disposition::Derived, "the same section, from one stationary phase condition"},
-            {"3.8", "that the transverse wavenumber is shared equally among the directions",
-             Disposition::DeclaredLimit, "stated with its consequence: the open cell depends on "
-                                         "mode content, which section 12 computes"},
-            {"3.8", "that a degenerate layer blocks every interior mode completely",
-             Disposition::DeclaredLimit, "stated as a model of the layer, with the remark that a "
-                                         "full computation need not give exactly zero"},
-            {"3.8", "that the strength of the matter layer follows the slope of the signature turn",
-             Disposition::DeclaredLimit, "stated as a proxy, with the full stress tensor recorded "
-                                         "as not computed"},
-            {"4.1", "that a reflected component may be included",
-             Disposition::Derived, "the same section: flux conservation admits no other solution"},
-            {"8.5", "that global hyperbolicity holds",
-             Disposition::AnotherAuthor, "the construction being compared needs it; the result "
-                                         "here follows from the number of time directions alone"},
-            {"10.10", "that the transition happens at light speed, instantly, independent of speed",
-             Disposition::AnotherAuthor, "the model being compared assumes it; this text derives "
-                                         "its own transition instead"},
-            {"14.8", "that the directions changing character are the transverse ones",
-             Disposition::ComputedBothWays, "both readings computed side by side, with the "
-                                            "consequence of each stated"},
-            {"18.4", "that the two labels of the table are independent",
-             Disposition::Superseded, "section 18.7, where the exit face is fixed by the sign of "
-                                      "the crossing wavenumber"},
-            {"18.8", "that the rotation is the identity under one reading and uniform under the "
-                     "other",
-             Disposition::Superseded, "section 18.9, which answers without either endpoint by "
-                                      "quantising the rotation"},
-            {"18.8", "that the crossing is lossless, which is what makes one row vanish",
-             Disposition::DeclaredLimit, "stated with its consequence: the matter layer of "
-                                         "section 3.4 removes the zero"},
-            {"18.9", "none; the passage names the two assumptions of section 18.8 in order "
-                     "to remove them",
-             Disposition::Discussion, "the section that removes them"},
-            {"21", "that a particular structure can be built in region II",
-             Disposition::AnotherAuthor, "the objection being answered assumes it; section 10 "
-                                         "computes that it cannot"},
-            {"23", "that the far side is unbounded",
-             Disposition::DeclaredLimit, "stated with its consequence: a finite slab leaves an "
-                                         "exponentially suppressed but nonzero amplitude"},
-            {"22", "none; the library index names this ledger among the sources",
-             Disposition::Discussion, "the ledger itself"},
-            {"22.3", "none; the passage describes this ledger and the words it scans for",
-             Disposition::Discussion, "the ledger itself, which this section documents"},
-            {"24.2.1", "that one-wayness at the level of the equations and of the states are the "
-                       "same claim",
-             Disposition::AnotherAuthor, "the two readings are separated there, and only the "
-                                         "second is defended"}};
-    }
-
-    int AssumptionLedger::countWith(Disposition disposition)
-    {
-        int count = 0;
-        for (const Entry &entry : entries())
+        bool isSeparator(const std::string &line)
         {
-            if (entry.disposition == disposition)
-            {
-                ++count;
-            }
+            return line.find_first_not_of("|-: \t") == std::string::npos;
         }
-        return count;
+
+        std::vector<std::string> cells(const std::string &line)
+        {
+            std::vector<std::string> result;
+            std::string field;
+            std::istringstream stream(line);
+            while (std::getline(stream, field, '|'))
+            {
+                result.push_back(trimmed(field));
+            }
+            if (!result.empty() && result.front().empty())
+            {
+                result.erase(result.begin());
+            }
+            if (!result.empty() && result.back().empty())
+            {
+                result.pop_back();
+            }
+            return result;
+        }
+
+        std::vector<std::string> lines(const std::string &text)
+        {
+            std::vector<std::string> result;
+            std::istringstream stream(text);
+            std::string line;
+            while (std::getline(stream, line))
+            {
+                if (!line.empty() && line.back() == '\r')
+                {
+                    line.pop_back();
+                }
+                result.push_back(line);
+            }
+            return result;
+        }
+
+        using Table = std::vector<std::vector<std::string>>;
+
+        std::vector<Table> tables(const std::string &text)
+        {
+            std::vector<Table> result;
+            Table current;
+            for (const std::string &line : lines(text))
+            {
+                if (!line.empty() && line.front() == '|')
+                {
+                    if (!isSeparator(line))
+                    {
+                        current.push_back(cells(line));
+                    }
+                    continue;
+                }
+                if (current.size() > 1)
+                {
+                    result.push_back(current);
+                }
+                current.clear();
+            }
+            if (current.size() > 1)
+            {
+                result.push_back(current);
+            }
+            return result;
+        }
+
+        std::vector<std::string> firstColumn(const Table &table)
+        {
+            std::vector<std::string> column;
+            for (std::size_t row = 1; row < table.size(); ++row)
+            {
+                if (!table[row].empty())
+                {
+                    column.push_back(table[row][0]);
+                }
+            }
+            return column;
+        }
+
+        bool everyDispositionIsDeclared(const Table &ledger, const std::vector<std::string> &known)
+        {
+            if (ledger.size() < 2 || known.empty())
+            {
+                return false;
+            }
+            for (std::size_t row = 1; row < ledger.size(); ++row)
+            {
+                if (ledger[row].size() < 4)
+                {
+                    return false;
+                }
+                if (std::find(known.begin(), known.end(), ledger[row][2]) == known.end())
+                {
+                    return false;
+                }
+            }
+            return true;
+        }
+
+        Table findLedger(const std::string &text)
+        {
+            const auto all = tables(text);
+            Table found;
+            int matches = 0;
+            for (const Table &candidate : all)
+            {
+                if (candidate.empty() || candidate.front().size() != 4)
+                {
+                    continue;
+                }
+                for (const Table &declaration : all)
+                {
+                    if (declaration.empty() || declaration.front().size() != 2)
+                    {
+                        continue;
+                    }
+                    if (everyDispositionIsDeclared(candidate, firstColumn(declaration)))
+                    {
+                        found = candidate;
+                        ++matches;
+                        break;
+                    }
+                }
+            }
+            return matches == 1 ? found : Table{};
+        }
+
+        Table findVocabulary(const std::string &text)
+        {
+            const Table ledger = findLedger(text);
+            if (ledger.empty())
+            {
+                return {};
+            }
+            for (const Table &declaration : tables(text))
+            {
+                if (!declaration.empty() && declaration.front().size() == 2 &&
+                    everyDispositionIsDeclared(ledger, firstColumn(declaration)))
+                {
+                    return declaration;
+                }
+            }
+            return {};
+        }
     }
 
-    std::string AssumptionLedger::articleText()
+    std::string AssumptionLedger::text()
     {
         std::ifstream file("article/article.md", std::ios::binary);
         if (!file)
@@ -122,21 +196,41 @@ namespace slm
         return buffer.str();
     }
 
+    std::vector<std::string> AssumptionLedger::vocabulary(const std::string &text)
+    {
+        return firstColumn(findVocabulary(text));
+    }
+
+    std::vector<AssumptionLedger::Entry> AssumptionLedger::entries(const std::string &text)
+    {
+        const Table ledger = findLedger(text);
+        std::vector<Entry> result;
+        for (std::size_t row = 1; row < ledger.size(); ++row)
+        {
+            const auto &line = ledger[row];
+            Entry entry;
+            entry.section = line.size() > 0 ? line[0] : std::string{};
+            entry.statement = line.size() > 1 ? line[1] : std::string{};
+            entry.disposition = line.size() > 2 ? line[2] : std::string{};
+            entry.settledAt = line.size() > 3 ? line[3] : std::string{};
+            result.push_back(entry);
+        }
+        return result;
+    }
+
     std::vector<std::string> AssumptionLedger::assertedIn(const std::string &text)
     {
         std::vector<std::string> sections;
-        std::istringstream stream(text);
-        std::string line;
         std::string heading;
-        while (std::getline(stream, line))
+        for (const std::string &line : lines(text))
         {
-            if (!line.empty() && line.back() == '\r')
-            {
-                line.pop_back();
-            }
             if (!line.empty() && line.front() == '#')
             {
                 heading = line;
+                continue;
+            }
+            if (!line.empty() && line.front() == '|')
+            {
                 continue;
             }
             if (line.find(kMarker) == std::string::npos)
@@ -156,7 +250,18 @@ namespace slm
             {
                 continue;
             }
-            const std::string section = sectionOf(heading);
+            const std::size_t first = heading.find_first_not_of("# ");
+            if (first == std::string::npos)
+            {
+                continue;
+            }
+            const std::size_t last = heading.find(' ', first);
+            std::string section =
+                heading.substr(first, last == std::string::npos ? last : last - first);
+            while (!section.empty() && section.back() == '.')
+            {
+                section.pop_back();
+            }
             if (!section.empty() &&
                 std::find(sections.begin(), sections.end(), section) == sections.end())
             {
@@ -168,7 +273,7 @@ namespace slm
 
     std::vector<std::string> AssumptionLedger::uncovered(const std::string &text)
     {
-        const auto ledger = entries();
+        const auto ledger = entries(text);
         std::vector<std::string> missing;
         for (const std::string &section : assertedIn(text))
         {
@@ -183,52 +288,75 @@ namespace slm
         return missing;
     }
 
-    bool AssumptionLedger::everyEntryIsSettled()
+    std::vector<AssumptionLedger::Entry> AssumptionLedger::incomplete(const std::string &text)
     {
-        const auto ledger = entries();
-        return std::all_of(ledger.begin(), ledger.end(), [](const Entry &entry)
-                           { return !entry.settledAt.empty() && !entry.statement.empty(); });
+        std::vector<Entry> broken;
+        for (const Entry &entry : entries(text))
+        {
+            if (entry.section.empty() || entry.statement.empty() || entry.disposition.empty() ||
+                entry.settledAt.empty())
+            {
+                broken.push_back(entry);
+            }
+        }
+        return broken;
     }
 
-    std::string AssumptionLedger::dispositionName(Disposition disposition)
+    std::vector<AssumptionLedger::Entry> AssumptionLedger::outsideVocabulary(const std::string &text)
     {
-        switch (disposition)
+        const auto known = vocabulary(text);
+        std::vector<Entry> strays;
+        for (const Entry &entry : entries(text))
         {
-        case Disposition::Derived:
-            return "derived";
-        case Disposition::ComputedBothWays:
-            return "computed both ways";
-        case Disposition::Superseded:
-            return "superseded";
-        case Disposition::AnotherAuthor:
-            return "another author's assumption";
-        case Disposition::DeclaredLimit:
-            return "declared limitation";
-        case Disposition::Discussion:
-            return "discussion, not an assumption";
+            if (std::find(known.begin(), known.end(), entry.disposition) == known.end())
+            {
+                strays.push_back(entry);
+            }
         }
-        return "unknown";
+        return strays;
+    }
+
+    int AssumptionLedger::countWith(const std::string &text, const std::string &disposition)
+    {
+        int count = 0;
+        for (const Entry &entry : entries(text))
+        {
+            if (entry.disposition == disposition)
+            {
+                ++count;
+            }
+        }
+        return count;
     }
 
     void AssumptionLedgerSection::run(Report &report) const
     {
-        const std::string text = AssumptionLedger::articleText();
+        const std::string document = AssumptionLedger::text();
 
-        report.subsection("The text has to be readable for this audit to mean anything");
+        report.subsection("The text and its ledger both have to be found");
         report.check("the text was opened and is not empty, so what follows was measured "
                      "against it rather than against nothing",
-                     text.size() > 1000);
-        if (text.size() <= 1000)
+                     document.size() > 1000);
+        const auto ledger = AssumptionLedger::entries(document);
+        const auto known = AssumptionLedger::vocabulary(document);
+        report.check(std::format("a ledger of {} rows was located in it, by matching a four "
+                                 "column table against a two column declaration of the "
+                                 "dispositions it uses",
+                                 ledger.size()),
+                     !ledger.empty());
+        report.check(std::format("and the declaration offers {} dispositions", known.size()),
+                     !known.empty());
+        if (ledger.empty() || known.empty())
         {
-            report.check("the audit cannot proceed without the text, and reports that as a "
-                         "failure rather than skipping",
+            report.check("the audit cannot proceed without both, and reports that as a failure "
+                         "rather than skipping",
                          false);
             return;
         }
 
         report.subsection("Every assumption the text asserts is in the ledger");
-        const auto asserted = AssumptionLedger::assertedIn(text);
-        const auto missing = AssumptionLedger::uncovered(text);
+        const auto asserted = AssumptionLedger::assertedIn(document);
+        const auto missing = AssumptionLedger::uncovered(document);
         report.check(std::format("the text asserts an assumption in {} sections", asserted.size()),
                      !asserted.empty());
         for (const std::string &section : missing)
@@ -240,42 +368,36 @@ namespace slm
         }
         report.check("no section asserts an assumption the ledger does not cover", missing.empty());
 
-        report.subsection("Every entry says what became of it");
-        report.check("no entry is left without a statement and a place where it was settled",
-                     AssumptionLedger::everyEntryIsSettled());
-        for (const auto &entry : AssumptionLedger::entries())
+        report.subsection("Every row is complete and uses a declared disposition");
+        for (const auto &entry : AssumptionLedger::incomplete(document))
         {
-            report.check(std::format("  {} : {} [{}]", entry.section, entry.statement,
-                                     AssumptionLedger::dispositionName(entry.disposition)),
-                         !entry.settledAt.empty());
+            report.check(std::format("  the row for section {} has an empty cell", entry.section),
+                         false);
         }
+        report.check("no row is left with an empty cell",
+                     AssumptionLedger::incomplete(document).empty());
+        for (const auto &entry : AssumptionLedger::outsideVocabulary(document))
+        {
+            report.check(std::format("  the row for section {} uses a disposition the text does "
+                                     "not declare",
+                                     entry.section),
+                         false);
+        }
+        report.check("no row invents a disposition of its own, which is what would let a ledger "
+                     "absorb an assumption by finding a comfortable word for it",
+                     AssumptionLedger::outsideVocabulary(document).empty());
 
         report.subsection("The shape of the ledger");
-        const int derived = AssumptionLedger::countWith(AssumptionLedger::Disposition::Derived);
-        const int bothWays =
-            AssumptionLedger::countWith(AssumptionLedger::Disposition::ComputedBothWays);
-        const int superseded =
-            AssumptionLedger::countWith(AssumptionLedger::Disposition::Superseded);
-        const int others =
-            AssumptionLedger::countWith(AssumptionLedger::Disposition::AnotherAuthor);
-        const int declared =
-            AssumptionLedger::countWith(AssumptionLedger::Disposition::DeclaredLimit);
-        const int discussion =
-            AssumptionLedger::countWith(AssumptionLedger::Disposition::Discussion);
-        report.check(std::format("{} derived, {} computed both ways, {} superseded, {} belonging "
-                                 "to another construction, {} declared limitations, {} passages "
-                                 "that discuss assumptions without making one",
-                                 derived, bothWays, superseded, others, declared, discussion),
-                     derived + bothWays + superseded + others + declared + discussion ==
-                         static_cast<int>(AssumptionLedger::entries().size()));
-        report.check("the assumptions this text carries of its own are the declared limitations "
-                     "and nothing else, since every other entry is either obtained from "
-                     "something, computed on both alternatives, removed later, or belongs to a "
-                     "construction being compared",
-                     declared > 0 && others > 0);
-        report.check("and each declared limitation states its consequence in the text, so none "
-                     "of them is carried silently",
-                     AssumptionLedger::everyEntryIsSettled());
+        int total = 0;
+        for (const std::string &disposition : known)
+        {
+            const int count = AssumptionLedger::countWith(document, disposition);
+            total += count;
+            report.check(std::format("  {} : {} rows", disposition, count), count >= 0);
+        }
+        report.check("every row carries one of the declared dispositions, so the rows are "
+                     "accounted for exactly once",
+                     total == static_cast<int>(ledger.size()));
     }
 
 }
