@@ -148,12 +148,52 @@ def repoint_prose(lines, mapping, unmapped):
         lines[index] = re.sub(REFERENCE, one, line)
 
 
+def repoint_wrapped(lines, mapping, unmapped):
+    """Rewrite references whose prefix and number sit on different lines.
+
+    The pass above works a line at a time and so cannot see them. They are taken
+    here, on the pair of lines, which keeps the rule that each reference is
+    touched exactly once: this pass only ever rewrites a number at the start of a
+    line whose predecessor ends in a prefix, and that number carried no prefix of
+    its own for the earlier pass to have matched.
+    """
+    changed = 0
+    for index in range(len(lines) - 1):
+        if lines[index].startswith("|") or lines[index + 1].startswith("|"):
+            continue
+        if not re.search(r"(?:Bölüm|§|Ek)\s*$", lines[index]):
+            continue
+        head = re.match(r"^(\s*)([0-9]+(?:\.[0-9]+)*)", lines[index + 1])
+        if not head:
+            continue
+        number = head.group(2)
+        if number not in mapping:
+            unmapped.add(number)
+            continue
+        if mapping[number] != number:
+            changed += 1
+        lines[index + 1] = (head.group(1) + mapping[number] +
+                            lines[index + 1][head.end():])
+    return changed
+
+
 def unresolved(text):
-    """References pointing at a section the text does not contain."""
+    """References pointing at a section the text does not contain.
+
+    The prefix and the number are allowed to be separated by a line break,
+    because the manuscript is hard wrapped and a reference that happens to fall
+    on a boundary is still a reference. Matching on a literal space missed those
+    entirely: they were neither remapped nor checked, and three of them pointed
+    at sections that had never existed.
+
+    A range written as one prefix and two numbers is also read, since only the
+    first number carries the prefix and the second was invisible for the same
+    reason.
+    """
     have = set(re.findall(r"^#{2,3} ([0-9]+(?:\.[0-9]+)*)", text, re.M))
-    refs = set(re.findall(r"Bölüm ([0-9]+(?:\.[0-9]+)*)", text))
-    refs |= set(re.findall(r"§([0-9]+(?:\.[0-9]+)*)", text))
-    refs |= set(re.findall(r"Ek ([0-9]+)", text))
+    refs = set(re.findall(r"(?:Bölüm|§|Ek)\s+([0-9]+(?:\.[0-9]+)*)", text))
+    refs |= set(re.findall(
+        r"(?:Bölüm|§|Ek)\s+[0-9]+(?:\.[0-9]+)*\s*[–-]\s*([0-9]+(?:\.[0-9]+)*)", text))
     return sorted(r for r in refs if r not in have)
 
 
@@ -168,6 +208,7 @@ def main() -> int:
     unmapped = set()
     changed = repoint_cells(lines, mapping, unmapped)
     repoint_prose(lines, mapping, unmapped)
+    wrapped = repoint_wrapped(lines, mapping, unmapped)
     text = "\n".join(lines)
 
     if unmapped:
@@ -189,6 +230,7 @@ def main() -> int:
     print(f"headings mapped   : {len(mapping)}")
     print(f"sections moved    : {len(moved)}  {' '.join(moved)}")
     print(f"table cells        : {changed} repointed")
+    print(f"wrapped references : {wrapped} repointed")
     print("references         : every one resolves")
     return 0
 

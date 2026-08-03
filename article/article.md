@@ -139,19 +139,32 @@ parçacığı zamanda geriye taşımak.
 
 | Adım | Sorusu | Kurulduğu bölümler |
 |------|--------|--------------------|
-| Geçiş | Kütleli bir parçacık eşiğin ötesine nasıl geçer | 1, 2, 3, 4, 6 |
-| Mesafe | Öte tarafta mekânda kat edilen mesafe ne anlama gelir | 2.1.1–2.1.5, 8, 9.0, 11, 24 |
-| Dönüş | Geri döndüğünde saatte nereye düşer | 13, 14.1–14.5, 18.12–18.16, 25, 28 |
+| Geçiş | Kütleli bir parçacık eşiğin ötesine nasıl geçer | Bölüm 1, Bölüm 2, Bölüm 3, Bölüm 4, Bölüm 6 |
+| Mesafe | Öte tarafta mekânda kat edilen mesafe ne anlama gelir | Bölüm 2.1.1, Bölüm 2.1.2, Bölüm 2.1.3, Bölüm 8, Bölüm 9.1 |
+| Dönüş | Geri döndüğünde saatte nereye düşer | Bölüm 13, Bölüm 14.1, Bölüm 14.2, Bölüm 19, Bölüm 20 |
 
-Sözlüğün tek tanımı **Bölüm 9.1**'dadır: öte tarafın dört ekseninin karakteri,
-hangi yuvaya indiği, ve bir birim adımın Bölge I saatinde ne ürettiği. İspatı
-Bölüm 2.1.1'dedir. Metnin başka yerlerinde sözlük tekrar kurulmaz, yalnızca bu
-iki adrese atıf yapılır.
+**Simülasyon için gereken en kısa yol.** Zincirin yedi halkası tek yerde,
+Bölüm 20'de toplanmıştır ve her halkanın nerede kurulduğu orada yazılıdır.
+Çekirdeği hesaplamak isteyen için gereken en kısa okuma budur: Bölüm 20, sonra
+oradan işaret edilen yedi adres. Aşağıdaki iki tablo o okumayı genişletir.
+
+**"Sözlük" sözcüğü üç ayrı nesne için kullanılmaktadır** ve karıştırılmamaları
+gerekir; bu ayrım burada bir kez yapılıp metnin geri kalanında tekrarlanmaz.
+
+| Nerede | Neyi eşler | Çekirdek için rolü |
+|---|---|---|
+| Bölüm 9.1 | Öte tarafın dört ekseni $\to$ Bölge I'in yuvaları, ve bir birim adımın saatte ürettiği | **Çekirdeğin kendisi.** İspatı Bölüm 2.1.1'dedir |
+| Bölüm 17.2 | Öte taraftaki yönelim $\to$ Bölge I'de gözlenen nicelikler | Çekirdeğin girdi tarafı |
+| Bölüm 18.1 | Dört koordinatta hareket ile yönelim arasındaki ayrım | Girdinin hangi kısmının hareket olduğu |
+
+Sayısal katsayı yalnızca birincisinde tanımlanır ve tek bir yerde ispatlanır;
+diğer ikisi onu kullanır, yeniden kurmaz.
 
 Geri kalan bölümler detaydır ve hepsi aynı türdendir: omurganın bir adımına
 yöneltilebilecek bir soruyu karşılarlar. Hiçbiri anlatıyı ilerletmez, her biri
 bir soruyu kapatır. Bu ayrım okuyucunun metni kısaltarak okuyabilmesi için
-açıkça yazılmıştır.
+açıkça yazılmıştır. İki tablo **ayrıktır**: bir bölüm ya omurgadadır ya
+detaydadır, ikisinde birden değil.
 
 | Bölüm | Konusu | Karşıladığı soru |
 |-------|--------|-------------------|
@@ -1103,7 +1116,7 @@ olur. Hesaplanan değerler:
 
 **Sonuç ve Bölüm 4.1'in yeniden okunması.** Geçirgenlik hiçbir sonlu kalınlıkta
 sıfır değildir, ancak kalınlıkla üstel olarak bastırılır. Dolayısıyla Bölüm
-9.1'in tam yansıması ayrı bir ifade değil, bu ifadenin **kalın dilim limitidir**.
+4.1'in tam yansıması ayrı bir ifade değil, bu ifadenin **kalın dilim limitidir**.
 Sıfır kalınlıkta her şey geçer, kalın dilimde hiçbir şey geçmez.
 
 Bir ikinci koşul daha vardır: iç modun sönümlü olması, gelen alanın mod
@@ -1119,7 +1132,7 @@ olduğu durum için geçerlidir.
 [27] ayrıca bu geometrinin bir **analog gerçeklemesini** verir: anizotropik bir
 yarı iletken ile elektronik bir metamalzeme arasındaki eklemde elektron
 yayılımı, aynı denklemi sağlar. Bu, modelin sınanabilirliği açısından Bölüm
-16.4'te belirtilen çıkmaza bir alternatif sunar: $v = c$ yüzeyi hazırlanamaz,
+28.14'te belirtilen çıkmaza bir alternatif sunar: $v = c$ yüzeyi hazırlanamaz,
 ancak aynı denklemi sağlayan bir malzeme ekleminde ayna davranışı ve tünelleme
 ölçülebilir. Bunun bu modelin bir sınaması sayılıp sayılamayacağı ayrı bir
 sorudur ve burada karara bağlanmamıştır.
@@ -1238,27 +1251,17 @@ $\Sigma$ için dört koordinat birden döner: $(1,3) \to (3,1)$.
 | Lorentz yapısı | Korunuyor | Değişiyor |
 | Normal vektör tipi | Sürekli dönüyor | Sıçrayarak değişiyor |
 | Konjuge momentum | Sürekli; sıfır olmak zorunda değil | İşaret çevirmek zorunda, dolayısıyla $\pi = 0$ |
-| Sonuç | **Geçirgen** | **Yansıtıcı** |
+| Sonuç | **Geçirgen** | **Yansıtıcı**, ancak yalnızca öte taraf sınırsızken; sonlu kalınlıkta geçirgendir (Bölüm 6) |
 
-### 7.5 Sürekli köprü kurulabilir mi
+### 7.5 Geri çekilen argüman
 
-Denendi. $(1,3)$'ten $(3,1)$'e sürekli bir interpolasyon, örneğin
-
-$$g(\lambda) = \mathrm{diag}(1,\, -\cos\lambda,\, -\cos\lambda,\, -\cos\lambda),
-\qquad \det g = -\cos^3\lambda$$
-
-$\lambda = \pi/2$'de $\det g = 0$ verir: **dejenere metrik**. Orada metriğin tersi
-yoktur ve alan denklemi tanımsızdır. Bu genel bir sonuçtur, iki imza sınıfı
-arasında dejenere olmayan sürekli bir yol yoktur.
-
-**Bu argümanın iki kusuru vardır ve Bölüm 7.1'de düzeltilmiştir.** Birincisi,
-yukarıdaki yol hedefine varmaz: $\lambda = \pi$'de $\mathrm{diag}(1,1,1,1)$
-verir, yani Öklid imzası $(4,0)$'a ulaşır, $(3,1)$'e değil. Dolayısıyla
-kozmolojideki geçişi tarif eder, buradakini değil. İkincisi, determinant
-üzerinden yürüyen gerekçe geçersizdir: $\det \eta = \det \eta' = -1$ olduğundan
-determinant iki uç arasında işaret değiştirmek zorunda değildir.
-
-Bölüm 7.1 doğru yolu kurar ve sonuç yukarıdakinden farklı çıkar.
+Bu alt bölüm bir kayıttır ve kısa tutulmuştur. Önceki bir sürümde
+$\mathrm{diag}(1, -\cos\lambda, -\cos\lambda, -\cos\lambda)$ yolu üzerinden
+"iki imza sınıfı arasında dejenere olmayan sürekli bir yol yoktur, dolayısıyla
+geçiş sağlanmaz" sonucuna varılıyordu. İki kusuru vardır: o yol $(3,1)$'e değil
+Öklid imzası $(4,0)$'a varır, yani hedefi ıskalar; ve
+$\det \eta = \det \eta' = -1$ olduğundan determinant üzerinden yürüyen gerekçe
+geçersizdir. Doğru yol Bölüm 7.1'de kurulmuştur ve sonucu farklıdır.
 
 ### 7.6 Sonuç
 
@@ -2027,12 +2030,9 @@ uzay ekseni olan $r$ üzerinde daralır ve üç zaman yönü boyunca karşılı�
 
 ## 11. Orada madde, enerji ve öngörü
 
-$D$ dört-momentuma uygulandığında:
-
-$$(E/c,\; p_x,\; p_y,\; p_z) \longmapsto (p_z,\; p_y,\; p_x,\; E/c)$$
-
-Öte tarafta enerji üç bileşenli, momentum tek bileşenlidir. Değişmez de
-koordinatlardaki davranışla tutarlı biçimde işaret çevirir:
+$D$'nin dört-momentuma ne yaptığı Bölüm 15.1'de yazılıdır ve burada
+tekrarlanmaz: öte tarafta enerji üç bileşenli, momentum tek bileşenlidir.
+Değişmez de koordinatlardaki davranışla tutarlı biçimde işaret çevirir:
 
 $$\frac{E^2}{c^2} - p^2 \;\longmapsto\; -\left(\frac{E^2}{c^2} - p^2\right)$$
 
@@ -3067,7 +3067,7 @@ süresi gidiş dönüştür, yani $2d/c$; dolayısıyla parçacığın geçen s�
 bölgenin iki kez katedilmesidir, yani tek geçişin iki katıdır. Önceki bir
 sürümde gidiş dönüş ışık süresi, **tek geçişlik** bir gecikmeyle
 karşılaştırılıyordu ve bu, geçişi tam bir geçiş kadar kayırıyordu. Bölüm
-25.7'nin kapalı biçimi hangisinin hangisi olduğunu kesinleştirir: tek bir
+19.7'nin kapalı biçimi hangisinin hangisi olduğunu kesinleştirir: tek bir
 engel için doymuş faz süresi $2\omega/(c^2\kappa\beta)$'dır, yani $1{,}4629$
 tek geçiştir.
 
@@ -3085,7 +3085,7 @@ kısmı, bu koordinatın konumu olarak tanımlanmıştır ve hesap onu vermekted
 
 **Olmadığı şey.** Bu, ışıktan hızlı bir **yayılma** değildir. Aynı rejimde
 içeride grup hızı diye bir nicelik yoktur, çünkü mod sönümlüdür ve Bölüm
-18.13'te gösterildiği gibi kat edilen bir mesafe bulunmaz. Ölçülen şey, dönen
+22.2'te gösterildiği gibi kat edilen bir mesafe bulunmaz. Ölçülen şey, dönen
 paketin **tepe noktasının** nereye düştüğüdür.
 
 **Ve bir sinyal taşımadığı.** Bu nokta artık açık bırakılmamakta, hesaplanmış
@@ -3104,7 +3104,7 @@ zaman göründüğüdür; ama bu bir seçimdir ve gerekçesi 14.11'de verilmişt
 
 ### 19.7 Eşlemenin kapalı biçimi
 
-Bölüm 19.1 ile 25.6 arası eşlemeyi **tarayarak** verir. Tarama bir cevap
+Bölüm 19.1 ile Bölüm 19.6 arası eşlemeyi **tarayarak** verir. Tarama bir cevap
 değildir: bu durumların nereye döndüğünü söyler, eşlemenin **ne olduğunu**
 söylemez. Bu bölüm onu formül olarak yazar.
 Bildiğimiz kadarıyla literatürde bu eşlemenin hiçbir biçimi bulunmamaktadır;
