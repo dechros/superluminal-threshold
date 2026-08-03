@@ -467,7 +467,7 @@ ikisi farklı davranır.
 işaretli ekseni birbirine döndüren bir dönme, ayırt edilmiş ekseni **sabit
 bırakır**; dolayısıyla ilgili matris girdisine dokunmaz. Katsayı incelenen
 bütün açılarda değişmeden $1$ kalır, ve net yer değiştirmesi sıfır olan her
-rota — ne kadar dolambaçlı olursa olsun — saati başladığı yere döndürür. Bu
+rota, ne kadar dolambaçlı olursa olsun, saati başladığı yere döndürür. Bu
 sekiz geçişin hepsinde doğrulanmıştır. Yani **gezinmek tek başına hiçbir şey
 kazandırmaz**; bu, öte tarafta dolaşmanın kendi başına zaman kazandıracağı
 beklentisini dışlayan olumsuz bir sonuçtur.
@@ -530,8 +530,79 @@ enerjiyi $\%20$, $100$ birimlik bacakta $\%2$ artırır. $1000$ birimlik bir
 bacakta enerjinin $\%1$ artması $10$ birim, iki katına çıkması $1000$ birim ek
 yer değiştirme üretir.
 
-**Toplu değerlendirme, bir sınırlama olarak.** Üç niceliğin ikisi zayıftır —
-genlik ağırlığı bacağı görmez, düz bacak enerji gerektirmez — üçüncüsü gerçek
+### 2.1.6 Bedelin kendisi sabit değildir: doymuş gecikmenin küçültülmesi
+
+Yukarıdaki bütün muhasebe, eşik mesafesini **verili** kabul eder. Etmemesi
+gerekir. Doymuş gecikme bir bariyerin değişmez bir özelliği gibi ele alınır ve
+literatürde sorulan soru onun **doyup doymadığıdır**; ne kadar **küçültülebileceği**
+sorulmamıştır. Burada o gecikme fiyattır, dolayısıyla soru anlamlıdır ve
+cevaplanabilir (`src/intermediate/ThresholdOptimum`).
+
+Kapalı biçim soruyu ele verir. Enerji vektörünün birinci bileşeninin karesine
+**normal pay**, kalan ikisinin toplamına **enine pay** denirse, gecikme yalnızca
+bu iki sayıya ve kütleye bağlıdır; kalınlık formülde geçmez. Dolayısıyla ikisi
+üzerinden minimize edilebilir. Çıkan iki hareket birbirine karıştırılmamalıdır.
+
+**Birincisi: sabit toplam enerjide bir iç optimum vardır ve etkisi zayıftır.**
+Toplam $6{,}84$ için:
+
+| Normal pay | Gecikme |
+|---|---|
+| $1$ | $1{,}713572$ |
+| $2{,}28$ | $1{,}418053$ |
+| $2{,}84$ | $1{,}462864$ |
+| $4$ | $2{,}160247$ |
+
+En küçük değer $1{,}447295$'tir ve normal payın $2{,}7360$ olduğu yerde
+bulunur. Makalede kullanılan yapılandırma bu en iyinin **yüzde birkaçı**
+içindedir; yani payları yeniden dengelemekten alınacak fazla bir şey yoktur.
+
+**İkincisi: toplam enerjiyi yükseltmek zayıf değildir.** En iyi bölüşümde
+gereken öte taraf mesafesi (gidiş dönüş ayağında, yani makalenin
+karşılaştırdığı nicelik):
+
+| Toplam enerji | Gereken öte taraf mesafesi |
+|---|---|
+| $9$ | $2{,}484520$ |
+| $50$ | $1{,}009950$ |
+| $500$ | $0{,}316544$ |
+| $5000$ | $0{,}100010$ |
+
+Mesafe **sınırsız** küçülür. Yani öte tarafta kat edilmesi gereken yol sabit bir
+fiyat değil, **seçilen** bir fiyattır.
+
+**Bunun neye mal olduğu, ve olmadığı.** Asıl soru budur, çünkü geçirgenlik
+kalınlıkla üstel çöker. Cevap: genlikten hiçbir şeye mal olmaz. Doyum, sönüm
+sabiti çarpı kalınlığın büyük olmasını ister; genlik de aynı çarpımla belirlenir.
+O çarpım sabit tutulduğunda genlik **basılan her basamakta değişmeden** kalır:
+
+| Toplam enerji | Kalınlık | Genlik |
+|---|---|---|
+| $6{,}84$ | $2{,}564946$ | $4{,}811570 \times 10^{-3}$ |
+| $50$ | $0{,}948683$ | $4{,}811570 \times 10^{-3}$ |
+| $500$ | $0{,}300000$ | $4{,}811570 \times 10^{-3}$ |
+| $5000$ | $0{,}094868$ | $4{,}811570 \times 10^{-3}$ |
+
+> Küçülen mesafe genlikten ödenmemektedir. Ödenen şey **enerji ve daha ince bir
+> bölgedir**, ve bu ikisi birlikte iner çıkar.
+
+**İki varsayım denetlenmiştir, kabul edilmemiştir.** Birincisi, sabit tutulan
+derinlikte gecikmenin gerçekten doymuş olması: dört enerjinin dördünde de sonlu
+kalınlık gecikmesi doymuş değerin yüzde biri içindedir. İkincisi, minimize
+edilen niceliğin makalenin karşılaştırdığı nicelik olması: referans
+yapılandırma $2{,}565988$ vermektedir, yani §2.1.3'ün sayısının aynısı. Bu
+ikincisi önemsiz değildir; tek geçiş ile gidiş dönüşü karıştırmak bu çalışmaya
+iki kez ikilik çarpana mal olmuştur.
+
+**Bunun makaleye katkısı.** §2.1.5'in ağırlık tablosu ($d = 8$'de
+$3{,}46 \times 10^{-12}$) tek bir kalınlıkta okunmuş bir sayıdır ve bir sınır
+değildir. Aynı doyum derinliğinde daha yüksek enerjide çalışıldığında hem
+gereken mesafe hem gereken kalınlık düşer, genlik ise düşmez. Dolayısıyla
+"mümkün ama ağırlığı $10^{-12}$" ifadesi bir yasak değil, bir **çalışma
+noktası** ifadesidir.
+
+**Toplu değerlendirme, bir sınırlama olarak.** Üç niceliğin ikisi zayıftır:
+genlik ağırlığı bacağı görmez, düz bacak enerji gerektirmez; üçüncüsü gerçek
 bir enerji artışıdır ama tanıdıktır: sıradan bir Lorentz dönüşümünün bir zaman
 aralığına uyguladığı çarpanın aynısıdır. Yani bu değerlendirmede kurguya özgü
 hiçbir nicelik yoktur. Modelin hesaplayamadığı şey yolculuğun kendisinin
@@ -1535,14 +1606,14 @@ kurar; [68] onu yöneltilen eleştirileri karşılayacak biçimde yeniden yazar.
 [69] ve [71] temel bir zamanın gereksiz olduğunu savunur, [70] zamanı
 termodinamik bir niceliğe indirger. Bu çalışma bunların hiçbirini ispatlamaz ve
 hiçbirine dayanmaz. Ortak olan yön şudur: ok, denklemlerde bulunmadığı için
-başka bir yere yazılmak zorundadır — orada duruma, burada da duruma. Bunların
+başka bir yere yazılmak zorundadır: orada duruma, burada da duruma. Bunların
 "zaman yoktur" biçimindeki güçlü okuması ise **tartışmalı bir programdır**, bir
 teorem değildir, ve bu metinde kullanılmamaktadır.
 
 Öte tarafın bu tartışmadaki yeri ayrıca dikkat çekicidir: orada ayrımın kendisi
 hiç yoktur (Bölüm 8.6), dolayısıyla oku duruma yazma imkânı da yoktur. Bölüm
-28'in bulguları — Cauchy yüzeyi yok, Feynman propagatörü tanımsız, kararlı vakum
-yok — zamansız bir kurgunun neye benzediğinin bu geometride hesaplanmış hâlidir.
+28'in bulguları, yani Cauchy yüzeyi yok, Feynman propagatörü tanımsız, kararlı
+vakum yok, zamansız bir kurgunun neye benzediğinin bu geometride hesaplanmış hâlidir.
 
 ### 8.6 Zaman yönelimi: neden öte tarafta gelecek ve geçmiş yok
 
@@ -2859,8 +2930,8 @@ Tek yönlü koordinatın iki bölgede **ayna yerlerde** durması bu sözlüğün
 ifadesidir: Bölge I'in zamanı ile Bölge II'nin tek uzay ekseni aynı koordinattır,
 ve ikisinde de yön seçilemez.
 
-"Tek yönlü" ifadesinin içindeki iki ayrı iddia — yönlendirilebilirlik ile
-ilerleme zorunluluğu — Bölüm 8.4.1'de ayrılmış ve yalnızca birincisinin
+"Tek yönlü" ifadesinin içindeki iki ayrı iddia, yani yönlendirilebilirlik ile
+ilerleme zorunluluğu, Bölüm 8.4.1'de ayrılmış ve yalnızca birincisinin
 hesaplandığı orada gösterilmiştir.
 
 Bu ifadenin Bölüm 2.1.3'ün sonucuyla nasıl bir arada durduğu da orada yazılıdır:
@@ -3236,7 +3307,7 @@ cümlede sabitlenmesidir.
 **İddianın sınırı, aynı yerde.** Yukarıdaki zincir bir aritmetiktir ve
 aritmetiği tamdır. Zincirin ne olmadığı da tek cümlede durmalıdır: bir geçişin
 fiziksel olarak kurulabildiğinin gösterimi **değildir**. Üç ayrı yerde ödenen
-bedel bunu belirler — geçirgen okumanın bu metrik ailesinde geometrik bir
+bedel bunu belirler: geçirgen okumanın bu metrik ailesinde geometrik bir
 temsilcisi yoktur (Bölüm 3.7), eşiği aşan yapılanmaların genliği $d = 8$'de
 $3{,}46 \times 10^{-12}$'ye çöker (Bölüm 2.1.5), ve işaretin seçilebilir
 kalması global bir seçicinin bulunmaması koşuluna bağlıdır (Bölüm 8.4).
@@ -4295,14 +4366,14 @@ yazmak gerekirse: öte tarafta tek uzay ekseninde mesafe kat edilir, dönüşte 
 zamana düştüğü için kat edilen mesafe bir zaman kayması olarak okunur. Bu cümlenin
 iki parçası ayrı ayrı incelenmelidir, çünkü statüleri farklıdır.
 
-Birinci parça — bir uzay ekseninin zaman eksenine düşmesi — **yerleşiktir**. Sonsuz
+Birinci parça, yani bir uzay ekseninin zaman eksenine düşmesi, **yerleşiktir**. Sonsuz
 hız limitinin $(1+1)$ boyutta uzay ve zaman koordinatlarını değiş tokuş ettiği
 bilinmektedir, ve genişletilmiş grubun her öğesinin zaman-benzeri ile uzay-benzeri
 doğrultuları değiş tokuş ettiği [4]'te açıkça yazılıdır. Bu modelin $D$'si o
 ailenin bir üyesidir; Bölüm 2.1'in yaptığı, aileyi tarayıp hangi üyelerinin
 kullanılabilir olduğunu saymaktır, değiş tokuşu keşfetmek değildir.
 
-İkinci parça — o eksende **kat edilen mesafenin** bir zaman kaymasına çevrilmesi —
+İkinci parça, yani o eksende **kat edilen mesafenin** bir zaman kaymasına çevrilmesi,
 arandı ve bulunamadı. Değiş tokuş bir dönüşüm özelliği olarak sayısız yerde
 geçmektedir; bir **yer değiştirmenin** o dönüşüm altında bir saat kaymasına
 dönüştüğü ve dönüşte hangi ana varıldığının hesaplandığı bir çalışma
@@ -4312,7 +4383,7 @@ düzenek olarak kullanılması arasındaki farktır.
 Bunun en yakın karşılığı yerleşik fizikte bulunmaktadır ve modelin en ciddi
 sınavıdır: kara delik ufkunun içinde de aynı değiş tokuş olur, $r$ zaman-benzeri
 hâle gelir, ve buna rağmen ufkun içi bir zaman yolculuğu düzeneği olarak
-kullanılmaz. Nedeni iki tanedir — ufuk tek yönlüdür, ve orada eksende yön
+kullanılmaz. Nedeni iki tanedir: ufuk tek yönlüdür, ve orada eksende yön
 seçilemez. Bu iki itiraz Bölüm 7.2'de karşılanmakta, ve karşılığında iki hesap
 gösterilmektedir: ikinci geçişin genliği sıfır değildir, ve sekiz geçişin dördü
 yer değiştirmeyi geriye taşır. Çekirdeğin ayakta kalması bu ikisine bağlıdır.
@@ -4328,7 +4399,7 @@ karşılaştırılmıştır; hız birimi Bölge I'in ışık hızıdır:
 
 | Rota | Dönüş anının işareti | Gerektirdiği bağıl hız |
 |---|---|---|
-| Naif ilmek, tek çerçeve | Her hızda pozitif | — |
+| Naif ilmek, tek çerçeve | Her hızda pozitif | yok |
 | Röle, iki çerçeve | Eşiğin üstünde negatif | Hız $2$ için $0{,}80$; hız $4$ için $0{,}47$ |
 | Buradaki rota | Eşik mesafesinin üstünde negatif | **Sıfır** |
 
