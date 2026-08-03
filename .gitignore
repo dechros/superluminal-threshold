@@ -1,8 +1,19 @@
-# ---- Derleme ciktilari -----------------------------------------------------
-build/
-bin/
-obj/
-out/
+# Patterns here are anchored with a leading slash wherever they name a
+# directory, because an unanchored name matches at EVERY depth. That is not a
+# style preference. The bare pattern `core`, meant for core dumps, also matched
+# the directory `src/core`, so Section.h and Report.h were never committed:
+# every translation unit in the project includes one of them, and a fresh clone
+# of this repository did not build. Nothing warned, because an ignored file does
+# not appear in `git status`. Prefer `/name` over `name`, and when a rule could
+# plausibly collide with a source directory, add an explicit negation next to it.
+
+# ---- Build output ----------------------------------------------------------
+/build/
+/bin/
+/obj/
+/out/
+/superluminal
+/superluminal-debug
 *.o
 *.obj
 *.a
@@ -14,13 +25,10 @@ out/
 *.elf
 *.gch
 *.pch
-*.d
-superluminal
-superluminal-debug
 
-# ---- Derleyici / arac uretimi ----------------------------------------------
+# ---- Compiler and tooling output -------------------------------------------
 compile_commands.json
-.cache/
+/.cache/
 *.gcno
 *.gcda
 *.gcov
@@ -28,41 +36,43 @@ callgrind.out.*
 perf.data*
 massif.out.*
 vgcore.*
-core
-core.*
+# Core dumps, at the repository root only. `src/core` is source and is kept.
+/core
+/core.*
+!src/core/
 
-# ---- Sanitizer / profil ciktilari ------------------------------------------
+# ---- Sanitizer and profiling output ----------------------------------------
 *.profraw
 *.profdata
 *.log
 
-# ---- Editor / IDE ----------------------------------------------------------
-# .vscode icindeki task, launch ve IntelliSense ayarlari REPOYA DAHILDIR;
-# yalnizca kisisel/gecici dosyalar disarida birakilir.
+# ---- Editors and IDEs ------------------------------------------------------
+# The task, launch and IntelliSense settings under .vscode ARE part of this
+# repository; only personal or transient files are excluded.
 .vscode/*
 !.vscode/tasks.json
 !.vscode/launch.json
 !.vscode/c_cpp_properties.json
 !.vscode/settings.json
 !.vscode/extensions.json
-.idea/
+/.idea/
 *.swp
 *.swo
 *~
 *.orig
 *.rej
-.clangd/
+/.clangd/
 
-# ---- Isletim sistemi -------------------------------------------------------
+# ---- Operating system ------------------------------------------------------
 .DS_Store
 Thumbs.db
 desktop.ini
 
-# ---- Python (eski sembolik hesap katmanindan kalanlar) ---------------------
+# ---- Python (left over from the earlier symbolic layer) --------------------
 __pycache__/
 *.pyc
-.venv/
-venv/
+/.venv/
+/venv/
 
-# scratch produced while reading the literature
-.digest.json
+# Scratch produced while reading the literature.
+/.digest.json
