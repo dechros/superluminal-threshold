@@ -4696,7 +4696,7 @@ sorusu olarak ele almış, bir varış anı sorusu olarak ele almamıştır. Bu
 | Sonuçlar arasındaki dağılım | Sapmaların üç değerli bir kümede olduğu | Her değere düşen ağırlık |
 | Yer çekimi kanalı | Tepki verdiği, yarım birimde $4{,}0000$ karşıtlık | Kanalın kapasitesi |
 | Karmaşık zaman kurgusu | Dönüş anını veren mekanizma; lapse kontur ölçütü hesaplanmış ve tutarlı çıkmıştır (Bölüm 22.5) | Ölçütün iki geçiş genliğinin kendisi üzerinde uygulanması; indirgenmiş biçimde kalmıştır |
-| Dönen parçacık ile yaratılmış çift | Sınır sayımının ve görünür yükün ikisinde de **aynı** olduğu, enerji bütçesinin ise ayrıştığı (Bölüm 27.7) | Enerji bütçesini sınırda ölçecek düzenek; tarif edilmemiştir |
+| Dönen parçacık ile yaratılmış çift | Sınır sayımının ve görünür yükün ikisinde de **aynı** olduğu, enerji bütçesinin ise ayrıştığı; ölçümün aleti, çözünürlüğü ve zamanlaması (Bölüm 27.7) | Yalnızca hız: şartname yazılmıştır, o ağırlıkta olay vermez |
 | Geçiş süresinin hangi okuması fiziksel | Beş okumanın hepsinin aynı genlikten hesabı | Aralarında seçim; üçü ışığın üstünde, ikisi altında |
 | Geçirgen eşiğin oran koşulu karşısındaki durumu | Genel reçetede enine, tümüyle jeodezik ve oran koşulunu sağlayan bir yapılanmanın **var** olduğu (Bölüm 3.7.1) | Katman taşıyan bir yapılanmanın aynı koşulu sağlaması; hiçbir mertebe çiftinde sağlanmıyor |
 
@@ -4752,6 +4752,39 @@ bedeli öder; dönmüş bir çizgi hiçbir bedel ödemez.
 
 > Açık madde bu nedenle şöyle daralır: kapatacak ölçüm bir **sayım** değil, sınır
 > boyunca bir **enerji bütçesidir**. Sayım ve yük, iki okumada da özdeştir.
+
+**Ölçümün şartnamesi.** Bir ölçümün var olması gerektiğini söylemek yetmez;
+hangi alet, hangi çözünürlük ve hangi zamanlama olduğu yazılmalıdır.
+
+*Alet.* Ölçülen şey, sınır yapılanmayı üretirken **çevre bölgenin kaybettiği
+enerjidir**. Dolayısıyla alet, parçacığı izleyen bir dedektör değil, bölgeyi
+saran bir **kalorimetredir**.
+
+*Çözünürlük.* Yaratılmış çift çizgi başına iki durgun enerji çeker, dönmüş çizgi
+hiç çekmez. Ayrım için gereken çözünürlük bu farktır:
+
+| Dönmüş çizgi sayısı | Çift okuması çeker | Dönme okuması çeker | Gereken çözünürlük |
+|---------------------|--------------------|---------------------|--------------------|
+| $1$ | $2{,}0000$ | $0{,}0000$ | $2{,}0000$ |
+| $2$ | $4{,}0000$ | $0{,}0000$ | $4{,}0000$ |
+| $3$ | $6{,}0000$ | $0{,}0000$ | $6{,}0000$ |
+
+Durgun enerjinin iki katından daha iyi çözen bir kalorimetre ikisini ayırır,
+daha kötü çözen ayıramaz. Bu, gerçek bir aletin karşılanabileceği bir
+şartnamedir.
+
+*Zamanlama.* Ölçüm, varışlarla **çakışma içinde** okunmalıdır. Fark sınırda
+çekilen tek bir yumrudur; uzun bir pencere üzerinde alınan ortalama onu bölgenin
+yaptığı her şeyin içine gömer.
+
+**Ve şartnameyi yazmak onu uygulanabilir yapmaz.** Bölüm 20'nin yürütülen gidiş
+dönüşündeki $6{,}47 \times 10^{-37}$ ağırlıkta, saniyede bir milyar deneme bir
+yıl boyunca sürdürülse **tek bir olay** vermez. Buna karşılık Bölüm 2.1.6'nın
+ulaştığı $4{,}77 \times 10^{-10}$ ağırlıkta aynı koşu olay vermektedir.
+
+> Madde bu nedenle **açık** olmaktan çıkıp **şartnamesi yazılmış** hâle gelir:
+> alet, çözünürlük ve zamanlama bellidir. Şartname ile deney arasında duran şey
+> ölçüm değil, **hızdır**.
 
 ---
 

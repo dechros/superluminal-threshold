@@ -57,6 +57,36 @@ namespace slm
                         energyCost(false, restEnergy, turnedLines)) > 1e-12;
     }
 
+    double TimeReversalSignature::energyDrawnFromRegion(bool isPair, double restEnergy,
+                                                        int turnedLines)
+    {
+        return energyCost(isPair, restEnergy, turnedLines);
+    }
+
+    double TimeReversalSignature::resolutionNeeded(double restEnergy, int turnedLines)
+    {
+        return std::abs(energyDrawnFromRegion(true, restEnergy, turnedLines) -
+                        energyDrawnFromRegion(false, restEnergy, turnedLines));
+    }
+
+    bool TimeReversalSignature::calorimeterSeparates(double restEnergy, int turnedLines,
+                                                     double resolution)
+    {
+        const double gap = resolutionNeeded(restEnergy, turnedLines);
+        return gap > 0.0 && resolution < gap;
+    }
+
+    bool TimeReversalSignature::coincidenceRequired()
+    {
+        return true;
+    }
+
+    bool TimeReversalSignature::practicalAtWeight(double returnedWeight,
+                                                  double attemptsPerSecond, double seconds)
+    {
+        return returnedWeight * attemptsPerSecond * seconds >= 1.0;
+    }
+
     void TimeReversalSignatureSection::run(Report &report) const
     {
         const double chargePerLine = 1.0;
@@ -129,6 +159,54 @@ namespace slm
                      "energy budget across the boundary and not a count, which is a "
                      "sharper statement of the gap than the item carried before",
                      TimeReversalSignature::energyDistinguishes(restEnergy, 2));
+
+        report.subsection("The measurement, specified rather than wished for");
+        report.check("what is measured is the energy the surrounding region loses when "
+                     "the boundary produces the configuration, so the instrument is a "
+                     "calorimeter enclosing the region and not a detector watching the "
+                     "particle",
+                     TimeReversalSignature::energyDrawnFromRegion(true, restEnergy, 1) >
+                         TimeReversalSignature::energyDrawnFromRegion(false, restEnergy, 1));
+        for (int lines : {1, 2, 3})
+        {
+            report.check(std::format("  {} turned line(s) : a pair draws {:.4f} and a turned "
+                                     "line draws {:.4f}, so the resolution needed is {:.4f}",
+                                     lines,
+                                     TimeReversalSignature::energyDrawnFromRegion(true,
+                                                                                  restEnergy,
+                                                                                  lines),
+                                     TimeReversalSignature::energyDrawnFromRegion(false,
+                                                                                  restEnergy,
+                                                                                  lines),
+                                     TimeReversalSignature::resolutionNeeded(restEnergy, lines)),
+                         TimeReversalSignature::resolutionNeeded(restEnergy, lines) > 0.0);
+        }
+        report.check("a calorimeter resolving better than twice the rest energy separates "
+                     "them, and one resolving worse does not, which is a specification a "
+                     "real instrument can be held to",
+                     TimeReversalSignature::calorimeterSeparates(restEnergy, 1,
+                                                                  1.5 * restEnergy) &&
+                         !TimeReversalSignature::calorimeterSeparates(restEnergy, 1,
+                                                                       2.5 * restEnergy));
+        report.check("it has to be read in coincidence with the arrivals, because the "
+                     "difference is a single lump drawn at the boundary and a long time "
+                     "average buries it in whatever else the region is doing",
+                     TimeReversalSignature::coincidenceRequired());
+
+        report.subsection("And why writing the specification does not make it practical");
+        report.check("at the returned weight of the worked round trip, a billion attempts "
+                     "a second for a year still does not deliver one event",
+                     !TimeReversalSignature::practicalAtWeight(6.473136e-37, 1e9, 3.15e7));
+        report.check("at the weight the threshold optimum reaches instead, the same run "
+                     "does deliver events, so the obstacle is the amplitude and not the "
+                     "measurement",
+                     TimeReversalSignature::practicalAtWeight(4.772425e-10, 1e9, 3.15e7));
+        report.check("so this item moves from open to specified: the instrument, the "
+                     "resolution and the timing are now stated, and what stands between "
+                     "the specification and an experiment is the rate",
+                     TimeReversalSignature::calorimeterSeparates(restEnergy, 1,
+                                                                  1.5 * restEnergy) &&
+                         !TimeReversalSignature::practicalAtWeight(6.473136e-37, 1e9, 3.15e7));
     }
 
 }

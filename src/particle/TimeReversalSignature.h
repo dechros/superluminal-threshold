@@ -71,6 +71,34 @@ namespace slm
         /// Whether energy tells them apart, which it does, and which is the
         /// one measurement that would close the degeneracy.
         static bool energyDistinguishes(double restEnergy, int turnedLines);
+
+        /// Energy the surrounding region loses when the boundary produces the
+        /// configuration, which is what a calorimeter enclosing the region
+        /// would register. A created pair is paid for out of the region; a
+        /// turned line is not.
+        static double energyDrawnFromRegion(bool isPair, double restEnergy, int turnedLines);
+
+        /// Smallest energy resolution that separates the two readings at the
+        /// given rest energy and line count, which is the specification a
+        /// measurement has to meet rather than a wish that one exist.
+        static double resolutionNeeded(double restEnergy, int turnedLines);
+
+        /// Whether a calorimeter of the given resolution separates them.
+        static bool calorimeterSeparates(double restEnergy, int turnedLines,
+                                         double resolution);
+
+        /// Whether the measurement has to be made in coincidence with the
+        /// arrivals, which it does: the energy difference is a single lump
+        /// drawn at the boundary, so a time averaged measurement over a long
+        /// window buries it in whatever else the region is doing.
+        static bool coincidenceRequired();
+
+        /// Whether the transmitted weight makes the measurement practical at
+        /// the configuration the article uses. It does not, and that is the
+        /// honest state of this proposal: the specification is written, the
+        /// rate is not survivable.
+        static bool practicalAtWeight(double returnedWeight, double attemptsPerSecond,
+                                      double seconds);
     };
 
     /// Section computing what a time-reversing boundary shows an outside
