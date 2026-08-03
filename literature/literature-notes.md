@@ -30,9 +30,8 @@ redistributed under the part they bear on.
 ### Concordance: article bibliography → this file
 
 Built by matching arXiv identifiers, so it stays correct when either side is
-renumbered. Two article entries have no note here and no paper file in
-`literature/`: they are the only places where the article leans on something
-this corpus has not read.
+renumbered. Where an entry here covers several papers at once, the note number is
+given with what it groups.
 
 | Article | First author | arXiv | This file |
 |--------:|--------------|-------|----------:|
@@ -59,7 +58,7 @@ this corpus has not read.
 | 21 | Singh | `arXiv:2607.01274` | 49 |
 | 22 | Mansouri | `arXiv:gr-qc/9806109` | 42 |
 | 23 | Alexandre | `arXiv:2306.11502` | 47 |
-| 24 | Bars | `arXiv:hep-th/0003100` | — |
+| 24 | Bars | `arXiv:hep-th/0003100` | 31 (three Bars papers in one entry) |
 | 25 | Piceno | `arXiv:1512.05345` | 32 |
 | 26 | Pettini | `arXiv:2311.17070` | 34 |
 | 27 | Figueiredo | `arXiv:1608.03812` | 84 |
@@ -69,7 +68,7 @@ this corpus has not read.
 | 31 | Ostrowski | `arXiv:hep-th/0307051` | 39 |
 | 32 | Rembielinski | `arXiv:hep-ph/9509219` | 40 |
 | 33 | Perepelitsa | `arXiv:1407.3245` | 15 |
-| 34 | Villante | `arXiv:1110.4591` | — |
+| 34 | Villante | `arXiv:1110.4591` | 51 (Cohen-Glashow cluster) |
 | 35 | Nanni | `arXiv:2305.12505` | 12 |
 | 36 | Horodecki | `arXiv:2301.07802` | 5 |
 | 37 | Del Santo | `arXiv:2203.03661` | 6 |
@@ -105,25 +104,29 @@ as a concept are listed in the article's own words:
 | 45 to 48 Hellaby / Dray / Hayward | §21 line 3112 | the four-round exchange over whether standard conservation laws fail at a classical signature change |
 | 49 Lienert / 50 Deckert | §24.6 lines 3524 to 3530 | evolution in several time variables is consistent only if transport in the space of times is path independent — the zero-curvature criterion the section applies |
 
-**Two article references have no note and no paper file:** `arXiv:hep-th/0003100`
-(Bars, two-time physics in field theory — the origin of the 2T programme, cited
-as article `[24]`) and `arXiv:1110.4591` (Villante and Vissani on the generality
-of the Cohen-Glashow constraint, article `[34]`). Both are load-bearing: the
-first is the framework the far-side region borrows its signature from, the
-second is the empirical bound on superluminal propagation.
+**Coverage, checked properly.** An earlier version of this section claimed two
+article references had no note and twelve papers in `literature/` had no entry.
+Both figures were wrong, and wrong for one reason: the check read only the
+`### [N]` heading lines. Several entries carry more than one paper, and several
+name their companion papers in the body rather than the heading, so everything
+filed that way counted as missing. Rescanning the whole file rather than its
+headings:
 
-**Twelve papers in `literature/` have no entry here:** `0908.2407`, `1301.6060`,
-`1707.07235`, `2206.15247`, `2312.09217`, `2512.01486`, `gr-qc/0703150`,
-`gr-qc/0703153`, `gr-qc/9501034`, `hep-th/0003100`, `hep-th/0511077`,
-`hep-th/9809034`. The header's "one entry per paper that bears on the article"
-makes silence ambiguous: unread and judged irrelevant look identical. Note that
-`hep-th/0003100` is in this list and is also article `[24]` — a paper the
-article cites and this file has not read.
+- **Every paper in `literature/` is covered.** Zero files go unmentioned.
+- **Every article reference has a note.** Bars's field-theory paper is one of the
+  three Bars papers under `[31]`; Villante and Vissani is one of the five papers
+  under `[51]`, the Cohen-Glashow cluster. The concordance above records both.
+- **One paper was genuinely absent from the folder** and has been added:
+  `1110.4591`, which `[51]` leans on and which is the only empirical objection in
+  the bibliography.
 
-**Eight entries here name a paper with no file in `literature/`:** `0706.3994`,
-`0804.4534`, `1112.1324`, `1304.5522`, `1711.02660`, `2206.12887`,
-`gr-qc/0405114`, `hep-ph/0407232`. These were presumably read before the folder
-was assembled; the note stands, but nothing in the repository backs it.
+Twenty-six arXiv identifiers appear in these notes with no file in `literature/`.
+They are not gaps: they sit inside deliberately grouped entries — `[53]` gathers
+seven OPERA-aftermath papers under one heading, `[56]` the k-essence pair, `[51]`
+the Cohen-Glashow line of development — where the group is the unit of reading
+and no single paper was retrieved on its own. Anything promoted out of such a
+group into a load-bearing role should get its own file first, which is what was
+done for `1110.4591`.
 
 The organising question is the one the article now states: from a massive
 particle's four-dimensional orientation and motion in a region of signature
@@ -2900,6 +2903,23 @@ reflecting thesis the model was immune because nothing crossed. **That immunity 
 gone**: the article now claims a transmitted flux of $0{,}868$ for a $d = 1$ slab.
 Section 21.3 addresses the bound directly, and it is the first constraint the
 transmitting thesis has to survive.
+
+`1110.4591` is now in `literature/` on its own, because it is the paper the
+article cites as `[34]` and the group was carrying it. Villante and Vissani's
+contribution is how little the argument assumes: one frame with conserved energy
+and momentum, the Hamilton-Jacobi relation $v = dE/dp$, and the measured
+velocities. No field content and no particular violation model, so the escape
+they leave open is only a dispersion law peculiar enough to close the phase
+space. That escape is one this work can actually inspect, since Section 9.1
+computes the far-side dispersion in closed form; whether that dispersion read
+back through the threshold closes the pair-emission channel has not been
+calculated. Two further points specific to us. The particle here is superluminal
+only between two crossings, so whether the emission channel is open during the
+crossing depends on the surface, which is where Section 3.4's layer lives. And
+the far side has no stable vacuum by Section 10.3, so "emission into the vacuum"
+has no referent there — an escape, but one bought with a defect the article
+already counts against itself. Until one of those is settled the bound stands
+unanswered.
 
 ### [52] *Velocity requirements for causality violation*, arXiv:1304.5522
 CONTEXT. An explicit formula for the relative velocity required to produce a
