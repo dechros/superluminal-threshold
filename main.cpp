@@ -40,6 +40,7 @@
 #include "particle/FarSideMotion.h"
 #include "particle/FlowAssumption.h"
 #include "particle/StateTable.h"
+#include "particle/LoopClosure.h"
 #include "particle/ReturnEvent.h"
 #include "particle/ReturnFormula.h"
 #include "particle/RoundTrip.h"
@@ -141,6 +142,7 @@ namespace
         sections.push_back(std::make_unique<slm::ReturnEventSection>());
         sections.push_back(std::make_unique<slm::ReturnFormulaSection>());
         sections.push_back(std::make_unique<slm::ArrivalOrderSection>());
+        sections.push_back(std::make_unique<slm::LoopClosureSection>());
         return sections;
     }
 

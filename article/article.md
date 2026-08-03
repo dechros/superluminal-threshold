@@ -3912,10 +3912,10 @@ Sicil üç durum ayırır ve sayıları kendisi üretir:
 
 | Durum | Anlamı | Kaç |
 |-------|--------|-----|
-| Yeniden üretilmiş | Buradaki bir kütüphane sonucu bağımsız olarak hesaplar ve değeri karşılaştırılabilir | $35$ |
-| İtibara alınmış | Sonuç yeniden hesaplanmadan kullanılır; doğruluğu bu çalışmanın güvencesi altında değildir | $15$ |
+| Yeniden üretilmiş | Buradaki bir kütüphane sonucu bağımsız olarak hesaplar ve değeri karşılaştırılabilir | $36$ |
+| İtibara alınmış | Sonuç yeniden hesaplanmadan kullanılır; doğruluğu bu çalışmanın güvencesi altında değildir | $17$ |
 | Yalnızca bağlam | Konumlandırma için anılır, ondan hiçbir sonuç çıkarılmaz | $7$ |
-| **Toplam** | | $57$ |
+| **Toplam** | | $60$ |
 
 Sicilde bir denetim vardır: "yeniden üretilmiş" işaretli her girdi, onu üreten
 kütüphaneyi **adıyla** taşımak zorundadır. Adı olmayan bir yeniden üretim iddiası
@@ -4115,6 +4115,57 @@ Bölüm 24 ve Bölüm 27.5 onun hangi biçimlerinin kapanmadığını sayar.
 İkinci fark beşinci satırdadır ve daha somuttur. [62] işaretin ters
 dönebileceğini gösterir, dönüşün **nereye** düştüğünü vermez. Bu çalışmanın
 çekirdeği o eşlemedir (Bölüm 19), ve karşılığı bulunamayan da odur (Bölüm 27.3).
+
+**Sahnenin kendisi de ödünçtür.** Öte tarafın bir uzay ve üç zaman ekseni
+taşıdığı, ve parçacıkların yalnızca o tek uzay ekseni boyunca hareket ettiği
+[2]'nin sonucudur; bu çalışmanın kurgusu değil, çalıştığı zemindir. Bölüm 9.1'in
+dört yuvayı tek tek tarayan tablosu o zemin üzerinde kurulur. Kendine ait olan,
+tablonun son satırıdır: o tek uzay ekseninde atılan bir birim adımın Bölge I
+saatinde **tam olarak bir birim** ürettiği, ve diğer üç eksenin tam olarak sıfır
+ürettiği.
+
+**Basit ilmeğe yöneltilen itiraz.** [65] bu kurgunun naif biçimine karşı bir
+karşıörnek verir ve itiraz bu metni de bağlar, çünkü burada anlatılan da bir gidiş
+dönüştür. Gösterdiği şudur: tek bir çerçevede betimlenen, üstışık hızla gidip
+üstışık hızla dönen bir yolculuk, kalktığından **önce** değil sonra varır. Geçmişe
+varmak, ara bir adım gerektirir ve o adım hareket hâlindeki bir röleye bağlıdır.
+
+İtiraz doğrudur ve burada hesaplanmıştır. Üç rota aynı olaya götürülüp
+karşılaştırılmıştır; hız birimi Bölge I'in ışık hızıdır:
+
+| Rota | Dönüş anının işareti | Gerektirdiği bağıl hız |
+|---|---|---|
+| Naif ilmek, tek çerçeve | Her hızda pozitif | — |
+| Röle, iki çerçeve | Eşiğin üstünde negatif | Hız $2$ için $0{,}80$; hız $4$ için $0{,}47$ |
+| Buradaki rota | Eşik mesafesinin üstünde negatif | **Sıfır** |
+
+Naif ilmek, dönüş anını $2L/v$ olarak verir ve bu hiçbir $v$ için negatif olamaz;
+$v = 10^{12}$ için bile pozitiftir. Röle rotası negatif olabilir, ama ancak
+rölenin bağıl hızı $2v/(v^2+1)$ eşiğini aştığında; bu eşik her sonlu hızda
+**pozitiftir** ve yalnızca hız sınırsız büyürken sıfıra gider, ki o bir hız
+değildir. Röle rotası bağıl hız sıfırken tam olarak naif ilmeğe indirgenir, ki
+[65]'in bulgusu da budur.
+
+Buradaki rota bağıl hız sıfırken de geçmişe varır. Hesapta hiçbir yerde ikinci bir
+çerçeve, hiçbir yerde bir röle, hiçbir yerde bir bağıl hız geçmez: kalınlığı $8$
+olan bir Öklid ara bölge için geçiş gecikmesi $2{,}5660$'tır ve öte tarafta bu
+kadar mesafe kat edildiğinde dönüş anı sıfırdan geçer, iki katı kat edildiğinde
+$-2{,}5660$ olur.
+
+Aradaki farkın nereden geldiği de tek bir yerde toplanabilir. Naif ilmekte mesafe
+dönüş anına **bir hıza bölünerek** girer, dolayısıyla katkısı hep pozitiftir ve
+hız büyüdükçe küçülür. Buradaki rotada mesafe dönüş anına **katsayısı bir olarak**
+girer, ve işareti hangi geçişin gerçeklendiğine bağlıdır (Bölüm 2.1, Bölüm 9.1).
+İşaret bir çerçeve uyuşmazlığından değil, sekiz geçişten hangisinin kullanıldığından
+gelmektedir. [65]'in itirazı, dolayısıyla, kapatılmamakta ama **kapsam dışında
+kalmaktadır**: itiraz bağıl hızdan işaret üreten kurgulara yöneliktir.
+
+Aynı hedefe götüren geometrik bir rotanın da bulunduğu kaydedilmelidir. [66]
+kütleli bir cismi, metriği Lorentz imzasında tutarak ve yerel olarak ışık
+hızının altında bırakarak uzayda ışıktan hızlı taşır. Bu, buradaki rotanın
+rakibidir ve aradaki fark yöntemseldir: orada imza korunur ve enerji koşulu
+ihlal edilir, burada imza değişir ve ihlal eşik katmanında ortaya çıkar
+(Bölüm 3.6). İkisi de bedeli aynı yere yazmaktadır.
 
 Yeniden yorumlama ilkesinin ayrıca **rakip bir okuma** olduğu kaydedilmelidir.
 [61]'e göre negatif enerjiyle geriye varan bir parçacık, ileri giden bir
@@ -4962,3 +5013,8 @@ sessiz kalmak yerine hangi ölçümün karar vereceğini söylemektedir.
 
 63. L. J. Alty. *Kleinian signature change*. Class. Quantum Grav. **11** (1994) 2523.
 64. L. J. Alty, A. Chamblin. *Spin structures on Kleinian manifolds*. Class. Quantum Grav. **11** (1994) 2411.
+
+**Kapalı ilmeğin naif biçimi ve geometrik rakip**
+
+65. R. J. Nemiroff, D. M. Russell. *How superluminal motion can lead to backward time travel*. The Winnower (2015). arXiv:1505.07489
+66. M. Alcubierre. *The warp drive: hyper-fast travel within general relativity*. Class. Quantum Grav. **11** (1994) L73. arXiv:gr-qc/0009013

@@ -60,6 +60,15 @@ namespace slm
             {"a superluminal signal closed into a loop lets a reply arrive before its "
              "query, so covering distance fast enough reaches an earlier moment",
              State::Reproduced, "particle/ArrivalOrder"},
+            {"an out and back superluminal trip described in one frame returns later "
+             "than it left, so the naive loop does not reach the past",
+             State::Reproduced, "particle/LoopClosure"},
+            {"the superluminal frame carries one spatial and three temporal axes, with "
+             "motion possible only along the single spatial one",
+             State::Used, "none"},
+            {"a massive body can cover distance faster than light with the signature "
+             "kept Lorentzian, at the price of an energy condition",
+             State::Used, "none"},
             {"a solution running backwards in time with negative energy cannot be told "
              "apart from an antiparticle running forwards",
              State::Reproduced, "particle/TimeReversalSignature"},
