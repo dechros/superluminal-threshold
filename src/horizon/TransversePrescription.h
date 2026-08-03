@@ -125,9 +125,23 @@ namespace slm
         /// does.
         static bool generalAllowsBoth();
 
-        /// Whether any order both carries a layer and meets the rate condition,
-        /// which is what a transmitting junction with a source would need, and
-        /// which is the obstruction that does survive.
+        /// Whether the ratio the rate condition tests is exactly twice the
+        /// extrinsic curvature at the given orders, which it is by
+        /// construction and which is checked rather than asserted.
+        static bool ratioIsTwiceCurvature(double distance, int degenerateOrder,
+                                          int tangentialOrder);
+
+        /// Whether the configuration carries a surface layer, meaning its
+        /// extrinsic curvature does not die at the crossing.
+        static bool carriesLayer(int degenerateOrder, int tangentialOrder);
+
+        /// Whether any order both carries a layer and meets the rate
+        /// condition, which is what a transmitting junction with a source
+        /// would need. It does not, and the reason is not a search: carrying a
+        /// layer and failing the rate are the same measurement on the same
+        /// quantity, since the ratio is twice the curvature. The two are
+        /// therefore exclusive by arithmetic and the grid below is swept only
+        /// to show the exclusion is not an artefact of one cell.
         static bool anyOrderKeepsLayerAndRate(int highestOrder);
     };
 

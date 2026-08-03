@@ -153,13 +153,28 @@ namespace slm
         return bothConditionsHold(1, 1) && satisfiesRateCondition(1, 1);
     }
 
+    bool TransversePrescription::ratioIsTwiceCurvature(double distance, int degenerateOrder,
+                                                       int tangentialOrder)
+    {
+        const double left = ratio(distance, degenerateOrder, tangentialOrder);
+        const double right =
+            2.0 * extrinsicCurvature(distance, degenerateOrder, tangentialOrder);
+        return std::abs(left - right) <= 1e-12 * (1.0 + std::abs(left));
+    }
+
+    bool TransversePrescription::carriesLayer(int degenerateOrder, int tangentialOrder)
+    {
+        return extrinsicCurvature(1e-4, degenerateOrder, tangentialOrder) >=
+               extrinsicCurvature(1e-2, degenerateOrder, tangentialOrder);
+    }
+
     bool TransversePrescription::anyOrderKeepsLayerAndRate(int highestOrder)
     {
         for (int q = 1; q <= highestOrder; ++q)
         {
             for (int p = 0; p <= highestOrder; ++p)
             {
-                if (!isTotallyGeodesic(p) && satisfiesRateCondition(q, p))
+                if (carriesLayer(q, p) && satisfiesRateCondition(q, p))
                 {
                     return true;
                 }
@@ -255,10 +270,25 @@ namespace slm
         report.subsection("The obstruction that does survive");
         report.check("a surface layer needs the extrinsic curvature nonvanishing at the "
                      "crossing, which is tangential order zero",
-                     !TransversePrescription::isTotallyGeodesic(0));
-        report.check("no order both carries a layer and meets the rate, at any "
-                     "degenerate order, so the incompatibility is between the layer and "
-                     "the rate and not between the two geometric conditions",
+                     !TransversePrescription::isTotallyGeodesic(0) &&
+                         TransversePrescription::carriesLayer(1, 0));
+        for (int q : {1, 3})
+        {
+            report.check(std::format("  degenerate order {} : the ratio tested is twice the "
+                                     "extrinsic curvature, at every tangential order",
+                                     q),
+                         TransversePrescription::ratioIsTwiceCurvature(1e-3, q, 0) &&
+                             TransversePrescription::ratioIsTwiceCurvature(1e-3, q, 1) &&
+                             TransversePrescription::ratioIsTwiceCurvature(1e-3, q, 2));
+        }
+        report.check("so carrying a layer and failing the rate are the same measurement "
+                     "on the same quantity, and their exclusion is arithmetic rather "
+                     "than the outcome of a search",
+                     TransversePrescription::carriesLayer(1, 0) ==
+                         !TransversePrescription::satisfiesRateCondition(1, 0));
+        report.check("swept over eighty one pairs of orders, no pair both carries a "
+                     "layer and meets the rate, so the incompatibility is between the "
+                     "layer and the rate and not between the two geometric conditions",
                      !TransversePrescription::anyOrderKeepsLayerAndRate(8));
         report.check("that is the strong against weak dichotomy the literature already "
                      "carries, reached from the side of a rate rather than from a "

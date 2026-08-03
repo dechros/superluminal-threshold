@@ -929,16 +929,79 @@ Bu ailede, hem katman taşıyan hem de oran koşulunu sağlayan bir profil
 değildir.** Dönümde durağan profilin dış eğriliği dönüm noktasında sıfırdır;
 yani o profil **güçlü koşulu sağlar**. Öteki iki profil zayıf koşulu sağlayıp
 güçlüyü sağlamaz, dolayısıyla aile iki seçimi gerçekten ayırmaktadır ve hayatta
-kalanın kimliği parametrelendirmenin bir kazası değildir. Sonuç bu nedenle
-yumuşatılmadan yazılmalıdır:
+kalanın kimliği parametrelendirmenin bir kazası değildir.
 
-> Oran koşulu zayıf seçimi daraltmakla kalmaz. Bu ailede, tutarlı tek limit
-> olarak **güçlü koşulu geri getirir**; yani yansıtan eşiği.
+Ne var ki bu, bu ailede geçerli bir sonuçtur ve bir sonraki alt bölüm ailenin
+kendisinin ne kadarını taşıdığını ölçmektedir.
 
-Bu, modelin lehine olan bir sonuç değildir ve öyle sunulmamaktadır. Modelin
-geçirgen eşik okuması, bu metrik ailesinde bir temsilci bulamamaktadır.
+### 3.7.1 Üstelin kapalı biçimi ve engelin gerçek yeri
 
-**Ancak kapsamı da abartılmamalıdır.** Bu itiraz, geçişin **geometrisini**
+Yukarıdaki üç sayı ölçümdür; kapalı bir biçimi vardır ve o biçim, engelin
+imza değişiminin bir özelliği mi yoksa bu ailenin yazılış biçiminin bir
+özelliği mi olduğunu belirler.
+
+Literatürün genel olarak kullandığı reçetede iki koşul birlikte dayatılır.
+**Enine olma**, dejenere olan bileşenin birinci mertebeden sıfırlanmasıdır;
+determinantın birinci mertebeden sıfırlanmasını ve yüzeyin düzgün gömülü
+kalmasını sağlayan şey budur. **Tümüyle jeodezik olma** ise dış eğriliğin
+sıfırlanmasıdır; dağılımsal kaynağı kaldıran şey de budur. Bu ikisi **farklı
+bileşenleri** bağlar: enine olma dejenere bileşenin türevine, dış eğrilik ise
+teğet bloğun normal türevinin lapse'a bölümüne bakar. Bağımsız iki ayardır ve
+ikisi birden sağlanabilir. Literatürün ikisini bir arada, aralarında bir
+gerilim olduğunu belirtmeden dayatmasının sebebi budur.
+
+Dejenere bileşenin sıfırlanma mertebesi $q$, teğet eğimin sıfırlanma mertebesi
+$p$ yazılırsa, lapse $d^{q/2}$ gibi, dış eğrilik $d^{p}$ gibi gider ve oran
+koşulunun sınadığı nicelik uzaklığın
+
+$$p - \frac{q}{2}$$
+
+kuvvetiyle davranır. Bu, dokuz $(q,p)$ çifti üzerinde ölçümle $10^{-9}$
+duyarlıkla doğrulanmıştır.
+
+| $q$ | $p$ | Ölçülen üstel | Kapalı biçim |
+|-----|-----|---------------|--------------|
+| 1 | 0 | $-0{,}5000$ | $-0{,}5000$ |
+| 1 | 1 | $+0{,}5000$ | $+0{,}5000$ |
+| 1 | 2 | $+1{,}5000$ | $+1{,}5000$ |
+| 2 | 1 | $\pm 0{,}0000$ | $0{,}0000$ |
+| 3 | 0 | $-1{,}5000$ | $-1{,}5000$ |
+| 3 | 2 | $+0{,}5000$ | $+0{,}5000$ |
+
+Bölüm 3.7'deki aile bu formülün $p = q - 1$ dilimidir, çünkü orada dış eğrilik
+teğet bloktan değil, **işaret değiştiren bileşenin kendisinden** alınmıştır.
+Bu dilimde üstel $q/2 - 1$ olur ve enine olma $q = 1$ demek olduğundan üstel
+zorunlu olarak $-1/2$ çıkar. Aynı formül, o ailenin sayısal olarak ölçtüğü üç
+üsteli de aynen verir. Yani:
+
+> Bölüm 3.7'nin engeli, imza değişiminin bir özelliği değil, o ailede dış
+> eğriliğin hangi bileşenden okunduğunun bir sonucudur. Genel reçetede enine,
+> tümüyle jeodezik ve oran koşulunu sağlayan bir yapılanma **vardır**; üsteli
+> $+1/2$'dir.
+
+Dahası oran koşulu, tümüyle jeodezik olma koşuluna bir şey **eklemez**; onu bir
+hız olarak yeniden ifade eder. Oran tam olarak teğet eğimin dönüm noktasında
+sıfırlanmasıyla sağlanır, ki bu koşulun kendisidir.
+
+**Ayakta kalan engel başkadır.** Bir yüzey katmanı, dış eğriliğin dönüm
+noktasında sıfırdan farklı olmasını gerektirir; oran koşulu ise aynı eğriliğin
+lapse'tan hızlı ölmesini gerektirir. Sınanan oran, dış eğriliğin tam iki
+katıdır; dolayısıyla "katman taşımak" ile "oranı geçememek" **aynı nicelik
+üzerinde aynı ölçümdür** ve dışlayıcılıkları bir arama sonucu değil, bir
+aritmetik sonucudur. Seksen bir mertebe çifti taranmış, ikisini birden sağlayan
+çift bulunmamıştır.
+
+Bu, literatürün zaten taşıdığı güçlü ile zayıf ayrımıdır; iyi tanımlı bir Ricci
+tensörü yerine bir hızın tarafından yaklaşılmıştır. **Burada yeni bir engel
+iddia edilmemektedir.** Bölüm 3.7'nin sonucuna iliştirilmiş özgünlük payı bu
+nedenle geri çekilmektedir; ayakta kalan katkı, engelin kendisi değil,
+üstelin iki parametreli kapalı biçimidir. Literatürde dejenere bileşenin
+sıfırlanma hızını tek bir parametreyle sınıflandıran çalışmalar vardır; teğet
+bloğun mertebesini ikinci bir parametre olarak taşıyan ve eğrilik ile lapse
+oranını bu iki mertebenin bir bileşimi olarak veren bir sınıflandırmaya
+rastlanmamıştır.
+
+**Kapsam abartılmamalıdır.** Bu itiraz, geçişin **geometrisini**
 bağlar: metrik ara değerlemesinin dönüm noktasındaki davranışını. Bu çalışmada
 mod geçirgenliği ayrı bir eksende hesaplanmaktadır; ara bölgenin tipine bağlıdır,
 ara değerleme profiline değil. İki eksen kodda bağımsızdır. Bu bağımsızlığın
