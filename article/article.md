@@ -3399,28 +3399,17 @@ sabit tutulup enerji yükseltildiğinde gereken mesafe $2{,}4845$'ten $1{,}0100$
 $0{,}3166$ ve $0{,}1000$'e inerken dönen ağırlık $4{,}772425 \times 10^{-10}$
 değerinde **kıpırdamamaktadır**. Ödenen şey enerji ve daha ince bir bölgedir.
 
-**Sonucun ifadesi.**
+**Sonucun ifadesi**, Özet'teki "Ana sonuç" paragrafında verilmiştir ve burada
+tekrarlanmaz. Bu bölümün eklediği şey o ifadenin kendisi değil, yukarıdaki yedi
+halkanın onu nasıl ürettiği ve aşağıdaki tek parçacığın onu nasıl
+gerçeklediğidir.
 
-> Öte tarafın tek uzay ekseninde $s$ kadar yer değiştirmek, Bölge I'in saatinde
-> tam olarak $s$ kadar yer değiştirmektir. Katsayı birdir, uzay
-> koordinatlarına sızıntı sıfırdır, yer değiştirmeler toplanır, ve işaret
-> geometri tarafından sabitlenmemiştir. Doymuş geçiş gecikmesini aşan her $s$,
-> dönüş olayını giriş olayının **öncesine** yerleştirir.
-
-**İddianın sınırı, aynı yerde.** Yukarıdaki zincir bir aritmetiktir ve
-aritmetiği tamdır. Zincirin ne olmadığı da tek cümlede durmalıdır: bir geçişin
-fiziksel olarak kurulabildiğinin gösterimi **değildir**. Üç ayrı yerde ödenen
-bedel bunu belirler: geçirgen okuma ile **bir yüzey katmanı** bir arada
-duramamaktadır, ki bu literatürün güçlü ile zayıf ayrımıdır ve bu modele özgü
-bir boşluk değildir (Bölüm 3.7.1), eşiği aşan yapılanmaların genliği düşüktür
-(Bölüm 2.1.5), ve işaretin seçilebilir kalması global bir seçicinin
-bulunmaması koşuluna bağlıdır (Bölüm 8.4).
-
-Bu üçü birbirinden farklı türdendir ve karıştırılmamalıdır. İkincisi bir
-büyüklük sorunudur, ve Bölüm 2.1.6 bunun sabit bir bedel değil seçilmiş bir
-çalışma noktası olduğunu göstermektedir. Üçüncüsü bir açık sorudur.
-**Birincisi ise literatürün zaten taşıdığı güçlü ile zayıf ayrımıdır**;
-Bölüm 3.7.1 bunun bu modele özgü bir boşluk olmadığını hesaplamaktadır. Zincirin
+**İddianın sınırı**, aynı şekilde Özet'te üç bedel olarak sayılmıştır: genliğin
+küçüklüğü bir büyüklük sorunudur ve Bölüm 2.1.6 bunun seçilmiş bir çalışma
+noktası olduğunu göstermektedir; işaretin seçilebilirliği bir açık sorudur
+(Bölüm 8.4); geçirgen okuma ile yüzey katmanının bir arada duramaması ise
+literatürün güçlü ile zayıf ayrımıdır ve bu modele özgü bir boşluk değildir
+(Bölüm 3.7.1). Zincirin
 kendisi bu boşluktan bağımsız olarak doğrudur; zincirin bir deneye bağlanması
 değildir.
 
