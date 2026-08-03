@@ -119,9 +119,57 @@ sınırlaması olmayı hak etmektedir.
 
 ---
 
-## Bu listenin kendi statüsü
+## Uygulama kaydı
 
-Bu rapor tek bir okumanın ürünüdür ve maddeleri sırayla uygulanacaktır. Bir
-madde uygulandığında burada işaretlenir; uygulanmayan bir madde için gerekçe
-yazılır. Ayıklama listesinde olduğu gibi, önerinin kendi hatası da kayda
-geçer: orada üç madde ölçüldüğünde yanlış çıkmış ve uygulanmamıştı.
+**Durum: sekiz maddenin altısı uygulandı, ikisi ölçüldüğünde yanlış çıktı.**
+
+### Yapılanlar
+
+**Madde 1 ve 2, sekiz aday seçimi ve koşullar.** Özete, iddianın hemen ardına,
+"Sonucun koşulu, hemen burada" başlıklı bir paragraf kondu. Sekiz adayın
+cebirsel ayırt edilemezliği, dördünün ileriye dördünün geriye gönderdiği,
+işaretin metrikten çıkmadığı ve kullanılan adayın bir **seçim** olduğu artık
+başta yazılıdır. İspatlananın bir koşullu ifade olduğu, öncülün
+ispatlanmadığı, ve öncülün iki bedele bağlı olduğu da oradadır.
+
+**Madde 3, çekirdeğin öne alınması.** Eski Bölüm 26.1, **Bölüm 0** olarak
+özetin hemen ardına taşındı. Okur çekirdeğe artık $3100$. satırda değil,
+$208$. satırda ulaşmaktadır. Ayrıca **Bölüm 0.1** eklendi: bir gidiş dönüşün
+bütün ihtimalleri, iki serbest seçim üzerinden beş satırda.
+
+**Madde 4, enerji bütçesi ölçümü.** Şartname yazıldı ve hesaplandı: alet bölgeyi
+saran bir kalorimetre, çözünürlük çizgi başına iki durgun enerji, zamanlama
+varışlarla çakışma. Ayrıca uygulanabilirliği hesaplandı ve **olumsuz** çıktı:
+Bölüm 20'nin ağırlığında saniyede bir milyar deneme bir yıl boyunca tek olay
+vermez. Madde "açık" olmaktan "şartnamesi yazılmış" hâle geçti.
+
+**Madde 7, üç kez yapılan itiraf.** Bölüm 24.1, Bölüm 21'in kurduğu ayrımı
+tekrarlıyordu; artık ona atıf yapmaktadır.
+
+**Madde 8, gömülü doğrulama.** Bölüm 18.5'in başına, iki bağımsız yolun aynı
+sonuçta buluşmasının metnin en güçlü iç denetimi olduğunu söyleyen bir çerçeve
+kondu.
+
+### Uygulanmayanlar, ve neden
+
+**Madde 6, Bölüm 2.2'nin kısaltılması.** Rapor bunu "tam bir grup kuramsal
+karşılaştırma" diye tarif edip iki satırlık tabloya indirilmesini istemişti.
+Ölçüldüğünde $29$ satır çıktı. Kesmeye değmez.
+
+**Madde 7'nin bir parçası, Bölüm 4.1.** Rapor 4.1'i, Bölüm 21 ve 24.1 ile
+birlikte "aynı itirafın üçüncü türetimi" saymıştı. 4.1 eklem koşulu seçimini
+işlemektedir, yani başka bir konudur. Dokunulmadı.
+
+### Kodun raporu düzelttiği yer
+
+Bölüm 0.1'e ilk yazdığım tabloda altıncı bir satır vardı: yayılımlı rejimde
+eşiğin kalınlıkla büyüdüğü. Kod bunu sınadı ve **çürüttü**. Kapalı biçim, iç
+mod sönümlü değilken bir gecikme vermemektedir; dolayısıyla o sınırda değişen
+şey bedelin büyüklüğü değil, **hesabın uygulanıp uygulanmadığıdır**. Satır
+kaldırıldı, doğrusu yazıldı, ve makale bu düzeltmenin kaynağını kaydetmektedir.
+
+### Kalan
+
+Raporun 5, 9 ve 10 numaralı maddeleri, yani sicillerin birleştirilmesi,
+tarihsel değinilerin dipnota alınması ve ek bir sayısal karşılaştırma,
+uygulanmamıştır ve sıradadır.
