@@ -236,6 +236,42 @@ Bölüm 8.4 ile birlikte okunmalıdır: orada da ayrımın iki yakası arasında
 metriğin bir tercih yapmadığı gösterilmiştir. Seçimi yapacak şey her iki yerde
 de metriğin dışındadır.
 
+### 2.1.1 Sözlüğün katsayısı: birebir olduğunun ispatı
+
+Bu çalışmanın merkezindeki ifade şudur: öte tarafın tek uzay ekseni Bölge I'in
+zamanıdır. İfade nitel bırakılırsa "o eksende ilerlemek zamanda yer
+değiştirmektir" cümlesi bir benzetmeye dönüşür. Aşağıdaki iki sonuç onu
+niceliksel yapar ve sekiz geçişin **tamamı** üzerinde doğrulanmıştır
+(`src/scan/SlotDictionary`).
+
+**Katsayı tam olarak birdir.** Sekiz geçişin her birinde, zaman koordinatını
+üreten satırın sıfırdan farklı **tek** bir girdisi vardır, o girdi öte tarafın
+ayırt edilmiş ekseni üzerindedir ve büyüklüğü birdir. Dolayısıyla o eksende
+$s$ kadar yer değiştirme, saatte **tam olarak** $s$ kadar yer değiştirme
+üretir; bir katsayıyla ölçeklenmez. Diğer üç eksenin bu yuvaya katkısı **tam
+olarak sıfırdır**, yani tümüyle o üç eksenin içinde kalan bir hareket saati
+oynatmaz. Sınanan değerler: $0{,}5 	o 0{,}5000$, $1 	o 1{,}0000$,
+$2 	o 2{,}0000$, $4 	o 4{,}0000$, $7{,}25 	o 7{,}2500$.
+
+**Yer değiştirmeler toplanır.** Eşleme lineer olduğundan, $s_1$ sonra $s_2$
+gitmek ile $s_1 + s_2$ birden gitmek aynı saat yer değiştirmesini verir. Bu
+sekiz geçiş ve dokuz bacak çifti üzerinde artık $10^{-12}$ altında kalacak
+biçimde doğrulanmıştır. Eşleme ayrıca miktar bakımından homojendir, ve bir bacak
+ile tersi **tam olarak** sadeleşir: kapalı bir öte taraf gezisi saati başladığı
+yere döndürür.
+
+**İki işaret miktarı eşit taşır.** İleri ve geri aileden birer geçiş alınıp aynı
+mesafe verildiğinde, ürettikleri yer değiştirmeler eşit büyüklükte ve ters
+işaretlidir. Yani sözlük saatin **ne kadar** oynadığını sabitler, **hangi yöne**
+oynadığını sabitlemez.
+
+**Neyi meşru kılmadığı.** Yukarıdakilerin hepsi öte taraf yer değiştirmeleri
+hakkındadır. Bir saçılma fazından okunan gecikme bunlardan biri **değildir**;
+dolayısıyla o gecikmeyi bu yer değiştirmelerle toplamak burada ispatlanmış
+değildir ve çevreleyen kurgunun bir varsayımı olarak kalır. Bu ayrım kasten
+keskin tutulmuştur: silikleştirilirse açık bir soru, yalnızca ifade biçimiyle
+teoreme dönüşür.
+
 ---
 
 Doğrulanan iki olgu:
@@ -987,6 +1023,26 @@ imkânını kaybetmesidir: metrik ayrımı verir, yönü vermez. Kazanç, yönü
 geriye durumun kendisi kalır. Bölüm 8.7 bu elemenin sonucunu takip eder ve
 soruyu, iki entropi ölçüsünden hangisinin yönle örtüştüğü biçiminde niceliksel
 olarak sorar.
+
+**Literatürdeki karşılığı.** Buradaki eleme bu çalışmaya özgü değildir ve
+konumlandırılması gerekir. [51] aynı sonucu fizik felsefesi tarafından ifade
+eder: yerleşik görüşte zamanın yönü kuramla çatışır, çünkü kuram onu
+içermez. Bu, yukarıdaki eşlenik hesabının vardığı yerin aynısıdır, başka bir
+yoldan. Ayrıca [14]'ün sonucu bu bölümün ifadesini bağımsız olarak ve daha
+güçlü biçimde verir: imza değiştiren bir manifoldda her noktadan geçen ve
+etrafında zaman yönünün tersine döndüğü kapalı bir sözde-zamansal ilmek vardır,
+**dolayısıyla gelecek ve geçmiş yönlü vektörler arasında tutarlı bir ayrım
+yapılamaz**. O sonuç yayımlanmış ve hakemlidir; buradaki hesap onun düz metrik
+ailesindeki karşılığıdır.
+
+**Karşı konum da kaydedilmelidir.** [52] yönü yerel denklemlerin dışında
+aradığını kabul eder ve onu global bir "geçmiş koşulu"ndan, yukarıdan aşağı
+nedensellikle sağlar. Bu, bu bölümün bıraktığı açıklığa doğrudan bir rakiptir:
+yön global olarak sabitlenirse Bölüm 2.1'deki eşit bölünme bir serbestlik
+olmaktan çıkar, dışarıdan kırılmış olur. Bu çalışma böyle bir koşulu ne
+benimsemekte ne de reddetmektedir; dolayısıyla Bölüm 2.1'in serbestliği
+**böyle bir global seçicinin bulunmaması koşuluna bağlıdır** ve bu koşul burada
+adlandırılmıştır.
 
 ### 8.5 Zaman yönelimi: neden öte tarafta gelecek ve geçmiş yok
 
@@ -3356,6 +3412,8 @@ ne bölüm numarası ne kaynak numarası bulunur.
 | Lagrangian, alan denklemi, determinizm, zamanın oku | `src/field/KleinGordonField`, `src/field/TimeOrientation` |
 | Nedensel ayrımın varlığı ile üzerindeki etiketin ayrılması | `src/field/ReversalSymmetry` |
 | Geçiş dönüşümlerinin zaman yuvası işaretine göre bölünmesi | `src/scan/CrossingBranches` |
+| Sözlüğün katsayısı ve yer değiştirmelerin toplanabilirliği | `src/scan/SlotDictionary` |
+| Varış anının giriş anından önce olabilmesi | `src/particle/ArrivalOrder` |
 | Enerji ile momentumun takası | `src/dynamics/EnergyMomentum` |
 | Dispersiyon, grup hızı, $O(3)$ ayar fazlalığı | `src/dynamics/Dispersion`, `src/rest/SuperluminalRest` |
 | Küresel simetrik kapalı form çözüm | `src/spherical/SphericalSolution` |
@@ -3587,7 +3645,10 @@ değiştirmediğine bakılır.
 **Zorunluluk.** Bir cisim o koordinat boyunca, seçemediği bir hızla, ilerlemek
 **zorundadır**. Bu, metriğe dair bir ifade **değildir**. Hiçbir metrik bir dünya
 çizgisinin ilerlemek zorunda olduğunu söylemez, ve Bölge I zamanının bir cismi
-taşıdığı duygusu bunun delili değildir.
+taşıdığı duygusu bunun delili değildir. Geçiş duygusunun metriğe değil
+gözlemciye ait bir olgu olduğu [53]'te iki taraftan birlikte tartışılmıştır; bu
+çalışma o tartışmanın hiçbir tarafına dayanmaz ve kaynak yalnızca iddianın
+sınırını işaretlemek için verilmiştir.
 
 Bu ikisi alışkanlıkla birbirine karıştırılır, ve karıştırmanın bedeli gizli bir
 varsayımdır. Burada ayrılırlar.
@@ -4271,3 +4332,9 @@ sessiz kalmak yerine hangi ölçümün karar vereceğini söylemektedir.
 48. S. A. Hayward. *Comment on "Comparison of approaches to classical signature change"*. arXiv:gr-qc/9606044
 49. M. Lienert, S. Petrat, R. Tumulka. *Multi-time wave functions versus multiple timelike dimensions*. Found. Phys. **47** (2017) 1582. arXiv:1708.03376
 50. D.-A. Deckert, L. Nickel. *Consistency of multi-time Dirac equations with general interaction potentials*. J. Math. Phys. **57** (2016) 072301. arXiv:1603.02538
+
+**Zamanın yönü: denklemlerde olmayan şey**
+
+51. R. E. Kastner. *The arrow of time is alive and well but forbidden under the received view of physics*. in: *The Arrow of Time*, Cambridge University Press, bölüm 7. arXiv:2311.11456
+52. G. F. R. Ellis. *The arrow of time and the nature of spacetime*. arXiv:1302.7291
+53. D. Buonomano, C. Rovelli. *Bridging the neuroscience and physics of time*. arXiv:2110.01976

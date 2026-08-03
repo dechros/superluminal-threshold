@@ -13,7 +13,7 @@ information, not indecision.
 
 Reference numbers `[N]` are stable within THIS FILE and are preserved through
 each refiling. Entries `[1]` to `[172]` keep the numbers they were first given;
-`[173]` to `[227]` are new. The numbered items ("What this changes", items 1 to
+`[173]` to `[230]` are new. The numbered items ("What this changes", items 1 to
 59, and 60 onward) are likewise preserved with their original numbers and
 redistributed under the part they bear on.
 
@@ -85,6 +85,9 @@ given with what it groups.
 | 48 | Hayward | `arXiv:gr-qc/9606044` | 114 |
 | 49 | Lienert | `arXiv:1708.03376` | 75 |
 | 50 | Deckert | `arXiv:1603.02538` | 77 |
+| 51 | Kastner | `arXiv:2311.11456` | 228 |
+| 52 | Ellis | `arXiv:1302.7291` | 229 |
+| 53 | Buonomano | `arXiv:2110.01976` | 230 |
 
 ### Reconciliation against the `literature/` folder
 
@@ -1788,6 +1791,40 @@ second, independent reason for the degeneracy of Section 26.3, item four: whethe
 what returns is one particle or a created pair may not have a frame-independent
 answer at all. Compare `[131]`, where the global Hilbert space is one-dimensional
 while each observer's is a Fock space.
+
+## C0. The direction of time, and why it is not in the equations
+
+Bears on Sections 8.3, 8.4 and 8.7.
+
+### [228] Kastner, *The arrow of time is alive and well but forbidden under the received view of physics*, in: The Arrow of Time (CUP) ch. 7, arXiv:2311.11456
+SUPPORT for the elimination Section 8.4 performs, reached from the philosophy of
+physics rather than from a congruence. States the standard position sharply enough
+to cite: under the received view the observed directionality of time conflicts with
+physical theory, because the theory does not contain it. Argues the conflict is a
+consequence of optional methodological commitments rather than of physics, so the
+direction can be restored by revising those commitments. The escape route offered
+is not ours, which makes the comparison a real one: this work looks for the
+direction in the exit-channel entropy of Section 8.7, a quantity inside the
+formalism, rather than outside the received view.
+
+### [229] Ellis, *The arrow of time and the nature of spacetime*, arXiv:1302.7291
+CHALLENGE, and the cleanest statement of what would close the freedom Section 2.1
+leaves open. Agrees that the direction is not in the local equations, then supplies
+it from a global past condition cascading down by top-down causation, in an
+emergent block universe where the present differs from both past and future. If the
+direction is fixed globally then the sign of the crossing is fixed with it, and the
+even four-four division of the admissible crossings stops being a freedom while
+remaining a fact about the transformations. This work neither adopts nor refutes a
+past condition, so Section 2.1's freedom is conditional on there being no such
+global selector, and the article now names that condition.
+
+### [230] Buonomano, Rovelli, *Bridging the neuroscience and physics of time*, arXiv:2110.01976
+CONTEXT, cited for one boundary and nothing else. Section 24.2.1 says that nothing
+in this work requires a body to advance along a coordinate and that the sense of
+being carried is outside what is computed. This dialogue is the compact statement,
+from a neuroscientist and a physicist at once, that the sense of passage is a fact
+about observers rather than about the metric. Nothing here turns on how that sense
+arises; the reference marks the edge of the claim.
 
 ## C3. The ultrahyperbolic equation: predictability and its price
 

@@ -55,6 +55,7 @@
 #include "rest/SuperluminalRest.h"
 #include "scan/CrossingBranches.h"
 #include "scan/PermutationScan.h"
+#include "scan/SlotDictionary.h"
 #include "signal/Channels.h"
 #include "signal/GravitationalChannel.h"
 #include "spherical/SphericalSolution.h"
@@ -73,6 +74,7 @@ namespace
         sections.push_back(std::make_unique<slm::InvolutionD>());
         sections.push_back(std::make_unique<slm::PermutationScan>());
         sections.push_back(std::make_unique<slm::CrossingBranchesSection>());
+        sections.push_back(std::make_unique<slm::SlotDictionarySection>());
         sections.push_back(std::make_unique<slm::IntermediateRegionSection>());
         sections.push_back(std::make_unique<slm::ThresholdSurface>());
         sections.push_back(std::make_unique<slm::JunctionScattering>());
