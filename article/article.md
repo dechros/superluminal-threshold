@@ -4533,6 +4533,66 @@ kaydı olarak verilmektedir.
 
 ---
 
+### 26.3 Simülasyon: zinciri formülden değil, sayısal deneyden okumak
+
+Bu çalışmadaki her gecikme **tek bir yoldan** gelmektedir: fazın frekans
+türevi. Yol doğrudur, ama tek bir yol kendini denetleyemez. Bu alt bölüm ikinci
+yolu kurar.
+
+**Yöntem.** Bir dalga paketi frekanslar üzerinden toplanır; her frekans, iki
+geçişin o frekansa uyguladığı genlikle ve gözlem noktasına kadarki serbest
+yayılım fazıyla çarpılır; sonuç zamanda ileri yürütülür ve zarfın **tepe yaptığı
+an** varış sayılır. Hiçbir gecikme formülü kullanılmaz. Durağan faz koşulu
+dayatılmaz; ortaya çıkması ya da çıkmaması serbest bırakılır.
+
+**Bandın kesilmesi zorunludur.** Frekans $\sqrt{k_\perp^2 + \mu}$ değerinin,
+bu yapılanmada $2{,}2361$'in altına düştüğünde dışarıdaki dalga sayısı sanaldır
+ve o bileşen dedektöre **hiç ulaşmaz**. Bant orada kesilmektedir; kesilmezse
+toplam anlamsız bir katkı taşır.
+
+**Birinci sonuç: gecikme doğrulanmaktadır.**
+
+| Kalınlık | Simülasyonun ölçtüğü | Kapalı biçim |
+|----------|----------------------|--------------|
+| $4$ | $+1{,}4635$ | $+1{,}4629$ |
+| $8$ | $+1{,}4635$ | $+1{,}4629$ |
+| $16$ | $+1{,}4635$ | $+1{,}4629$ |
+
+Kalan fark paketin sonlu genişliğinden gelmektedir ve bant daraltıldıkça
+küçülmektedir. Frekans toplamı dört kat inceltildiğinde sayı kıpırdamamaktadır,
+yani bildirilen şey kesmenin bir özelliği değildir.
+
+> Doyum, kendisine hiç söylenmemiş bir yol tarafından **gözlenmektedir**.
+> Kalınlık dörtten on altıya çıkarken gecikme değişmemektedir. Dolayısıyla
+> kapalı biçim, bir fazı türetmenin yan ürünü değildir.
+
+**İkinci sonuç: faz yolunun görmediği bir şey vardır.** Yukarıdaki ölçüm,
+genliğin yalnızca **fazı** alınarak yapılmıştır. Genliğin tamamı kullanıldığında
+tepe fazladan kaymaktadır:
+
+| Kalınlık | Genliğin tepeye eklediği kayma |
+|----------|--------------------------------|
+| $4$ | $-0{,}0902$ |
+| $8$ | $-0{,}1726$ |
+| $16$ | $-0{,}3369$ |
+
+Sebebi şudur: saydamsız rejimde geçirgenliğin **modülü** frekansla dik biçimde
+yükselir. Bölge paketi yalnızca geciktirmez, onu **hızlı yanına doğru yeniden
+ağırlıklandırır**. Bu kayma kalınlıkla büyümekte, gecikme ise büyümemektedir.
+
+Bu gerçek bir etkidir ve bir hata değildir; ancak bir **gecikme de değildir**.
+Paket, farklı bir paket olarak varmaktadır. İkisinin toplamını tek sayı olarak
+bildirmek, birini ötekine yazmak olurdu; bu nedenle ayrı ayrı verilmektedirler.
+
+**Simülasyonun üç kez düzelttiği yer.** Grup hızı ilk yazımda ters çevrilmişti
+ve arama penceresi tepeyi hiç içermiyordu. Bant, dışarıdaki dalga sayısının
+sanal olduğu bölgeye uzanıyordu. Ve ilk seçtiğim paket genişliğinde yeniden
+ağırlıklandırma gecikmeye baskın gelmekteydi; kalınlıkla **büyüyen bir öne
+kayma** neredeyse gecikme diye kaydedilecekti. Üçü de simülasyonun kendisi
+tarafından yakalanmıştır, ki bir simülasyonun varlık nedeni budur.
+
+---
+
 ## 27. Literatürün bıraktığı sorular ve bu çalışmanın duruşu
 
 Bu bölüm, konuyla ilgili literatürün çözmediği ya da tartışmalı bıraktığı
