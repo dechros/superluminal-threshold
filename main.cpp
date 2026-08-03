@@ -30,6 +30,7 @@
 #include "intermediate/DwellTime.h"
 #include "intermediate/IntermediateRegion.h"
 #include "intermediate/SignalFront.h"
+#include "intermediate/ThresholdOptimum.h"
 #include "intermediate/TraversalClocks.h"
 #include "intermediate/TwoCrossings.h"
 #include "transform/ExtendedLorentzGroup.h"
@@ -117,6 +118,7 @@ namespace
         sections.push_back(std::make_unique<slm::DwellTimeSection>());
         sections.push_back(std::make_unique<slm::ChannelEntropySection>());
         sections.push_back(std::make_unique<slm::TraversalClocksSection>());
+        sections.push_back(std::make_unique<slm::ThresholdOptimumSection>());
         sections.push_back(std::make_unique<slm::SignalFrontSection>());
         sections.push_back(std::make_unique<slm::RoundTripSection>());
         sections.push_back(std::make_unique<slm::EnergyBookkeepingSection>());
