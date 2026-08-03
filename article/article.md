@@ -3373,6 +3373,11 @@ Bu, dal taramasının öteki uçtan vardığı gereksinimle **aynı biçimdedir*
 olarak bir eksende tek olan bir nicelik. Orada eşleme seçimi için, burada
 yolculuk yönü için çıkmaktadır.
 
+İki ters çevirmenin ayrı tutulması özgün bir gözlem değildir. Saçılma
+kuramının olağan sınıflandırmasında karşılıklılık, zamanda tersinme ve uzaysal
+evirme **ayrı işlemlerdir** ve karşılıklılık yalnızca geçirgenlik genliklerini
+bağlar. Burada yapılan, o sınıflandırmanın bu geçişe uygulanmasıdır.
+
 **Bir sonuç iddia edilmemektedir.** Öte taraf tek bir uzay ekseni taşımaktadır
 ve yukarıdaki çift, geçişten türetilmiş değil, elle yazılmıştır. Bu çalışma
 böyle bir kanal yapısını **sağlamamaktadır**. Dolayısıyla bu alt bölüm bir yön
@@ -3418,7 +3423,11 @@ rejim ayrımının kendisidir.
 hesapla uyuşmasıdır: biri iç dalga sayısından, öteki eşik eniyilemesinin
 kullandığı engel testinden gelmektedir. Taranan dört bin frekansın hiçbiri, iç
 modu kütle kabuğuna oturtup aynı anda gecikmenin doymasına izin vermemektedir.
-Sonuç bu nedenle bir yöntem değil, bir **gerilimdir**:
+Bu tümleyenlik de yeni bir olgu değildir: sönümlü modun kendisi geçiş süresine
+katkı vermez, dolayısıyla gecikmenin doyması zaten iç bölgenin sönümlü olmasını
+gerektirir. Burada yapılan, bilinen bu bağın bu bölgeye uygulanıp gözlemle
+karşı karşıya getirilmesidir. Sonuç bu nedenle bir yöntem değil, bir
+**gerilimdir**:
 
 > İç bölgede kütle kabuğunda bir mod bulunan rejimde varış **öne alınmaz**.
 > Varışın öne alındığı rejimde ise gözlenecek bir kütle kabuğu modu

@@ -68,6 +68,12 @@ namespace slm
             {"enhanced tunnelling can make the transmission of an opaque barrier "
              "non-exponential, in a barrier that is not one dimensional",
              State::Context, ""},
+            {"the evanescent mode itself contributes no traversal time, so the saturation "
+             "of the delay requires the interior to be evanescent",
+             State::Used, "particle/FarSideObservation"},
+            {"reciprocity, time reversal and spatial inversion are distinct symmetry "
+             "operations, and reciprocity constrains transmission amplitudes alone",
+             State::Used, "particle/DirectionControl"},
             {"the initial value problem is ill posed across the change", State::Reproduced,
              "boundary/ModeFilter"},
             {"the boundary condition comes from a self-adjoint family", State::Reproduced,
