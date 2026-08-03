@@ -365,6 +365,86 @@ Ayrıca bu bölümde toplanan iki terimin toplamı, §2.1.2'nin tek genlikten ok
 anıyla üç mesafede karşılaştırılmış ve aynı çıkmıştır. Yani makalenin bu
 noktadaki toplaması, yerine geçen türetmeyle uyumludur.
 
+### 2.1.4 Düz olmayan yol: gezinmek ile çerçeve değiştirmek
+
+Sözlük lineer olduğundan, tek eksende kalan bir yolculuğun saatte ürettiği yer
+değiştirme yalnızca **net** miktara bağlıdır; gidiş ve eşit dönüş tam olarak
+sadeleşir (§2.1.1). Bacaklar arasında **çerçeve** değişirse soru başkalaşır,
+çünkü katsayı bir matristen okunur ve o matris çerçeve değişimiyle bileşke
+alınır. Öte tarafın metriğini koruyan iki tür çerçeve değişimi vardır ve
+ikisi farklı davranır (`src/particle/RouteHolonomy`).
+
+**Aynı işaretli eksenler arasındaki dönmeler hiçbir şey bırakmaz.** Üç aynı
+işaretli ekseni birbirine döndüren bir dönme, ayırt edilmiş ekseni **sabit
+bırakır**; dolayısıyla ilgili matris girdisine dokunmaz. Katsayı incelenen
+bütün açılarda değişmeden $1$ kalır, ve net yer değiştirmesi sıfır olan her
+rota — ne kadar dolambaçlı olursa olsun — saati başladığı yere döndürür. Bu
+sekiz geçişin hepsinde doğrulanmıştır. Yani **gezinmek tek başına hiçbir şey
+kazandırmaz**; bu, öte tarafta dolaşmanın kendi başına zaman kazandıracağı
+beklentisini dışlayan olumsuz bir sonuçtur.
+
+**Ayırt edilmiş ekseni karıştıran hiperbolik dönme bırakır.** Ayırt edilmiş
+ekseni aynı işaretli bir eksenle karıştıran dönüşüm de öte taraf metriğinin bir
+izometrisidir, ama o ekseni sabit bırakmaz: katsayıyı hızlılığının hiperbolik
+kosinüsüyle çarpar. İki bacağı böyle bir dönüşümle ayrılmış kapalı bir rota
+artık kalıntı bırakır, ve kalıntı hızlılıkta sınırsızdır. Hesaplanan değerler,
+$3$ birimlik gidiş-dönüş için: hızlılık $0{,}5$'te $-0{,}382878$, $1$'de
+$-1{,}629242$, $2$'de $-8{,}286587$. Kalıntının işareti negatiftir, yani dönüş
+düz rotaya göre saati **geriye** taşır.
+
+**Kalıntının değeri ve bedeli.** Aynı hiperbolik kosinüs, Bölge I'de sıradan bir
+Lorentz dönüşümünün bir zaman aralığına uyguladığı çarpandır. Kalıntı bu yüzden
+bilinen bir genleşmenin öte taraftan görünüşüdür, bağımsız bir etki değildir, ve
+burada böyle kaydedilmiştir. Bedeli de hesaplanmıştır: sıfırdan farklı
+hızlılıkla bileşke alınan geçiş metrik bağıntısını korur, yani kabul edilebilir
+aileden çıkmaz, ama **involüsyon olmaktan çıkar**. §2.1'in tarama koşullarından
+biri olan "iki kez geçince başlangıç çerçevesine dönme" özelliği bu durumda
+kaybolur.
+
+### 2.1.5 Faturanın çıkarılması: hangi para biriminde ne ödeniyor
+
+Bu kurguda fiyatlandırılabilecek üç nicelik vardır ve üçü de farklı davranır
+(`src/particle/TimeShiftCost`).
+
+**Genlik.** Girişten $\Delta$ kadar önce varmak için öte taraf bacağının doymuş
+geçiş gecikmesini $\Delta$ kadar aşması gerekir; gecikme bacak tarafından değil
+bölge tarafından sabitlendiğinden, gereken bacak istenen yer değiştirmeyle
+**birebir** büyür: $\Delta = 0$ için $2{,}565988$, $\Delta = 1000$ için
+$1002{,}565988$. Dizinin genliği ise yalnızca bölgeye bağlıdır; kalınlık $2$'de
+$3{,}67 	imes 10^{-3}$, $8$'de $3{,}46 	imes 10^{-12}$ olduğu için genliğin
+bölgeye duyarlı olduğu, yani sabit bir niceliğin körlüğünden söz edilmediği
+gösterilmiştir. Buna karşın **bacak, genliğin argümanları arasında hiç
+geçmez**. Dolayısıyla bu modelde keyfi büyüklükte bir yer değiştirme, en
+küçüğünden daha fazla genliğe mal olmaz. Bu bir serbestlik ifadesi değildir:
+modelde öte taraf yol uzunluğu genliğe hiç girmemektedir, yani bu bir
+**eksikliktir**, ve yolculuğun fiyatlandırılabilmesi için genliğin önce bir yol
+uzunluğu kazanması gerekir. Rakamlara bundan fazlası okunmamalıdır.
+
+**Düz bacağın enerjisi.** Öte taraf, ayırt edilmiş ekseni boyunca ötelemeye göre
+değişmezdir; eşlenik nicelik korunur ve düz bir bacağın uzunluğu ödenmez. Aynı
+işaretli eksenler arasındaki dönmeler de bedelsizdir. Ama §2.1.4'e göre bu iki
+bedelsiz işlem hiçbir şey de kazandırmaz.
+
+**Çerçeve değişiminin enerjisi.** Kazandıran tek işlem olan hiperbolik dönme
+enerjiyi hızlılığının hiperbolik kosinüsüyle çarpar. Hızlılık iki bağıntı
+arasından elenirse geriye serbest parametresi olmayan bir ilişki kalır:
+
+$$\frac{\Delta E}{E} \;=\; \frac{\Delta}{s},$$
+
+yani ek yer değiştirmenin bacak uzunluğuna oranı. İlişki yer değiştirmede
+**lineerdir**, üstel değil. Uzun bacak aynı yer değiştirmeyi ucuza alır: $10$
+birimlik bacakta $2$ birim ek yer değiştirme enerjiyi $\%20$ artırırken,
+$100$ birimlik bacakta $\%2$ artırır. $1000$ birimlik bir bacakta enerjinin
+$\%1$ artması $10$ birim, iki katına çıkması $1000$ birim ek yer değiştirme
+satın alır.
+
+**Faturanın toplamı, bir sınırlama olarak.** Üç kalemin ikisi hafiftir — genlik
+bacağı görmez, düz bacak bedelsizdir — üçüncüsü ise gerçek bir bedeldir ama
+tanıdıktır, sıradan bir Lorentz dönüşümünün uyguladığı çarpanın aynısıdır. Yani
+bu faturada kurguya özgü hiçbir kalem yoktur. Modelin fiyatlandıramadığı şey
+yolculuğun kendisidir, ve bunun nedeni yapısaldır: genlikteki hiçbir nicelik
+parçacığın öte tarafta ne kadar gittiğine bağlı değildir.
+
 ---
 
 Doğrulanan iki olgu:
@@ -3507,6 +3587,9 @@ ne bölüm numarası ne kaynak numarası bulunur.
 | Geçiş dönüşümlerinin zaman yuvası işaretine göre bölünmesi | `src/scan/CrossingBranches` |
 | Sözlüğün katsayısı ve yer değiştirmelerin toplanabilirliği | `src/scan/SlotDictionary` |
 | Eşlenik değişkenlerin sözlüğü ve toplamanın türetilmesi | `src/dynamics/ConjugateDictionary` |
+| Düz olmayan rotanın saatte bıraktığı kalıntı | `src/particle/RouteHolonomy` |
+| Saat kaymasının genlik ve enerji faturası | `src/particle/TimeShiftCost` |
+| Metnin ileri sürdüğü varsayımların sicili | `src/critique/AssumptionLedger` |
 | Varış anının giriş anından önce olabilmesi | `src/particle/ArrivalOrder` |
 | Enerji ile momentumun takası | `src/dynamics/EnergyMomentum` |
 | Dispersiyon, grup hızı, $O(3)$ ayar fazlalığı | `src/dynamics/Dispersion`, `src/rest/SuperluminalRest` |
@@ -3632,6 +3715,37 @@ kaydedilir, çünkü aksi hâlde Bölüm 22 sağlanmamış bir bütünlük iddia
 > kendi güvencesi altındaki alan, makalenin dayandığı alandan hâlâ **dardır**:
 > on dokuz sonuç ya itibara alınmakta ya da yalnızca bağlam olarak
 > kullanılmaktadır, ve yukarıdaki yöntem o darlığın adı konmuş kısmıdır.
+
+### 22.3 Denetim: metnin ileri sürdüğü her varsayım sicilde var mı
+
+Bir metin varsayımları konusunda disiplinli olabilir ve yine de kayabilir,
+çünkü disiplin düzyazıda durur ve onu zorlayan bir şey yoktur. Bu denetim
+disiplini bir kontrole çevirir (`src/critique/AssumptionLedger`). Program
+makalenin kendisini okur, varsayım ileri süren her pasajı bulur ve her birinin
+sicilde bir **hüküm** ile yer almasını şart koşar. Sicilin kapsamadığı bir pasaj
+başarısızlıktır; yani metne hesabı verilmemiş bir varsayım eklemek koşuyu
+kırar, sessizce geçmez. Metin okunamazsa denetim atlanmaz, **çöker**: girdisi
+yokken kaybolan bir kontrol, hiçbir şey yapmadığı için başarı bildirir.
+
+Hükümler kasten azdır. Bir varsayım ya sonradan **türetilir**, ya iki
+seçeneğinin **ikisi de hesaplanır** — böylece seçim hiçbir şey taşımaz —, ya
+sonraki bir sonuçla **geçersiz kılınır**, ya karşılaştırılan **başka bir
+kurguya** aittir, ya da sonucu belirtilerek **sınırlama olarak ilan edilir**.
+Altıncı bir hüküm, varsayım yapmak yerine varsayımlardan **söz eden** pasajları
+kapsar; tarama ikisini tek kelimeden ayırt edemediği için bu hüküm gereklidir ve
+bu bölümün kendisi de o hükümle sicildedir. Yalnızca inanılan bir varsayım için
+hüküm yoktur; sınıfın varlık nedeni budur.
+
+Denetimin bulduğu durum: metin $14$ bölümde varsayım kelimesini ileri sürer
+biçimde kullanıyor, sicilde $17$ kalem var, ve kapsanmayan pasaj yok. Dağılım:
+$2$ türetilmiş, $1$ iki yönlü hesaplanmış, $2$ geçersiz kılınmış, $4$ başka bir
+kurguya ait, $5$ ilan edilmiş sınırlama, $3$ de varsayım yapmayıp varsayımdan
+söz eden pasaj. Yani bu metnin **kendi** taşıdığı varsayımlar yalnızca o beş
+sınırlamadır, ve beşi de sonucu metinde yazılı olarak taşınmaktadır.
+
+Denetimin kendisi de sınanmıştır: makaleye sicilde yeri olmayan bir varsayım
+cümlesi eklendiğinde koşu iki kontrolle birden düşmüş, cümle geri alındığında
+tekrar geçmiştir.
 
 ---
 

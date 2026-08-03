@@ -57,7 +57,10 @@
 #include "scan/PermutationScan.h"
 #include "scan/SlotDictionary.h"
 #include "signal/Channels.h"
+#include "critique/AssumptionLedger.h"
 #include "dynamics/ConjugateDictionary.h"
+#include "particle/RouteHolonomy.h"
+#include "particle/TimeShiftCost.h"
 #include "signal/GravitationalChannel.h"
 #include "spherical/SphericalSolution.h"
 #include "transform/InvolutionD.h"
@@ -93,6 +96,9 @@ namespace
         sections.push_back(std::make_unique<slm::SuperluminalRest>());
         sections.push_back(std::make_unique<slm::DispersionSection>());
         sections.push_back(std::make_unique<slm::ConjugateDictionarySection>());
+        sections.push_back(std::make_unique<slm::RouteHolonomySection>());
+        sections.push_back(std::make_unique<slm::TimeShiftCostSection>());
+        sections.push_back(std::make_unique<slm::AssumptionLedgerSection>());
         sections.push_back(std::make_unique<slm::SphericalSolution>());
         sections.push_back(std::make_unique<slm::CanonicalQuantization>());
         sections.push_back(std::make_unique<slm::PathIntegral>());
