@@ -4,6 +4,7 @@
 #include "dynamics/ConjugateDictionary.h"
 #include "particle/FlowAssumption.h"
 #include "particle/ReturnEvent.h"
+#include "particle/ReturnFormula.h"
 #include "scan/CrossingBranches.h"
 
 #include <algorithm>
@@ -167,6 +168,36 @@ namespace slm
                      "strongly suppressed at once",
                      ArrivalOrder::weight(Kind::Euclidean, c, mu, transverse, 8.0) <
                          ArrivalOrder::weight(Kind::Euclidean, c, mu, transverse, 2.0));
+
+        report.subsection("The two routes to the delay agree at the configuration on offer");
+        {
+            const ReturnEvent::State state =
+                ReturnEvent::stateFromAngles(kPolar, kAzimuth, kLength, 1);
+            const ReturnFormula::Three energy{state.orientation[0], state.orientation[1],
+                                              state.orientation[2]};
+            const double roundTrip = ArrivalOrder::crossingDelay(Kind::Euclidean, c, mu, 8.0);
+            const double fromPhase = roundTrip / 2.0;
+            const double fromClosedForm =
+                ReturnFormula::saturatedElapsed(energy, Kind::Euclidean, c, mu);
+            report.check(std::format("the round trip delay is {:.6f}, being two crossings",
+                                     roundTrip),
+                         roundTrip > 0.0);
+            report.check(std::format("so one crossing read from the frequency derivative of the "
+                                     "amplitude is {:.6f}",
+                                     fromPhase),
+                         fromPhase > 0.0);
+            report.check(std::format("the closed form, which carries no thickness, gives {:.6f} "
+                                     "for one crossing",
+                                     fromClosedForm),
+                         fromClosedForm > 0.0);
+            report.checkNear("the two agree, which is the comparison a reader reproducing this "
+                             "is told to make, so the instruction is one this suite also carries "
+                             "out rather than only issues",
+                             fromPhase - fromClosedForm, 1e-6);
+            report.check("and the barrier branch is the one in force here, without which the "
+                         "closed form would be describing a different regime",
+                         ReturnFormula::isBarrier(energy, Kind::Euclidean));
+        }
     }
 
 }
