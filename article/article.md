@@ -2803,7 +2803,7 @@ ifadesidir: Bölge I'in zamanı ile Bölge II'nin tek uzay ekseni aynı koordina
 ve ikisinde de yön seçilemez.
 
 "Tek yönlü" ifadesinin içindeki iki ayrı iddia, yani yönlendirilebilirlik ile
-ilerleme zorunluluğu, Bölüm 8.4.1'de ayrılmış ve yalnızca birincisinin
+ilerleme zorunluluğu, Bölüm 8.3'te ayrılmış ve yalnızca birincisinin
 hesaplandığı orada gösterilmiştir.
 
 Bu ifadenin Bölüm 2.1.3'ün sonucuyla nasıl bir arada durduğu da orada yazılıdır:
