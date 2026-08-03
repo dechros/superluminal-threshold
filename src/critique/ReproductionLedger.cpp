@@ -63,6 +63,12 @@ namespace slm
             {"an out and back superluminal trip described in one frame returns later "
              "than it left, so the naive loop does not reach the past",
              State::Reproduced, "particle/LoopClosure"},
+            {"the infinite velocity limit exchanges a spatial coordinate with the "
+             "temporal one, so every member of the extended family swaps their characters",
+             State::Reproduced, "transform/InvolutionD"},
+            {"inside a horizon the radial coordinate becomes timelike and the temporal "
+             "one spacelike, and the radial direction cannot be chosen",
+             State::Used, "none"},
             {"the superluminal frame carries one spatial and three temporal axes, with "
              "motion possible only along the single spatial one",
              State::Used, "none"},

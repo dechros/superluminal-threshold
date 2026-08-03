@@ -1167,8 +1167,35 @@ sağlanmaz" ifadesi ise **doğru değildir** ve geri çekilmektedir.
 
 Schwarzschild metriğinde ufkun içinde $dt^2$ ve $dr^2$ terimlerinin işaretleri yer
 değiştirir: $r$ zaman-benzeri, $t$ uzay-benzeri olur. Merkeze düşmek kaçınılmaz hale
-gelir, dışarıda geleceğe ilerlemenin kaçınılmaz olması gibi. Benzerlik buraya
-kadardır.
+gelir, dışarıda geleceğe ilerlemenin kaçınılmaz olması gibi.
+
+Bu karşılaştırma metnin en önemlisidir ve bu yüzden kısa kesilmemelidir. Çalışmanın
+çekirdeği, bir eksenin karakter değiştirmesinden yer değiştirmenin zaman kaymasına
+çevrilmesidir; ufkun içi, yerleşik fizikte bu çevrimin bilinen **tek** örneğidir.
+Dolayısıyla asıl soru şudur: aynı değiş tokuş orada da olurken, neden ufkun içi bir
+zaman yolculuğu düzeneği olarak kullanılmıyor.
+
+İki sebep vardır ve ikisi de bu modelde ayrı ayrı hesaplanmıştır.
+
+**Birincisi, ufuk tek yönlüdür.** Karakter değiştiren eksende kat edilen mesafenin
+bir zaman kayması olarak okunabilmesi için, kayması gereken saatin bulunduğu yere
+**geri dönmek** gerekir. Ufkun içinden dışarıya hiçbir yol yoktur, dolayısıyla
+orada kat edilen $\Delta r$ dışarıdaki hiçbir saate rapor edilemez. Buradaki eşiğin
+iki yüzü vardır ve ikinci geçişin genliği sıfır değildir (Bölüm 3.3, Bölüm 12).
+Çevrimi kullanılabilir kılan şey imzanın dönmesi değil, **dönüşün mümkün olması**dır.
+
+**İkincisi, ufkun içi tek bir devam sunar, eşik sekiz sunar.** Ufkun içinde
+zaman-benzeri hâle gelen eksende yön seçilemez; $r$ azalmak zorundadır. Bu modelde
+de öte tarafın tek uzay ekseninde yön seçilemez (Bölüm 24.2), dolayısıyla itiraz
+buraya olduğu gibi taşınır ve cevaplanması gerekir. Cevap, işaretin yürüme
+yönünden gelmemesidir: bütün filtreleri geçen sekiz geçiş vardır ve bunların
+**dördü** yer değiştirmeyi geriye taşır (Bölüm 2.1.3). Seçim, eksende hangi yöne
+yürüneceği değil, hangi geçişin gerçeklendiğidir. Ufkun içinde bu seçim yoktur
+çünkü orada geçiş bir tanedir.
+
+Benzerlik buraya kadardır, ve nerede bittiği artık bir cümle değil iki hesaptır:
+geri dönüş genliği ve sekiz geçişin işaret sayımı. Bu ikisinden biri düşerse
+karşılaştırma modelin aleyhine döner.
 
 ### 7.3 Kaç koordinat dönüyor
 
@@ -3912,10 +3939,10 @@ Sicil üç durum ayırır ve sayıları kendisi üretir:
 
 | Durum | Anlamı | Kaç |
 |-------|--------|-----|
-| Yeniden üretilmiş | Buradaki bir kütüphane sonucu bağımsız olarak hesaplar ve değeri karşılaştırılabilir | $36$ |
-| İtibara alınmış | Sonuç yeniden hesaplanmadan kullanılır; doğruluğu bu çalışmanın güvencesi altında değildir | $17$ |
+| Yeniden üretilmiş | Buradaki bir kütüphane sonucu bağımsız olarak hesaplar ve değeri karşılaştırılabilir | $37$ |
+| İtibara alınmış | Sonuç yeniden hesaplanmadan kullanılır; doğruluğu bu çalışmanın güvencesi altında değildir | $18$ |
 | Yalnızca bağlam | Konumlandırma için anılır, ondan hiçbir sonuç çıkarılmaz | $7$ |
-| **Toplam** | | $60$ |
+| **Toplam** | | $62$ |
 
 Sicilde bir denetim vardır: "yeniden üretilmiş" işaretli her girdi, onu üreten
 kütüphaneyi **adıyla** taşımak zorundadır. Adı olmayan bir yeniden üretim iddiası
@@ -4123,6 +4150,33 @@ dört yuvayı tek tek tarayan tablosu o zemin üzerinde kurulur. Kendine ait ola
 tablonun son satırıdır: o tek uzay ekseninde atılan bir birim adımın Bölge I
 saatinde **tam olarak bir birim** ürettiği, ve diğer üç eksenin tam olarak sıfır
 ürettiği.
+
+**Değiş tokuşun kendisi de ödünçtür, çevrim değildir.** Çekirdeği en dar biçimde
+yazmak gerekirse: öte tarafta tek uzay ekseninde mesafe kat edilir, dönüşte o eksen
+zamana düştüğü için kat edilen mesafe bir zaman kayması olarak okunur. Bu cümlenin
+iki parçası ayrı ayrı incelenmelidir, çünkü statüleri farklıdır.
+
+Birinci parça — bir uzay ekseninin zaman eksenine düşmesi — **yerleşiktir**. Sonsuz
+hız limitinin $(1+1)$ boyutta uzay ve zaman koordinatlarını değiş tokuş ettiği
+bilinmektedir, ve genişletilmiş grubun her öğesinin zaman-benzeri ile uzay-benzeri
+doğrultuları değiş tokuş ettiği [4]'te açıkça yazılıdır. Bu modelin $D$'si o
+ailenin bir üyesidir; Bölüm 2.1'in yaptığı, aileyi tarayıp hangi üyelerinin
+kullanılabilir olduğunu saymaktır, değiş tokuşu keşfetmek değildir.
+
+İkinci parça — o eksende **kat edilen mesafenin** bir zaman kaymasına çevrilmesi —
+arandı ve bulunamadı. Değiş tokuş bir dönüşüm özelliği olarak sayısız yerde
+geçmektedir; bir **yer değiştirmenin** o dönüşüm altında bir saat kaymasına
+dönüştüğü ve dönüşte hangi ana varıldığının hesaplandığı bir çalışma
+bulunmamaktadır. Aradaki fark bir dönüşümün özelliği ile o dönüşümün bir
+düzenek olarak kullanılması arasındaki farktır.
+
+Bunun en yakın karşılığı yerleşik fizikte bulunmaktadır ve modelin en ciddi
+sınavıdır: kara delik ufkunun içinde de aynı değiş tokuş olur, $r$ zaman-benzeri
+hâle gelir, ve buna rağmen ufkun içi bir zaman yolculuğu düzeneği olarak
+kullanılmaz. Nedeni iki tanedir — ufuk tek yönlüdür, ve orada eksende yön
+seçilemez. Bu iki itiraz Bölüm 7.2'de karşılanmakta, ve karşılığında iki hesap
+gösterilmektedir: ikinci geçişin genliği sıfır değildir, ve sekiz geçişin dördü
+yer değiştirmeyi geriye taşır. Çekirdeğin ayakta kalması bu ikisine bağlıdır.
 
 **Basit ilmeğe yöneltilen itiraz.** [65] bu kurgunun naif biçimine karşı bir
 karşıörnek verir ve itiraz bu metni de bağlar, çünkü burada anlatılan da bir gidiş
