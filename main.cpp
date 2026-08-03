@@ -38,6 +38,7 @@
 #include "particle/ArrivalOrder.h"
 #include "particle/AsymmetricFaces.h"
 #include "particle/CellDistribution.h"
+#include "particle/DirectionControl.h"
 #include "particle/EnergyBookkeeping.h"
 #include "particle/ExitFace.h"
 #include "particle/FarSideMotion.h"
@@ -143,6 +144,7 @@ namespace
         sections.push_back(std::make_unique<slm::OpenQuestionsSection>());
         sections.push_back(std::make_unique<slm::ReproductionLedgerSection>());
         sections.push_back(std::make_unique<slm::FarSideMotionSection>());
+        sections.push_back(std::make_unique<slm::DirectionControlSection>());
         sections.push_back(std::make_unique<slm::TimeProjectionSection>());
         sections.push_back(std::make_unique<slm::FlowAssumptionSection>());
         sections.push_back(std::make_unique<slm::TimeReversalSignatureSection>());

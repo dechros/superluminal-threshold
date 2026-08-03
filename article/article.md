@@ -3322,6 +3322,52 @@ Burada $S(d)$ paket merkezinin kaymasıdır ve iki enine koordinatın **ortak**
 Taranan olayın her koordinatı bu formülle yeniden üretilmektedir. Dolayısıyla
 tarama artık cevaba giden tek yol değil, **formülün üzerindeki bir denetimdir**.
 
+### 19.8 Öte taraftaki yön buradan seçilebilir mi
+
+Formül, öte taraftaki yer değiştirmeyi veri alır. Yer değiştirmenin **işareti**
+dönüş anını doğrudan belirlediğine göre, o işaretin buradan kurulup
+kurulamayacağı ayrı ve meşru bir sorudur.
+
+**Önce iki sorunun karıştırılmaması gerekir.** Hangi geçiş eşlemesinin
+gerçekleştiği sorusu, bizim zaman yuvamız ile öte tarafın ayrıcalıklı uzay
+ekseninin **birlikte** ters çevrilmesiyle ilgilidir ve Bölüm 24.7 ile 25'te
+işlenir. Buradaki soru ise eşleme verilmişken **yolculuğun yönüdür** ve
+yalnızca geçiş ekseninin ters çevrilmesine bakar. İşaret dizileri olarak
+yazıldığında birincisi $(-1,-1,+1,+1)$, ikincisi $(+1,-1,+1,+1)$'dir; çarpımları
+$(-1,+1,+1,+1)$, yani bizim zamanımızın saf ters çevrilmesidir. İki işlem farklı
+grup öğeleridir ve biri hakkındaki bir teorem ötekini kapatmaz.
+
+**Geçişi biçimlendirerek yön verilemez.** Literatürdeki karşılıklılık sonucu,
+her iki uçta yön başına tek yayılan kanal bulunduğunda, uzaysal olarak
+bakışımsız bir engelden geçirgenliğin soldan ve sağdan giriş için aynı olduğunu
+söyler; zamanda tersinirlik ile birimselliğin bir sonucudur. Bu, itibara
+alınmak yerine bu çalışmada kurulmuş profiller üzerinde yeniden üretilmiştir.
+Çarpık profil için geçirgenlik iki yönde de $4{,}9096125448 \times 10^{-3}$
+çıkmakta, fark $7 \times 10^{-18}$ mertebesinde kalmaktadır; profilin gerçekten
+bakışımsız olduğu ayrıca doğrulanmıştır, dolayısıyla eşitlik profilde saklanan
+bir bakışımın değil, teoremin sonucudur. Kurulmuş beş profilin hiçbiri iki
+yönde farklı geçirmemektedir.
+
+> Tek kanallı bir gönderimde yolculuğun yönü, parçacığın zaten taşıdığı
+> işarettir. Engelin biçimi, kalınlığı ve bakışımsızlığı bu işareti
+> **değiştirmez**.
+
+**Karşılıklılığın açık bıraktığı tek yer, gelen durumun kendisidir.** Eşevreli
+bir kanal çiftinin taşıdığı yön, kanallar arası bağıl fazın tekil bir
+fonksiyonudur: ağırlıkları $A$ ve $B$, bağıl fazı $\varphi$ olan bir çift için
+yön göstergesi $2AB\sin\varphi$ olur ve $\varphi$ işaret değiştirdiğinde
+göstergenin işareti de değişir. Yani yanlılık engelde değil, gelen durumdadır.
+
+Bu, dal taramasının öteki uçtan vardığı gereksinimle **aynı biçimdedir**: tam
+olarak bir eksende tek olan bir nicelik. Orada eşleme seçimi için, burada
+yolculuk yönü için çıkmaktadır.
+
+**Bir sonuç iddia edilmemektedir.** Öte taraf tek bir uzay ekseni taşımaktadır
+ve yukarıdaki çift, geçişten türetilmiş değil, elle yazılmıştır. Bu çalışma
+böyle bir kanal yapısını **sağlamamaktadır**. Dolayısıyla bu alt bölüm bir yön
+verme yöntemi değil, yön vermenin inşa edilmesi gereken **tek yerinin**
+saptanmasıdır.
+
 ---
 
 ## 20. Sonuç: zincirin tek yerde yazılması

@@ -42,8 +42,10 @@ namespace slm
     class ProfiledBarrier
     {
     public:
-        /// A decay constant as a function of position within the barrier, given
-        /// as a fraction of the width.
+        /// A decay constant as a function of position within the barrier. The
+        /// argument is an absolute position running from zero to the width,
+        /// not a fraction of it; mirroring a profile therefore means sending
+        /// the position to the width less the position.
         using Profile = std::function<double(double)>;
 
         /// The profiles compared here.
