@@ -4173,8 +4173,10 @@ varsayımı eleştiren bir cümle ile varsayan bir cümle aynı kelimeyi taşır
 | 25.3 | Yok; pasaj bu sicili ve taradığı kelimeleri anlatır | varsayım değil, söz ediliyor | Sicilin kendisi, ki bu bölüm onu belgeler |
 | 26.2 | Öte tarafın sınırsız olması | ilan edilmiş sınırlama | Sonucu yazılı: sonlu kalınlıkta dilim üstel olarak bastırılmış ama sıfır olmayan bir genlik bırakır |
 | 8.4.1 | Denklem düzeyinde ve durum düzeyinde tek yönlülüğün aynı iddia olması | başka kurguya ait | İki okuma orada ayrılır ve yalnızca ikincisi savunulur |
+| 2.1.6 | Sabit tutulan derinlikte gecikmenin doymuş olması | türetildi | Aynı bölüm: dört enerjinin dördünde de sonlu kalınlık gecikmesi doymuş değerin yüzde biri içindedir |
+| 2.1.6 | Minimize edilen niceliğin §2.1.3'ün karşılaştırdığı nicelik olması | türetildi | Aynı bölüm: referans yapılandırma $2{,}565988$ verir, yani o bölümün sayısının aynısı |
 
-Sicilde $16$ kalem vardır ve tarama $12$ bölümde iddia bulmaktadır; sicil
+Sicilde $18$ kalem vardır ve tarama $13$ bölümde iddia bulmaktadır; sicil
 kapsayandan geniştir, çünkü sonradan olumsuzlanan bir ifade taramadan düşse de
 hükmü kayıtta kalır. Bu metnin **kendi** taşıdığı varsayımlar yalnızca beş "ilan
 edilmiş sınırlama" satırıdır; beşi de sonucu metinde yazılı olarak
