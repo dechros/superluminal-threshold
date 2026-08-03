@@ -7,7 +7,7 @@ tarafta bulunması ve geri dönmesidir.
 
 **Çekirdek soru.** Öte tarafta parçacığın alabileceği her dört boyutlu yönelim
 ve yapabileceği her hareket ne anlama gelir, ve bu parçacık geri döndüğünde
-bizim dört boyutumuzda **nereye** konumlanır. İkinci yarıdaki "nerede", uzaydaki
+Bölge I'in dört boyutunda **nereye** konumlanır. İkinci yarıdaki "nerede", uzaydaki
 yeriyle sınırlı değildir: dönüş olayının zaman koordinatı da cevabın bir
 parçasıdır ve çalışmanın asıl hedefi odur. Bütün metin tek bir eşlemeyi kurmak
 üzere düzenlenmiştir:
@@ -18,7 +18,7 @@ Zamanda yolculuk bu eşlemeden **okunur**, varsayılmaz. Dönüş olayının zam
 bileşeni, kesintisiz bir dünya çizgisinin koyacağı yerden farklı bir yere
 düşebiliyorsa, gösterim odur; düşemiyorsa bu da hesabın sonucudur.
 
-Bu çekirdeği açan altı soru şudur: bizim bölgemiz nedir, ara bölge nedir, öte
+Bu çekirdeği açan altı soru şudur: Bölge I nedir, ara bölge nedir, öte
 taraf nedir, madde bu üçünde ne demektir, gidip gelen ne kaybeder, ve orada
 olanlar burada ne anlama gelir.
 
@@ -62,11 +62,11 @@ taşır.
 açıları ayrık bir esnek sapmadır.
 
 Eşlemenin girdi tarafı bir koordinat sözlüğüdür. Dört yuvanın dördü de eşikte
-karakter değiştirir, ama **hareket serbestliği yuva yuva korunur**: onların üç
-zamanı bizim üç uzay yönümüzü taşır ve ikisi de serbesttir; onların tek uzay
-ekseni bizim zamanımızı taşır ve ikisi de tek yönlüdür. Tümüyle üç zamanın
-içinde kalan bir hareket, involüsyon altında bizim saatimizde **sıfır** yer
-değiştirme üretir; öte taraftaki yönelim bizim zaman eksenimize koordinat
+karakter değiştirir, ama **hareket serbestliği yuva yuva korunur**: Bölge II'nin üç
+zamanı Bölge I'in üç uzay yönünü taşır ve ikisi de serbesttir; Bölge II'nin tek
+uzay ekseni Bölge I'in zamanını taşır ve ikisi de tek yönlüdür. Tümüyle üç zamanın
+içinde kalan bir hareket, involüsyon altında Bölge I saatinde **sıfır** yer
+değiştirme üretir; öte taraftaki yönelim Bölge I'in zaman eksenine koordinat
 izdüşümüyle değil, iki yüzeydeki eşleşmenin fazıyla ulaşır.
 
 Eşlemenin çıktı tarafı şudur: dönüş olayının zaman bileşeni geçiş genliğinin
@@ -96,7 +96,7 @@ Aşağıdaki maddelerin hepsi çekirdek eşlemenin bir parçasıdır: öte taraf
 yönelimi dönüş olayının dört koordinatına bağlayan eşlemenin. Her madde, o
 eşlemenin ya bir girdisini, ya bir kısıtını, ya da bir sonucunu kaydeder.
 
-1. Bölge sayısı üçtür: bizim taraf, ara bölge, öte taraf.
+1. Bölge sayısı üçtür: Bölge I, ara bölge, öte taraf.
 2. Ara bölgenin **neyden yapıldığı** ile **ne kadar kalın olduğu** bağımsız iki
    sorudur; sıfır kalınlıkta tip önemsizdir, ara bölge yokken kalınlık
    önemsizdir.
@@ -119,11 +119,11 @@ eşlemenin ya bir girdisini, ya bir kısıtını, ya da bir sonucunu kaydeder.
 
 ---
 
-# Kısım I. Bizim evrenimiz nedir
+# Kısım I. Bölge I nedir
 
 ## 1. İki bölge, metrikleri ve gösterim
 
-Bölge I bizim tarafımızdır: bir zaman, üç uzay. Bölge II ışık hızının ötesidir:
+Bölge I eşiğin bu yanıdır: bir zaman, üç uzay. Bölge II ışık hızının ötesidir:
 üç zaman, bir uzay.
 
 $$\text{Bölge I koordinatları: } (ct, x, y, z), \qquad
@@ -197,8 +197,8 @@ permütasyon matrisleri tarandı: $4!$ permütasyon çarpı $2^4$ işaret, topla
 | ve involüsyon ($M^2 = I$) | 12 |
 | ve $\det = +1$ | 8 |
 
-Kalan sekiz çözümün **tamamında** $ct$ tek bir uzay eksenine gider. "Bizim
-zamanımız onların uzayı olur" sonucu bir seçim değil, zorunluluktur.
+Kalan sekiz çözümün **tamamında** $ct$ tek bir uzay eksenine gider. "Bölge I'in
+zamanı Bölge II'nin uzayı olur" sonucu bir seçim değil, zorunluluktur.
 
 **Ancak sekiz çözüm arasındaki fark yalnızca uzay eksenlerinin etiketlenmesi
 değildir.** Bu alt bölümün önceki hâli öyle diyordu ve eksikti. Sekizi, $ct$
@@ -213,10 +213,10 @@ yuvasına verilen **işarete** göre dörde dört bölünür
 
 Bölünme filtrenin **her** aşamasında eşittir, dolayısıyla bu üç koşulun
 güçlendirilmesi geri dalını elemez. Dört geri dalın her biri üç koşulun
-tamamını ayrı ayrı sağlar ve birim öte taraf yer değiştirmesini bizim
-saatimizde $-1{,}0000$'a gönderir.
+tamamını ayrı ayrı sağlar ve birim öte taraf yer değiştirmesini Bölge I
+saatinde $-1{,}0000$'a gönderir.
 
-**İki aileyi ne ayırıyor.** Bizim zaman eksenimizi tek başına çevirmek
+**İki aileyi ne ayırıyor.** Bölge I'in zaman eksenini tek başına çevirmek
 ayırmıyor: determinantı negatife çeviriyor ve kapanmayı bozuyor, yani adayı
 kümeden çıkarıyor. Öte tarafın ayırt edilmiş eksenini tek başına çevirmek de
 aynı sebeple ayırmıyor. **İkisini birlikte çevirmek** ayırıyor:
@@ -226,11 +226,11 @@ $$S = \mathrm{diag}(-1, +1, +1, -1)$$
 $S$ sekizliyi kendi üzerine gönderir ve her işareti ters çevirir; **iki
 metriğin de izometrisidir** ve determinantı birdir. Yani bir geçişe dayatılan
 koşulların tamamını sağlar. Çevirdiği çift, geçişin birbirine eşlediği çiftin
-tam olarak kendisidir: bizim zamanımız ve onların tek uzay yönü.
+tam olarak kendisidir: Bölge I'in zamanı ve Bölge II'nin tek uzay yönü.
 
 **Sonuç.** Bu çalışmanın kullandığı $D$ sekizliden biridir ve ileri gönderen
 ailededir. Bu bir seçimdir, üç koşulun bir sonucu değildir. Aileler arasında
-seçim yapan hiçbir şey burada hesaplanmamaktadır ve onları ayıran dönüşüm iki
+seçim yapan hiçbir şey burada hesaplanmamaktadır ve iki aileyi ayıran dönüşüm iki
 tarafın metriğinin de izometrisi olduğundan, **seçim geometrik değildir**.
 Bölüm 8.4 ile birlikte okunmalıdır: orada da ayrımın iki yakası arasında
 metriğin bir tercih yapmadığı gösterilmiştir. Seçimi yapacak şey her iki yerde
@@ -891,11 +891,11 @@ simetrisi vardır:
 - tek "momentum" ($r$ ötelemesi).
 
 $L'$ ayrıca üç zaman ekseninde $O(3)$ altında değişmezdir; buradan üç korunan
-"zamansal açı momentumu" çıkar, bizim uzaysal açı momentumumuzun aynası.
+"zamansal açı momentumu" çıkar, Bölge I'in uzaysal açı momentumunun aynası.
 
 ### 8.2 Roller tam tersine dönmüştür
 
-| | Bölge I (bizim) | Bölge II |
+| | Bölge I | Bölge II |
 |---|-----------------|----------|
 | Serbest hareket | Uzayda, üç yönde | Üç zamanda serbestçe |
 | Tek yönlü zorunluluk | Zamanda | Tek uzay ekseninde |
@@ -973,8 +973,8 @@ eksene doğru döndürüp karenin işaret değiştirdiği bir açı bularak yap�
 gösterilmiştir. O eksenin çevrilmesi metriği korur. Ve çevirme iki bileşeni
 birbirine taşır. Sonuç:
 
-> Bölge II'nin mekân çizgisinin iki ucu da, tıpkı bizim geleceğimiz ve
-> geçmişimiz gibi, geometrik olarak **etiketsizdir**.
+> Bölge II'nin mekân çizgisinin iki ucu da, tıpkı Bölge I'in geleceği ve
+> geçmişi gibi, geometrik olarak **etiketsizdir**.
 
 Dolayısıyla iki bölge arasındaki asimetri, ayırt edilmiş eksenin **karakteriyle**
 sınırlıdır; etiketin geometrik olup olmamasıyla değil. Bölüm 8.3'ün "Bölge II'de
@@ -1158,7 +1158,7 @@ Bölüm 26.3'te açık olarak durmaktadır.
 $D$'de $V$ geçmez. Bu bir eksiklik değildir; hız kavramının kendisi türetilerek
 gösterilir ki gerekli değildir.
 
-Bizim tarafta hız zaten temel bir büyüklük olmayıp dispersiyondan çıkar:
+Bölge I'de hız zaten temel bir büyüklük olmayıp dispersiyondan çıkar:
 
 $$\omega(k) = c\sqrt{k^2 + \mu}, \qquad
   v_{\text{faz}} = \frac{\omega}{k}, \qquad
@@ -1186,7 +1186,7 @@ $$k_1^2 + k_2^2 + k_3^2 - \frac{q^2}{c^2} + \mu = 0
 $q$ her zaman reeldir: $r$ ekseninde salınım vardır, sönümlenme yoktur.
 
 Durgun cisim ($k = 0$) için $q = mc^2/\hbar \neq 0$. Yani orada duran bir cisim bile
-$r$ ekseninde ilerler, bizim taraftaki "duran cisim zamanda ilerler" ifadesinin
+$r$ ekseninde ilerler, Bölge I'deki "duran cisim zamanda ilerler" ifadesinin
 tam aynasıdır.
 
 Grup hızı:
@@ -1207,7 +1207,7 @@ Hesap:
 
 - Kütle kabuğu koşulu $s_1^2 + s_2^2 + s_3^2 = 1$ verir, yani $\mathbf{s} \in S^2$.
 - $\eta' = \mathrm{diag}(+1,+1,+1,-1)$ içinde ilk üç slot **aynı** işaretlidir;
-  onları koruyan grup $O(3)$'tür.
+  bu üç slotu koruyan grup $O(3)$'tür.
 - $O(3)$ hem metriği korur hem de durgunluğu bozmaz (doğrulandı).
 - $O(3)$, $S^2$ üzerinde geçişli (transitif) etki eder: herhangi bir $\mathbf{s}$'yi
   herhangi bir $\mathbf{s}'$ye götüren bir dönme her zaman vardır.
@@ -1703,7 +1703,7 @@ Kütle kabuğu koşulu buna göre dönüşür:
 
 $$E^2 = p^2c^2 + m^2c^4 \;\longmapsto\; E'^2 = p'^2c^2 - m^2c^4$$
 
-**Korunum.** Genel bir $2 \to 2$ çarpışmada bizim tarafta korunum sağlanıyorsa öte
+**Korunum.** Genel bir $2 \to 2$ çarpışmada Bölge I'de korunum sağlanıyorsa öte
 tarafta da otomatik sağlanır; fark tam olarak sıfırdır. Bunun nedeni $D$'nin
 doğrusal olmasıdır: toplamların görüntüsü, görüntülerin toplamına eşittir.
 
@@ -1714,7 +1714,7 @@ takyon yine sonsuz hızlıdır ($E_4 = 0$) ve momentumu $M'c$ olur.
 
 **Sonsuz hız limiti.** $V \to \infty$ iken $E \to 0$ ve $p \to mc$.
 
-**Enerji pozitifliği üzerine not.** Bizim tarafta enerji tek bir sayıdır ve işareti
+**Enerji pozitifliği üzerine not.** Bölge I'de enerji tek bir sayıdır ve işareti
 bellidir. Öte tarafta "enerji" üç bileşenli bir vektördür; tek bir pozitif enerji
 koşulu yazılamaz, ancak büyüklüğü
 
@@ -1728,7 +1728,7 @@ birbirine alternatiftir.
 
 ---
 
-Bizim taraf (Klein-Gordon):
+Bölge I (Klein-Gordon):
 
 $$L = \tfrac{1}{2}\left[\frac{(\partial_t \phi)^2}{c^2} - (\nabla \phi)^2 - \mu \phi^2\right]$$
 
@@ -1850,8 +1850,8 @@ enjekte edebildiği hesaplanmaktadır.
 
 # Kısım V. Gidip gelince ne değişir
 
-Bu kısım çekirdek eşlemenin **zaman** bileşenini kurar. Dönüş olayının bizim
-zaman eksenimizdeki yeri burada belirlenir, ve içeride taşınan bir saatten
+Bu kısım çekirdek eşlemenin **zaman** bileşenini kurar. Dönüş olayının Bölge I'in
+zaman eksenindeki yeri burada belirlenir, ve içeride taşınan bir saatten
 değil, iki geçişin ortak genliğinin fazından okunur.
 
 ## 13. İkinci geçiş ve iki yüzeyin eşleşmesi
@@ -1949,7 +1949,7 @@ $c$'nin altında olduğu gösterilmiştir. Anlamı, geçen paketin tepe noktası
 beklenenden erken çıkmasıdır ve bu, engel geçişlerinde bilinen bir olgudur.
 
 **İkincisi, ve bu modelin aleyhinedir, dönüş anı kalınlığı unutur.** Bir
-birimlik ara bölgeyle sekiz birimlik ara bölge parçacığı bizim saatimizde
+birimlik ara bölgeyle sekiz birimlik ara bölge parçacığı Bölge I saatinde
 **aynı ana** koyar. Dolayısıyla dönüş anına bakarak ara bölgenin ne kadar kalın
 olduğu söylenemez.
 
@@ -2128,7 +2128,7 @@ ama başlangıç noktasından geçmemek zorundadır, ve hangi taraftan geçtiği
 zevk meselesi değildir.
 
 Üstelin iki eyer noktası vardır ve ikisi de sanal eksende, başlangıç noktasına
-**eşit uzaklıkta** oturur; hiçbiri daha yakın değildir, onları ayıran tek şey
+**eşit uzaklıkta** oturur; hiçbiri daha yakın değildir, iki eyeri ayıran tek şey
 konturun hangi taraftan geçtiğidir. Alt eyer sönen bir genlik, üst eyer büyüyen
 bir genlik taşır:
 
@@ -2217,7 +2217,7 @@ Buradan çıkan sonuç modelin lehine değildir ve öyle sunulmamaktadır:
 > hangi tarafına düştüğü de bölgenin bir özelliği değildir. İkisi de bir ölçüm
 > seçimidir.
 
-Bu modelin sorduğu soru, parçacığın **bizim** saatimizde nereye düştüğüdür; yani
+Bu modelin sorduğu soru, parçacığın **Bölge I saatinde** nereye düştüğüdür; yani
 dışarıdaki bir dedektöre geçen tepenin varışıdır. O gözlenebilir, kuruluşu
 gereği fazdan gecikmedir. Hizalanma bileşeni ise alana bağlanmış bir saatin
 **içeride** okuduğu şeydir; "ne kadar etkileşti" sorusunu cevaplar, "ne zaman
@@ -2350,20 +2350,20 @@ operatörüne etki eder, kütleye değil.
 Sol sütun parçacığın kimliğini, sağ sütun ise başına gelenleri tarif eder.
 Kimlik korunur, geçmiş değişir.
 
-### 16.1 Üç bileşenli enerji bizim neyimizdir
+### 16.1 Üç bileşenli enerjinin Bölge I'deki karşılığı
 
-Bölge II'nin üç enerji bileşeni soyut bir nesne değildir; bizim bildiğimiz bir
+Bölge II'nin üç enerji bileşeni soyut bir nesne değildir; Bölge I'de tanınan bir
 şeyin başka adıdır. $D$ dört-momentuma uygulandığında
 
 $$(E/c,\; p_x,\; p_y,\; p_z) \longmapsto (p_z,\; p_y,\; p_x,\; E/c)$$
 
 olur. Yani:
 
-> Öte tarafın **enerji vektörü** bizim **üç-momentumumuzdur**; öte tarafın tek
-> **momentumu** ise bizim **enerjimizdir**.
+> Öte tarafın **enerji vektörü** Bölge I'in **üç-momentumudur**; öte tarafın tek
+> **momentumu** ise Bölge I'in **enerjisidir**.
 
 Bu, iki niceliğin sayısal olarak eşit olması değil, aynı nesne olmasıdır.
-Enerji vektörünün uzunluğu bizim momentumumuzun büyüklüğüne tam olarak eşittir
+Enerji vektörünün uzunluğu Bölge I'in momentumunun büyüklüğüne tam olarak eşittir
 ve bu doğrulanmıştır.
 
 ### 16.2 Dönüşümün kendisi hiçbir şey kaybetmez
@@ -2383,7 +2383,7 @@ fazlalığıdır. Fiziksel olan tek şey uzunluğudur.
 Üç ayrı dönme açısında doğrulanmıştır: dönme enerji vektörünün uzunluğunu, öte
 tarafın momentumunu ve değişmezi değiştirmez.
 
-### 16.4 Ama o dönme bize bir şey yapar
+### 16.4 Ama o dönme Bölge I'de bir iz bırakır
 
 Parçacık öte tarafta bir $O(3)$ dönmesi geçirip geri döndüğünde:
 
@@ -2412,7 +2412,7 @@ yapabildiği tek şeydir: yön değiştirmek.
 **Çekince.** Bu sonuç dönüşüm düzeyindedir ve arayüzün mod süzgecinden
 bağımsızdır. Bir $O(3)$ dönmesinin öte tarafta gerçekten gerçekleşip
 gerçekleşmediği, yani parçacığın orada ne yaptığı, bu hesabın konusu değildir;
-hesaplanan şey, gerçekleşirse bize ne göründüğüdür.
+hesaplanan şey, gerçekleşirse Bölge I'de ne göründüğüdür.
 
 **Kalan çekince.** Bu muhasebe doğrusal ve durağan saçılma kurgusundadır.
 
@@ -2514,7 +2514,7 @@ Yedi hücre, öte taraf hiç olmasaydı da aynı ölçümü verirdi.
 
 Yukarıdaki dokuz hücre, iki etiketin bağımsız olduğu varsayımıyla kurulmuştur.
 Bölüm 18.7 o varsayımı geçersiz kılar: çıkış yüzü, geçiş dalga sayısının
-işaretidir ve bu işaret bizim enerjimizin işaretiyle aynı büyüklüktür. Dönme ise
+işaretidir ve bu işaret Bölge I'in enerjisinin işaretiyle aynı büyüklüktür. Dönme ise
 giriş ve çıkış yüzlerinin gerçeklediği matrislerin bileşkesidir. Her iki etiketi
 de **tek bir sıralı matris çifti** belirler; dolayısıyla bunlar çarpılamaz.
 
@@ -2587,14 +2587,14 @@ dalga koşulu koymaktır; o koşul bir zaman yönelimi gerektirir ve öte taraft
 zaman yönelimi yoktur (Bölüm 8). Bu, Bölüm 4'te iki genliğin birden tutulmasının
 nedeniyle aynı nedendir.
 
-**Ve dal bizim enerjimizdir.** Bölüm 16.1'de öte tarafın tek momentumunun bizim
-enerjimiz olduğu gösterilmişti. Geçiş dalga sayısı tam olarak o slottur.
+**Ve dal Bölge I'in enerjisidir.** Bölüm 16.1'de öte tarafın tek momentumunun Bölge I'in
+enerjisi olduğu gösterilmişti. Geçiş dalga sayısı tam olarak o slottur.
 Dolayısıyla:
 
 > "Hangi yüzden çıktı" sorusu ile "enerjisinin işareti ne" sorusu **aynı
 > sorudur**.
 
-Karşı yüzden dönüş, bize başka bir yerden gelmiş gibi değil, **negatif
+Karşı yüzden dönüş, başka bir yerden gelmiş gibi değil, **negatif
 enerjiyle** gelmiş gibi görünür.
 
 Bu, tabloyu iki yerden değiştirir. Çıkış yüzü ile yönelim bağımsız etiketler
@@ -2718,8 +2718,8 @@ $\pm D$ ayrımı test edildi: her iki işaret de $\det = +1$ ve $M^2 = I$ koşul
 sağlar, dolayısıyla bu koşullarla ayırt edilemezler. Ancak Bölüm 8'deki bulgu
 işaretin anlamını netleştirir:
 
-1. Her iki bölgede birer ok seçimi vardır (bizde zaman, ötede uzay).
-2. $D$ bizim ok eksenimizi onların ok eksenine gönderir, seçimler bağımsız
+1. Her iki bölgede birer ok seçimi vardır (Bölge I'de zaman, Bölge II'de uzay).
+2. $D$ Bölge I'in ok eksenini Bölge II'nin ok eksenine gönderir, seçimler bağımsız
    değildir, biri diğerini belirler.
 3. Fiziksel olarak anlamlı olan tek büyüklük **bağıl işarettir**: iki okun
    hizalanması. Tek başına hiçbiri anlamlı değildir.
@@ -2728,7 +2728,7 @@ işaretin anlamını netleştirir:
    belirlenmiştir: parçacığın hangi yüzden döndüğü, yani enerjisinin işareti.
 
 **Sonuç:** İşaret belirsizliği denklemlerin düzeyinde yapısaldır, ölçümün
-düzeyinde değil. Bizim
+düzeyinde değil. Bölge I
 tarafta da zamanın oku denklemlerden türetilmez, Newton, Maxwell ve Schrödinger
 denklemlerinin hepsi $T$-simetriktir; ok başlangıç koşulundan gelir.
 
@@ -2816,7 +2816,7 @@ içinde değil, yüzeylerde belirlenir.
 ### 18.15 Çıkış anı üç düzlemden ikisini görür
 
 Çıkış anı ise dönmeye kör değildir, ancak seçicidir. Öte tarafın enerji vektörü,
-geçiş altında bizim üç momentumumuzdur; bileşenlerinden biri geçiş yönüne, ikisi
+geçiş altında Bölge I'in üç momentumudur; bileşenlerinden biri geçiş yönüne, ikisi
 enine yönlere karşılık gelir. Bir dönme, ancak geçiş yönüyle enine yönler
 arasında ağırlık taşırsa çıkış anını değiştirir.
 
@@ -2943,7 +2943,7 @@ Bir kanalın var olması ile bilgi taşıması ayrı şeylerdir. Taşıması iç
 gerekir: katmanın gönderenin yaptığına **tepki vermesi**, ve tepkinin öbür
 taraftan **okunabilmesi**.
 
-**Tepki var ve niceldir.** Bizim tarafa konan bir kütle metriği büker, o yüzdeki
+**Tepki var ve niceldir.** Bölge I'e konan bir kütle metriği büker, o yüzdeki
 dış eğriliği değiştirir ve dolayısıyla sıçramayı değiştirir. Zayıf alan
 yaklaşımında katkı $M/r^2$ biçimindedir. Hesaplanan tepki:
 
@@ -2960,7 +2960,7 @@ verdiği tepki sıfır değildir. Öklid bölge için de aynısı geçerlidir.
 
 **Nedensellik bozulmuyor.** Gönderenin eylemi yüzeye ulaşmak için kendi
 bölgesinde yol almak zorundadır ve bu ışık hızıyla olur; gecikme uzaklıkla
-doğrusal artar. Bu kanal, bizim tarafımızda hiçbir şeyi ışıktan hızlı yapmaz.
+doğrusal artar. Bu kanal, Bölge I'de hiçbir şeyi ışıktan hızlı yapmaz.
 
 **Okunabilirlik kanalın zayıf yanıdır.** Öbür tarafın ayırt etmesi gereken şey,
 katmanın değişen kısmının durağan kısmına oranıdır:
@@ -3117,7 +3117,7 @@ Bu çalışmada **reel kütle korunmaktadır**. Bunun bedeli açıkça kabul edi
 düzeyinde gerçek bir imza çevrilmesi elde edilmez; $D$ iki farklı metrik arasında
 bir eşlemedir.
 
-Buna karşılık Bölüm 4, 7, 8 ve 10'daki sonuçlar bu sınırdan etkilenmez, çünkü onlar
+Buna karşılık Bölüm 4, 7, 8 ve 10'daki sonuçlar bu sınırdan etkilenmez, çünkü o sonuçlar
 dönüşüm düzeyinde değil **metrik düzeyinde** kurulmuştur: iki bölge ayrı metriklerle
 tanımlanır ve aralarındaki ilişki eklem koşullarıyla ele alınır. Orada imza, bir
 dönüşümle değil, metriğin kendisinin değişmesiyle değişir ve Sylvester engeline
@@ -3538,7 +3538,7 @@ kaydı olarak verilmektedir.
 ## 24. Koordinat sözlüğü: nerede hareket edilir, nerede sadece yönelinir
 
 Çekirdek soru şudur: öte tarafta dört koordinatın her birinde hareket etmenin
-ya da yönelmenin bizim evrenimizdeki karşılığı nedir. Bu bölüm o sözlüğü
+ya da yönelmenin Bölge I'deki karşılığı nedir. Bu bölüm o sözlüğü
 kurar; Bölüm 25 sözlüğü kullanarak dönüş olayını hesaplar.
 
 ### 24.1 Hangi yuva hangisini taşır
@@ -3546,7 +3546,7 @@ kurar; Bölüm 25 sözlüğü kullanarak dönüş olayını hesaplar.
 İki metrik $\eta = \mathrm{diag}(1,-1,-1,-1)$ ve $\eta' = \mathrm{diag}(1,1,1,-1)$,
 involüsyon ise $(ct,x,y,z) \mapsto (z,y,x,ct)$'dir. Yuva yuva okunduğunda:
 
-| Öte tarafta yuva | Orada karakteri | Bizde hangi yuvaya iner | Burada karakteri |
+| Bölge II'de yuva | Orada karakteri | Bölge I'de hangi yuvaya iner | Burada karakteri |
 |------------------|-----------------|--------------------------|------------------|
 | $0$ | zaman | $3$ | uzay |
 | $1$ | zaman | $2$ | uzay |
@@ -3564,11 +3564,11 @@ bakışta beklenenin tersidir ve hesabın verdiği sonuçtur.
 | Öte tarafta yuva | Orada | Taşıdığı yuvada, burada |
 |------------------|-------|--------------------------|
 | $0,1,2$ (üç zaman) | serbest hareket | serbest hareket (üç uzay yönümüz) |
-| $3$ (tek uzay) | tek yönlü | tek yönlü (bizim zamanımız) |
+| $3$ (tek uzay) | tek yönlü | tek yönlü (Bölge I'in zamanı) |
 
-Okunuşu şudur. Onlar üç zamanda serbestçe hareket eder; o üç zaman bizim üç
-uzay yönümüzdür ve biz de onlarda serbestçe hareket ederiz. Onların tek uzay
-ekseninde yön seçilemez; o eksen bizim zamanımızdır ve bizim için de aynı şey
+Okunuşu şudur. Bölge II'de üç zamanda serbestçe hareket edilir; o üç zaman
+Bölge I'in üç uzay yönüdür ve orada da serbestçe hareket edilir. Bölge II'nin tek
+uzay ekseninde yön seçilemez; o eksen Bölge I'in zamanıdır ve orada da aynı şey
 geçerlidir.
 
 ### 24.2.1 "Tek yönlü" derken ne söylendiği: iki ayrı iddia
@@ -3586,7 +3586,7 @@ değiştirmediğine bakılır.
 
 **Zorunluluk.** Bir cisim o koordinat boyunca, seçemediği bir hızla, ilerlemek
 **zorundadır**. Bu, metriğe dair bir ifade **değildir**. Hiçbir metrik bir dünya
-çizgisinin ilerlemek zorunda olduğunu söylemez, ve kendi zamanımızın bizi
+çizgisinin ilerlemek zorunda olduğunu söylemez, ve Bölge I zamanının bir cismi
 taşıdığı duygusu bunun delili değildir.
 
 Bu ikisi alışkanlıkla birbirine karıştırılır, ve karıştırmanın bedeli gizli bir
@@ -3604,7 +3604,7 @@ varsayımdır. Burada ayrılırlar.
 İki bölge bu bakımdan **tam dualdir**. Dolayısıyla:
 
 > Öte tarafın tek uzay ekseninin tek yönlü olması, modele sonradan eklenmiş bir
-> varsayım **değildir**. Bizim kendi zaman okumuzu veren teoremin, öteki türe
+> varsayım **değildir**. Bölge I'in zaman okunu veren teoremin, öteki türe
 > uygulanmış hâlidir.
 
 Ayrıca başka yerlerde kullanılan kestirme, yani "sayı bir ise yönlendirilebilir",
@@ -3621,10 +3621,10 @@ hiçbir sonuç değişmezdi. Bu, kodda denetlenmektedir.
 > Zamanın nehir gibi aktığı duygusu, burada hesaplananın **dışındadır** ve
 > hiçbir iddia ona dayanmamaktadır.
 
-**Ayrımdan sonra ayakta kalan şey, ikisinden de keskindir.** Onların tek uzay
-ekseni boyunca yer değiştirme, bizim zaman eksenimize **bire bir** düşer:
+**Ayrımdan sonra ayakta kalan şey, ikisinden de keskindir.** Bölge II'nin tek
+uzay ekseni boyunca yer değiştirme, Bölge I'in zaman eksenine **bire bir** düşer:
 
-| Orada yer değiştirme | Bizim zaman eksenimizde |
+| Bölge II'de yer değiştirme | Bölge I'in zaman ekseninde |
 |----------------------|--------------------------|
 | $0{,}5$ | $+0{,}5000$ |
 | $1$ | $+1{,}0000$ |
@@ -3635,7 +3635,7 @@ Bağıntı miktarda tam doğrusaldır. Yani bir cismin o eksende **ne kadar**
 gittiği kendi seçimidir ve saatimizde belirli bir karşılığı vardır; seçemediği
 şey **hangi yöne** gittiğidir.
 
-> Öte tarafta mekânda hareket etmek, bizim zaman çizgimizde konum değiştirmektir.
+> Öte tarafta mekânda hareket etmek, Bölge I'in zaman çizgisinde konum değiştirmektir.
 > Miktar serbest, yön değil. Bu yolla parçacık daha **ileri** bir ana konur, ve
 > hiçbir zaman daha geriye.
 
@@ -3658,25 +3658,25 @@ döndürmek uzunluğu değiştirmez, artık $10^{-16}$ mertebesindedir.
 
 > Parçacık öte tarafta **yönünü seçebilir, uzunluğunu seçemez.**
 
-### 24.4 Üç zamandaki hareket bizim saatimizi doğrudan oynatmaz
+### 24.4 Üç zamandaki hareket Bölge I saatini doğrudan oynatmaz
 
 Çekirdek sorunun en can alıcı yeri budur ve cevabı iki katmanlıdır.
 
 **Doğrudan yol kapalıdır.** Tümüyle üç zamanın içinde kalan bir yer değiştirme,
-involüsyon altında bizim zaman yuvamızda **sıfır** yer değiştirme üretir. Üç
-zamanın her birinde birim adım tek tek denenmiş, üçünün de bizim saatimizdeki
-izdüşümü tam olarak sıfır çıkmıştır. Buna karşılık onların tek uzay ekseninde
-atılan bir adım, doğrudan bizim zamanımızda bir adımdır.
+involüsyon altında Bölge I'in zaman yuvasında **sıfır** yer değiştirme üretir. Üç
+zamanın her birinde birim adım tek tek denenmiş, üçünün de Bölge I saatindeki
+izdüşümü tam olarak sıfır çıkmıştır. Buna karşılık Bölge II'nin tek uzay ekseninde
+atılan bir adım, doğrudan Bölge I'in zamanında bir adımdır.
 
 Yani "orada zamanda yürüdüm, burada zamanda kaydım" cümlesi involüsyonun kendisi
-tarafından **desteklenmez**. Involüsyon o hareketi bizim uzayımıza gönderir.
+tarafından **desteklenmez**. Involüsyon o hareketi Bölge I'in uzayına gönderir.
 
 **Dolaylı yol açıktır.** Aynı enerji vektörünün bileşenleri, iki yüzeydeki
 eşleşmeye girer ve dönüş anı o eşleşmenin fazından okunur. Uzunluk sabit
 tutulup yalnızca yön değiştirildiğinde dönüş anı değişir: yönelim küresi
 tarandığında ulaşılan aralık, uzunluk $3$ için $62{,}4$ birimdir.
 
-> Öte taraftaki yönelim, bizim zaman eksenimizde **başka bir konumu işaret eder**.
+> Öte taraftaki yönelim, Bölge I'in zaman ekseninde **başka bir konumu işaret eder**.
 > Ama bunu koordinat izdüşümüyle değil, eşleşmenin fazıyla yapar.
 
 Bu ayrım korunmalıdır, çünkü iki farklı mekanizmadır ve biri diğerinin yerine
@@ -3684,7 +3684,7 @@ kullanılamaz.
 
 ### 24.5 Yönelimin komuta ettiği aralık ve sınırları
 
-| Enerji vektörünün uzunluğu | Ulaşılan dönüş anı aralığı | Bizim zamanımızı taşıyan eksen boyunca dönüş anı |
+| Enerji vektörünün uzunluğu | Ulaşılan dönüş anı aralığı | Bölge I'in zamanını taşıyan eksen boyunca dönüş anı |
 |-----------------------------|----------------------------|---------------------------------------------------|
 | $2$ | $66{,}19$ | $2{,}2361$ |
 | $3$ | $62{,}40$ | $2{,}1082$ |
@@ -3750,7 +3750,7 @@ Bölüm 18.15'te fazdan bağımsız olarak bulunan seçimin **aynısıdır**: ç
 üç zaman düzleminden ikisini görür, birini görmez. İki ayrı yoldan aynı iki
 düzleme varılmıştır.
 
-**Sonuç.** Yönelimin bizim zaman eksenimizdeki izi gerçektir, ancak ara
+**Sonuç.** Yönelimin Bölge I'in zaman eksenindeki izi gerçektir, ancak ara
 bölgenin içinde değil, **sınırında** doğar. Bunu iki hesaptan hiçbiri tek
 başına söyleyemez: saçılma etkinin varlığını verir, eğrilik ölçütü yerini
 verir.
@@ -3759,7 +3759,7 @@ verir.
 
 ## 25. Çekirdek eşleme: yönelimden dönüş olayına
 
-Önceki bölümler eşlemenin parçalarını ayrı ayrı kurdu. Bu bölüm onları tek bir
+Önceki bölümler eşlemenin parçalarını ayrı ayrı kurdu. Bu bölüm o parçaları tek bir
 hesapta birleştirir ve eşlemenin tanım kümesini baştan sona tarar.
 
 ### 25.1 Tanım kümesi
@@ -3776,7 +3776,7 @@ duruma ayrıklaştırılmıştır.
 
 ### 25.2 Değer kümesi
 
-Dönüş olayı bizim bölgemizin bir noktasıdır ve giriş olayına göre dört
+Dönüş olayı Bölge I'in bir noktasıdır ve giriş olayına göre dört
 koordinatı vardır:
 
 $$(t,\; x_{\perp},\; y,\; z)_{\text{dönüş}}$$
@@ -3968,7 +3968,7 @@ tarama artık cevaba giden tek yol değil, **formülün üzerindeki bir denetimd
 
 ---
 
-## 26. Literatürün bıraktığı sorular ve bu çalışmanın onlara duruşu
+## 26. Literatürün bıraktığı sorular ve bu çalışmanın duruşu
 
 Bu bölüm, konuyla ilgili literatürün çözmediği ya da tartışmalı bıraktığı
 soruları dört sınıfa ayırır ve her birinde bu çalışmanın nerede durduğunu
@@ -4141,7 +4141,7 @@ okuması ile yarı klasik okuma tam olarak aynı sayıyı verir: $d = 2$ için
 $2{,}1553$, $d = 8$ için $8{,}6211$. Yani Bölüm 14.11'deki ayrışma yönteme
 değil, engele aittir.
 
-**Dört: dağılım bağıntısı, iki imza.** Bizim imzamız ile öte taraf, geçiş
+**Dört: dağılım bağıntısı, iki imza.** Bölge I'in imzası ile öte taraf, geçiş
 yönüne metriğin verdiği **işaretin** iki değeridir. Kütle kabuğunun eşikte
 sürekli olmasının nedeni budur: iki ayrı kuram değil, bir işaretin iki değeri.
 

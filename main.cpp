@@ -31,6 +31,7 @@
 #include "intermediate/TraversalClocks.h"
 #include "intermediate/TwoCrossings.h"
 #include "transform/ExtendedLorentzGroup.h"
+#include "particle/ArrivalOrder.h"
 #include "particle/AsymmetricFaces.h"
 #include "particle/CellDistribution.h"
 #include "particle/EnergyBookkeeping.h"
@@ -127,6 +128,7 @@ namespace
         sections.push_back(std::make_unique<slm::TimeHolonomySection>());
         sections.push_back(std::make_unique<slm::ReturnEventSection>());
         sections.push_back(std::make_unique<slm::ReturnFormulaSection>());
+        sections.push_back(std::make_unique<slm::ArrivalOrderSection>());
         return sections;
     }
 
