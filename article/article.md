@@ -633,6 +633,57 @@ tekdüze azalmaz; artıp azalır. İç mod yayıldığı için bölge bir engel 
 **girişim odası** gibi davranır. Kırk birim kalınlıkta bile geçirgenlik yüzde
 seksen yediye yakındır.
 
+**Literatürdeki karşılığı.** Bu tablonun üçüncü satırının bir öncülü vardır ve
+karşılaştırma yapılmalıdır. [54] ve [55] kütlesiz skaler alanı iki boyutta imza
+değiştiren bir metrik üzerinde taşır ve pozitif ile negatif frekansların
+karışımını hesaplar; bu, saçılma dilinde tam olarak bir geçiş katsayısıdır.
+Oradaki merkezi sonuç, karışımın **yalnızca Öklid bölgelerinin toplam konformal
+genişliğine** bağlı olduğu, metriğin ayrıntılı biçimine bağlı olmadığıdır. [56]
+aynı hesabı spin-$1/2$ için dener ve çözüm uzayında korunan bir iç çarpım
+bulunmadığını gösterir.
+
+İki sonuç birbirini yalanlamaz, aynı yapının iki farklı kesitidir:
+
+| | [54], [55] | Buradaki tablo |
+|---|---|---|
+| Boyut | $1+1$ | $1+3$, enine momentum taşıyan |
+| Kütle | Sıfır | $\mu \neq 0$ |
+| Ara bölge tipi | Öklid | Dört tip birlikte |
+| Kalınlık bağımlılığı | Yalnızca toplam genişliğe bağlı | Öklid satırında aynı; Kleinian satırında salınımlı |
+| Ölçülen nicelik | Frekans karışımı | Tek modun geçirgenliği |
+
+Öklid satırının kalınlıkla üstel kapanması, dolayısıyla bağımsız bir bulgu
+değildir: profilin ayrıntısından bağımsız olarak yalnızca genişliğin sayması
+[54]'ün sonucudur. Bu sonuç burada yeniden üretilmiştir, ve yeniden üretimin ne
+anlama geldiği yazılmalıdır, çünkü tek kalınlıklı bir tablo onu sınamaz.
+Sınamak, biçimleri farklı toplamları aynı profiller gerektirir.
+
+Sınanan nicelik geometrik genişlik değil, sönüm sabitinin **yol boyunca
+integralidir**; üstelin gördüğü nicelik odur. Beş profil bu integrali aynı
+değerde tutacak biçimde ölçeklenmiştir: düzgün, üçgen, yarım sinüs, plato ve
+çarpık. Geçirgenlik dilim dilim tam çözüm birleştirilerek hesaplanmış,
+gerçekleşen üstel $\ln T / (-2\Sigma)$ olarak okunmuştur; $\Sigma$ integraldir.
+
+| $\Sigma$ | Gerçekleşen üstelin aralığı | Profiller arası yayılım |
+|---|---|---|
+| $4$ | $[0{,}827,\ 0{,}934]$ | $0{,}107$ |
+| $8$ | $[0{,}941,\ 0{,}970]$ | $0{,}029$ |
+| $16$ | $[0{,}981,\ 1{,}004]$ | $0{,}023$ |
+| $32$ | $[0{,}995,\ 1{,}022]$ | $0{,}027$ |
+
+Beş profilin hepsi $\Sigma = 64$'te $1$'e yüzde birden yakın bir üstel
+gerçekleştirir. İddia bu biçimde doğrulanmıştır.
+
+İddianın **daha güçlü bir biçimi doğru değildir** ve bu da kaydedilmelidir:
+toplamı eşit iki profil aynı geçirgenliği vermez, $2{,}88\times10^{-7}$ ile
+$1{,}81\times10^{-7}$ verir. Toplamın sabitlediği şey üsteldir, önçarpan
+değildir. Yayınlanmış ifade tam olarak bu kadarını söyler; buradaki hesap onu
+ne genişletir ne daraltır.
+
+Bu tablonun kendine ait olan kısmı **Kleinian satırıdır**; orada iç mod yayıldığı
+için genişlik tek başına yetmez, ve o satırın literatürde bir öncülü
+bulunmamaktadır.
+
 ### 3.4 Eşiğin taşıdığı madde katmanı
 
 Geçirgenlik hikâyenin yarısıdır. Diğer yarısı, geçişin yüzeyde bıraktığı izdir.
@@ -844,6 +895,19 @@ arka planda ele alınır ve eklem koşulu, alan denklemlerindeki Dirac dağılı
 katsayısı olarak $\phi' \delta = 0$ biçiminde **türetilir**, yani denklemleri
 anlamlı kılmak için varsayılmaz. Buradaki türetim Lagrangian'dan gider ve aynı
 yere varır.
+
+Lagrangian yolunun kendisi de öncesiz değildir. [55] kütlesiz skaler alanı iki
+boyutta imza değiştiren bir metrik üzerinde ele alır ve eklem koşulunu iki ayrı
+yoldan sabitler: uzaysal olarak homojen hâlde momentumun korunmasını istemek, ve
+doğal bir Lagrangian'dan varyasyon almak. İkisi aynı yere varır ve elde edilen
+çözümlerin dağılımsal dalga denklemini her yerde sağladığı gösterilir. Buradaki
+türetim aynı ailenin dört boyutlu ve kütleli üyesidir; yeni olan koşulun kendisi
+değil, hangi geçiş profillerinin onu sağlayabildiğidir (Bölüm 3.5).
+
+Bu çizginin tartışmalı olduğu da kaydedilmelidir: [58] koşulun verdiği çözüm
+sınıfını reddeder, [57] onu savunur. Aşağıdaki saçılma hesabı seçimin ne kadar
+belirleyici olduğunu ölçmek için kurulmuştur ve tartışmanın hangi tarafında
+durulduğunu değiştirmez.
 
 Seçimin ne kadar belirleyici olduğunu ölçmek için $\Sigma$ üzerinde bir mod
 saçılması kurulur. Normal koordinat $\xi$, Bölge I $\xi<0$, Bölge II $\xi>0$:
@@ -2475,6 +2539,20 @@ elenir, çünkü sürekli bir sapma dağılımı bu yapıda bulunmaz.
 > çatalın iki ucundan da keskin bir iddiadır ve sınanması da daha kolaydır:
 > sapma açılarının dağılımı sürekli değil, ayrık çıkmalıdır.
 
+**Bu mekanizma türünün öncülü.** Ayrık sapmanın sürekli geri tepen bir hedef
+olmadan çıkması bu çalışmanın icadı değildir; fizikte bir yüzyıllık öncülü
+vardır. [59] X-ışınlarının kristalden yansımasını, girişim yasalarına hiç
+başvurmadan, momentumun **kuantumlar hâlinde** aktarılması varsayımıyla türetir
+ve Bragg yasasını bu yolla elde eder. Ayrıklığı üreten şey orada örgünün
+periyodikliği, burada çıkış yüzlerinin sonlu kümesidir; ikisinde de ayrıklık
+saçıcının sürekli olmayan bir simetri yapısından gelir, dalga girişiminden
+gelmez.
+
+Bu bir öncelik iddiasının geri çekilmesi değildir: sayısal tayf ve onu üreten
+matris kümesi burada üretilmiştir. Kaydedilen şey, mekanizmanın **türünün**
+alışılmış olduğudur; dolayısıyla ayrık bir sapma tayfı öngörmek modelin
+zayıflığı değil, sınanabilir tarafıdır.
+
 **Çekince.** Tayftaki açılar evrensel değildir; gelen parçacığın hangi
 doğrultuda geldiğine bağlıdır. Eksen boyunca gelen bir parçacık için farklı bir
 tayf çıkar. Evrensel olan, tayfın **sonlu** olmasıdır, çünkü bileşkeler sonlu
@@ -3812,14 +3890,22 @@ Sicil üç durum ayırır ve sayıları kendisi üretir:
 
 | Durum | Anlamı | Kaç |
 |-------|--------|-----|
-| Yeniden üretilmiş | Buradaki bir kütüphane sonucu bağımsız olarak hesaplar ve değeri karşılaştırılabilir | $32$ |
-| İtibara alınmış | Sonuç yeniden hesaplanmadan kullanılır; doğruluğu bu çalışmanın güvencesi altında değildir | $12$ |
+| Yeniden üretilmiş | Buradaki bir kütüphane sonucu bağımsız olarak hesaplar ve değeri karşılaştırılabilir | $33$ |
+| İtibara alınmış | Sonuç yeniden hesaplanmadan kullanılır; doğruluğu bu çalışmanın güvencesi altında değildir | $14$ |
 | Yalnızca bağlam | Konumlandırma için anılır, ondan hiçbir sonuç çıkarılmaz | $7$ |
-| **Toplam** | | $51$ |
+| **Toplam** | | $54$ |
 
 Sicilde bir denetim vardır: "yeniden üretilmiş" işaretli her girdi, onu üreten
 kütüphaneyi **adıyla** taşımak zorundadır. Adı olmayan bir yeniden üretim iddiası
 doğrulamayı düşürür. Bu, sicilin var olma nedenidir.
+
+Sicilin son üç kalemi bir literatür taramasının ürünüdür ve nasıl eklendikleri
+kaydedilmelidir. Tarama, "karşılığı yok" diye kaydedilmiş sonuçların gerçekten
+karşılıksız olup olmadığını sınamak için yapılmıştır ve biri karşılıklı
+çıkmıştır (Bölüm 27.1). Bulunan çalışmanın sonucu yeniden üretilmiş, ikisi
+itibara alınmıştır. Buradan çıkan yöntem kuralı şudur: bir sicil neyin
+**içinde** olduğunu denetleyebilir, neyin dışında bırakıldığını denetleyemez.
+Dışarıda kalanı yalnızca arama bulur, ve arama denetlenmiş bir işlem değildir.
 
 **Yöntem tarafındaki eksik.** Bu denetimin ikinci bulgusu şudur: literatür
 notlarının öncelik tablosundaki $24$ satırdan dördünün burada bir C++ karşılığı
@@ -3973,9 +4059,9 @@ sınıf budur.
 
 ### 27.1 Geri çekilenler
 
-Dördü de fikir değişikliğiyle değil, bir hesapla geri çekilmiştir. İkisi
-literatürün bu çalışmaya karşı, ikisi bu çalışmanın kendi kendine yaptığı
-düzeltmedir.
+Beşi de fikir değişikliğiyle değil, bir hesapla ya da bir kaynakla geri
+çekilmiştir. İkisi literatürün bu çalışmaya karşı, üçü bu çalışmanın kendi
+kendine yaptığı düzeltmedir.
 
 | İddia | Durumu | Geri çekilme gerekçesi |
 |-------|--------|------------------------|
@@ -3983,9 +4069,17 @@ düzeltmedir.
 | Öte taraf her şey için kötü konumlanmıştır | Geri çekildi | Kütle kabuğu dışında modlar patlar, kabuk üzerinde hiçbiri patlamaz |
 | Doyan gecikme hızlı bir geçiştir | Geri çekildi | O rejimde gecikme, depolanan normun sabit bir katıdır |
 | Geçirgen eşik enerji bakımından zararsızdır | Geri çekildi | Katman taşıyan her profil baskın koşulu ihlal eder |
+| İmza değişimi boyunca geçirgenliğin literatürde karşılığı yoktur | Geri çekildi | [54], [55], [56] bu hesabı yapmıştır; Öklid hâli yeniden üretilmiş bir sonuçtur (Bölüm 3.3) |
 
-Son ikisi bu çalışmanın kendi sonuçlarını geri çekmesidir ve bu, bilançonun
+Son üçü bu çalışmanın kendi sonuçlarını geri çekmesidir ve bu, bilançonun
 bir zafer listesi olmadığının doğrudan kanıtıdır.
+
+Beşincisi ayrıca bir yöntem dersidir: "literatürde karşılığı yok" bir hesap
+sonucu değil, bir **arama** sonucudur, ve arama yeterince geniş yapılmadığında
+sessizce yanlış çıkar. Bu satır, kaynakçanın imza değişimi tarafında yerçekimi
+makalelerini taşıyıp alan yayılımı makalelerini taşımadığı fark edilince
+düşmüştür. Karşılığı olmayan bir sonuç ileri sürmek, dolayısıyla, hesabın
+kendisinden daha kırılgan bir iddiadır.
 
 ### 27.2 Karşılığı olmayanlar
 
@@ -3995,13 +4089,28 @@ kontrol edecek bir muhatap bulunmamaktadır.
 
 | Soru | Durum |
 |------|-------|
-| İmza değişimi boyunca geçirgenlik katsayısı | Yayınlanmış hesap yok; buradaki sayı tek başınadır |
-| İmza değişiminden geçen dalga paketi | Yayınlanmış çalışma yok; paket katmanının bu durum için öncülü yoktur |
+| Yayılımlı ara bölgenin geçirgenliği | Yayınlanmış hesap yok; Öklid hâlinin öncülü vardır, Kleinian hâlinin yoktur |
+| Paketin merkezinin geçişte kayması | Frekans karışımı hesaplanmıştır; paketin merkezini izleyen bir çalışma yoktur |
 | Öte taraftaki yönelimden dönüş olayına eşleme | Yayınlanmış çalışma yok |
+
+İlk iki satır bu bölümün ilk yazımında olduğundan **daha dar** tutulmuştur ve
+gerekçesi kaydedilmelidir. İmza değişimi boyunca geçirgenliğin hiç
+hesaplanmadığı yazılıydı; bu yanlıştı. [54], [55] ve [56] tam olarak bunu
+yapmaktadır, ve Öklid bölgesi için buradaki sonuç onların sonucunun dört
+boyutlu, kütleli hâlidir (Bölüm 3.3). Karşılığı olmayan, yayılımlı iç modun
+bulunduğu Kleinian hâldir. Aynı biçimde, "imza değişiminden geçen dalga paketi"
+diye bir öncül olmadığı yazılıydı; frekans karışımı olarak vardır. Karşılığı
+olmayan, paketin **merkezinin** nereye düştüğü, yani geçişin bir varış anı
+olarak okunmasıdır (Bölüm 14.2).
 
 Üçüncüsü bu çalışmanın çekirdeğidir; dolayısıyla çekirdek, üzerinde
 kıyaslanacak literatürü bulunmayan bir sorudur. Bu hem fırsat hem risktir ve
 ikisi de kaydedilmelidir.
+
+İkinci ve üçüncü satırın aynı kökten geldiği de görülmelidir: ikisi de bir
+**anı** sormaktadır. Literatür imza değişiminden geçen alanı bir spektrum
+sorusu olarak ele almış, bir varış anı sorusu olarak ele almamıştır. Bu
+çalışmanın durduğu yer tam olarak orasıdır.
 
 ### 27.3 Açık kalanlar
 
@@ -4031,11 +4140,11 @@ kaldırılamamalarıdır.
 
 | Sınıf | Sayı |
 |-------|------|
-| Geri çekilen | $4$ |
+| Geri çekilen | $5$ |
 | Karşılığı olmayan | $3$ |
 | Açık | $6$ |
 | Tartışmalı | $4$ |
-| **Toplam** | $17$ |
+| **Toplam** | $18$ |
 
 Geri çekilenlerin sayısı, açık ve tartışmalı olanların toplamını aşmamaktadır.
 Bu, bilançonun kasıtlı bir ölçütüdür: kapatılan soruların sayısı, açık
@@ -4747,3 +4856,15 @@ sessiz kalmak yerine hangi ölçümün karar vereceğini söylemektedir.
 51. R. E. Kastner. *The arrow of time is alive and well but forbidden under the received view of physics*. in: *The Arrow of Time*, Cambridge University Press, bölüm 7. arXiv:2311.11456
 52. G. F. R. Ellis. *The arrow of time and the nature of spacetime*. arXiv:1302.7291
 53. D. Buonomano, C. Rovelli. *Bridging the neuroscience and physics of time*. arXiv:2110.01976
+
+**İmza değişiminde alan yayılımı ve parçacık üretimi**
+
+54. T. Dray, C. A. Manogue, R. W. Tucker. *Particle production from signature change*. Gen. Rel. Grav. **23** (1991) 967.
+55. T. Dray, C. A. Manogue, R. W. Tucker. *The scalar field equation in the presence of signature change*. Phys. Rev. D **48** (1993) 2587. arXiv:gr-qc/9303002
+56. J. D. Romano. *Scalar and spinor fields in signature-changing spacetimes*. Phys. Rev. D **47** (1993) 4328.
+57. T. Dray, C. A. Manogue, R. W. Tucker. *Boundary conditions for the scalar field in the presence of signature change*. Class. Quantum Grav. **12** (1995) 2767. arXiv:gr-qc/9501034
+58. S. A. Hayward. *Comment on "Boundary conditions for the scalar field in the presence of signature change"*. arXiv:gr-qc/9502001
+
+**Nicelenmiş momentum aktarımı**
+
+59. W. Duane. *The transfer in quanta of radiation momentum to matter*. Proc. Natl. Acad. Sci. USA **9** (1923) 158.

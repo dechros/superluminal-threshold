@@ -1,6 +1,7 @@
 #include "boundary/CausalCrossing.h"
 #include "boundary/JunctionScattering.h"
 #include "boundary/ModeFilter.h"
+#include "boundary/ProfiledBarrier.h"
 #include "boundary/SlabTunnelling.h"
 #include "boundary/ThresholdSurface.h"
 #include "core/Report.h"
@@ -87,6 +88,7 @@ namespace
         sections.push_back(std::make_unique<slm::RateConditionSection>());
         sections.push_back(std::make_unique<slm::CausalCrossingSection>());
         sections.push_back(std::make_unique<slm::SlabTunnellingSection>());
+        sections.push_back(std::make_unique<slm::ProfiledBarrierSection>());
         sections.push_back(std::make_unique<slm::DegeneratePathSection>());
         sections.push_back(std::make_unique<slm::BlackHoleHorizon>());
         sections.push_back(std::make_unique<slm::KleinGordonField>());

@@ -54,6 +54,15 @@ namespace slm
              "boundary/JunctionScattering"},
             {"total reflection is the thick limit of tunnelling through a slab",
              State::Reproduced, "boundary/SlabTunnelling"},
+            {"what crosses a change of signature is fixed by the total size of the "
+             "region and not by the detailed profile within it",
+             State::Reproduced, "boundary/ProfiledBarrier"},
+            {"spinor propagation across the change admits no conserved inner product on "
+             "the space of solutions",
+             State::Used, "none"},
+            {"discrete deflection angles follow from momentum transferred in quanta to a "
+             "scatterer with a discrete symmetry, without wave interference",
+             State::Used, "none"},
             {"the delay saturates with thickness in the opaque regime", State::Reproduced,
              "intermediate/TwoCrossings"},
             {"a saturating delay is the lifetime of stored probability, not a transit",
