@@ -15,8 +15,14 @@ ve yeterince uzağa gidildiğinde dönüş girişten öncedir.
 bölüme bırakılmamalıdır. Geçişi yapabilecek sekiz aday vardır; cebirsel olarak
 ayırt edilemezler, **dördü ileriye dördü geriye** gönderir, ve iki aileyi
 ayıran dönüşüm her iki metriğin de izometrisidir. Yani dönüş anının **işareti,
-metrikten çıkmaz**. Bu metin geriye gönderen bir aday kullanmaktadır; bu bir
-hesap sonucu değil, bir **seçimdir** (Bölüm 2.1).
+metrikten çıkmaz** ve bir **seçimdir** (Bölüm 2.1).
+
+Burada iki ayrı işaret vardır ve karıştırılmamalıdır. **Geçiş eşlemesinin
+ailesi**, kullanılan matrisin sekizli içindeki yeridir; bu metnin kullandığı
+matris **ileri gönderen** ailededir. **Yolculuğun dalı** ise öte tarafta hangi
+yönde gidildiğidir ve dönüş anına $\pm s$ olarak girer. Geçmişe varmayı
+sağlayan şey, ileri gönderen bir eşleme altında $s$'nin gecikmeyi aşacak kadar
+büyük olmasıdır; öteki aile seçilseydi aynı yolculuk daha geç inerdi.
 
 Dolayısıyla ispatlanan şudur: **böyle bir geçiş gerçeklenirse** dönüş anı
 hesaplanmış bir sayıdır. Öncül ispatlanmamıştır. Buna zamanda yolculuk demek
@@ -193,9 +199,8 @@ detaydadır, ikisinde birden değil.
 | 23 | Yönelim tablosuna yöneltilen sorular | Dokuz hücreli tablo ne kadar bağlayıcı, iki etiketi bağımsız mı |
 | 26 | Açık kalanlar | Neyin gösterilmediği yazılı mı |
 | 27 | Literatürün bıraktığı sorular | Bu çalışma literatüre göre nerede duruyor |
-| Ek 28 | Öte tarafta kuantum kuramının kurulabilirliği | Orada bir alan kuramı tanımlanabiliyor mu |
-| Ek 29 | İki bölge arasında sinyal | Kapalı bir ara bölge her kanalı kapatıyor mu |
-| Ek 30 | Anlaşmazlıkların sınıflandırılması | Rakip formülasyonlarla çelişkiler nerede gerçek |
+| Ek 28 | Orada gözlem | Orada bir alan kuramı tanımlanabiliyor mu, ve zincir buna dayanıyor mu |
+| Ek 29 | Yöntem: anlaşmazlıkların iki türü | Rakip formülasyonlarla çelişkiler nerede gerçek |
 
 Korunan yükler (15, 16, 17) ile eşiğin mod filtresi olması (12) omurga ile detay
 arasında durur: sonucu taşımazlar ama sonucun tutarlı olması onlara bağlıdır.
@@ -427,8 +432,8 @@ metriğin de izometrisidir** ve determinantı birdir. Yani bir geçişe dayatıl
 koşulların tamamını sağlar. Çevirdiği çift, geçişin birbirine eşlediği çiftin
 tam olarak kendisidir: Bölge I'in zamanı ve Bölge II'nin tek uzay yönü.
 
-**Sonuç.** Bu çalışmanın kullandığı $D$ sekizliden biridir ve ileri gönderen
-ailededir. Bu bir seçimdir, üç koşulun bir sonucu değildir. Aileler arasında
+**Sonuç.** Bu çalışmanın kullandığı $D$ sekizliden biridir ve **ileri gönderen**
+ailededir; bu, Özet'teki koşul paragrafının söylediği seçimdir. Bu bir seçimdir, üç koşulun bir sonucu değildir. Aileler arasında
 seçim yapan hiçbir şey burada hesaplanmamaktadır ve iki aileyi ayıran dönüşüm iki
 tarafın metriğinin de izometrisi olduğundan, **seçim geometrik değildir**.
 Bölüm 8.4 ile birlikte okunmalıdır: orada da ayrımın iki yakası arasında
@@ -3219,7 +3224,7 @@ geçtiği anlamına gelmez ve bu çalışma öyle bir iddiada bulunmamaktadır.
 **Ayrıca tek okuma da değildir.** Bölüm 22.6'de aynı genlikten türetilen beş
 okumadan üçü geçişi ışığın üstüne, ikisi altına koyar. Yukarıdaki tablo faz
 okumasıyla kurulmuştur, çünkü sorulan soru dışarıdaki bir dedektörde tepenin ne
-zaman göründüğüdür; ama bu bir seçimdir ve gerekçesi 14.11'de verilmiştir.
+zaman göründüğüdür; ama bu bir seçimdir ve gerekçesi Bölüm 22.6'da verilmiştir.
 
 ---
 
