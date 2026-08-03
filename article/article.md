@@ -246,7 +246,7 @@ Doğrulanan özellikler:
 | $V$ bağımlılığı | Yok |
 
 $D$'nin yaptığı şey, aralığın **genel işaretinin** çevrilmesidir. Metriğin genel
-işaretinin değişmesi ve bunun fiziksel sonuçları [23]'ta ayrıca ele alınmıştır;
+işaretinin değişmesi ve bunun fiziksel sonuçları [20]'ta ayrıca ele alınmıştır;
 orada bu, göreliliğin farklı formülasyonlarında klasik bir imza değişimi türü
 olarak incelenir ve kozmolojik sabitle ilişkilendirilir. Buradaki kullanım ondan
 dardır: genel işaret çevrilmesi tek başına ele alınmaz, iki metrik arasındaki
@@ -742,17 +742,17 @@ tekdüze azalmaz; artıp azalır. İç mod yayıldığı için bölge bir engel 
 seksen yediye yakındır.
 
 **Literatürdeki karşılığı.** Bu tablonun üçüncü satırının bir öncülü vardır ve
-karşılaştırma yapılmalıdır. [54] ve [55] kütlesiz skaler alanı iki boyutta imza
+karşılaştırma yapılmalıdır. [45] ve [46] kütlesiz skaler alanı iki boyutta imza
 değiştiren bir metrik üzerinde taşır ve pozitif ile negatif frekansların
 karışımını hesaplar; bu, saçılma dilinde tam olarak bir geçiş katsayısıdır.
 Oradaki merkezi sonuç, karışımın **yalnızca Öklid bölgelerinin toplam konformal
-genişliğine** bağlı olduğu, metriğin ayrıntılı biçimine bağlı olmadığıdır. [56]
+genişliğine** bağlı olduğu, metriğin ayrıntılı biçimine bağlı olmadığıdır. [47]
 aynı hesabı spin-$1/2$ için dener ve çözüm uzayında korunan bir iç çarpım
 bulunmadığını gösterir.
 
 İki sonuç birbirini yalanlamaz, aynı yapının iki farklı kesitidir:
 
-| | [54], [55] | Buradaki tablo |
+| | [45], [46] | Buradaki tablo |
 |---|---|---|
 | Boyut | $1+1$ | $1+3$, enine momentum taşıyan |
 | Kütle | Sıfır | $\mu \neq 0$ |
@@ -762,7 +762,7 @@ bulunmadığını gösterir.
 
 Öklid satırının kalınlıkla üstel kapanması, dolayısıyla bağımsız bir bulgu
 değildir: profilin ayrıntısından bağımsız olarak yalnızca genişliğin sayması
-[54]'ün sonucudur. Bu sonuç burada yeniden üretilmiştir, ve yeniden üretimin ne
+[45]'ün sonucudur. Bu sonuç burada yeniden üretilmiştir, ve yeniden üretimin ne
 anlama geldiği yazılmalıdır, çünkü tek kalınlıklı bir tablo onu sınamaz.
 Sınamak, biçimleri farklı toplamları aynı profiller gerektirir.
 
@@ -789,13 +789,13 @@ değildir. Yayınlanmış ifade tam olarak bu kadarını söyler; buradaki hesap
 ne genişletir ne daraltır.
 
 Kleinian satırının da öncülü vardır ve bu satır bir kez fazla iddialı yazıldıktan
-sonra düzeltilmiştir. [63] düz bir arka planda metriğin Lorentz imzasından
+sonra düzeltilmiştir. [54] düz bir arka planda metriğin Lorentz imzasından
 Kleinian imzaya geçtiği durumda düzlem dalgaların yayılmasını ele alır; geçiş
 süreksiz olduğunda tamsayı ve yarım tamsayı spinli maddenin farklı davrandığını
-bulur, ve spin yapısı tarafı [64]'tedir. Dolayısıyla "Lorentz'den Kleinian'a
+bulur, ve spin yapısı tarafı [55]'tedir. Dolayısıyla "Lorentz'den Kleinian'a
 geçen dalga" sorusu 1994'te sorulmuştur.
 
-Buradaki tablonun ona eklediği şey **sonlu kalınlıktır**. [63] tek bir imza
+Buradaki tablonun ona eklediği şey **sonlu kalınlıktır**. [54] tek bir imza
 değişimi yüzeyinden geçişi ele alır; buradaki hesapta ara bölgenin iki yüzü ve
 aralarında bir kalınlığı vardır, ve tablonun anlattığı şey de o kalınlığın
 işlevidir: Öklid bölge kalınlıkla kapanırken Kleinian bölge kapanmaz, çünkü iki
@@ -813,7 +813,7 @@ Zayıf eklem koşulu seçildiğinde geçiş yüzeyinde dış eğrilik sıfırlan
 sıfırlanmayan bir dış eğrilik gerilim tensöründe dağılımsal bir terime, yani bir
 **madde katmanına** karşılık gelir. Bu, zayıf koşulun bedelidir ve gizlenmemesi
 gerekir: geçişe izin veren seçim, aynı zamanda yüzeye bir madde katmanı koyan
-seçimdir. Katmanın genel formülasyonu [44]'tedir: imza değiştiren bir zarın
+seçimdir. Katmanın genel formülasyonu [38]'tedir: imza değiştiren bir zarın
 dağılımsal gerilimi, imzanın değiştiği yüzeyin zamansal olamaması da dahil olmak
 üzere orada tam olarak ele alınmıştır. Buradaki hesap onun bu geometrideki
 sayısal karşılığıdır.
@@ -859,7 +859,7 @@ belirlenir.
 **Bağlayıcı olan, yüzeyin zamansal olmamasıdır.** İmzanın değiştiği bir yüzeyde
 normal, karakterini değiştirir; dolayısıyla yüzey zamansal olamaz. Zamansal
 kabuklar için kurulmuş sonuçlar bu yüzeye uygulanmaz, ve zamansal olmayan
-yüzeyler için geçerli olan kısıtlar çok daha sıkıdır: bu sınıf [43]'te ayrı
+yüzeyler için geçerli olan kısıtlar çok daha sıkıdır: bu sınıf [37]'te ayrı
 olarak ele alınmış ve enerji koşullarının orada zamansal duruma göre daraldığı
 gösterilmiştir. Aşağıdaki hesabın hangi çerçevede okunması gerektiğini o sonuç
 belirler.
@@ -1084,7 +1084,7 @@ katsayısı olarak $\phi' \delta = 0$ biçiminde **türetilir**, yani denklemler
 anlamlı kılmak için varsayılmaz. Buradaki türetim Lagrangian'dan gider ve aynı
 yere varır.
 
-Lagrangian yolunun kendisi de öncesiz değildir. [55] kütlesiz skaler alanı iki
+Lagrangian yolunun kendisi de öncesiz değildir. [46] kütlesiz skaler alanı iki
 boyutta imza değiştiren bir metrik üzerinde ele alır ve eklem koşulunu iki ayrı
 yoldan sabitler: uzaysal olarak homojen hâlde momentumun korunmasını istemek, ve
 doğal bir Lagrangian'dan varyasyon almak. İkisi aynı yere varır ve elde edilen
@@ -1092,8 +1092,8 @@ doğal bir Lagrangian'dan varyasyon almak. İkisi aynı yere varır ve elde edil
 türetim aynı ailenin dört boyutlu ve kütleli üyesidir; yeni olan koşulun kendisi
 değil, hangi geçiş profillerinin onu sağlayabildiğidir (Bölüm 3.5).
 
-Bu çizginin tartışmalı olduğu da kaydedilmelidir: [58] koşulun verdiği çözüm
-sınıfını reddeder, [57] onu savunur. Aşağıdaki saçılma hesabı seçimin ne kadar
+Bu çizginin tartışmalı olduğu da kaydedilmelidir: [49] koşulun verdiği çözüm
+sınıfını reddeder, [48] onu savunur. Aşağıdaki saçılma hesabı seçimin ne kadar
 belirleyici olduğunu ölçmek için kurulmuştur ve tartışmanın hangi tarafında
 durulduğunu değiştirmez.
 
@@ -1235,7 +1235,7 @@ sonuç alan akısı hakkındadır.
 Bölüm 4.1 öte tarafı **sınırsız** kabul eder. Sonlu kalınlıkta bir dilim ayrı
 bir problemdir ve sonucu farklıdır.
 
-Bu ayrım [27]'de kurulmuştur ve o çalışma bu bölümün öncülüdür. Orada
+Bu ayrım [23]'de kurulmuştur ve o çalışma bu bölümün öncülüdür. Orada
 Klein-Gordon parçacıklarının Lorentzian imzadan Kleinian imzaya geçişi
 incelenir, düzlemsel bir sınırda parçacık akısı için **ayna davranışı** bulunur,
 ve ardından sonlu kalınlıkta bir çift eklem ele alınarak **tünelleme
@@ -1316,7 +1316,7 @@ mertebe olarak belirlemez, yalnızca toplam sönümü belirler. Dolayısıyla B�
 değiştirmez; profilin bağladığı şey, Bölüm 3.6 ile 3.7'de görüldüğü gibi,
 katman ve oran koşuludur.
 
-[27] ayrıca bu geometrinin bir **analog gerçeklemesini** verir: anizotropik bir
+[23] ayrıca bu geometrinin bir **analog gerçeklemesini** verir: anizotropik bir
 yarı iletken ile elektronik bir metamalzeme arasındaki eklemde elektron
 yayılımı, aynı denklemi sağlar. Bu, modelin sınanabilirliği açısındaki temel
 çıkmaza bir alternatif sunar: $v = c$ yüzeyi hazırlanamaz,
@@ -1363,7 +1363,7 @@ sıfırlandığı sürekli bir yol vardır.
 
 Bunun önemi şuradadır: literatürün dejenere yüzeyle çalışan araçları tam olarak
 rank-1 dejenerelik için kuruludur. [13] ve [14]'nın "transvers radikal" dediği
-yapı budur, ve [20]'in kink modeli, [22]'nin Colombeau formülasyonu, [16]'ün Hadamard
+yapı budur, ve [18]'in kink modeli, [19]'nin Colombeau formülasyonu, [16]'ün Hadamard
 düzenlemesi bu sınıfta çalışır. Dolayısıyla bu modelin geçişi, o araçların
 erişemeyeceği bir yerde **değildir**.
 
@@ -1601,13 +1601,13 @@ I'de zaman-benzeri olan her yön Bölge II'de de zaman-benzeridir, yani eşikte 
 eğriyi durduran nedensel engel yoktur. Yasaklanan şey akıdır. Geometrik eğriler
 ile alan akısı farklı nesnelerdir ve iki sonuç aynı anda doğru olabilir.
 
-**Bir itiraz.** [25], iki zamanlı dinamikte olasılık korunumu dayatıldığında
+**Bir itiraz.** [22], iki zamanlı dinamikte olasılık korunumu dayatıldığında
 fazladan zaman ekseninin gözlenebilirliğinin sınırlandığını gösterir: klasik
 $1+2$ boyutta Newton'un ikinci yasası tam olarak integre edilebilir ve her
 başlangıç koşulu için **etkin tek zamanlı** bir evrim verir; kuantum tarafta ise
 düzey aralıkları, toplam süre ve $\hbar$ içeren genelleştirilmiş bir belirsizlik
 bağıntısı çıkar. Bu, üç zamanlı Bölge II'nin dışarıdan bakıldığında tek zamanlı
-görünebileceği anlamına gelir. Buradaki formülasyon ile arasındaki fark, [25]'in
+görünebileceği anlamına gelir. Buradaki formülasyon ile arasındaki fark, [22]'in
 evrimin üniter ve olasılık koruyan olmasını istemesidir; Bölüm 28'da gösterildiği
 gibi Bölge II'de bu talebin dayandığı yapı zaten mevcut değildir. Yine de bu
 itiraz açık bir sorudur ve modelin lehine kapatılmış sayılmamalıdır.
@@ -1820,7 +1820,7 @@ fazlalığıdır.
 
 $$\text{Stabilizatör} = O(2), \qquad \text{Yörünge uzayı} = O(3)/O(2) = S^2$$
 
-**Öncelik.** Fazladan zaman boyutunun bir ayar simetrisiyle elenmesi [24]'nin
+**Öncelik.** Fazladan zaman boyutunun bir ayar simetrisiyle elenmesi [21]'nin
 kurduğu mekanizmadır: $Sp(2,\mathbb{R})$ ayar simetrisi altında tek-zamanlı
 sistemler aynı iki-zamanlı sistemin farklı ayar sabitlemeleri olarak ortaya
 çıkar, ve bu alan teorisine, etkileşimlere ve ayar arka planlarına kadar
@@ -2046,7 +2046,7 @@ $$|E'| = \sqrt{E_1^2 + E_2^2 + E_3^2} \;\geq\; 0$$
 
 kullanılabilir. Bu gözlem, Bölüm 28.1'deki "kararlı vakum yok" sonucunun klasik
 habercisidir. Aynı sorun, superluminal boost sonrası parçacıkların negatif enerji
-kazanması biçiminde [40]'de ele alınmış ve kuantum referans çerçeveleri
+kazanması biçiminde [34]'de ele alınmış ve kuantum referans çerçeveleri
 genişletilerek çözülmüştür; oradaki çözüm ile buradaki vektör-enerji okuması
 birbirine alternatiftir.
 
@@ -2547,7 +2547,7 @@ değildir, ikisi de aynı vektörün parçalarıdır. Ve "hiç çıkmaz" satır�
 parçacık yerine karşıparçacık gibi görünebilir, ki bu literatürdeki çift
 yaratımı okumasıyla aynı yere düşer.
 
-Bu okumanın adı ve önceliği vardır. [61]'in **yeniden yorumlama ilkesi** tam
+Bu okumanın adı ve önceliği vardır. [52]'in **yeniden yorumlama ilkesi** tam
 olarak bunu söyler: negatif enerjiyle zamanda geriye giden bir çözüm, pozitif
 enerjiyle ileri giden bir karşıparçacıktan ayırt edilemez. Yukarıdaki hesap o
 ilkeyi doğrulamakta, kurmamaktadır; ilke 1967'ye aittir. Buradaki hesabın
@@ -2653,7 +2653,7 @@ elenir, çünkü sürekli bir sapma dağılımı bu yapıda bulunmaz.
 
 **Bu mekanizma türünün öncülü.** Ayrık sapmanın sürekli geri tepen bir hedef
 olmadan çıkması bu çalışmanın icadı değildir; fizikte bir yüzyıllık öncülü
-vardır. [59] X-ışınlarının kristalden yansımasını, girişim yasalarına hiç
+vardır. [50] X-ışınlarının kristalden yansımasını, girişim yasalarına hiç
 başvurmadan, momentumun **kuantumlar hâlinde** aktarılması varsayımıyla türetir
 ve Bragg yasasını bu yolla elde eder. Ayrıklığı üreten şey orada örgünün
 periyodikliği, burada çıkış yüzlerinin sonlu kümesidir; ikisinde de ayrıklık
@@ -2922,9 +2922,9 @@ doğduğunu** belirler.
 biri kendi üretecini taşır ve bu evrimler ancak zamanlar uzayındaki taşımanın
 yoldan bağımsız olması hâlinde tutarlıdır. Bu koşul, bileşenleri üreteçlerin
 ikişerli komütatörleri olan bir eğriliğin sıfırlanmasıdır. Ölçüt bu çalışmaya
-ait değildir: çok zamanlı dalga fonksiyonları için [49] ve [50]'de kurulmuş,
+ait değildir: çok zamanlı dalga fonksiyonları için [43] ve [44]'de kurulmuş,
 ikincisinde genel etkileşim potansiyelleri için tutarlılığın tam koşulu olarak
-verilmiştir. [49] ayrıca burada önemli olan ayrımı yapar: çok zamanlı bir
+verilmiştir. [43] ayrıca burada önemli olan ayrımı yapar: çok zamanlı bir
 betimleme, birden çok zamansı boyut demek değildir. Burada uygulanan, o
 ölçütün kendisidir. Eğrilik sıfırsa yol
 hiçbir bilgi taşımaz ve tek zamana indirgeme belirsizlik içermez; sıfır
@@ -3445,7 +3445,7 @@ Aynı sınıra dışarıdan da işaret edilmiştir. [3], burada kullanılan tür
 permütasyondan altısının çizgi elemanını koruduğunu ve kalan on sekizinin boost
 yönü ne olursa olsun belirli bir ekseni takas ettiğini, dolayısıyla koordinat
 bağımlı olduğunu savunur; buradaki $D$ o listenin ilk matrisidir. Bu bölümdeki
-sonuç, itirazın cebirsel çekirdeğini kabul eder. [36] ise aynı kopukluğu başka
+sonuç, itirazın cebirsel çekirdeğini kabul eder. [30] ise aynı kopukluğu başka
 bir yönden dile getirir: iki dalı birbirine bağlayan tutarlı bir formalizm
 yoktur. Bu çalışma bu tespiti bir eksiklik değil, Bölüm 4.1'de nicelleştirilen
 bir sonuç olarak okur.
@@ -3523,7 +3523,7 @@ olarak görünen şey, burada bir kurtarıcı olabilir.
 ### 22.2 Gecikme bir geçiş süresi mi, yoksa depolanan alanın ömrü mü
 
 Fazdan okunan gecikmeyi bir geçiş süresi saymak zorunlu değildir. Rakip okuma
-[42]'dedir: aynı nicelik bir **oyalanma süresidir**, yani bölge içinde depolanan
+[36]'dedir: aynı nicelik bir **oyalanma süresidir**, yani bölge içinde depolanan
 olasılığın gelen akıya oranıdır ve alanın iki yüzden birden sızarak boşalma
 ömrünü verir. Bu okumada hiçbir şey bölgeyi kat etmez ve doyum bir paradoks
 değil, beklenen davranıştır. Orada tünelleme bağlamında kurulan bu ayrım, burada
@@ -3934,27 +3934,27 @@ $|R| = 1$ türetmesi beklenmez. Dolayısıyla itiraz, modelin dönüşüm kolunu
 eklem koşulları kolunu kesmez.
 
 **2. "İki dal ayrıktır, bunları bağlayan tutarlı bir formalizm yoktur, dolayısıyla
-program eksiktir."** [36]. Tespit doğrudur ve burada da elde edilmektedir. Ayrım
-şuradadır: [36] bunu tamamlanması gereken bir eksiklik sayar, bu çalışma ise
+program eksiktir."** [30]. Tespit doğrudur ve burada da elde edilmektedir. Ayrım
+şuradadır: [30] bunu tamamlanması gereken bir eksiklik sayar, bu çalışma ise
 Bölüm 4.1'de nicelleştirilen bir sonuç sayar. Ayrıklık bir boşluk değil,
 güçlü eklem koşulunun öngörüsüdür.
 
-**3. "Superluminal gözlemciler kuantum süperpozisyonlarını açıklamaz."** [38], ve
-benzer biçimde [37]. Bu itirazlar [1]'in kuantum kuramını görelilikten türetme
+**3. "Superluminal gözlemciler kuantum süperpozisyonlarını açıklamaz."** [32], ve
+benzer biçimde [31]. Bu itirazlar [1]'in kuantum kuramını görelilikten türetme
 iddiasını hedefler. Bu çalışma o iddiayı taşımaz ve gerektirmez; burada kurulan
 şey bir kinematik ile onun alan denklemleridir. İtiraz kabul edilmekte, ancak
 modelin bir parçasını etkilememektedir.
 
 **4. "Koordinat haritası yazmak fizik teorisi kurmak değildir; süperpozisyon
 kâğıt üzerinde çizilen yollarla değil, kapalı bir girişim döngüsüyle
-tanımlanır."** [41]. Bu itiraz kabul edilmektedir ve bu metin için geçerlidir.
-[41]'ün üç katmanlı ayrımı kullanılırsa, buradaki çalışma kinematik katmanında ve
+tanımlanır."** [35]. Bu itiraz kabul edilmektedir ve bu metin için geçerlidir.
+[35]'ün üç katmanlı ayrımı kullanılırsa, buradaki çalışma kinematik katmanında ve
 kısmen dinamik katmanındadır; işlemsel katmanda hiçbir şey sunmamaktadır. Bölüm
 21'de bu bir açık nokta olarak listelenmiştir.
 
 **5. "Sıralamayı korumayan superluminal dönüşüm kabul eden her çerçeve, sonlu
 bilgiden, zaman-simetrik bilgi içeriğinden, geçmişin bellek tutmasından ya da
-zamanın nedensel sıralamayı belirlemesinden birini bırakmak zorundadır."** [39].
+zamanın nedensel sıralamayı belirlemesinden birini bırakmak zorundadır."** [33].
 Bu bir no-go teoremidir ve buradaki çerçeveyi de bağlar. Bölüm 11'deki determinizm
 kaybı denklem tipinden çıkar ve teoremin dördüncü seçeneğine, yani zamanın
 nedensel sıralamayı belirlemesinden vazgeçmeye karşılık gelir; Bölüm 8'de Bölge
@@ -3964,10 +3964,10 @@ indeterminizmin sonlu bilgiden kaynaklanamayacağıdır; bu, modelin ontolojisi
 hakkında burada karşılanmamış bir talep koyar.
 
 **6. "Takyonik alan kuramındaki engeller Hilbert uzayı ikiye katlanarak
-kalkar."** [28]. Bu, Bölüm 28'un üç engelini doğrudan hedefleyen tek onarım
-girişimidir. [29] bu yapının kuantum bir teori olmadığını göstermiştir: alan her
+kalkar."** [24]. Bu, Bölüm 28'un üç engelini doğrudan hedefleyen tek onarım
+girişimidir. [25] bu yapının kuantum bir teori olmadığını göstermiştir: alan her
 noktada komüte eder, kanonik komütasyon bağıntıları sağlanmaz, Feynman reçetesi
-üniterliği bozar. [30] aynı sonucu sanal takyonlar için kurar. Bölüm 28'un
+üniterliği bozar. [26] aynı sonucu sanal takyonlar için kurar. Bölüm 28'un
 engelleri bu nedenle ayakta kalmaktadır. Aynı sonuçların daha geniş okunuşu ise
 modelin aleyhinedir: superluminal nesnelerin kovaryant bir kuantum alan kuramı
 bilinmemektedir, ve bu Bölge II için de geçerlidir.
@@ -3978,16 +3978,16 @@ bunu çözmez, sorunun sorulamaz hâle geldiği bir çerçeve önerir. Bu bir ce
 değildir ve öyle sunulmamaktadır.
 
 **8. "Olasılık korunumu dayatıldığında fazladan zaman ekseni gözlenemez hâle
-gelir, klasik durumda evrim etkin olarak tek zamanlıdır."** [25]. Bölüm 8.3'te
-tartışılmıştır. Kısmi bir cevap vardır: [25] üniter ve olasılık koruyan bir evrim
+gelir, klasik durumda evrim etkin olarak tek zamanlıdır."** [22]. Bölüm 8.3'te
+tartışılmıştır. Kısmi bir cevap vardır: [22] üniter ve olasılık koruyan bir evrim
 varsayar, Bölüm 28 ise Bölge II'de bu yapının kurulamadığını gösterir. Ancak bu,
 itirazı karşılamaktan çok konuyu Bölüm 28'a havale etmektedir.
 
-**9. "Nedenselliği korumak için tercihli bir çerçeve zorunludur."** [33], ve
-[32]'da somut bir formülasyon: uygun bir eşzamanlama seçimiyle takyonik alan tutarlı
+**9. "Nedenselliği korumak için tercihli bir çerçeve zorunludur."** [28], ve
+[27]'da somut bir formülasyon: uygun bir eşzamanlama seçimiyle takyonik alan tutarlı
 biçimde kuantumlanır, mutlak nedensellik ve tam Lorentz simetrisi korunur, bedel
 olarak görelilik ilkesi bırakılır. Bu, modele gerçek bir alternatiftir ve daha
-olgundur. Aradaki fark ödenen bedeldir: [32] tercihli çerçeveyi kabul eder,
+olgundur. Aradaki fark ödenen bedeldir: [27] tercihli çerçeveyi kabul eder,
 buradaki model reel kütleyi ve görelilik ilkesini korur, karşılığında geçirgen
 olmayan bir eşik alır. Hangi bedelin daha kabul edilebilir olduğu burada
 kararlaştırılmamıştır.
@@ -4005,7 +4005,7 @@ hangi bağıntının fiziksel olduğunda ayrılır.
 
 ### 24.2 İkiye katlanmış uzayda komütatörün yok olması
 
-[28]'nin önerdiği onarım sayısal olarak sınanmıştır. Takyonik eşik üzerindeki
+[24]'nin önerdiği onarım sayısal olarak sınanmıştır. Takyonik eşik üzerindeki
 modlar toplanarak tek bir sektörün komütatör fonksiyonu hesaplanır ve her
 ayrımda sıfırdan farklı çıkar; yıldızlı sektör ters işaretle eklendiğinde toplam
 **tam olarak** sıfırlanır. Her ayrımda komüte eden bir alan kanonik komütasyon
@@ -4014,7 +4014,7 @@ kaldırmaktadır. Bölüm 28'un üç engeli ayaktadır.
 
 ### 24.3 Vakum Cherenkov sınırı
 
-Superluminal yayılımı sınırlayan çift ışıma mekanizması [34], $\delta = v^2/c^2 - 1$
+Superluminal yayılımı sınırlayan çift ışıma mekanizması [29], $\delta = v^2/c^2 - 1$
 parametresi pozitif olduğunda işler; superluminal bir parçacık
 $\nu \to \nu + e^+ + e^-$ süreciyle enerji kaybeder ve bu kaybın gözlenmemesi
 superluminaliteye sıkı bir üst sınır koyar. Bu modelde hiçbir uyarım $\delta > 0$ ile
@@ -4024,7 +4024,7 @@ yoksunluğunun bir başka görünümüdür.
 
 ### 24.4 Fazladan zamanın tek zamana çökmesi
 
-[25]'in itirazı serbest hareket için doğrudur ve doğrulanmıştır: iki zamanlı
+[22]'in itirazı serbest hareket için doğrudur ve doğrulanmıştır: iki zamanlı
 serbest hareket, hız bileşenlerinin belirlediği **tek bir bileşime** bağlıdır,
 ikinci zaman bağımsız bir dinamik içerik taşımaz. Bu, sınanan bütün hız ve zaman
 değerlerinde tam olarak sağlanır.
@@ -4061,7 +4061,7 @@ koşullar da aynı yere çıkmaktadır.
 **"Dejenere yüzeyden geçilemeyeceği gösterilmemiştir."** İtiraz haklıydı ve
 Bölüm 7.1'de karşılanmıştır. Dejenerelik kaçınılmazdır, ancak rank-2 dejenerelik
 değildir: $(2,2)$ üzerinden giden kademeli bir yolda her noktada yalnızca tek bir
-öz-değer sıfırlanır, ki bu tam olarak [13], [14], [20], [22] ve [16]'ün
+öz-değer sıfırlanır, ki bu tam olarak [13], [14], [18], [19] ve [16]'ün
 araçlarının çalıştığı sınıftır. Bölüm 7.5'in karşıt sonucu geri çekilmiştir.
 Geriye kalan soru geçişin mümkün olup olmadığı değil, $(2,2)$ ara bölgesinin
 fiziksel olarak kabul edilip edilemeyeceğidir.
@@ -4076,13 +4076,13 @@ dururken hükmün sessizce değişmesini engeller.
 | İtiraz | Hüküm | Hükmün dayanağı |
 |--------|-------|------------------|
 | Hiçbir reel dönüşüm bir imzayı ötekine taşımaz | kabul edildi | 24 permütasyondan 6'sı çizgi elemanını korur, 18'i korumaz; itirazın kendi sayımı yeniden üretilir |
-| İmza değişiminde standart korunum yasaları çöker [45], [46], [47], [48] | kabul edildi | genel profilde katman vardır, dolayısıyla çöküş gerçektir ve büyüklüğü tartışılmak yerine hesaplanır |
+| İmza değişiminde standart korunum yasaları çöker [39], [40], [41], [42] | kabul edildi | genel profilde katman vardır, dolayısıyla çöküş gerçektir ve büyüklüğü tartışılmak yerine hesaplanır |
 | Yüzeydeki dağılımsal terim beyanla düşürülemez | kabul edildi | katman taşıyan her profilde üstel negatiftir |
 | Katman hiçbir madde seçimiyle enerji koşullarını sağlayamaz | kabul edildi | katman taşıyan hiçbir profil sınanan hiçbir kalınlıkta baskın koşulu sağlamaz |
 | Birden çok zamanlı denklemler kötü konumlanmıştır | daraltıldı | kütle kabuğu dışında modlar gerçekten büyür, ama geçişle ulaşılan kabuk üzerinde büyüme katsayısı özdeş olarak negatiftir |
 | Fazladan zamanlar salt ayardır, buraya kaydolamaz | daraltıldı | iç bölge düzdür ve hiçbir şey kaydetmez, ama yüzeyler bağlantıyı eğer; itiraz içeride geçerli, sınırda geçersizdir |
 | Birden çok zamanlı bir bölge gelecek ve geçmişe ayrılamaz | kabul edildi | orada zamansı küme bağlantılıdır, böyle bir ayrım yoktur ve model böyle bir iddiada bulunmaz |
-| Doyan bir gecikme depolanan alanın özelliğidir, hızlı geçiş değil [42] | kabul edildi | iki okumanın oranı kalınlıkla oynamaz |
+| Doyan bir gecikme depolanan alanın özelliğidir, hızlı geçiş değil [36] | kabul edildi | iki okumanın oranı kalınlıkla oynamaz |
 | İlerlemiş tepe sinyal taşımaz | kabul edildi | cephe her kalınlıkta tam ışık süresi kadar gecikir |
 | Işık ötesi uyarım vakum Cherenkov sınırıyla dışlanır | cevaplandı | buradaki her yayılan uyarımın grup hızı $c$'nin altında kalır, sınırın kısıtlayacağı bir şey yoktur |
 | Işık ötesi uyarımların alan kuramının dinamiği yoktur | daraltıldı | ikilenmiş kurgunun komütatörü gerçekten sıfırdır, model bu yüzden onu kullanmaz |
@@ -4432,18 +4432,18 @@ Bu bölümün en başına konması gereken kayıt budur, çünkü çalışmanın
 dokunur. Omurga şudur: öte tarafta mekânda mesafe kat etmek, bu tarafa daha erken
 bir ana dönmeyi verir. Bu adımın kendisi **yeni değildir ve altmış yıllıktır**.
 
-[60] üstışık hızlı parçacıkların özel görelilikle çelişmediğini, yaratıldıkları
-andan itibaren o hızda olmaları koşuluyla gösterir. [61] bu parçacıklara ad verir
+[51] üstışık hızlı parçacıkların özel görelilikle çelişmediğini, yaratıldıkları
+andan itibaren o hızda olmaları koşuluyla gösterir. [52] bu parçacıklara ad verir
 ve negatif enerjili, zamanda geriye giden bir çözümün ileri giden bir
 karşıparçacıktan ayırt edilemediğini söyleyen **yeniden yorumlama ilkesini**
-kurar. [62] ise adımı en açık biçimde yazar: zaman-benzeri parçalarla üstışık
+kurar. [53] ise adımı en açık biçimde yazar: zaman-benzeri parçalarla üstışık
 sinyallerden kapalı bir ilmek kurulur ve cevabın soru gönderilmeden önce vardığı
 gösterilir.
 
 Dolayısıyla "mesafeyi yeterince hızlı kat et, geçmişe var" cümlesi bu çalışmanın
 bulgusu değildir; 1970'te yazılmıştır. Farklı olan, ne için yazıldığıdır.
 
-| | [60], [61], [62] | Buradaki çalışma |
+| | [51], [52], [53] | Buradaki çalışma |
 |---|---|---|
 | Adımın statüsü | Bir **çelişki** üretmek için kurulur | Bir **mekanizma** olarak kurulur |
 | Amaç | Üstışık sinyalin reddedilmesi ya da yeniden yorumlanması | Dönüş olayının koordinatlarının hesaplanması |
@@ -4451,7 +4451,7 @@ bulgusu değildir; 1970'te yazılmıştır. Farklı olan, ne için yazıldığı
 | Kütle | Takyon, yani sanal kütle | Bu taraftaki sıradan kütleli parçacık |
 | Verilen nicelik | Bir işaret çelişkisi | Dönüş anı, çıkış yüzü, bedel |
 
-Aradaki asıl fark üçüncü satırdır. [62]'nin ilmeği üstışık sinyali **hazır kabul
+Aradaki asıl fark üçüncü satırdır. [53]'nin ilmeği üstışık sinyali **hazır kabul
 eder**; onun nasıl olabileceği sorusu açık bırakılır ve sonuç bir *reductio*
 olarak kullanılır. Bu çalışma o boşluğu doldurmayı dener: üstışık kısım
 postülalanmaz, iki
@@ -4459,7 +4459,7 @@ imza arasındaki bir eşikten geçiş olarak kurulur, ve o eşiğin geçirgenli�
 taşıdığı madde katmanı ve bedeli hesaplanır. Çelişkinin kendisi de reddedilmez;
 Bölüm 24 ve Bölüm 27.5 onun hangi biçimlerinin kapanmadığını sayar.
 
-İkinci fark beşinci satırdadır ve daha somuttur. [62] işaretin ters
+İkinci fark beşinci satırdadır ve daha somuttur. [53] işaretin ters
 dönebileceğini gösterir, dönüşün **nereye** düştüğünü vermez. Bu çalışmanın
 çekirdeği o eşlemedir (Bölüm 19), ve karşılığı bulunamayan da odur (Bölüm 27.3).
 
@@ -4498,7 +4498,7 @@ seçilemez. Bu iki itiraz Bölüm 7.2'de karşılanmakta, ve karşılığında i
 gösterilmektedir: ikinci geçişin genliği sıfır değildir, ve sekiz geçişin dördü
 yer değiştirmeyi geriye taşır. Çekirdeğin ayakta kalması bu ikisine bağlıdır.
 
-**Basit ilmeğe yöneltilen itiraz.** [65] bu kurgunun naif biçimine karşı bir
+**Basit ilmeğe yöneltilen itiraz.** [56] bu kurgunun naif biçimine karşı bir
 karşıörnek verir ve itiraz bu metni de bağlar, çünkü burada anlatılan da bir gidiş
 dönüştür. Gösterdiği şudur: tek bir çerçevede betimlenen, üstışık hızla gidip
 üstışık hızla dönen bir yolculuk, kalktığından **önce** değil sonra varır. Geçmişe
@@ -4518,7 +4518,7 @@ $v = 10^{12}$ için bile pozitiftir. Röle rotası negatif olabilir, ama ancak
 rölenin bağıl hızı $2v/(v^2+1)$ eşiğini aştığında; bu eşik her sonlu hızda
 **pozitiftir** ve yalnızca hız sınırsız büyürken sıfıra gider, ki o bir hız
 değildir. Röle rotası bağıl hız sıfırken tam olarak naif ilmeğe indirgenir, ki
-[65]'in bulgusu da budur.
+[56]'in bulgusu da budur.
 
 Buradaki rota bağıl hız sıfırken de geçmişe varır. Hesapta hiçbir yerde ikinci bir
 çerçeve, hiçbir yerde bir röle, hiçbir yerde bir bağıl hız geçmez: kalınlığı $8$
@@ -4531,10 +4531,10 @@ dönüş anına **bir hıza bölünerek** girer, dolayısıyla katkısı hep poz
 hız büyüdükçe küçülür. Buradaki rotada mesafe dönüş anına **katsayısı bir olarak**
 girer, ve işareti hangi geçişin gerçeklendiğine bağlıdır (Bölüm 2.1, Bölüm 9.1).
 İşaret bir çerçeve uyuşmazlığından değil, sekiz geçişten hangisinin kullanıldığından
-gelmektedir. [65]'in itirazı, dolayısıyla, kapatılmamakta ama **kapsam dışında
+gelmektedir. [56]'in itirazı, dolayısıyla, kapatılmamakta ama **kapsam dışında
 kalmaktadır**: itiraz bağıl hızdan işaret üreten kurgulara yöneliktir.
 
-Aynı hedefe götüren geometrik bir rotanın da bulunduğu kaydedilmelidir. [66]
+Aynı hedefe götüren geometrik bir rotanın da bulunduğu kaydedilmelidir. [57]
 kütleli bir cismi, metriği Lorentz imzasında tutarak ve yerel olarak ışık
 hızının altında bırakarak uzayda ışıktan hızlı taşır. Bu, buradaki rotanın
 rakibidir ve aradaki fark yöntemseldir: orada imza korunur ve enerji koşulu
@@ -4542,12 +4542,12 @@ ihlal edilir, burada imza değişir ve ihlal eşik katmanında ortaya çıkar
 (Bölüm 3.6). İkisi de bedeli aynı yere yazmaktadır.
 
 Yeniden yorumlama ilkesinin ayrıca **rakip bir okuma** olduğu kaydedilmelidir.
-[61]'e göre negatif enerjiyle geriye varan bir parçacık, ileri giden bir
+[52]'e göre negatif enerjiyle geriye varan bir parçacık, ileri giden bir
 karşıparçacıktan ayırt edilemez. Bu, bu çalışmanın bağımsız olarak vardığı yerin
 ta kendisidir: Bölüm 17.3'te karşı yüzden dönüşün negatif enerjili bir varış gibi
 göründüğü hesaplanmakta, Bölüm 27.7'da ise dönmüş bir dünya çizgisinin sınır
 sayımında yaratılmış bir çiftten ayırt edilemediği gösterilmektedir. İkisi de
-[61]'in söylediğinin bu geometrideki karşılığıdır ve öncelik ona aittir. Buradaki
+[52]'in söylediğinin bu geometrideki karşılığıdır ve öncelik ona aittir. Buradaki
 katkı, ayırt edilemezliğin **nerede** kırıldığını aramaktır: sayım ve görünür yük
 ayırt etmez, enerji bütçesi ayrışır, ve o bütçeyi sınırda ölçecek düzenek tarif
 edilmemiştir (Bölüm 27.4).
@@ -4564,8 +4564,8 @@ kendine yaptığı düzeltmedir.
 | Öte taraf her şey için kötü konumlanmıştır | Geri çekildi | Kütle kabuğu dışında modlar patlar, kabuk üzerinde hiçbiri patlamaz |
 | Doyan gecikme hızlı bir geçiştir | Geri çekildi | O rejimde gecikme, depolanan normun sabit bir katıdır |
 | Geçirgen eşik enerji bakımından zararsızdır | Geri çekildi | Katman taşıyan her profil baskın koşulu ihlal eder |
-| İmza değişimi boyunca geçirgenliğin literatürde karşılığı yoktur | Geri çekildi | [54], [55], [56] bu hesabı yapmıştır; Öklid hâli yeniden üretilmiş bir sonuçtur (Bölüm 3.3) |
-| Kleinian imzaya geçen dalganın literatürde öncülü yoktur | Geri çekildi | [63] ve [64] bu geçişi 1994'te ele almıştır; kendine ait kalan, tek yüz değil iki yüz arasındaki girişimdir (Bölüm 3.3) |
+| İmza değişimi boyunca geçirgenliğin literatürde karşılığı yoktur | Geri çekildi | [45], [46], [47] bu hesabı yapmıştır; Öklid hâli yeniden üretilmiş bir sonuçtur (Bölüm 3.3) |
+| Kleinian imzaya geçen dalganın literatürde öncülü yoktur | Geri çekildi | [54] ve [55] bu geçişi 1994'te ele almıştır; kendine ait kalan, tek yüz değil iki yüz arasındaki girişimdir (Bölüm 3.3) |
 
 Son dördü bu çalışmanın kendi sonuçlarını geri çekmesidir ve bu, bilançonun
 bir zafer listesi olmadığının doğrudan kanıtıdır.
@@ -4594,10 +4594,10 @@ kontrol edecek bir muhatap bulunmamaktadır.
 tutulmuştur ve gerekçesi kaydedilmelidir, çünkü daralma iki turda olmuştur.
 
 Önce, imza değişimi boyunca geçirgenliğin hiç hesaplanmadığı yazılıydı; bu
-yanlıştı. [54], [55] ve [56] tam olarak bunu yapmaktadır ve Öklid bölgesi için
+yanlıştı. [45], [46] ve [47] tam olarak bunu yapmaktadır ve Öklid bölgesi için
 buradaki sonuç onların sonucunun dört boyutlu, kütleli hâlidir (Bölüm 3.3).
 Ardından, geriye kalan Kleinian hâlin karşılıksız olduğu yazılıydı; bu da
-yanlıştı. [63] Lorentz'den Kleinian'a geçen düzlem dalgaları 1994'te ele
+yanlıştı. [54] Lorentz'den Kleinian'a geçen düzlem dalgaları 1994'te ele
 almıştır. Karşılığı olmayan, üçüncü denemede, ne imzanın kendisi ne tek bir
 yüzden geçiştir: sonlu kalınlıktaki bir ara bölgenin **iki yüzü arasında** kurulan
 girişimdir, ve o girişim tek yüzlü bir hesapta görünmez.
@@ -4845,118 +4845,56 @@ olduğu için tartışma çıkarılmış, hesaplanmış iki tablo bırakılmış
 2. A. Dragan, K. Dębski, S. Charzyński, K. Turzyński, A. Ekert. *Relativity of superluminal observers in 1+3 spacetime*. Class. Quantum Grav. **40** (2023) 025013. arXiv:2209.01836
 3. M. J. Lake. *The (1+3)-dimensional 'quantum principle of relativity' is Einstein's principle of relativity*. Eur. Phys. J. C **85** (2025) 92. arXiv:2410.07017
 4. M. Zaopo. *Group representations of Lorentz transformations extended to superluminal observers*. arXiv:2510.25385
-
-**İmza değişimi: eklem koşulları ve dinamik**
-
 5. S. A. Hayward. *Junction conditions for signature change*. Class. Quantum Grav. **9** (1992) 1851. arXiv:gr-qc/9303034
 6. F. Embacher. *Actions for signature change*. Phys. Rev. D **51** (1995) 6764. arXiv:gr-qc/9501004
 7. T. Dray. *Einstein's equations in the presence of signature change*. J. Math. Phys. **37** (1996) 5627. arXiv:gr-qc/9610064
 8. T. Dray, G. Ellis, C. Hellaby, C. Manogue. *Gravity and signature change*. Gen. Rel. Grav. **29** (1997) 591. arXiv:gr-qc/9610063
 9. T. Dray, G. Ellis, C. Hellaby. *Note on signature change and Colombeau theory*. Gen. Rel. Grav. **33** (2001) 1041. arXiv:gr-qc/0012047
-
-**Başlangıç değer problemi ve imza değişiminde kuantum kuramı**
-
 10. L. J. Alty, C. J. Fewster. *Initial value problems and signature change*. Class. Quantum Grav. **13** (1996) 1129. arXiv:gr-qc/9501026
 11. I. L. Egusquiza. *Self-adjoint extensions and signature change*. Class. Quantum Grav. **12** (1995) L89. arXiv:gr-qc/9503015
 12. A. White, S. Weinfurtner, M. Visser. *Signature change events: a challenge for quantum gravity?*. Class. Quantum Grav. **27** (2010) 045007. arXiv:0812.3744
-
-**Enine radikal ve dejenere yüzeyin geometrisi**
-
 13. W. Hasse, N. E. Rieger. *A transformation theorem for transverse signature-type changing semi-Riemannian manifolds*. Diff. Geom. Appl. **103** (2026) 102370. arXiv:2407.09699
 14. N. E. Rieger, W. Hasse. *Pseudo-timelike loops in signature changing semi-Riemannian manifolds with a transverse radical*. Results in Physics **78** (2025) 108478. arXiv:2409.02403
-
-**Kara deliklerde ve kozmolojide imza değişimi**
-
 15. C. Hellaby, A. Sumeruk, G. F. R. Ellis. *Classical signature change in the black hole topology*. Int. J. Mod. Phys. D **6** (1997) 211. arXiv:gr-qc/9907042
 16. S. Capozziello, S. De Bianchi, E. Battista. *Avoiding singularities in Lorentzian-Euclidean black holes: the role of atemporality*. arXiv:2404.17267
 17. R. Bartolo, E. Caponio, A. V. Germinario, M. Sánchez. *Lorentzian-Euclidean black holes and Lorentzian to Riemannian metric transitions*. Phys. Rev. D **111** (2025) 104058. arXiv:2502.14108
-18. J. Mielczarek. *Signature change in loop quantum cosmology*. arXiv:1207.4657
-19. M. Bojowald, S. Brahma. *Loop quantum gravity, signature change, and the no-boundary proposal*. Phys. Rev. D **102** (2020) 106023. arXiv:2011.02884
-20. S. Bondarenko, V. De La Hoz-Coronell. *Time kink: modeling change of metric signature*. arXiv:2204.07828
-21. R. Singh, S. Bondarenko. *Inflation from covariant signature change: a geometric mechanism*. Phys. Rev. D **114** (2026) 024076. arXiv:2607.01274
-22. R. Mansouri, K. Nozari. *Signature change, inflation, and the cosmological constant*. arXiv:gr-qc/9806109
-23. B. Alexandre, S. Gielen, J. Magueijo. *Overall signature of the metric and the cosmological constant*. arXiv:2306.11502
-
-**Çok zamanlı ve Kleinian bölgeler**
-
-24. I. Bars. *Two-time physics in field theory*. Phys. Rev. D **62** (2000) 046007. arXiv:hep-th/0003100
-25. E. Piceno, A. Rosado, E. Sadurní. *Fundamental constraints on two-time physics*. Eur. Phys. J. Plus **131** (2016) 352. arXiv:1512.05345
-26. M. Pettini. *Quantum entanglement without nonlocal causation in (3,2)-dimensional spacetime*. Phys. Rev. Research **7** (2025) 013261. arXiv:2311.17070
-27. F. Figueiredo, F. Moraes, S. Fumeron, B. Berche. *Modeling Kleinian cosmology with electronic metamaterials*. Phys. Rev. D **94** (2016) 044039. arXiv:1608.03812
-
-**Takyonlar ve takyonik alan kuramı**
-
-28. J. Paczos, K. Dębski, S. Cedrowski, S. Charzyński, K. Turzyński, A. Dragan, A. Ekert. *Covariant quantum field theory of tachyons*. Phys. Rev. D **109** (2024). arXiv:2308.00450
-29. K. Jodłowski. *Covariant quantum field theory of tachyons is unphysical*. Phys. Rev. D **110** (2024) 115042. arXiv:2406.14225
-30. K. Jodłowski. *Is a covariant virtual tachyon viable?*. Phys. Rev. D **113** (2026) 065016. arXiv:2602.20474
-31. M. Ostrowski. *Casimir effect for tachyonic fields*. Found. Phys. Lett. **18** (2005) 227. arXiv:hep-th/0307051
-32. J. Rembieliński. *Quantization of the tachyonic field and the preferred frame*. arXiv:hep-ph/9509219
-33. V. F. Perepelitsa. *Looking for a theory of faster-than-light particles*. arXiv:1407.3245
-34. F. L. Villante, F. Vissani. *On the generality of the Cohen and Glashow constraints on the neutrino velocity*. arXiv:1110.4591
-
-**Elektromanyetizma**
-
-35. L. Nanni. *Electromagnetic field theory in superluminal spacetime*. Indian J. Phys. (2023). arXiv:2305.12505
-
-**Superluminal programına yöneltilen eleştiriler**
-
-36. R. Horodecki. *Comment on 'Quantum principle of relativity'*. New J. Phys. **25** (2023) 128001. arXiv:2301.07802
-37. F. Del Santo, S. Horvat. *Comment on 'Quantum principle of relativity'*. arXiv:2203.03661
-38. A. Grudka, J. Stempin, J. Wójcik, A. Wójcik. *Superluminal observers do not explain quantum superpositions*. Phys. Lett. A **487** (2023) 129127. arXiv:2306.03961
-39. A. Sen, F. Del Santo. *Superluminal transformations and indeterminism*. arXiv:2601.15263
-40. A. Sen, M. Salzger, Ł. Rudnicki. *Superluminal quantum reference frames*. arXiv:2506.11787
-41. M. Sienicki, K. Sienicki. *From kinematics to interference: operational requirements for the quantum principle of relativity*. arXiv:2512.05164
-
-**Geçiş süresi, eklem koşulu tartışması ve çok zamanlı tutarlılık**
-
-42. H. G. Winful. *Do single photons tunnel faster than light?*. arXiv:0708.3889
-43. H. Maeda. *Energy conditions for non-timelike thin shells*. Class. Quantum Grav. **40** (2023) 195009. arXiv:2306.07326
-44. M. Mars, J. M. M. Senovilla, R. Vera. *Lorentzian and signature changing branes*. Phys. Rev. D **76** (2007) 044029. arXiv:0705.3380
-45. C. Hellaby, T. Dray. *Failure of standard conservation laws at a classical change of signature*. Phys. Rev. D **49** (1994) 5096. arXiv:gr-qc/9404001
-46. S. A. Hayward. *Comment on "Failure of standard conservation laws at a classical change of signature"*. Phys. Rev. D **52** (1995) 7331. arXiv:gr-qc/9606045
-47. C. Hellaby, T. Dray. *Reply comment: comparison of approaches to classical signature change*. Phys. Rev. D **52** (1995) 7333. arXiv:gr-qc/9601040
-48. S. A. Hayward. *Comment on "Comparison of approaches to classical signature change"*. arXiv:gr-qc/9606044
-49. M. Lienert, S. Petrat, R. Tumulka. *Multi-time wave functions versus multiple timelike dimensions*. Found. Phys. **47** (2017) 1582. arXiv:1708.03376
-50. D.-A. Deckert, L. Nickel. *Consistency of multi-time Dirac equations with general interaction potentials*. J. Math. Phys. **57** (2016) 072301. arXiv:1603.02538
-
-**Zamanın yönü: denklemlerde olmayan şey**
-
-51. R. E. Kastner. *The arrow of time is alive and well but forbidden under the received view of physics*. in: *The Arrow of Time*, Cambridge University Press, bölüm 7. arXiv:2311.11456
-52. G. F. R. Ellis. *The arrow of time and the nature of spacetime*. arXiv:1302.7291
-53. D. Buonomano, C. Rovelli. *Bridging the neuroscience and physics of time*. arXiv:2110.01976
-
-**İmza değişiminde alan yayılımı ve parçacık üretimi**
-
-54. T. Dray, C. A. Manogue, R. W. Tucker. *Particle production from signature change*. Gen. Rel. Grav. **23** (1991) 967.
-55. T. Dray, C. A. Manogue, R. W. Tucker. *The scalar field equation in the presence of signature change*. Phys. Rev. D **48** (1993) 2587. arXiv:gr-qc/9303002
-56. J. D. Romano. *Scalar and spinor fields in signature-changing spacetimes*. Phys. Rev. D **47** (1993) 4328.
-57. T. Dray, C. A. Manogue, R. W. Tucker. *Boundary conditions for the scalar field in the presence of signature change*. Class. Quantum Grav. **12** (1995) 2767. arXiv:gr-qc/9501034
-58. S. A. Hayward. *Comment on "Boundary conditions for the scalar field in the presence of signature change"*. arXiv:gr-qc/9502001
-
-**Nicelenmiş momentum aktarımı**
-
-59. W. Duane. *The transfer in quanta of radiation momentum to matter*. Proc. Natl. Acad. Sci. USA **9** (1923) 158.
-
-**Takyonik antitelefon ve yeniden yorumlama ilkesi**
-
-60. O. M. P. Bilaniuk, V. K. Deshpande, E. C. G. Sudarshan. *"Meta" relativity*. Am. J. Phys. **30** (1962) 718.
-61. G. Feinberg. *Possibility of faster-than-light particles*. Phys. Rev. **159** (1967) 1089.
-62. G. A. Benford, D. L. Book, W. A. Newcomb. *The tachyonic antitelephone*. Phys. Rev. D **2** (1970) 263.
-
-**Kleinian imzaya geçiş**
-
-63. L. J. Alty. *Kleinian signature change*. Class. Quantum Grav. **11** (1994) 2523.
-64. L. J. Alty, A. Chamblin. *Spin structures on Kleinian manifolds*. Class. Quantum Grav. **11** (1994) 2411.
-
-**Kapalı ilmeğin naif biçimi ve geometrik rakip**
-
-65. R. J. Nemiroff, D. M. Russell. *How superluminal motion can lead to backward time travel*. The Winnower (2015). arXiv:1505.07489
-66. M. Alcubierre. *The warp drive: hyper-fast travel within general relativity*. Class. Quantum Grav. **11** (1994) L73. arXiv:gr-qc/0009013
-
-**Zamanın temel olmadığı formülasyonlar**
-
-67. D. N. Page, W. K. Wootters. *Evolution without evolution: dynamics described by stationary observables*. Phys. Rev. D **27** (1983) 2885.
-68. V. Giovannetti, S. Lloyd, L. Maccone. *Quantum time*. Phys. Rev. D **92** (2015) 045033. arXiv:1504.04215
-69. C. Rovelli. *Forget time*. arXiv:0903.3832
-70. A. Connes, C. Rovelli. *Von Neumann algebra automorphisms and time-thermodynamics relation in generally covariant quantum theories*. Class. Quantum Grav. **11** (1994) 2899. arXiv:gr-qc/9406019
-71. J. Barbour. *The End of Time*. Oxford University Press (1999).
+18. S. Bondarenko, V. De La Hoz-Coronell. *Time kink: modeling change of metric signature*. arXiv:2204.07828
+19. R. Mansouri, K. Nozari. *Signature change, inflation, and the cosmological constant*. arXiv:gr-qc/9806109
+20. B. Alexandre, S. Gielen, J. Magueijo. *Overall signature of the metric and the cosmological constant*. arXiv:2306.11502
+21. I. Bars. *Two-time physics in field theory*. Phys. Rev. D **62** (2000) 046007. arXiv:hep-th/0003100
+22. E. Piceno, A. Rosado, E. Sadurní. *Fundamental constraints on two-time physics*. Eur. Phys. J. Plus **131** (2016) 352. arXiv:1512.05345
+23. F. Figueiredo, F. Moraes, S. Fumeron, B. Berche. *Modeling Kleinian cosmology with electronic metamaterials*. Phys. Rev. D **94** (2016) 044039. arXiv:1608.03812
+24. J. Paczos, K. Dębski, S. Cedrowski, S. Charzyński, K. Turzyński, A. Dragan, A. Ekert. *Covariant quantum field theory of tachyons*. Phys. Rev. D **109** (2024). arXiv:2308.00450
+25. K. Jodłowski. *Covariant quantum field theory of tachyons is unphysical*. Phys. Rev. D **110** (2024) 115042. arXiv:2406.14225
+26. K. Jodłowski. *Is a covariant virtual tachyon viable?*. Phys. Rev. D **113** (2026) 065016. arXiv:2602.20474
+27. J. Rembieliński. *Quantization of the tachyonic field and the preferred frame*. arXiv:hep-ph/9509219
+28. V. F. Perepelitsa. *Looking for a theory of faster-than-light particles*. arXiv:1407.3245
+29. F. L. Villante, F. Vissani. *On the generality of the Cohen and Glashow constraints on the neutrino velocity*. arXiv:1110.4591
+30. R. Horodecki. *Comment on 'Quantum principle of relativity'*. New J. Phys. **25** (2023) 128001. arXiv:2301.07802
+31. F. Del Santo, S. Horvat. *Comment on 'Quantum principle of relativity'*. arXiv:2203.03661
+32. A. Grudka, J. Stempin, J. Wójcik, A. Wójcik. *Superluminal observers do not explain quantum superpositions*. Phys. Lett. A **487** (2023) 129127. arXiv:2306.03961
+33. A. Sen, F. Del Santo. *Superluminal transformations and indeterminism*. arXiv:2601.15263
+34. A. Sen, M. Salzger, Ł. Rudnicki. *Superluminal quantum reference frames*. arXiv:2506.11787
+35. M. Sienicki, K. Sienicki. *From kinematics to interference: operational requirements for the quantum principle of relativity*. arXiv:2512.05164
+36. H. G. Winful. *Do single photons tunnel faster than light?*. arXiv:0708.3889
+37. H. Maeda. *Energy conditions for non-timelike thin shells*. Class. Quantum Grav. **40** (2023) 195009. arXiv:2306.07326
+38. M. Mars, J. M. M. Senovilla, R. Vera. *Lorentzian and signature changing branes*. Phys. Rev. D **76** (2007) 044029. arXiv:0705.3380
+39. C. Hellaby, T. Dray. *Failure of standard conservation laws at a classical change of signature*. Phys. Rev. D **49** (1994) 5096. arXiv:gr-qc/9404001
+40. S. A. Hayward. *Comment on "Failure of standard conservation laws at a classical change of signature"*. Phys. Rev. D **52** (1995) 7331. arXiv:gr-qc/9606045
+41. C. Hellaby, T. Dray. *Reply comment: comparison of approaches to classical signature change*. Phys. Rev. D **52** (1995) 7333. arXiv:gr-qc/9601040
+42. S. A. Hayward. *Comment on "Comparison of approaches to classical signature change"*. arXiv:gr-qc/9606044
+43. M. Lienert, S. Petrat, R. Tumulka. *Multi-time wave functions versus multiple timelike dimensions*. Found. Phys. **47** (2017) 1582. arXiv:1708.03376
+44. D.-A. Deckert, L. Nickel. *Consistency of multi-time Dirac equations with general interaction potentials*. J. Math. Phys. **57** (2016) 072301. arXiv:1603.02538
+45. T. Dray, C. A. Manogue, R. W. Tucker. *Particle production from signature change*. Gen. Rel. Grav. **23** (1991) 967.
+46. T. Dray, C. A. Manogue, R. W. Tucker. *The scalar field equation in the presence of signature change*. Phys. Rev. D **48** (1993) 2587. arXiv:gr-qc/9303002
+47. J. D. Romano. *Scalar and spinor fields in signature-changing spacetimes*. Phys. Rev. D **47** (1993) 4328.
+48. T. Dray, C. A. Manogue, R. W. Tucker. *Boundary conditions for the scalar field in the presence of signature change*. Class. Quantum Grav. **12** (1995) 2767. arXiv:gr-qc/9501034
+49. S. A. Hayward. *Comment on "Boundary conditions for the scalar field in the presence of signature change"*. arXiv:gr-qc/9502001
+50. W. Duane. *The transfer in quanta of radiation momentum to matter*. Proc. Natl. Acad. Sci. USA **9** (1923) 158.
+51. O. M. P. Bilaniuk, V. K. Deshpande, E. C. G. Sudarshan. *"Meta" relativity*. Am. J. Phys. **30** (1962) 718.
+52. G. Feinberg. *Possibility of faster-than-light particles*. Phys. Rev. **159** (1967) 1089.
+53. G. A. Benford, D. L. Book, W. A. Newcomb. *The tachyonic antitelephone*. Phys. Rev. D **2** (1970) 263.
+54. L. J. Alty. *Kleinian signature change*. Class. Quantum Grav. **11** (1994) 2523.
+55. L. J. Alty, A. Chamblin. *Spin structures on Kleinian manifolds*. Class. Quantum Grav. **11** (1994) 2411.
+56. R. J. Nemiroff, D. M. Russell. *How superluminal motion can lead to backward time travel*. The Winnower (2015). arXiv:1505.07489
+57. M. Alcubierre. *The warp drive: hyper-fast travel within general relativity*. Class. Quantum Grav. **11** (1994) L73. arXiv:gr-qc/0009013
