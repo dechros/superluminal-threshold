@@ -19,9 +19,9 @@ namespace slm
         const std::vector<std::string> &exclusions()
         {
             static const std::vector<std::string> list = {
-                "varsayılmaz",         "varsayılmamış",         "varsaymadan",
-                "varsayım yapmadan",   "varsayım eklenmemiş",   "varsayılmak yerine",
-                "varsayım **değildir**", "varsayım değildir"};
+                "varsayılmaz",       "varsayılmamış",       "varsaymadan",
+                "varsayım yapmadan", "varsayım eklenmemiş", "varsayılmak yerine",
+                "varsayım **değil",  "varsayım değil"};
             return list;
         }
 

@@ -3736,8 +3736,10 @@ kapsar; tarama ikisini tek kelimeden ayırt edemediği için bu hüküm gereklid
 bu bölümün kendisi de o hükümle sicildedir. Yalnızca inanılan bir varsayım için
 hüküm yoktur; sınıfın varlık nedeni budur.
 
-Denetimin bulduğu durum: metin $14$ bölümde varsayım kelimesini ileri sürer
-biçimde kullanıyor, sicilde $17$ kalem var, ve kapsanmayan pasaj yok. Dağılım:
+Denetimin bulduğu durum: metin $13$ bölümde varsayım kelimesini ileri sürer
+biçimde kullanıyor, sicilde $17$ kalem var — sicil kapsayandan geniştir, çünkü
+sonradan olumsuzlanan bir ifade taramadan düşse de hükmü kayıtta kalır — ve
+kapsanmayan pasaj yok. Dağılım:
 $2$ türetilmiş, $1$ iki yönlü hesaplanmış, $2$ geçersiz kılınmış, $4$ başka bir
 kurguya ait, $5$ ilan edilmiş sınırlama, $3$ de varsayım yapmayıp varsayımdan
 söz eden pasaj. Yani bu metnin **kendi** taşıdığı varsayımlar yalnızca o beş
@@ -4456,6 +4458,68 @@ Dokuz anlaşmazlıktan beşi tek bir hesabın iki okuması olarak birleştirilmi
 dördü gerçek çelişki olarak ayakta bırakılmıştır. Kapsayıcı yöntem
 anlaşmazlıkların yarısından fazlasını soğurmakta, geri kalanı hakkında ise
 sessiz kalmak yerine hangi ölçümün karar vereceğini söylemektedir.
+
+---
+
+## 28. Sonuç: zincirin tek yerde yazılması
+
+Önceki bölümler zincirin halkalarını ayrı ayrı kurdu. Bu bölüm halkaları tek bir
+yerde birleştirir ve her birinin nerede kurulduğunu gösterir. Yeni bir hesap
+içermez; içerdiği tek yeni şey, iddianın **tam olarak ne kadar** olduğunun tek
+cümlede sabitlenmesidir.
+
+**Zincir.**
+
+1. **İmza değişimini yapan dönüşüm zorunludur.** $384$ işaretli permütasyon
+   matrisi taranır; metrik bağıntısı $96$'ya, involüsyon $12$'ye, birim
+   determinant $8$'e indirir. Hiçbir aday baştan seçilmez (Bölüm 2.1).
+2. **Ayakta kalan sekizin hepsi Bölge I'in zamanını Bölge II'nin tek uzay
+   eksenine gönderir.** Ortak eksen taramanın sonucudur, kurgunun girdisi
+   değildir (Bölüm 2.1).
+3. **Sözlüğün katsayısı tam olarak birdir.** Zaman koordinatını üreten satırın
+   tek bir sıfırdan farklı girdisi vardır, o girdi ayırt edilmiş eksendedir ve
+   büyüklüğü birdir. Öte tarafın diğer üç ekseninin bu yuvaya katkısı tam olarak
+   sıfırdır (Bölüm 2.1.1).
+4. **Eşlenik değişkenler için de birdir.** İşaretli permütasyon ortogonaldir,
+   dolayısıyla momentumlar koordinatlarla aynı matrisle taşınır; aynı matris
+   involüsyon olduğundan simetriktir, dolayısıyla eşlenik katsayı koordinat
+   katsayısının aynı sayısıdır. $|\mathrm{d}\kappa/\mathrm{d}\omega| = 1$
+   sekiz geçişin tamamında tamdır ve dispersiyon bağıntısına bağlı değildir
+   (Bölüm 2.1.2).
+5. **Gecikme ile yer değiştirme toplanır.** Yer değiştirme fazın içine
+   konduğunda varış anı tek bir durağan faz koşulundan okunur; toplama iki
+   hesabın arasına yerleştirilen bir varsayım değil, bir sonuçtur (Bölüm 2.1.2).
+6. **Gecikme kalınlığa doyar, yer değiştirme doymaz.** Doyum bir tabloda fark
+   edilen bir olgu değil, kapalı biçimin bir özdeşliğidir: formülde kalınlık
+   geçmez (Bölüm 25.7).
+7. **Dolayısıyla bir eşik mesafesi vardır ve ötesinde varış, girişten öncedir.**
+   Öklidyen ara bölge, $d = 8$, $c = \mu = 1$ için eşik $2{,}565988$'dir
+   (Bölüm 2.1.3).
+
+**Sonucun ifadesi.**
+
+> Öte tarafın tek uzay ekseninde $s$ kadar yer değiştirmek, Bölge I'in saatinde
+> tam olarak $s$ kadar yer değiştirmektir. Katsayı birdir, uzay
+> koordinatlarına sızıntı sıfırdır, yer değiştirmeler toplanır, ve işaret
+> geometri tarafından sabitlenmemiştir. Doymuş geçiş gecikmesini aşan her $s$,
+> dönüş olayını giriş olayının **öncesine** yerleştirir.
+
+**İddianın sınırı, aynı yerde.** Yukarıdaki zincir bir aritmetiktir ve
+aritmetiği tamdır. Zincirin ne olmadığı da tek cümlede durmalıdır: bir geçişin
+fiziksel olarak kurulabildiğinin gösterimi **değildir**. Üç ayrı yerde ödenen
+bedel bunu belirler — geçirgen okumanın bu metrik ailesinde geometrik bir
+temsilcisi yoktur (Bölüm 3.7), eşiği aşan yapılanmaların genliği $d = 8$'de
+$3{,}46 	imes 10^{-12}$'ye çöker (Bölüm 2.1.5), ve işaretin seçilebilir
+kalması global bir seçicinin bulunmaması koşuluna bağlıdır (Bölüm 8.4).
+
+Bu üçü birbirinden farklı türdendir ve karıştırılmamalıdır. İkincisi bir
+büyüklük sorunudur. Üçüncüsü bir açık sorudur. **Birincisi ise bu modelin
+içindeki bir boşluktur** ve kapatılması bu çalışmanın dışındadır. Zincirin
+kendisi bu boşluktan bağımsız olarak doğrudur; zincirin bir deneye bağlanması
+değildir.
+
+> Bu çalışmanın söylediği şudur: böyle bir geçiş kurulabilirse, dönüş anının
+> nereye düştüğü serbest bir yorum değil, hesaplanmış bir sayıdır.
 
 ---
 
