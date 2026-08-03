@@ -58,6 +58,16 @@ namespace slm
         /// failure.
         static int controlCharacters(const std::string &text);
 
+        /// Section identifiers the text refers to as belonging to its appendix,
+        /// that are not in fact placed there.
+        ///
+        /// A reference that resolves is not thereby correct. A rewrite that
+        /// applies a mapping twice leaves every reference pointing at some
+        /// section, just not the intended one, and an existence check passes.
+        /// This one is stronger where it can be: a reference announced as an
+        /// appendix must land after the heading that opens the appendix.
+        static std::vector<std::string> appendixReferencesOutsideIt(const std::string &text);
+
         /// Dispositions the text declares as permissible.
         static std::vector<std::string> vocabulary(const std::string &text);
 
