@@ -58,6 +58,13 @@ namespace slm
         /// failure.
         static int controlCharacters(const std::string &text);
 
+        /// Whether the text opens with a title at the top level.
+        ///
+        /// A rewrite that rebuilds the document from its blocks can drop the
+        /// block that was never numbered, and every check keyed on numbers will
+        /// still pass. This one is keyed on the thing that has no number.
+        static bool carriesTitle(const std::string &text);
+
         /// Section identifiers the text refers to as belonging to its appendix,
         /// that are not in fact placed there.
         ///

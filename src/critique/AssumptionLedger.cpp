@@ -209,6 +209,19 @@ namespace slm
         return count;
     }
 
+    bool AssumptionLedger::carriesTitle(const std::string &text)
+    {
+        for (const std::string &line : lines(text))
+        {
+            if (line.empty())
+            {
+                continue;
+            }
+            return line.rfind("# ", 0) == 0 && line.rfind("## ", 0) != 0 && line.size() > 8;
+        }
+        return false;
+    }
+
     std::vector<std::string> AssumptionLedger::appendixReferencesOutsideIt(const std::string &text)
     {
         const auto all = lines(text);
@@ -407,6 +420,10 @@ namespace slm
                                  "character its escape names",
                                  AssumptionLedger::controlCharacters(document)),
                      AssumptionLedger::controlCharacters(document) == 0);
+        report.check("its first line is a title at the top level, which is the one block the "
+                     "text carries without a number and so the one a renumbering cannot miss "
+                     "losing",
+                     AssumptionLedger::carriesTitle(document));
         for (const std::string &wanted : AssumptionLedger::appendixReferencesOutsideIt(document))
         {
             report.check(std::format("  section {} is referred to as an appendix but is not "
