@@ -680,9 +680,22 @@ $1{,}81\times10^{-7}$ verir. Toplamın sabitlediği şey üsteldir, önçarpan
 değildir. Yayınlanmış ifade tam olarak bu kadarını söyler; buradaki hesap onu
 ne genişletir ne daraltır.
 
-Bu tablonun kendine ait olan kısmı **Kleinian satırıdır**; orada iç mod yayıldığı
-için genişlik tek başına yetmez, ve o satırın literatürde bir öncülü
-bulunmamaktadır.
+Kleinian satırının da öncülü vardır ve bu satır bir kez fazla iddialı yazıldıktan
+sonra düzeltilmiştir. [63] düz bir arka planda metriğin Lorentz imzasından
+Kleinian imzaya geçtiği durumda düzlem dalgaların yayılmasını ele alır; geçiş
+süreksiz olduğunda tamsayı ve yarım tamsayı spinli maddenin farklı davrandığını
+bulur, ve spin yapısı tarafı [64]'tedir. Dolayısıyla "Lorentz'den Kleinian'a
+geçen dalga" sorusu 1994'te sorulmuştur.
+
+Buradaki tablonun ona eklediği şey **sonlu kalınlıktır**. [63] tek bir imza
+değişimi yüzeyinden geçişi ele alır; buradaki hesapta ara bölgenin iki yüzü ve
+aralarında bir kalınlığı vardır, ve tablonun anlattığı şey de o kalınlığın
+işlevidir: Öklid bölge kalınlıkla kapanırken Kleinian bölge kapanmaz, çünkü iki
+yüz arasında yayılan bir iç mod bir girişim odası kurar. Salınımın kendisi
+kalınlığın ürünüdür ve tek yüzlü bir hesapta görünmez.
+
+Bu tablonun kendine ait olan kısmı, dolayısıyla, Kleinian imzanın kendisi değil
+**iki yüz arasındaki girişimdir**.
 
 ### 3.4 Eşiğin taşıdığı madde katmanı
 
@@ -830,7 +843,7 @@ geçirgen eşik okuması, bu metrik ailesinde bir temsilci bulamamaktadır.
 bağlar: metrik ara değerlemesinin dönüm noktasındaki davranışını. Bu çalışmada
 mod geçirgenliği ayrı bir eksende hesaplanmaktadır; ara bölgenin tipine bağlıdır,
 ara değerleme profiline değil. İki eksen kodda bağımsızdır. Bu bağımsızlığın
-fiziksel olarak savunulabilir olup olmadığı gösterilmemiştir ve Bölüm 27.3'te
+fiziksel olarak savunulabilir olup olmadığı gösterilmemiştir ve Bölüm 27.4'te
 açık olarak kaydedilmiştir. Geçirgen okumanın daha geniş bir geçiş ailesinde
 ayakta kalıp kalmayacağı da orada açıktır.
 
@@ -1586,7 +1599,7 @@ edilebilir tek yapılanma, aynı zamanda ok üretmeyen yapılanmadır. Bölüm 3
 kaydettiği bağımsızlık burada da geçerlidir: kanal entropisi ara bölgenin
 tipinden hesaplanır, ara değerleme profilinden değil. O bağımsızlığın fiziksel
 gerekçesi gösterilmediği sürece bu bölümün sonuçları da aynı koşula bağlıdır ve
-Bölüm 27.3'te açık olarak durmaktadır.
+Bölüm 27.4'te açık olarak durmaktadır.
 
 ---
 
@@ -2443,6 +2456,15 @@ değildir, ikisi de aynı vektörün parçalarıdır. Ve "hiç çıkmaz" satır�
 üçüncü bir okuma girer: negatif enerjili bir varış, sıradan bir gözlemciye
 parçacık yerine karşıparçacık gibi görünebilir, ki bu literatürdeki çift
 yaratımı okumasıyla aynı yere düşer.
+
+Bu okumanın adı ve önceliği vardır. [61]'in **yeniden yorumlama ilkesi** tam
+olarak bunu söyler: negatif enerjiyle zamanda geriye giden bir çözüm, pozitif
+enerjiyle ileri giden bir karşıparçacıktan ayırt edilemez. Yukarıdaki hesap o
+ilkeyi doğrulamakta, kurmamaktadır; ilke 1967'ye aittir. Buradaki hesabın
+eklediği şey ayırt edilemezliğin **hangi nicelikten** çıktığıdır: işaret, çıkış
+yüzünü belirleyen vektörün aynı bileşenidir, dolayısıyla "hangi yüz" ile "hangi
+işaret" bağımsız iki soru değildir. Ayırt edilemezliğin nerede kırıldığı
+Bölüm 27.7'ya bırakılmıştır.
 
 **Çekince.** Bu bölümde hesaplanan şey, dispersiyon bağıntısının iki dalı da
 kabul ettiği ve yönelim yönünün geçiş dalga sayısını değiştirmediğidir. "Öte
@@ -3387,7 +3409,7 @@ sınırlar, integrale uydurulmuş değildir.
 
 **Bu maddeyi kapatmaz, daraltır.** Hesap, minisüperuzay biçimi üzerinde
 yapılmıştır; iki geçişin ortak genliğinin kendisi üzerinde yapılmamıştır.
-Bölüm 27.3'teki madde bu nedenle açık kalmaya devam eder, ama artık "hiçbir
+Bölüm 27.4'teki madde bu nedenle açık kalmaya devam eder, ama artık "hiçbir
 ölçüt sınanmadı" değil, "sınanan ölçüt tutarlı çıktı, ama indirgenmiş biçimde"
 demektedir.
 
@@ -3890,10 +3912,10 @@ Sicil üç durum ayırır ve sayıları kendisi üretir:
 
 | Durum | Anlamı | Kaç |
 |-------|--------|-----|
-| Yeniden üretilmiş | Buradaki bir kütüphane sonucu bağımsız olarak hesaplar ve değeri karşılaştırılabilir | $33$ |
-| İtibara alınmış | Sonuç yeniden hesaplanmadan kullanılır; doğruluğu bu çalışmanın güvencesi altında değildir | $14$ |
+| Yeniden üretilmiş | Buradaki bir kütüphane sonucu bağımsız olarak hesaplar ve değeri karşılaştırılabilir | $35$ |
+| İtibara alınmış | Sonuç yeniden hesaplanmadan kullanılır; doğruluğu bu çalışmanın güvencesi altında değildir | $15$ |
 | Yalnızca bağlam | Konumlandırma için anılır, ondan hiçbir sonuç çıkarılmaz | $7$ |
-| **Toplam** | | $54$ |
+| **Toplam** | | $57$ |
 
 Sicilde bir denetim vardır: "yeniden üretilmiş" işaretli her girdi, onu üreten
 kütüphaneyi **adıyla** taşımak zorundadır. Adı olmayan bir yeniden üretim iddiası
@@ -3902,7 +3924,7 @@ doğrulamayı düşürür. Bu, sicilin var olma nedenidir.
 Sicilin son üç kalemi bir literatür taramasının ürünüdür ve nasıl eklendikleri
 kaydedilmelidir. Tarama, "karşılığı yok" diye kaydedilmiş sonuçların gerçekten
 karşılıksız olup olmadığını sınamak için yapılmıştır ve biri karşılıklı
-çıkmıştır (Bölüm 27.1). Bulunan çalışmanın sonucu yeniden üretilmiş, ikisi
+çıkmıştır (Bölüm 27.2). Bulunan çalışmanın sonucu yeniden üretilmiş, ikisi
 itibara alınmıştır. Buradan çıkan yöntem kuralı şudur: bir sicil neyin
 **içinde** olduğunu denetleyebilir, neyin dışında bırakıldığını denetleyemez.
 Dışarıda kalanı yalnızca arama bulur, ve arama denetlenmiş bir işlem değildir.
@@ -3911,7 +3933,7 @@ Dışarıda kalanı yalnızca arama bulur, ve arama denetlenmiş bir işlem değ
 notlarının öncelik tablosundaki $24$ satırdan dördünün burada bir C++ karşılığı
 yoktu ve makalede yalnızca sözle kullanılıyordu. Biri o zamandan beri
 kurulmuştur (lapse kontur ölçütü, Bölüm 22.5), ikisi daha bu turda
-kurulmuştur (çift yok oluşu okuması ve görünür yük, Bölüm 27.3'e bağlanan
+kurulmuştur (çift yok oluşu okuması ve görünür yük, Bölüm 27.4'e bağlanan
 ilgili doğrulama). Geriye **bir** yöntem kalmaktadır ve o da
 kapsam kararı gereğidir. Bunlar açıkça
 kaydedilir, çünkü aksi hâlde Bölüm 25 sağlanmamış bir bütünlük iddia etmiş olur:
@@ -4057,10 +4079,58 @@ iddialardır. **Karşılığı olmayan**, hiçbir yayının kapsamadığı, dola
 yayının aynı soruya farklı sayı verdiği durumlardır; deneyin kapatabileceği tek
 sınıf budur.
 
-### 27.1 Geri çekilenler
+### 27.1 Omurganın kinematik çekirdeği yeni değildir
 
-Beşi de fikir değişikliğiyle değil, bir hesapla ya da bir kaynakla geri
-çekilmiştir. İkisi literatürün bu çalışmaya karşı, üçü bu çalışmanın kendi
+Bu bölümün en başına konması gereken kayıt budur, çünkü çalışmanın ana iddiasına
+dokunur. Omurga şudur: öte tarafta mekânda mesafe kat etmek, bu tarafa daha erken
+bir ana dönmeyi verir. Bu adımın kendisi **yeni değildir ve altmış yıllıktır**.
+
+[60] üstışık hızlı parçacıkların özel görelilikle çelişmediğini, yaratıldıkları
+andan itibaren o hızda olmaları koşuluyla gösterir. [61] bu parçacıklara ad verir
+ve negatif enerjili, zamanda geriye giden bir çözümün ileri giden bir
+karşıparçacıktan ayırt edilemediğini söyleyen **yeniden yorumlama ilkesini**
+kurar. [62] ise adımı en açık biçimde yazar: zaman-benzeri parçalarla üstışık
+sinyallerden kapalı bir ilmek kurulur ve cevabın soru gönderilmeden önce vardığı
+gösterilir.
+
+Dolayısıyla "mesafeyi yeterince hızlı kat et, geçmişe var" cümlesi bu çalışmanın
+bulgusu değildir; 1970'te yazılmıştır. Farklı olan, ne için yazıldığıdır.
+
+| | [60], [61], [62] | Buradaki çalışma |
+|---|---|---|
+| Adımın statüsü | Bir **çelişki** üretmek için kurulur | Bir **mekanizma** olarak kurulur |
+| Amaç | Üstışık sinyalin reddedilmesi ya da yeniden yorumlanması | Dönüş olayının koordinatlarının hesaplanması |
+| Üstışık kısım | Postülalanmış bir sinyal | İmza değişimi eşiğinden geçen bir mod |
+| Kütle | Takyon, yani sanal kütle | Bu taraftaki sıradan kütleli parçacık |
+| Verilen nicelik | Bir işaret çelişkisi | Dönüş anı, çıkış yüzü, bedel |
+
+Aradaki asıl fark üçüncü satırdır. [62]'nin ilmeği üstışık sinyali **hazır kabul
+eder**; onun nasıl olabileceği sorusu açık bırakılır ve sonuç bir *reductio*
+olarak kullanılır. Bu çalışma o boşluğu doldurmayı dener: üstışık kısım
+postülalanmaz, iki
+imza arasındaki bir eşikten geçiş olarak kurulur, ve o eşiğin geçirgenliği,
+taşıdığı madde katmanı ve bedeli hesaplanır. Çelişkinin kendisi de reddedilmez;
+Bölüm 24 ve Bölüm 27.5 onun hangi biçimlerinin kapanmadığını sayar.
+
+İkinci fark beşinci satırdadır ve daha somuttur. [62] işaretin ters
+dönebileceğini gösterir, dönüşün **nereye** düştüğünü vermez. Bu çalışmanın
+çekirdeği o eşlemedir (Bölüm 19), ve karşılığı bulunamayan da odur (Bölüm 27.3).
+
+Yeniden yorumlama ilkesinin ayrıca **rakip bir okuma** olduğu kaydedilmelidir.
+[61]'e göre negatif enerjiyle geriye varan bir parçacık, ileri giden bir
+karşıparçacıktan ayırt edilemez. Bu, bu çalışmanın bağımsız olarak vardığı yerin
+ta kendisidir: Bölüm 17.3'te karşı yüzden dönüşün negatif enerjili bir varış gibi
+göründüğü hesaplanmakta, Bölüm 27.7'da ise dönmüş bir dünya çizgisinin sınır
+sayımında yaratılmış bir çiftten ayırt edilemediği gösterilmektedir. İkisi de
+[61]'in söylediğinin bu geometrideki karşılığıdır ve öncelik ona aittir. Buradaki
+katkı, ayırt edilemezliğin **nerede** kırıldığını aramaktır: sayım ve görünür yük
+ayırt etmez, enerji bütçesi ayrışır, ve o bütçeyi sınırda ölçecek düzenek tarif
+edilmemiştir (Bölüm 27.4).
+
+### 27.2 Geri çekilenler
+
+Altısı da fikir değişikliğiyle değil, bir hesapla ya da bir kaynakla geri
+çekilmiştir. İkisi literatürün bu çalışmaya karşı, dördü bu çalışmanın kendi
 kendine yaptığı düzeltmedir.
 
 | İddia | Durumu | Geri çekilme gerekçesi |
@@ -4070,18 +4140,20 @@ kendine yaptığı düzeltmedir.
 | Doyan gecikme hızlı bir geçiştir | Geri çekildi | O rejimde gecikme, depolanan normun sabit bir katıdır |
 | Geçirgen eşik enerji bakımından zararsızdır | Geri çekildi | Katman taşıyan her profil baskın koşulu ihlal eder |
 | İmza değişimi boyunca geçirgenliğin literatürde karşılığı yoktur | Geri çekildi | [54], [55], [56] bu hesabı yapmıştır; Öklid hâli yeniden üretilmiş bir sonuçtur (Bölüm 3.3) |
+| Kleinian imzaya geçen dalganın literatürde öncülü yoktur | Geri çekildi | [63] ve [64] bu geçişi 1994'te ele almıştır; kendine ait kalan, tek yüz değil iki yüz arasındaki girişimdir (Bölüm 3.3) |
 
-Son üçü bu çalışmanın kendi sonuçlarını geri çekmesidir ve bu, bilançonun
+Son dördü bu çalışmanın kendi sonuçlarını geri çekmesidir ve bu, bilançonun
 bir zafer listesi olmadığının doğrudan kanıtıdır.
 
-Beşincisi ayrıca bir yöntem dersidir: "literatürde karşılığı yok" bir hesap
+Son ikisi ayrıca aynı yöntem dersidir: "literatürde karşılığı yok" bir hesap
 sonucu değil, bir **arama** sonucudur, ve arama yeterince geniş yapılmadığında
-sessizce yanlış çıkar. Bu satır, kaynakçanın imza değişimi tarafında yerçekimi
-makalelerini taşıyıp alan yayılımı makalelerini taşımadığı fark edilince
-düşmüştür. Karşılığı olmayan bir sonuç ileri sürmek, dolayısıyla, hesabın
-kendisinden daha kırılgan bir iddiadır.
+sessizce yanlış çıkar. İkisi de tek bir taramada, kaynakçanın imza değişimi
+tarafında yerçekimi makalelerini taşıyıp alan yayılımı makalelerini taşımadığı
+fark edilince düşmüştür. Karşılığı olmayan bir sonuç ileri sürmek, dolayısıyla,
+hesabın kendisinden daha kırılgan bir iddiadır: hesabı bir kütüphane denetler,
+aramayı hiçbir şey denetlemez.
 
-### 27.2 Karşılığı olmayanlar
+### 27.3 Karşılığı olmayanlar
 
 Üç konuda literatürde karşılaştırılacak bir sonuç yoktur. Bunlar özgünlük
 iddiası değil, **yalnızlık** kaydıdır: sayı doğru olsa da yanlış olsa da
@@ -4089,19 +4161,30 @@ kontrol edecek bir muhatap bulunmamaktadır.
 
 | Soru | Durum |
 |------|-------|
-| Yayılımlı ara bölgenin geçirgenliği | Yayınlanmış hesap yok; Öklid hâlinin öncülü vardır, Kleinian hâlinin yoktur |
+| İki eşik yüzü arasındaki girişim | Tek yüzden geçiş hesaplanmıştır; iki yüz arasında yayılan bir iç modun kurduğu girişim odası hesaplanmamıştır |
 | Paketin merkezinin geçişte kayması | Frekans karışımı hesaplanmıştır; paketin merkezini izleyen bir çalışma yoktur |
 | Öte taraftaki yönelimden dönüş olayına eşleme | Yayınlanmış çalışma yok |
 
-İlk iki satır bu bölümün ilk yazımında olduğundan **daha dar** tutulmuştur ve
-gerekçesi kaydedilmelidir. İmza değişimi boyunca geçirgenliğin hiç
-hesaplanmadığı yazılıydı; bu yanlıştı. [54], [55] ve [56] tam olarak bunu
-yapmaktadır, ve Öklid bölgesi için buradaki sonuç onların sonucunun dört
-boyutlu, kütleli hâlidir (Bölüm 3.3). Karşılığı olmayan, yayılımlı iç modun
-bulunduğu Kleinian hâldir. Aynı biçimde, "imza değişiminden geçen dalga paketi"
-diye bir öncül olmadığı yazılıydı; frekans karışımı olarak vardır. Karşılığı
-olmayan, paketin **merkezinin** nereye düştüğü, yani geçişin bir varış anı
-olarak okunmasıdır (Bölüm 14.2).
+İlk iki satır bu bölümün ilk yazımında olduğundan **belirgin biçimde daha dar**
+tutulmuştur ve gerekçesi kaydedilmelidir, çünkü daralma iki turda olmuştur.
+
+Önce, imza değişimi boyunca geçirgenliğin hiç hesaplanmadığı yazılıydı; bu
+yanlıştı. [54], [55] ve [56] tam olarak bunu yapmaktadır ve Öklid bölgesi için
+buradaki sonuç onların sonucunun dört boyutlu, kütleli hâlidir (Bölüm 3.3).
+Ardından, geriye kalan Kleinian hâlin karşılıksız olduğu yazılıydı; bu da
+yanlıştı. [63] Lorentz'den Kleinian'a geçen düzlem dalgaları 1994'te ele
+almıştır. Karşılığı olmayan, üçüncü denemede, ne imzanın kendisi ne tek bir
+yüzden geçiştir: sonlu kalınlıktaki bir ara bölgenin **iki yüzü arasında** kurulan
+girişimdir, ve o girişim tek yüzlü bir hesapta görünmez.
+
+Aynı biçimde, "imza değişiminden geçen dalga paketi" diye bir öncül olmadığı
+yazılıydı; frekans karışımı olarak vardır. Karşılığı olmayan, paketin
+**merkezinin** nereye düştüğü, yani geçişin bir varış anı olarak okunmasıdır
+(Bölüm 14.2).
+
+Bir satırın üç turda daralması, o satırın taşıdığı riski de göstermektedir: bu
+tablo bir sonucun doğruluğunu değil, aranmış olduğunu kaydeder, ve arama
+tükenmiş sayılamaz.
 
 Üçüncüsü bu çalışmanın çekirdeğidir; dolayısıyla çekirdek, üzerinde
 kıyaslanacak literatürü bulunmayan bir sorudur. Bu hem fırsat hem risktir ve
@@ -4112,14 +4195,14 @@ ikisi de kaydedilmelidir.
 sorusu olarak ele almış, bir varış anı sorusu olarak ele almamıştır. Bu
 çalışmanın durduğu yer tam olarak orasıdır.
 
-### 27.3 Açık kalanlar
+### 27.4 Açık kalanlar
 
 | Soru | Elde olan | Eksik olan |
 |------|-----------|------------|
 | Sonuçlar arasındaki dağılım | Sapmaların üç değerli bir kümede olduğu | Her değere düşen ağırlık |
 | Yer çekimi kanalı | Tepki verdiği, yarım birimde $4{,}0000$ karşıtlık | Kanalın kapasitesi |
 | Karmaşık zaman kurgusu | Dönüş anını veren mekanizma; lapse kontur ölçütü hesaplanmış ve tutarlı çıkmıştır (Bölüm 22.5) | Ölçütün iki geçiş genliğinin kendisi üzerinde uygulanması; indirgenmiş biçimde kalmıştır |
-| Dönen parçacık ile yaratılmış çift | Sınır sayımının ve görünür yükün ikisinde de **aynı** olduğu, enerji bütçesinin ise ayrıştığı (Bölüm 27.6) | Enerji bütçesini sınırda ölçecek düzenek; tarif edilmemiştir |
+| Dönen parçacık ile yaratılmış çift | Sınır sayımının ve görünür yükün ikisinde de **aynı** olduğu, enerji bütçesinin ise ayrıştığı (Bölüm 27.7) | Enerji bütçesini sınırda ölçecek düzenek; tarif edilmemiştir |
 | Geçiş süresinin hangi okuması fiziksel | Beş okumanın hepsinin aynı genlikten hesabı | Aralarında seçim; üçü ışığın üstünde, ikisi altında |
 | Geçirgen eşiğin oran koşulu karşısındaki durumu | Bu ailede hiçbir profilin hem katman taşıyıp hem oran koşulunu sağlamadığı | Daha geniş bir geçiş ailesinde temsilci; aranmamıştır |
 
@@ -4130,27 +4213,27 @@ Dördüncüsü özellikle ağırdır: dönen parçacık ile yaratılan çift, en
 büyüklüğünde uyuşup sayımda ayrışır, ve sayımı yapacak düzenek
 tarif edilmemiştir. Gidiş dönüşün gözlenebilir olması buna bağlıdır.
 
-### 27.4 Tartışmalılar
+### 27.5 Tartışmalılar
 
 Dört tanedir ve Bölüm 30.3'te iki rakip sayısıyla birlikte verilmiştir; burada
 tekrarlanmaz. Ayırt edici özellikleri, bakış açısı değiştirilerek
 kaldırılamamalarıdır.
 
-### 27.5 Bilanço
+### 27.6 Bilanço
 
 | Sınıf | Sayı |
 |-------|------|
-| Geri çekilen | $5$ |
+| Geri çekilen | $6$ |
 | Karşılığı olmayan | $3$ |
 | Açık | $6$ |
 | Tartışmalı | $4$ |
-| **Toplam** | $18$ |
+| **Toplam** | $19$ |
 
 Geri çekilenlerin sayısı, açık ve tartışmalı olanların toplamını aşmamaktadır.
 Bu, bilançonun kasıtlı bir ölçütüdür: kapatılan soruların sayısı, açık
 bırakılanları geçtiğinde hesap değil beyan yapılıyor demektir.
 
-### 27.6 Sınırda görülen: dönmüş dünya çizgisi ile yaratılmış çift
+### 27.7 Sınırda görülen: dönmüş dünya çizgisi ile yaratılmış çift
 
 Bu bölüm, yukarıdaki dördüncü açık maddeyi kapatmaz ama **keskinleştirir**
 
@@ -4868,3 +4951,14 @@ sessiz kalmak yerine hangi ölçümün karar vereceğini söylemektedir.
 **Nicelenmiş momentum aktarımı**
 
 59. W. Duane. *The transfer in quanta of radiation momentum to matter*. Proc. Natl. Acad. Sci. USA **9** (1923) 158.
+
+**Takyonik antitelefon ve yeniden yorumlama ilkesi**
+
+60. O. M. P. Bilaniuk, V. K. Deshpande, E. C. G. Sudarshan. *"Meta" relativity*. Am. J. Phys. **30** (1962) 718.
+61. G. Feinberg. *Possibility of faster-than-light particles*. Phys. Rev. **159** (1967) 1089.
+62. G. A. Benford, D. L. Book, W. A. Newcomb. *The tachyonic antitelephone*. Phys. Rev. D **2** (1970) 263.
+
+**Kleinian imzaya geçiş**
+
+63. L. J. Alty. *Kleinian signature change*. Class. Quantum Grav. **11** (1994) 2523.
+64. L. J. Alty, A. Chamblin. *Spin structures on Kleinian manifolds*. Class. Quantum Grav. **11** (1994) 2411.

@@ -7,10 +7,22 @@ mapping to every reference: prose references, appendix references, and the first
 column of any table whose cells are lists of section identifiers. The ledger the
 verification reads is one of those tables, so it moves with the rest.
 
-Each pass touches a line once. Prose replacement skips table rows and cell
-replacement only touches the first column, because applying both to the same
-text would map an already mapped identifier a second time. That failure is quiet:
-the reference still resolves, it just resolves somewhere else.
+Each pass touches a line once. Prose replacement skips table rows, because
+applying both it and the cell pass to the same text would map an already mapped
+identifier a second time. That failure is quiet: the reference still resolves, it
+just resolves somewhere else.
+
+Skipping table rows in the prose pass is not on its own enough. A table row
+carries two different kinds of reference: the first column may be a bare
+identifier, and any later column may carry a prefixed reference in running text.
+An earlier version of this script remapped only the first column, so a prefixed
+reference sitting in a later column was left pointing at whatever section had
+since taken its number. That is the same quiet failure from the other side, and
+it happened: a row naming the section on reversed world lines kept its old number
+after a subsection was inserted above it, and every check passed because the
+number it now named also existed. Both parts of a row are therefore remapped
+here, in one pass, and they cannot collide because the first column holds bare
+identifiers while the remapping of the rest requires a prefix.
 
 Nothing is written unless a reference cannot be mapped, a reference points at a
 section that does not exist, and the text carries no stray control character.
@@ -61,24 +73,42 @@ def renumber(lines):
 
 
 def repoint_cells(lines, mapping, unmapped):
-    """Rewrite identifiers in the first column of reference tables."""
+    """Rewrite references in table rows, first column and running text alike."""
     changed = 0
+
+    def prefixed(match):
+        prefix, number = match.group(1), match.group(2)
+        if number in mapping:
+            return prefix + mapping[number]
+        unmapped.add(number)
+        return match.group(0)
+
     for index, line in enumerate(lines):
-        match = CELL.match(line)
-        if not match:
+        if not line.startswith("|"):
             continue
 
-        def one(inner):
-            value = inner.group(0)
-            if value in mapping:
-                return mapping[value]
-            unmapped.add(value)
-            return value
+        match = CELL.match(line)
+        if match:
+            def bare(inner):
+                value = inner.group(0)
+                if value in mapping:
+                    return mapping[value]
+                unmapped.add(value)
+                return value
 
-        cell = re.sub(r"\d+(?:\.\d+)*", one, match.group(2))
-        if cell != match.group(2):
+            cell = re.sub(r"\d+(?:\.\d+)*", bare, match.group(2))
+            if cell != match.group(2):
+                changed += 1
+            head = match.group(1) + cell + match.group(3)
+            rest = line[match.end():]
+        else:
+            head = ""
+            rest = line
+
+        rewritten = re.sub(REFERENCE, prefixed, rest)
+        if rewritten != rest:
             changed += 1
-        lines[index] = match.group(1) + cell + match.group(3) + line[match.end():]
+        lines[index] = head + rewritten
     return changed
 
 

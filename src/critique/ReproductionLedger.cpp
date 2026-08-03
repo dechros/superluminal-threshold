@@ -57,6 +57,15 @@ namespace slm
             {"what crosses a change of signature is fixed by the total size of the "
              "region and not by the detailed profile within it",
              State::Reproduced, "boundary/ProfiledBarrier"},
+            {"a superluminal signal closed into a loop lets a reply arrive before its "
+             "query, so covering distance fast enough reaches an earlier moment",
+             State::Reproduced, "particle/ArrivalOrder"},
+            {"a solution running backwards in time with negative energy cannot be told "
+             "apart from an antiparticle running forwards",
+             State::Reproduced, "particle/TimeReversalSignature"},
+            {"plane waves crossing from a Lorentzian to a Kleinian signature propagate, "
+             "with matter of integer and half-integer spin behaving differently",
+             State::Used, "none"},
             {"spinor propagation across the change admits no conserved inner product on "
              "the space of solutions",
              State::Used, "none"},
