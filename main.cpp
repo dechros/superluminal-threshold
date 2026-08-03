@@ -17,6 +17,7 @@
 #include "dynamics/EnergyMomentum.h"
 #include "field/KleinGordonField.h"
 #include "field/MaxwellField.h"
+#include "field/ReversalSymmetry.h"
 #include "field/TimeOrientation.h"
 #include "horizon/BlackHoleHorizon.h"
 #include "horizon/DegeneratePath.h"
@@ -81,6 +82,7 @@ namespace
         sections.push_back(std::make_unique<slm::KleinGordonField>());
         sections.push_back(std::make_unique<slm::EnergyMomentum>());
         sections.push_back(std::make_unique<slm::TimeOrientationSection>());
+        sections.push_back(std::make_unique<slm::ReversalSymmetrySection>());
         sections.push_back(std::make_unique<slm::SuperluminalRest>());
         sections.push_back(std::make_unique<slm::DispersionSection>());
         sections.push_back(std::make_unique<slm::SphericalSolution>());

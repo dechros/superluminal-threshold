@@ -666,7 +666,7 @@ eğrinin teğetinin değil, alanın ve eklem koşulunun bir özelliğidir. Dolay
 - Yüzeyden geçen geometrik eğriler vardır.
 - Yüzeyden akı geçmez.
 
-Bu ayrım, Bölüm 8.4'te değinilen ilmek teoremiyle bu modelin eşik sonucunun aynı
+Bu ayrım, Bölüm 8.5'te değinilen ilmek teoremiyle bu modelin eşik sonucunun aynı
 anda doğru olabilmesinin nedenidir: o teorem geometrik eğriler hakkındadır, buradaki
 sonuç alan akısı hakkındadır.
 
@@ -874,9 +874,59 @@ Bölge II'de zamanın oku **yoktur**. Ok, ilgili boyutun **tek** olmasının son
 Üç boyutlu olan eksen kümesi uzay gibi davranır ve yön ayrımı ortadan kalkar.
 Buna karşılık Bölge II'de bir **uzay oku** vardır, çünkü orada $r$ tek eksendir.
 
-Ok entropiden değil, boyut sayısından çıkar.
+Ok entropiden değil, boyut sayısından çıkar. Bu ifade, aşağıdaki alt bölümde
+daraltılmıştır: boyut sayısından çıkan şey **ayrımın varlığıdır**, ayrımın iki
+yakasından hangisinin gelecek olduğu değil.
 
-### 8.4 Zaman yönelimi: neden öte tarafta gelecek ve geçmiş yok
+### 8.4 Ayrımın varlığı ile üzerindeki etiket ayrı iki sorudur
+
+Bir önceki alt bölümün ifadesi iki soruyu birlikte taşımaktadır ve ikisinin
+cevabı farklıdır. Birincisi, bir bölgenin zaman-benzeri vektörlerinin iki
+bileşene ayrılıp ayrılmadığıdır; bu yalnızca pozitif kareli yön sayısına
+bağlıdır ve Bölüm 8.5'te kurulmuştur. İkincisi, ayrım varken geometrinin iki
+bileşenden birini diğerinden ayırt edip etmediğidir. **Etmez**, ve gerekçesi bir
+simetridir.
+
+**Hesap** (`src/field/ReversalSymmetry`). Tek pozitif eksenin işaretini
+çeviren dönüşüm
+
+$$T = \mathrm{diag}(-1, +1, +1, +1)$$
+
+Bölge I metriğini değiştirmez:
+
+$$T^{\mathsf T} \eta\, T = \eta$$
+
+Dolayısıyla $T$ bir izometridir. Aynı zamanda bir involüsyondur, yani iki
+bileşeni sıralamaz, eşler. Ve bileşenleri birbirine taşır: $v = (1,0,0,0)$
+zaman-benzeridir, $Tv = -v$ de zaman-benzeridir, ikisi farklı bileşendedir ve
+aralıkları eşittir. Buradan çıkan sonuç şudur:
+
+> Metrikten üretilen hiçbir nicelik iki bileşeni ayırt edemez, çünkü $T$ altında
+> değişmez olan her nicelik ikisinde aynı değeri alır.
+
+Köşegen bir metrik için dört tek-eksen çevirmesinin dördü de izometridir; bu,
+sonucun tek bir eksenin özelliği olmadığını gösterir. Sonuç köşegenliğe bağlıdır
+ve metrik köşegen dışı terim kazandığı anda yeniden sorulmalıdır; bu çalışmanın
+düz metrik ailesi için sorun değildir, eğri bir uzantısı için açık bir soru
+olarak kalır.
+
+**Bölge II'de sorun bir adım geride başlar.** Orada üç pozitif yön vardır,
+dolayısıyla ayrımın kendisi yoktur (Bölüm 8.5) ve çevrilecek tek eksen de
+yoktur. Yani Bölge I'de var olan ama etiketlenemeyen bir ayrım, Bölge II'de hiç
+yoktur.
+
+İki ifadenin **bağımsız** olduğu ayrıca sınanmıştır: ayrım geometrik bir etiket
+olmadan var olabilir, Bölge I bunun örneğidir; etiket ise ayrım olmadan var
+olamaz, Bölge II bunun örneğidir.
+
+**Bunun bedeli ve kazancı.** Bedel, bu çalışmanın zaman okunu geometriden türetme
+imkânını kaybetmesidir: metrik ayrımı verir, yönü vermez. Kazanç, yönü taşıyan
+şeyin nerede aranacağının elemeyle belirlenmesidir. Geometri elenmiştir;
+geriye durumun kendisi kalır. Bölüm 8.7 bu elemenin sonucunu takip eder ve
+soruyu, iki entropi ölçüsünden hangisinin yönle örtüştüğü biçiminde niceliksel
+olarak sorar.
+
+### 8.5 Zaman yönelimi: neden öte tarafta gelecek ve geçmiş yok
 
 Yukarıdaki ifade sezgiseldir; burada kesinleştirilir. Bir bölgede tutarlı bir
 gelecek-geçmiş ayrımı yapılabilmesi için, zaman-benzeri vektörler kümesinin
@@ -959,7 +1009,7 @@ itiraz açık bir sorudur ve modelin lehine kapatılmış sayılmamalıdır.
 
 ---
 
-### 8.5 Yolculuk ne demek: davranış ihtimallerinin sınıflandırılması
+### 8.6 Yolculuk ne demek: davranış ihtimallerinin sınıflandırılması
 
 Parçacığın öte tarafta yapabilecekleri iki bağımsız etiketle tükenir.
 
@@ -2295,7 +2345,7 @@ bakarak olduğu belirlenir.
 
 ## 18. Yönelim sözlüğü
 
-Bu bölüm Bölüm 8.5'in dokuz hücresini tek tek bu tarafa çevirir, sonra o
+Bu bölüm Bölüm 8.6'nın dokuz hücresini tek tek bu tarafa çevirir, sonra o
 dokuzun gerçekte kaç tane olduğunu yeniden sayar.
 
 ### 18.1 Her hücrede korunan şeyler
@@ -2390,7 +2440,7 @@ dağılımı, hesaplanmamıştır ve modelin en büyük eksiğidir.
 
 ### 18.7 Çıkış yüzünü ne belirliyor
 
-Bölüm 8.5'in iki etiketinden biri çıkış yüzüydü ve orada bağımsız bir etiket
+Bölüm 8.6'nın iki etiketinden biri çıkış yüzüydü ve orada bağımsız bir etiket
 gibi ele alındı. Değil.
 
 **Kurulum.** Ara bölgeyi geçmek, öte tarafın tek uzay ekseni boyunca hareket
@@ -3177,6 +3227,7 @@ ne bölüm numarası ne kaynak numarası bulunur.
 | İmzalar arası yolun dejenerelik derecesi | `src/horizon/DegeneratePath` |
 | Kara delik ufkuyla karşılaştırma | `src/horizon/BlackHoleHorizon` |
 | Lagrangian, alan denklemi, determinizm, zamanın oku | `src/field/KleinGordonField`, `src/field/TimeOrientation` |
+| Nedensel ayrımın varlığı ile üzerindeki etiketin ayrılması | `src/field/ReversalSymmetry` |
 | Enerji ile momentumun takası | `src/dynamics/EnergyMomentum` |
 | Dispersiyon, grup hızı, $O(3)$ ayar fazlalığı | `src/dynamics/Dispersion`, `src/rest/SuperluminalRest` |
 | Küresel simetrik kapalı form çözüm | `src/spherical/SphericalSolution` |
