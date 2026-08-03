@@ -24,6 +24,7 @@
 #include "horizon/LayerEnergyConditions.h"
 #include "horizon/RateCondition.h"
 #include "horizon/SurfaceLayer.h"
+#include "intermediate/ChannelEntropy.h"
 #include "intermediate/DwellTime.h"
 #include "intermediate/IntermediateRegion.h"
 #include "intermediate/SignalFront.h"
@@ -96,6 +97,7 @@ namespace
         sections.push_back(std::make_unique<slm::ModeFilterSection>());
         sections.push_back(std::make_unique<slm::TwoCrossingsSection>());
         sections.push_back(std::make_unique<slm::DwellTimeSection>());
+        sections.push_back(std::make_unique<slm::ChannelEntropySection>());
         sections.push_back(std::make_unique<slm::TraversalClocksSection>());
         sections.push_back(std::make_unique<slm::SignalFrontSection>());
         sections.push_back(std::make_unique<slm::RoundTripSection>());

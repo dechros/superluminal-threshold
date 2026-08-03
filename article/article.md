@@ -1024,6 +1024,71 @@ kısmi dönme, ve tam ters çevirme.
 Üç çarpı üç, dokuz hücrelik bir tablo. Her hücrenin bu tarafta ne göründüğü
 Bölüm 18'de tek tek hesaplanmıştır.
 
+### 8.7 Yönü hangi nicelik taşıyabilir: iki entropi ölçüsünün karşılaştırılması
+
+Bölüm 8.4 geometriyi elemiştir: metrik ayrımı verir, yönü vermez. Bu alt bölüm
+elemenin bıraktığı yerde arar ve iki aday ölçüyü aynı yapılandırmada
+hesaplayarak karşılaştırır. Amaç hangisinin doğru olduğunu ilan etmek değil,
+hangisinin bir yön **taşıyabileceğini** hesapla ayırmaktır.
+
+**Birinci aday: paketin kendi dağılımının entropisi** (`src/particle/RoundTrip`).
+Gelen ve dönen paketin mod dağılımları karşılaştırılır. Bu nicelik zaten
+hesaplanmıştı ve işareti sabit değildir:
+
+| Ara bölge | Paket entropisindeki değişim |
+|-----------|------------------------------|
+| Kleinian | $+0{,}003987$ |
+| Öklid | $-0{,}015524$ |
+
+Bir bölge paketi bulandırabildiği gibi keskinleştirebilir de. **İşareti sabit
+olmayan bir nicelik yön taşıyamaz**, dolayısıyla bu aday elenir.
+
+**İkinci aday: çıkış kanallarının entropisi** (`src/intermediate/ChannelEntropy`).
+Gelen mod tek bir kanaldadır; çıkan, akı korunumunun belirlediği ağırlıklarla iki
+kanala dağılmıştır. Girdi bir nokta, çıktı bir dağılımdır ve bu dağılımın Shannon
+entropisi hesaplanır:
+
+| Ara bölge | Geçirgenlik | Üretilen entropi (nat) |
+|-----------|-------------|------------------------|
+| Kleinian | $0{,}867983$ | $0{,}390202$ |
+| Öklid | $0{,}111180$ | $0{,}348976$ |
+| Dejenere | $0$ | $0$ |
+
+**Bu ölçünün negatif olmaması bir sonuç değil, tanımının bir özelliğidir** ve
+öyle sunulmaktadır. Kanıt değeri taşıyan şey, nerede sıfırlandığı ve nerede
+büyüdüğüdür.
+
+**Sıfırlandığı yerler.** Her şeyi geçiren ya da her şeyi yansıtan bir eşik hiç
+entropi üretmez, çünkü çıktısı da bir noktadır. Dejenere ara bölge sınanan yedi
+kalınlığın hepsinde her şeyi yansıtır, dolayısıyla üretimi özdeş olarak sıfırdır.
+Öklid bölge kalınlaştıkça geçirgenliği sıfıra iner ve üretim yeniden sıfırlanır.
+Yani **üretim kalınlıkta tekdüze değildir**: iki uçta sıfır, arada en büyük.
+
+**En büyüdüğü yer.** İki kanal için üst sınır $\ln 2$'dir ve yalnız Öklid bölge
+bu sınıra ulaşır: $d = 0{,}496$'da geçirgenlik tam olarak yarıdır ve entropi
+sınıra oturur. Kleinian bu sınıra hiç ulaşmaz; en büyük değeri $0{,}390607$'dir,
+çünkü iç modu yayılımlıdır ve geçirgenlik bire yakın kalır.
+
+**Buradan çıkan üç sonuç.**
+
+1. Yönü taşıyabilecek nicelik, paketin şekli değil, eşiğin kararsızlığıdır.
+2. Ok, bölgenin içinden değil **yüzeylerinden** doğar. Bu, Bölüm 24.6'nın
+   bağımsız yoldan bulduğu sonucun aynısıdır: iç bölge düzdür ve hiçbir şey
+   kaydetmez, eğriliğin tamamı iki eşik yüzeyinden gelir. İki hesap farklı
+   araçlarla aynı yeri işaret etmektedir.
+3. Ok, ara bölgenin **tipine ve kalınlığına** bağlıdır; evrensel bir arka plan
+   özelliği değildir.
+
+**Ve buradan çıkan itiraz, bu çalışmanın aleyhinedir.** Bölüm 3.7'de oran
+koşulunu geçen tek profilin güçlü koşulu sağlayan, yani yansıtan profil olduğu
+bulunmuştu. Yansıtan bir eşiğin çıktısı tek kanaldır ve bu bölümün ölçüsüne göre
+**hiç entropi üretmez**. Dolayısıyla bu metrik ailesinde geometrik olarak kabul
+edilebilir tek yapılanma, aynı zamanda ok üretmeyen yapılanmadır. Bölüm 3.7'nin
+kaydettiği bağımsızlık burada da geçerlidir: kanal entropisi ara bölgenin
+tipinden hesaplanır, ara değerleme profilinden değil. O bağımsızlığın fiziksel
+gerekçesi gösterilmediği sürece bu bölümün sonuçları da aynı koşula bağlıdır ve
+Bölüm 26.3'te açık olarak durmaktadır.
+
 ---
 
 ## 9. Orada hareket ve yönelim
@@ -3239,6 +3304,7 @@ ne bölüm numarası ne kaynak numarası bulunur.
 | Eşiğin mod filtresi olması | `src/boundary/ModeFilter` |
 | İki geçişin ortak genliği ve dönüş anı | `src/intermediate/TwoCrossings` |
 | Oyalanma süresi ile fazdan gecikmenin karşılaştırılması | `src/intermediate/DwellTime` |
+| Kanal entropisi: eşiğin ürettiği yön | `src/intermediate/ChannelEntropy` |
 | Lapse konturunun dejenere noktanın hangi tarafından geçtiği | `src/quantum/LapseContour` |
 | Yönlendirilebilirlik ile zorunluluğun ayrılması | `src/particle/FlowAssumption` |
 | Sınırda dönmüş çizgi ile yaratılmış çiftin ayrılması | `src/particle/TimeReversalSignature` |
