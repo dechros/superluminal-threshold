@@ -11,6 +11,7 @@
 #include "critique/ObjectionTests.h"
 #include "critique/OpenQuestions.h"
 #include "critique/Reconciliation.h"
+#include "critique/ReproductionLedger.h"
 #include "critique/SylvesterObstruction.h"
 #include "dynamics/Dispersion.h"
 #include "dynamics/EnergyMomentum.h"
@@ -112,6 +113,7 @@ namespace
         sections.push_back(std::make_unique<slm::CommonFormulasSection>());
         sections.push_back(std::make_unique<slm::ReconciliationSection>());
         sections.push_back(std::make_unique<slm::OpenQuestionsSection>());
+        sections.push_back(std::make_unique<slm::ReproductionLedgerSection>());
         sections.push_back(std::make_unique<slm::FarSideMotionSection>());
         sections.push_back(std::make_unique<slm::TimeProjectionSection>());
         sections.push_back(std::make_unique<slm::FlowAssumptionSection>());
