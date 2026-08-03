@@ -1100,7 +1100,7 @@ $$\phi = e^{i\kappa\xi} + R\,e^{-i\kappa\xi}, \qquad
   \psi = T_+ e^{i\kappa\xi} + T_- e^{-i\kappa\xi}$$
 
 Bölge II'de iki genlik birden tutulur, çünkü orada zaman sıralaması olmadığı için
-"dışarı giden dalga" koşulu **tanımlanamaz** (Bölüm 28.2).
+"dışarı giden dalga" koşulu **tanımlanamaz** (Bölüm 28.1).
 
 İlk gözlem: normal doğrultudaki indirgenmiş denklem iki tarafta da aynıdır,
 
@@ -1846,7 +1846,7 @@ bulunması ve geri dönmesidir. Dolayısıyla "parçacık" sözcüğünün ne an
 geldiği bir ayrıntı değil, bütün hesabın dayanağıdır ve önce sabitlenmelidir.
 
 Sabitlemek zorunludur, çünkü Bölge II'de parçacık kavramı olağan anlamıyla
-mevcut değildir. Bölüm 28.11'de gösterildiği gibi orada pozitif ile negatif frekans
+mevcut değildir. Bölüm 28.2'de gösterildiği gibi orada pozitif ile negatif frekans
 ayrımı, Hamiltonyenin alttan sınırlı olması ve Poincaré grubunun üniter temsili,
 yani parçacık kavramının dayandığı üç yapının üçü de yoktur. Bölge I'de doğal
 görünen bir tanımı öte tarafa taşımak bu yüzden serbest değildir.
@@ -2000,7 +2000,7 @@ koşulu yazılamaz, ancak büyüklüğü
 
 $$|E'| = \sqrt{E_1^2 + E_2^2 + E_3^2} \;\geq\; 0$$
 
-kullanılabilir. Bu gözlem, Bölüm 28.3'teki "kararlı vakum yok" sonucunun klasik
+kullanılabilir. Bu gözlem, Bölüm 28.1'deki "kararlı vakum yok" sonucunun klasik
 habercisidir. Aynı sorun, superluminal boost sonrası parçacıkların negatif enerji
 kazanması biçiminde [40]'de ele alınmış ve kuantum referans çerçeveleri
 genişletilerek çözülmüştür; oradaki çözüm ile buradaki vektör-enerji okuması
@@ -3878,7 +3878,7 @@ modelin aleyhinedir: superluminal nesnelerin kovaryant bir kuantum alan kuramı
 bilinmemektedir, ve bu Bölge II için de geçerlidir.
 
 **7. "İmza değiştiren arka planda kuantum alanı naif olarak sonsuz sayıda
-parçacık üretir."** [12]. Bölüm 28.12'deki "parçacık değil korelasyon" okuması
+parçacık üretir."** [12]. Bölüm 28.2'deki "parçacık değil korelasyon" okuması
 bunu çözmez, sorunun sorulamaz hâle geldiği bir çerçeve önerir. Bu bir cevap
 değildir ve öyle sunulmamaktadır.
 
@@ -4280,7 +4280,7 @@ ile birlikte raporlanmalıdır; yalnız başına verilen bir dönüş anı yanı
 
 Modele özgü olduğu düşünülen sonuçlar: $D$'nin 384 aday arasından zorunlu
 çıkması (Bölüm 2.1), Wick dönüşünde "tek olan ekseni döndür" kuralı ve iki
-bölgenin ortak bir Öklid teorisinin analitik devamları olması (Bölüm 28.8), öte
+bölgenin ortak bir Öklid teorisinin analitik devamları olması (Bölüm 28.4), öte
 taraftaki yönelimden dönüş olayına giden eşlemenin kurulup taranmış olması
 (Bölüm 19), ve iki literatürün ortak formüllerle birleştirilmesi (Bölüm 29.1).
 
@@ -4306,11 +4306,11 @@ bir geçirgenlik verir; ayrıca engelin varlığı gelen alanın mod içeriğine
 | Geçiş süresinin beş okumasından hangisinin fiziksel olduğu | Bölüm 22.6 |
 | $(2,2)$ ara bölgesinin fiziksel olarak savunulabilirliği | Bölüm 7.1 |
 | Üç zamanın olasılık korunumu altında tek zamana çökmesi | Bölüm 8.3 |
-| İmza değiştiren arka planda parçacık üretimi | Bölüm 28.12 |
+| İmza değiştiren arka planda parçacık üretimi | Bölüm 28.2 |
 | Eşik duvarlarının kuantum kararlılığı | Bölüm 4.1 |
-| Geçişin varsayılmak yerine türetilebilmesi | Bölüm 28.10 |
+| Geçişin varsayılmak yerine türetilebilmesi | Kapsam dışı bırakıldı |
 | Yerçekiminin eklem koşulunun ötesine götürülmesi | Bölüm 4.2 |
-| Ayırt edici öngörünün hazırlanabilir bir düzenek gerektirmesi | Bölüm 28.14 |
+| Ayırt edici öngörünün hazırlanabilir bir düzenek gerektirmesi | Kapsam dışı bırakıldı |
 
 Bu listenin uzunluğu bir kusur olarak değil, çalışmanın bulunduğu aşamanın
 kaydı olarak verilmektedir.
@@ -4612,21 +4612,27 @@ Bu bölüm bir alan kuramı kurmaz. Öte tarafta olağan kanonik yapının neden
 hiçbirine dayanmadığını söyler. Ayrıntılı hesaplar `quantum/` kütüphanesinde
 durmaktadır; buradaki özet onların sonuçlarıdır.
 
-**Üç engel, tek kökten.** Bölge II'de eşlenik momentum üç bileşenlidir,
+### 28.1 Üç engel, tek kökten
+
+Bölge II'de eşlenik momentum üç bileşenlidir,
 dolayısıyla tek bir yüzey üzerinde veri vermek başlangıç değer problemini
 belirlemez: **Cauchy yüzeyi yoktur** (28.1). Zaman sıralaması tanımlı
 olmadığından **Feynman propagatörü tanımsızdır** (28.2). Enerji aşağıdan
 sınırlı olmadığından **kararlı bir vakum yoktur** (28.3). Üçü de aynı köke
 bağlıdır: tek olan eksen uzay eksenidir, zaman değil.
 
-**Bunun sonucu, parçacık kavramının tanımsızlığıdır** (28.11). Pozitif ile
-negatif frekans ayrımı değişmez biçimde yapılamaz, dolayısıyla "kaç parçacık
-var" sorusunun cevabı yoktur. Ne var ki teori boş değildir: "ne kadar
-korelasyon var" sorusu cevaplanabilir (28.12).
+### 28.2 Parçacık kavramı tanımsız, ama teori boş değil
+
+Bunun sonucu, **parçacık kavramının tanımsızlığıdır**. Pozitif ile negatif
+frekans ayrımı değişmez biçimde yapılamaz, dolayısıyla "kaç parçacık var"
+sorusunun cevabı yoktur. Ne var ki teori boş değildir: "ne kadar korelasyon
+var" sorusu cevaplanabilir.
 
 > Bölge II bir parçacık teorisi değil, bir **korelasyon teorisidir**.
 
-**Çalışan tek yol, yol integralidir.** Wick dönüşü keyfi değil zorunlu bir
+### 28.3 Çalışan tek yol: yol integrali ve Öklid propagatörü
+
+Wick dönüşü keyfi değil zorunlu bir
 seçim vermektedir: üç zamanı birden döndürmek ıraksar, bileşke yön $O(3)$
 değişmez olmadığı için tanımsızdır, **tek uzay eksenini döndürmek** yakınsar
 (28.5). Bu, $D$'nin zaman eksenini uzay eksenine göndermesiyle tam tutarlıdır:
@@ -4643,20 +4649,25 @@ gerek kalmaz; kanonik yapıda çözülemeyen sıralama problemi yol integralinde
 ortadan kalkar (28.7). Konum uzayında sonuç Bölge I'inkiyle **aynı**
 fonksiyondur.
 
-**Ana bulgu** (28.8): iki bölge, ortak bir Öklid teorisinin iki ayrı analitik
-devamıdır.
+### 28.4 Ana bulgu
+
+İki bölge, ortak bir Öklid teorisinin iki ayrı analitik devamıdır.
 
 > $D$, imzayı değiştiren bir dönüşüm değildir; ortak Öklid teorisinden hangi
 > eksende çıkılacağını seçen operatördür.
 
-**Zincirin buna dayanmadığı, açıkça yazılmalıdır.** Dönüş anı fazdan okunur,
+### 28.5 Zincirin buna dayanmadığı
+
+Dönüş anı fazdan okunur,
 faz da saçılma probleminden gelir. Bölüm 20'deki zincirin hiçbir halkası bir
 vakum tanımına, bir propagatöre ya da bir parçacık sayısına dayanmaz. Bu bölüm
 tümüyle çıkarılsa zincirdeki hiçbir sayı değişmez. Buradaki değeri şudur: öte
 tarafta olağan bir alan kuramının kurulamaması, zincire karşı bir itiraz
 **değildir**, çünkü zincir öyle bir kuramı hiç kullanmamaktadır.
 
-**Kapsam dışı bırakılanlar.** Bu bölümün önceki hali, Casimir etkisini, iki
+### 28.6 Kapsam dışı bırakılanlar
+
+Bu bölümün önceki hali, Casimir etkisini, iki
 eşik yüzeyinin ayırt edeceği düzeneği ve türetilmiş bir geçişle karşılaştırmayı
 da taşıyordu. Üçü de doğrudur ve `quantum/` içinde hesaplıdır, ama hiçbiri
 yönelimden dönüş olayına giden eşlemeye dokunmaz; bu nedenle metinden
