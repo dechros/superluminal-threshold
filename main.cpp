@@ -43,6 +43,7 @@
 #include "particle/ExitFace.h"
 #include "particle/FarSideMotion.h"
 #include "particle/FarSideObservation.h"
+#include "particle/Feasibility.h"
 #include "particle/FlowAssumption.h"
 #include "particle/StateTable.h"
 #include "particle/LoopClosure.h"
@@ -149,6 +150,7 @@ namespace
         sections.push_back(std::make_unique<slm::DirectionControlSection>());
         sections.push_back(std::make_unique<slm::FarSideObservationSection>());
         sections.push_back(std::make_unique<slm::WorkedRoundTripSection>());
+        sections.push_back(std::make_unique<slm::FeasibilitySection>());
         sections.push_back(std::make_unique<slm::TimeProjectionSection>());
         sections.push_back(std::make_unique<slm::FlowAssumptionSection>());
         sections.push_back(std::make_unique<slm::TimeReversalSignatureSection>());

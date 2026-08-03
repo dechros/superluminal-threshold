@@ -2,6 +2,7 @@
 
 #include "boundary/ModeFilter.h"
 #include "core/Report.h"
+#include "particle/TimeReversalSignature.h"
 #include "critique/Reconciliation.h"
 #include "horizon/DegeneratePath.h"
 #include "horizon/LayerEnergyConditions.h"
@@ -211,9 +212,14 @@ namespace slm
                      "item is narrowed and not closed",
                      !OpenQuestions::allowabilityCriterionAdopted() &&
                          LapseContour::belowSelectsDecaying(8.0, 1.0));
-        report.check("a returning particle and a created pair are not told apart, "
-                     "since they differ in count while agreeing in energy magnitude",
-                     !OpenQuestions::pairDegeneracyBroken());
+        report.check("a returning particle and a created pair agree in boundary count "
+                     "and in apparent charge, and differ only in the energy the region "
+                     "loses, which is now specified as a calorimeter measurement with a "
+                     "stated resolution and timing, so the item is no longer open in its "
+                     "physics but only in its rate",
+                     !OpenQuestions::pairDegeneracyBroken() &&
+                         TimeReversalSignature::calorimeterSeparates(1.0, 1, 1.5) &&
+                         !TimeReversalSignature::practicalAtWeight(6.473136e-37, 1e9, 3.15e7));
         report.check(std::format("  {} of the five readings of the crossing time put it above "
                                  "the speed of light and the rest below, and which reading is "
                                  "the physical one is not settled",
