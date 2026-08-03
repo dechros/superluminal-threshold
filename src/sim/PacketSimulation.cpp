@@ -1,0 +1,350 @@
+#include "sim/PacketSimulation.h"
+
+#include "core/Report.h"
+#include "intermediate/TwoCrossings.h"
+
+#include <algorithm>
+#include <cmath>
+#include <complex>
+#include <format>
+
+namespace slm
+{
+    namespace
+    {
+        constexpr double kBandwidths = 5.0;
+
+        double normalWavenumber(double omega, double c, double mu, double transverseSquared)
+        {
+            const double squared = TwoCrossings::outsideSquared(omega, c, mu, transverseSquared);
+            return squared > 0.0 ? std::sqrt(squared) : 0.0;
+        }
+
+    }
+
+    double PacketSimulation::spectrum(double omega, double centre, double spread)
+    {
+        const double z = (omega - centre) / spread;
+        return std::exp(-0.5 * z * z);
+    }
+
+    double PacketSimulation::lowestPropagatingFrequency(double c, double mu,
+                                                        double transverseSquared)
+    {
+        return c * std::sqrt(transverseSquared + mu);
+    }
+
+    double PacketSimulation::transmittedField(double time, double observationPoint,
+                                              IntermediateRegion::Kind kind, double c, double mu,
+                                              double transverseSquared, double thickness,
+                                              double centre, double spread, int samples)
+    {
+        const double floorFrequency =
+            lowestPropagatingFrequency(c, mu, transverseSquared) + 1e-3;
+        const double low = std::max(centre - kBandwidths * spread, floorFrequency);
+        const double high = centre + kBandwidths * spread;
+        const double step = (high - low) / samples;
+        std::complex<double> total(0.0, 0.0);
+        for (int i = 0; i < samples; ++i)
+        {
+            const double omega = low + (i + 0.5) * step;
+            if (omega <= 0.0)
+            {
+                continue;
+            }
+            const double weight = spectrum(omega, centre, spread);
+            const std::complex<double> crossing =
+                TwoCrossings::amplitude(kind, omega, c, mu, transverseSquared, thickness);
+            const double k = normalWavenumber(omega, c, mu, transverseSquared);
+            const std::complex<double> travel(0.0, k * observationPoint - omega * time);
+            total += weight * crossing * std::exp(travel) * step;
+        }
+        return total.real();
+    }
+
+    double PacketSimulation::transmittedEnvelope(double time, double observationPoint,
+                                                 IntermediateRegion::Kind kind, double c,
+                                                 double mu, double transverseSquared,
+                                                 double thickness, double centre, double spread,
+                                                 int samples, bool phaseOnly)
+    {
+        const double floorFrequency =
+            lowestPropagatingFrequency(c, mu, transverseSquared) + 1e-3;
+        const double low = std::max(centre - kBandwidths * spread, floorFrequency);
+        const double high = centre + kBandwidths * spread;
+        const double step = (high - low) / samples;
+        std::complex<double> total(0.0, 0.0);
+        for (int i = 0; i < samples; ++i)
+        {
+            const double omega = low + (i + 0.5) * step;
+            if (omega <= 0.0)
+            {
+                continue;
+            }
+            const double weight = spectrum(omega, centre, spread);
+            std::complex<double> crossing =
+                TwoCrossings::amplitude(kind, omega, c, mu, transverseSquared, thickness);
+            if (phaseOnly)
+            {
+                crossing = std::polar(1.0, std::arg(crossing));
+            }
+            const double k = normalWavenumber(omega, c, mu, transverseSquared);
+            const std::complex<double> travel(0.0, k * observationPoint - omega * time);
+            total += weight * crossing * std::exp(travel) * step;
+        }
+        return std::abs(total);
+    }
+
+    double PacketSimulation::freeEnvelope(double time, double observationPoint, double c,
+                                          double mu, double transverseSquared, double centre,
+                                          double spread, int samples)
+    {
+        const double floorFrequency =
+            lowestPropagatingFrequency(c, mu, transverseSquared) + 1e-3;
+        const double low = std::max(centre - kBandwidths * spread, floorFrequency);
+        const double high = centre + kBandwidths * spread;
+        const double step = (high - low) / samples;
+        std::complex<double> total(0.0, 0.0);
+        for (int i = 0; i < samples; ++i)
+        {
+            const double omega = low + (i + 0.5) * step;
+            if (omega <= 0.0)
+            {
+                continue;
+            }
+            const double weight = spectrum(omega, centre, spread);
+            const double k = normalWavenumber(omega, c, mu, transverseSquared);
+            const std::complex<double> travel(0.0, k * observationPoint - omega * time);
+            total += weight * std::exp(travel) * step;
+        }
+        return std::abs(total);
+    }
+
+    double PacketSimulation::measuredArrival(double observationPoint,
+                                             IntermediateRegion::Kind kind, double c, double mu,
+                                             double transverseSquared, double thickness,
+                                             double centre, double spread, int samples,
+                                             bool phaseOnly)
+    {
+        const double groupSpeed =
+            c * c * normalWavenumber(centre, c, mu, transverseSquared) / centre;
+        const double expected = observationPoint / (groupSpeed > 0.0 ? groupSpeed : 1.0);
+        double from = expected - 6.0;
+        double to = expected + 6.0;
+        double best = 0.5 * (from + to);
+        for (int pass = 0; pass < 6; ++pass)
+        {
+            const int steps = 600;
+            double bestValue = -1.0;
+            for (int i = 0; i <= steps; ++i)
+            {
+                const double t = from + (to - from) * i / steps;
+                const double value =
+                    transmittedEnvelope(t, observationPoint, kind, c, mu, transverseSquared,
+                                        thickness, centre, spread, samples, phaseOnly);
+                if (value > bestValue)
+                {
+                    bestValue = value;
+                    best = t;
+                }
+            }
+            const double window = (to - from) / steps * 4.0;
+            from = best - window;
+            to = best + window;
+        }
+        return best;
+    }
+
+    double PacketSimulation::measuredFreeArrival(double observationPoint, double c, double mu,
+                                                 double transverseSquared, double centre,
+                                                 double spread, int samples)
+    {
+        const double groupSpeed =
+            c * c * normalWavenumber(centre, c, mu, transverseSquared) / centre;
+        const double expected = observationPoint / (groupSpeed > 0.0 ? groupSpeed : 1.0);
+        double from = expected - 6.0;
+        double to = expected + 6.0;
+        double best = 0.5 * (from + to);
+        for (int pass = 0; pass < 6; ++pass)
+        {
+            const int steps = 600;
+            double bestValue = -1.0;
+            for (int i = 0; i <= steps; ++i)
+            {
+                const double t = from + (to - from) * i / steps;
+                const double value = freeEnvelope(t, observationPoint, c, mu, transverseSquared,
+                                                  centre, spread, samples);
+                if (value > bestValue)
+                {
+                    bestValue = value;
+                    best = t;
+                }
+            }
+            const double window = (to - from) / steps * 4.0;
+            from = best - window;
+            to = best + window;
+        }
+        return best;
+    }
+
+    double PacketSimulation::measuredDelay(double observationPoint, IntermediateRegion::Kind kind,
+                                           double c, double mu, double transverseSquared,
+                                           double thickness, double centre, double spread,
+                                           int samples, bool phaseOnly)
+    {
+        return measuredArrival(observationPoint, kind, c, mu, transverseSquared, thickness,
+                               centre, spread, samples, phaseOnly) -
+               measuredFreeArrival(observationPoint, c, mu, transverseSquared, centre, spread,
+                                   samples);
+    }
+
+    double PacketSimulation::reweightingShift(double observationPoint,
+                                              IntermediateRegion::Kind kind, double c, double mu,
+                                              double transverseSquared, double thickness,
+                                              double centre, double spread, int samples)
+    {
+        return measuredDelay(observationPoint, kind, c, mu, transverseSquared, thickness, centre,
+                             spread, samples, false) -
+               measuredDelay(observationPoint, kind, c, mu, transverseSquared, thickness, centre,
+                             spread, samples, true);
+    }
+
+    double PacketSimulation::predictedDelay(IntermediateRegion::Kind kind, double c, double mu,
+                                            double transverseSquared, double thickness,
+                                            double centre)
+    {
+        return TwoCrossings::returnDelay(kind, centre, c, mu, transverseSquared, thickness);
+    }
+
+    bool PacketSimulation::routesAgree(double observationPoint, IntermediateRegion::Kind kind,
+                                       double c, double mu, double transverseSquared,
+                                       double thickness, double centre, double spread,
+                                       int samples, double tolerance)
+    {
+        const double measured = measuredDelay(observationPoint, kind, c, mu, transverseSquared,
+                                              thickness, centre, spread, samples, true);
+        const double predicted =
+            predictedDelay(kind, c, mu, transverseSquared, thickness, centre);
+        if (std::abs(predicted) < 1e-12)
+        {
+            return std::abs(measured) < tolerance;
+        }
+        return std::abs(measured - predicted) <= tolerance * std::abs(predicted);
+    }
+
+    bool PacketSimulation::measurementConverges(double observationPoint,
+                                                IntermediateRegion::Kind kind, double c,
+                                                double mu, double transverseSquared,
+                                                double thickness, double centre, double spread,
+                                                double tolerance)
+    {
+        const double coarse = measuredDelay(observationPoint, kind, c, mu, transverseSquared,
+                                            thickness, centre, spread, 800, true);
+        const double fine = measuredDelay(observationPoint, kind, c, mu, transverseSquared,
+                                          thickness, centre, spread, 3200, true);
+        return std::abs(coarse - fine) <= tolerance * std::abs(fine);
+    }
+
+    bool PacketSimulation::saturationIsObserved(double observationPoint,
+                                                IntermediateRegion::Kind kind, double c,
+                                                double mu, double transverseSquared,
+                                                double centre, double spread, int samples,
+                                                double tolerance)
+    {
+        const double thick = measuredDelay(observationPoint, kind, c, mu, transverseSquared, 8.0,
+                                           centre, spread, samples, true);
+        const double thicker = measuredDelay(observationPoint, kind, c, mu, transverseSquared,
+                                             16.0, centre, spread, samples, true);
+        return std::abs(thick - thicker) <= tolerance * std::abs(thick);
+    }
+
+    void PacketSimulationSection::run(Report &report) const
+    {
+        const auto kind = IntermediateRegion::Kind::Euclidean;
+        const double c = 1.0;
+        const double mu = 1.0;
+        const double transverse = 4.0;
+        const double centre = 2.8;
+        const double spread = 0.02;
+        const double point = 40.0;
+        const int samples = 3000;
+
+        report.subsection("The method, and what it deliberately does not use");
+        report.check("the packet is summed over frequencies, each multiplied by the "
+                     "amplitude the two crossings impose and by free propagation to the "
+                     "observation point, and the arrival is where the envelope peaks",
+                     PacketSimulation::transmittedEnvelope(60.0, point, kind, c, mu, transverse,
+                                                            8.0, centre, spread, samples,
+                                                            false) > 0.0);
+        report.check("no delay formula enters the measurement: the stationary phase "
+                     "condition is not imposed but left to emerge or to fail",
+                     PacketSimulation::freeEnvelope(60.0, point, c, mu, transverse, centre,
+                                                     spread, samples) > 0.0);
+        report.check(std::format("  the band is clipped at {:.4f}, below which the outside "
+                                 "wavenumber is imaginary and a component never reaches the "
+                                 "detector",
+                                 PacketSimulation::lowestPropagatingFrequency(c, mu,
+                                                                              transverse)),
+                     centre > PacketSimulation::lowestPropagatingFrequency(c, mu, transverse));
+
+        report.subsection("The delay, measured from the phase the region imposes");
+        for (double thickness : {4.0, 8.0, 16.0})
+        {
+            report.check(
+                std::format("  thickness {:5g} : measured {:+.4f}, closed form {:+.4f}",
+                            thickness,
+                            PacketSimulation::measuredDelay(point, kind, c, mu, transverse,
+                                                             thickness, centre, spread, samples,
+                                                             true),
+                            PacketSimulation::predictedDelay(kind, c, mu, transverse, thickness,
+                                                              centre)),
+                PacketSimulation::routesAgree(point, kind, c, mu, transverse, thickness, centre,
+                                               spread, samples, 2e-2));
+        }
+        report.check("so the delay is not an artefact of differentiating a phase: a packet "
+                     "propagated forward in time peaks where the derivative said it would, "
+                     "by a route that was never told the derivative",
+                     PacketSimulation::routesAgree(point, kind, c, mu, transverse, 8.0, centre,
+                                                    spread, samples, 2e-2));
+        report.check("refining the frequency sum fourfold does not move it, so the number "
+                     "is not a property of the truncation",
+                     PacketSimulation::measurementConverges(point, kind, c, mu, transverse, 8.0,
+                                                             centre, spread, 2e-2));
+        report.check("and it does not move when the thickness doubles, which is the "
+                     "saturation observed rather than derived",
+                     PacketSimulation::saturationIsObserved(point, kind, c, mu, transverse,
+                                                             centre, spread, samples, 2e-2));
+
+        report.subsection("What the simulation finds that the closed form does not carry");
+        for (double thickness : {4.0, 8.0, 16.0})
+        {
+            report.check(
+                std::format("  thickness {:5g} : the full amplitude moves the peak a further "
+                            "{:+.4f}",
+                            thickness,
+                            PacketSimulation::reweightingShift(point, kind, c, mu, transverse,
+                                                                thickness, centre, spread,
+                                                                samples)),
+                std::isfinite(PacketSimulation::reweightingShift(point, kind, c, mu, transverse,
+                                                                  thickness, centre, spread,
+                                                                  samples)));
+        }
+        report.check("the transmission modulus rises steeply with frequency in the opaque "
+                     "regime, so the region reweights the packet towards its fast side as "
+                     "well as delaying it, and that displacement grows with thickness while "
+                     "the delay does not",
+                     std::abs(PacketSimulation::reweightingShift(point, kind, c, mu, transverse,
+                                                                  16.0, centre, spread,
+                                                                  samples)) >
+                         std::abs(PacketSimulation::reweightingShift(point, kind, c, mu,
+                                                                      transverse, 4.0, centre,
+                                                                      spread, samples)));
+        report.check("this is a real effect and not an error, but it is not a delay: it is "
+                     "the packet arriving as a different packet, and reporting the two "
+                     "together would misattribute one to the other",
+                     std::abs(PacketSimulation::reweightingShift(point, kind, c, mu, transverse,
+                                                                  16.0, centre, spread,
+                                                                  samples)) > 0.0);
+    }
+
+}

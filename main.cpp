@@ -67,6 +67,7 @@
 #include "scan/PermutationScan.h"
 #include "scan/SlotDictionary.h"
 #include "signal/Channels.h"
+#include "sim/PacketSimulation.h"
 #include "critique/AssumptionLedger.h"
 #include "dynamics/ConjugateDictionary.h"
 #include "particle/RouteHolonomy.h"
@@ -151,6 +152,7 @@ namespace
         sections.push_back(std::make_unique<slm::FarSideObservationSection>());
         sections.push_back(std::make_unique<slm::WorkedRoundTripSection>());
         sections.push_back(std::make_unique<slm::FeasibilitySection>());
+        sections.push_back(std::make_unique<slm::PacketSimulationSection>());
         sections.push_back(std::make_unique<slm::TimeProjectionSection>());
         sections.push_back(std::make_unique<slm::FlowAssumptionSection>());
         sections.push_back(std::make_unique<slm::TimeReversalSignatureSection>());
