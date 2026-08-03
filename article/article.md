@@ -265,12 +265,105 @@ mesafe verildiğinde, ürettikleri yer değiştirmeler eşit büyüklükte ve te
 işaretlidir. Yani sözlük saatin **ne kadar** oynadığını sabitler, **hangi yöne**
 oynadığını sabitlemez.
 
-**Neyi meşru kılmadığı.** Yukarıdakilerin hepsi öte taraf yer değiştirmeleri
-hakkındadır. Bir saçılma fazından okunan gecikme bunlardan biri **değildir**;
-dolayısıyla o gecikmeyi bu yer değiştirmelerle toplamak burada ispatlanmış
-değildir ve çevreleyen kurgunun bir varsayımı olarak kalır. Bu ayrım kasten
-keskin tutulmuştur: silikleştirilirse açık bir soru, yalnızca ifade biçimiyle
-teoreme dönüşür.
+**Bu bölümün tek başına meşru kılmadığı.** Yukarıdakilerin hepsi öte taraf yer
+değiştirmeleri hakkındadır. Bir saçılma fazından okunan gecikme bunlardan biri
+değildir; dolayısıyla o gecikmeyi bu yer değiştirmelerle toplamak yalnızca
+buradan çıkmaz. Toplama ayrı bir sonuçtur ve §2.1.2'de eşlenik değişkenler
+üzerinden türetilmiştir. Ayrım kasten keskin tutulmuştur: silikleştirilirse iki
+ayrı sonuçtan biri, yalnızca ifade biçimiyle diğerinin doğal sonucu gibi görünür.
+
+### 2.1.2 Gecikme ile yer değiştirmenin toplanması: tek fazdan türetme
+
+Koordinatlar için ispatlanan bir sözlük, eşlenik değişkenler için doğrudan
+geçerli değildir. $x' = M x$ koordinat dönüşümü altında fazın
+$p_\mu x^\mu$ değişmezliği momentumları $p' = M^{-\mathsf{T}} p$ ile taşır, ve
+genel bir $M$ için $M^{-\mathsf{T}} \neq M$'dir. Bu makalede kullanılan
+$\mathrm{diag}(2,1,1,1)$ gibi bir ölçekleme bunu gösteren en kısa örnektir.
+Dolayısıyla §2.1.1'in katsayısı, momentum tarafında yeniden kurulmadan
+kullanılamaz.
+
+Sekiz aday için iki cebirsel olgu bunu kuruyor
+(`src/dynamics/ConjugateDictionary`):
+
+1. **İşaretli permütasyon matrisleri ortogonaldir**, yani
+   $M^{\mathsf{T}} M = I$ ve buradan $M^{-\mathsf{T}} = M$. Momentumlar
+   koordinatlarla **aynı** matrisle taşınır.
+2. **Aynı matrisler involüsyondur** ($M^2 = I$, §2.1'in tarama koşullarından
+   biri). Ortogonallikle birlikte bu $M = M^{-1} = M^{\mathsf{T}}$ verir, yani
+   $M$ **simetriktir**. O hâlde eşlenik değişkeni yöneten girdi, koordinatı
+   yöneten girdinin devriğidir: iki katsayı aynı **sayıdır**, yalnızca aynı
+   büyüklükte değildir.
+
+Bu iki olgu, taramanın zaten dayattığı koşulların sonucudur; toplanabilirlik
+için yeni bir varsayım eklenmemiştir.
+
+Buradan asıl adım geliyor. Yer değiştirme fazın **dışında** bırakılıp sonradan
+eklenmez, **içine** konur. Saçılma fazı $\varphi(\omega)$ taşıyan ve öte tarafın
+ayırt edilmiş ekseni boyunca $s$ kadar yer değiştiren tek bir genliğin toplam
+fazı
+
+$$\Phi(\omega) \;=\; \varphi(\omega) + \kappa(\omega)\, s ,$$
+
+ve durağan faz koşulu çıkan paketin anını
+
+$$t \;=\; \frac{\mathrm{d}\varphi}{\mathrm{d}\omega}
+      \;+\; s\,\frac{\mathrm{d}\kappa}{\mathrm{d}\omega}$$
+
+olarak verir. Toplam artık iki ayrı hesabın arasına yerleştirilen bir varsayım
+değil, **tek** bir hesaptan okunan bir sonuçtur; ikinci terimin ağırlığı da bir
+uzlaşım değil, hesaplanabilir bir türevdir.
+
+O türev hesaplanmıştır. Eşlenik değişkeni üreten satırın sıfırdan farklı tek bir
+girdisi olduğundan $\kappa$ yalnızca frekansla orantılıdır, ve
+
+$$\left|\frac{\mathrm{d}\kappa}{\mathrm{d}\omega}\right| = 1$$
+
+sekiz geçişin tamamında **tam olarak** sağlanır. Bu makalede kullanılan eşleme
+için değer $+1$'dir. İşaret her dalda o dalın kendi zaman işaretine eşittir:
+koordinat sözlüğünün atadığı yön ile fazın ürettiği yön aynı yöndür, ve bu
+eşitlik varsayılmamış, sekiz dalın hepsinde ayrı ayrı hesaplanmıştır.
+
+Sonuç bağımsız bir yolla da doğrulanmıştır: Bölge I kütle kabuğu üzerinde
+frekansa göre merkezî fark alınarak. Dört kütle değeri ($\mu = 0$, $0{,}25$,
+$1$, $9$), üç frekans ve sekiz geçiş üzerinde sayısal türev cebirsel değeri
+dokuz basamağa kadar üretir. Enine bileşenlere frekansta kasten **lineer
+olmayan** bir bağımlılık verilmiştir; sonuçta görünmemeleri bu yüzden bir
+ihmal değil, hesaplanmış bir olgudur.
+
+**Dispersiyon bağıntısı neden girmiyor.** Aynı katsayıya bir grup hızı
+argümanıyla gitmek mümkün görünür, ama o yol kapalıdır: $k/\sqrt{k^2+\mu}$
+niceliği $\mu > 0$ için hiçbir sonlu $k$'de bire ulaşmaz. Hesaplanan değerler
+$\mu = 1$ için $k = 1$'de $0{,}707106781$, $k = 10$'da $0{,}995037190$,
+$k = 1000$'de $0{,}999999500$. Yukarıdaki birim katsayı bir hızın kütlesiz
+limiti değildir; eşlemenin tam bir özelliğidir ve sonlu kütlede de geçerlidir.
+Ayrım önemlidir, çünkü bir asimptotik yaklaşım sonucu yalnızca yaklaşık kılardı.
+
+### 2.1.3 Dönüş anının işareti
+
+§2.1.2 toplamı meşru kıldığına göre, iki terimin **yarışması** anlamlı bir soru
+hâline gelir (`src/particle/ArrivalOrder`). Terimlerin kalınlığa bağımlılıkları
+farklıdır: bariyer rejiminde faz gecikmesi kalınlıkla **doyar**, öte taraf yer
+değiştirmesi ise doymaz ve $s$ ile sınırsız büyür. Doyan gecikme bu yüzden bir
+**eşik mesafesi** tanımlar; öte tarafta bundan daha uzağa gidilirse ikinci terim
+birinciyi yener.
+
+Öklidyen ara bölge, $d = 8$, $c = \mu = 1$ için hesaplanan gecikme
+$2{,}565988$'dir, ve eşik mesafesi tam olarak bu sayıdır: geri taşıyan dalda
+varış anı orada sıfırlanır. Daha uzak mesafelerde varış anı negatiftir, yani
+**dönüş girişten önce** gerçekleşir. İleri taşıyan dalda incelenen hiçbir
+mesafede bu olmaz. Yayılımlı (Kleinyen) rejimde gecikme doymadığı için $d = 8$'de
+eşik mesafesine ulaşılmaz.
+
+Bu sonucun ağırlığı da hesaplanmıştır ve küçüktür. Eşik mesafesine ulaşan
+yapılanmalar kalın bariyerlerdir, kalın bariyer ise neredeyse hiçbir şey
+geçirmez: $d = 2$ için geçirgenlik $3{,}67 \times 10^{-3}$, $d = 4$ için
+$3{,}60 \times 10^{-6}$, $d = 8$ için $3{,}46 \times 10^{-12}$. Dizi aynı anda
+hem kabul edilebilir hem de kuvvetle bastırılmıştır; sonuç bir olabilirlik
+ifadesidir, bir verim ifadesi değildir.
+
+Ayrıca bu bölümde toplanan iki terimin toplamı, §2.1.2'nin tek genlikten okunan
+anıyla üç mesafede karşılaştırılmış ve aynı çıkmıştır. Yani makalenin bu
+noktadaki toplaması, yerine geçen türetmeyle uyumludur.
 
 ---
 
@@ -3413,6 +3506,7 @@ ne bölüm numarası ne kaynak numarası bulunur.
 | Nedensel ayrımın varlığı ile üzerindeki etiketin ayrılması | `src/field/ReversalSymmetry` |
 | Geçiş dönüşümlerinin zaman yuvası işaretine göre bölünmesi | `src/scan/CrossingBranches` |
 | Sözlüğün katsayısı ve yer değiştirmelerin toplanabilirliği | `src/scan/SlotDictionary` |
+| Eşlenik değişkenlerin sözlüğü ve toplamanın türetilmesi | `src/dynamics/ConjugateDictionary` |
 | Varış anının giriş anından önce olabilmesi | `src/particle/ArrivalOrder` |
 | Enerji ile momentumun takası | `src/dynamics/EnergyMomentum` |
 | Dispersiyon, grup hızı, $O(3)$ ayar fazlalığı | `src/dynamics/Dispersion`, `src/rest/SuperluminalRest` |

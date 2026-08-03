@@ -1,10 +1,12 @@
 #include "particle/ArrivalOrder.h"
 
 #include "core/Report.h"
+#include "dynamics/ConjugateDictionary.h"
 #include "particle/FlowAssumption.h"
 #include "particle/ReturnEvent.h"
 #include "scan/CrossingBranches.h"
 
+#include <algorithm>
 #include <cmath>
 #include <format>
 
@@ -131,6 +133,27 @@ namespace slm
         report.check("  so no arrival before entry occurs there for a distance of 8",
                      !ArrivalOrder::arrivesBeforeEntry(Kind::Kleinian, c, mu, 8.0,
                                                        Direction::Backward, 8.0));
+
+        report.subsection("The sum used above is the one a single phase produces");
+        const auto backwardBranch =
+            std::find_if(eight.begin(), eight.end(),
+                         [](const CrossingBranches::Branch &b) { return b.timeSign < 0; });
+        report.check("a branch carrying the displacement backwards exists",
+                     backwardBranch != eight.end());
+        if (backwardBranch != eight.end())
+        {
+            const double delay = ArrivalOrder::crossingDelay(Kind::Euclidean, c, mu, 8.0);
+            for (double distance : {2.0, 4.0, 8.0})
+            {
+                report.checkNear(
+                    std::format("  distance {:g} : the moment summed here and the moment read "
+                                "from the stationary phase of one amplitude agree",
+                                distance),
+                    ArrivalOrder::arrivalMoment(Kind::Euclidean, c, mu, 8.0, Direction::Backward,
+                                                distance) -
+                        ConjugateDictionary::arrivalMoment(backwardBranch->matrix, delay, distance));
+            }
+        }
 
         report.subsection("What it weighs");
         for (double thickness : {2.0, 4.0, 8.0})

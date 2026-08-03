@@ -31,9 +31,12 @@ namespace slm
     /// barriers, and a thick barrier transmits almost nothing, so the amplitude
     /// for the whole sequence is small and is reported alongside the time.
     ///
-    /// The two contributions are added as independent terms. That independence
-    /// is an assumption of the surrounding construction and not a result of it,
-    /// and every number here inherits it.
+    /// The two contributions are added as independent terms. That addition is
+    /// not an assumption of this class: it follows from placing the displacement
+    /// inside the phase and reading the emerging packet from a single stationary
+    /// phase condition, which weights the displacement by a derivative of unit
+    /// magnitude. The agreement between the sum formed here and that derived
+    /// moment is checked rather than asserted.
     class ArrivalOrder
     {
     public:

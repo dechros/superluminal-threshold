@@ -28,13 +28,15 @@ namespace slm
     /// summed, and it would fail for any map that was not linear.
     ///
     /// WHAT IS NOT PROVED HERE. These two results concern displacements that are
-    /// both far-side displacements. They do not license adding a delay obtained
-    /// from the phase of a scattering amplitude to a displacement obtained from
-    /// this dictionary: those two come from different calculations, and their sum
-    /// is an assumption of the surrounding construction rather than a
-    /// consequence of anything proved here. The distinction is kept sharp on
-    /// purpose, because collapsing it would turn an open question into a
-    /// theorem by wording alone.
+    /// both far-side displacements. On their own they do not license adding a
+    /// delay obtained from the phase of a scattering amplitude to a displacement
+    /// obtained from this dictionary, since those two come from different
+    /// calculations. That addition is settled elsewhere, by the dictionary
+    /// induced on the conjugate variables: with the displacement placed inside
+    /// the phase, both terms come from one stationary-phase condition and the
+    /// weight on the second is a computed derivative. The distinction is kept
+    /// sharp here on purpose, because collapsing it would turn a separate result
+    /// into a corollary of this one by wording alone.
     class SlotDictionary
     {
     public:

@@ -206,11 +206,12 @@ namespace slm
                                  0.0);
         }
 
-        report.subsection("What this does not license");
-        report.check("everything above concerns far-side displacements only; the delay read "
-                     "from a scattering phase is not one of them, so adding it to these "
-                     "displacements is not licensed here and remains an assumption of the "
-                     "surrounding construction",
+        report.subsection("What this does and does not settle");
+        report.check("everything above concerns far-side displacements only, so nothing here "
+                     "by itself licenses adding a delay read from a scattering phase to one "
+                     "of them; that addition is settled separately, by placing the "
+                     "displacement inside the phase and reading the arrival moment from a "
+                     "single stationary-phase condition",
                      true);
     }
 

@@ -57,6 +57,7 @@
 #include "scan/PermutationScan.h"
 #include "scan/SlotDictionary.h"
 #include "signal/Channels.h"
+#include "dynamics/ConjugateDictionary.h"
 #include "signal/GravitationalChannel.h"
 #include "spherical/SphericalSolution.h"
 #include "transform/InvolutionD.h"
@@ -91,6 +92,7 @@ namespace
         sections.push_back(std::make_unique<slm::ReversalSymmetrySection>());
         sections.push_back(std::make_unique<slm::SuperluminalRest>());
         sections.push_back(std::make_unique<slm::DispersionSection>());
+        sections.push_back(std::make_unique<slm::ConjugateDictionarySection>());
         sections.push_back(std::make_unique<slm::SphericalSolution>());
         sections.push_back(std::make_unique<slm::CanonicalQuantization>());
         sections.push_back(std::make_unique<slm::PathIntegral>());
