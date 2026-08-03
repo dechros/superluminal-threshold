@@ -1,6 +1,7 @@
 #include "particle/ReturnFormula.h"
 
 #include "core/Report.h"
+#include "intermediate/IntermediateRegion.h"
 #include "intermediate/TwoCrossings.h"
 #include "particle/ReturnEvent.h"
 
@@ -38,7 +39,8 @@ namespace slm
             return 0.0;
         }
         const double squared =
-            (2.0 * turned / 3.0) * transverseSquared(energy) - energy[0] * energy[0];
+            IntermediateRegion::turnedWeight(turned) * transverseSquared(energy) -
+            energy[0] * energy[0];
         return squared > 0.0 ? std::sqrt(squared) : 0.0;
     }
 
@@ -49,7 +51,8 @@ namespace slm
         {
             return true;
         }
-        return (2.0 * turned / 3.0) * transverseSquared(energy) > energy[0] * energy[0];
+        return IntermediateRegion::turnedWeight(turned) * transverseSquared(energy) >
+               energy[0] * energy[0];
     }
 
     double ReturnFormula::saturatedElapsed(const Three &energy, IntermediateRegion::Kind kind,

@@ -31,6 +31,14 @@ namespace slm
         /// Whether the interior mode is evanescent.
         static bool isEvanescent(double c, double mu, double transverseSquared, double flipped);
 
+        /// Transmission probability through a slab, given the squared
+        /// wavenumbers on either side directly. This is the one home of the
+        /// closed form; IntermediateRegion::transmission is the same formula
+        /// reached through a region kind, and calls this rather than repeating
+        /// the algebra.
+        static double transmissionFromSquares(double outsideSquared, double insideSquared,
+                                              double thickness);
+
         /// Transmission probability through the slab.
         /// \param thickness Slab thickness d.
         static double transmission(double c, double mu, double transverseSquared,

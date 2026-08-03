@@ -1,6 +1,7 @@
 #include "intermediate/TwoCrossings.h"
 
 #include "core/Report.h"
+#include "intermediate/IntermediateRegion.h"
 
 #include <cmath>
 #include <format>
@@ -22,7 +23,7 @@ namespace slm
         {
             return -1e12;
         }
-        const double shift = (2.0 * flipped / 3.0) * transverseSquared;
+        const double shift = IntermediateRegion::turnedWeight(flipped) * transverseSquared;
         return outsideSquared(omega, c, mu, transverseSquared) - shift;
     }
 

@@ -34,25 +34,36 @@ namespace slm
     double SlabTunnelling::transmission(double c, double mu, double transverseSquared,
                                         double flipped, double thickness)
     {
-        const double kappaSquared = outsideWavenumberSquared(c, mu, transverseSquared);
-        const double inside = insideWavenumberSquared(c, mu, transverseSquared, flipped);
-        if (inside >= 0.0)
+        return transmissionFromSquares(outsideWavenumberSquared(c, mu, transverseSquared),
+                                       insideWavenumberSquared(c, mu, transverseSquared, flipped),
+                                       thickness);
+    }
+
+    double SlabTunnelling::transmissionFromSquares(double outsideSquared, double insideSquared,
+                                                   double thickness)
+    {
+        if (outsideSquared <= 0.0)
         {
-            const double q = std::sqrt(inside);
+            return 0.0;
+        }
+        if (insideSquared >= 0.0)
+        {
+            const double q = std::sqrt(insideSquared);
             if (q == 0.0)
             {
                 return 1.0;
             }
             const double s = std::sin(q * thickness);
-            const double factor = (kappaSquared - inside) * (kappaSquared - inside) /
-                                  (4.0 * kappaSquared * inside);
+            const double factor = (outsideSquared - insideSquared) *
+                                  (outsideSquared - insideSquared) /
+                                  (4.0 * outsideSquared * insideSquared);
             return 1.0 / (1.0 + factor * s * s);
         }
 
-        const double q = std::sqrt(-inside);
+        const double q = std::sqrt(-insideSquared);
         const double sh = std::sinh(q * thickness);
-        const double factor = (kappaSquared + q * q) * (kappaSquared + q * q) /
-                              (4.0 * kappaSquared * q * q);
+        const double factor = (outsideSquared + q * q) * (outsideSquared + q * q) /
+                              (4.0 * outsideSquared * q * q);
         return 1.0 / (1.0 + factor * sh * sh);
     }
 

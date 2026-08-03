@@ -1,6 +1,7 @@
 #include "intermediate/ThresholdOptimum.h"
 
 #include "core/Report.h"
+#include "intermediate/IntermediateRegion.h"
 
 #include <cmath>
 #include <format>
@@ -14,7 +15,7 @@ namespace slm
         {
             return 0.0;
         }
-        return (2.0 * turned / 3.0) * transversePart - normalPart;
+        return IntermediateRegion::turnedWeight(turned) * transversePart - normalPart;
     }
 
     bool ThresholdOptimum::isBarrier(double normalPart, double transversePart, int turned)
@@ -85,7 +86,7 @@ namespace slm
         {
             return 0.0;
         }
-        const double weight = 2.0 * turned / 3.0;
+        const double weight = IntermediateRegion::turnedWeight(turned);
         return weight * total / (2.0 * weight + 1.0);
     }
 

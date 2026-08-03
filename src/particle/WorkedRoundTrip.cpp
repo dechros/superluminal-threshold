@@ -1,5 +1,6 @@
 #include "particle/WorkedRoundTrip.h"
 
+#include "boundary/SlabTunnelling.h"
 #include "core/Report.h"
 #include "intermediate/ThresholdOptimum.h"
 #include "particle/ReturnEvent.h"
@@ -59,10 +60,8 @@ namespace slm
         {
             return 0.0;
         }
-        const double sh = std::sinh(beta * thickness);
-        const double single =
-            1.0 / (1.0 + (kappa * kappa + beta * beta) * (kappa * kappa + beta * beta) /
-                             (4.0 * kappa * kappa * beta * beta) * sh * sh);
+        const double single = SlabTunnelling::transmissionFromSquares(
+            kappa * kappa, -beta * beta, thickness);
         return single * single;
     }
 

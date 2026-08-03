@@ -46,6 +46,13 @@ namespace slm
         static bool blocks(Kind kind, double c, double mu, double transverseSquared);
 
         /// Transmission through a region of the given kind and thickness.
+        /// Fraction of the transverse squared wavenumber that a region with
+        /// the given number of turned directions subtracts from the interior.
+        /// Each turned direction is worth two thirds of one, and this is the
+        /// one home of that weight: every library needing it calls here rather
+        /// than writing the fraction again.
+        static double turnedWeight(int turned);
+
         static double transmission(Kind kind, double c, double mu, double transverseSquared,
                                    double thickness);
 

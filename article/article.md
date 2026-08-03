@@ -4178,8 +4178,11 @@ Bu denetimin bulduğu en ağır eksik, **kaynakça boşluğuydu**. Makalenin en 
 yaslandığı dokuz kaynak metinde kavram olarak kullanılıyor ama kaynakçada yer
 almıyordu: oyalanma süresi tartışması, zamansal olmayan kabukların enerji
 koşulları, imza değiştiren zarlar, korunum yasaları tartışmasının dört raundu,
-ve çok zamanlı tutarlılık. Dokuzu da eklenmiştir; kaynakça $41$'den $50$'ye
-çıkmıştır.
+ve çok zamanlı tutarlılık. Dokuzu da eklenmiştir. Kaynakça o turda $41$'den
+$50$'ye çıkmış, sonraki turlarda büyümüş, ve makale kısaltılırken artık hiçbir
+yerde anılmayan on dört kaynak düşürülerek $57$'ye inmiştir. Şu an her atfın
+kaynakçada bir karşılığı, her kaynağın da metinde en az bir atfı vardır; bu da
+denetlenmektedir.
 
 **Sınıflandırma artık kodda tutulmaktadır**, makalede beyan edilmez
 . Bunun nedeni Bölüm 25.1'in yakalamak için
@@ -4192,10 +4195,13 @@ Sicil üç durum ayırır ve sayıları kendisi üretir:
 
 | Durum | Anlamı | Kaç |
 |-------|--------|-----|
-| Yeniden üretilmiş | Buradaki bir kütüphane sonucu bağımsız olarak hesaplar ve değeri karşılaştırılabilir | $37$ |
-| İtibara alınmış | Sonuç yeniden hesaplanmadan kullanılır; doğruluğu bu çalışmanın güvencesi altında değildir | $18$ |
-| Yalnızca bağlam | Konumlandırma için anılır, ondan hiçbir sonuç çıkarılmaz | $7$ |
-| **Toplam** | | $62$ |
+| Yeniden üretilmiş | Buradaki bir kütüphane sonucu bağımsız olarak hesaplar ve değeri karşılaştırılabilir | $40$ |
+| İtibara alınmış | Sonuç yeniden hesaplanmadan kullanılır; doğruluğu bu çalışmanın güvencesi altında değildir | $23$ |
+| Yalnızca bağlam | Konumlandırma için anılır, ondan hiçbir sonuç çıkarılmaz | $9$ |
+| **Toplam** | | $72$ |
+
+Sayılar koddan alınmıştır ve elle güncellenmemelidir; sicil onları kendisi
+saymaktadır.
 
 Sicilde bir denetim vardır: "yeniden üretilmiş" işaretli her girdi, onu üreten
 kütüphaneyi **adıyla** taşımak zorundadır. Adı olmayan bir yeniden üretim iddiası

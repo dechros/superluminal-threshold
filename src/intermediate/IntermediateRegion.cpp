@@ -1,5 +1,7 @@
 #include "intermediate/IntermediateRegion.h"
 
+#include "boundary/SlabTunnelling.h"
+
 #include "core/Report.h"
 
 #include <cmath>
@@ -54,13 +56,18 @@ namespace slm
             return -std::numeric_limits<double>::infinity();
         }
         const double flipped = flippedDirections(kind);
-        const double share = (3.0 - 2.0 * flipped) / 3.0;
+        const double share = 1.0 - turnedWeight(static_cast<int>(flipped));
         return c * c * (share * transverseSquared + mu);
     }
 
     bool IntermediateRegion::blocks(Kind kind, double c, double mu, double transverseSquared)
     {
         return insideNormalSquared(kind, c, mu, transverseSquared) < 0.0;
+    }
+
+    double IntermediateRegion::turnedWeight(int turned)
+    {
+        return turned > 0 ? 2.0 * turned / 3.0 : 0.0;
     }
 
     double IntermediateRegion::transmission(Kind kind, double c, double mu,
@@ -83,24 +90,7 @@ namespace slm
             return 0.0;
         }
 
-        if (inside >= 0.0)
-        {
-            const double q = std::sqrt(inside);
-            if (q == 0.0)
-            {
-                return 1.0;
-            }
-            const double s = std::sin(q * thickness);
-            const double factor = (kappaSquared - inside) * (kappaSquared - inside) /
-                                  (4.0 * kappaSquared * inside);
-            return 1.0 / (1.0 + factor * s * s);
-        }
-
-        const double q = std::sqrt(-inside);
-        const double sh = std::sinh(q * thickness);
-        const double factor =
-            (kappaSquared + q * q) * (kappaSquared + q * q) / (4.0 * kappaSquared * q * q);
-        return 1.0 / (1.0 + factor * sh * sh);
+        return SlabTunnelling::transmissionFromSquares(kappaSquared, inside, thickness);
     }
 
     double IntermediateRegion::layerStrength(Kind kind, double thickness)
