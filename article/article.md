@@ -609,6 +609,17 @@ hiçbir nicelik yoktur. Modelin hesaplayamadığı şey yolculuğun kendisinin
 katkısıdır, ve bunun nedeni yapısaldır: genliği veren ifadedeki hiçbir değişken
 parçacığın öte tarafta ne kadar gittiğine bağlı değildir.
 
+**Literatürdeki en yakın sonuç ve neden aynı sonuç olmadığı.** Tünellemenin
+engel biçimi ile parçacık enerjisi ayarlanarak güçlendirilebildiği bilinmektedir;
+belirli koşullarda geçirgenlik, saydam olmayan bir engelde bile üstel olarak
+küçük kalmaz. Ne var ki o mekanizma **geçirgenlik olasılığını** artırır ve tek
+boyutlu olmayan bir engel gerektirir. Burada küçültülen nicelik geçirgenlik
+değil, **sabit genlikte doymuş gecikmedir** ve engel tek boyutludur; sönüm
+katsayısı ile kalınlığın çarpımı sabit tutulduğu için genlik zaten
+kıpırdamamaktadır. İki sonuç aynı niceliği aynı kurulumda eniyilemediğinden,
+buradaki hesap o mekanizmanın yeniden keşfi değildir; sicilde bağlam olarak
+kayıtlıdır.
+
 ---
 
 Doğrulanan iki olgu:
@@ -4329,8 +4340,9 @@ varsayımı eleştiren bir cümle ile varsayan bir cümle aynı kelimeyi taşır
 | 8.4.1 | Denklem düzeyinde ve durum düzeyinde tek yönlülüğün aynı iddia olması | başka kurguya ait | İki okuma orada ayrılır ve yalnızca ikincisi savunulur |
 | 2.1.6 | Sabit tutulan derinlikte gecikmenin doymuş olması | türetildi | Aynı bölüm: dört enerjinin dördünde de sonlu kalınlık gecikmesi doymuş değerin yüzde biri içindedir |
 | 2.1.6 | Minimize edilen niceliğin §2.1.3'ün karşılaştırdığı nicelik olması | türetildi | Aynı bölüm: referans yapılandırma $2{,}565988$ verir, yani o bölümün sayısının aynısı |
+| 19.9 | Eksik kütle yönteminin kütle kabuğunda gerçek bir momentum varsayması | iki yönlü hesaplandı | Aynı bölüm: iç mod $\sqrt{13}$ altında söner, üstünde yayılır; iki rejim birbirinin tümleyenidir ve hiçbir frekans ikisini birden vermez |
 
-Sicilde $18$ kalem vardır ve tarama $13$ bölümde iddia bulmaktadır; sicil
+Sicilde $19$ kalem vardır ve tarama $14$ bölümde iddia bulmaktadır; sicil
 kapsayandan geniştir, çünkü sonradan olumsuzlanan bir ifade taramadan düşse de
 hükmü kayıtta kalır. Bu metnin **kendi** taşıdığı varsayımlar yalnızca beş "ilan
 edilmiş sınırlama" satırıdır; beşi de sonucu metinde yazılı olarak

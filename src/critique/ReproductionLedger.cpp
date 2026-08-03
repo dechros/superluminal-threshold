@@ -44,6 +44,30 @@ namespace slm
              State::Reproduced, "intermediate/IntermediateRegion"},
             {"the distributional term survives unless the normal derivative dies with the lapse",
              State::Reproduced, "horizon/RateCondition"},
+            {"the transition surface is transverse, totally geodesic, and has a determinant "
+             "vanishing to first order, all at once",
+             State::Reproduced, "horizon/TransversePrescription"},
+            {"a well defined Ricci tensor requires the second fundamental form to vanish "
+             "pointwise, which is not a statement about a rate",
+             State::Reproduced, "horizon/TransversePrescription"},
+            {"the rate at which the determinant vanishes classifies the transition by a "
+             "single parameter",
+             State::Used, "horizon/TransversePrescription"},
+            {"transmission through a spatially asymmetric barrier is the same from either "
+             "side when each lead carries one propagating channel per direction",
+             State::Reproduced, "particle/DirectionControl"},
+            {"a coherent superposition of incident channels transmits with a direction "
+             "dependence the barrier alone cannot supply",
+             State::Used, "particle/DirectionControl"},
+            {"a spacelike four-momentum admits no position operator whose eigenstates "
+             "respect causality",
+             State::Context, ""},
+            {"a spacelike carrier shows up as a negative invariant in the balance of what "
+             "enters and leaves",
+             State::Used, "particle/FarSideObservation"},
+            {"enhanced tunnelling can make the transmission of an opaque barrier "
+             "non-exponential, in a barrier that is not one dimensional",
+             State::Context, ""},
             {"the initial value problem is ill posed across the change", State::Reproduced,
              "boundary/ModeFilter"},
             {"the boundary condition comes from a self-adjoint family", State::Reproduced,
