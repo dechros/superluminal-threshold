@@ -874,9 +874,10 @@ Bölge II'de zamanın oku **yoktur**. Ok, ilgili boyutun **tek** olmasının son
 Üç boyutlu olan eksen kümesi uzay gibi davranır ve yön ayrımı ortadan kalkar.
 Buna karşılık Bölge II'de bir **uzay oku** vardır, çünkü orada $r$ tek eksendir.
 
-Ok entropiden değil, boyut sayısından çıkar. Bu ifade, aşağıdaki alt bölümde
-daraltılmıştır: boyut sayısından çıkan şey **ayrımın varlığıdır**, ayrımın iki
-yakasından hangisinin gelecek olduğu değil.
+Ok entropiden değil, boyut sayısından çıkar. Bu ifade, aşağıdaki alt bölümde iki
+kez daraltılmıştır. Boyut sayısından çıkan şey **ayrımın varlığıdır**, ayrımın
+iki yakasından hangisinin gelecek olduğu değil; ve buradaki "uzay oku" da bir
+uzay **ayrımıdır**, yönü yine metrikten çıkmaz.
 
 ### 8.4 Ayrımın varlığı ile üzerindeki etiket ayrı iki sorudur
 
@@ -918,6 +919,33 @@ yoktur.
 İki ifadenin **bağımsız** olduğu ayrıca sınanmıştır: ayrım geometrik bir etiket
 olmadan var olabilir, Bölge I bunun örneğidir; etiket ise ayrım olmadan var
 olamaz, Bölge II bunun örneğidir.
+
+**Aynı ifade, hangi işaretin zaman olduğuna dair bir tercih yapılmadan.**
+Yukarıdaki hesap Bölge I'in tek pozitif ekseni üzerine kuruldu. İşaret tercihi
+kaldırıldığında ifade genelleşir ve **iki bölgeyi birden** kapsar. Her iki
+bölgede de köşegen işaretlerden yalnız biri azınlıktadır:
+
+| | Ayırt edilmiş eksen | Karakteri | Ona bağlı ayrım |
+|---|---|---|---|
+| Bölge I | eksen $0$ | tek zaman | gelecek / geçmiş |
+| Bölge II | eksen $3$ | tek uzay | mekân çizgisinin iki ucu |
+
+Bu eksen metriğin toplam işaretinden bağımsızdır: $\eta$ ile $-\eta$ aynı ekseni
+verir, dolayısıyla ayırt edilmişlik konvansiyon değil yapıdır.
+
+Ve teoremin üç parçası ikisinde de aynı biçimde geçerlidir. Ayırt edilmiş eksene
+bağlı küme iki bileşene ayrılır; bu, o eksen boyunca birim vektörü başka bir
+eksene doğru döndürüp karenin işaret değiştirdiği bir açı bularak yapıcı olarak
+gösterilmiştir. O eksenin çevrilmesi metriği korur. Ve çevirme iki bileşeni
+birbirine taşır. Sonuç:
+
+> Bölge II'nin mekân çizgisinin iki ucu da, tıpkı bizim geleceğimiz ve
+> geçmişimiz gibi, geometrik olarak **etiketsizdir**.
+
+Dolayısıyla iki bölge arasındaki asimetri, ayırt edilmiş eksenin **karakteriyle**
+sınırlıdır; etiketin geometrik olup olmamasıyla değil. Bölüm 8.3'ün "Bölge II'de
+bir uzay oku vardır" ifadesi bu ölçüde daraltılmalıdır: orada bir uzay **ayrımı**
+vardır, ve o ayrımın da yönü metrikten çıkmaz.
 
 **Bunun bedeli ve kazancı.** Bedel, bu çalışmanın zaman okunu geometriden türetme
 imkânını kaybetmesidir: metrik ayrımı verir, yönü vermez. Kazanç, yönü taşıyan

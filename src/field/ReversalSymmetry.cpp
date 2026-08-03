@@ -71,6 +71,75 @@ namespace slm
         return count == 1 ? found : -1;
     }
 
+    int ReversalSymmetry::soleMinorityAxis(const Matrix4 &metric)
+    {
+        int positives = 0;
+        int positiveAxis = -1;
+        int negativeAxis = -1;
+        int negatives = 0;
+        for (int axis = 0; axis < 4; ++axis)
+        {
+            const double entry =
+                metric.at(static_cast<std::size_t>(axis), static_cast<std::size_t>(axis));
+            if (entry > 0.0)
+            {
+                ++positives;
+                positiveAxis = axis;
+            }
+            else if (entry < 0.0)
+            {
+                ++negatives;
+                negativeAxis = axis;
+            }
+        }
+        if (positives == 1 && negatives == 3)
+        {
+            return positiveAxis;
+        }
+        if (negatives == 1 && positives == 3)
+        {
+            return negativeAxis;
+        }
+        return -1;
+    }
+
+    bool ReversalSymmetry::minoritySetIsSplit(const Matrix4 &metric)
+    {
+        const int axis = soleMinorityAxis(metric);
+        if (axis < 0)
+        {
+            return false;
+        }
+
+        const double sign =
+            metric.at(static_cast<std::size_t>(axis), static_cast<std::size_t>(axis)) > 0.0 ? 1.0
+                                                                                            : -1.0;
+        const Matrix4 aligned = sign > 0.0 ? metric : -metric;
+        const int other = axis == 0 ? 1 : 0;
+        return TimeOrientation::worstIntervalAlongRotation(aligned, axis, other) < 0.0;
+    }
+
+    bool ReversalSymmetry::labelIsGeometric(const Matrix4 &metric)
+    {
+        const int axis = soleMinorityAxis(metric);
+        if (axis < 0)
+        {
+            return false;
+        }
+        if (!isIsometry(metric, axis))
+        {
+            return true;
+        }
+
+        const double sign =
+            metric.at(static_cast<std::size_t>(axis), static_cast<std::size_t>(axis)) > 0.0 ? 1.0
+                                                                                            : -1.0;
+        const Matrix4 aligned = sign > 0.0 ? metric : -metric;
+        Vector4 unit{};
+        unit[static_cast<std::size_t>(axis)] = 1.0;
+        return !exchangesComponents(aligned, axis, unit);
+    }
+
     bool ReversalSymmetry::geometryFixesOrientation(const Matrix4 &metric)
     {
         const int axis = soleTimeAxis(metric);
@@ -139,6 +208,38 @@ namespace slm
                      TimeOrientation::admitsTimeOrientation(eta) &&
                          !ReversalSymmetry::geometryFixesOrientation(eta) &&
                          !TimeOrientation::admitsTimeOrientation(etaPrime));
+
+        report.subsection("The same statement without a preference for which sign is time");
+        report.check("region I has one axis in the minority, and it is the time axis",
+                     ReversalSymmetry::soleMinorityAxis(eta) == 0);
+        report.check("region II has one too, and it is its single space axis",
+                     ReversalSymmetry::soleMinorityAxis(etaPrime) == 3);
+        report.check("negating a metric does not move its distinguished axis, so the axis "
+                     "does not depend on which sign the convention calls time",
+                     ReversalSymmetry::soleMinorityAxis(-eta) ==
+                             ReversalSymmetry::soleMinorityAxis(eta) &&
+                         ReversalSymmetry::soleMinorityAxis(-etaPrime) ==
+                             ReversalSymmetry::soleMinorityAxis(etaPrime));
+
+        report.subsection("Both distinguished axes carry a split");
+        report.check("region I: the set attached to the time axis falls into two components",
+                     ReversalSymmetry::minoritySetIsSplit(eta));
+        report.check("region II: the set attached to its space axis does the same",
+                     ReversalSymmetry::minoritySetIsSplit(etaPrime));
+
+        report.subsection("And neither split is labelled by its metric");
+        report.check("region I: the label on future against past is not geometric",
+                     !ReversalSymmetry::labelIsGeometric(eta));
+        report.check("region II: the label on the two ends of its space line is not either",
+                     !ReversalSymmetry::labelIsGeometric(etaPrime));
+        report.check("reversing region II's distinguished axis is an isometry of its metric",
+                     ReversalSymmetry::isIsometry(etaPrime, 3));
+        report.check("so the asymmetry between the regions is which character the "
+                     "distinguished axis has, and not whether its label is geometric",
+                     ReversalSymmetry::soleMinorityAxis(eta) !=
+                             ReversalSymmetry::soleMinorityAxis(etaPrime) &&
+                         !ReversalSymmetry::labelIsGeometric(eta) &&
+                         !ReversalSymmetry::labelIsGeometric(etaPrime));
     }
 
 }

@@ -62,6 +62,38 @@ namespace slm
         /// wrong axis.
         static int soleTimeAxis(const Matrix4 &metric);
 
+        /// Index of the axis whose diagonal sign is in the minority, or -1 when
+        /// no single axis is.
+        ///
+        /// This is the same question as @ref soleTimeAxis asked without a
+        /// preference for which sign counts as time. For a signature with one
+        /// positive and three negative directions the answer is the positive
+        /// one; for one with three positive and one negative it is the negative
+        /// one. Both cases carry a distinguished axis, and the results below
+        /// apply to both, which is why the sign-neutral form is needed.
+        static int soleMinorityAxis(const Matrix4 &metric);
+
+        /// True when the set of vectors whose square carries the minority sign
+        /// falls into two components.
+        ///
+        /// Established constructively, by rotating a unit vector along the
+        /// distinguished axis towards another axis and finding an angle at
+        /// which the square changes sign: a path that leaves the set is a path
+        /// that does not connect the two ends, and the two ends are then in
+        /// different components.
+        static bool minoritySetIsSplit(const Matrix4 &metric);
+
+        /// True when the metric distinguishes one of those two components from
+        /// the other by geometric means alone.
+        ///
+        /// False whenever a distinguished axis exists, which is the general
+        /// form of the result this class establishes. It holds for a region of
+        /// one time and three spaces, where the split is future against past,
+        /// and equally for a region of three times and one space, where the
+        /// split is the two ends of that single space direction. In both the
+        /// split is real and in neither is the label on it geometric.
+        static bool labelIsGeometric(const Matrix4 &metric);
+
         /// True when the metric leaves one causal component distinguishable
         /// from the other by geometric means alone.
         ///
