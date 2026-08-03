@@ -83,6 +83,52 @@ namespace slm
         /// needs, at an unchanged returned weight.
         static bool higherEnergyBuysDistance(IntermediateRegion::Kind kind, double c, double mu,
                                              double depth, double tolerance);
+
+        /// The whole journey as one record, so that every intermediate quantity
+        /// of a single trip can be printed together rather than assembled by a
+        /// reader from separate sections.
+        struct Journey
+        {
+            double total;
+            double normalPart;
+            double transversePart;
+            double frequency;
+            double outsideWavenumber;
+            double interiorDecay;
+            double depth;
+            double singleDelay;
+            double roundTripDelay;
+            double thresholdDistance;
+            double farSideDistance;
+            double returnElapsed;
+            double returnCrossing;
+            double returnTransverseFirst;
+            double returnTransverseSecond;
+            double returnedWeight;
+            double lightRoundTrip;
+            double advanceOverLight;
+            int branch;
+        };
+
+        /// Everything about one trip, computed by calling the libraries that
+        /// own each step. The four coordinates of the return event come from
+        /// ReturnEvent so that this record cannot drift from the closed
+        /// formula; only the far-side displacement is added here, and it is
+        /// added to the time coordinate alone.
+        static Journey journey(double total, IntermediateRegion::Kind kind, double c, double mu,
+                               double thickness, double farSideDistance, int branch);
+
+        /// Whether the record's elapsed time is the one ReturnEvent computes,
+        /// which is what makes the record a view of the chain rather than a
+        /// second implementation of it.
+        static bool journeyAgreesWithReturnEvent(const Journey &record,
+                                                 IntermediateRegion::Kind kind, double c,
+                                                 double mu, double thickness);
+
+        /// Whether the journey beats a light signal covering the same round
+        /// trip, which is the comparison the article makes and which needs both
+        /// sides to be a round trip.
+        static bool beatsLight(const Journey &record);
     };
 
     /// Section carrying one particle through the whole chain.

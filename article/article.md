@@ -959,16 +959,17 @@ teğet bloğun normal türevinin lapse'a bölümüne bakar. Bağımsız iki ayar
 ikisi birden sağlanabilir. Literatürün ikisini bir arada, aralarında bir
 gerilim olduğunu belirtmeden dayatmasının sebebi budur.
 
-Dejenere bileşenin sıfırlanma mertebesi $q$, teğet eğimin sıfırlanma mertebesi
-$p$ yazılırsa, lapse $d^{q/2}$ gibi, dış eğrilik $d^{p}$ gibi gider ve oran
-koşulunun sınadığı nicelik uzaklığın
+Dejenere bileşenin sıfırlanma mertebesi $a$, teğet eğimin sıfırlanma mertebesi
+$b$ yazılırsa (bu bölümde $q$ harfi kullanılmamaktadır, çünkü $q$ metnin geri
+kalanında ara bölgedeki dalga sayısıdır), lapse $d^{a/2}$ gibi, dış eğrilik
+$d^{b}$ gibi gider ve oran koşulunun sınadığı nicelik uzaklığın
 
-$$p - \frac{q}{2}$$
+$$b - \frac{a}{2}$$
 
-kuvvetiyle davranır. Bu, dokuz $(q,p)$ çifti üzerinde ölçümle $10^{-9}$
+kuvvetiyle davranır. Bu, dokuz $(a,b)$ çifti üzerinde ölçümle $10^{-9}$
 duyarlıkla doğrulanmıştır.
 
-| $q$ | $p$ | Ölçülen üstel | Kapalı biçim |
+| $a$ | $b$ | Ölçülen üstel | Kapalı biçim |
 |-----|-----|---------------|--------------|
 | 1 | 0 | $-0{,}5000$ | $-0{,}5000$ |
 | 1 | 1 | $+0{,}5000$ | $+0{,}5000$ |
@@ -980,9 +981,9 @@ duyarlıkla doğrulanmıştır.
 | 3 | 1 | $-0{,}5000$ | $-0{,}5000$ |
 | 3 | 2 | $+0{,}5000$ | $+0{,}5000$ |
 
-Bölüm 3.7'deki aile bu formülün $p = q - 1$ dilimidir, çünkü orada dış eğrilik
+Bölüm 3.7'deki aile bu formülün $b = a - 1$ dilimidir, çünkü orada dış eğrilik
 teğet bloktan değil, **işaret değiştiren bileşenin kendisinden** alınmıştır.
-Bu dilimde üstel $q/2 - 1$ olur ve enine olma $q = 1$ demek olduğundan üstel
+Bu dilimde üstel $a/2 - 1$ olur ve enine olma $a = 1$ demek olduğundan üstel
 zorunlu olarak $-1/2$ çıkar. Aynı formül, o ailenin sayısal olarak ölçtüğü üç
 üsteli de aynen verir. Yani:
 
@@ -3343,6 +3344,36 @@ bölge ve enerji aynıdır. Öteki dal seçildiğinde aynı yolculuk daha geç
 inmektedir, dolayısıyla işaret yolculuğun bir özelliği değil, geçişin bir
 seçimidir.
 
+**Yolculuğun adım adım dökümü.** Yukarıdaki üçüncü satır, yani eşiği aşan
+yolculuk, her ara niceliğiyle birlikte şudur. Her satır ilgili bölümün
+hesabıdır; burada yeniden türetilmemekte, çağrılmaktadır.
+
+| Adım | Nicelik | Değer |
+|------|---------|-------|
+| 1 | Enerji bölüşümü: normal, enine, toplam | $3{,}600000$, $5{,}400000$, $9$ |
+| 2 | Kütle kabuğundan frekans | $3{,}162278$ |
+| 3 | Dışarıdaki dalga sayısı, içerideki sönüm | $1{,}897367$, $2{,}683282$ |
+| 4 | Saydamsızlık: sönüm çarpı kalınlık | $21{,}4663$, doyum sağlanmış |
+| 5 | Tek geçişin faz gecikmesi | $1{,}242260$ |
+| 6 | İki geçiş, yani gidiş dönüş gecikmesi | $2{,}484520$ |
+| 7 | Gereken öte taraf mesafesi | $2{,}484520$ |
+| 8 | Kat edilen mesafe ve dal | $6{,}000000$, dal $-1$ |
+| 9 | Dönüş olayı: geçen süre | $-3{,}515480$ |
+| 9 | Dönüş olayı: geçiş yönünde yer değiştirme | $0{,}000000$ |
+| 9 | Dönüş olayı: iki enine yer değiştirme | $+0{,}009483$, $+0{,}009483$ |
+| 10 | Dönen ağırlık | $6{,}473136 \times 10^{-37}$ |
+| 11 | Aynı gidiş dönüşü yapan ışık | $16{,}000000$ |
+| 11 | Parçacığın ışığa karşı önceliği | $19{,}515480$ |
+
+Dokuzuncu adımdaki dört sayı, dönüş olayının dört koordinatıdır ve **kapalı
+formülden** gelmektedir (Bölüm 19.7); bu döküm onları yeniden hesaplamaz,
+okur. Böylece dökümün zincirden sapması mümkün değildir, olası değil.
+
+On birinci adımda karşılaştırmanın **iki tarafı da gidiş dönüştür**: ışık
+$2d/c = 16$ harcamakta, parçacık $-3{,}515480$ ile dönmektedir. Bu eşitlik
+denetlenmektedir; tek geçiş ile gidiş dönüşü karıştırmak bu çalışmaya iki kez
+ikilik çarpana mal olmuştur ve artık varsayılmamakta, sınanmaktadır.
+
 **Tablodaki mesafenin nerede olduğu.** Burada iki ayrı yer vardır ve
 karıştırılmamaları bu örneğin geçerliliği için zorunludur.
 
@@ -4237,6 +4268,7 @@ varsayımı eleştiren bir cümle ile varsayan bir cümle aynı kelimeyi taşır
 | 3.8 | Dejenere katmanın içerideki her modu tam olarak bloklaması | ilan edilmiş sınırlama | Katmanın bir modeli olarak konur, tam hesabın sıfır vermeyebileceği yazılıdır |
 | 3.8 | Madde katmanının gücünün imza dönüşünün eğimini izlemesi | ilan edilmiş sınırlama | Vekil ölçü olarak konur, tam gerilim tensörünün hesaplanmadığı yazılıdır |
 | 4.1 | Yansıyan bir bileşenin bulunabilmesi | türetildi | Aynı bölüm: akı korunumu başka çözüm bırakmaz |
+| 20 | Dökümün zincirden sapmaması, yani dönüş olayının kapalı formülden okunması | türetildi | Aynı bölüm: dört koordinatın hepsi Bölüm 19.7'nin formülünden gelir ve döküm onları yeniden hesaplamaz |
 | 8.4 | Global hiperbolikliğin sağlanması | başka kurguya ait | Karşılaştırılan formülasyonun ihtiyacıdır; buradaki sonuç yalnızca zaman yönlerinin sayısından çıkar |
 | 28.3 | Geçişin ışık hızında, ani ve hızdan bağımsız olması | başka kurguya ait | Karşılaştırılan model varsayar; bu metin kendi geçişini türetir |
 | 22.3 | Karakter değiştiren yönlerin enine yönler olması | iki yönlü hesaplandı | İki okuma yan yana hesaplanır, her birinin sonucu yazılır |

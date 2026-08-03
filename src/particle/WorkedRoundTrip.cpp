@@ -2,6 +2,7 @@
 
 #include "core/Report.h"
 #include "intermediate/ThresholdOptimum.h"
+#include "particle/ReturnEvent.h"
 #include "particle/ReturnFormula.h"
 
 #include <cmath>
@@ -115,6 +116,62 @@ namespace slm
         return firstWeight > 0.0;
     }
 
+    WorkedRoundTrip::Journey WorkedRoundTrip::journey(double total,
+                                                      IntermediateRegion::Kind kind, double c,
+                                                      double mu, double thickness,
+                                                      double farSideDistance, int branch)
+    {
+        const Three energy = energyAtTotal(total);
+        const double normal = ThresholdOptimum::optimalNormalPart(total, 3);
+        const double beta = ReturnFormula::interiorDecay(energy, kind);
+        const ReturnEvent::State state{energy, branch};
+        const ReturnEvent::Event event = ReturnEvent::map(state, kind, c, mu, thickness);
+        const double sign = branch > 0 ? 1.0 : -1.0;
+        const double light = ReturnEvent::lightRoundTrip(thickness, c);
+        const double elapsed = event.elapsed + sign * farSideDistance;
+
+        Journey record{};
+        record.total = total;
+        record.normalPart = normal;
+        record.transversePart = total - normal;
+        record.frequency = frequency(energy, c, mu);
+        record.outsideWavenumber = ReturnFormula::outsideWavenumber(energy);
+        record.interiorDecay = beta;
+        record.depth = beta * thickness;
+        record.singleDelay = 0.5 * event.elapsed;
+        record.roundTripDelay = event.elapsed;
+        record.thresholdDistance = event.elapsed;
+        record.farSideDistance = farSideDistance;
+        record.returnElapsed = elapsed;
+        record.returnCrossing = event.crossing;
+        record.returnTransverseFirst = event.transverseFirst;
+        record.returnTransverseSecond = event.transverseSecond;
+        record.returnedWeight = returnedWeight(energy, kind, thickness);
+        record.lightRoundTrip = light;
+        record.advanceOverLight = light - elapsed;
+        record.branch = branch;
+        return record;
+    }
+
+    bool WorkedRoundTrip::journeyAgreesWithReturnEvent(const Journey &record,
+                                                       IntermediateRegion::Kind kind, double c,
+                                                       double mu, double thickness)
+    {
+        const Three energy = energyAtTotal(record.total);
+        const ReturnEvent::State state{energy, record.branch};
+        const ReturnEvent::Event event = ReturnEvent::map(state, kind, c, mu, thickness);
+        const double sign = record.branch > 0 ? 1.0 : -1.0;
+        return std::abs(record.returnElapsed -
+                        (event.elapsed + sign * record.farSideDistance)) < 1e-9 &&
+               std::abs(record.returnCrossing - event.crossing) < 1e-9 &&
+               std::abs(record.roundTripDelay - event.elapsed) < 1e-9;
+    }
+
+    bool WorkedRoundTrip::beatsLight(const Journey &record)
+    {
+        return record.returnElapsed < record.lightRoundTrip;
+    }
+
     void WorkedRoundTripSection::run(Report &report) const
     {
         const auto kind = IntermediateRegion::Kind::Euclidean;
@@ -196,6 +253,61 @@ namespace slm
         report.check("that weight is the price, and it is stated in the same breath as "
                      "the timing rather than in a separate section",
                      WorkedRoundTrip::returnedWeight(energy, kind, thickness) < 1e-6);
+
+        report.subsection("The whole journey as one record, step by step");
+        {
+            const auto record = WorkedRoundTrip::journey(total, kind, c, mu, thickness, 6.0, -1);
+            report.check(std::format("   1. energy split      : normal {:.6f}, transverse {:.6f}, "
+                                     "total {:g}",
+                                     record.normalPart, record.transversePart, record.total),
+                         std::abs(record.normalPart + record.transversePart - record.total) < 1e-9);
+            report.check(std::format("   2. mass shell        : frequency {:.6f}",
+                                     record.frequency),
+                         record.frequency > 0.0);
+            report.check(std::format("   3. meeting the face  : outside wavenumber {:.6f}, "
+                                     "interior decay {:.6f}",
+                                     record.outsideWavenumber, record.interiorDecay),
+                         record.interiorDecay > 0.0);
+            report.check(std::format("   4. opacity           : decay times thickness is {:.4f}, "
+                                     "so the delay has saturated",
+                                     record.depth),
+                         record.depth > 6.0);
+            report.check(std::format("   5. one crossing      : phase delay {:.6f}",
+                                     record.singleDelay),
+                         record.singleDelay > 0.0);
+            report.check(std::format("   6. two crossings     : round trip delay {:.6f}",
+                                     record.roundTripDelay),
+                         std::abs(record.roundTripDelay - 2.0 * record.singleDelay) < 1e-9);
+            report.check(std::format("   7. the price         : far-side distance needed is "
+                                     "{:.6f}",
+                                     record.thresholdDistance),
+                         std::abs(record.thresholdDistance - record.roundTripDelay) < 1e-9);
+            report.check(std::format("   8. the journey       : {:.6f} covered on the far side, "
+                                     "on branch {:+d}",
+                                     record.farSideDistance, record.branch),
+                         record.farSideDistance > record.thresholdDistance);
+            report.check(std::format("   9. return event      : elapsed {:+.6f}, crossing {:.6f}, "
+                                     "transverse ({:+.6f}, {:+.6f})",
+                                     record.returnElapsed, record.returnCrossing,
+                                     record.returnTransverseFirst,
+                                     record.returnTransverseSecond),
+                         record.returnElapsed < 0.0);
+            report.check(std::format("  10. weight            : {:.6e}", record.returnedWeight),
+                         record.returnedWeight > 0.0);
+            report.check(std::format("  11. against light     : a light round trip takes {:.6f}, "
+                                     "so the particle is {:.6f} ahead",
+                                     record.lightRoundTrip, record.advanceOverLight),
+                         WorkedRoundTrip::beatsLight(record));
+            report.check("every coordinate of the return event above comes from the closed "
+                         "formula rather than from this record, so the walk through cannot "
+                         "drift from the chain it is illustrating",
+                         WorkedRoundTrip::journeyAgreesWithReturnEvent(record, kind, c, mu,
+                                                                        thickness));
+            report.check("both sides of the comparison with light are round trips, which is "
+                         "the mistake this work has made twice and now checks rather than "
+                         "assumes",
+                         std::abs(record.lightRoundTrip - 2.0 * thickness / c) < 1e-9);
+        }
 
         report.subsection("The price is chosen, not fixed");
         for (double each : {9.0, 50.0, 500.0, 5000.0})
