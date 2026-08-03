@@ -48,6 +48,16 @@ namespace slm
         /// Contents of the text, empty when it cannot be read.
         static std::string text();
 
+        /// Number of control characters in the text other than the line break.
+        ///
+        /// A tool that edits the text through a language with backslash escapes
+        /// can turn a markup macro into the control character its escape names,
+        /// silently and without changing the length of the line. The damage
+        /// survives review because the rendered output merely loses a symbol.
+        /// Counting them costs nothing and turns that class of accident into a
+        /// failure.
+        static int controlCharacters(const std::string &text);
+
         /// Dispositions the text declares as permissible.
         static std::vector<std::string> vocabulary(const std::string &text);
 

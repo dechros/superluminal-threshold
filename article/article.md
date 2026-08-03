@@ -1,15 +1,22 @@
-# Superluminal eşik: kütleli bir parçacığın gidiş dönüş yolculuğu
+# Kütleli bir parçacığı zamanda geriye taşımak: öte tarafta mekânda mesafe kat etme yolu
 
 ## Özet
 
-Bu çalışmanın konusu, kütleli bir parçacığın ışık hızı eşiğini geçip öte
-tarafta bulunması ve **geri dönmesidir**. Sorulan tek soru, o parçacığın
-döndüğünde Bölge I'in dört boyutunda nereye konumlandığıdır; ve "nerede", uzaydaki
-yeriyle sınırlı değildir. Dönüş olayının **zaman** koordinatı da cevabın bir
-parçasıdır ve çalışmanın asıl hedefi odur. Bütün metin tek bir eşlemeyi kurmak
-üzere düzenlenmiştir:
+**Amaç.** Kütleli bir parçacığı zamanda geriye taşımanın bir yolunu aramak.
 
-$$(	ext{öte taraftaki yönelim ve hareket}) \;\longmapsto\; (t, x, y, z)_{	ext{dönüş olayı}}$$
+**Yöntem.** Parçacığı ışık hızı eşiğinin ötesine geçirmek, orada **mekânda
+mesafe kat ettirmek**, ve geri getirmek. Öte tarafta harcanan mesafenin bu
+tarafta saatte nereye düştüğü hesaplanır.
+
+**Sonuç.** Öte tarafta kat edilen mesafe, bu tarafta zamanda yer değiştirmedir,
+ve yeterince uzağa gidildiğinde dönüş girişten öncedir.
+
+Çalışmanın tamamı bu üç cümlenin çevresinde düzenlenmiştir. Parçacığın döndüğünde
+Bölge I'in dört boyutunda nereye konumlandığı sorulur; ve "nerede", uzaydaki
+yeriyle sınırlı değildir. Dönüş olayının **zaman** koordinatı cevabın asıl
+parçasıdır. Metin tek bir eşlemeyi kurar:
+
+$$(\text{öte taraftaki yönelim ve hareket}) \;\longmapsto\; (t, x, y, z)_{\text{dönüş olayı}}$$
 
 **Ana sonuç.** Öte tarafın tek uzay ekseninde $s$ kadar yer değiştirmek, Bölge
 I'in saatinde tam olarak $s$ kadar yer değiştirmektir. Katsayı birdir, uzay
@@ -37,7 +44,7 @@ Zincirin tamamı Bölüm 28'de tek yerde yazılıdır.
 **İddianın sınırı, aynı yerde.** Zincir bir aritmetiktir ve aritmetiği tamdır;
 bir geçişin fiziksel olarak kurulabildiğinin gösterimi değildir. Üç bedel bunu
 belirler ve türleri farklıdır. Eşiği aşan yapılanmaların genliği $d = 8$'de
-$3{,}46 	imes 10^{-12}$'ye çöker; bu bir büyüklük sorunudur. İşaretin seçilebilir
+$3{,}46 \times 10^{-12}$'ye çöker; bu bir büyüklük sorunudur. İşaretin seçilebilir
 kalması global bir seçicinin bulunmaması koşuluna bağlıdır; bu bir açık sorudur.
 Ve geçirgen okumanın bu metrik ailesinde geometrik bir temsilcisi yoktur; bu,
 modelin içindeki bir boşluktur ve kapatılması bu çalışmanın dışındadır.
@@ -107,6 +114,43 @@ eşlemenin ya bir girdisini, ya bir kısıtını, ya da bir sonucunu kaydeder.
 10. Dönüş olayının dört koordinatı ayrı kaynaklardan gelir: zaman bileşeni
     fazdan, uzay bileşenleri çıkış yüzü ile nicelenmiş sapmadan. Öte taraftaki
     yönelim bu koordinatların hepsine değil, yalnızca bir kısmına ulaşır.
+
+---
+
+## Okuma haritası: omurga ve detay
+
+Bu metnin omurgası üç adımdır ve hepsi tek bir amaca bağlıdır: kütleli bir
+parçacığı zamanda geriye taşımak.
+
+| Adım | Sorusu | Kurulduğu bölümler |
+|------|--------|--------------------|
+| Geçiş | Kütleli bir parçacık eşiğin ötesine nasıl geçer | 1, 2, 3, 4, 6 |
+| Mesafe | Öte tarafta mekânda kat edilen mesafe ne anlama gelir | 2.1.1–2.1.5, 8, 11, 24 |
+| Dönüş | Geri döndüğünde saatte nereye düşer | 13, 14, 25, 28 |
+
+Geri kalan bölümler detaydır ve hepsi aynı türdendir: omurganın bir adımına
+yöneltilebilecek bir itirazı karşılarlar. Hiçbiri anlatıyı ilerletmez, her biri
+bir soruyu kapatır. Bu ayrım okuyucunun metni kısaltarak okuyabilmesi için
+açıkça yazılmıştır.
+
+| Bölüm | Konusu | Karşıladığı soru |
+|-------|--------|-------------------|
+| 3.6, 3.7 | Katmanın enerji koşulları ve oran koşulu | Geçirgen eşiğin doğurduğu madde katmanı fiziksel olarak kabul edilebilir mi |
+| 5 | Geometrinin izin verdiği geçiş | Böyle bir geçişe geometri izin veriyor mu |
+| 7 | Yırtığın yapısı | İki imza arasında sürekli bir yol ne kadar dejenere olmak zorunda |
+| 9 | Orada hareket, dispersiyon, grup hızı | Üç zamanlı bir bölgede hız kavramı ne oluyor |
+| 12 | Orada madde, enerji, öngörü | Öte tarafta öngörü çökmüyor mu, ve bu geçişi anlamsız kılmaz mı |
+| 14.7, 14.11, 14.12 | Gecikmenin beş okuması, cephe ile tepe | Bu ışıktan hızlı bir yayılma iddiası mı, ve sinyal taşıyor mu |
+| 15, 16, 17 | Mod içeriği, korunan yükler, bilgi farkı | Gidiş dönüşte korunum yasalarına ne oluyor |
+| 18 | Yönelim sözlüğü ve nicelenmiş sapma | Orada yapılanların burada ölçülebilir bir karşılığı var mı |
+| 20 | Sylvester engeli | Cebirsel olarak böyle bir dönüşüm mümkün mü |
+| 21 | İtirazlar ve cevapları | Literatürün bu türden kurgulara yönelttiği itirazlar karşılandı mı |
+| 22 | Yöntem ve üç denetim | Bu sayılar doğrulanmış mı, ve doğrulama kendini kandırıyor olabilir mi |
+| 23 | Açık kalanlar | Neyin gösterilmediği yazılı mı |
+| 26 | Literatürün bıraktığı sorular | Bu çalışma literatüre göre nerede duruyor |
+| Ek 10 | Öte tarafta kuantum kuruluşu | Orada bir alan kuramı tanımlanabiliyor mu |
+| Ek 19 | İki bölge arasında sinyal | Kapalı bir ara bölge her kanalı kapatıyor mu |
+| Ek 27 | Anlaşmazlıkların sınıflandırılması | Rakip kuruluşlarla çelişkiler nerede gerçek |
 
 ---
 
@@ -241,8 +285,8 @@ ayırt edilmiş ekseni üzerindedir ve büyüklüğü birdir. Dolayısıyla o ek
 $s$ kadar yer değiştirme, saatte **tam olarak** $s$ kadar yer değiştirme
 üretir; bir katsayıyla ölçeklenmez. Diğer üç eksenin bu yuvaya katkısı **tam
 olarak sıfırdır**, yani tümüyle o üç eksenin içinde kalan bir hareket saati
-oynatmaz. Sınanan değerler: $0{,}5 	o 0{,}5000$, $1 	o 1{,}0000$,
-$2 	o 2{,}0000$, $4 	o 4{,}0000$, $7{,}25 	o 7{,}2500$.
+oynatmaz. Sınanan değerler: $0{,}5 \to 0{,}5000$, $1 \to 1{,}0000$,
+$2 \to 2{,}0000$, $4 \to 4{,}0000$, $7{,}25 \to 7{,}2500$.
 
 **Yer değiştirmeler toplanır.** Eşleme lineer olduğundan, $s_1$ sonra $s_2$
 gitmek ile $s_1 + s_2$ birden gitmek aynı saat yer değiştirmesini verir. Bu
@@ -402,7 +446,7 @@ geçiş gecikmesini $\Delta$ kadar aşması gerekir; gecikme bacak tarafından d
 bölge tarafından sabitlendiğinden, gereken bacak istenen yer değiştirmeyle
 **birebir** büyür: $\Delta = 0$ için $2{,}565988$, $\Delta = 1000$ için
 $1002{,}565988$. Dizinin genliği ise yalnızca bölgeye bağlıdır; kalınlık $2$'de
-$3{,}67 	imes 10^{-3}$, $8$'de $3{,}46 	imes 10^{-12}$ olduğu için genliğin
+$3{,}67 \times 10^{-3}$, $8$'de $3{,}46 \times 10^{-12}$ olduğu için genliğin
 bölgeye duyarlı olduğu, yani sabit bir niceliğin körlüğünden söz edilmediği
 gösterilmiştir. Buna karşın **bacak, genliğin argümanları arasında hiç
 geçmez**. Dolayısıyla bu modelde keyfi büyüklükte bir yer değiştirme, en
@@ -3288,7 +3332,7 @@ aritmetiği tamdır. Zincirin ne olmadığı da tek cümlede durmalıdır: bir g
 fiziksel olarak kurulabildiğinin gösterimi **değildir**. Üç ayrı yerde ödenen
 bedel bunu belirler — geçirgen okumanın bu metrik ailesinde geometrik bir
 temsilcisi yoktur (Bölüm 3.7), eşiği aşan yapılanmaların genliği $d = 8$'de
-$3{,}46 	imes 10^{-12}$'ye çöker (Bölüm 2.1.5), ve işaretin seçilebilir
+$3{,}46 \times 10^{-12}$'ye çöker (Bölüm 2.1.5), ve işaretin seçilebilir
 kalması global bir seçicinin bulunmaması koşuluna bağlıdır (Bölüm 8.4).
 
 Bu üçü birbirinden farklı türdendir ve karıştırılmamalıdır. İkincisi bir

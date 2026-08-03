@@ -196,6 +196,19 @@ namespace slm
         return buffer.str();
     }
 
+    int AssumptionLedger::controlCharacters(const std::string &text)
+    {
+        int count = 0;
+        for (unsigned char character : text)
+        {
+            if (character < 0x20 && character != static_cast<unsigned char>('\n'))
+            {
+                ++count;
+            }
+        }
+        return count;
+    }
+
     std::vector<std::string> AssumptionLedger::vocabulary(const std::string &text)
     {
         return firstColumn(findVocabulary(text));
@@ -337,6 +350,11 @@ namespace slm
         report.check("the text was opened and is not empty, so what follows was measured "
                      "against it rather than against nothing",
                      document.size() > 1000);
+        report.check(std::format("it carries no stray control character, of which {} were "
+                                 "found, so no markup macro has been silently turned into the "
+                                 "character its escape names",
+                                 AssumptionLedger::controlCharacters(document)),
+                     AssumptionLedger::controlCharacters(document) == 0);
         const auto ledger = AssumptionLedger::entries(document);
         const auto known = AssumptionLedger::vocabulary(document);
         report.check(std::format("a ledger of {} rows was located in it, by matching a four "
