@@ -4534,6 +4534,12 @@ Bu bölüm, konuyla ilgili literatürün çözmediği ya da tartışmalı bırak
 soruları dört sınıfa ayırır ve her birinde bu çalışmanın nerede durduğunu
 söyler. Sınıflar farklı muamele gerektirir ve karıştırılmamalıdır.
 
+**Bölüm 24.7 ile karıştırılmamalıdır.** Orası, literatürün **bu çalışmaya**
+yönelttiği itirazları ve her birinin hükmünü sayar. Burası ise literatürün
+**kendi içinde** açık bıraktığı soruları ve bu çalışmanın onların neresinde
+durduğunu sayar. İki sicil aynı kalemleri farklı sözlükle saymaz; farklı
+yönlere bakarlar.
+
 **Geri çekilen**, bir zamanlar ileri sürülmüş ve o zamandan beri çürütülmüş
 iddialardır. **Karşılığı olmayan**, hiçbir yayının kapsamadığı, dolayısıyla
 üzerinde anlaşılacak ya da anlaşılamayacak bir muhatabı bulunmayan sorulardır.
@@ -4740,7 +4746,7 @@ sorusu olarak ele almış, bir varış anı sorusu olarak ele almamıştır. Bu
 | Soru | Elde olan | Eksik olan |
 |------|-----------|------------|
 | Sonuçlar arasındaki dağılım | Sapmaların üç değerli bir kümede olduğu | Her değere düşen ağırlık |
-| Yer çekimi kanalı | Tepki verdiği, yarım birimde $4{,}0000$ karşıtlık | Kanalın kapasitesi |
+| Yer çekimi kanalı | Tepki verdiği, yarım birimde $4{,}0000$ karşıtlık | Kanalın kapasitesi; ancak onu kullanan bölüm kapsam dışına çıkarıldığı için bu bir kayıttır, gidiş dönüşün önünde bir engel değildir |
 | Karmaşık zaman kurgusu | Dönüş anını veren mekanizma; lapse kontur ölçütü hesaplanmış ve tutarlı çıkmıştır (Bölüm 22.5) | Ölçütün iki geçiş genliğinin kendisi üzerinde uygulanması; indirgenmiş biçimde kalmıştır |
 | Dönen parçacık ile yaratılmış çift | Sınır sayımının ve görünür yükün ikisinde de **aynı** olduğu, enerji bütçesinin ise ayrıştığı; ölçümün aleti, çözünürlüğü ve zamanlaması (Bölüm 27.7) | Yalnızca hız: şartname yazılmıştır, o ağırlıkta olay vermez |
 | Geçiş süresinin hangi okuması fiziksel | Beş okumanın hepsinin aynı genlikten hesabı | Aralarında seçim; üçü ışığın üstünde, ikisi altında |
