@@ -25,6 +25,7 @@
 #include "horizon/DegeneratePath.h"
 #include "horizon/LayerEnergyConditions.h"
 #include "horizon/RateCondition.h"
+#include "horizon/TransversePrescription.h"
 #include "horizon/SurfaceLayer.h"
 #include "intermediate/ChannelEntropy.h"
 #include "intermediate/DwellTime.h"
@@ -91,6 +92,7 @@ namespace
         sections.push_back(std::make_unique<slm::SurfaceLayerSection>());
         sections.push_back(std::make_unique<slm::LayerEnergyConditionsSection>());
         sections.push_back(std::make_unique<slm::RateConditionSection>());
+        sections.push_back(std::make_unique<slm::TransversePrescriptionSection>());
         sections.push_back(std::make_unique<slm::CausalCrossingSection>());
         sections.push_back(std::make_unique<slm::SlabTunnellingSection>());
         sections.push_back(std::make_unique<slm::ProfiledBarrierSection>());

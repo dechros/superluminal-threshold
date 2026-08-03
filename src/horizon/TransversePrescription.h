@@ -12,71 +12,123 @@ namespace slm
     /// particular family of transitions, which leaves open whether it is a
     /// property of signature change or a property of that family. This class
     /// closes that question by running the same test on the prescription the
-    /// surrounding literature uses generally: a Lorentzian metric with a
-    /// rank-one term added along a chosen direction, the coefficient of that
-    /// term interpolating through the value that flips the sign.
+    /// surrounding literature uses generally: a metric whose one degenerating
+    /// component vanishes on a hypersurface, with the directions along that
+    /// hypersurface carried by a separate block.
     ///
     /// Two conditions are attached to that prescription and they are usually
-    /// stated separately. TRANSVERSALITY asks the interpolating coefficient to
-    /// have a nonvanishing derivative where it crosses, which is what makes the
-    /// determinant vanish only to first order. TOTALLY GEODESIC asks the
-    /// hypersurface to have vanishing extrinsic curvature, which is what
-    /// removes the distributional source.
+    /// stated separately. TRANSVERSALITY asks the degenerating component to
+    /// vanish to first order, which is what makes the determinant vanish to
+    /// first order and keeps the hypersurface smoothly embedded. TOTALLY
+    /// GEODESIC asks the extrinsic curvature of that hypersurface to vanish,
+    /// which is what removes the distributional source.
     ///
-    /// Written in this prescription the extrinsic curvature is half the
-    /// derivative of the interpolating coefficient, so the two conditions are
-    /// the same derivative asked to be nonzero and zero. They cannot both hold.
-    /// That is computed here rather than argued, and it says what the earlier
-    /// obstruction was: not a feature of one family, and not a new obstruction
-    /// either, but this incompatibility seen from the side of the rate at which
-    /// a term dies.
+    /// The two constrain DIFFERENT components. Transversality is a statement
+    /// about the derivative of the degenerating component; the extrinsic
+    /// curvature is the derivative of the tangential block divided by twice the
+    /// lapse. They are independent knobs and both can be turned at once, which
+    /// is why the surrounding literature imposes them together without
+    /// remarking on any tension. Any computation that finds them incompatible
+    /// is a computation that has conflated the two blocks.
+    ///
+    /// That conflation is exactly what the earlier family did: there the
+    /// quantity called the extrinsic curvature was half the derivative of the
+    /// component that was changing sign. This class carries both readings so
+    /// the difference is a computed number rather than a remark, and it gives
+    /// the exponent in closed form. Writing the order of vanishing of the
+    /// degenerating component as q and that of the tangential slope as p, the
+    /// ratio the rate condition tests behaves as the distance to the power
+    /// p - q/2, and the conflated reading is the special case p = q - 1, giving
+    /// q/2 - 1. Transversality is q = 1, so the conflated reading can never
+    /// pass and the general one passes as soon as the tangential slope is
+    /// stationary, which is the totally geodesic condition itself.
+    ///
+    /// So the earlier obstruction is not a feature of signature change. What
+    /// does survive as an obstruction is a different pair: a surface layer
+    /// needs the extrinsic curvature nonvanishing at the crossing and the rate
+    /// condition needs it to die faster than the lapse, and no order satisfies
+    /// both. That is the strong against weak dichotomy already in the
+    /// literature, reached from the side of a rate.
     class TransversePrescription
     {
     public:
-        /// Interpolating coefficient at the given coordinate. The shape
-        /// parameter sets how many orders it vanishes to at the crossing: one
-        /// is the transverse case, three is stationary there.
-        static double coefficient(double xi, int order);
+        /// The component that degenerates, vanishing to the given order at the
+        /// crossing and changing sign through it.
+        static double degenerateComponent(double xi, int degenerateOrder);
 
-        /// Derivative of that coefficient.
-        static double coefficientSlope(double xi, int order);
+        /// Its derivative.
+        static double degenerateSlope(double xi, int degenerateOrder);
 
-        /// The metric component that changes sign, which is minus one plus the
-        /// coefficient.
-        static double changingComponent(double xi, int order);
+        /// Whether the transversality condition holds, that the degenerating
+        /// component vanishes to first order and no faster.
+        static bool isTransverse(int degenerateOrder);
 
-        /// Whether the transversality condition holds, that the coefficient's
-        /// derivative does not vanish at the crossing.
-        static bool isTransverse(int order);
+        /// Lapse, the square root of the magnitude of the degenerating
+        /// component.
+        static double lapse(double xi, int degenerateOrder);
 
-        /// Extrinsic curvature of the surfaces of constant coordinate, which in
-        /// this prescription is half the coefficient's derivative.
-        static double extrinsicCurvature(double xi, int order);
+        /// Normal derivative of the tangential block, vanishing to the given
+        /// order at the crossing. This is the quantity the extrinsic curvature
+        /// is built from, and it is not the same quantity transversality
+        /// constrains.
+        static double tangentialSlope(double xi, int tangentialOrder);
 
-        /// Whether the hypersurface is totally geodesic, that the extrinsic
-        /// curvature vanishes at the crossing.
-        static bool isTotallyGeodesic(int order);
+        /// Extrinsic curvature of the surfaces of constant coordinate, which is
+        /// the tangential slope over twice the lapse.
+        static double extrinsicCurvature(double xi, int degenerateOrder, int tangentialOrder);
+
+        /// Whether the hypersurface is totally geodesic, that the tangential
+        /// slope vanishes at the crossing.
+        static bool isTotallyGeodesic(int tangentialOrder);
 
         /// Whether both conditions hold at once, which is the configuration the
-        /// literature's clean case asks for.
-        static bool bothConditionsHold(int order);
+        /// literature's clean case asks for and which is available.
+        static bool bothConditionsHold(int degenerateOrder, int tangentialOrder);
 
-        /// Lapse, the square root of the magnitude of the changing component.
-        static double lapse(double xi, int order);
-
-        /// Ratio whose limit the rate condition tests.
-        static double ratio(double distance, int order);
+        /// Ratio whose limit the rate condition tests, which is twice the
+        /// extrinsic curvature and is therefore that curvature measured with
+        /// proper distance rather than coordinate distance.
+        static double ratio(double distance, int degenerateOrder, int tangentialOrder);
 
         /// Power with which that ratio behaves in the distance from the
-        /// crossing.
-        static double ratioExponent(int order, double nearDistance, double farDistance);
+        /// crossing, measured.
+        static double ratioExponent(int degenerateOrder, int tangentialOrder, double nearDistance,
+                                    double farDistance);
+
+        /// The same power in closed form, which is the tangential order less
+        /// half the degenerate order.
+        static double predictedExponent(int degenerateOrder, int tangentialOrder);
 
         /// Whether the rate condition is met, that the ratio dies.
-        static bool satisfiesRateCondition(int order);
+        static bool satisfiesRateCondition(int degenerateOrder, int tangentialOrder);
+
+        /// The ratio as the earlier family computed it, with the curvature
+        /// taken from the degenerating component instead of the tangential
+        /// block.
+        static double conflatedRatio(double distance, int degenerateOrder);
+
+        /// Its measured power.
+        static double conflatedExponent(int degenerateOrder, double nearDistance,
+                                        double farDistance);
+
+        /// Its closed form, half the degenerate order less one, which is the
+        /// general formula at a tangential order one below the degenerate one.
+        static double predictedConflatedExponent(int degenerateOrder);
+
+        /// Whether the conflated reading admits any transverse order that also
+        /// passes the rate condition, which it does not, and which is where the
+        /// earlier obstruction came from.
+        static bool conflatedAllowsBoth(int highestOrder);
+
+        /// Whether the general prescription admits a transverse, totally
+        /// geodesic configuration that passes the rate condition, which it
+        /// does.
+        static bool generalAllowsBoth();
 
         /// Whether any order both carries a layer and meets the rate condition,
-        /// which is what a transmitting junction would need.
-        static bool anyOrderKeepsLayerAndRate();
+        /// which is what a transmitting junction with a source would need, and
+        /// which is the obstruction that does survive.
+        static bool anyOrderKeepsLayerAndRate(int highestOrder);
     };
 
     /// Section running the rate condition on the general prescription rather
