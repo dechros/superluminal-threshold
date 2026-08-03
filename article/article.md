@@ -125,11 +125,16 @@ parçacığı zamanda geriye taşımak.
 | Adım | Sorusu | Kurulduğu bölümler |
 |------|--------|--------------------|
 | Geçiş | Kütleli bir parçacık eşiğin ötesine nasıl geçer | 1, 2, 3, 4, 6 |
-| Mesafe | Öte tarafta mekânda kat edilen mesafe ne anlama gelir | 2.1.1–2.1.5, 8, 11, 24 |
-| Dönüş | Geri döndüğünde saatte nereye düşer | 13, 14, 25, 28 |
+| Mesafe | Öte tarafta mekânda kat edilen mesafe ne anlama gelir | 2.1.1–2.1.5, 8, 9.0, 11, 24 |
+| Dönüş | Geri döndüğünde saatte nereye düşer | 13, 14.1–14.5, 18.12–18.16, 25, 28 |
+
+Sözlüğün tek tanımı **Bölüm 9.0**'dadır: öte tarafın dört ekseninin karakteri,
+hangi yuvaya indiği, ve bir birim adımın Bölge I saatinde ne ürettiği. İspatı
+Bölüm 2.1.1'dedir. Metnin başka yerlerinde sözlük tekrar kurulmaz, yalnızca bu
+iki adrese atıf yapılır.
 
 Geri kalan bölümler detaydır ve hepsi aynı türdendir: omurganın bir adımına
-yöneltilebilecek bir itirazı karşılarlar. Hiçbiri anlatıyı ilerletmez, her biri
+yöneltilebilecek bir soruyu karşılarlar. Hiçbiri anlatıyı ilerletmez, her biri
 bir soruyu kapatır. Bu ayrım okuyucunun metni kısaltarak okuyabilmesi için
 açıkça yazılmıştır.
 
@@ -138,19 +143,23 @@ açıkça yazılmıştır.
 | 3.6, 3.7 | Katmanın enerji koşulları ve oran koşulu | Geçirgen eşiğin doğurduğu madde katmanı fiziksel olarak kabul edilebilir mi |
 | 5 | Geometrinin izin verdiği geçiş | Böyle bir geçişe geometri izin veriyor mu |
 | 7 | Yırtığın yapısı | İki imza arasında sürekli bir yol ne kadar dejenere olmak zorunda |
-| 9 | Orada hareket, dispersiyon, grup hızı | Üç zamanlı bir bölgede hız kavramı ne oluyor |
+| 8.4.1 | Yönlendirilebilirlik ile ilerleme zorunluluğunun ayrılması | "Tek yönlü" derken hangi iddia yapılıyor, ve hangisi hesaplanmış |
+| 9.1, 9.2 | Dispersiyon, grup hızı, kapalı form çözüm | Üç zamanlı bir bölgede hız kavramı ne oluyor |
 | 12 | Orada madde, enerji, öngörü | Öte tarafta öngörü çökmüyor mu, ve bu geçişi anlamsız kılmaz mı |
-| 14.7, 14.11, 14.12 | Gecikmenin beş okuması, cephe ile tepe | Bu ışıktan hızlı bir yayılma iddiası mı, ve sinyal taşıyor mu |
-| 15, 16, 17 | Mod içeriği, korunan yükler, bilgi farkı | Gidiş dönüşte korunum yasalarına ne oluyor |
-| 18 | Yönelim sözlüğü ve nicelenmiş sapma | Orada yapılanların burada ölçülebilir bir karşılığı var mı |
 | 20 | Sylvester engeli | Cebirsel olarak böyle bir dönüşüm mümkün mü |
 | 21 | İtirazlar ve cevapları | Literatürün bu türden kurgulara yönelttiği itirazlar karşılandı mı |
 | 22 | Yöntem ve üç denetim | Bu sayılar doğrulanmış mı, ve doğrulama kendini kandırıyor olabilir mi |
+| 29 | Dönüş anına yöneltilen sorular | Gecikme ne kadar sağlam, ışıktan hızlı yayılma iddiası mı, sinyal taşıyor mu |
+| 30 | Yönelim tablosuna yöneltilen sorular | Dokuz hücreli tablo ne kadar bağlayıcı, iki etiketi bağımsız mı |
 | 23 | Açık kalanlar | Neyin gösterilmediği yazılı mı |
 | 26 | Literatürün bıraktığı sorular | Bu çalışma literatüre göre nerede duruyor |
-| Ek 10 | Öte tarafta kuantum formülasyonu | Orada bir alan kuramı tanımlanabiliyor mu |
+| Ek 10 | Öte tarafta kuantum kuramının kurulabilirliği | Orada bir alan kuramı tanımlanabiliyor mu |
 | Ek 19 | İki bölge arasında sinyal | Kapalı bir ara bölge her kanalı kapatıyor mu |
 | Ek 27 | Anlaşmazlıkların sınıflandırılması | Rakip formülasyonlarla çelişkiler nerede gerçek |
+
+Korunan yükler (15, 16, 17) ile eşiğin mod filtresi olması (12) omurga ile detay
+arasında durur: sonucu taşımazlar ama sonucun tutarlı olması onlara bağlıdır.
+
 
 ---
 
@@ -1152,6 +1161,9 @@ $L'$ ayrıca üç zaman ekseninde $O(3)$ altında değişmezdir; buradan üç ko
 
 ### 8.2 Roller tam tersine dönmüştür
 
+Aşağıdaki tablo Bölüm 9.0'ın sözlüğünün rol tarafıdır; koordinat karşılıkları
+orada, rollerin karşılaştırması burada durur.
+
 | | Bölge I | Bölge II |
 |---|-----------------|----------|
 | Serbest hareket | Uzayda, üç yönde | Üç zamanda serbestçe |
@@ -1264,6 +1276,82 @@ olmaktan çıkar, dışarıdan kırılmış olur. Bu çalışma böyle bir koşu
 benimsemekte ne de reddetmektedir; dolayısıyla Bölüm 2.1'in serbestliği
 **böyle bir global seçicinin bulunmaması koşuluna bağlıdır** ve bu koşul burada
 adlandırılmıştır.
+
+### 8.4.1 "Tek yönlü" derken ne söylendiği: iki ayrı iddia
+
+Bu tabloyu yazmak kolaydı; ne iddia edildiğini söylemek zor. "Akış" kelimesinin
+içinde **iki ayrı** ifade saklıdır ve statüleri farklıdır
+
+**Yönlendirilebilirlik.** Belirli bir nedensel türdeki doğrultular, o türden
+çıkmadan birleştirilemeyen iki parçaya ayrılır; dolayısıyla bir uç ötekinden
+ayırt edilebilir ve hiçbir hareket cismi birinden ötekine taşımaz. Bu, metriğe
+dair bir ifadedir ve **karar verilebilir**: o türden birim bir vektör yarım tur
+döndürülür, ki bu onu kendi negatifine taşır, ve yolda aralığın işaret değiştirip
+değiştirmediğine bakılır.
+
+**Zorunluluk.** Bir cisim o koordinat boyunca, seçemediği bir hızla, ilerlemek
+**zorundadır**. Bu, metriğe dair bir ifade **değildir**. Hiçbir metrik bir dünya
+çizgisinin ilerlemek zorunda olduğunu söylemez, ve Bölge I zamanının bir cismi
+taşıdığı duygusu bunun delili değildir. Geçiş duygusunun metriğe değil
+gözlemciye ait bir olgu olduğu [53]'te iki taraftan birlikte tartışılmıştır; bu
+çalışma o tartışmanın hiçbir tarafına dayanmaz ve kaynak yalnızca iddianın
+sınırını işaretlemek için verilmiştir.
+
+Bu ikisi alışkanlıkla birbirine karıştırılır, ve karıştırmanın bedeli gizli bir
+varsayımdır. Burada ayrılırlar.
+
+**Birincisi hesaplanmıştır.** Her iki bölgede her nedensel tür için:
+
+| Bölge, tür | Doğrultu sayısı | Kendi negatifine ulaşır mı | Sonuç |
+|------------|------------------|-----------------------------|-------|
+| Burası, zamansı | $1$ | hayır | yönlendirilebilir |
+| Burası, uzaysı | $3$ | evet | yönlendirilemez |
+| Öte taraf, pozitif | $3$ | evet | yönlendirilemez |
+| Öte taraf, negatif | $1$ | hayır | yönlendirilebilir |
+
+İki bölge bu bakımdan **tam dualdir**. Dolayısıyla:
+
+> Öte tarafın tek uzay ekseninin tek yönlü olması, modele sonradan eklenmiş bir
+> varsayım **değildir**. Bölge I'in zaman okunu veren teoremin, öteki türe
+> uygulanmış hâlidir.
+
+Ayrıca başka yerlerde kullanılan kestirme, yani "sayı bir ise yönlendirilebilir",
+dört durumun dördünde de döndürme hesabıyla uyuşmaktadır; yani kestirme bir tanım
+değil, **denetlenmiş** bir kestirmedir.
+
+**İkincisi hesaplanmamıştır, ve hiçbir yerde kullanılmamaktadır.** Yukarıdaki
+hiçbir satır bir cismin yönlendirilebilir bir koordinat boyunca ilerlemek
+zorunda olduğunu söylemez; yalnızca üzerinde geri dönemeyeceğini söyler. Ve bu
+çalışmada böyle bir zorunluluk kullanılmamaktadır: geçiş miktarı dönüş
+eşlemesine bir **girdi** olarak girer, dolayısıyla bir cisim yerinde durabilseydi
+hiçbir sonuç değişmezdi. Bu, kodda denetlenmektedir.
+
+> Zamanın nehir gibi aktığı duygusu, burada hesaplananın **dışındadır** ve
+> hiçbir iddia ona dayanmamaktadır.
+
+**Ayrımdan sonra ayakta kalan şey, ikisinden de keskindir.** Bölge II'nin tek
+uzay ekseni boyunca yer değiştirme, Bölge I'in zaman eksenine **bire bir** düşer:
+
+| Bölge II'de yer değiştirme | Bölge I'in zaman ekseninde |
+|----------------------|--------------------------|
+| $0{,}5$ | $+0{,}5000$ |
+| $1$ | $+1{,}0000$ |
+| $2$ | $+2{,}0000$ |
+| $7{,}25$ | $+7{,}2500$ |
+
+Bağıntı miktarda tam doğrusaldır. Yani bir cismin o eksende **ne kadar**
+gittiği kendi seçimidir ve Bölge I saatinde belirli bir karşılığı vardır; seçemediği
+şey **hangi yöne** gittiğidir.
+
+> Öte tarafta mekânda hareket etmek, Bölge I'in zaman çizgisinde konum değiştirmektir.
+> Miktar serbest, yön değil. Bu yolla parçacık daha **ileri** bir ana konur, ve
+> hiçbir zaman daha geriye.
+
+Buradan çıkan sonuç, senin evreninde "zamanda geri dönemezsin" demenin, öte
+tarafta "o tek uzay ekseninde geri dönemezsin" demekle aynı cümle olduğudur.
+Yer değiştiren şey yasak değil, yasağın hangi tür koordinata düştüğüdür. Ve
+"ilerlemek zorundasın" cümlesi, iki tarafta da hesabın söylediği bir şey
+değildir.
 
 ### 8.5 Zaman yönelimi: neden öte tarafta gelecek ve geçmiş yok
 
@@ -1452,6 +1540,65 @@ uzayındaki yönelimde yaşar.
 
 Hız dönüşümü $v' = c^2/v$'dir; ışık hızı sabit noktadır ve subluminal ile
 superluminal bölgeleri birbirine eşler.
+
+### 9.0 Dört eksende hareketin tanımı
+
+Yukarıdaki sonuç üç zaman ekseni hakkındadır ve dördüncü ekseni kapsamaz. Bu alt
+bölüm dördünü birden tanımlar, çünkü çalışmanın sonucunu taşıyan eksen tam da
+dördüncüsüdür.
+
+Öte tarafın dört yuvasının her biri için üç şey hesaplanır: kendi bölgesindeki
+karakteri, involüsyon altında Bölge I'in hangi yuvasına düştüğü, ve o yuvada bir
+birim adımın Bölge I saatinde ne ürettiği.
+
+| Öte tarafta yuva | Orada karakteri | Düştüğü yuva, burada | O yuvanın karakteri | Bir birim adımın saatte karşılığı |
+|---|---|---|---|---|
+| $0$ | zaman | $3$ | uzay | **tam olarak $0$** |
+| $1$ | zaman | $2$ | uzay | **tam olarak $0$** |
+| $2$ | zaman | $1$ | uzay | **tam olarak $0$** |
+| $3$ | uzay | $0$ | zaman | **tam olarak $1$** |
+
+Dört yuvanın dördü de eşikte karakter değiştirir; hiçbiri türünü korumaz. Buna
+karşılık **hareket serbestliği yuva yuva korunur**: öte tarafın üç zamanında
+serbestçe hareket edilir ve o üç zamanın taşıdığı Bölge I uzay yönlerinde de serbestçe
+hareket edilir; öte tarafın tek uzay ekseninde yön seçilemez ve onun taşıdığı
+Bölge I zamanında da seçilemez.
+
+**Üç zaman ekseninde hareket.** Serbesttir, ama iki nedenle sonucu taşıyamaz.
+Birincisi, tümüyle bu üç eksenin içinde kalan bir yer değiştirme Bölge I saatinde
+**tam olarak sıfır** üretir; üç eksenin her birinde birim adım tek tek denenmiş,
+üçünün de izdüşümü sıfır çıkmıştır. İkincisi, bu üç eksen arasında bir $O(3)$
+simetrisi vardır ve bu bir ayar fazlalığıdır: enerji vektörünün yönü orada
+fiziksel değildir, yalnızca uzunluğu fizikseldir. Kapalı bir gezinti de hiçbir iz
+bırakmaz, çünkü bu eksenler arasındaki dönmeler ayırt edilmiş ekseni sabit
+bırakır ve sözlüğün katsayısına dokunmaz.
+
+Bu yüzden §9'un "hız yönelime dönüşür" sonucu bu üç eksene aittir: payda üç
+boyutlu olduğu için türev skaler değil gradyandır, ve "ne kadar hızlı" sorusu
+"hangi yönelimde" sorusuna dönüşür.
+
+**Tek uzay ekseninde hareket.** Burada durum başkadır ve bu ayrım metnin başka
+hiçbir yerinde yapılmamıştır. O eksen tek olduğu için türev **skalerdir**, yani
+orada hız yönelime dönüşmez; sıradan anlamda bir yayılma hızı tanımlıdır ve bir
+üst sınırı vardır. Hesaplanan büyüklük
+
+$$\left|\frac{\mathrm{d}q}{\mathrm{d}\kappa}\right| = \frac{c\,\kappa}{\sqrt{\kappa^2+\mu}}$$
+
+sınanan bütün dalga sayılarında $c$'nin altındadır ve $\kappa \to \infty$ limitinde
+$c$'ye gider. Yani **öte tarafın da bir hız sınırı vardır**, ve o sınır bu tarafın
+sınırıyla aynı sayıdır. Durgun bir cisim için $q(0) = mc^2/\hbar 
+eq 0$'dır,
+yani o eksende duran bir cismin bile sıfırdan farklı bir eşlenik niceliği vardır.
+
+Sonucu taşıyan eksen budur. Bu eksende $s$ kadar yer değiştirmek, Bölge I
+saatinde tam olarak $s$ kadar yer değiştirmektir; katsayı birdir ve diğer üç
+eksenin bu yuvaya katkısı tam olarak sıfırdır. İspatı Bölüm 2.1.1'dedir, işaretin
+nereden geldiği Bölüm 2.1.3'te, ve o eksende geri dönülemiyor olmasının bu
+sonuçla nasıl bir arada durduğu da orada yazılıdır.
+
+**Dördünün özeti.** Üç eksen serbesttir ama saate hiçbir şey taşımaz; bir eksen
+serbest değildir ama saate her şeyi taşır. Yolculuğun tamamı bu asimetri
+üzerinde durur.
 
 ### 9.1 Karşı tarafta dispersiyon ve grup hızı
 
@@ -1969,319 +2116,6 @@ aynı gecikmeyi veren birden çok kalınlık vardır.
 | Söndürücü | Doyuma ulaşır, kalınlıktan bağımsız |
 | Dejenere | Tanımsız, geçiş yok |
 
-### 14.6 Kapatılamayan üç nokta
-
-**Doyum, kalınlık bilgisini yok ediyor.** Yukarıdaki tablo dönüş anının tek
-başına yeterli bir gözlenebilir olmadığını söylüyor. Literatürde iki ardışık
-engel için gecikmenin yalnızca kalınlıklardan değil, aralarındaki **mesafeden**
-de bağımsız hâle geldiği savunulmuştur; doğruysa bu, gidiş dönüş kurgusunun
-tamamı için geçerlidir.
-
-Bunun karşısında üç çıkış yolu vardır ve hiçbiri burada kapatılmamıştır:
-doyumun dayandığı akıl yürütmenin kesin olmadığı yönündeki itiraz; doyumun
-yalnızca grup saatine ait olduğu, oyalanma süresinin kalınlıkla tekdüze arttığı
-yönündeki ayrım; ve sönümün doyumu tümüyle ortadan kaldırdığı sonucu. Sonuncusu
-bu model için özellikle ilgi çekicidir, çünkü Bölüm 3.4'teki madde katmanı tam
-olarak geçişi sönümlü kılacak türden bir bağlaşımdır. Modelin bir yükümlülüğü
-olarak görünen şey, burada bir kurtarıcı olabilir.
-
-İkinci çıkış yolu, yani oyalanma süresi ayrımı, Bölüm 14.7'de hesaplanmış ve
-**bu modelde geçerli olmadığı** görülmüştür.
-
-### 14.7 Gecikme bir geçiş süresi mi, yoksa depolanan alanın ömrü mü
-
-Fazdan okunan gecikmeyi bir geçiş süresi saymak zorunlu değildir. Rakip okuma
-[42]'dedir: aynı nicelik bir **oyalanma süresidir**, yani bölge içinde depolanan
-olasılığın gelen akıya oranıdır ve alanın iki yüzden birden sızarak boşalma
-ömrünü verir. Bu okumada hiçbir şey bölgeyi kat etmez ve doyum bir paradoks
-değil, beklenen davranıştır. Orada tünelleme bağlamında kurulan bu ayrım, burada
-kendi sayılarımızla sınanmaktadır.
-
-İki okuma göz kararıyla ayrılamaz, çünkü ikisi de aynı saçılma çözümünden
-türetilir. Ayırt etmenin yolu, depolanan normu iç alandan **bağımsız olarak**
-hesaplayıp fazın verdiğiyle karşılaştırmaktır. Bu bölümde yapılan budur.
-
-**Depolanan norm da doyar.** İç alan, iki yüzeyin çözümünden alınan ileri ve
-geri genliklerle kurulur ve kare modülü kalınlık boyunca integre edilir:
-
-| Kalınlık $d$ | Depolanan norm |
-|--------------|----------------|
-| $1$ | $0{,}31567$ |
-| $2$ | $0{,}31269$ |
-| $4$ | $0{,}31256$ |
-| $8$ | $0{,}31256$ |
-| $16$ | $0{,}31256$ |
-
-Dolayısıyla doyan gecikmenin, hiçbir geçiş gerektirmeyen bir açıklaması vardır:
-depolanan alan zaten doymaktadır.
-
-**İki okuma bağımsız gözlenebilir değildir.** Aynı yapılanmada iki nicelik
-karşılaştırıldığında:
-
-| Kalınlık $d$ | Fazdan gecikme | Oyalanma süresi | Oran |
-|--------------|----------------|-----------------|------|
-| $2$ | $1{,}4629$ | $0{,}5195$ | $2{,}817$ |
-| $4$ | $1{,}4629$ | $0{,}5193$ | $2{,}817$ |
-| $8$ | $1{,}4629$ | $0{,}5193$ | $2{,}817$ |
-
-Bağıl fark üç kalınlıkta da $+0{,}6449$'dur; oranın kalınlıkla oynamaması bu
-sayının sabitliği olarak da okunabilir.
-
-İkisi sayısal olarak eşit değildir, ancak **oranları kalınlıkla oynamaz**;
-artık $10^{-6}$ mertebesindedir. İki nicelik bir normalizasyon çarpanıyla
-ayrışır, farklı bir mekanizmayla değil. Sonuç açıktır:
-
-> Engel rejiminde fazdan okunan gecikme, depolanan normun taşımadığı hiçbir
-> bilgi taşımaz. Bu rejimde dönüş anının "yolculuk süresi" olarak okunması
-> **desteklenmemektedir**.
-
-Bu sonucun kapsamı Bölüm 14.11'de daraltılmıştır ve daraltan hesap yine bu
-modelin kendi araçlarıyla yapılmıştır. Yukarıdaki cümle, fazdan okunan gecikme
-ile oyalanma süresi çifti için doğrudur; ancak "engel rejiminde bağımsız bir
-geçiş saati yoktur" biçimindeki daha geniş okuma **yanlıştır**. Aynı genlikten
-türeyen ve depolanan normdan bağımsız olan, kalınlıkla doymayan bir okuma
-vardır.
-
-**Yayılımlı rejimde durum tersinedir.** Ara bölge yokken depolanan norm
-kalınlıkla doğrusal artar ($d = 1, 2, 4$ için $1{,}000$, $2{,}000$, $4{,}000$),
-dolayısıyla iki nicelik birlikte doyamaz ve geçiş okuması ayakta kalır. Bu,
-Bölüm 18.13'te bağımsız olarak bulunan ayrımın aynısıdır: parçacık okuması
-yalnızca yayılımlı rejimde meşrudur.
-
-Bu sonucun Bölüm 25.6'daki çekinceyi **güçlendirdiği** kaydedilmelidir. Orada
-kalınlıkla sınırsız büyüyen fark için "bu bir yayılma hızı değildir" denmişti;
-burada ek olarak, o farkın okunduğu niceliğin de bağımsız bir yolculuk saati
-olmadığı gösterilmektedir.
-
-**Frekans karışımı kalınlığı koruyor.** Bu, Bölüm 14.8'de hesaplanmıştır ve
-gecikmenin kaybettiği bilgiyi geri veriyor.
-
-### 14.8 Hangi eksen dönüyor: tablonun en kırılgan varsayımı
-
-Bölüm 3'ün tablosu, karakter değiştiren yönlerin **enine** yönler olduğunu, yani
-geçiş doğrultusunun kendisinin dönmediğini varsayar. Bu varsayım altında Kleinian
-bölge yayılımlıdır ve tablodaki tek açık hücreyi verir.
-
-Varsayım tartışmalıdır. Kleinian dilim üzerine yapılmış çalışmalarda dönen yön
-**geçiş doğrultusunun kendisidir**; o durumda iç dalga sayısının karesi dışarıdaki
-değerin işaretçe tersi olur ve her frekansta negatiftir.
-
-İki okuma yan yana hesaplanmıştır:
-
-| Frekans | Enine eksen döner | Geçiş ekseni döner |
-|---------|-------------------|--------------------|
-| $2{,}8$ | $+0{,}17$, yayılımlı | Negatif, söndürücü |
-| $6$ | $+28{,}33$, yayılımlı | Negatif, söndürücü |
-| $12$ | $+136{,}33$, yayılımlı | Negatif, söndürücü |
-| $50$ | Yayılımlı | Negatif, söndürücü |
-
-Sonuç keskindir. **Geçiş ekseni döndüğünde Kleinian bölge her frekansta bir
-engeldir ve hiçbir zaman bir oyuk değildir.** Dahası, o okumada Kleinian ile
-Öklid bölgenin iç dalga sayıları **birbirinin aynıdır**: dört tip ikiye iner ve
-her geçiş tünellemedir.
-
-Bu çalışma iki okumadan birini seçmemektedir. Kaydedilen şudur: Bölüm 3'ün
-"kalın Kleinian tek çalışan hücredir" gözlemi, enine okumaya bağlıdır ve geçiş
-ekseni okumasında geçerli değildir.
-
-### 14.9 Frekans karışımı: gecikmenin unuttuğunu hatırlayan nicelik
-
-Bölüm 14.4'ün sorunu, gecikmenin kalınlığı unutmasıydı. Ara bölgenin iki dalı
-arasındaki karışım oranı bu bilgiyi korur:
-
-$$\left|\frac{A_-}{A_+}\right|
-  = \left|\frac{\kappa - q}{\kappa + q}\right| \, \left|e^{-2 i q d}\right|$$
-
-Söndürücü durumda $q$ sanaldır ve üstel terim reeldir, dolayısıyla oran
-kalınlıkla üstel olarak büyür. Hesaplanan değerler:
-
-| Kalınlık $d$ | Gecikme | Karışım oranı |
-|--------------|---------|---------------|
-| $1$ | $1{,}451$ | $9{,}40 \times 10^{1}$ |
-| $2$ | $1{,}463$ | $8{,}83 \times 10^{3}$ |
-| $4$ | $1{,}463$ | $7{,}80 \times 10^{7}$ |
-| $8$ | $1{,}463$ | $6{,}09 \times 10^{15}$ |
-
-Dört ve sekiz birim kalınlıkta gecikme aynı sayıdır, karışım oranı ise sekiz
-mertebe farklıdır.
-
-> Gecikme ile karışım **birbirini tamamlar, tekrarlamaz**. Dönüş anı için
-> gecikme, ara bölgenin kalınlığı için karışım gerekir. Tek bir gözlenebilir
-> gidiş dönüşü tarif etmeye yetmez.
-
-**Çekince.** Karışım oranı ara bölgenin içindeki iki dalın oranıdır. Kalınlık
-bilgisini ilke olarak taşıması, dışarıdan ölçülebilir olduğu anlamına gelmez;
-geçen genlik aynı kalınlıkta üstel olarak küçüldüğü için, bilginin taşındığı
-kanal aynı zamanda zayıflayan kanaldır. Ölçülebilirlik ayrı bir sorudur ve
-burada gösterilmemiştir.
-
-### 14.10 Karmaşık zaman kurgusunun keyfiliği ve bir ölçütün sınanması
-
-**Karmaşık zaman kurgusu tek başına belirleyici değildir.** Fazın karmaşık
-yapıdan okunması, keyfilik taşır: karmaşık bir zaman değişimi, özgün çözümden
-uzun bir aralık boyunca ayırt edilemeyen sonsuz sayıda çözüm üretebilir.
-Bu keyfilik ancak bir kabul edilebilirlik ölçütü benimsenerek kaldırılır.
-
-**Bir ölçüt hesaplanmıştır**. Lapse üzerinden
-integral almak, yeniden parametrelendirme kısıtını dayatan işlemdir ve
-integrandın **lapse sıfırken bir esas tekilliği** vardır; orası metriğin
-dejenere olduğu noktadır. Kontur bu nedenle reel ekseni baştan başa kat etmek
-ama başlangıç noktasından geçmemek zorundadır, ve hangi taraftan geçtiği bir
-zevk meselesi değildir.
-
-Üstelin iki eyer noktası vardır ve ikisi de sanal eksende, başlangıç noktasına
-**eşit uzaklıkta** oturur; hiçbiri daha yakın değildir, iki eyeri ayıran tek şey
-konturun hangi taraftan geçtiğidir. Alt eyer sönen bir genlik, üst eyer büyüyen
-bir genlik taşır:
-
-| $d$ | Alt eyerin genliği | Üst eyerin genliği |
-|-----|---------------------|---------------------|
-| $1$ | $3{,}6788 \times 10^{-1}$ | $2{,}7183$ |
-| $2$ | $1{,}3534 \times 10^{-1}$ | $7{,}3891$ |
-| $4$ | $1{,}8316 \times 10^{-2}$ | $5{,}4598 \times 10^{1}$ |
-
-**İki taraf yalnızca farklı cevap vermiyor; biri hiç cevap vermiyor.** Öz zaman
-yarı doğrusu aşağı doğru döndürüldüğünde integral yakınsar; yukarı doğru
-döndürüldüğünde yakınsamaz. Dolayısıyla ölçüt isteğe bağlı değil, zorunludur.
-
-Ayakta kalan konturun hangi eyere indiği **ölçülmüştür**, varsayılmamıştır:
-integralin kendi sönüm hızı, iki eyerin vereceği hızlarla karşılaştırılır. Ölçülen
-hız $d = 2, 4, 8, 16$ için sırasıyla $0{,}2904$, $0{,}5760$, $0{,}7496$,
-$0{,}8545$'tir ve alt eyerin verdiği $1{,}0000$'e tırmanır; fark, ön çarpanın
-sönmesidir. Her uzaklıkta eyer hızının **altında** kalır, yani eyer integrali
-sınırlar, integrale uydurulmuş değildir.
-
-> Başlangıç noktasının altından geçen kontur, **sönen genliği** seçer. Bu, bu
-> modelin geçiş hesabının zaten kullandığı genliktir. Ölçüt burada ihlal
-> edilmiyordu; **söylenmemişti**.
-
-**Bu maddeyi kapatmaz, daraltır.** Hesap, minisüperuzay biçimi üzerinde
-yapılmıştır; iki geçişin ortak genliğinin kendisi üzerinde yapılmamıştır.
-Bölüm 26.3'teki madde bu nedenle açık kalmaya devam eder, ama artık "hiçbir
-ölçüt sınanmadı" değil, "sınanan ölçüt tutarlı çıktı, ama indirgenmiş biçimde"
-demektedir.
-
-### 14.11 Geçiş süresinin beş okuması, tek çözüm üzerinde
-
-Bir parçacığın klasik olarak giremeyeceği bir bölgede ne kadar kaldığı sorusunun
-tek bir kabul görmüş cevabı yoktur ve anlaşmazlık aritmetik değildir: birbirine
-denk olmayan birkaç nicelik bu adı hak eder, her biri bir ölçümün geri
-döndüreceği şeydir ve birbirleriyle uyuşmazlar. Bu nedenle bunlardan birini tek
-başına aktarmak bir sonuç değil, savunulması gereken bir seçimdir. Aşağıdaki beş
-okuma, **aynı geçirgenlik genliğinden** türetilerek yan yana hesaplanmıştır
-
-İlk ikisi bilinen okumalardır: **fazdan gecikme**, geçirgenlik fazının frekansa
-göre türevi; **oyalanma süresi**, depolanan normun gelen akıya oranı. Sonraki
-ikisi frekansa göre değil, **engel yüksekliğine göre** türevden gelir ve tek bir
-karmaşık sayı oluşturur. Bu sayının gerçel kısmı, alana bağlanmış bir saatin
-dönme olarak göstereceği bileşendir; sanal kısmı ise hizalanma olarak
-göstereceği bileşendir. Beşincisi, iç dalga sayısının modülünden kurulan
-**yarı klasik** okumadır. Bunun için hiçbir yere spin sokulmamıştır: saat
-bileşenleri skaler genliğin engel yüksekliğine göre türevinden okunur; dönen bir
-spin bunları ölçmenin bir yoludur, tanımı değil.
-
-| $d$ | Faz | Oyalanma | Dönme | Hizalanma | Yarı klasik |
-|-----|-----|----------|-------|-----------|-------------|
-| $2$ | $1{,}4629$ | $0{,}5195$ | $0{,}5195$ | $2{,}6221$ | $2{,}4653$ |
-| $4$ | $1{,}4629$ | $0{,}5193$ | $0{,}5193$ | $5{,}0879$ | $4{,}9305$ |
-| $8$ | $1{,}4629$ | $0{,}5193$ | $0{,}5193$ | $10{,}0184$ | $9{,}8611$ |
-| $16$ | $1{,}4629$ | $0{,}5193$ | $0{,}5193$ | $19{,}8795$ | $19{,}7221$ |
-| $32$ | $1{,}4629$ | $0{,}5193$ | $0{,}5193$ | $39{,}6016$ | $39{,}4442$ |
-
-**Birinci sonuç: dönme bileşeni oyalanma süresini altı basamağa kadar yeniden
-üretir.** Bu iki hesap hiçbir formül paylaşmaz; biri iç alanın karesini kalınlık
-boyunca integre eder, öteki genliğin engel yüksekliğine göre logaritmik
-türevidir. Uyuşmaları, Bölüm 14.7'nin depolanan norm hesabının bir integrasyon
-artefaktı olmadığını bağımsız olarak doğrular.
-
-**İkinci sonuç: hizalanma bileşeni doymaz.** Kalınlık başına $1{,}2326$
-büyür ve yarı klasik okumayı $0{,}1573$'lük **sabit** bir farkla izler; fark
-kalınlıkla değişmediği için iki yüzeye aittir, iç bölgeye değil. Yani engel
-rejiminde doyma, geçişin bir özelliği değil, iki okumanın özelliğidir.
-
-**Işıkla karşılaştırma, okuma okuma yapılmak zorundadır.** Beş okumanın her
-birinin ima ettiği hız, ışık hızı birimiyle:
-
-| $d$ | Faz | Oyalanma | Dönme | Hizalanma | Yarı klasik |
-|-----|-----|----------|-------|-----------|-------------|
-| $4$ | $2{,}734$ | $7{,}702$ | $7{,}702$ | $0{,}786$ | $0{,}811$ |
-| $16$ | $10{,}937$ | $30{,}810$ | $30{,}810$ | $0{,}805$ | $0{,}811$ |
-
-Beş okumadan **üçü geçişi ışığın üstüne, ikisi altına** koyar ve bu bölünme
-kalınlığın bir kazası değildir; dörtte ve onaltıda aynıdır. Dahası bölünme
-rastgele değildir: **doyan üç okuma, ışığı geçen üç okumanın aynısıdır.** Bu tek
-bir olgudur, iki değil.
-
-Buradan çıkan sonuç modelin lehine değildir ve öyle sunulmamaktadır:
-
-> Geçişin ne kadar sürdüğü sorusuna tek bir sayı cevap vermez, ve geçişin ışığın
-> hangi tarafına düştüğü de bölgenin bir özelliği değildir. İkisi de bir ölçüm
-> seçimidir.
-
-Bu modelin sorduğu soru, parçacığın **Bölge I saatinde** nereye düştüğüdür; yani
-dışarıdaki bir dedektöre geçen tepenin varışıdır. O gözlenebilir, formülasyonu
-gereği fazdan gecikmedir. Hizalanma bileşeni ise alana bağlanmış bir saatin
-**içeride** okuduğu şeydir; "ne kadar etkileşti" sorusunu cevaplar, "ne zaman
-vardı" sorusunu değil. Bu nedenle Bölüm 25'te faz okuması kullanılmaktadır. Bu
-gerekçe artık açıkça verilmektedir; daha önce sessizce devralınıyordu.
-
-### 14.12 Cephe ile tepe: hızlanan hangisi
-
-İlerlemiş bir tepe, bir şeyin engeli ışıktan hızlı geçtiği yolundaki her iddiaya
-karşı standart itirazdır ve itiraz yerindedir. Bazı modları ötekilerden daha iyi
-geçiren bir bölge paketi **yeniden biçimlendirir**: önce varan kısım en az
-zayıflatılır, dolayısıyla çıkan tepe çoğunlukla zaten öncü kenar olan şeyden
-kurulur. Tepe, hiçbir şey öne geçmeden erken görünür. Öne gönderilen bir şey
-yoktur; zaten orada olan bir parçadan bir biçim yeniden kurulmuştur.
-
-Bilginin taşınıp taşınmadığına karar veren nicelik tepe değil, **cephedir**:
-herhangi bir büyüklükteki ilk bozulma. Hızı, dağılım bağıntısının sınırsız
-frekanstaki davranışıyla belirlenir.
-
-**Işık üstü bir hız tek başına delil değildir, ve bu bu çalışmadan eskidir.**
-Kütleli bir alan için faz hızı her frekansta ışığı geçer, grup hızı hiçbir
-frekansta geçmez, ve çarpımları tam olarak birdir:
-
-| $\omega$ | Faz hızı | Grup hızı | Çarpım |
-|----------|----------|-----------|--------|
-| $2{,}8$ | $1{,}6615$ | $0{,}6019$ | $1{,}000000$ |
-| $6$ | $1{,}0776$ | $0{,}9280$ | $1{,}000000$ |
-| $20$ | $1{,}0063$ | $0{,}9937$ | $1{,}000000$ |
-
-**Cephe sınırı alır ve sınır ışıktır.** Faz hızının ışığı aşma payı frekans
-büyüdükçe sıfıra düşer: $\omega = 10$ için $2{,}598 \times 10^{-2}$,
-$\omega = 100$ için $2{,}501 \times 10^{-4}$, $\omega = 1000$ için
-$2{,}500 \times 10^{-6}$, $\omega = 10^{5}$ için $2{,}500 \times 10^{-10}$.
-Bölge cepheye saydamdır: $d = 4$ için cephe $4{,}000001$, $d = 16$ için
-$16{,}000005$ gecikir, yani **tam ışık süresi kadar**. Cephe hiçbir kalınlıkta
-öne alınmaz.
-
-**İlerlemiş tepenin üzerinde taşındığı şey.** Öne alma büyürken onu taşıyan
-genlik çöker:
-
-Aşağıdaki tablo **tek geçiş** ayağındadır: öne alma, tek geçişlik gecikmenin
-$d/c$ ile karşılaştırılmasıdır. Bölüm 25.5'in tablosu gidiş dönüş ayağındadır ve
-sayıları bu nedenle farklıdır; ikisi karıştırılmamalıdır.
-
-| $d$ | Geçen genlik | Tepenin tek geçişte öne alınması |
-|-----|--------------|----------------------------------|
-| $2$ | $2{,}0364 \times 10^{-2}$ | $+0{,}5371$ |
-| $8$ | $2{,}4532 \times 10^{-8}$ | $+6{,}5371$ |
-| $32$ | $5{,}1651 \times 10^{-32}$ | $+30{,}5371$ |
-
-İkisi birbirine karşı hareket eder. Hiçbir kalınlık, ölçülebilir bir şey
-üzerinde öne alma satın almaz. Dolayısıyla:
-
-> Tepenin öne alınması bir sinyal taşımaz. Bu, etrafından dolaşılarak değil,
-> kabul edilerek kaydedilmektedir.
-
-Bölüm 25'teki dönüş olayı yerleşimi, bir tepenin nereye düştüğüne dair bir
-ifadedir; bir mesajın bölge içinden ışığı geçtiği iddiası değildir. Bu, engelden
-geçirim üzerine bir sınırdır ve **geçişin kendisi** hakkında hiçbir şey
-söylemez; orada ne döneceğine cephe değil, kütle kabuğu karar verir.
-
----
-
 ## 15. Ne geçti, ne kaldı: mod içeriği
 
 Gidiş dönüş, aynı ara bölgenin iki kez geçilmesidir. Mod süzgeci bu nedenle
@@ -2501,71 +2335,6 @@ artık sıfırdır. Hücreleri birbirinden ayıran tek şey momentumumuzun yön�
 | Hiç çıkmaz, kısmi dönme | Soğurulma | Hayır |
 | Hiç çıkmaz, ters çevirme | Soğurulma | Hayır |
 
-### 18.3 Dokuz hücrenin yedisi sıradan fizikle örtüşüyor
-
-Bu, modelin lehine bir sonuç değildir ve öyle sunulmamaktadır.
-
-Parçacık hiç çıkmıyorsa, içeride ne olduğundan bağımsız olarak bir soğurulma
-görürüz. Girdiği yüzden geri dönüyorsa, saparak ya da sapmadan, bir yansıma
-görürüz. Sapmadan karşı yüzden çıkıyorsa, sıradan bir geçiş görürüz.
-
-Yedi hücre, öte taraf hiç olmasaydı da aynı ölçümü verirdi.
-
-### 18.4 Tablonun yeniden sayımı: iki etiket bağımsız değildir
-
-Yukarıdaki dokuz hücre, iki etiketin bağımsız olduğu varsayımıyla kurulmuştur.
-Bölüm 18.7 o varsayımı geçersiz kılar: çıkış yüzü, geçiş dalga sayısının
-işaretidir ve bu işaret Bölge I'in enerjisinin işaretiyle aynı büyüklüktür. Dönme ise
-giriş ve çıkış yüzlerinin gerçeklediği matrislerin bileşkesidir. Her iki etiketi
-de **tek bir sıralı matris çifti** belirler; dolayısıyla bunlar çarpılamaz.
-
-Sekiz kabul edilebilir matrisin sıralı çiftleri $8 \times 8 = 64$ tanedir. Bu 64
-çiftin ürettiği farklı $(\text{enerji işareti}, \text{sapma})$ sonucu sayılırsa:
-
-| Sayım | Değer |
-|-------|-------|
-| İki etiket bağımsız sayılırsa | $9$ |
-| Yüz çiftlerinin gerçekten ulaştığı | $6$ |
-| Bunlardan enerjimizi koruyanlar | $3$ |
-| Enerjiyi ters işaretle döndürenler | $3$ |
-
-Altı sonuç tam ortadan ikiye ayrılır. Enerjiyi koruyan üç sonuç, Bölüm 18.9'un
-nicelenmiş sapma tayfının üç elemanıdır. Enerjiyi ters işaretle döndüren üç
-sonuç, Bölüm 18.7'de tarif edilen dalın, yani negatif enerjili varışın
-karşılığıdır ve çift yaratımı okumasının sahiplendiği kümedir.
-
-**Boş satır.** Parçacığın hiç çıkmadığı satır dokuz hücrenin üçüdür ve boştur.
-Kayıpsız bir bölgede iki çıkış ağırlığı toplam bire gelir; artan bir olasılık
-kalmaz. Bu, muhakeme değil akı korunumunun sonucudur.
-
-Dolayısıyla dokuz hücrenin üçü akı tarafından boşaltılır, kalanın ikisi sıradan
-fizikte karşılığı olmayan hücrelerdir. Ayırt edici hücrelerin **sayısı**
-değişmemiştir; değişen, hangi bütünün içinde durduklarıdır.
-
-### 18.5 İki hücre gerçekten ayırt edici
-
-Geriye kalan iki hücre şudur: parçacık **karşı yüzden çıkar ve sapmıştır**.
-
-Ayırt ediciliğin nedeni sapmanın kendisi değil, **bedelsiz** olmasıdır. Sıradan
-bir sapma bir hedef gerektirir ve hedef geri tepme alır; enerji ve momentum
-hedefe dağılır. Burada hedef yoktur: enerji tam olarak, sürat tam olarak, kütle
-tam olarak korunur, yalnızca yön değişir.
-
-> Modelin ayırt edici imzası, **geri tepen bir hedef olmaksızın** gerçekleşen
-> esnek bir sapmadır.
-
-### 18.6 Bu tablonun statüsü
-
-Bir çekince açıkça belirtilmelidir. Sapma açıları ve korunan nicelikler
-hesaplanmıştır; hangi hücrenin sıradan fizikle örtüştüğü ise **hesaplanmamış,
-muhakeme edilmiştir**. Üçüncü sütun bir sınıflandırma kararıdır, bir türetim
-değildir.
-
-Ayrıca bu çalışma, öte tarafta bir dönmenin gerçekten olup olmadığını
-söylemez. Tablo koşulludur: olursa ne görünür, onu verir. Dönmenin hangi
-koşullarda ve hangi açıyla gerçekleştiği, yani hücreler arasındaki olasılık
-dağılımı, hesaplanmamıştır ve modelin en büyük eksiğidir.
-
 ### 18.7 Çıkış yüzünü ne belirliyor
 
 Bölüm 8.6'nın iki etiketinden biri çıkış yüzüydü ve orada bağımsız bir etiket
@@ -2756,8 +2525,9 @@ Bölüm 14'te genliğin fazından okundu. İkisi de parçacığın ara bölgede 
 yaptığına** bağlanmamıştı. Bu bölüm o bağlantıyı kurar; simülasyonun
 canlandıracağı nicelik tam olarak budur.
 
-Öte taraf üç zaman ve bir uzay yönü taşır. Bir durum, üç zaman uzayındaki bir
-enerji vektörü ile tek uzay ekseni boyunca bir dalga sayısından oluşur.
+Öte tarafın dört ekseninin karakteri Bölüm 9.0'da verilmiştir. Bir durum, üç
+zaman uzayındaki bir enerji vektörü ile tek uzay ekseni boyunca bir dalga
+sayısından oluşur.
 Parçacığın yapabileceği iki şey vardır ve yalnızca ikisi:
 
 1. **Geçiş yönünde yer değiştirme.** Tek uzay ekseni boyunca ilerlemek. Ara
@@ -2866,116 +2636,30 @@ dönmenin nicelenmiş izidir.
 ya da yönelmenin Bölge I'deki karşılığı nedir. Bu bölüm o sözlüğü
 kurar; Bölüm 25 sözlüğü kullanarak dönüş olayını hesaplar.
 
-### 24.1 Hangi yuva hangisini taşır
+### 24.1 Sözlüğün burada kullanılan biçimi
 
-İki metrik $\eta = \mathrm{diag}(1,-1,-1,-1)$ ve $\eta' = \mathrm{diag}(1,1,1,-1)$,
-involüsyon ise $(ct,x,y,z) \mapsto (z,y,x,ct)$'dir. Yuva yuva okunduğunda:
+Dört yuvanın karakteri, hangi yuvaya indiği ve bir birim adımın Bölge I saatinde
+ne ürettiği Bölüm 9.0'da tablo hâlinde verilmiştir ve burada tekrarlanmaz. Bu
+bölümün ihtiyaç duyduğu iki sonuç şudur: dört yuvanın dördü de eşikte karakter
+değiştirir, ve buna karşın hareket serbestliği yuva yuva korunur. Öte tarafın üç
+zamanında serbestçe hareket edilir ve o üç zamanın taşıdığı Bölge I uzay
+yönlerinde de öyle;
+öte tarafın tek uzay ekseninde yön seçilemez ve onun taşıdığı Bölge I zamanında
+da seçilemez.
 
-| Bölge II'de yuva | Orada karakteri | Bölge I'de hangi yuvaya iner | Burada karakteri |
-|------------------|-----------------|--------------------------|------------------|
-| $0$ | zaman | $3$ | uzay |
-| $1$ | zaman | $2$ | uzay |
-| $2$ | zaman | $1$ | uzay |
-| $3$ | **uzay** | $0$ | **zaman** |
+Tek yönlü koordinatın iki bölgede **ayna yerlerde** durması bu sözlüğün en sıkı
+ifadesidir: Bölge I'in zamanı ile Bölge II'nin tek uzay ekseni aynı koordinattır,
+ve ikisinde de yön seçilemez.
 
-Dört yuvanın dördü de karakter değiştirir; kendi türünü koruyan tek bir
-koordinat yoktur. Doğrulanmıştır.
+"Tek yönlü" ifadesinin içindeki iki ayrı iddia — yönlendirilebilirlik ile
+ilerleme zorunluluğu — Bölüm 8.4.1'de ayrılmış ve yalnızca birincisinin
+hesaplandığı orada gösterilmiştir.
 
-### 24.2 Hareket sözlüğü
-
-Karakter tersine döner, ama **hareket serbestliği yuva yuva korunur**. Bu, ilk
-bakışta beklenenin tersidir ve hesabın verdiği sonuçtur.
-
-| Öte tarafta yuva | Orada | Taşıdığı yuvada, burada |
-|------------------|-------|--------------------------|
-| $0,1,2$ (üç zaman) | serbest hareket | serbest hareket (üç uzay yönümüz) |
-| $3$ (tek uzay) | tek yönlü | tek yönlü (Bölge I'in zamanı) |
-
-Okunuşu şudur. Bölge II'de üç zamanda serbestçe hareket edilir; o üç zaman
-Bölge I'in üç uzay yönüdür ve orada da serbestçe hareket edilir. Bölge II'nin tek
-uzay ekseninde yön seçilemez; o eksen Bölge I'in zamanıdır ve orada da aynı şey
-geçerlidir.
-
-Bu satırın Bölüm 2.1.3'ün sonucuyla nasıl bir arada durduğu orada yazılıdır:
+Bu ifadenin Bölüm 2.1.3'ün sonucuyla nasıl bir arada durduğu da orada yazılıdır:
 yön seçilememesi cismin o eksende geri dönememesidir, oysa dönüş anının işareti
 cismin yürüyüş yönünden değil hangi geçiş eşlemesinin kullanıldığından gelir. İki
 ifade farklı niceleyicilere sahiptir ve çelişmezler.
 
-### 24.2.1 "Tek yönlü" derken ne söylendiği: iki ayrı iddia
-
-Bu tabloyu yazmak kolaydı; ne iddia edildiğini söylemek zor. "Akış" kelimesinin
-içinde **iki ayrı** ifade saklıdır ve statüleri farklıdır
-
-**Yönlendirilebilirlik.** Belirli bir nedensel türdeki doğrultular, o türden
-çıkmadan birleştirilemeyen iki parçaya ayrılır; dolayısıyla bir uç ötekinden
-ayırt edilebilir ve hiçbir hareket cismi birinden ötekine taşımaz. Bu, metriğe
-dair bir ifadedir ve **karar verilebilir**: o türden birim bir vektör yarım tur
-döndürülür, ki bu onu kendi negatifine taşır, ve yolda aralığın işaret değiştirip
-değiştirmediğine bakılır.
-
-**Zorunluluk.** Bir cisim o koordinat boyunca, seçemediği bir hızla, ilerlemek
-**zorundadır**. Bu, metriğe dair bir ifade **değildir**. Hiçbir metrik bir dünya
-çizgisinin ilerlemek zorunda olduğunu söylemez, ve Bölge I zamanının bir cismi
-taşıdığı duygusu bunun delili değildir. Geçiş duygusunun metriğe değil
-gözlemciye ait bir olgu olduğu [53]'te iki taraftan birlikte tartışılmıştır; bu
-çalışma o tartışmanın hiçbir tarafına dayanmaz ve kaynak yalnızca iddianın
-sınırını işaretlemek için verilmiştir.
-
-Bu ikisi alışkanlıkla birbirine karıştırılır, ve karıştırmanın bedeli gizli bir
-varsayımdır. Burada ayrılırlar.
-
-**Birincisi hesaplanmıştır.** Her iki bölgede her nedensel tür için:
-
-| Bölge, tür | Doğrultu sayısı | Kendi negatifine ulaşır mı | Sonuç |
-|------------|------------------|-----------------------------|-------|
-| Burası, zamansı | $1$ | hayır | yönlendirilebilir |
-| Burası, uzaysı | $3$ | evet | yönlendirilemez |
-| Öte taraf, pozitif | $3$ | evet | yönlendirilemez |
-| Öte taraf, negatif | $1$ | hayır | yönlendirilebilir |
-
-İki bölge bu bakımdan **tam dualdir**. Dolayısıyla:
-
-> Öte tarafın tek uzay ekseninin tek yönlü olması, modele sonradan eklenmiş bir
-> varsayım **değildir**. Bölge I'in zaman okunu veren teoremin, öteki türe
-> uygulanmış hâlidir.
-
-Ayrıca başka yerlerde kullanılan kestirme, yani "sayı bir ise yönlendirilebilir",
-dört durumun dördünde de döndürme hesabıyla uyuşmaktadır; yani kestirme bir tanım
-değil, **denetlenmiş** bir kestirmedir.
-
-**İkincisi hesaplanmamıştır, ve hiçbir yerde kullanılmamaktadır.** Yukarıdaki
-hiçbir satır bir cismin yönlendirilebilir bir koordinat boyunca ilerlemek
-zorunda olduğunu söylemez; yalnızca üzerinde geri dönemeyeceğini söyler. Ve bu
-çalışmada böyle bir zorunluluk kullanılmamaktadır: geçiş miktarı dönüş
-eşlemesine bir **girdi** olarak girer, dolayısıyla bir cisim yerinde durabilseydi
-hiçbir sonuç değişmezdi. Bu, kodda denetlenmektedir.
-
-> Zamanın nehir gibi aktığı duygusu, burada hesaplananın **dışındadır** ve
-> hiçbir iddia ona dayanmamaktadır.
-
-**Ayrımdan sonra ayakta kalan şey, ikisinden de keskindir.** Bölge II'nin tek
-uzay ekseni boyunca yer değiştirme, Bölge I'in zaman eksenine **bire bir** düşer:
-
-| Bölge II'de yer değiştirme | Bölge I'in zaman ekseninde |
-|----------------------|--------------------------|
-| $0{,}5$ | $+0{,}5000$ |
-| $1$ | $+1{,}0000$ |
-| $2$ | $+2{,}0000$ |
-| $7{,}25$ | $+7{,}2500$ |
-
-Bağıntı miktarda tam doğrusaldır. Yani bir cismin o eksende **ne kadar**
-gittiği kendi seçimidir ve saatimizde belirli bir karşılığı vardır; seçemediği
-şey **hangi yöne** gittiğidir.
-
-> Öte tarafta mekânda hareket etmek, Bölge I'in zaman çizgisinde konum değiştirmektir.
-> Miktar serbest, yön değil. Bu yolla parçacık daha **ileri** bir ana konur, ve
-> hiçbir zaman daha geriye.
-
-Buradan çıkan sonuç, senin evreninde "zamanda geri dönemezsin" demenin, öte
-tarafta "o tek uzay ekseninde geri dönemezsin" demekle aynı cümle olduğudur.
-Yer değiştiren şey yasak değil, yasağın hangi tür koordinata düştüğüdür. Ve
-"ilerlemek zorundasın" cümlesi, iki tarafta da hesabın söylediği bir şey
-değildir.
 
 ### 24.3 Yönelim var, hareket gözlenmez: ayar fazlalığı
 
@@ -2994,11 +2678,9 @@ döndürmek uzunluğu değiştirmez, artık $10^{-16}$ mertebesindedir.
 
 Çekirdek sorunun en can alıcı yeri budur ve cevabı iki katmanlıdır.
 
-**Doğrudan yol kapalıdır.** Tümüyle üç zamanın içinde kalan bir yer değiştirme,
-involüsyon altında Bölge I'in zaman yuvasında **sıfır** yer değiştirme üretir. Üç
-zamanın her birinde birim adım tek tek denenmiş, üçünün de Bölge I saatindeki
-izdüşümü tam olarak sıfır çıkmıştır. Buna karşılık Bölge II'nin tek uzay ekseninde
-atılan bir adım, doğrudan Bölge I'in zamanında bir adımdır.
+**Doğrudan yol kapalıdır.** Bölüm 9.0'ın tablosu bunu vermektedir: üç zamanın her
+birinde bir birim adımın Bölge I saatindeki karşılığı tam olarak sıfırdır, tek
+uzay ekseninde ise tam olarak birdir.
 
 Yani "orada zamanda yürüdüm, burada zamanda kaydım" cümlesi involüsyonun kendisi
 tarafından **desteklenmez**. Involüsyon o hareketi Bölge I'in uzayına gönderir.
@@ -3792,7 +3474,7 @@ varsayımı eleştiren bir cümle ile varsayan bir cümle aynı kelimeyi taşır
 | 21 | Bölge II'de belirli bir yapının kurulabilmesi | başka kurguya ait | Cevaplanan itiraz varsayar; kurulamadığı hesaplanmıştır |
 | 22.3 | Yok; pasaj bu sicili ve taradığı kelimeleri anlatır | varsayım değil, söz ediliyor | Sicilin kendisi, ki bu bölüm onu belgeler |
 | 23 | Öte tarafın sınırsız olması | ilan edilmiş sınırlama | Sonucu yazılı: sonlu kalınlıkta dilim üstel olarak bastırılmış ama sıfır olmayan bir genlik bırakır |
-| 24.2.1 | Denklem düzeyinde ve durum düzeyinde tek yönlülüğün aynı iddia olması | başka kurguya ait | İki okuma orada ayrılır ve yalnızca ikincisi savunulur |
+| 8.4.1 | Denklem düzeyinde ve durum düzeyinde tek yönlülüğün aynı iddia olması | başka kurguya ait | İki okuma orada ayrılır ve yalnızca ikincisi savunulur |
 
 Sicilde $16$ kalem vardır ve tarama $12$ bölümde iddia bulmaktadır; sicil
 kapsayandan geniştir, çünkü sonradan olumsuzlanan bir ifade taramadan düşse de
@@ -3805,6 +3487,402 @@ yapmayan pasajlardır.
 Denetimin kendisi de sınanmıştır: makaleye sicilde yeri olmayan bir varsayım
 cümlesi eklendiğinde koşu iki kontrolle birden düşmüş, cümle geri alındığında
 tekrar geçmiştir.
+
+---
+
+## 29. Dönüş anına yöneltilen sorular
+
+Bölüm 14 dönüş anını kurar ve orada durur: saat neden taşınamaz, faz neyi taşır,
+gecikme hangi rejimde doyar. Aşağıdaki alt bölümler o kuruluma bir şey eklemez; her
+biri ona yöneltilebilecek bir soruyu kapatır. Alt bölüm numaraları korunmuştur,
+çünkü metnin geri kalanı onlara numarayla atıf yapmaktadır.
+
+### 14.6 Kapatılamayan üç nokta
+
+**Doyum, kalınlık bilgisini yok ediyor.** Yukarıdaki tablo dönüş anının tek
+başına yeterli bir gözlenebilir olmadığını söylüyor. Literatürde iki ardışık
+engel için gecikmenin yalnızca kalınlıklardan değil, aralarındaki **mesafeden**
+de bağımsız hâle geldiği savunulmuştur; doğruysa bu, gidiş dönüş kurgusunun
+tamamı için geçerlidir.
+
+Bunun karşısında üç çıkış yolu vardır ve hiçbiri burada kapatılmamıştır:
+doyumun dayandığı akıl yürütmenin kesin olmadığı yönündeki itiraz; doyumun
+yalnızca grup saatine ait olduğu, oyalanma süresinin kalınlıkla tekdüze arttığı
+yönündeki ayrım; ve sönümün doyumu tümüyle ortadan kaldırdığı sonucu. Sonuncusu
+bu model için özellikle ilgi çekicidir, çünkü Bölüm 3.4'teki madde katmanı tam
+olarak geçişi sönümlü kılacak türden bir bağlaşımdır. Modelin bir yükümlülüğü
+olarak görünen şey, burada bir kurtarıcı olabilir.
+
+İkinci çıkış yolu, yani oyalanma süresi ayrımı, Bölüm 14.7'de hesaplanmış ve
+**bu modelde geçerli olmadığı** görülmüştür.
+
+### 14.7 Gecikme bir geçiş süresi mi, yoksa depolanan alanın ömrü mü
+
+Fazdan okunan gecikmeyi bir geçiş süresi saymak zorunlu değildir. Rakip okuma
+[42]'dedir: aynı nicelik bir **oyalanma süresidir**, yani bölge içinde depolanan
+olasılığın gelen akıya oranıdır ve alanın iki yüzden birden sızarak boşalma
+ömrünü verir. Bu okumada hiçbir şey bölgeyi kat etmez ve doyum bir paradoks
+değil, beklenen davranıştır. Orada tünelleme bağlamında kurulan bu ayrım, burada
+kendi sayılarımızla sınanmaktadır.
+
+İki okuma göz kararıyla ayrılamaz, çünkü ikisi de aynı saçılma çözümünden
+türetilir. Ayırt etmenin yolu, depolanan normu iç alandan **bağımsız olarak**
+hesaplayıp fazın verdiğiyle karşılaştırmaktır. Bu bölümde yapılan budur.
+
+**Depolanan norm da doyar.** İç alan, iki yüzeyin çözümünden alınan ileri ve
+geri genliklerle kurulur ve kare modülü kalınlık boyunca integre edilir:
+
+| Kalınlık $d$ | Depolanan norm |
+|--------------|----------------|
+| $1$ | $0{,}31567$ |
+| $2$ | $0{,}31269$ |
+| $4$ | $0{,}31256$ |
+| $8$ | $0{,}31256$ |
+| $16$ | $0{,}31256$ |
+
+Dolayısıyla doyan gecikmenin, hiçbir geçiş gerektirmeyen bir açıklaması vardır:
+depolanan alan zaten doymaktadır.
+
+**İki okuma bağımsız gözlenebilir değildir.** Aynı yapılanmada iki nicelik
+karşılaştırıldığında:
+
+| Kalınlık $d$ | Fazdan gecikme | Oyalanma süresi | Oran |
+|--------------|----------------|-----------------|------|
+| $2$ | $1{,}4629$ | $0{,}5195$ | $2{,}817$ |
+| $4$ | $1{,}4629$ | $0{,}5193$ | $2{,}817$ |
+| $8$ | $1{,}4629$ | $0{,}5193$ | $2{,}817$ |
+
+Bağıl fark üç kalınlıkta da $+0{,}6449$'dur; oranın kalınlıkla oynamaması bu
+sayının sabitliği olarak da okunabilir.
+
+İkisi sayısal olarak eşit değildir, ancak **oranları kalınlıkla oynamaz**;
+artık $10^{-6}$ mertebesindedir. İki nicelik bir normalizasyon çarpanıyla
+ayrışır, farklı bir mekanizmayla değil. Sonuç açıktır:
+
+> Engel rejiminde fazdan okunan gecikme, depolanan normun taşımadığı hiçbir
+> bilgi taşımaz. Bu rejimde dönüş anının "yolculuk süresi" olarak okunması
+> **desteklenmemektedir**.
+
+Bu sonucun kapsamı Bölüm 14.11'de daraltılmıştır ve daraltan hesap yine bu
+modelin kendi araçlarıyla yapılmıştır. Yukarıdaki cümle, fazdan okunan gecikme
+ile oyalanma süresi çifti için doğrudur; ancak "engel rejiminde bağımsız bir
+geçiş saati yoktur" biçimindeki daha geniş okuma **yanlıştır**. Aynı genlikten
+türeyen ve depolanan normdan bağımsız olan, kalınlıkla doymayan bir okuma
+vardır.
+
+**Yayılımlı rejimde durum tersinedir.** Ara bölge yokken depolanan norm
+kalınlıkla doğrusal artar ($d = 1, 2, 4$ için $1{,}000$, $2{,}000$, $4{,}000$),
+dolayısıyla iki nicelik birlikte doyamaz ve geçiş okuması ayakta kalır. Bu,
+Bölüm 18.13'te bağımsız olarak bulunan ayrımın aynısıdır: parçacık okuması
+yalnızca yayılımlı rejimde meşrudur.
+
+Bu sonucun Bölüm 25.6'daki çekinceyi **güçlendirdiği** kaydedilmelidir. Orada
+kalınlıkla sınırsız büyüyen fark için "bu bir yayılma hızı değildir" denmişti;
+burada ek olarak, o farkın okunduğu niceliğin de bağımsız bir yolculuk saati
+olmadığı gösterilmektedir.
+
+**Frekans karışımı kalınlığı koruyor.** Bu, Bölüm 14.8'de hesaplanmıştır ve
+gecikmenin kaybettiği bilgiyi geri veriyor.
+
+### 14.8 Hangi eksen dönüyor: tablonun en kırılgan varsayımı
+
+Bölüm 3'ün tablosu, karakter değiştiren yönlerin **enine** yönler olduğunu, yani
+geçiş doğrultusunun kendisinin dönmediğini varsayar. Bu varsayım altında Kleinian
+bölge yayılımlıdır ve tablodaki tek açık hücreyi verir.
+
+Varsayım tartışmalıdır. Kleinian dilim üzerine yapılmış çalışmalarda dönen yön
+**geçiş doğrultusunun kendisidir**; o durumda iç dalga sayısının karesi dışarıdaki
+değerin işaretçe tersi olur ve her frekansta negatiftir.
+
+İki okuma yan yana hesaplanmıştır:
+
+| Frekans | Enine eksen döner | Geçiş ekseni döner |
+|---------|-------------------|--------------------|
+| $2{,}8$ | $+0{,}17$, yayılımlı | Negatif, söndürücü |
+| $6$ | $+28{,}33$, yayılımlı | Negatif, söndürücü |
+| $12$ | $+136{,}33$, yayılımlı | Negatif, söndürücü |
+| $50$ | Yayılımlı | Negatif, söndürücü |
+
+Sonuç keskindir. **Geçiş ekseni döndüğünde Kleinian bölge her frekansta bir
+engeldir ve hiçbir zaman bir oyuk değildir.** Dahası, o okumada Kleinian ile
+Öklid bölgenin iç dalga sayıları **birbirinin aynıdır**: dört tip ikiye iner ve
+her geçiş tünellemedir.
+
+Bu çalışma iki okumadan birini seçmemektedir. Kaydedilen şudur: Bölüm 3'ün
+"kalın Kleinian tek çalışan hücredir" gözlemi, enine okumaya bağlıdır ve geçiş
+ekseni okumasında geçerli değildir.
+
+### 14.9 Frekans karışımı: gecikmenin unuttuğunu hatırlayan nicelik
+
+Bölüm 14.4'ün sorunu, gecikmenin kalınlığı unutmasıydı. Ara bölgenin iki dalı
+arasındaki karışım oranı bu bilgiyi korur:
+
+$$\left|\frac{A_-}{A_+}\right|
+  = \left|\frac{\kappa - q}{\kappa + q}\right| \, \left|e^{-2 i q d}\right|$$
+
+Söndürücü durumda $q$ sanaldır ve üstel terim reeldir, dolayısıyla oran
+kalınlıkla üstel olarak büyür. Hesaplanan değerler:
+
+| Kalınlık $d$ | Gecikme | Karışım oranı |
+|--------------|---------|---------------|
+| $1$ | $1{,}451$ | $9{,}40 \times 10^{1}$ |
+| $2$ | $1{,}463$ | $8{,}83 \times 10^{3}$ |
+| $4$ | $1{,}463$ | $7{,}80 \times 10^{7}$ |
+| $8$ | $1{,}463$ | $6{,}09 \times 10^{15}$ |
+
+Dört ve sekiz birim kalınlıkta gecikme aynı sayıdır, karışım oranı ise sekiz
+mertebe farklıdır.
+
+> Gecikme ile karışım **birbirini tamamlar, tekrarlamaz**. Dönüş anı için
+> gecikme, ara bölgenin kalınlığı için karışım gerekir. Tek bir gözlenebilir
+> gidiş dönüşü tarif etmeye yetmez.
+
+**Çekince.** Karışım oranı ara bölgenin içindeki iki dalın oranıdır. Kalınlık
+bilgisini ilke olarak taşıması, dışarıdan ölçülebilir olduğu anlamına gelmez;
+geçen genlik aynı kalınlıkta üstel olarak küçüldüğü için, bilginin taşındığı
+kanal aynı zamanda zayıflayan kanaldır. Ölçülebilirlik ayrı bir sorudur ve
+burada gösterilmemiştir.
+
+### 14.10 Karmaşık zaman kurgusunun keyfiliği ve bir ölçütün sınanması
+
+**Karmaşık zaman kurgusu tek başına belirleyici değildir.** Fazın karmaşık
+yapıdan okunması, keyfilik taşır: karmaşık bir zaman değişimi, özgün çözümden
+uzun bir aralık boyunca ayırt edilemeyen sonsuz sayıda çözüm üretebilir.
+Bu keyfilik ancak bir kabul edilebilirlik ölçütü benimsenerek kaldırılır.
+
+**Bir ölçüt hesaplanmıştır**. Lapse üzerinden
+integral almak, yeniden parametrelendirme kısıtını dayatan işlemdir ve
+integrandın **lapse sıfırken bir esas tekilliği** vardır; orası metriğin
+dejenere olduğu noktadır. Kontur bu nedenle reel ekseni baştan başa kat etmek
+ama başlangıç noktasından geçmemek zorundadır, ve hangi taraftan geçtiği bir
+zevk meselesi değildir.
+
+Üstelin iki eyer noktası vardır ve ikisi de sanal eksende, başlangıç noktasına
+**eşit uzaklıkta** oturur; hiçbiri daha yakın değildir, iki eyeri ayıran tek şey
+konturun hangi taraftan geçtiğidir. Alt eyer sönen bir genlik, üst eyer büyüyen
+bir genlik taşır:
+
+| $d$ | Alt eyerin genliği | Üst eyerin genliği |
+|-----|---------------------|---------------------|
+| $1$ | $3{,}6788 \times 10^{-1}$ | $2{,}7183$ |
+| $2$ | $1{,}3534 \times 10^{-1}$ | $7{,}3891$ |
+| $4$ | $1{,}8316 \times 10^{-2}$ | $5{,}4598 \times 10^{1}$ |
+
+**İki taraf yalnızca farklı cevap vermiyor; biri hiç cevap vermiyor.** Öz zaman
+yarı doğrusu aşağı doğru döndürüldüğünde integral yakınsar; yukarı doğru
+döndürüldüğünde yakınsamaz. Dolayısıyla ölçüt isteğe bağlı değil, zorunludur.
+
+Ayakta kalan konturun hangi eyere indiği **ölçülmüştür**, varsayılmamıştır:
+integralin kendi sönüm hızı, iki eyerin vereceği hızlarla karşılaştırılır. Ölçülen
+hız $d = 2, 4, 8, 16$ için sırasıyla $0{,}2904$, $0{,}5760$, $0{,}7496$,
+$0{,}8545$'tir ve alt eyerin verdiği $1{,}0000$'e tırmanır; fark, ön çarpanın
+sönmesidir. Her uzaklıkta eyer hızının **altında** kalır, yani eyer integrali
+sınırlar, integrale uydurulmuş değildir.
+
+> Başlangıç noktasının altından geçen kontur, **sönen genliği** seçer. Bu, bu
+> modelin geçiş hesabının zaten kullandığı genliktir. Ölçüt burada ihlal
+> edilmiyordu; **söylenmemişti**.
+
+**Bu maddeyi kapatmaz, daraltır.** Hesap, minisüperuzay biçimi üzerinde
+yapılmıştır; iki geçişin ortak genliğinin kendisi üzerinde yapılmamıştır.
+Bölüm 26.3'teki madde bu nedenle açık kalmaya devam eder, ama artık "hiçbir
+ölçüt sınanmadı" değil, "sınanan ölçüt tutarlı çıktı, ama indirgenmiş biçimde"
+demektedir.
+
+### 14.11 Geçiş süresinin beş okuması, tek çözüm üzerinde
+
+Bir parçacığın klasik olarak giremeyeceği bir bölgede ne kadar kaldığı sorusunun
+tek bir kabul görmüş cevabı yoktur ve anlaşmazlık aritmetik değildir: birbirine
+denk olmayan birkaç nicelik bu adı hak eder, her biri bir ölçümün geri
+döndüreceği şeydir ve birbirleriyle uyuşmazlar. Bu nedenle bunlardan birini tek
+başına aktarmak bir sonuç değil, savunulması gereken bir seçimdir. Aşağıdaki beş
+okuma, **aynı geçirgenlik genliğinden** türetilerek yan yana hesaplanmıştır
+
+İlk ikisi bilinen okumalardır: **fazdan gecikme**, geçirgenlik fazının frekansa
+göre türevi; **oyalanma süresi**, depolanan normun gelen akıya oranı. Sonraki
+ikisi frekansa göre değil, **engel yüksekliğine göre** türevden gelir ve tek bir
+karmaşık sayı oluşturur. Bu sayının gerçel kısmı, alana bağlanmış bir saatin
+dönme olarak göstereceği bileşendir; sanal kısmı ise hizalanma olarak
+göstereceği bileşendir. Beşincisi, iç dalga sayısının modülünden kurulan
+**yarı klasik** okumadır. Bunun için hiçbir yere spin sokulmamıştır: saat
+bileşenleri skaler genliğin engel yüksekliğine göre türevinden okunur; dönen bir
+spin bunları ölçmenin bir yoludur, tanımı değil.
+
+| $d$ | Faz | Oyalanma | Dönme | Hizalanma | Yarı klasik |
+|-----|-----|----------|-------|-----------|-------------|
+| $2$ | $1{,}4629$ | $0{,}5195$ | $0{,}5195$ | $2{,}6221$ | $2{,}4653$ |
+| $4$ | $1{,}4629$ | $0{,}5193$ | $0{,}5193$ | $5{,}0879$ | $4{,}9305$ |
+| $8$ | $1{,}4629$ | $0{,}5193$ | $0{,}5193$ | $10{,}0184$ | $9{,}8611$ |
+| $16$ | $1{,}4629$ | $0{,}5193$ | $0{,}5193$ | $19{,}8795$ | $19{,}7221$ |
+| $32$ | $1{,}4629$ | $0{,}5193$ | $0{,}5193$ | $39{,}6016$ | $39{,}4442$ |
+
+**Birinci sonuç: dönme bileşeni oyalanma süresini altı basamağa kadar yeniden
+üretir.** Bu iki hesap hiçbir formül paylaşmaz; biri iç alanın karesini kalınlık
+boyunca integre eder, öteki genliğin engel yüksekliğine göre logaritmik
+türevidir. Uyuşmaları, Bölüm 14.7'nin depolanan norm hesabının bir integrasyon
+artefaktı olmadığını bağımsız olarak doğrular.
+
+**İkinci sonuç: hizalanma bileşeni doymaz.** Kalınlık başına $1{,}2326$
+büyür ve yarı klasik okumayı $0{,}1573$'lük **sabit** bir farkla izler; fark
+kalınlıkla değişmediği için iki yüzeye aittir, iç bölgeye değil. Yani engel
+rejiminde doyma, geçişin bir özelliği değil, iki okumanın özelliğidir.
+
+**Işıkla karşılaştırma, okuma okuma yapılmak zorundadır.** Beş okumanın her
+birinin ima ettiği hız, ışık hızı birimiyle:
+
+| $d$ | Faz | Oyalanma | Dönme | Hizalanma | Yarı klasik |
+|-----|-----|----------|-------|-----------|-------------|
+| $4$ | $2{,}734$ | $7{,}702$ | $7{,}702$ | $0{,}786$ | $0{,}811$ |
+| $16$ | $10{,}937$ | $30{,}810$ | $30{,}810$ | $0{,}805$ | $0{,}811$ |
+
+Beş okumadan **üçü geçişi ışığın üstüne, ikisi altına** koyar ve bu bölünme
+kalınlığın bir kazası değildir; dörtte ve onaltıda aynıdır. Dahası bölünme
+rastgele değildir: **doyan üç okuma, ışığı geçen üç okumanın aynısıdır.** Bu tek
+bir olgudur, iki değil.
+
+Buradan çıkan sonuç modelin lehine değildir ve öyle sunulmamaktadır:
+
+> Geçişin ne kadar sürdüğü sorusuna tek bir sayı cevap vermez, ve geçişin ışığın
+> hangi tarafına düştüğü de bölgenin bir özelliği değildir. İkisi de bir ölçüm
+> seçimidir.
+
+Bu modelin sorduğu soru, parçacığın **Bölge I saatinde** nereye düştüğüdür; yani
+dışarıdaki bir dedektöre geçen tepenin varışıdır. O gözlenebilir, formülasyonu
+gereği fazdan gecikmedir. Hizalanma bileşeni ise alana bağlanmış bir saatin
+**içeride** okuduğu şeydir; "ne kadar etkileşti" sorusunu cevaplar, "ne zaman
+vardı" sorusunu değil. Bu nedenle Bölüm 25'te faz okuması kullanılmaktadır. Bu
+gerekçe artık açıkça verilmektedir; daha önce sessizce devralınıyordu.
+
+### 14.12 Cephe ile tepe: hızlanan hangisi
+
+İlerlemiş bir tepe, bir şeyin engeli ışıktan hızlı geçtiği yolundaki her iddiaya
+karşı standart itirazdır ve itiraz yerindedir. Bazı modları ötekilerden daha iyi
+geçiren bir bölge paketi **yeniden biçimlendirir**: önce varan kısım en az
+zayıflatılır, dolayısıyla çıkan tepe çoğunlukla zaten öncü kenar olan şeyden
+kurulur. Tepe, hiçbir şey öne geçmeden erken görünür. Öne gönderilen bir şey
+yoktur; zaten orada olan bir parçadan bir biçim yeniden kurulmuştur.
+
+Bilginin taşınıp taşınmadığına karar veren nicelik tepe değil, **cephedir**:
+herhangi bir büyüklükteki ilk bozulma. Hızı, dağılım bağıntısının sınırsız
+frekanstaki davranışıyla belirlenir.
+
+**Işık üstü bir hız tek başına delil değildir, ve bu bu çalışmadan eskidir.**
+Kütleli bir alan için faz hızı her frekansta ışığı geçer, grup hızı hiçbir
+frekansta geçmez, ve çarpımları tam olarak birdir:
+
+| $\omega$ | Faz hızı | Grup hızı | Çarpım |
+|----------|----------|-----------|--------|
+| $2{,}8$ | $1{,}6615$ | $0{,}6019$ | $1{,}000000$ |
+| $6$ | $1{,}0776$ | $0{,}9280$ | $1{,}000000$ |
+| $20$ | $1{,}0063$ | $0{,}9937$ | $1{,}000000$ |
+
+**Cephe sınırı alır ve sınır ışıktır.** Faz hızının ışığı aşma payı frekans
+büyüdükçe sıfıra düşer: $\omega = 10$ için $2{,}598 \times 10^{-2}$,
+$\omega = 100$ için $2{,}501 \times 10^{-4}$, $\omega = 1000$ için
+$2{,}500 \times 10^{-6}$, $\omega = 10^{5}$ için $2{,}500 \times 10^{-10}$.
+Bölge cepheye saydamdır: $d = 4$ için cephe $4{,}000001$, $d = 16$ için
+$16{,}000005$ gecikir, yani **tam ışık süresi kadar**. Cephe hiçbir kalınlıkta
+öne alınmaz.
+
+**İlerlemiş tepenin üzerinde taşındığı şey.** Öne alma büyürken onu taşıyan
+genlik çöker:
+
+Aşağıdaki tablo **tek geçiş** ayağındadır: öne alma, tek geçişlik gecikmenin
+$d/c$ ile karşılaştırılmasıdır. Bölüm 25.5'in tablosu gidiş dönüş ayağındadır ve
+sayıları bu nedenle farklıdır; ikisi karıştırılmamalıdır.
+
+| $d$ | Geçen genlik | Tepenin tek geçişte öne alınması |
+|-----|--------------|----------------------------------|
+| $2$ | $2{,}0364 \times 10^{-2}$ | $+0{,}5371$ |
+| $8$ | $2{,}4532 \times 10^{-8}$ | $+6{,}5371$ |
+| $32$ | $5{,}1651 \times 10^{-32}$ | $+30{,}5371$ |
+
+İkisi birbirine karşı hareket eder. Hiçbir kalınlık, ölçülebilir bir şey
+üzerinde öne alma satın almaz. Dolayısıyla:
+
+> Tepenin öne alınması bir sinyal taşımaz. Bu, etrafından dolaşılarak değil,
+> kabul edilerek kaydedilmektedir.
+
+Bölüm 25'teki dönüş olayı yerleşimi, bir tepenin nereye düştüğüne dair bir
+ifadedir; bir mesajın bölge içinden ışığı geçtiği iddiası değildir. Bu, engelden
+geçirim üzerine bir sınırdır ve **geçişin kendisi** hakkında hiçbir şey
+söylemez; orada ne döneceğine cephe değil, kütle kabuğu karar verir.
+
+---
+
+---
+
+## 30. Yönelim tablosuna yöneltilen sorular
+
+Bölüm 18 yönelim sözlüğünü kurar. Aşağıdaki alt bölümler o sözlüğün dokuz
+hücreli tablosunun statüsünü tartışır: hangi hücrelerin sıradan fizikle
+örtüştüğü, iki etiketin bağımsız olup olmadığı, ve tablonun ne kadar
+bağlayıcı olduğu. Numaralar yine korunmuştur.
+
+### 18.3 Dokuz hücrenin yedisi sıradan fizikle örtüşüyor
+
+Bu, modelin lehine bir sonuç değildir ve öyle sunulmamaktadır.
+
+Parçacık hiç çıkmıyorsa, içeride ne olduğundan bağımsız olarak bir soğurulma
+görürüz. Girdiği yüzden geri dönüyorsa, saparak ya da sapmadan, bir yansıma
+görürüz. Sapmadan karşı yüzden çıkıyorsa, sıradan bir geçiş görürüz.
+
+Yedi hücre, öte taraf hiç olmasaydı da aynı ölçümü verirdi.
+
+### 18.4 Tablonun yeniden sayımı: iki etiket bağımsız değildir
+
+Yukarıdaki dokuz hücre, iki etiketin bağımsız olduğu varsayımıyla kurulmuştur.
+Bölüm 18.7 o varsayımı geçersiz kılar: çıkış yüzü, geçiş dalga sayısının
+işaretidir ve bu işaret Bölge I'in enerjisinin işaretiyle aynı büyüklüktür. Dönme ise
+giriş ve çıkış yüzlerinin gerçeklediği matrislerin bileşkesidir. Her iki etiketi
+de **tek bir sıralı matris çifti** belirler; dolayısıyla bunlar çarpılamaz.
+
+Sekiz kabul edilebilir matrisin sıralı çiftleri $8 \times 8 = 64$ tanedir. Bu 64
+çiftin ürettiği farklı $(\text{enerji işareti}, \text{sapma})$ sonucu sayılırsa:
+
+| Sayım | Değer |
+|-------|-------|
+| İki etiket bağımsız sayılırsa | $9$ |
+| Yüz çiftlerinin gerçekten ulaştığı | $6$ |
+| Bunlardan enerjimizi koruyanlar | $3$ |
+| Enerjiyi ters işaretle döndürenler | $3$ |
+
+Altı sonuç tam ortadan ikiye ayrılır. Enerjiyi koruyan üç sonuç, Bölüm 18.9'un
+nicelenmiş sapma tayfının üç elemanıdır. Enerjiyi ters işaretle döndüren üç
+sonuç, Bölüm 18.7'de tarif edilen dalın, yani negatif enerjili varışın
+karşılığıdır ve çift yaratımı okumasının sahiplendiği kümedir.
+
+**Boş satır.** Parçacığın hiç çıkmadığı satır dokuz hücrenin üçüdür ve boştur.
+Kayıpsız bir bölgede iki çıkış ağırlığı toplam bire gelir; artan bir olasılık
+kalmaz. Bu, muhakeme değil akı korunumunun sonucudur.
+
+Dolayısıyla dokuz hücrenin üçü akı tarafından boşaltılır, kalanın ikisi sıradan
+fizikte karşılığı olmayan hücrelerdir. Ayırt edici hücrelerin **sayısı**
+değişmemiştir; değişen, hangi bütünün içinde durduklarıdır.
+
+### 18.5 İki hücre gerçekten ayırt edici
+
+Geriye kalan iki hücre şudur: parçacık **karşı yüzden çıkar ve sapmıştır**.
+
+Ayırt ediciliğin nedeni sapmanın kendisi değil, **bedelsiz** olmasıdır. Sıradan
+bir sapma bir hedef gerektirir ve hedef geri tepme alır; enerji ve momentum
+hedefe dağılır. Burada hedef yoktur: enerji tam olarak, sürat tam olarak, kütle
+tam olarak korunur, yalnızca yön değişir.
+
+> Modelin ayırt edici imzası, **geri tepen bir hedef olmaksızın** gerçekleşen
+> esnek bir sapmadır.
+
+### 18.6 Bu tablonun statüsü
+
+Bir çekince açıkça belirtilmelidir. Sapma açıları ve korunan nicelikler
+hesaplanmıştır; hangi hücrenin sıradan fizikle örtüştüğü ise **hesaplanmamış,
+muhakeme edilmiştir**. Üçüncü sütun bir sınıflandırma kararıdır, bir türetim
+değildir.
+
+Ayrıca bu çalışma, öte tarafta bir dönmenin gerçekten olup olmadığını
+söylemez. Tablo koşulludur: olursa ne görünür, onu verir. Dönmenin hangi
+koşullarda ve hangi açıyla gerçekleştiği, yani hücreler arasındaki olasılık
+dağılımı, hesaplanmamıştır ve modelin en büyük eksiğidir.
 
 ---
 
