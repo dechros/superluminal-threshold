@@ -3162,6 +3162,7 @@ ne bölüm numarası ne kaynak numarası bulunur.
 | Eklem koşulunun yerçekimi tarafı, dış eğrilik | `src/horizon/SurfaceLayer` |
 | Katmanın enerji koşulları karşısındaki durumu | `src/horizon/LayerEnergyConditions` |
 | Literatürün bütün itirazlarının sicili | `src/critique/LiteratureObjections` |
+| Yeniden üretilen ile itibara alınanın ayrılması | `src/critique/ReproductionLedger` |
 | Rakip yaklaşımların ortak formülleri | `src/critique/CommonFormulas` |
 | Normal türevin lapse'e göre sönme oranı | `src/horizon/RateCondition` |
 | Nedensel geçişin akı sorusundan ayrılması | `src/boundary/CausalCrossing` |
@@ -3255,22 +3256,25 @@ koşulları, imza değiştiren zarlar, korunum yasaları tartışmasının dört
 ve çok zamanlı tutarlılık. Dokuzu da eklenmiştir; kaynakça $41$'den $50$'ye
 çıkmıştır.
 
-Sınıflandırma, sayıyla değil **kaynak numarasıyla** verilir; yoksa denetlenemez
-bir sayım olur, ki bu tam da Bölüm 22.1'in yakalamak için var olduğu şeydir.
+**Sınıflandırma artık kodda tutulmaktadır**, makalede beyan edilmez
+(`src/critique/ReproductionLedger`). Bunun nedeni Bölüm 22.1'in yakalamak için
+var olduğu şeydir: elle bakılan bir tablo, denetlenemeyen bir sayımdır. Sicilde
+her sonuç **ne söylediğiyle** adlandırılır, nerede yayımlandığıyla değil; böylece
+bir bölüm yeniden numaralandığında ya da bir ön baskı aşıldığında kodda bakım
+gerekmez. Kaynakça tarafı bu sicile **konu üzerinden** bağlanır.
 
-| Sınıf | Kaynaklar | Kaç |
-|-------|-----------|-----|
-| Kendi araçlarımızla yeniden üretilmiş | 3, 4, 5, 7, 8, 10, 11, 13, 14, 24, 25, 28, 29, 31, 34, 35, 36, 39, 42, 43, 46, 48, 49 | $23$ |
-| İtibara alınmış | 1, 2, 6, 9, 12, 15, 30, 32, 33, 37, 38, 40, 41, 44, 45, 47, 50 | $17$ |
-| Yalnızca bağlam | 16, 17, 18, 19, 20, 21, 22, 23, 26, 27 | $10$ |
+Sicil üç durum ayırır ve sayıları kendisi üretir:
 
-Yeniden üretilenlerde, o kaynağın merkezi hesaplanabilir iddiası `src/` altında
-bağımsız olarak kurulmuş ve sayısı karşılaştırılmıştır: permütasyon sayımı,
-genişletilmiş grup, eklem koşulu, başlangıç değer problemi, öz-eşlenik sınır
-koşulu ailesi, dejenere yol, iki zamanlı indirgeme, tachyonic komütatör,
-Casimir, vakum Cherenkov sınırı, Maxwell alanı, belirlenimsizlik, oyalanma
-süresi, zamansal olmayan kabukların enerji koşulları, oran koşulu, ve çok
-zamanlı sıfır eğrilik ölçütü.
+| Durum | Anlamı | Kaç |
+|-------|--------|-----|
+| Yeniden üretilmiş | Buradaki bir kütüphane sonucu bağımsız olarak hesaplar ve değeri karşılaştırılabilir | $32$ |
+| İtibara alınmış | Sonuç yeniden hesaplanmadan kullanılır; doğruluğu bu çalışmanın güvencesi altında değildir | $12$ |
+| Yalnızca bağlam | Konumlandırma için anılır, ondan hiçbir sonuç çıkarılmaz | $7$ |
+| **Toplam** | | $51$ |
+
+Sicilde bir denetim vardır: "yeniden üretilmiş" işaretli her girdi, onu üreten
+kütüphaneyi **adıyla** taşımak zorundadır. Adı olmayan bir yeniden üretim iddiası
+doğrulamayı düşürür. Bu, sicilin var olma nedenidir.
 
 **Yöntem tarafındaki eksik.** Bu denetimin ikinci bulgusu şudur: literatür
 notlarının öncelik tablosundaki $24$ satırdan dördünün burada bir C++ karşılığı
@@ -3285,10 +3289,10 @@ kaydedilir, çünkü aksi hâlde Bölüm 22 sağlanmamış bir bütünlük iddia
 |----------------------------------|------------------|
 | Zaman yönlendirilemez bölgede cismin spinör gibi dönüşmesi | Spin bu çalışmada hiçbir yere sokulmamıştır. Karar gözden geçirilmiş ve **korunmuştur**: spin eklemek, kapsamın on bir maddesinin dışına çıkmak olurdu, ve Bölüm 14.11'in saat bileşenleri spin gerektirmeden kurulabildiği için buna zaten gerek kalmamıştır |
 
-> Yeniden üretilenlerin sayısı itibara alınanların sayısını aşmaktadır, ama
-> bütün kaynakların yarısından azıdır. Bu çalışmanın kendi güvencesi altındaki
-> alan, makalenin dayandığı alandan **dardır**, ve yukarıdaki dört yöntem o
-> darlığın adı konmuş kısmıdır.
+> Yeniden üretilenler sicilin yarısından çoğudur. Buna karşılık bu çalışmanın
+> kendi güvencesi altındaki alan, makalenin dayandığı alandan hâlâ **dardır**:
+> on dokuz sonuç ya itibara alınmakta ya da yalnızca bağlam olarak
+> kullanılmaktadır, ve yukarıdaki yöntem o darlığın adı konmuş kısmıdır.
 
 ---
 
