@@ -3043,6 +3043,11 @@ ancak büyüklüğü bu sayının verdiği izlenimden küçüktür.
 
 ### 18.5 Yönelim izi nereden geliyor: zamanlar uzayının eğriliği
 
+> Bu alt bölüm, metnin en güçlü iç denetimidir ve öyle okunmalıdır. Aynı sonuca
+> **tümüyle farklı iki hesap yolundan** varılmakta, iki yol aynı iki dönme
+> düzleminde buluşmaktadır. Bir sonucu iki kez elde etmek, onu bir kez elde
+> edip savunmaktan daha güçlüdür.
+
 Bölüm 18.3 yönelimin dönüş anını değiştirdiğini saçılma yoluyla buldu. Bu
 alt bölüm aynı soruyu bağımsız bir yoldan sorar ve **etkinin nerede
 doğduğunu** belirler.
@@ -4117,9 +4122,9 @@ permütasyonundan **6**'sı Bölge I çizgi elemanını korur, **18**'i değişt
 koruyanlar tam olarak zaman slotunu yerinde bırakanlardır. Sayım doğrudur ve
 kabul edilmektedir. $D$ bu on sekizin içindedir.
 
-Ayrım şuradadır: $D$ tek bir metriği korumaz, iki metrik arasındaki
-$D^T \eta' D = -\eta$ bağıntısını sağlar. İki taraf aritmetikte anlaşır,
-hangi bağıntının fiziksel olduğunda ayrılır.
+Ayrımın ne olduğu Bölüm 21'de bir kez kurulmuştur ve burada tekrarlanmaz:
+$D$ tek bir metriği korumaz, iki metrik arasında bir bağıntı sağlar. İki taraf
+aritmetikte anlaşır, hangi bağıntının fiziksel olduğunda ayrılır.
 
 ### 24.2 İkiye katlanmış uzayda komütatörün yok olması
 
