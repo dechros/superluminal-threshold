@@ -148,9 +148,9 @@ açıkça yazılmıştır.
 | 22 | Yöntem ve üç denetim | Bu sayılar doğrulanmış mı, ve doğrulama kendini kandırıyor olabilir mi |
 | 23 | Açık kalanlar | Neyin gösterilmediği yazılı mı |
 | 26 | Literatürün bıraktığı sorular | Bu çalışma literatüre göre nerede duruyor |
-| Ek 10 | Öte tarafta kuantum kuruluşu | Orada bir alan kuramı tanımlanabiliyor mu |
+| Ek 10 | Öte tarafta kuantum formülasyonu | Orada bir alan kuramı tanımlanabiliyor mu |
 | Ek 19 | İki bölge arasında sinyal | Kapalı bir ara bölge her kanalı kapatıyor mu |
-| Ek 27 | Anlaşmazlıkların sınıflandırılması | Rakip kuruluşlarla çelişkiler nerede gerçek |
+| Ek 27 | Anlaşmazlıkların sınıflandırılması | Rakip formülasyonlarla çelişkiler nerede gerçek |
 
 ---
 
@@ -277,7 +277,6 @@ Bu çalışmanın merkezindeki ifade şudur: öte tarafın tek uzay ekseni Bölg
 zamanıdır. İfade nitel bırakılırsa "o eksende ilerlemek zamanda yer
 değiştirmektir" cümlesi bir benzetmeye dönüşür. Aşağıdaki iki sonuç onu
 niceliksel yapar ve sekiz geçişin **tamamı** üzerinde doğrulanmıştır
-.
 
 **Katsayı tam olarak birdir.** Sekiz geçişin her birinde, zaman koordinatını
 üreten satırın sıfırdan farklı **tek** bir girdisi vardır, o girdi öte tarafın
@@ -400,6 +399,17 @@ Ayrıca bu bölümde toplanan iki terimin toplamı, §2.1.2'nin tek genlikten ok
 anıyla üç mesafede karşılaştırılmış ve aynı çıkmıştır. Yani makalenin bu
 noktadaki toplaması, yerine geçen türetmeyle uyumludur.
 
+**Geri varış, öte tarafta geri yürümek değildir.** Bu ayrım burada yapılmalıdır,
+çünkü metnin başka bir yerinde öte tarafın tek uzay ekseninin **yönlendirilebilir**
+olduğu hesaplanmıştır: bir cisim o eksende geri dönemez, yani yer değiştirmenin
+miktarı serbesttir, işareti değildir. Yukarıdaki geri varış o sonuçla çelişmez,
+çünkü işaret cismin o eksende hangi yöne yürüdüğünden değil, **hangi geçiş
+eşlemesinin kullanıldığından** gelir. Bölüm 2.1'in sekiz adayının dördü verilen
+bir yer değiştirmeyi daha geç, dördü daha erken bir ana taşır, ve iki aile her iki
+metriğin de izometrisi olan bir dönüşümle birbirine bağlıdır. Cisim öte tarafta
+tek yönde yürür; o yürüyüşün bu tarafta hangi yöne düştüğünü eşleme belirler.
+Dolayısıyla "geri yürümek" diye bir işlem bu kurguda yoktur ve gerekmez.
+
 ### 2.1.4 Düz olmayan yol: gezinmek ile çerçeve değiştirmek
 
 Sözlük lineer olduğundan, tek eksende kalan bir yolculuğun saatte ürettiği yer
@@ -436,48 +446,51 @@ aileden çıkmaz, ama **involüsyon olmaktan çıkar**. §2.1'in tarama koşulla
 biri olan "iki kez geçince başlangıç çerçevesine dönme" özelliği bu durumda
 kaybolur.
 
-### 2.1.5 Faturanın çıkarılması: hangi para biriminde ne ödeniyor
+### 2.1.5 Yer değiştirmenin bedeli: genlik ağırlığı ve enerji
 
-Bu kurguda fiyatlandırılabilecek üç nicelik vardır ve üçü de farklı davranır
-.
+Yer değiştirmenin iki niceliği vardır ve ikisi farklı davranır: dizinin genlik
+ağırlığı, ve gereken enerji.
 
-**Genlik.** Girişten $\Delta$ kadar önce varmak için öte taraf bacağının doymuş
-geçiş gecikmesini $\Delta$ kadar aşması gerekir; gecikme bacak tarafından değil
-bölge tarafından sabitlendiğinden, gereken bacak istenen yer değiştirmeyle
-**birebir** büyür: $\Delta = 0$ için $2{,}565988$, $\Delta = 1000$ için
-$1002{,}565988$. Dizinin genliği ise yalnızca bölgeye bağlıdır; kalınlık $2$'de
-$3{,}67 \times 10^{-3}$, $8$'de $3{,}46 \times 10^{-12}$ olduğu için genliğin
-bölgeye duyarlı olduğu, yani sabit bir niceliğin körlüğünden söz edilmediği
-gösterilmiştir. Buna karşın **bacak, genliğin argümanları arasında hiç
-geçmez**. Dolayısıyla bu modelde keyfi büyüklükte bir yer değiştirme, en
-küçüğünden daha fazla genliğe mal olmaz. Bu bir serbestlik ifadesi değildir:
-modelde öte taraf yol uzunluğu genliğe hiç girmemektedir, yani bu bir
-**eksikliktir**, ve yolculuğun fiyatlandırılabilmesi için genliğin önce bir yol
-uzunluğu kazanması gerekir. Rakamlara bundan fazlası okunmamalıdır.
+**Genlik ağırlığı.** Girişten $\Delta$ kadar önce varmak için öte taraf
+bacağının doymuş geçiş gecikmesini $\Delta$ kadar aşması gerekir; gecikme bacak
+tarafından değil bölge tarafından sabitlendiğinden, gereken bacak istenen yer
+değiştirmeyle **birebir** büyür: $\Delta = 0$ için $2{,}565988$, $\Delta = 1000$
+için $1002{,}565988$. Dizinin genlik ağırlığı ise yalnızca bölgeye bağlıdır.
+Kalınlık $2$'de $3{,}67 \times 10^{-3}$, $8$'de $3{,}46 \times 10^{-12}$ olduğuna
+göre ağırlık bölgeye duyarlıdır, yani sabit bir niceliğin duyarsızlığından söz
+edilmemektedir. Buna karşın **bacak uzunluğu, ağırlığı veren ifadenin
+değişkenleri arasında hiç geçmez**. Dolayısıyla bu modelde keyfi büyüklükte bir
+yer değiştirme, en küçüğüyle aynı ağırlığı taşır.
 
-**Düz bacağın enerjisi.** Öte taraf, ayırt edilmiş ekseni boyunca ötelemeye göre
-değişmezdir; eşlenik nicelik korunur ve düz bir bacağın uzunluğu ödenmez. Aynı
-işaretli eksenler arasındaki dönmeler de bedelsizdir. Ama §2.1.4'e göre bu iki
-bedelsiz işlem hiçbir şey de kazandırmaz.
+Bu bir serbestlik sonucu değildir. Modelde öte taraf yol uzunluğu genliğe hiç
+girmemektedir, yani bir **eksikliktir**; yolculuğun ağırlığa katkısının
+hesaplanabilmesi için genliğin önce bir yol uzunluğu değişkeni kazanması
+gerekir. Rakamlara bundan fazlası okunmamalıdır.
 
-**Çerçeve değişiminin enerjisi.** Kazandıran tek işlem olan hiperbolik dönme
-enerjiyi hızlılığının hiperbolik kosinüsüyle çarpar. Hızlılık iki bağıntı
+**Düz bir bacağın enerjisi.** Öte taraf, ayırt edilmiş ekseni boyunca ötelemeye
+göre değişmezdir; eşlenik nicelik korunur ve düz bir bacağın uzunluğu enerji
+gerektirmez. Aynı işaretli eksenler arasındaki dönmeler de gerektirmez. Ama
+§2.1.4'e göre bu iki işlemin ikisi de hiçbir yer değiştirme üretmez.
+
+**Çerçeve değişiminin enerjisi.** Yer değiştirme üreten tek işlem olan hiperbolik
+dönme, enerjiyi hızlılığının hiperbolik kosinüsüyle çarpar. Hızlılık iki bağıntı
 arasından elenirse geriye serbest parametresi olmayan bir ilişki kalır:
 
 $$\frac{\Delta E}{E} \;=\; \frac{\Delta}{s},$$
 
 yani ek yer değiştirmenin bacak uzunluğuna oranı. İlişki yer değiştirmede
-**lineerdir**, üstel değil. Uzun bacak aynı yer değiştirmeyi ucuza alır: $10$
-birimlik bacakta $2$ birim ek yer değiştirme enerjiyi $\%20$ artırırken,
-$100$ birimlik bacakta $\%2$ artırır. $1000$ birimlik bir bacakta enerjinin
-$\%1$ artması $10$ birim, iki katına çıkması $1000$ birim ek yer değiştirme
-satın alır.
+**lineerdir**, üstel değil. Uzun bacak aynı yer değiştirmeyi daha küçük bir
+enerji artışıyla verir: $10$ birimlik bacakta $2$ birim ek yer değiştirme
+enerjiyi $\%20$, $100$ birimlik bacakta $\%2$ artırır. $1000$ birimlik bir
+bacakta enerjinin $\%1$ artması $10$ birim, iki katına çıkması $1000$ birim ek
+yer değiştirme üretir.
 
-**Faturanın toplamı, bir sınırlama olarak.** Üç kalemin ikisi hafiftir — genlik
-bacağı görmez, düz bacak bedelsizdir — üçüncüsü ise gerçek bir bedeldir ama
-tanıdıktır, sıradan bir Lorentz dönüşümünün uyguladığı çarpanın aynısıdır. Yani
-bu faturada kurguya özgü hiçbir kalem yoktur. Modelin fiyatlandıramadığı şey
-yolculuğun kendisidir, ve bunun nedeni yapısaldır: genlikteki hiçbir nicelik
+**Toplu değerlendirme, bir sınırlama olarak.** Üç niceliğin ikisi zayıftır —
+genlik ağırlığı bacağı görmez, düz bacak enerji gerektirmez — üçüncüsü gerçek
+bir enerji artışıdır ama tanıdıktır: sıradan bir Lorentz dönüşümünün bir zaman
+aralığına uyguladığı çarpanın aynısıdır. Yani bu değerlendirmede kurguya özgü
+hiçbir nicelik yoktur. Modelin hesaplayamadığı şey yolculuğun kendisinin
+katkısıdır, ve bunun nedeni yapısaldır: genliği veren ifadedeki hiçbir değişken
 parçacığın öte tarafta ne kadar gittiğine bağlı değildir.
 
 ---
@@ -496,9 +509,9 @@ Buradaki yapı $\langle D \rangle \ltimes SO(1,3)$ biçiminde bir yarı-doğruda
 çarpımdır. Kapanmanın bozulması, $D B D^{-1}$ konjugasyonunun boost tipini
 korumamasından çıkar; yön-bağımlı genleşmeler bu konjugasyonun ürünüdür.
 
-### 2.2 Daha geniş kuruluşla karşılaştırma
+### 2.2 Daha geniş bir formülasyonla karşılaştırma
 
-Aynı problem [4]'te bağımsız ve çok daha geniş biçimde çözülmüştür. İki kuruluş
+Aynı problem [4]'te bağımsız ve çok daha geniş biçimde çözülmüştür. İki formülasyon
 yan yana konursa:
 
 | | Bu bölüm | [4] |
@@ -512,7 +525,7 @@ yan yana konursa:
 | Temsil kuramı | Yok | Genişletilmiş Poincaré grubunun bütün üniter indirgenemez temsilleri sınıflandırılmış |
 | Dalga denklemleri | Yok | Casimir öz-değer probleminden türetilmiş, bilinen bütün denklemler artı yeni takyonik sınıflar |
 
-Kapsam bakımından [4] bu bölümü içerir ve aşar. İki kuruluş **aynı grup
+Kapsam bakımından [4] bu bölümü içerir ve aşar. İki formülasyon **aynı grup
 değildir**: $D$, [4]'ün genişletilmiş grubunda bulunmaz, çünkü içerdiği
 $x \leftrightarrow y$ takasının üç boyuttaki determinantı $-1$'dir ve dolayısıyla
 $SO(3)$ elemanı değildir. Bu, Bölüm 18.11'de hesaplanmıştır.
@@ -611,7 +624,7 @@ Zayıf eklem koşulu seçildiğinde geçiş yüzeyinde dış eğrilik sıfırlan
 sıfırlanmayan bir dış eğrilik gerilim tensöründe dağılımsal bir terime, yani bir
 **madde katmanına** karşılık gelir. Bu, zayıf koşulun bedelidir ve gizlenmemesi
 gerekir: geçişe izin veren seçim, aynı zamanda yüzeye bir madde katmanı koyan
-seçimdir. Katmanın genel kuruluşu [44]'tedir: imza değiştiren bir zarın
+seçimdir. Katmanın genel formülasyonu [44]'tedir: imza değiştiren bir zarın
 dağılımsal gerilimi, imzanın değiştiği yüzeyin zamansal olamaması da dahil olmak
 üzere orada tam olarak ele alınmıştır. Buradaki hesap onun bu geometrideki
 sayısal karşılığıdır.
@@ -907,11 +920,11 @@ meselesidir.
 Bu, modelin yerçekimi tarafına atılmış ilk adımdır ve sınırlıdır: Einstein
 denklemleri çözülmemiş, yalnızca eklem koşulunun geometrik karşılığı
 hesaplanmıştır. [7] ve [9]'in uyarısı burada da geçerlidir, imza değişiminde
-kanonik bir alan denklemi kümesi yoktur ve hangi kuruluşun kullanıldığı
+kanonik bir alan denklemi kümesi yoktur ve hangi formülasyonun kullanıldığı
 belirtilmek zorundadır; burada kullanılan, dış eğriliğin süreksizliğini gerilim
-tensörünün dağılımsal terimine bağlayan [7] kuruluşudur.
+tensörünün dağılımsal terimine bağlayan [7] formülasyonudur.
 
-Bu kuruluşun pratik aracı [8]'da verilmiştir: öz-zaman koordinat olarak
+Bu formülasyonun pratik aracı [8]'da verilmiştir: öz-zaman koordinat olarak
 alındığında imza değişimi boyunca düzgün genelleştirilmiş ortonormal çatılar
 tanımlanabilir, ve bu hem Einstein denklemlerinin varyasyonel türetimini hem
 dağılım teorisini sabit imzadaki hâllerinin doğrudan genellemesi olarak
@@ -1041,7 +1054,7 @@ sıfırlandığı sürekli bir yol vardır.
 
 Bunun önemi şuradadır: literatürün dejenere yüzeyle çalışan araçları tam olarak
 rank-1 dejenerelik için kuruludur. [13] ve [14]'nın "transvers radikal" dediği
-yapı budur, ve [20]'in kink modeli, [22]'nin Colombeau kuruluşu, [16]'ün Hadamard
+yapı budur, ve [20]'in kink modeli, [22]'nin Colombeau formülasyonu, [16]'ün Hadamard
 düzenlemesi bu sınıfta çalışır. Dolayısıyla bu modelin geçişi, o araçların
 erişemeyeceği bir yerde **değildir**.
 
@@ -1328,7 +1341,7 @@ $1+2$ boyutta Newton'un ikinci yasası tam olarak integre edilebilir ve her
 başlangıç koşulu için **etkin tek zamanlı** bir evrim verir; kuantum tarafta ise
 düzey aralıkları, toplam süre ve $\hbar$ içeren genelleştirilmiş bir belirsizlik
 bağıntısı çıkar. Bu, üç zamanlı Bölge II'nin dışarıdan bakıldığında tek zamanlı
-görünebileceği anlamına gelir. Buradaki kuruluş ile arasındaki fark, [25]'in
+görünebileceği anlamına gelir. Buradaki formülasyon ile arasındaki fark, [25]'in
 evrimin üniter ve olasılık koruyan olmasını istemesidir; Bölüm 10'da gösterildiği
 gibi Bölge II'de bu talebin dayandığı yapı zaten mevcut değildir. Yine de bu
 itiraz açık bir sorudur ve modelin lehine kapatılmış sayılmamalıdır.
@@ -2156,7 +2169,6 @@ denk olmayan birkaç nicelik bu adı hak eder, her biri bir ölçümün geri
 döndüreceği şeydir ve birbirleriyle uyuşmazlar. Bu nedenle bunlardan birini tek
 başına aktarmak bir sonuç değil, savunulması gereken bir seçimdir. Aşağıdaki beş
 okuma, **aynı geçirgenlik genliğinden** türetilerek yan yana hesaplanmıştır
-.
 
 İlk ikisi bilinen okumalardır: **fazdan gecikme**, geçirgenlik fazının frekansa
 göre türevi; **oyalanma süresi**, depolanan normun gelen akıya oranı. Sonraki
@@ -2207,7 +2219,7 @@ Buradan çıkan sonuç modelin lehine değildir ve öyle sunulmamaktadır:
 > seçimidir.
 
 Bu modelin sorduğu soru, parçacığın **Bölge I saatinde** nereye düştüğüdür; yani
-dışarıdaki bir dedektöre geçen tepenin varışıdır. O gözlenebilir, kuruluşu
+dışarıdaki bir dedektöre geçen tepenin varışıdır. O gözlenebilir, formülasyonu
 gereği fazdan gecikmedir. Hizalanma bileşeni ise alana bağlanmış bir saatin
 **içeride** okuduğu şeydir; "ne kadar etkileşti" sorusunu cevaplar, "ne zaman
 vardı" sorusunu değil. Bu nedenle Bölüm 25'te faz okuması kullanılmaktadır. Bu
@@ -2699,7 +2711,7 @@ dağılımı hesaplanmamıştır.
 ### 18.10 İşaret sorusunun yeniden okunması
 
 Aşağıdaki tartışma bu sözlüğün bir parçasıdır ve sonucu tersine dönmüştür.
-Eski kuruluşta iki bölgedeki okların bağıl işareti prensip olarak ölçülemezdi,
+Eski formülasyonda iki bölgedeki okların bağıl işareti prensip olarak ölçülemezdi,
 çünkü eşik geçirgen değildi. Eşik geçirgen olduğuna göre o gerekçe düşmüştür ve
 bağıl işaret ilke olarak ölçülebilirdir.
 
@@ -2884,11 +2896,15 @@ Bölge I'in üç uzay yönüdür ve orada da serbestçe hareket edilir. Bölge I
 uzay ekseninde yön seçilemez; o eksen Bölge I'in zamanıdır ve orada da aynı şey
 geçerlidir.
 
+Bu satırın Bölüm 2.1.3'ün sonucuyla nasıl bir arada durduğu orada yazılıdır:
+yön seçilememesi cismin o eksende geri dönememesidir, oysa dönüş anının işareti
+cismin yürüyüş yönünden değil hangi geçiş eşlemesinin kullanıldığından gelir. İki
+ifade farklı niceleyicilere sahiptir ve çelişmezler.
+
 ### 24.2.1 "Tek yönlü" derken ne söylendiği: iki ayrı iddia
 
 Bu tabloyu yazmak kolaydı; ne iddia edildiğini söylemek zor. "Akış" kelimesinin
 içinde **iki ayrı** ifade saklıdır ve statüleri farklıdır
-.
 
 **Yönlendirilebilirlik.** Belirli bir nedensel türdeki doğrultular, o türden
 çıkmadan birleştirilemeyen iki parçaya ayrılır; dolayısıyla bir uç ötekinden
@@ -3499,7 +3515,7 @@ varsayar, Bölüm 10 ise Bölge II'de bu yapının kurulamadığını gösterir.
 itirazı karşılamaktan çok konuyu Bölüm 10'a havale etmektedir.
 
 **9. "Nedenselliği korumak için tercihli bir çerçeve zorunludur."** [33], ve
-[32]'da somut bir kuruluş: uygun bir eşzamanlama seçimiyle takyonik alan tutarlı
+[32]'da somut bir formülasyon: uygun bir eşzamanlama seçimiyle takyonik alan tutarlı
 biçimde kuantumlanır, mutlak nedensellik ve tam Lorentz simetrisi korunur, bedel
 olarak görelilik ilkesi bırakılır. Bu, modele gerçek bir alternatiftir ve daha
 olgundur. Aradaki fark ödenen bedeldir: [32] tercihli çerçeveyi kabul eder,
@@ -3749,7 +3765,7 @@ bunların dışında bir hüküm bulursa koşuyu düşürür.
 | türetildi | Sonradan başka bir şeyden elde edilmiştir |
 | iki yönlü hesaplandı | İki seçeneğin ikisi de hesaplanmıştır, seçim hiçbir şey taşımaz |
 | geçersiz kılındı | Sonraki bir sonuç ona olan ihtiyacı ortadan kaldırmıştır |
-| başka kurguya ait | Karşılaştırılan bir kuruluşa aittir, bu metne değil |
+| başka kurguya ait | Karşılaştırılan bir formülasyona aittir, bu metne değil |
 | ilan edilmiş sınırlama | Korunmuştur, ve sonucu metinde yazılıdır |
 | varsayım değil, söz ediliyor | Varsayım yapmak yerine varsayımlardan söz eden pasaj |
 
@@ -3766,7 +3782,7 @@ varsayımı eleştiren bir cümle ile varsayan bir cümle aynı kelimeyi taşır
 | 3.8 | Dejenere katmanın içerideki her modu tam olarak bloklaması | ilan edilmiş sınırlama | Katmanın bir modeli olarak konur, tam hesabın sıfır vermeyebileceği yazılıdır |
 | 3.8 | Madde katmanının gücünün imza dönüşünün eğimini izlemesi | ilan edilmiş sınırlama | Vekil ölçü olarak konur, tam gerilim tensörünün hesaplanmadığı yazılıdır |
 | 4.1 | Yansıyan bir bileşenin bulunabilmesi | türetildi | Aynı bölüm: akı korunumu başka çözüm bırakmaz |
-| 8.5 | Global hiperbolikliğin sağlanması | başka kurguya ait | Karşılaştırılan kuruluşun ihtiyacıdır; buradaki sonuç yalnızca zaman yönlerinin sayısından çıkar |
+| 8.5 | Global hiperbolikliğin sağlanması | başka kurguya ait | Karşılaştırılan formülasyonun ihtiyacıdır; buradaki sonuç yalnızca zaman yönlerinin sayısından çıkar |
 | 10.10 | Geçişin ışık hızında, ani ve hızdan bağımsız olması | başka kurguya ait | Karşılaştırılan model varsayar; bu metin kendi geçişini türetir |
 | 14.8 | Karakter değiştiren yönlerin enine yönler olması | iki yönlü hesaplandı | İki okuma yan yana hesaplanır, her birinin sonucu yazılır |
 | 18.4 | Tablonun iki etiketinin bağımsız olması | geçersiz kılındı | Çıkış yüzünün geçiş dalga sayısının işaretiyle sabitlendiği bölüm |
@@ -3783,7 +3799,7 @@ kapsayandan geniştir, çünkü sonradan olumsuzlanan bir ifade taramadan düşs
 hükmü kayıtta kalır. Bu metnin **kendi** taşıdığı varsayımlar yalnızca beş "ilan
 edilmiş sınırlama" satırıdır; beşi de sonucu metinde yazılı olarak
 taşınmaktadır. Geri kalanların hepsi ya türetilmiş, ya iki yönü de hesaplanmış,
-ya sonradan kaldırılmış, ya karşılaştırılan bir kuruluşa ait, ya da varsayım
+ya sonradan kaldırılmış, ya karşılaştırılan bir formülasyona ait, ya da varsayım
 yapmayan pasajlardır.
 
 Denetimin kendisi de sınanmıştır: makaleye sicilde yeri olmayan bir varsayım
@@ -3930,7 +3946,6 @@ bırakılanları geçtiğinde hesap değil beyan yapılıyor demektir.
 ### 26.6 Sınırda görülen: dönmüş dünya çizgisi ile yaratılmış çift
 
 Bu bölüm, yukarıdaki dördüncü açık maddeyi kapatmaz ama **keskinleştirir**
-.
 
 Zaman yönelimi çöken bir bölgeye girip çıkan bir cisim izlenerek takip edilemez.
 Dışarıdaki gözlemcinin elinde yalnızca sınırdaki muhasebe vardır: kaç dünya
@@ -3960,8 +3975,8 @@ bedeli öder; dönmüş bir çizgi hiçbir bedel ödemez.
 
 Aşağıdaki üç bölüm ana metinden çıkarılmış, hiçbiri kısaltılmamıştır. Ortak
 özellikleri, gidiş dönüş zincirinin bir halkası olmamalarıdır: birincisi öte
-tarafta bir kuantum kuruluşunun mümkün olup olmadığını, ikincisi kapalı bir ara
-bölgenin kapatamadığı kanalı, üçüncüsü rakip kuruluşlarla anlaşmazlıkların
+tarafta bir kuantum formülasyonunun mümkün olup olmadığını, ikincisi kapalı bir ara
+bölgenin kapatamadığı kanalı, üçüncüsü rakip formülasyonlarla anlaşmazlıkların
 sınıflandırılmasını ele alır. Üçü de bu çalışmada hesaplanmıştır ve kod
 karşılıkları yerindedir; omurgadan çıkarılmalarının nedeni yanlış ya da zayıf
 olmaları değil, anlatılan yolculuğa ait olmamalarıdır.
@@ -4116,7 +4131,7 @@ Hesaplanan sonuçlar:
 | Varılan imza | $(3,1)$, üç zaman | $(4,0)$, Öklid |
 | Bağlı olduğu teori | Yok | Döngü kuantum kozmolojisi |
 
-Yöntem olarak türetilmiş olan üstündür ve burada tercih edilen kuruluş değildir.
+Yöntem olarak türetilmiş olan üstündür ve burada tercih edilen formülasyon değildir.
 Ancak son iki satır belirleyicidir: **iki geçiş aynı olay değildir.** Orada tek
 bir koordinat döner ve Öklid imzasına varılır; burada dört koordinat döner ve üç
 zamanlı bir imzaya varılır. Dolayısıyla [18] ve [19], bu modelin geçişi için bir
@@ -4441,7 +4456,7 @@ gösterilebilmesidir.
 
 ## 27. Anlaşmazlıkların iki türü ve hangisinin hangisi olduğu
 
-Rakip kuruluşları doğrulamak ya da yanlışlamak bir yöntemdir. Bu çalışma
+Rakip formülasyonları doğrulamak ya da yanlışlamak bir yöntemdir. Bu çalışma
 bunun yerine kapsayıcı bir yöntem izler: iki konum, bakılan yön farklı olduğu
 için ayrışıyorsa, ikisi de doğrudur ve yapılacak iş her birinin hangi yönden
 baktığını bulmaktır. Bir bozuk paraya bir açıdan bakıldığında düz bir çizgi,
