@@ -24,6 +24,15 @@ number it now named also existed. Both parts of a row are therefore remapped
 here, in one pass, and they cannot collide because the first column holds bare
 identifiers while the remapping of the rest requires a prefix.
 
+The mapping is also refused when one number sits on two headings, which is what
+inserting a subsection by hand invites: the new heading is given the number the
+old one had and the old one is pushed down, so the number appears twice, the
+second occurrence replaces the first in the mapping, and every reference to it
+follows whichever heading came last. That happened, and it left five references
+pointing at a section inserted above the one they meant while the number they
+named still existed. Numbering the inserted heading with something no heading
+carries yet, and letting this script assign the order, is what avoids it.
+
 Nothing is written unless a reference cannot be mapped, a reference points at a
 section that does not exist, and the text carries no stray control character.
 
@@ -41,16 +50,28 @@ CELL = re.compile(
 REFERENCE = r"(Bölüm |§|Ek )(\d+(?:\.\d+)*)"
 
 
-def renumber(lines):
-    """Rewrite headings in document order, returning the old to new mapping."""
+def renumber(lines, repeated=None):
+    """Rewrite headings in document order, returning the old to new mapping.
+
+    A number appearing on two headings cannot be mapped, because the mapping is
+    keyed on it and the second occurrence would silently replace the first. Every
+    reference to that number would then follow whichever heading came last. The
+    repeated numbers are collected so the caller can refuse to write.
+    """
     mapping = {}
     section = subsection = subsubsection = 0
+
+    def record(old, new):
+        if old in mapping and repeated is not None:
+            repeated.add(old)
+        mapping[old] = new
+
     for index, line in enumerate(lines):
         head = re.match(r"^## (\d+)\. (.*)$", line)
         if head:
             section += 1
             subsection = subsubsection = 0
-            mapping[head.group(1)] = str(section)
+            record(head.group(1), str(section))
             lines[index] = f"## {section}. {head.group(2)}"
             continue
         head = re.match(r"^### (\d+)\.(\d+)\.(\d+) (.*)$", line)
@@ -58,7 +79,7 @@ def renumber(lines):
             subsubsection += 1
             old = f"{head.group(1)}.{head.group(2)}.{head.group(3)}"
             new = f"{section}.{subsection}.{subsubsection}"
-            mapping[old] = new
+            record(old, new)
             lines[index] = f"### {new} {head.group(4)}"
             continue
         head = re.match(r"^### (\d+)\.(\d+) (.*)$", line)
@@ -67,7 +88,7 @@ def renumber(lines):
             subsubsection = 0
             old = f"{head.group(1)}.{head.group(2)}"
             new = f"{section}.{subsection}"
-            mapping[old] = new
+            record(old, new)
             lines[index] = f"### {new} {head.group(3)}"
     return mapping
 
@@ -138,7 +159,12 @@ def unresolved(text):
 
 def main() -> int:
     lines = io.open(PATH, encoding="utf-8").read().split("\n")
-    mapping = renumber(lines)
+    repeated = set()
+    mapping = renumber(lines, repeated)
+    if repeated:
+        print("numbers carried by more than one heading, nothing written:",
+              sorted(repeated), file=sys.stderr)
+        return 1
     unmapped = set()
     changed = repoint_cells(lines, mapping, unmapped)
     repoint_prose(lines, mapping, unmapped)

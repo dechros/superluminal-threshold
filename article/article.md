@@ -11,6 +11,21 @@ tarafta saatte nereye düştüğü hesaplanır.
 **Sonuç.** Öte tarafta kat edilen mesafe, bu tarafta zamanda yer değiştirmedir,
 ve yeterince uzağa gidildiğinde dönüş girişten öncedir.
 
+**İddianın büyüklüğü.** Bu üç cümlenin yalnızca üçüncüsü yenidir ve bunun
+sınırları en başta çizilmelidir. Üstışık hızın geçmişe varmayı mümkün kıldığı
+1962–1970'te kurulmuştur. Öte tarafın bir uzay ve üç zaman ekseni taşıdığı ve
+parçacıkların yalnızca o tek uzay ekseninde hareket ettiği gösterilmiştir. Bir
+uzay ekseninin bu geçiş altında zaman eksenine düştüğü de bilinmektedir. Kalan
+tek adım şudur:
+
+> Işık hızını geçen kütleli madde, oradaki tek mekân boyutunda hareket edip
+> subluminal bölgeye döndüğünde **farklı bir zaman konumunda** bulunur.
+
+Aranan ve bulunamayan budur: yer değiştirmenin bir saat kaymasına çevrildiği ve
+dönüşte hangi ana varıldığının hesaplandığı bir çalışma. Metnin geri kalanı bu
+tek adımı taşımak ve ona yöneltilebilecek soruları karşılamak içindir; neyin
+ödünç neyin kendine ait olduğu Bölüm 27.1'de tek tek sayılmıştır.
+
 Çalışmanın tamamı bu üç cümlenin çevresinde düzenlenmiştir. Parçacığın döndüğünde
 Bölge I'in dört boyutunda nereye konumlandığı sorulur; ve "nerede", uzaydaki
 yeriyle sınırlı değildir. Dönüş olayının **zaman** koordinatı cevabın asıl
@@ -1051,7 +1066,7 @@ eğrinin teğetinin değil, alanın ve eklem koşulunun bir özelliğidir. Dolay
 - Yüzeyden geçen geometrik eğriler vardır.
 - Yüzeyden akı geçmez.
 
-Bu ayrım, Bölüm 8.5'te değinilen ilmek teoremiyle bu modelin eşik sonucunun aynı
+Bu ayrım, Bölüm 8.6'te değinilen ilmek teoremiyle bu modelin eşik sonucunun aynı
 anda doğru olabilmesinin nedenidir: o teorem geometrik eğriler hakkındadır, buradaki
 sonuç alan akısı hakkındadır.
 
@@ -1166,8 +1181,15 @@ sağlanmaz" ifadesi ise **doğru değildir** ve geri çekilmektedir.
 ### 7.2 Kara delik ufkuyla karşılaştırma
 
 Schwarzschild metriğinde ufkun içinde $dt^2$ ve $dr^2$ terimlerinin işaretleri yer
-değiştirir: $r$ zaman-benzeri, $t$ uzay-benzeri olur. Merkeze düşmek kaçınılmaz hale
-gelir, dışarıda geleceğe ilerlemenin kaçınılmaz olması gibi.
+değiştirir: $r$ zaman-benzeri, $t$ uzay-benzeri olur. Merkeze düşmek kaçınılmaz hâle
+gelir: $r$ artık tek eksendir ve azalmak zorundadır.
+
+Buradaki "kaçınılmaz" ile dışarıda geleceğe ilerlemenin kaçınılmazlığı **aynı
+türden değildir** ve ikisi birbirine benzetilmemelidir. Ufkun içindeki zorunluluk
+metrikten çıkar; dışarıdaki ise çıkmaz. Bölüm 8.4'te ispatlanan şey tam olarak
+budur: tek pozitif ekseni çeviren dönüşüm bir izometri olduğu için metrikten
+üretilen hiçbir nicelik geleceği geçmişten ayırt edemez. Ufkun içinde ayırt eden
+şey de bir zaman oku değildir, $r$'nin azalmasını dayatan denklemin kendisidir.
 
 Bu karşılaştırma metnin en önemlisidir ve bu yüzden kısa kesilmemelidir. Çalışmanın
 çekirdeği, bir eksenin karakter değiştirmesinden yer değiştirmenin zaman kaymasına
@@ -1299,7 +1321,7 @@ uzay **ayrımıdır**, yönü yine metrikten çıkmaz.
 Bir önceki alt bölümün ifadesi iki soruyu birlikte taşımaktadır ve ikisinin
 cevabı farklıdır. Birincisi, bir bölgenin zaman-benzeri vektörlerinin iki
 bileşene ayrılıp ayrılmadığıdır; bu yalnızca pozitif kareli yön sayısına
-bağlıdır ve Bölüm 8.5'te kurulmuştur. İkincisi, ayrım varken geometrinin iki
+bağlıdır ve Bölüm 8.6'te kurulmuştur. İkincisi, ayrım varken geometrinin iki
 bileşenden birini diğerinden ayırt edip etmediğidir. **Etmez**, ve gerekçesi bir
 simetridir.
 
@@ -1327,7 +1349,7 @@ düz metrik ailesi için sorun değildir, eğri bir uzantısı için açık bir 
 olarak kalır.
 
 **Bölge II'de sorun bir adım geride başlar.** Orada üç pozitif yön vardır,
-dolayısıyla ayrımın kendisi yoktur (Bölüm 8.5) ve çevrilecek tek eksen de
+dolayısıyla ayrımın kendisi yoktur (Bölüm 8.6) ve çevrilecek tek eksen de
 yoktur. Yani Bölge I'de var olan ama etiketlenemeyen bir ayrım, Bölge II'de hiç
 yoktur.
 
@@ -1365,7 +1387,7 @@ vardır, ve o ayrımın da yönü metrikten çıkmaz.
 **Bunun bedeli ve kazancı.** Bedel, bu çalışmanın zaman okunu geometriden türetme
 imkânını kaybetmesidir: metrik ayrımı verir, yönü vermez. Kazanç, yönü taşıyan
 şeyin nerede aranacağının elemeyle belirlenmesidir. Geometri elenmiştir;
-geriye durumun kendisi kalır. Bölüm 8.7 bu elemenin sonucunu takip eder ve
+geriye durumun kendisi kalır. Bölüm 8.8 bu elemenin sonucunu takip eder ve
 soruyu, iki entropi ölçüsünden hangisinin yönle örtüştüğü biçiminde niceliksel
 olarak sorar.
 
@@ -1465,7 +1487,61 @@ Yer değiştiren şey yasak değil, yasağın hangi tür koordinata düştüğü
 "ilerlemek zorundasın" cümlesi, iki tarafta da hesabın söylediği bir şey
 değildir.
 
-### 8.5 Zaman yönelimi: neden öte tarafta gelecek ve geçmiş yok
+### 8.5 Denklem bir yön tercih ediyor mu, ve neyin eklenmesi gerekirdi
+
+Yukarıdaki sonuç **geometri** hakkındadır: metrikten üretilen hiçbir nicelik iki
+bileşeni ayırt edemez. Bu, dinamik hakkında hiçbir şey söylemez ve ikisi ayrı
+iddialardır. Yönü olmayan bir geometri, yalnızca tek yönün çözdüğü bir denklem
+taşıyabilirdi. Bu alt bölüm o ikinci soruyu kapatır.
+
+**Hesap.** Ters çevirme denkleme ikinci türev üzerinden girer, dolayısıyla
+katkısı karelenir. Dispersiyon bağıntısının iki kökü de, $\pm\omega$, aynı
+denklemi aynı parametrelerle çözer; dört dalga sayısında ve iki bölgede tek tek
+sınanmıştır. Yalnızca bağıntı değil, alan işlecinin kendisi de sınanmıştır: üç
+ayrı anda, ileri ve ters dalganın ikisi de işleç tarafından sıfırlanır. İkisinden
+birinin önce yazılmasıyla hiçbir şey seçilmiş olmaz.
+
+> Denklem bir yön tercih etmez. Her iki yön de matematiksel olarak çözümdür.
+
+**Ne kadarının ispatlandığı, iki yandan da sınırlandırılmalıdır.**
+
+*Aşağıdan.* Bu, **bu denklem** hakkında bir ifadedir, denklemler hakkında genel
+bir ifade değildir. Ayırt edilmiş eksen boyunca türevde **tek dereceli** bir terim
+simetriyi bozar, ve böyle bir terim burada açıkça yazılmıştır ki bir okun dinamik
+olması için neyin gerekeceği sayfada dursun. Doğada böyle bir bozulmanın
+bulunduğu da bilinmektedir; bu çalışmanın kapsamında zayıf etkileşim yoktur,
+dolayısıyla "bütün denklemler ters zamanla da çalışır" ifadesi bu metnin
+denklemi için doğrudur ve doğa için değildir. Bu ayrım kaydedilmelidir, çünkü
+kapatılmadığı takdirde ilk sorulacak sorudur.
+
+*Yukarıdan.* Ve daha ilginç olan sınır budur: tek dereceli terim eklendiğinde
+denklem iki yönü de **eşit uzaklıkta** bırakır. Kalan artık ileri için de ters
+için de aynı sayıdır; terim bir yön seçmez, düzlem dalga çözümlerinin ikisini
+birden düşürür. Yani bir denklemin simetrisini bozmak, tek başına bir **etiket**
+üretmez.
+
+Buradan Bölüm 8.4'ün ayrımı pekişir. Ayrımın varlığı geometridendir, denklem her
+iki yakayı da kabul eder, ve simetriyi bozmak bile hangisinin gelecek olduğunu
+söylemez. Geriye tek bir taşıyıcı kalır: **durum**. Oku denklemde arayan bir
+program bu üç sonucun üçüne de çarpar.
+
+Bu, yerleşik bir tartışmanın bu geometrideki karşılığıdır ve statüsü doğru
+yazılmalıdır. [67] evrenin küresel olarak durağan bir hâlde bulunduğu ve
+görünen evrimin bir altsistemin saat olarak seçilmesinden çıktığı formülasyonu
+kurar; [68] onu yöneltilen eleştirileri karşılayacak biçimde yeniden yazar.
+[69] ve [71] temel bir zamanın gereksiz olduğunu savunur, [70] zamanı
+termodinamik bir niceliğe indirger. Bu çalışma bunların hiçbirini ispatlamaz ve
+hiçbirine dayanmaz. Ortak olan yön şudur: ok, denklemlerde bulunmadığı için
+başka bir yere yazılmak zorundadır — orada duruma, burada da duruma. Bunların
+"zaman yoktur" biçimindeki güçlü okuması ise **tartışmalı bir programdır**, bir
+teorem değildir, ve bu metinde kullanılmamaktadır.
+
+Öte tarafın bu tartışmadaki yeri ayrıca dikkat çekicidir: orada ayrımın kendisi
+hiç yoktur (Bölüm 8.6), dolayısıyla oku duruma yazma imkânı da yoktur. Bölüm
+28'in bulguları — Cauchy yüzeyi yok, Feynman propagatörü tanımsız, kararlı vakum
+yok — zamansız bir kurgunun neye benzediğinin bu geometride hesaplanmış hâlidir.
+
+### 8.6 Zaman yönelimi: neden öte tarafta gelecek ve geçmiş yok
 
 Yukarıdaki ifade sezgiseldir; burada kesinleştirilir. Bir bölgede tutarlı bir
 gelecek-geçmiş ayrımı yapılabilmesi için, zaman-benzeri vektörler kümesinin
@@ -1548,7 +1624,7 @@ itiraz açık bir sorudur ve modelin lehine kapatılmış sayılmamalıdır.
 
 ---
 
-### 8.6 Yolculuk ne demek: davranış ihtimallerinin sınıflandırılması
+### 8.7 Yolculuk ne demek: davranış ihtimallerinin sınıflandırılması
 
 Parçacığın öte tarafta yapabilecekleri iki bağımsız etiketle tükenir.
 
@@ -1563,7 +1639,7 @@ kısmi dönme, ve tam ters çevirme.
 Üç çarpı üç, dokuz hücrelik bir tablo. Her hücrenin bu tarafta ne göründüğü
 Bölüm 17'de tek tek hesaplanmıştır.
 
-### 8.7 Yönü hangi nicelik taşıyabilir: iki entropi ölçüsünün karşılaştırılması
+### 8.8 Yönü hangi nicelik taşıyabilir: iki entropi ölçüsünün karşılaştırılması
 
 Bölüm 8.4 geometriyi elemiştir: metrik ayrımı verir, yönü vermez. Bu alt bölüm
 elemenin bıraktığı yerde arar ve iki aday ölçüyü aynı yapılandırmada
@@ -2418,7 +2494,7 @@ zinciri tek yerde yazar.
 
 ## 17. Yönelim sözlüğü
 
-Bu bölüm Bölüm 8.6'nın dokuz hücresini tek tek bu tarafa çevirir, sonra o
+Bu bölüm Bölüm 8.7'nın dokuz hücresini tek tek bu tarafa çevirir, sonra o
 dokuzun gerçekte kaç tane olduğunu yeniden sayar.
 
 ### 17.1 Her hücrede korunan şeyler
@@ -2448,7 +2524,7 @@ artık sıfırdır. Hücreleri birbirinden ayıran tek şey momentumumuzun yön�
 
 ### 17.3 Çıkış yüzünü ne belirliyor
 
-Bölüm 8.6'nın iki etiketinden biri çıkış yüzüydü ve orada bağımsız bir etiket
+Bölüm 8.7'nın iki etiketinden biri çıkış yüzüydü ve orada bağımsız bir etiket
 gibi ele alındı. Değil.
 
 **Kurulum.** Ara bölgeyi geçmek, öte tarafın tek uzay ekseni boyunca hareket
@@ -4015,7 +4091,7 @@ varsayımı eleştiren bir cümle ile varsayan bir cümle aynı kelimeyi taşır
 | 3.8 | Dejenere katmanın içerideki her modu tam olarak bloklaması | ilan edilmiş sınırlama | Katmanın bir modeli olarak konur, tam hesabın sıfır vermeyebileceği yazılıdır |
 | 3.8 | Madde katmanının gücünün imza dönüşünün eğimini izlemesi | ilan edilmiş sınırlama | Vekil ölçü olarak konur, tam gerilim tensörünün hesaplanmadığı yazılıdır |
 | 4.1 | Yansıyan bir bileşenin bulunabilmesi | türetildi | Aynı bölüm: akı korunumu başka çözüm bırakmaz |
-| 8.5 | Global hiperbolikliğin sağlanması | başka kurguya ait | Karşılaştırılan formülasyonun ihtiyacıdır; buradaki sonuç yalnızca zaman yönlerinin sayısından çıkar |
+| 8.6 | Global hiperbolikliğin sağlanması | başka kurguya ait | Karşılaştırılan formülasyonun ihtiyacıdır; buradaki sonuç yalnızca zaman yönlerinin sayısından çıkar |
 | 28.10 | Geçişin ışık hızında, ani ve hızdan bağımsız olması | başka kurguya ait | Karşılaştırılan model varsayar; bu metin kendi geçişini türetir |
 | 22.3 | Karakter değiştiren yönlerin enine yönler olması | iki yönlü hesaplandı | İki okuma yan yana hesaplanır, her birinin sonucu yazılır |
 | 23.2 | Tablonun iki etiketinin bağımsız olması | geçersiz kılındı | Çıkış yüzünün geçiş dalga sayısının işaretiyle sabitlendiği bölüm |
@@ -5072,3 +5148,11 @@ sessiz kalmak yerine hangi ölçümün karar vereceğini söylemektedir.
 
 65. R. J. Nemiroff, D. M. Russell. *How superluminal motion can lead to backward time travel*. The Winnower (2015). arXiv:1505.07489
 66. M. Alcubierre. *The warp drive: hyper-fast travel within general relativity*. Class. Quantum Grav. **11** (1994) L73. arXiv:gr-qc/0009013
+
+**Zamanın temel olmadığı formülasyonlar**
+
+67. D. N. Page, W. K. Wootters. *Evolution without evolution: dynamics described by stationary observables*. Phys. Rev. D **27** (1983) 2885.
+68. V. Giovannetti, S. Lloyd, L. Maccone. *Quantum time*. Phys. Rev. D **92** (2015) 045033. arXiv:1504.04215
+69. C. Rovelli. *Forget time*. arXiv:0903.3832
+70. A. Connes, C. Rovelli. *Von Neumann algebra automorphisms and time-thermodynamics relation in generally covariant quantum theories*. Class. Quantum Grav. **11** (1994) 2899. arXiv:gr-qc/9406019
+71. J. Barbour. *The End of Time*. Oxford University Press (1999).
