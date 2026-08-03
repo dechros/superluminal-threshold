@@ -86,6 +86,11 @@ namespace slm
         /// Whether the returned entropy differs, which it does not.
         static bool entropyDiffers(double thickness);
 
+        /// How many observables the sweep tests at all, which is what a caller
+        /// asking how much of the far side is visible at its faces should use
+        /// rather than writing the number down again.
+        static int sweptObservableCount();
+
         /// How many of the observables tested come out differently on the two
         /// families, counting only those that are not the arrival moment
         /// itself, since that one differs by construction.

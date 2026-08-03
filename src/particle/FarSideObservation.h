@@ -19,51 +19,61 @@ namespace slm
     /// invariant being negative. It is a boundary measurement, and its subject
     /// is the balance rather than the traveller.
     ///
-    /// Whether it reaches this work depends on a fact that has to be checked
-    /// and not assumed: the missing mass method presumes a real on-shell
-    /// spacelike momentum leaving the interaction. The interior here is
-    /// sometimes propagating and sometimes evanescent, and only the first
-    /// carries such a momentum. This class separates the two regimes and finds
-    /// them disjoint from the regime the round trip uses.
+    /// Whether it reaches this work depends on a necessary condition that has
+    /// to be checked and not assumed: the method presumes a real on-shell
+    /// momentum leaving the interaction, and the interior here is sometimes
+    /// propagating and sometimes evanescent. Only the first carries one.
     ///
-    /// That is the result, and it is a tension rather than a method. Where the
-    /// particle can be observed over there, the delay does not saturate and the
-    /// arrival is not advanced. Where the arrival is advanced, the interior is
-    /// evanescent, no on-shell state exists inside, and everything observable
-    /// sits in the boundary amplitudes this work already computes. Those
-    /// amplitudes are moreover even under the reversal separating the two
-    /// families, so they do not even report which way the particle went.
+    /// The sufficient condition is NOT checked and is not claimed. What the
+    /// method actually reads is the sign of an invariant of the four-momentum,
+    /// and no such invariant is computed anywhere in this work. The quantity
+    /// available here is the squared wavenumber along the crossing axis, which
+    /// is a different object; conflating the two would be claiming a mass
+    /// signature that has not been derived.
+    ///
+    /// So the result is the regime split alone, and it is a tension rather
+    /// than a method. Where an on-shell mode exists inside, the delay does not
+    /// saturate and the arrival is not advanced. Where the arrival is
+    /// advanced, the interior is evanescent, no on-shell mode exists inside,
+    /// and everything observable sits in the boundary amplitudes this work
+    /// already computes. Those amplitudes are moreover even under the reversal
+    /// separating the two families, so they do not report which way the
+    /// particle went.
     class FarSideObservation
     {
     public:
-        /// Squared four-momentum the interior carries, positive when timelike
-        /// on the convention used here and negative when spacelike.
-        static double interiorInvariantSquared(IntermediateRegion::Kind kind, double omega,
-                                               double c, double mu, double transverseSquared);
+        /// Squared wavenumber the interior carries along the crossing axis.
+        /// This is NOT an invariant of the four-momentum and its sign is not
+        /// the mass sign the missing mass method looks for; keeping the two
+        /// apart is the point of the name.
+        static double interiorCrossingWavenumberSquared(IntermediateRegion::Kind kind,
+                                                        double omega, double c, double mu,
+                                                        double transverseSquared);
 
-        /// Whether the interior momentum is spacelike, which is the signature
-        /// the missing mass method looks for.
-        static bool interiorIsSpacelike(IntermediateRegion::Kind kind, double omega, double c,
-                                        double mu, double transverseSquared);
-
-        /// Whether the interior carries a real momentum at all, which the
-        /// missing mass method presumes.
+        /// Whether the interior carries a real wavenumber at all, which is a
+        /// necessary condition for any on-shell interior mode.
         static bool interiorIsOnShell(IntermediateRegion::Kind kind, double omega, double c,
                                       double mu, double transverseSquared);
 
-        /// Whether the missing mass method reaches this configuration, which
-        /// needs both of the above.
-        static bool missingMassApplies(IntermediateRegion::Kind kind, double omega, double c,
-                                       double mu, double transverseSquared);
+        /// Whether the missing mass method can reach this configuration at
+        /// all. Only the necessary condition is computed: an on-shell interior
+        /// mode has to exist. The sign of the four-momentum invariant, which
+        /// is what the method actually reads, is not computed anywhere in this
+        /// work and is therefore not claimed.
+        static bool missingMassCanApply(IntermediateRegion::Kind kind, double omega, double c,
+                                        double mu, double transverseSquared);
 
         /// Whether the configuration is the one the round trip uses, meaning
-        /// the interior decays so the delay can saturate.
+        /// the delay can saturate. Decided through the barrier predicate the
+        /// threshold optimum uses, which reaches the answer by its own route,
+        /// so the disjointness below holds between two independently written
+        /// predicates rather than between a predicate and its negation.
         static bool isRoundTripRegime(IntermediateRegion::Kind kind, double omega, double c,
                                       double mu, double transverseSquared);
 
-        /// Whether any frequency makes the missing mass method apply and the
-        /// round trip regime hold at once, which is what an observation of the
-        /// travelling particle would need.
+        /// Whether any frequency puts an on-shell mode inside and still lets
+        /// the delay saturate, which is what an observation of the travelling
+        /// particle would need.
         static bool anyFrequencyGivesBoth(IntermediateRegion::Kind kind, double c, double mu,
                                           double transverseSquared);
 
@@ -78,7 +88,8 @@ namespace slm
         static bool localisedStateAvailable();
 
         /// Number of boundary quantities this work computes that survive as
-        /// observables in the evanescent regime.
+        /// observables in the evanescent regime, taken from the sweep that
+        /// tested them rather than written down here.
         static int boundaryObservableCount();
 
         /// Whether those boundary quantities report which way the particle

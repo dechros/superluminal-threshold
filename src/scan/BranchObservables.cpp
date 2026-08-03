@@ -105,6 +105,11 @@ namespace slm
         return std::abs(returnedEntropy(1, thickness) - returnedEntropy(-1, thickness)) > 1e-12;
     }
 
+    int BranchObservables::sweptObservableCount()
+    {
+        return 3;
+    }
+
     int BranchObservables::discriminatingObservableCount()
     {
         int count = 0;
@@ -157,8 +162,9 @@ namespace slm
         report.check(std::format("  returned entropy   : {:.6f} on both",
                                  BranchObservables::returnedEntropy(1, 2.0)),
                      !BranchObservables::entropyDiffers(2.0));
-        report.check(std::format("  {} of the three separate the families",
-                                 BranchObservables::discriminatingObservableCount()),
+        report.check(std::format("  {} of the {} separate the families",
+                                 BranchObservables::discriminatingObservableCount(),
+                                 BranchObservables::sweptObservableCount()),
                      BranchObservables::discriminatingObservableCount() == 0);
 
         report.subsection("What that leaves");

@@ -3400,19 +3400,29 @@ varsayar; ve bu çalışmadaki iç bölge her zaman böyle bir momentum taşıma
 $\omega = \sqrt{13} \approx 3{,}6056$ frekansının altında söner, üstünde
 yayılır:
 
-| $\omega$ | İç değişmez | Kütle kabuğunda | Gidiş dönüş rejimi |
-|----------|-------------|-----------------|--------------------|
+| $\omega$ | Geçiş dalga sayısının karesi | Kütle kabuğunda | Gidiş dönüş rejimi |
+|----------|------------------------------|-----------------|--------------------|
 | $1{,}5$ | $-10{,}75$ | hayır | evet |
 | $2{,}8$ | $-5{,}16$ | hayır | evet |
 | $6$ | $+23{,}00$ | evet | hayır |
 | $12$ | $+131{,}00$ | evet | hayır |
 
-İki rejim birbirinin tümleyenidir. Taranan hiçbir frekans, iç modu kütle
-kabuğuna oturtup aynı anda gecikmenin doymasına izin vermemektedir. Sonuç bu
-nedenle bir yöntem değil, bir **gerilimdir**:
+**Yalnızca gerek koşul denetlenmektedir, yeter koşul değil.** Yöntemin
+gerçekten okuduğu şey dörtlü momentumun bir değişmezinin işaretidir; yukarıdaki
+sütun ise tek bir eksen boyunca dalga sayısının karesidir ve **başka bir
+nesnedir**. Bu çalışmada söz konusu değişmez hiçbir yerde hesaplanmamaktadır,
+dolayısıyla burada bir kütle imzası iddia edilmemektedir. Elde edilen sonuç
+rejim ayrımının kendisidir.
 
-> Parçacığın öte tarafta gözlenebildiği rejimde varış **öne alınmaz**. Varışın
-> öne alındığı rejimde ise gözlenecek bir kütle kabuğu durumu **yoktur**.
+İki rejim birbirinin tümleyenidir. Bu, iki ayrı yoldan yazılmış iki yüklemin
+hesapla uyuşmasıdır: biri iç dalga sayısından, öteki eşik eniyilemesinin
+kullandığı engel testinden gelmektedir. Taranan dört bin frekansın hiçbiri, iç
+modu kütle kabuğuna oturtup aynı anda gecikmenin doymasına izin vermemektedir.
+Sonuç bu nedenle bir yöntem değil, bir **gerilimdir**:
+
+> İç bölgede kütle kabuğunda bir mod bulunan rejimde varış **öne alınmaz**.
+> Varışın öne alındığı rejimde ise gözlenecek bir kütle kabuğu modu
+> **yoktur**.
 
 **Geriye kalan.** İddiayı taşıyan sönümlü rejimde elde kalan gözlenebilirler,
 bu çalışmanın zaten hesapladığı üç sınır niceliğidir: geçen ağırlık, katman
