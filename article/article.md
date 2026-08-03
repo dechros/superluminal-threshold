@@ -3368,6 +3368,51 @@ böyle bir kanal yapısını **sağlamamaktadır**. Dolayısıyla bu alt bölüm
 verme yöntemi değil, yön vermenin inşa edilmesi gereken **tek yerinin**
 saptanmasıdır.
 
+### 19.9 Parçacık öte taraftayken ne gözlenebilir
+
+Yer değiştirmenin buradan seçilemediği görüldükten sonra, en azından
+gözlenebilir olup olmadığı sorulmalıdır.
+
+**Konumlandırma reddedilir.** Uzaysal türden bir dörtlü momentum, öz durumları
+nedenselliğe saygı gösteren bir konum işlemcisi kabul etmez; dolayısıyla
+parçacığın öte tarafta nerede olduğunu söyleyen bir durum yoktur. Bu çalışma
+böyle bir durum da sağlamamaktadır ve bunu hesaplamaz, kaydeder.
+
+**Var olan yöntem parçacığa değil, sınıra bakar.** Eksik kütle yöntemi, giren
+ve çıkan her şeyi ölçüp farkın değişmezini kurar; uzaysal türden bir taşıyıcı,
+bu değişmezin negatif çıkmasıyla kendini belli eder. Öznesi yolcu değil,
+bilançodur.
+
+Ne var ki yöntem, etkileşimden ayrılan **gerçek bir kütle kabuğu momentumunu**
+varsayar; ve bu çalışmadaki iç bölge her zaman böyle bir momentum taşımaz.
+Öklidyen bir bölgede, enine kare toplamı 4 ve $c = \mu = 1$ iken, iç mod
+$\omega = \sqrt{13} \approx 3{,}6056$ frekansının altında söner, üstünde
+yayılır:
+
+| $\omega$ | İç değişmez | Kütle kabuğunda | Gidiş dönüş rejimi |
+|----------|-------------|-----------------|--------------------|
+| $1{,}5$ | $-10{,}75$ | hayır | evet |
+| $2{,}8$ | $-5{,}16$ | hayır | evet |
+| $6$ | $+23{,}00$ | evet | hayır |
+| $12$ | $+131{,}00$ | evet | hayır |
+
+İki rejim birbirinin tümleyenidir. Taranan hiçbir frekans, iç modu kütle
+kabuğuna oturtup aynı anda gecikmenin doymasına izin vermemektedir. Sonuç bu
+nedenle bir yöntem değil, bir **gerilimdir**:
+
+> Parçacığın öte tarafta gözlenebildiği rejimde varış **öne alınmaz**. Varışın
+> öne alındığı rejimde ise gözlenecek bir kütle kabuğu durumu **yoktur**.
+
+**Geriye kalan.** İddiayı taşıyan sönümlü rejimde elde kalan gözlenebilirler,
+bu çalışmanın zaten hesapladığı üç sınır niceliğidir: geçen ağırlık, katman
+şiddeti ve dönen entropi. Üçü de iki aileyi ayıran ters çevirme altında çifttir;
+dolayısıyla bir geçişin **olduğunu** bildirirler, içeride ne olduğunu değil,
+parçacığın hangi yöne gittiğini hiç değil.
+
+Bu bir taviz olarak yazılmaktadır. İddiayı taşıyan rejimde öte taraf, yalnızca
+iki yüzündeki genlikler üzerinden gözlenmektedir ve hiçbir zaman doğrudan
+gözlenmemektedir.
+
 ---
 
 ## 20. Sonuç: zincirin tek yerde yazılması
