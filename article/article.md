@@ -4282,7 +4282,7 @@ Modele özgü olduğu düşünülen sonuçlar: $D$'nin 384 aday arasından zorun
 çıkması (Bölüm 2.1), Wick dönüşünde "tek olan ekseni döndür" kuralı ve iki
 bölgenin ortak bir Öklid teorisinin analitik devamları olması (Bölüm 28.8), öte
 taraftaki yönelimden dönüş olayına giden eşlemenin kurulup taranmış olması
-(Bölüm 19), ve iki literatürün ortak formüllerle birleştirilmesi (Bölüm 30.1).
+(Bölüm 19), ve iki literatürün ortak formüllerle birleştirilmesi (Bölüm 29.1).
 
 Eskiden bu listede olan "eşikte tam yansımanın akı korunumunun tek çözümü
 olması" maddesi **çıkarılmıştır**; eşik geçirgen okunduğundan beri o iddia
@@ -4544,7 +4544,7 @@ tarif edilmemiştir. Gidiş dönüşün gözlenebilir olması buna bağlıdır.
 
 ### 27.5 Tartışmalılar
 
-Dört tanedir ve Bölüm 30.3'te iki rakip sayısıyla birlikte verilmiştir; burada
+Dört tanedir ve Bölüm 29.2'de iki rakip sayısıyla birlikte verilmiştir; burada
 tekrarlanmaz. Ayırt edici özellikleri, bakış açısı değiştirilerek
 kaldırılamamalarıdır.
 
@@ -4665,9 +4665,7 @@ yönelimden dönüş olayına giden eşlemeye dokunmaz; bu nedenle metinden
 ---
 
 
-## 30. Anlaşmazlıkların iki türü ve hangisinin hangisi olduğu
-
-## 30. Yöntem: anlaşmazlıkların iki türü
+## 29. Yöntem: anlaşmazlıkların iki türü
 
 Rakip formülasyonları doğrulamak ya da yanlışlamak bir yöntemdir. Bu çalışma
 kapsayıcı bir yöntem izler: iki konum, bakılan yön farklı olduğu için
@@ -4682,11 +4680,52 @@ ancak iki okuma da tek bir hesaptan bir parametre çevrilerek elde
 edilebiliyorsa uzlaşmış sayılır; tarafların birbirini ikna edebilmesi yeterli
 değildir.
 
-Bu ölçüt metin boyunca uygulanmıştır. Ortak formüllerin parametresi serbest
-bırakılmış hâlleri Bölüm 24'te hesaplanmakta, uzlaşan ve uzlaşmayan
-anlaşmazlıklar da orada ayrı ayrı sayılmaktadır. Bu bölümün önceki hâli aynı
-ölçütü bir kez daha ve ayrıntılı olarak tartışıyordu; ölçüt bir sonuç değil bir
-okuma yöntemi olduğu için tek beyana indirilmiştir.
+### 29.1 Ortak formüller: parametresi serbest bırakılmış hâlleri
+
+Birbiriyle tartışan konumlar çoğu zaman tek bir ifadenin farklı parametre
+değerlerinde okunmuş hâlleridir. Dört indirgeme makine duyarlığında
+denetlenmiştir; yaklaşık değil, tamdır.
+
+| Tek ifade | Parametre | Rakip okumalar |
+|-----------|-----------|----------------|
+| Eklem koşulu | tek bir ağırlık | ağırlık sıfırda güçlü koşul, birde zayıf koşul |
+| İç dalga sayısı | dönmüş yön sayısı | ara bölge yok $(0)$, Kleinyen $(1)$, Öklidyen $(3)$ |
+| Geçiş saatleri | hangi parametrede türev alındığı | frekansta $1{,}462864$, engel yüksekliğinde $0{,}519317$ |
+| Dispersiyon bağıntısı | geçiş işareti | eksi birde bizim imza, artı birde öte taraf |
+
+İkinci satır kayda değer bir yan sonuç vermektedir: **iki** dönmüş yön hâli
+literatürde adlandırılmamıştır, dolayısıyla aile tartışılan hâllerden geniştir.
+Üçüncü satır ise otuz kat farkla tartışılan iki saatin tek bir fonksiyondan
+geldiğini, yalnızca hangi parametrede türev alındığında ayrıştığını
+göstermektedir.
+
+Eklem koşulu indirgemesi, kendi ifadesinin yeniden yazılmış hâliyle değil,
+ayrı ayrı kurulmuş güçlü ve zayıf sınamalarla profil profil
+karşılaştırılmıştır; dolayısıyla indirgeme varsayılmamış, denetlenmiştir.
+
+### 29.2 Uzlaşanlar ve uzlaşmayanlar, ikisi de sayılarak
+
+**Beş anlaşmazlık tek bir madalyonun iki yüzü çıkmıştır**, ve her biri bir
+argümanla değil bir parametre çevrilerek çözülmüştür: kovuk ile engel (hangi
+eksenin döndüğü), gecikme ile karışım (tek genliğin hangi gözlenebilirinin
+okunduğu), tam yansıma ile tünelleme (kalınlık), kötü konumlanma ile iyi
+konumlanma (verinin kütle kabuğunda olup olmadığı), çıkış yüzü ile dönme (tek
+bir vektörün iki parçası).
+
+**Dört anlaşmazlık ise gerçek çelişki olarak kalmaktadır**, ve kalışları beyan
+değil ölçümdür:
+
+| Anlaşmazlık | İki sayı | Neyi ölçmek karar verir |
+|-------------|----------|-------------------------|
+| Geçen akı | güçlü koşul $0{,}0000$, zayıf koşul $0{,}8680$ | ne kadarının geçtiği |
+| Yüzey katmanı | genel profil $1{,}0000$, dönümde durağan $0{,}0000$ | yüzey enerji yoğunluğu |
+| Casimir enerjisi | eşit duvar koşulları $-0{,}006854$, ters koşullar $+0{,}005997$ | kuvvetin işareti |
+| Ters yüzden dönüş | $1$ kuantum $-2{,}2361$ taşır, $2$ kuantum $+2{,}2361$ | çakışmadaki varış sayısı |
+
+Yöntem böylece anlaşmazlıkların yarısından fazlasını soğurmakta, geri kalanı
+konusunda ise dürüst davranmaktadır. Bu bölümün önceki hâli aynı ölçütü bir kez
+daha ve ayrıntılı olarak tartışıyordu; ölçüt bir sonuç değil bir okuma yöntemi
+olduğu için tartışma çıkarılmış, hesaplanmış iki tablo bırakılmıştır.
 
 ---
 
