@@ -973,8 +973,11 @@ duyarlıkla doğrulanmıştır.
 | 1 | 0 | $-0{,}5000$ | $-0{,}5000$ |
 | 1 | 1 | $+0{,}5000$ | $+0{,}5000$ |
 | 1 | 2 | $+1{,}5000$ | $+1{,}5000$ |
-| 2 | 1 | $\pm 0{,}0000$ | $0{,}0000$ |
+| 2 | 0 | $-1{,}0000$ | $-1{,}0000$ |
+| 2 | 1 | $-0{,}0000$ | $0{,}0000$ |
+| 2 | 2 | $+1{,}0000$ | $+1{,}0000$ |
 | 3 | 0 | $-1{,}5000$ | $-1{,}5000$ |
+| 3 | 1 | $-0{,}5000$ | $-0{,}5000$ |
 | 3 | 2 | $+0{,}5000$ | $+0{,}5000$ |
 
 Bölüm 3.7'deki aile bu formülün $p = q - 1$ dilimidir, çünkü orada dış eğrilik
@@ -1274,8 +1277,8 @@ olduğu durum için geçerlidir.
 
 [27] ayrıca bu geometrinin bir **analog gerçeklemesini** verir: anizotropik bir
 yarı iletken ile elektronik bir metamalzeme arasındaki eklemde elektron
-yayılımı, aynı denklemi sağlar. Bu, modelin sınanabilirliği açısından Bölüm
-28.14'te belirtilen çıkmaza bir alternatif sunar: $v = c$ yüzeyi hazırlanamaz,
+yayılımı, aynı denklemi sağlar. Bu, modelin sınanabilirliği açısındaki temel
+çıkmaza bir alternatif sunar: $v = c$ yüzeyi hazırlanamaz,
 ancak aynı denklemi sağlayan bir malzeme ekleminde ayna davranışı ve tünelleme
 ölçülebilir. Bunun bu modelin bir sınaması sayılıp sayılamayacağı ayrı bir
 sorudur ve burada karara bağlanmamıştır.
@@ -3271,9 +3274,10 @@ cümlede sabitlenmesidir.
 5. **Gecikme ile yer değiştirme toplanır.** Yer değiştirme fazın içine
    konduğunda varış anı tek bir durağan faz koşulundan okunur; toplama iki
    hesabın arasına yerleştirilen bir varsayım değil, bir sonuçtur (Bölüm 2.1.2).
-6. **Gecikme kalınlığa doyar, yer değiştirme doymaz.** Doyum bir tabloda fark
-   edilen bir olgu değil, kapalı biçimin bir özdeşliğidir: formülde kalınlık
-   geçmez (Bölüm 19.7).
+6. **Engel rejiminde gecikme kalınlığa doyar, yer değiştirme doymaz.** Doyum
+   bir tabloda fark edilen bir olgu değil, kapalı biçimin bir özdeşliğidir:
+   formülde kalınlık geçmez (Bölüm 19.7). Rejim kaydı zorunludur, çünkü
+   yayılımlı bir ara bölgede gecikme doymaz, salınır (Bölüm 13.5).
 7. **Dolayısıyla bir eşik mesafesi vardır ve ötesinde varış, girişten öncedir.**
    Öklidyen ara bölge, $d = 8$, $c = \mu = 1$ için eşik $2{,}565988$'dir
    (Bölüm 2.1.3).
@@ -3299,6 +3303,25 @@ bölge ve enerji aynıdır. Öteki dal seçildiğinde aynı yolculuk daha geç
 inmektedir, dolayısıyla işaret yolculuğun bir özelliği değil, geçişin bir
 seçimidir.
 
+**Tablodaki mesafenin nerede olduğu.** Burada iki ayrı yer vardır ve
+karıştırılmamaları bu örneğin geçerliliği için zorunludur.
+
+**Ara bölgenin içinde** kat edilen bir mesafe **yoktur**. İçerideki mod
+sönümlüdür, grup hızı tanımsızdır, ve gecikmenin kalınlıkla artmaması hızlı bir
+yolculuk değil yolculuğun yokluğudur; elde yalnızca faz vardır (Bölüm 17.9).
+Yukarıdaki $2{,}484520$ bu nedenle bir yol süresi değil, iki geçişin faz
+gecikmesidir, ve tablonun hiçbir satırında kalınlık değişmemektedir.
+
+**Öte tarafta** kat edilen mesafe ise bundan bağımsız bir niceliktir. Öte taraf
+bir engel değildir; orada mod sönümlü değildir ve tek uzay ekseni boyunca
+hareket olağan anlamıyla tanımlıdır (Bölüm 9.1, Bölüm 18.2). Tablonun değişen
+sütunu budur.
+
+Bu ayrım olmasa örnek kendi kendini çürütürdü: sönümlü bir bölgenin içinde
+yolculuk diline başvurmak, Bölüm 17.9'un tam olarak reddettiği şeydir. Örnek
+buna başvurmamaktadır; ara bölge yalnızca bir faz gecikmesi katmakta, mesafe ise
+bütünüyle öte tarafta kat edilmektedir.
+
 **Bedeli aynı nefeste.** Bu yolculukta parçacık $6{,}47 \times 10^{-37}$
 ağırlıkla dönmektedir. Ne var ki bu ağırlık bir yasak değildir: doyum derinliği
 sabit tutulup enerji yükseltildiğinde gereken mesafe $2{,}4845$'ten $1{,}0100$,
@@ -3316,8 +3339,9 @@ değerinde **kıpırdamamaktadır**. Ödenen şey enerji ve daha ince bir bölge
 **İddianın sınırı, aynı yerde.** Yukarıdaki zincir bir aritmetiktir ve
 aritmetiği tamdır. Zincirin ne olmadığı da tek cümlede durmalıdır: bir geçişin
 fiziksel olarak kurulabildiğinin gösterimi **değildir**. Üç ayrı yerde ödenen
-bedel bunu belirler: geçirgen okuma ile bir yüzey katmanı bir arada
-duramamaktadır (Bölüm 3.7.1), eşiği aşan yapılanmaların genliği düşüktür
+bedel bunu belirler: geçirgen okuma ile **bir yüzey katmanı** bir arada
+duramamaktadır, ki bu literatürün güçlü ile zayıf ayrımıdır ve bu modele özgü
+bir boşluk değildir (Bölüm 3.7.1), eşiği aşan yapılanmaların genliği düşüktür
 (Bölüm 2.1.5), ve işaretin seçilebilir kalması global bir seçicinin
 bulunmaması koşuluna bağlıdır (Bölüm 8.4).
 
@@ -4174,7 +4198,7 @@ varsayımı eleştiren bir cümle ile varsayan bir cümle aynı kelimeyi taşır
 | 3.8 | Madde katmanının gücünün imza dönüşünün eğimini izlemesi | ilan edilmiş sınırlama | Vekil ölçü olarak konur, tam gerilim tensörünün hesaplanmadığı yazılıdır |
 | 4.1 | Yansıyan bir bileşenin bulunabilmesi | türetildi | Aynı bölüm: akı korunumu başka çözüm bırakmaz |
 | 8.4 | Global hiperbolikliğin sağlanması | başka kurguya ait | Karşılaştırılan formülasyonun ihtiyacıdır; buradaki sonuç yalnızca zaman yönlerinin sayısından çıkar |
-| 28.10 | Geçişin ışık hızında, ani ve hızdan bağımsız olması | başka kurguya ait | Karşılaştırılan model varsayar; bu metin kendi geçişini türetir |
+| 28.3 | Geçişin ışık hızında, ani ve hızdan bağımsız olması | başka kurguya ait | Karşılaştırılan model varsayar; bu metin kendi geçişini türetir |
 | 22.3 | Karakter değiştiren yönlerin enine yönler olması | iki yönlü hesaplandı | İki okuma yan yana hesaplanır, her birinin sonucu yazılır |
 | 23.2 | Tablonun iki etiketinin bağımsız olması | geçersiz kılındı | Çıkış yüzünün geçiş dalga sayısının işaretiyle sabitlendiği bölüm |
 | 17.4 | Dönmenin bir okumada özdeşlik, ötekinde düzgün olması | geçersiz kılındı | Dönmeyi nicelendirerek iki uca da ihtiyaç bırakmayan bölüm |
@@ -4302,7 +4326,7 @@ bir geçirgenlik verir; ayrıca engelin varlığı gelen alanın mod içeriğine
 | Soru | Nerede |
 |------|--------|
 | Güçlü ile zayıf eklem koşulu arasındaki tercihin gerekçesi | Bölüm 3.7 ve 4.1; oran koşulu hesaplanmış, sonuç zayıf seçimin aleyhinedir |
-| Geçirgen okumanın daha geniş bir metrik ailesinde temsilcisi | Bölüm 3.7 |
+| Geçirgen okumanın daha geniş bir metrik ailesinde temsilcisi | Kapandı, Bölüm 3.7.1 |
 | Geçiş süresinin beş okumasından hangisinin fiziksel olduğu | Bölüm 22.6 |
 | $(2,2)$ ara bölgesinin fiziksel olarak savunulabilirliği | Bölüm 7.1 |
 | Üç zamanın olasılık korunumu altında tek zamana çökmesi | Bölüm 8.3 |
@@ -4533,7 +4557,7 @@ sorusu olarak ele almış, bir varış anı sorusu olarak ele almamıştır. Bu
 | Karmaşık zaman kurgusu | Dönüş anını veren mekanizma; lapse kontur ölçütü hesaplanmış ve tutarlı çıkmıştır (Bölüm 22.5) | Ölçütün iki geçiş genliğinin kendisi üzerinde uygulanması; indirgenmiş biçimde kalmıştır |
 | Dönen parçacık ile yaratılmış çift | Sınır sayımının ve görünür yükün ikisinde de **aynı** olduğu, enerji bütçesinin ise ayrıştığı (Bölüm 27.7) | Enerji bütçesini sınırda ölçecek düzenek; tarif edilmemiştir |
 | Geçiş süresinin hangi okuması fiziksel | Beş okumanın hepsinin aynı genlikten hesabı | Aralarında seçim; üçü ışığın üstünde, ikisi altında |
-| Geçirgen eşiğin oran koşulu karşısındaki durumu | Bu ailede hiçbir profilin hem katman taşıyıp hem oran koşulunu sağlamadığı | Daha geniş bir geçiş ailesinde temsilci; aranmamıştır |
+| Geçirgen eşiğin oran koşulu karşısındaki durumu | Genel reçetede enine, tümüyle jeodezik ve oran koşulunu sağlayan bir yapılanmanın **var** olduğu (Bölüm 3.7.1) | Katman taşıyan bir yapılanmanın aynı koşulu sağlaması; hiçbir mertebe çiftinde sağlanmıyor |
 
 Beşincisi Bölüm 22.6'de eklenmiştir ve doğrudan çekirdek soruya dokunur:
 geçişin ışığın hangi tarafına düştüğü bile okumaya göre değişmektedir.
