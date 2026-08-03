@@ -4435,6 +4435,47 @@ Bu alt bölüm makalenin başına, Bölüm 0 olarak taşınmıştır. Çekirdeğ
 olarak yeniden üretmek isteyen okurun, ona ulaşmak için önce üç bin satır
 okuması gerekmemelidir.
 
+### 26.1.1 Bu zincir ile bir deney arasında ne duruyor
+
+Açık maddeler tek bir liste olarak sayıldığında yanıltıcıdır, çünkü hepsi aynı
+türden değildir. Belirleyici ayrım şudur: **daha iyi bir düzeneğin
+kaldırabildiği** engel ile **hiçbir düzeneğin kaldıramadığı** engel. Küçük bir
+genlik birincisidir; bir hızdır ve hızlar denemeyle satın alınır. Modelde
+karşılığı olmayan bir seçim ise ikincisidir, ve ona mühendislik sorunu demek
+dürüst olmaz.
+
+Dört engel vardır ve türleri şöyledir:
+
+| Engel | Türü | Neyle kapanır |
+|-------|------|---------------|
+| Parçacığın döndüğü ağırlık | Hız | Yalnızca deneme sayısı |
+| Dönen parçacığı yaratılmış çiftten ayırmak | Hız | Kalorimetre, iki durgun enerji çözünürlükte, çakışmada okunmuş |
+| Sekiz geçişten hangisinin gerçeklendiği | Seçim | Tam olarak bir eksende tek olan bir nicelik |
+| Böyle bir bölgenin yapılabilmesi | Varlık | Bu çalışmanın dışında; koşullu ifade buraya dayanır |
+
+**Hızların fiyatı.** Bölüm 20'nin yürüttüğü gidiş dönüşün ağırlığında tek bir
+olay için $1{,}5 \times 10^{36}$ deneme gerekir. Enerji yükseltmek bunu
+**değiştirmez**: doyum derinliği sabit tutulduğunda ağırlık, toplam enerji
+dokuzdan elli bine çıkarken $4{,}77 \times 10^{-10}$ değerinde kalmaktadır. Bu
+bir umut değil, hesaplanmış bir sonuçtur.
+
+**Enerjinin satın aldığı şey mesafedir.** Aynı aralıkta öte tarafta kat
+edilmesi gereken mesafe $2{,}4845$'ten $0{,}0316$'ya inmektedir. Yani iki talep
+birbiriyle takas edilmez: enerji yükseltmek yolculuğu kısaltırken ağırlıktan
+hiçbir şey götürmez.
+
+**Hiçbir hızın dokunmadığı engel.** Hangi geçişin gerçeklendiği ne enerjiyle ne
+denemeyle belirlenir, çünkü bu, görülemeyecek kadar küçük bir nicelik değil,
+metriğin yapmadığı bir seçimdir. İki aile bu çalışmada hesaplanan **hiçbir**
+nicelikte ayrışmamaktadır; daha iyi bir düzenek aynı sayıları ölçer.
+
+**Koşullu ifadenin dayandığı yer** dördüncü satırdır. Bu çalışmanın hiçbir
+sonucu, imzası değişmiş bir bölgenin yapılabilip yapılamayacağına dair bir şey
+söylemez. Sonucun bir öneri değil bir koşullu olarak yazılmasının nedeni budur.
+
+> Dürüst özet şudur: iki engel **sayıdır**, biri **seçimdir**, biri de
+> **öncülün kendisidir**.
+
 ### 26.2 Kapanan ve açık kalan maddeler
 
 | Konu | Durum |
