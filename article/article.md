@@ -1275,6 +1275,46 @@ Bu, Bölüm 4.1'in sonucunu geçersiz kılmaz ama kapsamını daraltır: eşiği
 yansıtıcı olması, öte tarafın sınırsız olduğu ve gelen modun uygun içerikte
 olduğu durum için geçerlidir.
 
+### 6.1 Geçen şeyi biçim değil, toplam belirler
+
+Yukarıdaki hesap sönüm katsayısını dilim boyunca sabit almaktadır. Gerçek bir
+geçişte katsayı konuma bağlıdır, ve o zaman şu sorulur: geçen şeyi profilin
+**biçimi** mi belirler, yoksa yalnızca **integrali** mi?
+
+Beş profil, integralleri eşit tutularak karşılaştırılmıştır: düz, üçgen, yarım
+sinüs, plato ve çarpık. Biçim farkı gerçektir ve gösterilmiştir: kenara yakın
+yerde biçimlendirilmiş profil düz olanın dörtte birinden azdır, merkezde ise
+belirgin biçimde üstündedir. Ayrıca bir uyarı olarak, üçgen ile düz profil bir
+iç noktada tam olarak kesişir; tek bir noktada yapılan bir karşılaştırma hiçbir
+fark bulamazdı.
+
+Buna karşın geçirgenlik üsteli, biçimden bağımsız olarak toplamın belirlediği
+bir değere yakınsar:
+
+| Toplam | Üstelin bütün biçimlerde düştüğü aralık | Biçimler arası yayılım |
+|--------|------------------------------------------|------------------------|
+| $4$ | $[0{,}8268,\ 0{,}9336]$ | $0{,}1068$ |
+| $8$ | $[0{,}9412,\ 0{,}9704]$ | $0{,}0292$ |
+| $16$ | $[0{,}9806,\ 1{,}0038]$ | $0{,}0232$ |
+| $32$ | $[0{,}9952,\ 1{,}0221]$ | $0{,}0270$ |
+
+Yayılım toplam büyüdükçe daralmakta ve üstel beş profilde de birin yirmide biri
+içinde kalmaktadır: düz $1{,}02172$, üçgen $1{,}00127$, yarım sinüs
+$1{,}00236$, plato $1{,}00485$, çarpık $1{,}00383$.
+
+**İfadenin tam biçimi, daha güçlüsü değil.** Biçim tümüyle görünmez de
+değildir: eşit toplamlı iki biçim $2{,}881 \times 10^{-7}$ ve
+$1{,}807 \times 10^{-7}$ geçirmekte, yani farklı sayılar vermektedir. Toplamın
+sabitlediği şey **üsteldir**, önçarpan değildir. Bu ayrım korunmalıdır, çünkü
+"geçen şey yalnızca toplama bağlıdır" ifadesi olduğu gibi alındığında
+yayınlanmış sonuçtan daha güçlü bir şey söylemiş olurdu.
+
+Bu sonucun modeldeki yeri şudur: ara bölgenin **ayrıntılı profili** geçirgenliği
+mertebe olarak belirlemez, yalnızca toplam sönümü belirler. Dolayısıyla Bölüm
+3'ün profil ailesi üzerinde yapılan tartışmalar geçirgenliğin mertebesini
+değiştirmez; profilin bağladığı şey, Bölüm 3.6 ile 3.7'de görüldüğü gibi,
+katman ve oran koşuludur.
+
 [27] ayrıca bu geometrinin bir **analog gerçeklemesini** verir: anizotropik bir
 yarı iletken ile elektronik bir metamalzeme arasındaki eklemde elektron
 yayılımı, aynı denklemi sağlar. Bu, modelin sınanabilirliği açısındaki temel
