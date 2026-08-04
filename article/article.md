@@ -2181,6 +2181,46 @@ Nokta cisim katmanı Bölge I'de tanımlıdır. Bölge II'de "konum" kavramı te
 uzay ekseni olan $r$ üzerinde daralır ve üç zaman yönü boyunca karşılığı yoktur.
 Öte tarafta parçacığın nerede olduğu sorusu bu nedenle Bölüm 11'e bırakılmıştır.
 
+### 12.6 Geçişin kütle ve genişlik tavanları
+
+Paketin bölgeyi geçebilmesi iki üst sınırla kısıtlanmıştır ve ikisi tek bir
+koşulun iki görünümüdür. Dışarıda yayılabilen en düşük frekans
+$\omega_{\min} = c\sqrt{k_\perp^2 + \mu}$ değerindedir. Bandın merkezi bunun
+altına düştüğünde hiçbir bileşen algılayıcıya ulaşmaz.
+
+Birinci sınır kütleye düşer. Merkez frekans sabit tutulduğunda kütle parametresi
+en çok
+
+$$\mu_{\max} = \frac{\omega_0^2}{c^2} - k_\perp^2$$
+
+değerine kadar büyür; sınanan yapılandırmada bu $3.84$ çıkar ve kalınlık ifadeye
+girmez. İkinci sınır bandın genişliğine düşer. Toplamın kapsadığı genişlik sayısı
+$N$ ile yazıldığında alt kenarın kesimi aşması
+
+$$\sigma_{\max} = \frac{\omega_0 - \omega_{\min}}{N}$$
+
+koşulunu verir ve aynı yapılandırmada $0.1128$ çıkar. Birinci sınıra merkez
+aşağı inerek, ikincisine alt kenar yayılarak varılır.
+
+Bu tavanların aşılması gecikmeyi küçültmez, **tanımsız bırakır**. Aradaki fark
+sonucun okunuşunu değiştirir: tavanın üstünde kalan bir durum daha pahalı bir
+yolculuk yapmaz, yolculuk yapmaz.
+
+### 12.7 Kütlenin ve genişliğin ölçülen etkisi
+
+Tavanların altında kalan bölgede iki bağımlılık ölçülmüştür. Kütle parametresi
+$0.25$'ten $3.00$'a çıkarıldığında gereken öte taraf mesafesi $1.408$'den
+$2.297$'ye yükselir. Kütle bir kazanç değil maliyettir. Doyum her kütlede
+ayaktadır.
+
+Genişliğin etkisi ikinci mertebedendir ve kapalı biçimde **hiç görünmez**, çünkü
+kapalı biçim bandın merkezinde değerlendirilir ve genişliği taşımaz. Yayılan
+paketin tepesi ölçüldüğünde genişliğin on altı katlık değişimi eşiği binde
+$7.5$ oranında oynatır, ve her adımda aynı yönde: geniş paket daha geç döner.
+Ölçüm ile kapalı biçimin ayrıldığı tek yer burasıdır, ve iki rotanın birlikte
+koşturulmasının gerekçesi budur.
+
+
 ---
 
 ## 13. Orada madde, enerji ve öngörü
@@ -2456,6 +2496,55 @@ veren birden çok kalınlık vardır.
 | Söndürücü | Doyuma ulaşır, kalınlıktan bağımsız |
 | Dejenere  | Tanımsız, geçiş yok                 |
 
+### 15.6 Dönüş anının mesafe ile fiyat farkına inmesi
+
+Dönüş anı tek bir çıkarma işlemidir. Öte tarafta kat edilen mesafe $s$, gidiş
+dönüşün bedeli $\tau$ ile yazıldığında, kalkışa göre varış anı $\tau - s$
+değerindedir. Sınanan yapılandırmada $\tau = 1.462864$ olarak çıkar.
+
+| Öte tarafta kat edilen mesafe | Varış anı  | Konum                |
+| ----------------------------- | ---------- | -------------------- |
+| $1.000000$                    | $+0.462864$| Kalkıştan sonra      |
+| $1.462864$                    | $0.000000$ | Tam kalkış anında    |
+| $6.000000$                    | $-4.537136$| Kalkıştan önce       |
+| $25.000000$                   | $-23.537136$| Kalkıştan önce      |
+
+Yolcunun denetlediği tek nicelik $s$ değeridir. Bedel durumun ve bölgenin
+özelliklerinden çıkar ve yolculuk sırasında değiştirilemez.
+
+### 15.7 Geçişin sekiz koşulu ve iki tür başarısızlık
+
+Geçmenin, orada hareket etmenin ve kalkıştan önce dönmenin koşulları sekiz
+tanedir.
+
+| Koşul                                   | Başarısızlığın anlamı            |
+| --------------------------------------- | -------------------------------- |
+| Bant merkezinin kesimi aşması           | Algılayıcıya ulaşan bileşen yok  |
+| Bandın tamamının kesimi aşması          | Algılayıcıya ulaşan bileşen yok  |
+| Kütlenin tavanın altında kalması        | Algılayıcıya ulaşan bileşen yok  |
+| İç kısmın yayılımı engellemesi          | Doyan gecikme uygulanmaz         |
+| Genliğin iki geçişten sağ çıkması       | Ölçülebilir dönüş yok            |
+| Bir eklem koşulunun çıkışa izin vermesi | Yüzey tek yönlü dalgayı yasaklar |
+| Ters çeviren dalın gerçekleşmesi        | Varış öne değil arkaya kayar     |
+| Mesafenin bedeli aşması                 | Varış kalkıştan sonraya düşer    |
+
+Bu koşullar aynı biçimde başarısız olmaz, ve ayrım sonucun okunuşunu belirler.
+Yedisi başarısız olduğunda yolculuk ortadan kalkar ya da işareti döner. Yalnızca
+son koşul, yani öte taraf mesafesi, **daha fazla ödenerek** giderilir. Duvarlar
+tek tek denendiğinde kütle parametresinin $8$ olması, bant genişliğinin $0.5$
+olması ve ters dalın seçilmesi birinci türden, mesafenin $0.5$ kalması ikinci
+türden başarısızlık verir.
+
+### 15.8 Geriye gidişin sınırının ağırlığa düşmesi
+
+Mesafeyi yukarıdan bağlayan bir koşul yoktur. Dolayısıyla varış anı sınırsız
+geriye iner. Onunla birlikte düşen nicelik **ağırlıktır**: sınanan
+yapılandırmada bandın $7.8 \times 10^{-36}$ katı geri döner. Daha geriye gitmenin
+sınırı bu nedenle varmaya değil **görülmeye** konmuştur. Sorunun ölçülebilir
+biçimi ne kadar geriye gitmek istendiği değil, hangi zayıflıkta bir sinyalin
+ölçülebildiğidir.
+
+
 ## 16. Mod içeriğinin geçiş boyunca değişimi
 
 Gidiş dönüşte aynı ara bölge iki kez geçilmektedir. Mod süzgeci bu nedenle
@@ -2591,6 +2680,38 @@ yapar: bu hesabın konusu o değil. Hesap şunu verir: geçirirse Bölge I'de ne
 görünür.
 
 **Kalan çekince.** Bu muhasebe doğrusal ve durağan saçılma kurgusundadır.
+
+### 17.5 Yükün geçiş boyunca yeniden dağılması
+
+Yüklü bir durum için muhasebe bir bileşen daha taşır. Yük yoğunluğu dört akımın
+zaman bileşenidir ve geçiş yakın tarafın zaman eksenini öte tarafın bir uzay
+ekseni üzerine taşır. Dolayısıyla yakın tarafta yoğunluk olarak okunan nicelik
+öte tarafta bir **akım bileşeni**, akımlardan biri ise yoğunluktur. Yakın
+tarafta $(3.0,\, 0,\, 0,\, 0.5)$ olarak yazılan dört akım öte tarafta
+$(0.5,\, 0,\, 0,\, 3.0)$ olarak görünür.
+
+Dört akım bütün hâlinde taşınır ve bileşenlerinden hiçbiri kaybolmaz; yalnızca
+yoğunluk ile akım arasındaki bölünme yeniden dağılır. Dört akımın değişmez
+karesi geçişin dayattığı genel işarete kadar korunur. Bu nedenle öte tarafta ne
+kadar yük bulunduğu sorusu, yakın tarafta sorulan soruyla aynı soru değildir.
+
+### 17.6 Yükün zamanlamaya katkısı ve potansiyelin ayar aralığı
+
+Yük, zamanlamayı kendi başına değiştirmez. Uygulanan potansiyel sıfır olduğunda
+yükün beş katına çıkarılması gidiş dönüş okumasını oynatmaz, ve bu üç okumanın
+hepsinde ayrı ayrı sınanmıştır.
+
+Yükün getirdiği şey bölge dışından işleyen bir ayardır. Minimal bağlaşım etkin
+frekansı yük ile potansiyelin çarpımı kadar kaydırır, dolayısıyla gereken öte
+taraf mesafesi dışarıdan oynatılır. Nötr bir durumda bu ayar yoktur, çünkü kayma
+yükle birlikte sıfırlanır.
+
+Ayarın bir tabanı vardır. Bedel frekansta tek düze değildir: düşer, en küçük
+değerine ulaşır ve yeniden yükselir. Sınanan yapılandırmada taban $1.460405$
+değerinde ve $-0.0395$ potansiyelinde bulunur. Dolayısıyla potansiyelin satın
+aldığı şey keyfî ölçüde ucuz bir yolculuk değil, **en ucuz noktaya ayarlanma**
+olanağıdır, ve kazanç bedelin yüzde beşinin altında kalır.
+
 
 ---
 
@@ -4549,6 +4670,30 @@ bağlıdır.
 Bu listenin uzunluğu bir kusur olarak değil, çalışmanın bulunduğu aşamanın kaydı
 olarak verilmektedir.
 
+### 28.2.1 Yüklü kütleli bir durumun laboratuvar mertebeleri
+
+Geçiş koşullarının deneysel karşılığı sayılara indirgenmiştir. Kütle tavanı
+$\mu_{\max} = \omega_0^2/c^2 - k_\perp^2$ biçiminde yazılır. Bant merkezi, taşınan
+kütlenin durgun enerjisinden kurulan frekansı aşmak zorundadır.
+
+| Nicelik                                    | Değer                              |
+| ------------------------------------------ | ---------------------------------- |
+| Proton durgun enerjisi                     | $938{,}3$ MeV                      |
+| Aşılması gereken bant merkezi              | $1{,}4255 \times 10^{24}$ rad/s    |
+| Karşılık gelen kütle parametresi           | $2{,}2609 \times 10^{31}$ m$^{-2}$ |
+| Bir voltluk potansiyelin frekans kayması   | $1{,}5193 \times 10^{15}$ rad/s    |
+
+Bu tablo iki şey söyler. Kütle tavanı sonradan kestirilecek bir ölçek değil,
+yazılı bir laboratuvar şartıdır: bu frekansın altındaki bir bant protonu hiç
+taşımaz. Potansiyelin sağladığı ayar ise giriş frekansının dokuz mertebe
+altında kalır. Dolayısıyla dönüş kaba bir şartın üzerinde ince bir ayarla
+yönlendirilir, ve şart bu yolla dolanılmaz.
+
+Ölçülmesi gereken nicelikler de bu tablodan çıkar: bant merkezi ve genişliği,
+öte tarafta kat edilen mesafe, ve dönen genliğin ağırlığı. İlk üçü düzeneğin
+ayarlarıdır, dördüncüsü sonucun kendisidir ve Bölüm 15.8'de gösterildiği üzere
+deneyin asıl güçlüğü oradadır.
+
 ### 28.3 Simülasyon ve zincirin sayısal deneyden okunması
 
 Bu çalışmadaki her gecikme **tek bir yoldan** gelmektedir: fazın frekans türevi.
@@ -4836,6 +4981,70 @@ durduğu yer tam olarak orasıdır.
 
 Beşincisi Bölüm 24.6'da eklenmiştir ve doğrudan çekirdek soruya dokunur: geçişin
 ışığın hangi tarafına düştüğü bile okumaya göre değişmektedir.
+
+### 29.4.1 Geçiş süresi okumalarının ölçümle karara bağlanması
+
+Geçiş süresinin hangi okumasının fiziksel olduğu sorusu, okumalar arasında
+tartışmak yerine bağımsız bir ölçümle karara bağlanabilir. Üç kurgu ayrı ayrı
+hesaplanmıştır: nokta cisim kalınlığı bir hıza böler, dalga fazı frekansa göre
+türetir, genlik depolanan normu gelen akıya böler. Sınanan yapılandırmada
+sırasıyla $9{,}861$, $0{,}731$ ve $0{,}519$ çıkarlar. Geçişin tek bir süresi
+yoktur.
+
+Yayılan paketin tepesi hiçbir okumaya ait olmayan bir hakem sağlar. Dönüş anını
+yalnızca dalga okuması yeniden üretir; bağıl fark $4{,}5 \times 10^{-4}$
+düzeyindedir. Nokta cisim okuması on iki kat, genlik okuması yüzde yirmi dokuz
+şaşar. Dolayısıyla dönen durumun zaman ekseni üzerindeki yeri **fazın**
+özelliğidir, bölgede geçirilen sürenin değil.
+
+Diğer iki okuma yanlış değildir; başka soruları yanıtlarlar. Birinin ikamet
+süresini, diğerinin yasak iç bölgenin geçilmesini ölçtüğü [36]'da ayrıntılıdır,
+ve grup gecikmesinin bir geçiş süresi değil depolanmış alanın ömrü olduğu aynı
+kaynakta savunulur. Bunların varış zamanı olarak sunulması, literatürde
+tekrarlanan ikamedir [58, 59].
+
+Ayrımın en keskin biçimi kalınlık bağımlılığıdır. Nokta cisim okuması kalınlıkla
+büyümeye devam eder, dalga ve genlik okumaları durur. Kalınlıkla doyan bir okuma
+ile doymayan bir okuma aynı kalınlığın geçiş süresi olamaz.
+
+Bu bulgunun modele özgü olan yanı yalnızca sonuncusudur. Okumalar birbirinden
+ayrışır, ve yeniden şekillenme tepeyi kaydırır; ikisi de bilinen sonuçlardır
+[36, 59, 60]. Modele özgü olan şudur: ayrım gidiş dönüşün **dönüş anına**
+taşınmış, ve o anı hangi okumanın yerleştirdiğine ölçüm karar vermiştir.
+
+### 29.4.2 Eklem koşulları ailesinin tamamı ve buradaki durumu
+
+Eşik yüzeyinde dayatılabilecek eşleşme koşulları literatürde sekiz başlık altında
+toplanır: indüklenmiş metrik ile dış eğriliğin sürekliliği [61], dört metriğin
+tüm bileşenlerinin türevleriyle eşleşmesi [62], bundan daha da güçlü olan tam
+eşleşme [63], eğrilik sıçramasının yüzey içeriği olarak okunması [64], ışıksal
+yüzeyler için yazılan biçim [65], imzanın sabit olmadığı durumu kapsayan genel
+çerçeve [38], dış eğriliğin kendisinin sıfırlanması [5], ve imza değişimi
+yüzeyinde metriğe konan koşullar [66].
+
+Bu koşullar sabit imzada birbirine denktir. İmza değiştiğinde denklik kırılır, ve
+kırılmayı tek bir hesap belirler. Geçişte dört boyutlu metriğin determinantı
+sıfırlanır, çünkü dönen bileşen sıfırdan geçer. Yüzey üzerindeki indüklenmiş
+metriğin determinantı sıfırlanmaz, çünkü dönen bileşen normal olandır ve
+indüklenmiş metrikte bulunmaz.
+
+Sonuç olarak sekizden beşi burada dayatılabilir. Dört metriğin tüm bileşenlerini
+ve normal türevlerini eşleştirmeyi isteyen ikisi sınavı geçmez, **öncülünü
+yitirir**: eşleştireceği metrik geçişte tersinir değildir. Bu ayrım korunmalıdır,
+çünkü bir koşula ait eksiği geometriye yazmak yanlış bir sonuç verir. Dejenere
+indüklenmiş metrik için yazılan biçim ise ters gerekçeyle dışarıda kalır.
+
+Uygulanabilir beş koşul aynı hükme varmaz. Dördü tek yönlü dalganın varlığını
+kabul eder, eğriliğin kendisinin sıfırlanmasını isteyen biri reddeder. Bölünme
+yazarlar arasında değil **süreklilik ile sıfırlanma** arasındadır. Dolayısıyla
+geçiş, hangi koşulun dayatıldığından bağımsız değildir; bağımsız olan yalnızca
+sürekliliği isteyen dört koşulun kendi arasındaki uyumudur.
+
+Bunun gidiş dönüşe etkisi sınırlıdır ve sınırın nerede olduğu hesaplanmıştır.
+İletilen faz iç dalga sayısı ile kalınlıktan kurulur ve içinde hiçbir eşleşme
+koşulu geçmez. Eklem koşulu yolculuğun var olup olmadığına, okuma ise ne kadar
+sürdüğüne karar verir. İkisi birbirinin işini yapmaz.
+
 
 Dördüncüsü özellikle ağırdır: dönen parçacık ile yaratılan çift, enerjinin
 büyüklüğünde uyuşup sayımda ayrışır, ve sayımı yapacak düzenek tarif
@@ -5197,3 +5406,21 @@ olduğunu söylüyor. Ölçütün ayrıntılı tartışması bu bölümün dış
     time travel*. The Winnower (2015). arXiv:1505.07489
 57. M. Alcubierre. *The warp drive: hyper-fast travel within general
     relativity*. Class. Quantum Grav. **11** (1994) L73. arXiv:gr-qc/0009013
+58. T. E. Hartman. *Tunneling of a wave packet*. J. Appl. Phys. **33** (1962)
+    3427.
+59. A. M. Steinberg, P. G. Kwiat, R. Y. Chiao. *Measurement of the single-photon
+    tunneling time*. Phys. Rev. Lett. **71** (1993) 708.
+60. R. Y. Chiao, A. M. Steinberg. *Tunneling times and superluminality*. Prog.
+    Opt. **37** (1997) 345. arXiv:quant-ph/9811019
+61. G. Darmois. *Les equations de la gravitation einsteinienne*. Memorial des
+    Sciences Mathematiques **25**, Gauthier-Villars, Paris (1927).
+62. A. Lichnerowicz. *Theories relativistes de la gravitation et de
+    l'electromagnetisme*. Masson, Paris (1955).
+63. S. O'Brien, J. L. Synge. *Jump conditions at discontinuities in general
+    relativity*. Commun. Dublin Inst. Adv. Stud. A **9** (1952).
+64. W. Israel. *Singular hypersurfaces and thin shells in general relativity*.
+    Nuovo Cimento B **44** (1966) 1.
+65. C. Barrabes, W. Israel. *Thin shells in general relativity and cosmology*.
+    Phys. Rev. D **43** (1991) 1129.
+66. M. Kossowski, M. Kriele. *Signature type change and absolute time in general
+    relativity*. Class. Quantum Grav. **10** (1993) 1157.
