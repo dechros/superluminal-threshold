@@ -67,6 +67,36 @@ while index < len(lines):
         result.append(line)
         index += 1
         continue
+    marker = re.match(r"^([-*+]|\d+[.)])\s+", line)
+    if marker and not inside_math:
+        # A list item wraps together with its continuation lines, and the
+        # continuations are indented to sit under the item's text rather than
+        # under its marker.
+        start = index
+        index += 1
+        while index < len(lines) and re.match(r"^\s+\S", lines[index]):
+            index += 1
+        block = lines[start:index]
+        head = marker.group(0)
+        body = block[0][len(head):]
+        for tail in block[1:]:
+            body += " " + tail.strip()
+        indent = " " * len(head)
+        out = []
+        current = head
+        for piece in atoms(body):
+            if current == head or current == indent:
+                current += piece
+            elif len(current) + 1 + len(piece) <= WIDTH:
+                current += " " + piece
+            else:
+                out.append(current)
+                current = indent + piece
+        out.append(current)
+        if out != block:
+            changed += 1
+        result.extend(out)
+        continue
     if inside_math or not is_prose(line):
         result.append(line)
         index += 1

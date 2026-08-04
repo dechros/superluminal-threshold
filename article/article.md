@@ -186,8 +186,8 @@ eşlemenin ya bir girdisini, ya bir kısıtını, ya da bir sonucunu kaydeder.
    alt kümesi değildir.
 6. Dönüş anı süreden değil fazdan okunur ve engel rejiminde kalınlığa doyar.
 7. Gidiş dönüşte enerji, sürat ve kütle korunur; yön korunmaz.
-8. Öte taraftaki bir ayar dönmesi burada bedelsiz bir sapmadır, ve sapma
-   açıları niceliklenmiştir.
+8. Öte taraftaki bir ayar dönmesi burada bedelsiz bir sapmadır, ve sapma açıları
+   niceliklenmiştir.
 9. Dönüş olayının dört koordinatı ayrı kaynaklardan gelir: zaman bileşeni
    fazdan, uzay bileşenleri çıkış yüzü ile nicelenmiş sapmadan. Öte taraftaki
    yönelim bu koordinatların hepsine değil, yalnızca bir kısmına ulaşır.
@@ -521,14 +521,14 @@ kullanılamaz.
 
 Sekiz aday için iki cebirsel olgu bunu kurar:
 
-1. **İşaretli permütasyon matrisleri ortogonaldir**, yani
-   $M^{\mathsf{T}} M = I$ ve buradan $M^{-\mathsf{T}} = M$. Momentumlar
-   koordinatlarla **aynı** matrisle taşınır.
-2. **Aynı matrisler involüsyondur** ($M^2 = I$, Bölüm 4.1'in tarama koşullarından
-   biri). Ortogonallikle birlikte bu $M = M^{-1} = M^{\mathsf{T}}$ verir, yani
-   $M$ **simetriktir**. O hâlde eşlenik değişkeni yöneten girdi, koordinatı
-   yöneten girdinin devriğidir: iki katsayı aynı **sayıdır**, yalnızca aynı
-   büyüklükte değildir.
+1. **İşaretli permütasyon matrisleri ortogonaldir**, yani $M^{\mathsf{T}} M = I$
+   ve buradan $M^{-\mathsf{T}} = M$. Momentumlar koordinatlarla **aynı**
+   matrisle taşınır.
+2. **Aynı matrisler involüsyondur** ($M^2 = I$, Bölüm 4.1'in tarama
+   koşullarından biri). Ortogonallikle birlikte bu $M = M^{-1} = M^{\mathsf{T}}$
+   verir, yani $M$ **simetriktir**. O hâlde eşlenik değişkeni yöneten girdi,
+   koordinatı yöneten girdinin devriğidir: iki katsayı aynı **sayıdır**,
+   yalnızca aynı büyüklükte değildir.
 
 Bu iki olgu, taramanın zaten dayattığı koşulların sonucudur; toplanabilirlik
 için yeni bir varsayım eklenmemiştir.
@@ -792,8 +792,8 @@ kayıtlıdır.
 Doğrulanan iki olgu:
 
 - $D^2 = I$, dolayısıyla $\langle D \rangle = \mathbb{Z}_2$, **kapalı**.
-- $M(V)^2 \neq I$, birleşik dönüşüm kapalı **değil**. ($V = 1{,}5c$, $2c$ ve $10c$
-  için ayrı ayrı gösterildi.)
+- $M(V)^2 \neq I$, birleşik dönüşüm kapalı **değil**. ($V = 1{,}5c$, $2c$ ve
+  $10c$ için ayrı ayrı gösterildi.)
 
 Kapanma sorunu $D$'den değil, $B$ katmanından kaynaklanır. $D \cdot B$'yi tek
 bir dönüşüm olarak ele almak kapanmayı bozar; ayrıştırıldığında iki parça da
@@ -1964,12 +1964,14 @@ her $\mathbf{s}$ seçimi ayrı bir dünya çizgisi demeti veriyormuş gibi gör�
 
 Hesap:
 
-- Kütle kabuğu koşulu $s_1^2 + s_2^2 + s_3^2 = 1$ verir, yani $\mathbf{s} \in S^2$.
+- Kütle kabuğu koşulu $s_1^2 + s_2^2 + s_3^2 = 1$ verir, yani
+  $\mathbf{s} \in S^2$.
 - $\eta' = \mathrm{diag}(+1,+1,+1,-1)$ içinde ilk üç slot **aynı** işaretlidir;
   bu üç slotu koruyan grup $O(3)$'tür.
 - $O(3)$ hem metriği korur hem de durgunluğu bozmaz (doğrulandı).
-- $O(3)$, $S^2$ üzerinde geçişli (transitif) etki eder: herhangi bir $\mathbf{s}$'yi
-  herhangi bir $\mathbf{s}'$ye götüren bir dönme her zaman vardır.
+- $O(3)$, $S^2$ üzerinde geçişli (transitif) etki eder: herhangi bir
+  $\mathbf{s}$'yi herhangi bir $\mathbf{s}'$ye götüren bir dönme her zaman
+  vardır.
 
 **Sonuç:** Bütün $\mathbf{s}$ seçimleri aynı yörüngededir. Sonsuz sayıda
 fiziksel durum yoktur; **tek bir durumu yazmanın sonsuz yolu** vardır. Bu bir
@@ -2842,13 +2844,14 @@ koşullarını sağlar, dolayısıyla bu koşullarla ayırt edilemezler. Ancak B
 10'daki bulgu işaretin anlamını netleştirir:
 
 1. Her iki bölgede birer ok seçimi vardır (Bölge I'de zaman, Bölge II'de uzay).
-2. $D$ Bölge I'in ok eksenini Bölge II'nin ok eksenine gönderir, seçimler bağımsız
-   değildir, biri diğerini belirler.
+2. $D$ Bölge I'in ok eksenini Bölge II'nin ok eksenine gönderir, seçimler
+   bağımsız değildir, biri diğerini belirler.
 3. Fiziksel olarak anlamlı olan tek büyüklük **bağıl işarettir**: iki okun
    hizalanması. Tek başına hiçbiri anlamlı değildir.
 4. Eşik geçirgen olduğuna göre iki bölge arasında bir kanal vardır; bağıl işaret
-   bu nedenle prensip olarak ölçülebilirdir. Ölçümü yapacak nicelik Bölüm 19.3'te
-   belirlenmiştir: parçacığın hangi yüzden döndüğü, yani enerjisinin işareti.
+   bu nedenle prensip olarak ölçülebilirdir. Ölçümü yapacak nicelik Bölüm
+   19.3'te belirlenmiştir: parçacığın hangi yüzden döndüğü, yani enerjisinin
+   işareti.
 
 **Sonuç:** İşaret belirsizliği denklemlerin düzeyinde yapısaldır, ölçümün
 düzeyinde değil. Bölge I tarafta da zamanın oku denklemlerden türetilmez,
@@ -3455,19 +3458,19 @@ cümlede sabitlenmesidir.
 4. **Eşlenik değişkenler için de birdir.** İşaretli permütasyon ortogonaldir,
    dolayısıyla momentumlar koordinatlarla aynı matrisle taşınır; aynı matris
    involüsyon olduğundan simetriktir, dolayısıyla eşlenik katsayı koordinat
-   katsayısının aynı sayısıdır. $|\mathrm{d}\kappa/\mathrm{d}\omega| = 1$
-   sekiz geçişin tamamında tamdır ve dispersiyon bağıntısına bağlı değildir
-   (Bölüm 4.1.2).
+   katsayısının aynı sayısıdır. $|\mathrm{d}\kappa/\mathrm{d}\omega| = 1$ sekiz
+   geçişin tamamında tamdır ve dispersiyon bağıntısına bağlı değildir (Bölüm
+   4.1.2).
 5. **Gecikme ile yer değiştirme toplanır.** Yer değiştirme fazın içine
    konduğunda varış anı tek bir durağan faz koşulundan okunur; toplama iki
    hesabın arasına yerleştirilen bir varsayım değil, bir sonuçtur (Bölüm 4.1.2).
-6. **Engel rejiminde gecikme kalınlığa doyar, yer değiştirme doymaz.** Doyum
-   bir tabloda fark edilen bir olgu değil, kapalı biçimin bir özdeşliğidir:
-   formülde kalınlık geçmez (Bölüm 21.7). Rejim kaydı zorunludur, çünkü
-   yayılımlı bir ara bölgede gecikme doymaz, salınır (Bölüm 15.5).
+6. **Engel rejiminde gecikme kalınlığa doyar, yer değiştirme doymaz.** Doyum bir
+   tabloda fark edilen bir olgu değil, kapalı biçimin bir özdeşliğidir: formülde
+   kalınlık geçmez (Bölüm 21.7). Rejim kaydı zorunludur, çünkü yayılımlı bir ara
+   bölgede gecikme doymaz, salınır (Bölüm 15.5).
 7. **Dolayısıyla bir eşik mesafesi vardır ve ötesinde varış, girişten öncedir.**
-   Öklidyen ara bölge, $d = 8$, $c = \mu = 1$ için eşik $2{,}565988$'dir
-   (Bölüm 4.1.3).
+   Öklidyen ara bölge, $d = 8$, $c = \mu = 1$ için eşik $2{,}565988$'dir (Bölüm
+   4.1.3).
 
 **Zincirin tek bir parçacık üzerinde yürütülmesi.** Yukarıdaki halkalar ayrı
 ayrı kuruludur; kapanmış tek bir örnek ise şudur. Öklidyen bir ara bölge,
@@ -5050,60 +5053,132 @@ olduğunu söylüyor. Ölçütün ayrıntılı tartışması bu bölümün dış
 
 **Superluminal gözlemciler ve (1,3)/(3,1) çerçevesi**
 
-1. A. Dragan, A. Ekert. *Quantum principle of relativity*. New J. Phys. **22** (2020) 033038. arXiv:1910.02780
-2. A. Dragan, K. Dębski, S. Charzyński, K. Turzyński, A. Ekert. *Relativity of superluminal observers in 1+3 spacetime*. Class. Quantum Grav. **40** (2023) 025013. arXiv:2209.01836
-3. M. J. Lake. *The (1+3)-dimensional 'quantum principle of relativity' is Einstein's principle of relativity*. Eur. Phys. J. C **85** (2025) 92. arXiv:2410.07017
-4. M. Zaopo. *Group representations of Lorentz transformations extended to superluminal observers*. arXiv:2510.25385
-5. S. A. Hayward. *Junction conditions for signature change*. Class. Quantum Grav. **9** (1992) 1851. arXiv:gr-qc/9303034
-6. F. Embacher. *Actions for signature change*. Phys. Rev. D **51** (1995) 6764. arXiv:gr-qc/9501004
-7. T. Dray. *Einstein's equations in the presence of signature change*. J. Math. Phys. **37** (1996) 5627. arXiv:gr-qc/9610064
-8. T. Dray, G. Ellis, C. Hellaby, C. Manogue. *Gravity and signature change*. Gen. Rel. Grav. **29** (1997) 591. arXiv:gr-qc/9610063
-9. T. Dray, G. Ellis, C. Hellaby. *Note on signature change and Colombeau theory*. Gen. Rel. Grav. **33** (2001) 1041. arXiv:gr-qc/0012047
-10. L. J. Alty, C. J. Fewster. *Initial value problems and signature change*. Class. Quantum Grav. **13** (1996) 1129. arXiv:gr-qc/9501026
-11. I. L. Egusquiza. *Self-adjoint extensions and signature change*. Class. Quantum Grav. **12** (1995) L89. arXiv:gr-qc/9503015
-12. A. White, S. Weinfurtner, M. Visser. *Signature change events: a challenge for quantum gravity?*. Class. Quantum Grav. **27** (2010) 045007. arXiv:0812.3744
-13. W. Hasse, N. E. Rieger. *A transformation theorem for transverse signature-type changing semi-Riemannian manifolds*. Diff. Geom. Appl. **103** (2026) 102370. arXiv:2407.09699
-14. N. E. Rieger, W. Hasse. *Pseudo-timelike loops in signature changing semi-Riemannian manifolds with a transverse radical*. Results in Physics **78** (2025) 108478. arXiv:2409.02403
-15. C. Hellaby, A. Sumeruk, G. F. R. Ellis. *Classical signature change in the black hole topology*. Int. J. Mod. Phys. D **6** (1997) 211. arXiv:gr-qc/9907042
-16. S. Capozziello, S. De Bianchi, E. Battista. *Avoiding singularities in Lorentzian-Euclidean black holes: the role of atemporality*. arXiv:2404.17267
-17. R. Bartolo, E. Caponio, A. V. Germinario, M. Sánchez. *Lorentzian-Euclidean black holes and Lorentzian to Riemannian metric transitions*. Phys. Rev. D **111** (2025) 104058. arXiv:2502.14108
-18. S. Bondarenko, V. De La Hoz-Coronell. *Time kink: modeling change of metric signature*. arXiv:2204.07828
-19. R. Mansouri, K. Nozari. *Signature change, inflation, and the cosmological constant*. arXiv:gr-qc/9806109
-20. B. Alexandre, S. Gielen, J. Magueijo. *Overall signature of the metric and the cosmological constant*. arXiv:2306.11502
-21. I. Bars. *Two-time physics in field theory*. Phys. Rev. D **62** (2000) 046007. arXiv:hep-th/0003100
-22. E. Piceno, A. Rosado, E. Sadurní. *Fundamental constraints on two-time physics*. Eur. Phys. J. Plus **131** (2016) 352. arXiv:1512.05345
-23. F. Figueiredo, F. Moraes, S. Fumeron, B. Berche. *Modeling Kleinian cosmology with electronic metamaterials*. Phys. Rev. D **94** (2016) 044039. arXiv:1608.03812
-24. J. Paczos, K. Dębski, S. Cedrowski, S. Charzyński, K. Turzyński, A. Dragan, A. Ekert. *Covariant quantum field theory of tachyons*. Phys. Rev. D **109** (2024). arXiv:2308.00450
-25. K. Jodłowski. *Covariant quantum field theory of tachyons is unphysical*. Phys. Rev. D **110** (2024) 115042. arXiv:2406.14225
-26. K. Jodłowski. *Is a covariant virtual tachyon viable?*. Phys. Rev. D **113** (2026) 065016. arXiv:2602.20474
-27. J. Rembieliński. *Quantization of the tachyonic field and the preferred frame*. arXiv:hep-ph/9509219
-28. V. F. Perepelitsa. *Looking for a theory of faster-than-light particles*. arXiv:1407.3245
-29. F. L. Villante, F. Vissani. *On the generality of the Cohen and Glashow constraints on the neutrino velocity*. arXiv:1110.4591
-30. R. Horodecki. *Comment on 'Quantum principle of relativity'*. New J. Phys. **25** (2023) 128001. arXiv:2301.07802
-31. F. Del Santo, S. Horvat. *Comment on 'Quantum principle of relativity'*. arXiv:2203.03661
-32. A. Grudka, J. Stempin, J. Wójcik, A. Wójcik. *Superluminal observers do not explain quantum superpositions*. Phys. Lett. A **487** (2023) 129127. arXiv:2306.03961
-33. A. Sen, F. Del Santo. *Superluminal transformations and indeterminism*. arXiv:2601.15263
-34. A. Sen, M. Salzger, Ł. Rudnicki. *Superluminal quantum reference frames*. arXiv:2506.11787
-35. M. Sienicki, K. Sienicki. *From kinematics to interference: operational requirements for the quantum principle of relativity*. arXiv:2512.05164
+1. A. Dragan, A. Ekert. *Quantum principle of relativity*. New J. Phys. **22**
+   (2020) 033038. arXiv:1910.02780
+2. A. Dragan, K. Dębski, S. Charzyński, K. Turzyński, A. Ekert. *Relativity of
+   superluminal observers in 1+3 spacetime*. Class. Quantum Grav. **40** (2023)
+   025013. arXiv:2209.01836
+3. M. J. Lake. *The (1+3)-dimensional 'quantum principle of relativity' is
+   Einstein's principle of relativity*. Eur. Phys. J. C **85** (2025) 92.
+   arXiv:2410.07017
+4. M. Zaopo. *Group representations of Lorentz transformations extended to
+   superluminal observers*. arXiv:2510.25385
+5. S. A. Hayward. *Junction conditions for signature change*. Class. Quantum
+   Grav. **9** (1992) 1851. arXiv:gr-qc/9303034
+6. F. Embacher. *Actions for signature change*. Phys. Rev. D **51** (1995) 6764.
+   arXiv:gr-qc/9501004
+7. T. Dray. *Einstein's equations in the presence of signature change*. J. Math.
+   Phys. **37** (1996) 5627. arXiv:gr-qc/9610064
+8. T. Dray, G. Ellis, C. Hellaby, C. Manogue. *Gravity and signature change*.
+   Gen. Rel. Grav. **29** (1997) 591. arXiv:gr-qc/9610063
+9. T. Dray, G. Ellis, C. Hellaby. *Note on signature change and Colombeau
+   theory*. Gen. Rel. Grav. **33** (2001) 1041. arXiv:gr-qc/0012047
+10. L. J. Alty, C. J. Fewster. *Initial value problems and signature change*.
+    Class. Quantum Grav. **13** (1996) 1129. arXiv:gr-qc/9501026
+11. I. L. Egusquiza. *Self-adjoint extensions and signature change*. Class.
+    Quantum Grav. **12** (1995) L89. arXiv:gr-qc/9503015
+12. A. White, S. Weinfurtner, M. Visser. *Signature change events: a challenge
+    for quantum gravity?*. Class. Quantum Grav. **27** (2010) 045007.
+    arXiv:0812.3744
+13. W. Hasse, N. E. Rieger. *A transformation theorem for transverse
+    signature-type changing semi-Riemannian manifolds*. Diff. Geom. Appl.
+    **103** (2026) 102370. arXiv:2407.09699
+14. N. E. Rieger, W. Hasse. *Pseudo-timelike loops in signature changing
+    semi-Riemannian manifolds with a transverse radical*. Results in Physics
+    **78** (2025) 108478. arXiv:2409.02403
+15. C. Hellaby, A. Sumeruk, G. F. R. Ellis. *Classical signature change in the
+    black hole topology*. Int. J. Mod. Phys. D **6** (1997) 211.
+    arXiv:gr-qc/9907042
+16. S. Capozziello, S. De Bianchi, E. Battista. *Avoiding singularities in
+    Lorentzian-Euclidean black holes: the role of atemporality*.
+    arXiv:2404.17267
+17. R. Bartolo, E. Caponio, A. V. Germinario, M. Sánchez. *Lorentzian-Euclidean
+    black holes and Lorentzian to Riemannian metric transitions*. Phys. Rev. D
+    **111** (2025) 104058. arXiv:2502.14108
+18. S. Bondarenko, V. De La Hoz-Coronell. *Time kink: modeling change of metric
+    signature*. arXiv:2204.07828
+19. R. Mansouri, K. Nozari. *Signature change, inflation, and the cosmological
+    constant*. arXiv:gr-qc/9806109
+20. B. Alexandre, S. Gielen, J. Magueijo. *Overall signature of the metric and
+    the cosmological constant*. arXiv:2306.11502
+21. I. Bars. *Two-time physics in field theory*. Phys. Rev. D **62** (2000)
+    046007. arXiv:hep-th/0003100
+22. E. Piceno, A. Rosado, E. Sadurní. *Fundamental constraints on two-time
+    physics*. Eur. Phys. J. Plus **131** (2016) 352. arXiv:1512.05345
+23. F. Figueiredo, F. Moraes, S. Fumeron, B. Berche. *Modeling Kleinian
+    cosmology with electronic metamaterials*. Phys. Rev. D **94** (2016) 044039.
+    arXiv:1608.03812
+24. J. Paczos, K. Dębski, S. Cedrowski, S. Charzyński, K. Turzyński, A. Dragan,
+    A. Ekert. *Covariant quantum field theory of tachyons*. Phys. Rev. D **109**
+    (2024). arXiv:2308.00450
+25. K. Jodłowski. *Covariant quantum field theory of tachyons is unphysical*.
+    Phys. Rev. D **110** (2024) 115042. arXiv:2406.14225
+26. K. Jodłowski. *Is a covariant virtual tachyon viable?*. Phys. Rev. D **113**
+    (2026) 065016. arXiv:2602.20474
+27. J. Rembieliński. *Quantization of the tachyonic field and the preferred
+    frame*. arXiv:hep-ph/9509219
+28. V. F. Perepelitsa. *Looking for a theory of faster-than-light particles*.
+    arXiv:1407.3245
+29. F. L. Villante, F. Vissani. *On the generality of the Cohen and Glashow
+    constraints on the neutrino velocity*. arXiv:1110.4591
+30. R. Horodecki. *Comment on 'Quantum principle of relativity'*. New J. Phys.
+    **25** (2023) 128001. arXiv:2301.07802
+31. F. Del Santo, S. Horvat. *Comment on 'Quantum principle of relativity'*.
+    arXiv:2203.03661
+32. A. Grudka, J. Stempin, J. Wójcik, A. Wójcik. *Superluminal observers do not
+    explain quantum superpositions*. Phys. Lett. A **487** (2023) 129127.
+    arXiv:2306.03961
+33. A. Sen, F. Del Santo. *Superluminal transformations and indeterminism*.
+    arXiv:2601.15263
+34. A. Sen, M. Salzger, Ł. Rudnicki. *Superluminal quantum reference frames*.
+    arXiv:2506.11787
+35. M. Sienicki, K. Sienicki. *From kinematics to interference: operational
+    requirements for the quantum principle of relativity*. arXiv:2512.05164
 36. H. G. Winful. *Do single photons tunnel faster than light?*. arXiv:0708.3889
-37. H. Maeda. *Energy conditions for non-timelike thin shells*. Class. Quantum Grav. **40** (2023) 195009. arXiv:2306.07326
-38. M. Mars, J. M. M. Senovilla, R. Vera. *Lorentzian and signature changing branes*. Phys. Rev. D **76** (2007) 044029. arXiv:0705.3380
-39. C. Hellaby, T. Dray. *Failure of standard conservation laws at a classical change of signature*. Phys. Rev. D **49** (1994) 5096. arXiv:gr-qc/9404001
-40. S. A. Hayward. *Comment on "Failure of standard conservation laws at a classical change of signature"*. Phys. Rev. D **52** (1995) 7331. arXiv:gr-qc/9606045
-41. C. Hellaby, T. Dray. *Reply comment: comparison of approaches to classical signature change*. Phys. Rev. D **52** (1995) 7333. arXiv:gr-qc/9601040
-42. S. A. Hayward. *Comment on "Comparison of approaches to classical signature change"*. arXiv:gr-qc/9606044
-43. M. Lienert, S. Petrat, R. Tumulka. *Multi-time wave functions versus multiple timelike dimensions*. Found. Phys. **47** (2017) 1582. arXiv:1708.03376
-44. D.-A. Deckert, L. Nickel. *Consistency of multi-time Dirac equations with general interaction potentials*. J. Math. Phys. **57** (2016) 072301. arXiv:1603.02538
-45. T. Dray, C. A. Manogue, R. W. Tucker. *Particle production from signature change*. Gen. Rel. Grav. **23** (1991) 967.
-46. T. Dray, C. A. Manogue, R. W. Tucker. *The scalar field equation in the presence of signature change*. Phys. Rev. D **48** (1993) 2587. arXiv:gr-qc/9303002
-47. J. D. Romano. *Scalar and spinor fields in signature-changing spacetimes*. Phys. Rev. D **47** (1993) 4328.
-48. T. Dray, C. A. Manogue, R. W. Tucker. *Boundary conditions for the scalar field in the presence of signature change*. Class. Quantum Grav. **12** (1995) 2767. arXiv:gr-qc/9501034
-49. S. A. Hayward. *Comment on "Boundary conditions for the scalar field in the presence of signature change"*. arXiv:gr-qc/9502001
-50. W. Duane. *The transfer in quanta of radiation momentum to matter*. Proc. Natl. Acad. Sci. USA **9** (1923) 158.
-51. O. M. P. Bilaniuk, V. K. Deshpande, E. C. G. Sudarshan. *"Meta" relativity*. Am. J. Phys. **30** (1962) 718.
-52. G. Feinberg. *Possibility of faster-than-light particles*. Phys. Rev. **159** (1967) 1089.
-53. G. A. Benford, D. L. Book, W. A. Newcomb. *The tachyonic antitelephone*. Phys. Rev. D **2** (1970) 263.
-54. L. J. Alty. *Kleinian signature change*. Class. Quantum Grav. **11** (1994) 2523.
-55. L. J. Alty, A. Chamblin. *Spin structures on Kleinian manifolds*. Class. Quantum Grav. **11** (1994) 2411.
-56. R. J. Nemiroff, D. M. Russell. *How superluminal motion can lead to backward time travel*. The Winnower (2015). arXiv:1505.07489
-57. M. Alcubierre. *The warp drive: hyper-fast travel within general relativity*. Class. Quantum Grav. **11** (1994) L73. arXiv:gr-qc/0009013
+37. H. Maeda. *Energy conditions for non-timelike thin shells*. Class. Quantum
+    Grav. **40** (2023) 195009. arXiv:2306.07326
+38. M. Mars, J. M. M. Senovilla, R. Vera. *Lorentzian and signature changing
+    branes*. Phys. Rev. D **76** (2007) 044029. arXiv:0705.3380
+39. C. Hellaby, T. Dray. *Failure of standard conservation laws at a classical
+    change of signature*. Phys. Rev. D **49** (1994) 5096. arXiv:gr-qc/9404001
+40. S. A. Hayward. *Comment on "Failure of standard conservation laws at a
+    classical change of signature"*. Phys. Rev. D **52** (1995) 7331.
+    arXiv:gr-qc/9606045
+41. C. Hellaby, T. Dray. *Reply comment: comparison of approaches to classical
+    signature change*. Phys. Rev. D **52** (1995) 7333. arXiv:gr-qc/9601040
+42. S. A. Hayward. *Comment on "Comparison of approaches to classical signature
+    change"*. arXiv:gr-qc/9606044
+43. M. Lienert, S. Petrat, R. Tumulka. *Multi-time wave functions versus
+    multiple timelike dimensions*. Found. Phys. **47** (2017) 1582.
+    arXiv:1708.03376
+44. D.-A. Deckert, L. Nickel. *Consistency of multi-time Dirac equations with
+    general interaction potentials*. J. Math. Phys. **57** (2016) 072301.
+    arXiv:1603.02538
+45. T. Dray, C. A. Manogue, R. W. Tucker. *Particle production from signature
+    change*. Gen. Rel. Grav. **23** (1991) 967.
+46. T. Dray, C. A. Manogue, R. W. Tucker. *The scalar field equation in the
+    presence of signature change*. Phys. Rev. D **48** (1993) 2587.
+    arXiv:gr-qc/9303002
+47. J. D. Romano. *Scalar and spinor fields in signature-changing spacetimes*.
+    Phys. Rev. D **47** (1993) 4328.
+48. T. Dray, C. A. Manogue, R. W. Tucker. *Boundary conditions for the scalar
+    field in the presence of signature change*. Class. Quantum Grav. **12**
+    (1995) 2767. arXiv:gr-qc/9501034
+49. S. A. Hayward. *Comment on "Boundary conditions for the scalar field in the
+    presence of signature change"*. arXiv:gr-qc/9502001
+50. W. Duane. *The transfer in quanta of radiation momentum to matter*. Proc.
+    Natl. Acad. Sci. USA **9** (1923) 158.
+51. O. M. P. Bilaniuk, V. K. Deshpande, E. C. G. Sudarshan. *"Meta" relativity*.
+    Am. J. Phys. **30** (1962) 718.
+52. G. Feinberg. *Possibility of faster-than-light particles*. Phys. Rev.
+    **159** (1967) 1089.
+53. G. A. Benford, D. L. Book, W. A. Newcomb. *The tachyonic antitelephone*.
+    Phys. Rev. D **2** (1970) 263.
+54. L. J. Alty. *Kleinian signature change*. Class. Quantum Grav. **11** (1994)
+    2523.
+55. L. J. Alty, A. Chamblin. *Spin structures on Kleinian manifolds*. Class.
+    Quantum Grav. **11** (1994) 2411.
+56. R. J. Nemiroff, D. M. Russell. *How superluminal motion can lead to backward
+    time travel*. The Winnower (2015). arXiv:1505.07489
+57. M. Alcubierre. *The warp drive: hyper-fast travel within general
+    relativity*. Class. Quantum Grav. **11** (1994) L73. arXiv:gr-qc/0009013
