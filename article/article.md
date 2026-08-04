@@ -1492,6 +1492,10 @@ bağlanmamıştır.
 
 ## 9. Yırtığın yapısı
 
+İki imza arasındaki dikiş yerinin ne kadar bozulmak zorunda olduğu bu bölümün
+konusudur. İlk alt bölüm dejenereliğin derecesini hesaplar, ikincisi aynı değiş
+tokuşun yerleşik fizikteki tek örneğiyle, yani kara delik ufkuyla karşılaştırır.
+
 ### 9.1 İki imza arasında sürekli yol ne kadar dejenere olmak zorunda
 
 Önceki bir sürümde bu soru başka bir yoldan cevaplanıyordu, ve cevap yanlıştı.
@@ -1636,6 +1640,10 @@ kötü değildir.
 
 ## 10. Orada zaman ve mekân, ve yolculuğun tanımı
 
+Öte tarafta hangi nicelikler korunur, hangi roller yer değiştirir, ve "yolculuk"
+sözcüğü orada ne anlama gelir: bu bölüm bunları sırayla kurar. Sonucu taşıyan
+adım, zamanın okunun oradaki yokluğudur.
+
 ### 10.1 Noether yükleri
 
 $L'$ dört koordinatın hiçbirine açıkça bağlı değildir, dolayısıyla dört öteleme
@@ -1683,9 +1691,9 @@ varsaymaz.** Bölge I'de de varsaymaz, Bölge II'de de. Yönelim metriktedir,
 zorunluluk hiçbir metrikte değildir; ok, denklemlerde bulunmadığı için başka bir
 yere, duruma yazılmak zorundadır.
 
-Bu ayrım bir beyan değil, bir hesap. Yönelebilirlik bir birim vektörün yarım tur
-döndürülmesinden çıkar; zorunluluk ise hiçbir yerde işe girmez. Öte tarafın bu
-tartışmadaki yeri de dikkat çekici: orada ayrımın kendisi yok (Bölüm 10.4),
+Bu ayrım bir beyan değil, bir hesaptır. Yönelebilirlik bir birim vektörün yarım
+tur döndürülmesinden çıkar; zorunluluk ise hiçbir yerde işe girmez. Öte tarafın
+bu tartışmadaki yeri de dikkat çekici: orada ayrımın kendisi yok (Bölüm 10.4),
 dolayısıyla oku duruma yazma imkânı da yoktur.
 
 **Kapsam dışı bırakılan.** Aynı sonuca varan felsefi tartışma ve literatürdeki
@@ -4442,6 +4450,10 @@ tekrar geçmiştir.
 ---
 
 ## 28. Açık kalanlar ve simülasyona giden yol
+
+Bu bölüm zincirin neresinin eksik olduğunu sayar, ve eksikleri türlerine göre
+ayırır: hangisi bir sayı, hangisi bir seçim, hangisi öncülün kendisi. Son alt
+bölüm zinciri formülden değil sayısal deneyden okur.
 
 ### 28.1 Bu zincir ile bir deney arasında ne duruyor
 
