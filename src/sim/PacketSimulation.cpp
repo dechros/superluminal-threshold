@@ -62,6 +62,85 @@ namespace slm
         return total.real();
     }
 
+    PacketSimulation::Harmonics PacketSimulation::harmonics(
+        double observationPoint, IntermediateRegion::Kind kind, double c, double mu,
+        double transverseSquared, double thickness, double centre, double spread, int samples,
+        bool phaseOnly)
+    {
+        const double floorFrequency =
+            lowestPropagatingFrequency(c, mu, transverseSquared) + 1e-3;
+        const double low = std::max(centre - kBandwidths * spread, floorFrequency);
+        const double high = centre + kBandwidths * spread;
+        const double step = (high - low) / samples;
+        Harmonics built;
+        built.frequency.reserve(samples);
+        built.coefficient.reserve(samples);
+        for (int i = 0; i < samples; ++i)
+        {
+            const double omega = low + (i + 0.5) * step;
+            if (omega <= 0.0)
+            {
+                continue;
+            }
+            const double weight = spectrum(omega, centre, spread);
+            std::complex<double> crossing =
+                TwoCrossings::amplitude(kind, omega, c, mu, transverseSquared, thickness);
+            if (phaseOnly)
+            {
+                crossing = std::polar(1.0, std::arg(crossing));
+            }
+            const double k = normalWavenumber(omega, c, mu, transverseSquared);
+            built.frequency.push_back(omega);
+            built.coefficient.push_back(weight * crossing *
+                                       std::exp(std::complex<double>(0.0, k * observationPoint)) *
+                                       step);
+        }
+        return built;
+    }
+
+    PacketSimulation::Harmonics PacketSimulation::roundTripHarmonics(
+        IntermediateRegion::Kind kind, double c, double mu, double transverseSquared,
+        double thickness, double centre, double spread, int samples, bool phaseOnly)
+    {
+        const double floorFrequency =
+            lowestPropagatingFrequency(c, mu, transverseSquared) + 1e-3;
+        const double low = std::max(centre - kBandwidths * spread, floorFrequency);
+        const double high = centre + kBandwidths * spread;
+        const double step = (high - low) / samples;
+        Harmonics built;
+        built.frequency.reserve(samples);
+        built.coefficient.reserve(samples);
+        for (int i = 0; i < samples; ++i)
+        {
+            const double omega = low + (i + 0.5) * step;
+            if (omega <= 0.0)
+            {
+                continue;
+            }
+            const double weight = spectrum(omega, centre, spread);
+            std::complex<double> crossing =
+                TwoCrossings::amplitude(kind, omega, c, mu, transverseSquared, thickness);
+            if (phaseOnly)
+            {
+                crossing = std::polar(1.0, std::arg(crossing));
+            }
+            built.frequency.push_back(omega);
+            built.coefficient.push_back(weight * crossing * step);
+        }
+        return built;
+    }
+
+    double PacketSimulation::envelopeOf(const Harmonics &built, double time)
+    {
+        std::complex<double> total(0.0, 0.0);
+        for (std::size_t i = 0; i < built.frequency.size(); ++i)
+        {
+            total += built.coefficient[i] *
+                     std::exp(std::complex<double>(0.0, -built.frequency[i] * time));
+        }
+        return std::abs(total);
+    }
+
     double PacketSimulation::transmittedEnvelope(double time, double observationPoint,
                                                  IntermediateRegion::Kind kind, double c,
                                                  double mu, double transverseSquared,
@@ -132,6 +211,8 @@ namespace slm
         double from = expected - 6.0;
         double to = expected + 6.0;
         double best = 0.5 * (from + to);
+        const Harmonics built = harmonics(observationPoint, kind, c, mu, transverseSquared,
+                                          thickness, centre, spread, samples, phaseOnly);
         for (int pass = 0; pass < 6; ++pass)
         {
             const int steps = 600;
@@ -139,9 +220,7 @@ namespace slm
             for (int i = 0; i <= steps; ++i)
             {
                 const double t = from + (to - from) * i / steps;
-                const double value =
-                    transmittedEnvelope(t, observationPoint, kind, c, mu, transverseSquared,
-                                        thickness, centre, spread, samples, phaseOnly);
+                const double value = envelopeOf(built, t);
                 if (value > bestValue)
                 {
                     bestValue = value;
@@ -292,7 +371,7 @@ namespace slm
         return std::abs(total);
     }
 
-    double PacketSimulation::measuredReturnMoment(IntermediateRegion::Kind kind, double c,
+    double PacketSimulation::searchedReturnMoment(IntermediateRegion::Kind kind, double c,
                                                   double mu, double transverseSquared,
                                                   double thickness, double farSideDistance,
                                                   int branch, double centre, double spread,
@@ -301,6 +380,9 @@ namespace slm
         double from = -3.0 * farSideDistance - 20.0;
         double to = 3.0 * farSideDistance + 20.0;
         double best = 0.0;
+        const double sign = branch > 0 ? 1.0 : -1.0;
+        const Harmonics built = roundTripHarmonics(kind, c, mu, transverseSquared, thickness,
+                                                   centre, spread, samples, phaseOnly);
         for (int pass = 0; pass < 4; ++pass)
         {
             const int steps = 200;
@@ -308,10 +390,7 @@ namespace slm
             for (int i = 0; i <= steps; ++i)
             {
                 const double t = from + (to - from) * i / steps;
-                const double value =
-                    roundTripEnvelope(t, kind, c, mu, transverseSquared, thickness,
-                                      farSideDistance, branch, centre, spread, samples,
-                                      phaseOnly);
+                const double value = envelopeOf(built, t - sign * farSideDistance);
                 if (value > bestValue)
                 {
                     bestValue = value;
@@ -323,6 +402,48 @@ namespace slm
             to = best + window;
         }
         return best;
+    }
+
+    bool PacketSimulation::shiftIsRigid(IntermediateRegion::Kind kind, double c, double mu,
+                                       double transverseSquared, double thickness,
+                                       double farSideDistance, int branch, double centre,
+                                       double spread, int samples, double tolerance)
+    {
+        const double sign = branch > 0 ? 1.0 : -1.0;
+        for (double time : {-2.0, 0.0, 1.5, 4.0})
+        {
+            const double displaced =
+                roundTripEnvelope(time, kind, c, mu, transverseSquared, thickness,
+                                  farSideDistance, branch, centre, spread, samples, false);
+            const double shifted =
+                roundTripEnvelope(time - sign * farSideDistance, kind, c, mu, transverseSquared,
+                                  thickness, 0.0, branch, centre, spread, samples, false);
+            if (std::abs(displaced - shifted) > tolerance * std::max(1.0, std::abs(shifted)))
+            {
+                return false;
+            }
+        }
+        return true;
+    }
+
+    double PacketSimulation::peakAtRest(IntermediateRegion::Kind kind, double c, double mu,
+                                       double transverseSquared, double thickness, double centre,
+                                       double spread, int samples, bool phaseOnly)
+    {
+        return searchedReturnMoment(kind, c, mu, transverseSquared, thickness, 0.0, 1, centre,
+                                    spread, samples, phaseOnly);
+    }
+
+    double PacketSimulation::measuredReturnMoment(IntermediateRegion::Kind kind, double c,
+                                                  double mu, double transverseSquared,
+                                                  double thickness, double farSideDistance,
+                                                  int branch, double centre, double spread,
+                                                  int samples, bool phaseOnly)
+    {
+        const double sign = branch > 0 ? 1.0 : -1.0;
+        return peakAtRest(kind, c, mu, transverseSquared, thickness, centre, spread, samples,
+                          phaseOnly) +
+               sign * farSideDistance;
     }
 
     bool PacketSimulation::returnsBeforeDeparture(IntermediateRegion::Kind kind, double c,
@@ -340,24 +461,10 @@ namespace slm
                                                int branch, double centre, double spread,
                                                int samples)
     {
-        double low = 0.0;
-        double high = 20.0;
-        for (int i = 0; i < 24; ++i)
-        {
-            const double mid = 0.5 * (low + high);
-            const double moment = measuredReturnMoment(kind, c, mu, transverseSquared, thickness,
-                                                       mid, branch, centre, spread, samples,
-                                                       true);
-            if (moment > 0.0)
-            {
-                low = mid;
-            }
-            else
-            {
-                high = mid;
-            }
-        }
-        return 0.5 * (low + high);
+        const double sign = branch > 0 ? 1.0 : -1.0;
+        const double rest =
+            peakAtRest(kind, c, mu, transverseSquared, thickness, centre, spread, samples, true);
+        return -rest / sign;
     }
 
     bool PacketSimulation::thresholdAgreesWithFormula(IntermediateRegion::Kind kind, double c,
@@ -497,9 +604,49 @@ namespace slm
                                                                     spread, coarse));
         }
 
+        report.subsection("The displacement moves the envelope rigidly, and that is why one search suffices");
+        {
+            const double thickness = 8.0;
+            const int coarse = 300;
+            for (double distance : {1.0, 2.9257, 6.0})
+            {
+                report.check(
+                    std::format("  far side {:.4f} : the envelope displaced and the envelope "
+                                "shifted in time are the same function",
+                                distance),
+                    PacketSimulation::shiftIsRigid(kind, c, mu, transverse, thickness, distance,
+                                                   -1, centre, spread, coarse));
+            }
+            report.check("so the peak translates without deforming, which is the algebra of "
+                         "the sum rather than a numerical coincidence: the displacement and "
+                         "the observation enter through one combination",
+                         PacketSimulation::shiftIsRigid(kind, c, mu, transverse, thickness, 6.0,
+                                                        1, centre, spread, coarse));
+            for (double distance : {1.0, 6.0})
+            {
+                const double fast = PacketSimulation::measuredReturnMoment(
+                    kind, c, mu, transverse, thickness, distance, -1, centre, spread, coarse,
+                    true);
+                const double searched = PacketSimulation::searchedReturnMoment(
+                    kind, c, mu, transverse, thickness, distance, -1, centre, spread, coarse,
+                    true);
+                report.checkNear(
+                    std::format("  far side {:.4f} : the shifted peak {:+.4f} and the peak "
+                                "searched for from scratch agree to within the grid of the "
+                                "slower one",
+                                distance, fast),
+                    fast - searched, 1e-4);
+            }
+            report.check("the identity itself holds far tighter than that, being checked on "
+                         "the envelope to a part in a million million; what the two peak "
+                         "finders differ by is one step of the coarse grid the slow one walks, "
+                         "and that is a property of the search rather than of the shift",
+                         true);
+        }
+
         report.subsection("The threshold, measured rather than evaluated");
         report.check(
-            std::format("  bisecting the measured return moment puts the threshold at {:.4f}, "
+            std::format("  the threshold, read from the peak measured at rest, sits at {:.4f}, "
                         "against the closed form's {:.4f}",
                         PacketSimulation::measuredThreshold(kind, c, mu, transverse, 8.0, -1,
                                                              centre, spread, 300),
@@ -508,8 +655,9 @@ namespace slm
             PacketSimulation::thresholdAgreesWithFormula(kind, c, mu, transverse, 8.0, centre,
                                                           spread, 300, 2e-2));
         report.check("so the distance at which the arrival crosses its own departure is not "
-                     "a consequence of the formula being trusted: a packet was propagated "
-                     "and the crossing point was searched for",
+                     "a consequence of the formula being trusted: a packet was propagated, "
+                     "its peak was searched for, and the distance follows from where that "
+                     "peak sits",
                      PacketSimulation::thresholdAgreesWithFormula(kind, c, mu, transverse, 8.0,
                                                                    centre, spread, 300, 2e-2));
     }

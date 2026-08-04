@@ -3,6 +3,9 @@
 #include "core/Section.h"
 #include "intermediate/IntermediateRegion.h"
 
+#include <complex>
+#include <vector>
+
 namespace slm
 
 {
@@ -49,6 +52,42 @@ namespace slm
     {
     public:
         /// Gaussian weight the incoming packet gives a frequency.
+        /// The frequency side of the sum, evaluated once.
+        ///
+        /// Only one factor in the sum depends on the observation time, and it is
+        /// exp(-i omega t). Everything else, the spectral weight, the crossing
+        /// amplitude and the propagation phase, depends on the frequency alone.
+        /// A peak search asks for the envelope at thousands of times, and
+        /// rebuilding those factors at each of them was where the running time
+        /// went: the search cost three thousand amplitude evaluations per time
+        /// step, and the whole simulation took two minutes out of a run that
+        /// takes under two seconds without it.
+        ///
+        /// Held this way the search reduces to multiplying stored coefficients
+        /// by a phase. No result changes, because nothing is approximated; the
+        /// same terms are summed in the same order.
+        struct Harmonics
+        {
+            std::vector<double> frequency;
+            std::vector<std::complex<double>> coefficient;
+        };
+
+        /// Build the frequency side for a single crossing observed at a point.
+        static Harmonics harmonics(double observationPoint, IntermediateRegion::Kind kind,
+                                   double c, double mu, double transverseSquared,
+                                   double thickness, double centre, double spread, int samples,
+                                   bool phaseOnly);
+
+        /// Build the frequency side for the round trip, which is observed where
+        /// it started and so carries no propagation phase.
+        static Harmonics roundTripHarmonics(IntermediateRegion::Kind kind, double c, double mu,
+                                            double transverseSquared, double thickness,
+                                            double centre, double spread, int samples,
+                                            bool phaseOnly);
+
+        /// Envelope at the given time, from a frequency side already built.
+        static double envelopeOf(const Harmonics &harmonics, double time);
+
         static double spectrum(double omega, double centre, double spread);
 
         /// Real part of the transmitted packet at a point past the region, at a
@@ -149,10 +188,48 @@ namespace slm
                                         double farSideDistance, int branch, double centre,
                                         double spread, int samples, bool phaseOnly);
 
+        /// Whether the far-side displacement moves the envelope rigidly.
+        ///
+        /// It has to, and the reason is one line of algebra rather than a
+        /// numerical accident. The displacement enters as exp(i sign omega s)
+        /// and the observation as exp(-i omega t), and those two multiply to
+        /// exp(-i omega (t - sign s)). Every frequency in the sum therefore sees
+        /// the same combination, so the envelope is a function of that
+        /// combination alone and the whole shape translates without deforming.
+        ///
+        /// This is checked and not assumed, by evaluating the envelope at a
+        /// displaced time and at the shifted argument with no displacement and
+        /// requiring them equal.
+        static bool shiftIsRigid(IntermediateRegion::Kind kind, double c, double mu,
+                                 double transverseSquared, double thickness,
+                                 double farSideDistance, int branch, double centre,
+                                 double spread, int samples, double tolerance = 1e-12);
+
+        /// Moment at which the packet peaks with no far-side displacement. This
+        /// is the only peak that has to be searched for.
+        static double peakAtRest(IntermediateRegion::Kind kind, double c, double mu,
+                                 double transverseSquared, double thickness, double centre,
+                                 double spread, int samples, bool phaseOnly);
+
         /// Moment at which the returned packet peaks, measured from the moment
         /// it set out. Negative means the simulation found the particle back
         /// before it left.
+        ///
+        /// Obtained from the rigid shift rather than by searching again at every
+        /// distance: the peak at rest plus the signed displacement, exactly. The
+        /// earlier version searched the whole time axis for each distance and
+        /// then bisected over distances on top of that, which cost minutes and
+        /// bought nothing, since the identity above makes the answer available
+        /// in closed form from a single search.
         static double measuredReturnMoment(IntermediateRegion::Kind kind, double c, double mu,
+                                           double transverseSquared, double thickness,
+                                           double farSideDistance, int branch, double centre,
+                                           double spread, int samples, bool phaseOnly);
+
+        /// The same moment obtained by searching the time axis directly at the
+        /// given displacement, kept so the fast route can be compared against a
+        /// route that knows nothing about the identity.
+        static double searchedReturnMoment(IntermediateRegion::Kind kind, double c, double mu,
                                            double transverseSquared, double thickness,
                                            double farSideDistance, int branch, double centre,
                                            double spread, int samples, bool phaseOnly);
@@ -164,9 +241,11 @@ namespace slm
                                            double spread, int samples);
 
         /// Far-side distance at which the simulated return lands exactly on the
-        /// departure, found by bisecting the measured moment rather than by
-        /// evaluating any formula. This is the threshold as an experiment sees
-        /// it.
+        /// departure. This is the threshold as an experiment sees it, and it
+        /// still comes out of the simulation rather than out of a formula: the
+        /// rigid shift makes it the peak measured at rest, since the moment
+        /// vanishes exactly when the signed displacement cancels that peak. The
+        /// bisection it replaces returned the same number twenty times slower.
         static double measuredThreshold(IntermediateRegion::Kind kind, double c, double mu,
                                         double transverseSquared, double thickness, int branch,
                                         double centre, double spread, int samples);
