@@ -24,7 +24,7 @@ namespace slm
             "yazılmalı",        "belirtilmeli",  "unutulmamalı",  "gösterilmelidir",
             "okunmalıdır",      "sunulmamakta",  "vurgulanmalı",  "ayrılmalıdır",
             "sayılmamalı",      "tutulmalıdır",  "verilmelidir",
-            "karıştırılmaması", "ayrılması gerekir"};
+            "karıştırılmaması", "ayrılması gerekir", "karıştırılmamaları"};
 
         const std::vector<std::string> kPassive = {"mektedir", "maktadır", "mıştır",
                                                    "miştir",   "muştur",   "müştür"};

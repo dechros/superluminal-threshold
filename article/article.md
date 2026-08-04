@@ -172,8 +172,8 @@ eşlemenin ya bir girdisini, ya bir kısıtını, ya da bir sonucunu kaydeder.
 8. Öte taraftaki bir ayar dönmesi burada bedelsiz bir sapmadır, ve sapma
    açıları niceliklenmiştir.
 9. Dönüş olayının dört koordinatı ayrı kaynaklardan gelir: zaman bileşeni
-    fazdan, uzay bileşenleri çıkış yüzü ile nicelenmiş sapmadan. Öte taraftaki
-    yönelim bu koordinatların hepsine değil, yalnızca bir kısmına ulaşır.
+   fazdan, uzay bileşenleri çıkış yüzü ile nicelenmiş sapmadan. Öte taraftaki
+   yönelim bu koordinatların hepsine değil, yalnızca bir kısmına ulaşır.
 
 ---
 
@@ -188,28 +188,15 @@ parçacığı zamanda geriye taşımak.
 | Mesafe | Öte tarafta mekânda kat edilen mesafe ne anlama gelir | Bölüm 2.1.1, Bölüm 2.1.2, Bölüm 2.1.3, Bölüm 8, Bölüm 9.1 |
 | Dönüş  | Geri döndüğünde saatte nereye düşer                   | Bölüm 13, Bölüm 14.1, Bölüm 14.2, Bölüm 19, Bölüm 20      |
 
-**Simülasyon için gereken en kısa yol.** Zincirin yedi halkası tek yerde,
-Bölüm 20'de toplanmıştır ve her halkanın nerede kurulduğu orada yazılıdır.
-Çekirdeği hesaplamak isteyen için gereken en kısa okuma budur: Bölüm 20, sonra
-oradan işaret edilen yedi adres. Aşağıdaki iki tablo o okumayı genişletir.
+**Simülasyon için gereken en kısa yol.** Zincirin yedi halkası Bölüm 20'de tek
+yerde toplanır, ve her halkanın nerede kurulduğu orada yazılıdır. Çekirdeği
+hesaplamak isteyen için en kısa okuma budur: Bölüm 20, sonra oradan işaret edilen
+yedi adres.
 
-**"Sözlük" sözcüğü üç ayrı nesne için kullanılmaktadır** ve karıştırılmamaları
-gerekir; bu ayrım burada bir kez yapılıp metnin geri kalanında tekrarlanmaz.
-
-| Nerede     | Neyi eşler                                                                             | Çekirdek için rolü                               |
-| ---------- | -------------------------------------------------------------------------------------- | ------------------------------------------------ |
-| Bölüm 9.1  | Öte tarafın dört ekseni $\to$ Bölge I'in yuvaları, ve bir birim adımın saatte ürettiği | **Çekirdeğin kendisi.** İspatı Bölüm 2.1.1'dedir |
-| Bölüm 17.2 | Öte taraftaki yönelim $\to$ Bölge I'de gözlenen nicelikler                             | Çekirdeğin girdi tarafı                          |
-| Bölüm 18.1 | Dört koordinatta hareket ile yönelim arasındaki ayrım                                  | Girdinin hangi kısmının hareket olduğu           |
-
-Sayısal katsayı yalnızca birincisinde tanımlanır ve tek bir yerde ispatlanır;
-diğer ikisi onu kullanır, yeniden kurmaz.
-
-Geri kalan bölümler detaydır ve hepsi aynı türdendir: omurganın bir adımına
-yöneltilebilecek bir soruyu karşılarlar. Hiçbiri anlatıyı ilerletmez, her biri
-bir soruyu kapatır. Bu ayrım okuyucunun metni kısaltarak okuyabilmesi için
-açıkça yazılmıştır. İki tablo **ayrıktır**: bir bölüm ya omurgadadır ya
-detaydadır, ikisinde birden değil.
+Geri kalan bölümler detaydır, ve hepsi aynı türdendir: omurganın bir adımına
+yöneltilebilecek bir soruyu karşılarlar. Hiçbiri anlatıyı ilerletmez; her biri bir
+soruyu kapatır. İki tablo **ayrıktır**: bir bölüm ya omurgadadır ya detaydadır,
+ikisinde birden değil.
 
 | Bölüm    | Konusu                                                     | Karşıladığı soru                                                             |
 | -------- | ---------------------------------------------------------- | ---------------------------------------------------------------------------- |
@@ -220,17 +207,29 @@ detaydadır, ikisinde birden değil.
 | 9.2, 9.3 | Dispersiyon, grup hızı, kapalı form çözüm                  | Üç zamanlı bir bölgede hız kavramı ne oluyor                                 |
 | 11       | Orada madde, enerji, öngörü                                | Öte tarafta öngörü çökmüyor mu, ve bu geçişi anlamsız kılmaz mı              |
 | 21       | Sylvester engeli                                           | Cebirsel olarak böyle bir dönüşüm mümkün mü                                  |
-| 24       | İtirazlar ve cevapları                                     | Literatürün bu türden kurgulara yönelttiği itirazlar karşılandı mı           |
-| 25       | Yöntem ve üç denetim                                       | Bu sayılar doğrulanmış mı, ve doğrulama kendini kandırıyor olabilir mi       |
 | 22       | Dönüş anına yöneltilen sorular                             | Gecikme ne kadar sağlam, ışıktan hızlı yayılma iddiası mı, sinyal taşıyor mu |
 | 23       | Yönelim tablosuna yöneltilen sorular                       | Dokuz hücreli tablo ne kadar bağlayıcı, iki etiketi bağımsız mı              |
+| 24       | İtirazlar ve cevapları                                     | Literatürün bu türden kurgulara yönelttiği itirazlar karşılandı mı           |
+| 25       | Yöntem ve üç denetim                                       | Bu sayılar doğrulanmış mı, ve doğrulama kendini kandırıyor olabilir mi       |
 | 26       | Açık kalanlar                                              | Neyin gösterilmediği yazılı mı                                               |
 | 27       | Literatürün bıraktığı sorular                              | Bu çalışma literatüre göre nerede duruyor                                    |
 | Ek 28    | Orada gözlem                                               | Orada bir alan kuramı tanımlanabiliyor mu, ve zincir buna dayanıyor mu       |
 | Ek 29    | Yöntem: anlaşmazlıkların iki türü                          | Rakip formülasyonlarla çelişkiler nerede gerçek                              |
 
 Korunan yükler (15, 16, 17) ile eşiğin mod filtresi olması (12) omurga ile detay
-arasında durur: sonucu taşımazlar ama sonucun tutarlı olması onlara bağlıdır.
+arasında durur: sonucu taşımazlar, ama sonucun tutarlı olması onlara bağlıdır.
+
+**"Sözlük" sözcüğü üç ayrı nesnenin adıdır.** Üçü aşağıda bir kez ayrılır, ve
+metnin geri kalanında bu ayrım tekrarlanmaz.
+
+| Nerede     | Neyi eşler                                                                             | Çekirdek için rolü                               |
+| ---------- | -------------------------------------------------------------------------------------- | ------------------------------------------------ |
+| Bölüm 9.1  | Öte tarafın dört ekseni $\to$ Bölge I'in yuvaları, ve bir birim adımın saatte ürettiği | **Çekirdeğin kendisi.** İspatı Bölüm 2.1.1'dedir |
+| Bölüm 17.2 | Öte taraftaki yönelim $\to$ Bölge I'de gözlenen nicelikler                             | Çekirdeğin girdi tarafı                          |
+| Bölüm 18.1 | Dört koordinatta hareket ile yönelim arasındaki ayrım                                  | Girdinin hangi kısmının hareket olduğu           |
+
+Sayısal katsayı yalnızca birincisinde tanımlanır, ve tek bir yerde ispatlanır.
+Diğer ikisi onu kullanır, yeniden kurmaz.
 
 
 ---
@@ -3526,8 +3525,8 @@ $2d/c = 16$ harcar, parçacık $-3{,}515480$ ile döner. Kod bu eşitliği denet
 Tek geçiş ile gidiş dönüşü karıştırmak bu çalışmaya iki kez ikilik çarpana mal
 oldu; artık bir kabul değil, bir sınama.
 
-**Tablodaki mesafenin nerede olduğu.** Burada iki ayrı yer vardır ve
-karıştırılmamaları bu örneğin geçerliliği için zorunludur.
+**Tablodaki mesafenin nerede olduğu.** Burada iki ayrı yer var, ve örneğin
+geçerliliği bu ikisinin ayrı tutulmasına bağlı.
 
 **Ara bölgenin içinde** kat edilen bir mesafe **yoktur**. İçerideki mod
 sönümlüdür, grup hızı tanımsızdır, ve gecikmenin kalınlıkla artmaması hızlı bir
