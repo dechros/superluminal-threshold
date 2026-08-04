@@ -83,6 +83,7 @@
 #include "spherical/SphericalSolution.h"
 #include "transform/SignatureInvolution.h"
 #include "units/PhysicalScales.h"
+#include "experiment/RoundTripExperiment.h"
 #include "units/ProtonJourney.h"
 #include "units/SignatureThreshold.h"
 #include "units/ThresholdScaling.h"
@@ -175,6 +176,7 @@ namespace
         sections.push_back(std::make_unique<slm::ProtonJourneySection>());
         sections.push_back(std::make_unique<slm::SignatureThresholdSection>());
         sections.push_back(std::make_unique<slm::ThresholdScalingSection>());
+        sections.push_back(std::make_unique<slm::RoundTripExperimentSection>());
         sections.push_back(std::make_unique<slm::TimeProjectionSection>());
         sections.push_back(std::make_unique<slm::FlowAssumptionSection>());
         sections.push_back(std::make_unique<slm::TimeReversalSignatureSection>());
