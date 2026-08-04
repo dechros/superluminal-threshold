@@ -407,7 +407,7 @@ Doğrulanan özellikler:
 | $V$ bağımlılığı | Yok                                                        |
 
 $D$'nin yaptığı şey, aralığın **genel işaretinin** çevrilmesidir. Metriğin genel
-işaretinin değişmesi ve bunun fiziksel sonuçları [20]'ta ayrıca ele alınmıştır;
+işaretinin değişmesi ve bunun fiziksel sonuçları [20]'de ayrıca ele alınmıştır;
 orada bu, göreliliğin farklı formülasyonlarında klasik bir imza değişimi türü
 olarak incelenir ve kozmolojik sabitle ilişkilendirilir. Buradaki kullanım ondan
 dardır: genel işaret çevrilmesi tek başına ele alınmaz, iki metrik arasındaki
@@ -932,7 +932,7 @@ bulunmadığını gösterir.
 
 Öklid satırının kalınlıkla üstel kapanması, dolayısıyla bağımsız bir bulgu
 değildir: profilin ayrıntısından bağımsız olarak yalnızca genişliğin sayması
-[45]'ün sonucudur. Bu sonuç burada yeniden üretilmiştir, ve yeniden üretimin ne
+[45]'in sonucudur. Bu sonuç burada yeniden üretilmiştir, ve yeniden üretimin ne
 anlama geldiği açık olmalı, çünkü tek kalınlıklı bir tablo onu sınamaz.
 Sınamak, biçimleri farklı toplamları aynı profiller gerektirir.
 
@@ -983,7 +983,7 @@ Zayıf eklem koşulu seçildiğinde geçiş yüzeyinde dış eğrilik sıfırlan
 sıfırlanmayan bir dış eğrilik gerilim tensöründe dağılımsal bir terime, yani bir
 **madde katmanına** karşılık gelir. Bu, zayıf koşulun bedelidir ve gizlenmemesi
 gerekir: geçişe izin veren seçim, aynı zamanda yüzeye bir madde katmanı koyan
-seçimdir. Katmanın genel formülasyonu [38]'tedir: imza değiştiren bir zarın
+seçimdir. Katmanın genel formülasyonu [38]'dedir: imza değiştiren bir zarın
 dağılımsal gerilimi, imzanın değiştiği yüzeyin zamansal olamaması da dahil olmak
 üzere orada tam olarak ele alınmıştır. Buradaki hesap onun bu geometrideki
 sayısal karşılığıdır.
@@ -1320,7 +1320,7 @@ soruya girilmemiştir ve açık bırakılmaktadır.
 Yukarıdaki tercih madde tarafında, konjuge momentum üzerinden yapıldı. Aynı
 tercih geometri tarafında geçiş yüzeyinin **dış eğriliği** üzerinde bir koşul
 olarak yeniden ortaya çıkar: güçlü koşul onun yüzeyde sıfırlanmasını, zayıf
-koşul yalnızca sürekli olmasını ister [6]. [7]'un genelleştirilmiş Lanczos
+koşul yalnızca sürekli olmasını ister [6]. [7]'nin genelleştirilmiş Lanczos
 denklemine göre gerilim tensöründe dağılımsal bir terim, yani bir **yüzey
 katmanı**, tam olarak dış eğrilik sürekli olduğunda yoktur.
 
@@ -1357,7 +1357,7 @@ meselesidir.
 
 Bu, modelin yerçekimi tarafına atılmış ilk adımdır ve sınırlıdır: Einstein
 denklemleri çözülmemiş, yalnızca eklem koşulunun geometrik karşılığı
-hesaplanmıştır. [7] ve [9]'in uyarısı burada da geçerlidir: imza
+hesaplanmıştır. [7] ve [9]'un uyarısı burada da geçerlidir: imza
 değişiminde kanonik bir alan denklemi kümesi yoktur. Hangi formülasyonun
 kullanıldığını söylemek gerekir. Burada kullanılan [7]'nin formülasyonudur, yani
 dış eğriliğin süreksizliğini gerilim tensörünün dağılımsal terimine bağlayan
@@ -1405,7 +1405,7 @@ sonuç alan akısı hakkındadır.
 Bölüm 6.1 öte tarafı **sınırsız** kabul eder. Sonlu kalınlıkta bir dilim ayrı
 bir problemdir ve sonucu farklıdır.
 
-Bu ayrım [23]'de kurulmuştur ve o çalışma bu bölümün öncülüdür. Orada
+Bu ayrım [23]'te kurulmuştur ve o çalışma bu bölümün öncülüdür. Orada
 Klein-Gordon parçacıklarının Lorentzian imzadan Kleinian imzaya geçişi
 incelenir, düzlemsel bir sınırda parçacık akısı için **ayna davranışı** bulunur,
 ve ardından sonlu kalınlıkta bir çift eklem ele alınarak **tünelleme
@@ -1540,8 +1540,8 @@ değildir.** $(1,3)$'ten $(3,1)$'e, her noktada yalnızca tek bir öz-değerin
 sıfırlandığı sürekli bir yol vardır.
 
 Bunun önemi şuradadır: literatürün dejenere yüzeyle çalışan araçları tam olarak
-rank-1 dejenerelik için kuruludur. [13] ve [14]'nın "transvers radikal" dediği
-yapı budur, ve [18]'in kink modeli, [19]'nin Colombeau formülasyonu, [16]'ün Hadamard
+rank-1 dejenerelik için kuruludur. [13] ve [14]'ün "transvers radikal" dediği
+yapı budur, ve [18]'in kink modeli, [19]'un Colombeau formülasyonu, [16]'nın Hadamard
 düzenlemesi bu sınıfta çalışır. Dolayısıyla bu modelin geçişi, o araçların
 erişemeyeceği bir yerde **değildir**.
 
@@ -1625,7 +1625,7 @@ Schwarzschild kara deliğinin yeniden doğuşunu çift imza değişimi olarak mo
 [16] ufuk boyunca imza değiştiren bir Schwarzschild metriğini Hadamard partie
 finie ile düzenler, **vakum Einstein denklemlerinin çözümü olduğunu ispatlar**, ve
 tekilliğin bu yolla önlendiğini gösterir. [17] ise ufka varış öz-zamanının sonlu
-kaldığını göstererek [16]'ün modelinin gözden geçirilmesini ister. Aynı çalışma
+kaldığını göstererek [16]'nın modelinin gözden geçirilmesini ister. Aynı çalışma
 dejenereliğin geometrik içeriğini de verir: metriğin dejenere olması nedensel
 konileri bir doğruya, dual metriğin dejenere olması bir hiperdüzleme çökertir.
 Bu koni-çökmesi resmi, aşağıdaki 13.3'teki argümanın geometrik karşılığıdır.
@@ -1747,13 +1747,13 @@ Yollar farklıdır. [14] sonucu geçiş hiperyüzeyinin geometrisinden, Lorentzi
 bölgede global hiperboliklik varsayarak elde eder; burada ise yalnızca zaman
 yönlerinin sayısından, hiperyüzey hakkında hiçbir varsayım yapmadan çıkar.
 
-İki çekince var. Birincisi, [14]'nın hipotezlerini bu modelin geçişi
+İki çekince var. Birincisi, [14]'ün hipotezlerini bu modelin geçişi
 **sağlamaz**. Orada bir taraf Riemann imzalıdır ve dejenerelik transvers radikal
 tipindedir; buradaki doğrudan geçişte ise rank iki düşer (Bölüm 9.1). Ortak olan sonuçtur, ispat değildir. Buna karşılık Bölüm 9.1'in
-kademeli yolu her ayakta rank-1 dejenereliğe sahiptir, yani [13] ve [14]'nın
+kademeli yolu her ayakta rank-1 dejenereliğe sahiptir, yani [13] ve [14]'ün
 geometrik çerçevesine buradan bakıldığından daha yakındır.
 
-İkincisi, [14]'nın ilmekleri alışıldık anlamda kapalı zaman-benzeri eğriler
+İkincisi, [14]'ün ilmekleri alışıldık anlamda kapalı zaman-benzeri eğriler
 **değildir**: kesişim noktalarında hareket yönünün aynı olması gerekmez. Bu
 nedenle sonuç, maddenin zamanda geriye gitmesi biçiminde okunamaz. [14] kendi
 fiziksel yorumunu da verir: hiperyüzey yakınındaki bir gözlemciye böyle bir
@@ -1985,7 +1985,7 @@ fazlalığıdır.
 
 $$\text{Stabilizatör} = O(2), \qquad \text{Yörünge uzayı} = O(3)/O(2) = S^2$$
 
-**Öncelik.** Fazladan zaman boyutunun bir ayar simetrisiyle elenmesi [21]'nin
+**Öncelik.** Fazladan zaman boyutunun bir ayar simetrisiyle elenmesi [21]'in
 kurduğu mekanizmadır. $Sp(2,\mathbb{R})$ ayar simetrisi altında tek zamanlı
 sistemler, aynı iki zamanlı sistemin farklı ayar sabitlemeleri olarak ortaya
 çıkar. Aynı mekanizma alan teorisine, etkileşimlere ve ayar arka planlarına kadar
@@ -2211,7 +2211,7 @@ $$|E'| = \sqrt{E_1^2 + E_2^2 + E_3^2} \;\geq\; 0$$
 
 kullanılabilir. Bu gözlem, Bölüm 30.1'deki "kararlı vakum yok" sonucunun klasik
 habercisidir. Aynı sorun, superluminal boost sonrası parçacıkların negatif enerji
-kazanması biçiminde [34]'de ele alınmış ve kuantum referans çerçeveleri
+kazanması biçiminde [34]'te ele alınmış ve kuantum referans çerçeveleri
 genişletilerek çözülmüştür; oradaki çözüm ile buradaki vektör-enerji okuması
 birbirine alternatiftir.
 
@@ -2263,7 +2263,7 @@ Hadamard anlamında kötü konumlanmıştır.
 
 Bu sonuç bir yorum değil, denklem tipinin doğrudan sonucudur.
 
-**Öncelik ve yöntem.** Bu sonucun kesin hâli [10]'ye aittir ve yöntemi
+**Öncelik ve yöntem.** Bu sonucun kesin hâli [10]'a aittir ve yöntemi
 buradakinden farklıdır. Orada yol şudur. İki boyutlu bir imza değiştiren uzay zamanda sınır koşulları,
 Schrödinger Hamiltonyeninin öz eşlenik genişlemelerinden çıkar. Alanın sürekli
 olması ve koşulların eklem koşulu biçiminde olması talebi, bu genişlemelerden
@@ -2712,7 +2712,7 @@ değildir, ikisi de aynı vektörün parçalarıdır. Bir de "hiç çıkmaz" sat
 parçacık yerine karşıparçacık gibi görünebilir, ki bu literatürdeki çift
 yaratımı okumasıyla aynı yere düşer.
 
-Bu okumanın adı ve önceliği vardır. [52]'in **yeniden yorumlama ilkesi** tam
+Bu okumanın adı ve önceliği vardır. [52]'nin **yeniden yorumlama ilkesi** tam
 olarak bunu söyler: negatif enerjiyle zamanda geriye giden bir çözüm, pozitif
 enerjiyle ileri giden bir karşıparçacıktan ayırt edilemez. Yukarıdaki hesap o
 ilkeyi doğrulamakta, kurmamaktadır; ilke 1967'ye aittir. Buradaki hesabın
@@ -3090,7 +3090,7 @@ doğduğunu** belirler.
 biri kendi üretecini taşır ve bu evrimler ancak zamanlar uzayındaki taşımanın
 yoldan bağımsız olması hâlinde tutarlıdır. Bu koşul, bileşenleri üreteçlerin
 ikişerli komütatörleri olan bir eğriliğin sıfırlanmasıdır. Ölçüt bu çalışmaya
-ait değildir: çok zamanlı dalga fonksiyonları için [43] ve [44]'de kurulmuş,
+ait değildir: çok zamanlı dalga fonksiyonları için [43] ve [44]'te kurulmuş,
 ikincisinde genel etkileşim potansiyelleri için tutarlılığın tam koşulu olarak
 verilmiştir. [43] ayrıca burada önemli olan ayrımı yapar: çok zamanlı bir
 betimleme, birden çok zamansı boyut demek değildir. Burada uygulanan, o
@@ -3559,7 +3559,7 @@ bütünüyle öte tarafta kat edilmektedir.
 **Bedeli aynı nefeste.** Bu yolculukta parçacık $6{,}47 \times 10^{-37}$
 ağırlıkla dönmektedir. Ne var ki bu ağırlık bir yasak değildir: doyum derinliği
 sabit tutulup enerji yükseltildiğinde gereken mesafe $2{,}4845$'ten $1{,}0100$,
-$0{,}3166$ ve $0{,}1000$'e inerken dönen ağırlık $4{,}772425 \times 10^{-10}$
+$0{,}3166$ ve $0{,}1000$'a inerken dönen ağırlık $4{,}772425 \times 10^{-10}$
 değerinde **kıpırdamamaktadır**. Ödenen şey enerji ve daha ince bir bölgedir.
 
 **Sonucun ifadesi**, Özet'teki "Ana sonuç" paragrafında verilmiştir ve burada
@@ -3673,7 +3673,7 @@ olarak görünen şey, burada bir kurtarıcı olabilir.
 ### 24.2 Gecikme bir geçiş süresi mi, yoksa depolanan alanın ömrü mü
 
 Fazdan okunan gecikmeyi bir geçiş süresi saymak zorunlu değildir. Rakip okuma
-[36]'dedir: aynı nicelik bir **oyalanma süresidir**, yani bölge içinde depolanan
+[36]'dadir: aynı nicelik bir **oyalanma süresidir**, yani bölge içinde depolanan
 olasılığın gelen akıya oranıdır ve alanın iki yüzden birden sızarak boşalma
 ömrünü verir. Bu okumada hiçbir şey bölgeyi kat etmez ve doyum bir paradoks
 değil, beklenen davranıştır. Orada tünelleme bağlamında kurulan bu ayrım, burada
@@ -3829,7 +3829,7 @@ döndürüldüğünde yakınsamaz. Dolayısıyla ölçüt isteğe bağlı değil
 Ayakta kalan konturun hangi eyere indiği **ölçülmüştür**, varsayılmamıştır:
 integralin kendi sönüm hızı, iki eyerin vereceği hızlarla karşılaştırılır. Ölçülen
 hız $d = 2, 4, 8, 16$ için sırasıyla $0{,}2904$, $0{,}5760$, $0{,}7496$,
-$0{,}8545$'tir ve alt eyerin verdiği $1{,}0000$'e tırmanır; fark, ön çarpanın
+$0{,}8545$'tir ve alt eyerin verdiği $1{,}0000$'a tırmanır; fark, ön çarpanın
 sönmesidir. Her uzaklıkta eyer hızının **altında** kalır, yani eyer integrali
 sınırlar, integrale uydurulmuş değildir.
 
@@ -4097,7 +4097,7 @@ modelin bir parçasını etkilememektedir.
 **4. "Koordinat haritası yazmak fizik teorisi kurmak değildir; süperpozisyon
 kâğıt üzerinde çizilen yollarla değil, kapalı bir girişim döngüsüyle
 tanımlanır."** [35]. Bu itiraz kabul edilmektedir ve bu metin için geçerlidir.
-[35]'ün üç katmanlı ayrımı kullanılırsa, buradaki çalışma kinematik katmanında ve
+[35]'in üç katmanlı ayrımı kullanılırsa, buradaki çalışma kinematik katmanında ve
 kısmen dinamik katmanındadır; işlemsel katmanda hiçbir şey sunmamaktadır. Bölüm
 23'te bu bir açık nokta olarak listelenmiştir.
 
@@ -4133,7 +4133,7 @@ varsayar, Bölüm 30 ise Bölge II'de bu yapının kurulamadığını gösterir.
 itirazı karşılamaktan çok konuyu Bölüm 30'a havale etmektedir.
 
 **9. "Nedenselliği korumak için tercihli bir çerçeve zorunludur."** [28], ve
-[27]'da somut bir formülasyon: uygun bir eşzamanlama seçimiyle takyonik alan tutarlı
+[27]'de somut bir formülasyon: uygun bir eşzamanlama seçimiyle takyonik alan tutarlı
 biçimde kuantumlanır, mutlak nedensellik ve tam Lorentz simetrisi korunur, bedel
 olarak görelilik ilkesi bırakılır. Bu, modele gerçek bir alternatiftir ve daha
 olgundur. Aradaki fark ödenen bedeldir: [27] tercihli çerçeveyi kabul eder,
@@ -4154,7 +4154,7 @@ aritmetikte anlaşır, hangi bağıntının fiziksel olduğunda ayrılır.
 
 ### 26.2 İkiye katlanmış uzayda komütatörün yok olması
 
-[24]'nin önerdiği onarım sayısal olarak sınanmıştır. Takyonik eşik üzerindeki
+[24]'ün önerdiği onarım sayısal olarak sınanmıştır. Takyonik eşik üzerindeki
 modlar toplanarak tek bir sektörün komütatör fonksiyonu hesaplanır ve her
 ayrımda sıfırdan farklı çıkar; yıldızlı sektör ters işaretle eklendiğinde toplam
 **tam olarak** sıfırlanır. Her ayrımda komüte eden bir alan kanonik komütasyon
@@ -4173,7 +4173,7 @@ yoksunluğunun bir başka görünümüdür.
 
 ### 26.4 Fazladan zamanın tek zamana çökmesi
 
-[22]'in itirazı serbest hareket için doğrudur ve doğrulanmıştır: iki zamanlı
+[22]'nin itirazı serbest hareket için doğrudur ve doğrulanmıştır: iki zamanlı
 serbest hareket, hız bileşenlerinin belirlediği **tek bir bileşime** bağlıdır,
 ikinci zaman bağımsız bir dinamik içerik taşımaz. Bu, sınanan bütün hız ve zaman
 değerlerinde tam olarak sağlanır.
@@ -4210,7 +4210,7 @@ koşullar da aynı yere çıkmaktadır.
 **"Dejenere yüzeyden geçilemeyeceği gösterilmemiştir."** İtiraz haklıydı ve
 Bölüm 9.1 onu karşılar. Dejenerelik kaçınılmazdır, ama rank-2 dejenerelik değil.
 $(2,2)$ üzerinden giden kademeli bir yolda her noktada yalnızca tek bir öz-değer
-sıfırlanır; bu da tam olarak [13], [14], [18], [19] ve [16]'ün araçlarının
+sıfırlanır; bu da tam olarak [13], [14], [18], [19] ve [16]'nın araçlarının
 çalıştığı sınıf. Bölüm 9.1'in kaydettiği karşıt sonuç geri çekildi.
 Geriye kalan soru geçişin mümkün olup olmadığı değil, $(2,2)$ ara bölgesinin
 fiziksel olarak kabul edilip edilemeyeceğidir.
@@ -4653,7 +4653,7 @@ bulgusu değildir; 1970'te yazılmıştır. Farklı olan, ne için yazıldığı
 | Kütle           | Takyon, yani sanal kütle                                 | Bu taraftaki sıradan kütleli parçacık        |
 | Verilen nicelik | Bir işaret çelişkisi                                     | Dönüş anı, çıkış yüzü, bedel                 |
 
-Aradaki asıl fark üçüncü satırdır. [53]'nin ilmeği üstışık sinyali **hazır kabul
+Aradaki asıl fark üçüncü satırdır. [53]'ün ilmeği üstışık sinyali **hazır kabul
 eder**; onun nasıl olabileceği sorusu açık bırakılır ve sonuç bir *reductio*
 olarak kullanılır. Bu çalışma o boşluğu doldurmayı dener: üstışık kısım
 postülalanmaz, iki
@@ -4719,7 +4719,7 @@ $v = 10^{12}$ için bile pozitiftir. Röle rotası negatif olabilir, ama ancak
 rölenin bağıl hızı $2v/(v^2+1)$ eşiğini aştığında; bu eşik her sonlu hızda
 **pozitiftir** ve yalnızca hız sınırsız büyürken sıfıra gider, ki o bir hız
 değildir. Röle rotası bağıl hız sıfırken tam olarak naif ilmeğe indirgenir, ki
-[56]'in bulgusu da budur.
+[56]'nın bulgusu da budur.
 
 Buradaki rota bağıl hız sıfırken de geçmişe varır. Hesapta hiçbir yerde ikinci bir
 çerçeve, hiçbir yerde bir röle, hiçbir yerde bir bağıl hız geçmez: kalınlığı $8$
@@ -4732,7 +4732,7 @@ dönüş anına **bir hıza bölünerek** girer, dolayısıyla katkısı hep poz
 hız büyüdükçe küçülür. Buradaki rotada mesafe dönüş anına **katsayısı bir olarak**
 girer, ve işareti hangi geçişin gerçeklendiğine bağlıdır (Bölüm 4.1, Bölüm 11.1).
 İşaret bir çerçeve uyuşmazlığından değil, sekiz geçişten hangisinin kullanıldığından
-gelmektedir. [56]'in itirazı, dolayısıyla, kapatılmamakta ama **kapsam dışında
+gelmektedir. [56]'nın itirazı, dolayısıyla, kapatılmamakta ama **kapsam dışında
 kalmaktadır**: itiraz bağıl hızdan işaret üreten kurgulara yöneliktir.
 
 Aynı hedefe götüren geometrik bir rota da vardır. [57]
@@ -4743,12 +4743,12 @@ ihlal edilir. Burada imza değişir, ve ihlal eşik katmanında ortaya çıkar
 (Bölüm 5.6). İkisi de bedeli aynı yere yazmaktadır.
 
 Yeniden yorumlama ilkesi ayrıca **rakip bir okumadır**.
-[52]'e göre negatif enerjiyle geriye varan bir parçacık, ileri giden bir
+[52]'ye göre negatif enerjiyle geriye varan bir parçacık, ileri giden bir
 karşıparçacıktan ayırt edilemez. Bu, bu çalışmanın bağımsız olarak vardığı yerin
 ta kendisidir: Bölüm 19.3'te karşı yüzden dönüşün negatif enerjili bir varış gibi
 göründüğü hesaplanmakta, Bölüm 29.7'de ise dönmüş bir dünya çizgisinin sınır
 sayımında yaratılmış bir çiftten ayırt edilemediği gösterilmektedir. İkisi de
-[52]'in söylediğinin bu geometrideki karşılığıdır ve öncelik ona aittir. Buradaki
+[52]'nin söylediğinin bu geometrideki karşılığıdır ve öncelik ona aittir. Buradaki
 katkı, ayırt edilemezliğin **nerede** kırıldığını aramaktır: sayım ve görünür yük
 ayırt etmez, enerji bütçesi ayrışır, ve o bütçeyi sınırda ölçecek düzenek tarif
 edilmemiştir (Bölüm 29.4).

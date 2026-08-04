@@ -65,6 +65,11 @@ namespace slm
     /// the word's last vowel and last consonant fix both the vowel and the stop
     /// of the ending. The locative after chapter six is voiced and back, after
     /// chapter three voiceless and front, and nothing about the digits says so.
+    /// The ending does not have to touch the digits either: a citation closes its
+    /// bracket and a number closes its arithmetic delimiter first, and thirty
+    /// bibliography references sat behind that bracket where the first two
+    /// versions of this check could not see them. A fraction is read digit by
+    /// digit, so its trailing zero is a zero rather than a thousand.
     ///
     /// NO EM DASH, which is a house rule rather than a language one, and is
     /// checked here with the rest so there is one place to look.

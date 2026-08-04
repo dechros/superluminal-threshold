@@ -42,7 +42,7 @@ namespace slm
             std::string harmony;
         };
 
-        SpokenNumber spokenNumber(const std::string &digits)
+        SpokenNumber spokenNumber(const std::string &digits, bool fraction)
         {
             static const std::vector<SpokenNumber> ones = {
                 {true, false, false, "ı"},  {false, false, false, "i"},
@@ -65,7 +65,7 @@ namespace slm
                     value = value * 10 + (character - '0');
                 }
             }
-            if (value % 10 != 0)
+            if (fraction || value % 10 != 0)
             {
                 return ones[static_cast<std::size_t>(value % 10)];
             }
@@ -84,11 +84,12 @@ namespace slm
             return {true, false, false, "u"};
         }
 
-        std::string agreeingSuffix(const std::string &number, const std::string &written)
+        std::string agreeingSuffix(const std::string &number, const std::string &written,
+                                   bool fraction)
         {
             const std::size_t dot = number.rfind('.');
             const SpokenNumber spoken =
-                spokenNumber(dot == std::string::npos ? number : number.substr(dot + 1));
+                spokenNumber(dot == std::string::npos ? number : number.substr(dot + 1), fraction);
 
             const std::string low = spoken.back ? "a" : "e";
             const std::string stop = spoken.voicelessFinal ? "t" : "d";
@@ -410,7 +411,7 @@ namespace slm
     std::vector<ProseRegister::Fault> ProseRegister::numberSuffixes(const std::string &text)
     {
         std::vector<Fault> faults;
-        const std::regex pattern("([0-9]+(?:\\.[0-9]+)*)'([a-zçğıöşü]+)");
+        const std::regex pattern("([0-9]+(?:\\.[0-9]+)*)[\\]$}]*'([a-zçğıöşü]+)");
         const auto lines = splitLines(text);
         for (std::size_t index = 0; index < lines.size(); ++index)
         {
@@ -418,7 +419,11 @@ namespace slm
                  stop; it != stop; ++it)
             {
                 const std::string written = (*it)[2].str();
-                const std::string wanted = agreeingSuffix((*it)[1].str(), written);
+                const std::size_t start = static_cast<std::size_t>(it->position(1));
+                const bool fraction =
+                    start > 0 && (lines[index][start - 1] == '}' ||
+                                  lines[index][start - 1] == ',');
+                const std::string wanted = agreeingSuffix((*it)[1].str(), written, fraction);
                 if (!wanted.empty() && wanted != written)
                 {
                     faults.push_back({"sayı eki uyumsuz",
