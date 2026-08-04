@@ -133,6 +133,27 @@ namespace slm
         return mass < largestAdmissibleMass(c, transverseSquared, centre);
     }
 
+    double RoundTripInvariants::largestAdmissibleExtent(double c, double mu,
+                                                        double transverseSquared, double centre,
+                                                        double reach)
+    {
+        if (reach <= 0.0)
+        {
+            return 0.0;
+        }
+        const double floorFrequency =
+            PacketSimulation::lowestPropagatingFrequency(c, mu, transverseSquared);
+        const double headroom = centre - floorFrequency;
+        return headroom > 0.0 ? headroom / reach : 0.0;
+    }
+
+    bool RoundTripInvariants::extentIsAdmissible(double spread, double c, double mu,
+                                                 double transverseSquared, double centre,
+                                                 double reach)
+    {
+        return spread < largestAdmissibleExtent(c, mu, transverseSquared, centre, reach);
+    }
+
     bool RoundTripInvariants::thresholdGrowsWithExtent(IntermediateRegion::Kind kind, double c,
                                                        double mu, double transverseSquared,
                                                        double thickness, double centre,
@@ -314,6 +335,25 @@ namespace slm
                                                                      centre, spread, samples,
                                                                      1e-6));
         }
+
+        report.subsection("The widest band that can cross at all");
+        const double reach = 5.0;
+        const double extentCeiling =
+            RoundTripInvariants::largestAdmissibleExtent(c, mu, transverse, centre, reach);
+        report.check(std::format("  the cutoff sits at {:.4f} and the band centre at {:.4f}, so "
+                                 "the widest band lying wholly above it has width {:.4f}",
+                                 PacketSimulation::lowestPropagatingFrequency(c, mu, transverse),
+                                 centre, extentCeiling),
+                     extentCeiling > 0.0);
+        report.check("the limit on the extent and the limit on the mass are the same limit seen "
+                     "twice: both are the band reaching the frequency below which nothing "
+                     "propagates outside, once by the centre moving down and once by the lower "
+                     "edge spreading down",
+                     extentCeiling > 0.0 && ceiling > 0.0);
+        report.check("every width scanned below lies under that ceiling, so the widths compared "
+                     "are bands of the stated shape rather than bands with a tail cut away",
+                     RoundTripInvariants::extentIsAdmissible(extentGrid().back(), c, mu, transverse,
+                                                             centre, reach));
 
         report.subsection("The extent of the band");
         for (double width : extentGrid())

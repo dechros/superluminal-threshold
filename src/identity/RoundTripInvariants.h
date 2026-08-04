@@ -80,6 +80,20 @@ namespace slm
                                                 double c, double mu, double transverseSquared,
                                                 double thickness, double centre, int samples);
 
+        /// Widest band whose low edge still lies above the frequency below
+        /// which nothing propagates outside. Past it the band is no longer the
+        /// Gaussian it is named as, because its lower tail is cut away rather
+        /// than carried, so the widest admissible extent is a limit of the same
+        /// kind as the heaviest admissible mass and comes from the same cutoff.
+        /// The reach is the number of widths the sum actually spans, which is a
+        /// property of the summation and is taken from it rather than restated.
+        static double largestAdmissibleExtent(double c, double mu, double transverseSquared,
+                                              double centre, double reach);
+
+        /// Whether the given band lies wholly above the cutoff.
+        static bool extentIsAdmissible(double spread, double c, double mu,
+                                       double transverseSquared, double centre, double reach);
+
         /// Whether a wider band measures a later return, over the range
         /// scanned. The closed form carries no width at all, so any dependence
         /// found here is one the formula cannot report and its direction is a

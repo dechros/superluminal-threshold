@@ -1,4 +1,5 @@
 #include "boundary/CausalCrossing.h"
+#include "boundary/JunctionFamily.h"
 #include "boundary/JunctionScattering.h"
 #include "boundary/ModeFilter.h"
 #include "boundary/ProfiledBarrier.h"
@@ -96,6 +97,7 @@ namespace
         sections.push_back(std::make_unique<slm::IntermediateRegionSection>());
         sections.push_back(std::make_unique<slm::ThresholdSurface>());
         sections.push_back(std::make_unique<slm::JunctionScattering>());
+        sections.push_back(std::make_unique<slm::JunctionFamilySection>());
         sections.push_back(std::make_unique<slm::SurfaceLayerSection>());
         sections.push_back(std::make_unique<slm::LayerEnergyConditionsSection>());
         sections.push_back(std::make_unique<slm::RateConditionSection>());
