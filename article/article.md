@@ -1166,8 +1166,8 @@ nedenle geri çekilmektedir; ayakta kalan katkı, engelin kendisi değil,
 üstelin iki parametreli kapalı biçimidir. Literatürde dejenere bileşenin
 sıfırlanma hızını tek bir parametreyle sınıflandıran çalışmalar var. Teğet
 bloğun mertebesini ikinci bir parametre olarak taşıyan bir sınıflandırmaya
-rastlamadım; eğrilik ile lapse oranını bu iki mertebenin bileşimi olarak veren
-bir çalışmaya da.
+bir çalışma bulunmuyor; eğrilik ile lapse oranını bu iki mertebenin bileşimi
+olarak veren bir çalışma da yok.
 
 **Kapsamı.** Bu itiraz, geçişin **geometrisini**
 bağlar: metrik ara değerlemesinin dönüm noktasındaki davranışını. Bu çalışmada
@@ -3343,20 +3343,20 @@ Formül, öte taraftaki yer değiştirmeyi veri alır. Yer değiştirmenin **iş
 dönüş anını doğrudan belirlediğine göre, o işaretin buradan kurulup
 kurulamayacağı ayrı ve meşru bir sorudur.
 
-**Önce iki sorunun karıştırılmaması gerekir.** Hangi geçiş eşlemesinin
-gerçekleştiği sorusu, bizim zaman yuvamız ile öte tarafın ayrıcalıklı uzay
+**İki soru birbirinden ayrıdır.** Hangi geçiş eşlemesinin
+gerçekleştiği sorusu, Bölge I'in zaman yuvası ile öte tarafın ayrıcalıklı uzay
 ekseninin **birlikte** ters çevrilmesiyle ilgilidir ve Bölüm 24.7 ile 25'te
 işlenir. Buradaki soru ise eşleme verilmişken **yolculuğun yönüdür** ve
 yalnızca geçiş ekseninin ters çevrilmesine bakar. İşaret dizileri olarak
 yazıldığında birincisi $(-1,-1,+1,+1)$, ikincisi $(+1,-1,+1,+1)$'dir; çarpımları
-$(-1,+1,+1,+1)$, yani bizim zamanımızın saf ters çevrilmesidir. İki işlem farklı
+$(-1,+1,+1,+1)$, yani Bölge I zamanının saf ters çevrilmesidir. İki işlem farklı
 grup öğeleridir ve biri hakkındaki bir teorem ötekini kapatmaz.
 
 **Geçişi biçimlendirerek yön verilemez.** Literatürdeki karşılıklılık sonucu
 şunu söyler: her iki uçta yön başına tek bir yayılan kanal varsa, uzaysal olarak
 bakışımsız bir engelin geçirgenliği soldan ve sağdan giriş için aynıdır. Bu,
-zamanda tersinirlik ile birimselliğin sonucudur. Sonucu itibara almadım, burada
-kurulmuş profiller üzerinde yeniden ürettim.
+zamanda tersinirlik ile birimselliğin sonucudur. Bu sonuç itibara alınmaz;
+burada kurulmuş profiller onu yeniden üretir.
 Çarpık profil için geçirgenlik iki yönde de $4{,}9096125448 \times 10^{-3}$
 çıkmakta, fark $7 \times 10^{-18}$ mertebesinde kalmaktadır; profilin gerçekten
 bakışımsız olduğu ayrıca doğrulanmıştır, dolayısıyla eşitlik profilde saklanan
@@ -3382,8 +3382,8 @@ kuramının olağan sınıflandırmasında karşılıklılık, zamanda tersinme 
 evirme **ayrı işlemlerdir** ve karşılıklılık yalnızca geçirgenlik genliklerini
 bağlar. Burada yapılan, o sınıflandırmanın bu geçişe uygulanmasıdır.
 
-**Burada bir sonuç iddia etmiyorum.** Öte tarafın tek bir uzay ekseni var, ve
-yukarıdaki çifti geçişten türetmedim, elle yazdım. Bu çalışma böyle bir kanal
+**Burada bir sonuç iddiası yok.** Öte tarafın tek bir uzay ekseni var, ve
+yukarıdaki çift geçişten türemez; elle yazılmıştır. Bu çalışma böyle bir kanal
 yapısı **sağlamıyor**. Yani bu alt bölüm bir yön verme yöntemi değil; yön
 vermenin inşa edilmesi gereken **tek yerini** işaret ediyor.
 
@@ -5033,7 +5033,7 @@ denetlenmiştir; yaklaşık değil, tamdır.
 | Eklem koşulu          | tek bir ağırlık                  | ağırlık sıfırda güçlü koşul, birde zayıf koşul           |
 | İç dalga sayısı       | dönmüş yön sayısı                | ara bölge yok $(0)$, Kleinyen $(1)$, Öklidyen $(3)$      |
 | Geçiş saatleri        | hangi parametrede türev alındığı | frekansta $1{,}462864$, engel yüksekliğinde $0{,}519317$ |
-| Dispersiyon bağıntısı | geçiş işareti                    | eksi birde bizim imza, artı birde öte taraf              |
+| Dispersiyon bağıntısı | geçiş işareti                    | eksi birde Bölge I imzası, artı birde öte taraf              |
 
 İkinci satır kayda değer bir yan sonuç vermektedir: **iki** dönmüş yön hâli
 literatürde adlandırılmamıştır, dolayısıyla aile tartışılan hâllerden geniştir.
@@ -5041,9 +5041,9 @@ literatürde adlandırılmamıştır, dolayısıyla aile tartışılan hâllerde
 geldiğini, yalnızca hangi parametrede türev alındığında ayrıştığını
 göstermektedir.
 
-Eklem koşulu indirgemesini kendi ifadesini yeniden yazarak sınamadım. Güçlü ve
-zayıf sınamaları ayrı ayrı kurdum ve profil profil karşılaştırdım. Yani
-indirgeme bir kabul değil, bir ölçümdür.
+İndirgeme, kendi ifadesinin yeniden yazılmasıyla sınanmaz. Güçlü ve zayıf
+sınamalar ayrı ayrı kurulur, sonra profil profil karşılaştırılır. Yani indirgeme
+bir kabul değil, bir ölçümdür.
 
 ### 29.2 Uzlaşanlar ve uzlaşmayanlar, ikisi de sayılarak
 
@@ -5066,8 +5066,8 @@ değil ölçümdür:
 
 Yöntem anlaşmazlıkların yarısından fazlasını soğuruyor, geri kalanı için de ne
 olduğunu söylüyor. Bu bölümün önceki hâli aynı ölçütü bir kez daha, ayrıntılı
-tartışıyordu. Ölçüt bir sonuç değil bir okuma yöntemi olduğu için o tartışmayı
-çıkardım; hesaplanmış iki tablo kaldı.
+tartışıyordu. Ölçüt bir sonuç değil bir okuma yöntemi olduğu için o tartışma
+çıkarıldı; hesaplanmış iki tablo kaldı.
 
 ---
 
