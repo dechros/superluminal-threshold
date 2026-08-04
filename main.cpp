@@ -84,6 +84,7 @@
 #include "units/PhysicalScales.h"
 #include "units/ProtonJourney.h"
 #include "units/SignatureThreshold.h"
+#include "units/ThresholdScaling.h"
 
 #include <exception>
 #include <iostream>
@@ -171,6 +172,7 @@ namespace
         sections.push_back(std::make_unique<slm::PhysicalScalesSection>());
         sections.push_back(std::make_unique<slm::ProtonJourneySection>());
         sections.push_back(std::make_unique<slm::SignatureThresholdSection>());
+        sections.push_back(std::make_unique<slm::ThresholdScalingSection>());
         sections.push_back(std::make_unique<slm::TimeProjectionSection>());
         sections.push_back(std::make_unique<slm::FlowAssumptionSection>());
         sections.push_back(std::make_unique<slm::TimeReversalSignatureSection>());
