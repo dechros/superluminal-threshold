@@ -64,6 +64,7 @@
 #include "quantum/LapseContour.h"
 #include "quantum/PathIntegral.h"
 #include "quantum/BoundaryVacuumEnergy.h"
+#include "routes/ThreeRoutes.h"
 #include "rest/RestStateOrbit.h"
 #include "scan/BranchObservables.h"
 #include "scan/CrossingBranches.h"
@@ -159,6 +160,7 @@ namespace
         sections.push_back(std::make_unique<slm::FeasibilitySection>());
         sections.push_back(std::make_unique<slm::PacketSimulationSection>());
         sections.push_back(std::make_unique<slm::RoundTripInvariantsSection>());
+        sections.push_back(std::make_unique<slm::ThreeRoutesSection>());
         sections.push_back(std::make_unique<slm::TimeProjectionSection>());
         sections.push_back(std::make_unique<slm::FlowAssumptionSection>());
         sections.push_back(std::make_unique<slm::TimeReversalSignatureSection>());
