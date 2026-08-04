@@ -555,8 +555,18 @@ namespace slm
         std::vector<Fault> faults;
         const std::regex opener("^#{1,3} ");
         const std::regex label("^#{1,3} [0-9IVX.]*[.]?[ ]*");
+        // Only endings that cannot end a noun are matched by shape. The aorist
+        // is the other way a heading becomes a sentence, and its ending is the
+        // same as the one on "zincir", "sınır" and any name ending in -er, so it
+        // needs a list rather than a pattern; without a lexicon there is no
+        // signal that separates the two.
         const std::regex finite("(dır|dir|dur|dür|tır|tir|maz|mez|yor|acak|ecek|ıyor|iyor|"
-                                "sın|sin)$|^(ır|ir|ar|er|ur|ür)$");
+                                "sın|sin|mıştır|miştir)$");
+        static const std::vector<std::string> aorist = {
+            "ulaşır", "belirler", "görür", "çıkar", "verir", "kalır", "artar",
+            "azalır", "döner", "değişir", "gider", "gelir", "olur", "yapar",
+            "taşır", "bırakır", "kurar", "geçer", "düşer", "biter", "başlar",
+            "ölçer", "sağlar", "gerektirir", "içerir", "eder", "kaybeder"};
         const auto lines = splitLines(text);
         for (std::size_t index = 0; index < lines.size(); ++index)
         {
@@ -583,7 +593,14 @@ namespace slm
             while (words >> word)
             {
                 ++count;
-                if (std::regex_search(word, finite))
+                std::string plain = word;
+                while (!plain.empty() &&
+                       std::string(".,;:!?*").find(plain.back()) != std::string::npos)
+                {
+                    plain.pop_back();
+                }
+                if (std::regex_search(plain, finite) ||
+                    std::find(aorist.begin(), aorist.end(), plain) != aorist.end())
                 {
                     faults.push_back({"başlıkta çekimli fiil", line, name});
                     asserted = true;
@@ -651,7 +668,11 @@ namespace slm
         // not passive at all, "değildir" being the commonest, and counting those
         // inflates the density by a sixth. The stop list is what the count is
         // worth: without it the measure reports a fault the prose does not have.
-        const std::regex passive("([a-zçğıöşü]{2,})(ıl|il|ul|ül|ın|in|un|ün)"
+        // Turkish marks the passive with -Il after a consonant and with a bare -n
+        // after a vowel, and a pattern that knows only the first form misses
+        // every verb whose stem ends in a vowel: "hesaplanmıştır", "okunur",
+        // "başlanır". Leaving that out halves the count.
+        const std::regex passive("([a-zçğıöşü]{2,})(ıl|il|ul|ül|[aeıioöuü]n)"
                                  "(mış|miş|muş|müş|makta|mekte|ır|ir|ur|ür|dı|di|du|dü|"
                                  "acak|ecek)([a-zçğıöşü]*)");
         const std::regex notPassive("^(değil|sınır|olabil|görün|bilin|gerekir|kalır|gelir|"

@@ -98,7 +98,7 @@ namespace slm
         /// Bands the predicate mix and the passive density have to fall in.
         static constexpr int copulaShareLimit = 33;
         static constexpr int continuousShareFloor = 2;
-        static constexpr int passivePerThousandLimit = 29;
+        static constexpr int passivePerThousandLimit = 40;
 
         /// The text under review, or an empty string when it cannot be opened.
         static std::string text();
