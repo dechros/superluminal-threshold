@@ -231,8 +231,9 @@ detaydadır, ikisinde birden değil.
 | Ek 30      | Orada gözlem                                               | Orada bir alan kuramı tanımlanabiliyor mu, ve zincir buna dayanıyor mu       |
 | Ek 31      | Yöntem: anlaşmazlıkların iki türü                          | Rakip formülasyonlarla çelişkiler nerede gerçek                              |
 
-Korunan yükler (17, 18, 19) ile eşiğin mod filtresi olması (14) omurga ile detay
-arasında durur: sonucu taşımazlar, ama sonucun tutarlı olması onlara bağlıdır.
+Üç defter, yani Bölüm 16, Bölüm 17 ve Bölüm 18, eşiğin mod filtresi olmasıyla
+birlikte (Bölüm 13.2) omurga ile detay arasında durur: sonucu taşımazlar, ama
+sonucun tutarlı olması onlara bağlıdır.
 
 **"Sözlük" sözcüğü üç ayrı nesnenin adıdır.** Üçü aşağıda bir kez ayrılır, ve
 metnin geri kalanında bu ayrım tekrarlanmaz.
@@ -439,8 +440,7 @@ Kalan sekiz çözümün **tamamında** $ct$ tek bir uzay eksenine gider. "Bölge
 zamanı Bölge II'nin uzayı olur" sonucu bir seçim değil, zorunluluktur.
 
 **Ancak sekiz çözüm arasındaki fark yalnızca uzay eksenlerinin etiketlenmesi
-değildir.** Bu alt bölümün önceki hâli öyle diyordu ve eksikti. Sekizi, $ct$
-yuvasına verilen **işarete** göre dörde dört bölünür:
+değildir.** Sekizi, $ct$ yuvasına verilen **işarete** göre dörde dört bölünür:
 
 | Filtre         | Aday | İleri ($+$) | Geri ($-$) |
 | -------------- | ---- | ----------- | ---------- |
@@ -1687,10 +1687,9 @@ döndürülmesinden çıkar; zorunluluk ise hiçbir yerde işe girmez. Öte tara
 tartışmadaki yeri de dikkat çekici: orada ayrımın kendisi yok (Bölüm 10.4),
 dolayısıyla oku duruma yazma imkânı da yoktur.
 
-**Kapsam dışı bırakılan.** Bu alt bölümün önceki hâli, aynı sonuca varan bir
-felsefi tartışmayı ve literatürdeki "zamansız" programların bir taramasını da
-taşıyordu. Sonuç değişmediği için tartışma çıkarılmış, sonucun kendisi
-bırakılmıştır.
+**Kapsam dışı bırakılan.** Aynı sonuca varan felsefi tartışma ve literatürdeki
+"zamansız" programların taraması bu alt bölümün dışındadır; sonucu
+değiştirmezler.
 
 ### 10.4 Zaman yönelimi: neden öte tarafta gelecek ve geçmiş yok
 
@@ -2759,8 +2758,8 @@ imzayı geçirgenlik oranında öngörüyor, diğeri hiç öngörmüyor. Aradaki
 farkı değil, **ölçülebilir** bir farktır. Geçiren ve bedelsiz sapma arayan tek
 bir deney ikisini ayırır.
 
-Bu, çalışmanın ayırt edici öngörüsünün bulunduğu yerdir ve önceki hâlinden
-farklı olarak ulaşılamaz bir yüzeye değil, ara bölgenin kendisine bağlıdır.
+Bu, çalışmanın ayırt edici öngörüsünün bulunduğu yerdir, ve ulaşılamaz bir
+yüzeye değil ara bölgenin kendisine bağlıdır.
 
 **Çekince.** İki okumanın verdiği sıfır ve bir uçları hesaplı değil,
 **varsayılmıştır**. Ayar okumasında dönmenin özdeşlik olması, ara bölgenin
@@ -3888,8 +3887,7 @@ Bu modelin sorduğu soru, parçacığın **Bölge I saatinde** nereye düştüğ
 dışarıdaki bir dedektöre geçen tepenin varışıdır. O gözlenebilir, formülasyonu
 gereği fazdan gecikmedir. Hizalanma bileşeni ise alana bağlanmış bir saatin
 **içeride** okuduğu şeydir; "ne kadar etkileşti" sorusunu cevaplar, "ne zaman
-vardı" sorusunu değil. Bu nedenle Bölüm 21'de faz okuması kullanılmaktadır. Bu
-gerekçe artık açıkça verilmektedir; daha önce sessizce devralınıyordu.
+vardı" sorusunu değil. Bu nedenle Bölüm 21'de faz okuması kullanılmaktadır.
 
 ### 24.7 Cephe ile tepe: hızlanan hangisi
 
@@ -4981,10 +4979,9 @@ kullanmamaktadır.
 
 ### 30.6 Kapsam dışı bırakılanlar
 
-Bu bölümün önceki hali, Casimir etkisini, iki eşik yüzeyinin ayırt edeceği
-düzeneği ve türetilmiş bir geçişle karşılaştırmayı da taşıyordu. Üçü de doğrudur
-ve doğrulamada hesaplıdır, ama hiçbiri yönelimden dönüş olayına giden eşlemeye
-dokunmaz; bu nedenle metinden çıkarılmışlardır.
+Casimir etkisi, iki eşik yüzeyinin ayırt edeceği düzenek ve türetilmiş bir
+geçişle karşılaştırma bu bölümün dışındadır. Üçü de doğrudur ve doğrulamada
+hesaplıdır, ama hiçbiri yönelimden dönüş olayına giden eşlemeye dokunmaz.
 
 ---
 
@@ -5044,9 +5041,8 @@ değil ölçümdür:
 | Ters yüzden dönüş | $1$ kuantum $-2{,}2361$ taşır, $2$ kuantum $+2{,}2361$          | çakışmadaki varış sayısı |
 
 Yöntem anlaşmazlıkların yarısından fazlasını soğuruyor, geri kalanı için de ne
-olduğunu söylüyor. Bu bölümün önceki hâli aynı ölçütü bir kez daha, ayrıntılı
-tartışıyordu. Ölçüt bir sonuç değil bir okuma yöntemi olduğu için o tartışma
-çıkarıldı; hesaplanmış iki tablo kaldı.
+olduğunu söylüyor. Ölçütün ayrıntılı tartışması bu bölümün dışındadır, çünkü
+ölçüt bir sonuç değil bir okuma yöntemidir; geriye hesaplanmış iki tablo kalır.
 
 ---
 
