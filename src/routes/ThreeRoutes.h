@@ -1,5 +1,6 @@
 #pragma once
 
+#include "boundary/JunctionFamily.h"
 #include "core/Section.h"
 #include "intermediate/IntermediateRegion.h"
 
@@ -167,6 +168,48 @@ namespace slm
         static bool everyCellArrivesEarlier(IntermediateRegion::Kind kind, double c, double mu,
                                             double transverseSquared, double thickness,
                                             double centre, double farSideDistance);
+
+        /// Moment the propagated packet is found at, measured from its
+        /// departure, after the same far-side displacement. This is the referee
+        /// for every cell of the grid and it belongs to no cell: it uses no
+        /// reading and no matching requirement, only a packet summed over
+        /// frequencies and a peak searched for.
+        static double simulatedReturnMoment(IntermediateRegion::Kind kind, double c, double mu,
+                                            double transverseSquared, double thickness,
+                                            double centre, double spread, int samples,
+                                            double farSideDistance);
+
+        /// One cell of the grid, with what it claims and what the simulation
+        /// finds, so that every cell is confronted with the measurement on
+        /// every run rather than only the cell expected to survive.
+        struct Cell
+        {
+            JunctionFamily::Requirement requirement;
+            Route route;
+            bool applicable;
+            bool holdsJourney;
+            double claimedMoment;
+            double simulatedMoment;
+            bool agreesWithSimulation;
+            bool claimsEarlier;
+            bool simulationSaysEarlier;
+        };
+
+        /// Every cell of the grid, evaluated. The simulated moment is computed
+        /// once and shared, since it depends on neither index.
+        static std::vector<Cell> cells(IntermediateRegion::Kind kind, double c, double mu,
+                                       double transverseSquared, double thickness, double centre,
+                                       double spread, int samples, double farSideDistance,
+                                       double tolerance);
+
+        /// Whether every cell that holds a journey agrees with the simulation
+        /// about the SIGN of the return, even where it disagrees about the
+        /// amount. This is the weaker claim, and it is the one the conclusion
+        /// needs.
+        static bool everyJourneyAgreesOnSign(IntermediateRegion::Kind kind, double c, double mu,
+                                             double transverseSquared, double thickness,
+                                             double centre, double spread, int samples,
+                                             double farSideDistance, double tolerance);
     };
 
     /// Section running the round trip from all three descriptions.

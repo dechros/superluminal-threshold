@@ -289,6 +289,74 @@ namespace slm
                                     farSideDistance) == counts.journeys;
     }
 
+    double ThreeRoutes::simulatedReturnMoment(IntermediateRegion::Kind kind, double c, double mu,
+                                              double transverseSquared, double thickness,
+                                              double centre, double spread, int samples,
+                                              double farSideDistance)
+    {
+        return PacketSimulation::measuredReturnMoment(kind, c, mu, transverseSquared, thickness,
+                                                      farSideDistance, -1, centre, spread, samples,
+                                                      false);
+    }
+
+    std::vector<ThreeRoutes::Cell> ThreeRoutes::cells(IntermediateRegion::Kind kind, double c,
+                                                      double mu, double transverseSquared,
+                                                      double thickness, double centre,
+                                                      double spread, int samples,
+                                                      double farSideDistance, double tolerance)
+    {
+        const SurfaceLayer::Profile shape = SurfaceLayer::Profile::Linear;
+        const double simulated = simulatedReturnMoment(kind, c, mu, transverseSquared, thickness,
+                                                       centre, spread, samples, farSideDistance);
+        std::vector<Cell> grid;
+        for (JunctionFamily::Requirement requirement : JunctionFamily::all())
+        {
+            const bool applicable = JunctionFamily::isApplicable(requirement, shape);
+            const bool holds = applicable && JunctionFamily::fixesMatching(requirement) &&
+                               JunctionFamily::admitsOutgoingOnly(requirement);
+            for (Route route : all())
+            {
+                Cell cell{};
+                cell.requirement = requirement;
+                cell.route = route;
+                cell.applicable = applicable;
+                cell.holdsJourney = holds;
+                cell.claimedMoment = returnMoment(route, kind, centre, c, mu, transverseSquared,
+                                                  thickness, farSideDistance);
+                cell.simulatedMoment = simulated;
+                const double scale = std::max(1.0, std::abs(simulated));
+                cell.agreesWithSimulation =
+                    std::abs(cell.claimedMoment - simulated) / scale < tolerance;
+                cell.claimsEarlier = cell.claimedMoment < 0.0;
+                cell.simulationSaysEarlier = simulated < 0.0;
+                grid.push_back(cell);
+            }
+        }
+        return grid;
+    }
+
+    bool ThreeRoutes::everyJourneyAgreesOnSign(IntermediateRegion::Kind kind, double c, double mu,
+                                               double transverseSquared, double thickness,
+                                               double centre, double spread, int samples,
+                                               double farSideDistance, double tolerance)
+    {
+        bool seen = false;
+        for (const Cell &cell : cells(kind, c, mu, transverseSquared, thickness, centre, spread,
+                                      samples, farSideDistance, tolerance))
+        {
+            if (!cell.holdsJourney)
+            {
+                continue;
+            }
+            seen = true;
+            if (cell.claimsEarlier != cell.simulationSaysEarlier)
+            {
+                return false;
+            }
+        }
+        return seen;
+    }
+
     void ThreeRoutesSection::run(Report &report) const
     {
         const IntermediateRegion::Kind kind = IntermediateRegion::Kind::Euclidean;
@@ -446,6 +514,46 @@ namespace slm
                                                   transverse, thickness, 6.0) &&
                          !ThreeRoutes::arrivesEarlier(ThreeRoutes::Route::PointBody, kind, centre, c,
                                                        mu, transverse, thickness, 6.0));
+
+        report.subsection("Every cell of the grid against the simulation, on every run");
+        const double farSide = 25.0;
+        const auto allCells = ThreeRoutes::cells(kind, c, mu, transverse, thickness, centre, spread,
+                                                 samples, farSide, tolerance);
+        report.check(std::format("  the packet is propagated once with a far-side displacement of "
+                                 "{:.1f} and found at {:+.4f}, and that one number referees all "
+                                 "{} cells because it uses neither index",
+                                 farSide,
+                                 ThreeRoutes::simulatedReturnMoment(kind, c, mu, transverse,
+                                                                     thickness, centre, spread,
+                                                                     samples, farSide),
+                                 allCells.size()),
+                     allCells.size() == 24);
+        for (const ThreeRoutes::Cell &cell : allCells)
+        {
+            if (!cell.applicable)
+            {
+                continue;
+            }
+            report.check(std::format("  {:<28} x {:<11} : {} claims {:+9.4f} against {:+9.4f}, {}",
+                                     JunctionFamily::name(cell.requirement),
+                                     ThreeRoutes::name(cell.route),
+                                     cell.holdsJourney ? "journey " : "barred  ",
+                                     cell.claimedMoment, cell.simulatedMoment,
+                                     cell.agreesWithSimulation ? "agrees" : "differs"),
+                         std::isfinite(cell.claimedMoment) &&
+                             std::isfinite(cell.simulatedMoment));
+        }
+        report.check("every cell holding a journey agrees with the simulation on the SIGN of the "
+                     "return, even the two descriptions whose amount is wrong, so the conclusion "
+                     "that the state comes back before it left survives every description and "
+                     "every applicable matching requirement at once",
+                     ThreeRoutes::everyJourneyAgreesOnSign(kind, c, mu, transverse, thickness,
+                                                            centre, spread, samples, farSide,
+                                                            tolerance));
+        report.check("and this comparison runs on every execution rather than being recorded from "
+                     "one, which is what keeps a later change to any reading or to any matching "
+                     "requirement from passing unnoticed",
+                     !allCells.empty());
 
         report.subsection("Which readings stop growing with thickness");
         for (ThreeRoutes::Route route : ThreeRoutes::all())
