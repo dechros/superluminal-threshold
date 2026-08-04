@@ -2414,6 +2414,46 @@ tablosunu verir.
 Genliğin **fazı** ise dönüş anını taşır ve asıl konu odur. Bir sonraki bölümün
 tamamı bu fazın nasıl okunacağı üzerinedir.
 
+### 14.3 Parçacığın eşikten geçirilme yolu
+
+Eşikten geçiş bir kapının açılması değildir. Ara bölge söndürücü rejimde bir
+engeldir, ve engelin içinde normal dalga sayısı sanaldır. Dolayısıyla geçiş
+tünellemedir: parçacık engeli aşmaz, genliği engelin içinde üstel olarak bastırılır
+ve öte yüzde sıfırdan farklı bir değerle çıkar.
+
+Bunun iki sonucu vardır. Geçiş **olasılıksaldır**; tek bir parçacık için
+söylenebilecek olan, geçme şansının $|A|^2$ olduğudur. Geçiş ayrıca
+**zorlanamaz**; genlik ancak engelin opaklığı, yani sönüm sabiti ile kalınlığın
+çarpımı küçültülerek büyür.
+
+Deney bu nedenle tek bir parçacıkla kurulmaz. Çok sayıda parçacık aynı eşiğe
+fırlatılır, ve geri dönenler sayılır. Gereken fırlatma sayısı opaklığın üstelidir
+ve Bölüm 28.2.4'te sayılara bağlanmıştır.
+
+### 14.4 Dönüşün kendiliğinden olmasının sebebi
+
+Parçacığın geri gelmesi bir tercih ya da ikinci bir müdahale değildir. Sebebi öte
+tarafın yapısındadır.
+
+Bölge II üç zaman yönü taşır ve Bölüm 10'da gösterildiği üzere zaman yönelimi
+orada tanımsızdır. Yönelim olmadığı için "ileri doğru yayılmayı sürdürmek" diye
+bir koşul da yoktur. Yakın tarafta bir ışıma koşulu dalganın yalnızca dışarı
+gitmesini şart koşar, çünkü orada geleceği geçmişten ayıran bir ok bulunur. Öte
+taraf böyle bir ok sunmadığından **kendi ışıma koşulunu vermez**.
+
+Bunun saçılma problemindeki karşılığı doğrudandır: Bölge II iki genlik taşır, biri
+yüzeyden uzaklaşan diğeri yüzeye doğru gelen. İkincisi elle konmuş bir kabul
+değildir; tek yönlülüğü dayatacak bir yapı bulunmadığı için ortaya çıkar.
+
+Dolayısıyla dönüş kendiliğindendir. Parçacık öte tarafta kalmayı seçemez, çünkü
+kalmayı tanımlayacak bir zaman oku yoktur. Geri gelmesi, gitmesiyle aynı çözümün
+parçasıdır, ve iki yüzeyin ortak çözümü tek bir genlik verir.
+
+**Çekince.** Bu, dönüşün kesin olduğu anlamına gelmez. Kesin olan, dönüş
+genliğinin var olduğudur; büyüklüğü Bölüm 14.2'nin verdiği $|A|$ değeridir ve
+söndürücü rejimde küçüktür.
+
+
 ---
 
 ## 15. Dönüş anı
@@ -4693,6 +4733,70 @@ yönlendirilir, ve şart bu yolla dolanılmaz.
 öte tarafta kat edilen mesafe, ve dönen genliğin ağırlığı. İlk üçü düzeneğin
 ayarlarıdır, dördüncüsü sonucun kendisidir ve Bölüm 15.8'de gösterildiği üzere
 deneyin asıl güçlüğü oradadır.
+
+### 28.2.2 Sürücünün taşıyabileceği en büyük kütle
+
+Geçiş, bant merkezinin durgun enerjiden kurulan frekansı aşmasını gerektirdiğinden,
+taşınabilecek en büyük kütle sürücünün enerji kuantumuna bağlanır:
+
+$$m_{\max} = \frac{\hbar \omega_0}{c^2}$$
+
+Durumun durgun enerjisi sürücünün tek foton enerjisinin altında kalmak zorundadır.
+
+| Sürücü               | Kuantum                | En büyük kütle                        |
+| -------------------- | ---------------------- | ------------------------------------- |
+| Görünür lazer        | $3{,}16 \times 10^{-19}$ J | $3{,}52 \times 10^{-36}$ kg, $1{,}97$ eV |
+| Sert X-ışını         | $1{,}58 \times 10^{-15}$ J | $1{,}76 \times 10^{-32}$ kg, $9{,}87$ keV |
+| $511$ keV gama ışını | $8{,}19 \times 10^{-14}$ J | $9{,}11 \times 10^{-31}$ kg, elektron |
+| $938$ MeV gama ışını | $1{,}50 \times 10^{-10}$ J | $1{,}67 \times 10^{-27}$ kg, proton   |
+
+Elektron için $7{,}76 \times 10^{20}$ rad/s, proton için $1{,}43 \times 10^{24}$
+rad/s gerekir. Bugün kullanılabilen sürücüler en hafif yüklü durumun bile
+mertebelerce altında kalır.
+
+### 28.2.3 Kazanılan zaman ile kat edilen mesafe arasındaki kur
+
+Öte tarafta kat edilen uzunluk ile yakın tarafta kazanılan süre arasındaki
+dönüşüm çarpanı ışık hızıdır. Bir metre yolculuk $3{,}34$ nanosaniye kazandırır.
+
+| Kazanılan süre     | Gereken öte taraf mesafesi          |
+| ------------------ | ----------------------------------- |
+| $1$ ns             | $0{,}30$ m                          |
+| $1$ ms             | $3{,}00 \times 10^{5}$ m            |
+| $1$ s              | $3{,}00 \times 10^{8}$ m            |
+| $1$ dakika         | $1{,}80 \times 10^{10}$ m           |
+| $1$ yıl            | $9{,}46 \times 10^{15}$ m, bir ışık yılı |
+
+Bir yıl geriye taşınma, öte tarafta bir ışık yılı mesafe kat edilmesini
+gerektirir. Önerinin ölçeği en açık biçimde bu satırda görünür.
+
+### 28.2.4 Geri dönen durumda zayıflayan nicelik
+
+Geri dönen parçacığın hiçbir özelliği azalmaz. Kütlesi, yükü ve mod ızgarası
+gidişteki değerlerini korur, çünkü geçiş mod genliklerini ölçekler ve mod
+etiketlerini yerinden oynatmaz.
+
+Zayıflayan nicelik **varış olasılığıdır**. İletim katsayısı bir olasılıktır,
+parçacığın bir kesri değil. Dolayısıyla geri gelen bir proton eksiksiz bir
+protondur, ve küçük olan sayı onun gelme şansıdır.
+
+| Opaklık | Varış olasılığı            | Bir varış için fırlatma sayısı |
+| ------- | -------------------------- | ------------------------------ |
+| $5$     | $4{,}54 \times 10^{-5}$    | $2{,}20 \times 10^{4}$         |
+| $20$    | $4{,}25 \times 10^{-18}$   | $2{,}35 \times 10^{17}$        |
+| $40$    | $1{,}80 \times 10^{-35}$   | $5{,}54 \times 10^{34}$        |
+
+### 28.2.5 Görünürlük ile doyum arasındaki gerilim
+
+Deneyin asıl engeli kütle duvarı değildir. Varışın milyarda birin üzerinde
+kalması opaklığı $10{,}36$ ile sınırlar. Gecikmenin doyması ise aynı çarpımın
+büyük olmasını ister, ve yolculuğu satın alan nicelik o gecikmedir.
+
+İki şart birbirini çekiştirir. Görülecek kadar ince bir engel, gecikmenin doymuş
+olması için yeterince opak değildir. Kütle duvarını aşan bir sürücü bulunsa bile
+bu gerilim ayakta kalır, ve bu nedenle deneysel tartışmanın merkezine
+konulmalıdır.
+
 
 ### 28.3 Simülasyon ve zincirin sayısal deneyden okunması
 
