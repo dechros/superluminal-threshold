@@ -213,11 +213,18 @@ def unresolved(text):
     A range written as one prefix and two numbers is also read, since only the
     first number carries the prefix and the second was invisible for the same
     reason.
+
+    A reference with no prefix at all, written as a bare number in brackets, is
+    read too. Six of those pointed at subsections of a chapter that had since
+    been merged, and they survived every pass because nothing marked them as
+    references. A bracketed number with a dot is a section; a bracketed integer
+    is a citation and is left alone.
     """
     have = set(re.findall(r"^#{2,3} ([0-9]+(?:\.[0-9]+)*)", text, re.M))
     refs = set(re.findall(r"(?:Bölüm|§|Ek)\s+([0-9]+(?:\.[0-9]+)*)", text))
     refs |= set(re.findall(
         r"(?:Bölüm|§|Ek)\s+[0-9]+(?:\.[0-9]+)*\s*[–-]\s*([0-9]+(?:\.[0-9]+)*)", text))
+    refs |= set(re.findall(r"\(([0-9]+\.[0-9]+(?:\.[0-9]+)*)\)", text))
     return sorted(r for r in refs if r not in have)
 
 

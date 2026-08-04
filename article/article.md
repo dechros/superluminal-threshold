@@ -4670,9 +4670,9 @@ $D$'si o ailenin bir üyesidir; Bölüm 4.1'in yaptığı, aileyi tarayıp hangi
 
 İkinci parça, yani o eksende **kat edilen mesafenin** bir zaman kaymasına
 çevrilmesi, arandı ve bulunamadı. Değiş tokuş, bir dönüşüm özelliği olarak
-sayısız yerde geçer. Şöyle bir çalışma ise yok: bir **yer değiştirme** o dönüşüm
-altında bir saat kaymasına dönüşsün, ve dönüşte hangi ana varıldığı hesaplansın
-bulunmamaktadır. Aradaki fark bir dönüşümün özelliği ile o dönüşümün bir düzenek
+sayısız yerde geçer. Şöyle bir çalışma ise bulunamadı: bir **yer değiştirme** o
+dönüşüm altında bir saat kaymasına dönüşsün, ve dönüşte hangi ana varıldığı
+hesaplansın. Aradaki fark bir dönüşümün özelliği ile o dönüşümün bir düzenek
 olarak kullanılması arasındaki farktır.
 
 Bunun en yakın karşılığı yerleşik fizikte durur, ve modelin en ciddi sınavı da
@@ -4932,11 +4932,10 @@ durmaktadır; buradaki özet onların sonuçlarıdır.
 ### 30.1 Üç engel, tek kökten
 
 Bölge II'de eşlenik momentum üç bileşenlidir, dolayısıyla tek bir yüzey üzerinde
-veri vermek başlangıç değer problemini belirlemez: **Cauchy yüzeyi yoktur**
-(28.1). Zaman sıralaması tanımlı olmadığından **Feynman propagatörü
-tanımsızdır** (28.2). Enerji aşağıdan sınırlı olmadığından **kararlı bir vakum
-yoktur** (28.3). Üçü de aynı köke bağlıdır: tek olan eksen uzay eksenidir, zaman
-değil.
+veri vermek başlangıç değer problemini belirlemez: **Cauchy yüzeyi yoktur**.
+Zaman sıralaması tanımlı olmadığından **Feynman propagatörü tanımsızdır**.
+Enerji aşağıdan sınırlı olmadığından **kararlı bir vakum yoktur**. Üçü de aynı
+köke bağlıdır: tek olan eksen uzay eksenidir, zaman değil.
 
 ### 30.2 Parçacık kavramı tanımsız, ama teori boş değil
 
@@ -4951,9 +4950,9 @@ sorusu cevaplanabilir.
 
 Wick dönüşü keyfi değil zorunlu bir seçim vermektedir: üç zamanı birden
 döndürmek ıraksar, bileşke yön $O(3)$ değişmez olmadığı için tanımsızdır, **tek
-uzay eksenini döndürmek** yakınsar (28.5). Bu, $D$'nin zaman eksenini uzay
-eksenine göndermesiyle tam tutarlıdır: Bölge I'de zaman tek boyutludur ve Wick
-dönüşü zamanı döndürür, Bölge II'de uzay tek boyutludur ve uzayı döndürür.
+uzay eksenini döndürmek** yakınsar. Bu, $D$'nin zaman eksenini uzay eksenine
+göndermesiyle tam tutarlıdır: Bölge I'de zaman tek boyutludur ve Wick dönüşü
+zamanı döndürür, Bölge II'de uzay tek boyutludur ve uzayı döndürür.
 
 Ortaya çıkan Öklid propagatörü
 
@@ -4962,7 +4961,7 @@ $$G_E(k,q) = \frac{1}{k_1^2 + k_2^2 + k_3^2 + \dfrac{q^2}{c^2} + \mu}$$
 reel argümanlar için daima $\mu > 0$'dan büyüktür, dolayısıyla **kutup yoktur**.
 Tekillik olmadığından $i\varepsilon$ reçetesine ve zaman sıralamasına gerek
 kalmaz; kanonik yapıda çözülemeyen sıralama problemi yol integralinde ortadan
-kalkar (28.7). Konum uzayında sonuç Bölge I'inkiyle **aynı** fonksiyondur.
+kalkar. Konum uzayında sonuç Bölge I'inkiyle **aynı** fonksiyondur.
 
 ### 30.4 Ana bulgu
 
