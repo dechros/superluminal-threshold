@@ -4434,13 +4434,7 @@ tekrar geçmiştir.
 
 ## 26. Açık kalanlar ve simülasyona giden yol
 
-### 26.1 Çekirdeği hesaplamak için gereken her şey
-
-Bu alt bölüm makalenin başına, Bölüm 0 olarak taşınmıştır. Çekirdeği bağımsız
-olarak yeniden üretmek isteyen okurun, ona ulaşmak için önce üç bin satır
-okuması gerekmemelidir.
-
-### 26.1.1 Bu zincir ile bir deney arasında ne duruyor
+### 26.1 Bu zincir ile bir deney arasında ne duruyor
 
 Açık maddeler tek bir liste olarak sayıldığında yanıltıcıdır, çünkü hepsi aynı
 türden değildir. Belirleyici ayrım şudur: **daha iyi bir düzeneğin
