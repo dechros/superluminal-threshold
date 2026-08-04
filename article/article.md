@@ -3352,11 +3352,11 @@ yazıldığında birincisi $(-1,-1,+1,+1)$, ikincisi $(+1,-1,+1,+1)$'dir; çarp�
 $(-1,+1,+1,+1)$, yani bizim zamanımızın saf ters çevrilmesidir. İki işlem farklı
 grup öğeleridir ve biri hakkındaki bir teorem ötekini kapatmaz.
 
-**Geçişi biçimlendirerek yön verilemez.** Literatürdeki karşılıklılık sonucu,
-her iki uçta yön başına tek yayılan kanal bulunduğunda, uzaysal olarak
-bakışımsız bir engelden geçirgenliğin soldan ve sağdan giriş için aynı olduğunu
-söyler; zamanda tersinirlik ile birimselliğin bir sonucudur. Bu, itibara
-alınmak yerine bu çalışmada kurulmuş profiller üzerinde yeniden üretilmiştir.
+**Geçişi biçimlendirerek yön verilemez.** Literatürdeki karşılıklılık sonucu
+şunu söyler: her iki uçta yön başına tek bir yayılan kanal varsa, uzaysal olarak
+bakışımsız bir engelin geçirgenliği soldan ve sağdan giriş için aynıdır. Bu,
+zamanda tersinirlik ile birimselliğin sonucudur. Sonucu itibara almadım, burada
+kurulmuş profiller üzerinde yeniden ürettim.
 Çarpık profil için geçirgenlik iki yönde de $4{,}9096125448 \times 10^{-3}$
 çıkmakta, fark $7 \times 10^{-18}$ mertebesinde kalmaktadır; profilin gerçekten
 bakışımsız olduğu ayrıca doğrulanmıştır, dolayısıyla eşitlik profilde saklanan
@@ -3382,11 +3382,10 @@ kuramının olağan sınıflandırmasında karşılıklılık, zamanda tersinme 
 evirme **ayrı işlemlerdir** ve karşılıklılık yalnızca geçirgenlik genliklerini
 bağlar. Burada yapılan, o sınıflandırmanın bu geçişe uygulanmasıdır.
 
-**Bir sonuç iddia edilmemektedir.** Öte taraf tek bir uzay ekseni taşımaktadır
-ve yukarıdaki çift, geçişten türetilmiş değil, elle yazılmıştır. Bu çalışma
-böyle bir kanal yapısını **sağlamamaktadır**. Dolayısıyla bu alt bölüm bir yön
-verme yöntemi değil, yön vermenin inşa edilmesi gereken **tek yerinin**
-saptanmasıdır.
+**Burada bir sonuç iddia etmiyorum.** Öte tarafın tek bir uzay ekseni var, ve
+yukarıdaki çifti geçişten türetmedim, elle yazdım. Bu çalışma böyle bir kanal
+yapısı **sağlamıyor**. Yani bu alt bölüm bir yön verme yöntemi değil; yön
+vermenin inşa edilmesi gereken **tek yerini** işaret ediyor.
 
 ### 19.9 Parçacık öte taraftayken ne gözlenebilir
 
@@ -4439,13 +4438,15 @@ varsayımı eleştiren bir cümle ile varsayan bir cümle aynı kelimeyi taşır
 | 2.1.6 | Minimize edilen niceliğin §2.1.3'ün karşılaştırdığı nicelik olması         | türetildi                    | Aynı bölüm: referans yapılandırma $2{,}565988$ verir, yani o bölümün sayısının aynısı                                                    |
 | 19.9  | Eksik kütle yönteminin kütle kabuğunda gerçek bir momentum varsayması      | iki yönlü hesaplandı         | Aynı bölüm: iç mod $\sqrt{13}$ altında söner, üstünde yayılır; iki rejim birbirinin tümleyenidir ve hiçbir frekans ikisini birden vermez |
 
-Sicilde $19$ kalem vardır ve tarama $14$ bölümde iddia bulmaktadır; sicil
-kapsayandan geniştir, çünkü sonradan olumsuzlanan bir ifade taramadan düşse de
-hükmü kayıtta kalır. Bu metnin **kendi** taşıdığı varsayımlar yalnızca beş "ilan
-edilmiş sınırlama" satırıdır; beşi de sonucu metinde yazılı olarak
-taşınmaktadır. Geri kalanların hepsi ya türetilmiş, ya iki yönü de hesaplanmış,
-ya sonradan kaldırılmış, ya karşılaştırılan bir formülasyona ait, ya da varsayım
-yapmayan pasajlardır.
+Sicilde $19$ kalem var, tarama ise $14$ bölümde iddia buluyor. Sicil taramadan
+geniştir: sonradan olumsuzlanan bir ifade taramadan düşer, ama hükmü kayıtta
+kalır.
+
+Bu metnin **kendi** taşıdığı varsayım yalnızca beş satırdır, hepsi de "ilan
+edilmiş sınırlama" hükmünde, ve beşinin de sonucu metinde yazılı. Geri kalan
+kalemler beş türden birine girer: türetilmiş olanlar, iki yönü de hesaplananlar,
+sonradan kaldırılanlar, karşılaştırılan bir formülasyona ait olanlar, ve hiç
+varsayım yapmayan pasajlar.
 
 Denetimin kendisi de sınanmıştır: makaleye sicilde yeri olmayan bir varsayım
 cümlesi eklendiğinde koşu iki kontrolle birden düşmüş, cümle geri alındığında
@@ -5040,9 +5041,9 @@ literatürde adlandırılmamıştır, dolayısıyla aile tartışılan hâllerde
 geldiğini, yalnızca hangi parametrede türev alındığında ayrıştığını
 göstermektedir.
 
-Eklem koşulu indirgemesi, kendi ifadesinin yeniden yazılmış hâliyle değil,
-ayrı ayrı kurulmuş güçlü ve zayıf sınamalarla profil profil
-karşılaştırılmıştır; dolayısıyla indirgeme varsayılmamış, denetlenmiştir.
+Eklem koşulu indirgemesini kendi ifadesini yeniden yazarak sınamadım. Güçlü ve
+zayıf sınamaları ayrı ayrı kurdum ve profil profil karşılaştırdım. Yani
+indirgeme varsayılmadı, denetlendi.
 
 ### 29.2 Uzlaşanlar ve uzlaşmayanlar, ikisi de sayılarak
 
@@ -5063,10 +5064,10 @@ değil ölçümdür:
 | Casimir enerjisi  | eşit duvar koşulları $-0{,}006854$, ters koşullar $+0{,}005997$ | kuvvetin işareti         |
 | Ters yüzden dönüş | $1$ kuantum $-2{,}2361$ taşır, $2$ kuantum $+2{,}2361$          | çakışmadaki varış sayısı |
 
-Yöntem böylece anlaşmazlıkların yarısından fazlasını soğurmakta, geri kalanı
-konusunda ise dürüst davranmaktadır. Bu bölümün önceki hâli aynı ölçütü bir kez
-daha ve ayrıntılı olarak tartışıyordu; ölçüt bir sonuç değil bir okuma yöntemi
-olduğu için tartışma çıkarılmış, hesaplanmış iki tablo bırakılmıştır.
+Yöntem anlaşmazlıkların yarısından fazlasını soğuruyor, geri kalanı için de ne
+olduğunu söylüyor. Bu bölümün önceki hâli aynı ölçütü bir kez daha, ayrıntılı
+tartışıyordu. Ölçüt bir sonuç değil bir okuma yöntemi olduğu için o tartışmayı
+çıkardım; hesaplanmış iki tablo kaldı.
 
 ---
 
