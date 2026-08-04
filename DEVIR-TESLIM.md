@@ -1,7 +1,7 @@
 # Devir teslim notu
 
 Başka bir oturum ya da başka bir bilgisayar burayı devraldığında **önce bunu
-okusun**. Tarih: 2026-08-04.
+okusun**. Tarih: 2026-08-04, ikinci güncelleme.
 
 ---
 
@@ -40,13 +40,24 @@ savunmayla bölümler tutuldu ve makale şişti.
 Aynısı kod için de geçerlidir. `src/` altında $90$'a yakın başlık var; hepsi
 çalışıyor ve hepsi geçiyor, ama hepsi gidiş dönüşe hizmet etmiyor.
 
-Not: daha önce bir ayıklama yapıldı ve kaydı `article/ayiklama.md` içindedir.
-O turda üç madde ölçüldüğünde yanlış çıktı, bu da yazılıdır. **Yeni turda o
-dosya önce okunmalıdır**, aynı hatalar tekrarlanmasın.
+**Daha önce iki tur ayıklama denendi ve beş madde ölçüldüğünde yanlış çıktı.
+Ayrı kayıt dosyaları kaldırıldı; kalıcı olan tek şey aşağıdaki liste, ve yeni
+bir tur bunu okumadan başlamamalıdır.**
+
+| Yanlış çıkan öneri | Ölçüm ne dedi |
+|---|---|
+| Bölüm 21–27 "aynı üç şeyi dört kez sayan meta" | Meta değil, sonuç taşıyor: 22 beş okumayı, 23 tablonun yeniden sayımını, 27 ödünç ile özgünün kaydını |
+| Sözlük üç kez kuruluyor | Bir kez kurulu; 18.1 zaten "burada tekrarlanmaz" deyip 9.1'e atıf yapıyor. 17.9–17.12 tekrar değil, **bağımsız doğrulama** |
+| Bölüm 16 atılabilir | 19.9'da öte tarafın üç gözlenebilirinden biri olarak kullanılıyor |
+| Bölüm 2.2 iki satıra inebilir | Ölçüldüğünde $29$ satır. Kesmeye değmez |
+| Bölüm 4.1 "aynı itirafın üçüncü türetimi" | Eklem koşulu seçimini işliyor, başka konu |
+
+Dersi tek cümlede: **"şişmiş" izlenimi ölçülmeden kesilmez.** Beş maddenin
+beşi de okununca ya sonuç çıktı ya da tahmin edilenden kısa çıktı.
 
 ---
 
-## 3. Yarım kalan tek iş: gidiş dönüş simülasyonu
+## 3. Gidiş dönüş simülasyonu: bitti
 
 `src/sim/PacketSimulation` yazıldı ve **tek geçiş** için çalışıyor. Sonucu
 sağlam: dalga paketi sayısal olarak yürütüldüğünde gecikme $1{,}4635$ ölçülüyor,
@@ -82,11 +93,14 @@ de ikiyle çarptım ve eşik kontrolü düştü. Bu, bu çalışmanın **üçün
 ikilik çarpan hatasını yapması olurdu; kontrol şimdi bunu yakalayacak biçimde
 yazılıdır.
 
-**Kalan kusur hızdır.** Her tepe araması iç içe döngülerle binlerce frekans
-topluyor, bisection bunu yirmi kat çarpıyor; suite dakikalar sürüyor.
+**Hız sorunu kapandı, ve maliyet tahmin edilen yerde değildi.** Ölçüldü:
+simülasyon kapalıyken koşu $1{,}6$ saniye, açıkken $117$. Yani bütün maliyet bu
+bölümdeydi. Sebebi bisection değildi; toplamın **frekans tarafının her zaman
+adımında baştan kurulmasıydı**, oysa zamana bağlı olan tek çarpan
+$\exp(-i\omega t)$. Frekans tarafı bir kez kurulup faza çarpılınca koşu $41$
+saniyeye indi ve **hiçbir sayı oynamadı**.
 
-**Ve burada fark edilmiş, henüz kullanılmamış bir sadeleştirme var, bir sonraki
-oturum bununla başlamalı:**
+**Katı kayma özdeşliği uygulandı ve bir kontrol olarak yazıldı:**
 
 Toplamdaki iki faz çarpanı birleşir:
 
@@ -100,15 +114,19 @@ gidiş dönüş için tepeyi her mesafede yeniden aramaya gerek yoktur: bir kez
 $s=0$'da bulunur, sonra kaydırılır. Bisection da gereksizdir, eşik doğrudan
 $t_{tepe}(0)$ olarak çıkar.
 
-Bu hem simülasyonu saniyelere indirir hem de **daha güçlü bir sonuçtur**:
-katsayının bir olduğu, sayısal bir uyuşma olarak değil, toplamın cebirsel bir
-özdeşliği olarak görünür. Bunu bir kontrol olarak yazmak, mevcut yavaş aramadan
-çok daha iyidir.
+Zarf, kaydırılmış zamanda ve yer değiştirmesiz kaydırılmış argümanda
+karşılaştırılmakta ve üç mesafede, iki dalda birden, $10^{-12}$ mertebesinde
+eşit çıkmaktadır. Hızlı yol ayrıca eski aramayla iki mesafede
+karşılaştırılmıştır; aradaki $8 	imes 10^{-6}$, yavaş aramanın **ızgara
+adımıdır**, kaymanın kusuru değildir, ve kontrol bunu böyle yazıp gevşek
+toleransı sessizce değil gerekçesiyle taşımaktadır.
 
-**Şu anki durum:** hepsi `run()` içinden çağrılıyor ve **$1573$ kontrolün
-tamamı geçiyor**. Eşik de ölçümle bulundu: bisection $1{,}4635$ veriyor, kapalı
-biçim $1{,}4629$ diyor. Tek kusur süre; yukarıdaki katı kayma özdeşliği bunu
-saniyelere indirir.
+Eşik artık bisection ile değil, **durgun tepeden** okunuyor: moment tam olarak
+işaretli yer değiştirmenin o tepeyi götürdüğü yerde sıfırlanır. Hâlâ bir
+formülden değil yürütülmüş bir paketten geliyor: $1{,}4635$, kapalı biçimin
+dediği $1{,}4629$'a karşı.
+
+**Şu anki durum:** **$1580$ kontrolün tamamı geçiyor**, koşu $41$ saniye.
 
 ---
 
@@ -194,9 +212,17 @@ Ayrıca kodun kendisi bu turda iki kez metni çürüttü: yayılımlı rejim sat
 | Dosya | İçerik |
 |---|---|
 | `article/article.md` | Makalenin kendisi, $5119$ satır |
-| `article/ayiklama.md` | Önceki ayıklama turu, uygulananlar ve ölçüldüğünde yanlış çıkanlar |
-| `article/hakem-raporu.md` | Hakem eleştirisi, uygulanan maddeler, ve kodun raporu düzelttiği yer |
-| `DEVIR-TESLIM.md` | Bu dosya |
+| `DEVIR-TESLIM.md` | Bu dosya. Ayıklama ve hakem kayıtları buraya taşınıp silindi |
+
+**Kodun raporu çürüttüğü yer, kayda geçmesi için.** Bölüm 0.1'in tablosunda
+altıncı bir satır vardı: yayılımlı rejimde eşiğin kalınlıkla büyüdüğü. Kod bunu
+sınadı ve çürüttü. Kapalı biçim, iç mod sönümlü değilken bir gecikme
+vermemektedir; o sınırda değişen şey bedelin büyüklüğü değil, **hesabın
+uygulanıp uygulanmadığıdır**. Satır kaldırıldı. Bir cümleye güvenmeden önce
+kontrolü yazma kuralının en somut örneği budur.
+
+**Hakem raporundan sırada kalan üç madde:** sicillerin birleştirilmesi,
+tarihsel değinilerin dipnota alınması, ve ek bir sayısal karşılaştırma.
 
 Makalede **Bölüm 0** çekirdek hesabı taşır ve tek başına yeterlidir; bir okur
 makalenin geri kalanına bakmadan bütün sayıları yeniden üretebilir. **Bölüm
@@ -208,10 +234,12 @@ korunmalıdır.
 
 ## 9. Bir sonraki oturum için sıra
 
-1. `article/ayiklama.md` ve bu dosyayı oku.
-2. Gidiş dönüş simülasyonunu **katı kayma özdeşliğiyle** bitir, yavaş aramayı
-   at. Sonuç: paket sayısal olarak yürütüldüğünde girişten önce dönüyor mu,
-   evet ya da hayır, ve eşik nerede.
-3. Makaleyi çekirdeğe indir. Ölçüt yukarıda, ikinci bölümde.
-4. Kodu da aynı ölçütle indir.
-5. Her adımda `make`, çalıştır, `commit`, `push`.
+1. Bu dosyayı oku, özellikle ikinci bölümdeki **yanlış çıkmış beş öneri**
+   tablosunu.
+2. Makaleyi çekirdeğe indir. Ölçüt ikinci bölümde. Kesmeden önce **ölç**;
+   beş maddenin beşi de ölçülmediği için yanlış çıktı.
+3. Kodu da aynı ölçütle indir. `src/` altında $79$ başlık var.
+4. Her adımda `make`, çalıştır, `commit`, `push`.
+
+Gidiş dönüş simülasyonu **bitti**, üçüncü bölümde. Yeniden açılmasına gerek
+yok.

@@ -24,6 +24,14 @@ number it now named also existed. Both parts of a row are therefore remapped
 here, in one pass, and they cannot collide because the first column holds bare
 identifiers while the remapping of the rest requires a prefix.
 
+Numbering starts wherever the manuscript starts it rather than at one. A chapter
+numbered zero is deliberate here: it carries the core calculation and stands
+before the first chapter on purpose. An earlier version began counting at one
+regardless, so running it shifted every chapter up by one, moved every reference
+along with them, and reported that every reference resolved, which was true and
+useless. That is the failure this whole file exists to prevent, arriving through
+the one number nobody thought to allow for.
+
 The mapping is also refused when one number sits on two headings, which is what
 inserting a subsection by hand invites: the new heading is given the number the
 old one had and the old one is pushed down, so the number appears twice, the
@@ -59,7 +67,10 @@ def renumber(lines, repeated=None):
     repeated numbers are collected so the caller can refuse to write.
     """
     mapping = {}
-    section = subsection = subsubsection = 0
+    first = next((m.group(1) for m in
+                  (re.match(r"^## (\d+)\. ", line) for line in lines) if m), "1")
+    section = int(first) - 1
+    subsection = subsubsection = 0
 
     def record(old, new):
         if old in mapping and repeated is not None:
