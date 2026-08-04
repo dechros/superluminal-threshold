@@ -11,6 +11,7 @@
 #include "critique/LiteratureObjections.h"
 #include "critique/ObjectionTests.h"
 #include "critique/OpenQuestions.h"
+#include "critique/ProseRegister.h"
 #include "critique/Reconciliation.h"
 #include "critique/ReproductionLedger.h"
 #include "critique/SylvesterObstruction.h"
@@ -114,6 +115,7 @@ namespace
         sections.push_back(std::make_unique<slm::RouteHolonomySection>());
         sections.push_back(std::make_unique<slm::TimeShiftCostSection>());
         sections.push_back(std::make_unique<slm::AssumptionLedgerSection>());
+        sections.push_back(std::make_unique<slm::ProseRegisterSection>());
         sections.push_back(std::make_unique<slm::SphericalSolution>());
         sections.push_back(std::make_unique<slm::CanonicalQuantization>());
         sections.push_back(std::make_unique<slm::PathIntegral>());
