@@ -20,7 +20,12 @@ namespace slm
     /// FIRST PERSON IS FORBIDDEN. Turkish academic convention rules out first
     /// person singular and plural, and possessive forms of the work itself. This
     /// matters here because the obvious cure for the next rule is first person,
-    /// and that cure is not available.
+    /// and that cure is not available. A list of verb endings caught the verbs
+    /// and missed the nouns: fifteen quantities in the accounting chapters were
+    /// called ours rather than named, and a table column of them passed every
+    /// check. Turkish marks that with a suffix, so the check now reads the
+    /// suffix, allowing a case ending to follow it, and keeps a short list of
+    /// ordinary words that happen to end the same way.
     ///
     /// PASSIVES MAY NOT STACK. The passive is normal in this register and is not
     /// a fault on its own. Three or more in one paragraph is, because by then

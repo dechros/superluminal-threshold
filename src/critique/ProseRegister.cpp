@@ -21,6 +21,9 @@ namespace slm
             "yoruz", "iyoruz", "uyoruz", "üyoruz", "ıyoruz", "acağız", "eceğiz",
             "malıyız", "meliyiz"};
 
+        const std::vector<std::string> kNotOurs = {"minimize", "Minimize", "temiz",
+                                                   "Temiz", "vermiz"};
+
         const std::vector<std::string> kSelfReference = {
             "karıştırılmamalı", "abartılmamalı", "bırakılmamalı", "kaydedilmeli",
             "yazılmalı",        "belirtilmeli",  "unutulmamalı",  "gösterilmelidir",
@@ -107,9 +110,9 @@ namespace slm
             {
                 return locative + "ki";
             }
-            if (std::regex_match(written, std::regex("[dt][ae]dir")))
+            if (std::regex_match(written, std::regex("[dt][ae]d(ı|i)r")))
             {
-                return locative + "dir";
+                return locative + (spoken.back ? "dır" : "dir");
             }
             if (std::regex_match(written, std::regex("[dt][ae]n")))
             {
@@ -303,14 +306,35 @@ namespace slm
     {
         std::vector<Fault> faults;
         const auto lines = splitLines(text);
+        const std::regex ours(
+            "[a-zçğıöşüA-ZÇĞİÖŞÜ]+(mız|miz|muz|müz)"
+            "(ı|i|u|ü|a|e|la|le|da|de|dan|den|ın|in|un|ün|dır|dir|dur|dür)?"
+            "(?![a-zA-ZçğıöşüÇĞİÖŞÜ])");
         for (std::size_t index = 0; index < lines.size(); ++index)
         {
+            bool marked = false;
             for (const auto &mark : kFirstPerson)
             {
                 if (lines[index].find(mark) != std::string::npos)
                 {
                     faults.push_back({"birinci şahıs", static_cast<int>(index) + 1,
                                       shorten(lines[index])});
+                    marked = true;
+                    break;
+                }
+            }
+            if (marked)
+            {
+                continue;
+            }
+            for (std::sregex_iterator it(lines[index].begin(), lines[index].end(), ours),
+                 stop; it != stop; ++it)
+            {
+                if (std::find(kNotOurs.begin(), kNotOurs.end(), (*it)[0].str()) ==
+                    kNotOurs.end())
+                {
+                    faults.push_back({"birinci şahıs çoğul iyelik",
+                                      static_cast<int>(index) + 1, (*it)[0].str()});
                     break;
                 }
             }
