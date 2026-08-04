@@ -4,124 +4,151 @@
 
 **Amaç.** Kütleli bir parçacığı zamanda geriye taşımanın bir yolunu aramak.
 
-**Yöntem.** Parçacığı ışık hızı eşiğinin ötesine geçirmek, orada **mekânda
-mesafe kat ettirmek**, ve geri getirmek. Öte tarafta harcanan mesafenin bu
-tarafta saatte nereye düştüğü hesaplanır.
+**Yöntem.** Parçacık ışık hızı eşiğini geçer. Öte tarafta mekânda mesafe kat
+eder. Geri döner. Hesaplanan şey şudur: orada harcanan mesafe, buradaki saatte
+nereye düşer.
 
-**Sonuç.** Öte tarafta kat edilen mesafe, bu tarafta zamanda yer değiştirmedir,
-ve yeterince uzağa gidildiğinde dönüş girişten öncedir.
+**Sonuç.** Orada kat edilen mesafe, burada zamanda yer değiştirmedir. Yeterince
+uzağa gidilirse dönüş, girişten önce olur.
 
-**Sonucun koşulu, hemen burada.** Bu bir koşullu ifadedir ve koşulu bir alt
-bölüme bırakılmamalıdır. Geçişi yapabilecek sekiz aday vardır; cebirsel olarak
-ayırt edilemezler, **dördü ileriye dördü geriye** gönderir, ve iki aileyi
-ayıran dönüşüm her iki metriğin de izometrisidir. Yani dönüş anının **işareti,
-metrikten çıkmaz** ve bir **seçimdir** (Bölüm 2.1).
+### Sonuç koşulludur, ve koşul bir seçimdir
 
-Burada iki ayrı işaret vardır ve karıştırılmamalıdır. **Geçiş eşlemesinin
-ailesi**, kullanılan matrisin sekizli içindeki yeridir; bu metnin kullandığı
-matris **ileri gönderen** ailededir. **Yolculuğun dalı** ise öte tarafta hangi
-yönde gidildiğidir ve dönüş anına $\pm s$ olarak girer. Geçmişe varmayı
-sağlayan şey, ileri gönderen bir eşleme altında $s$'nin gecikmeyi aşacak kadar
-büyük olmasıdır; öteki aile seçilseydi aynı yolculuk daha geç inerdi.
+Geçişi yapabilecek sekiz matris vardır. Hangisinin gerçeklendiğini geometri
+belirlemez: iki aileyi birbirine bağlayan dönüşüm, her iki bölgenin metriğini de
+korur. Dördü öte taraftaki bir yer değiştirmeyi saatte daha geç bir ana taşır,
+dördü daha erken bir ana. Bu metin, geriye taşıyan aileden bir matris kullanır.
+Bu bir seçimdir, bir sonuç değil (Bölüm 2.1).
 
-Dolayısıyla ispatlanan şudur: **böyle bir geçiş gerçeklenirse** dönüş anı
+Parçacık öte tarafta tek yönde yürür; o yürüyüşün burada hangi yöne düştüğünü
+matris belirler. Yani "geri yürümek" diye bir işlem yoktur. Geçmişe varmak için
+iki şey birlikte gerekir: geriye taşıyan bir matris, ve gecikmeyi aşacak kadar
+büyük bir $s$.
+
+Dolayısıyla ispatlanan şudur: **böyle bir geçiş gerçekleşirse**, dönüş anı
 hesaplanmış bir sayıdır. Öncül ispatlanmamıştır. Buna zamanda yolculuk demek
-için gereken şey tam olarak o öncüldür, ve o öncül iki bedele bağlıdır:
-geçirgen okumanın gerektirdiği madde katmanı baskın enerji koşulunu ihlal
-etmektedir (Bölüm 3.6), ve iddiayı taşıyan rejimde parçacık öte tarafta
-gözlenememektedir (Bölüm 19.9).
+için gereken tam olarak o öncüldür, ve öncülün iki bedeli vardır. Geçirgen okuma
+bir madde katmanı gerektirir, o katman da baskın enerji koşulunu ihlal eder
+(Bölüm 3.6). Ve iddiayı taşıyan rejimde parçacık öte tarafta gözlenemez
+(Bölüm 19.9).
 
-**İddianın büyüklüğü.** Yukarıdaki üç cümlenin yalnızca üçüncüsü yenidir, ve o
-da yukarıdaki koşulla birlikte yenidir. Üstışık hızın geçmişe varmayı mümkün kıldığı
-1962–1970'te kurulmuştur. Öte tarafın bir uzay ve üç zaman ekseni taşıdığı ve
-parçacıkların yalnızca o tek uzay ekseninde hareket ettiği gösterilmiştir. Bir
-uzay ekseninin bu geçiş altında zaman eksenine düştüğü de bilinmektedir. Kalan
-tek adım şudur:
+### İddia ne kadar büyük
+
+Yukarıdaki üç cümleden yalnızca üçüncüsü yenidir. Üstışık hızın geçmişe varmayı
+mümkün kıldığını 1962 ile 1970 arası kurmuştur. Öte tarafın bir uzay ve üç zaman
+ekseni taşıdığı, parçacıkların da yalnızca o tek uzay ekseninde hareket ettiği
+bilinmektedir. Bir uzay ekseninin bu geçiş altında zaman eksenine düştüğü de
+bilinmektedir. Kalan tek adım şudur:
 
 > Işık hızını geçen kütleli madde, oradaki tek mekân boyutunda hareket edip
 > subluminal bölgeye döndüğünde **farklı bir zaman konumunda** bulunur.
 
-Aranan ve bulunamayan budur: yer değiştirmenin bir saat kaymasına çevrildiği ve
-dönüşte hangi ana varıldığının hesaplandığı bir çalışma. Metnin geri kalanı bu
-tek adımı taşımak ve ona yöneltilebilecek soruları karşılamak içindir; neyin
-ödünç neyin kendine ait olduğu Bölüm 27.1'de tek tek sayılmıştır.
+Literatürde bulamadığım şey budur: yer değiştirmeyi bir saat kaymasına çeviren
+ve dönüşte hangi ana varıldığını hesaplayan bir çalışma. Neyin ödünç, neyin
+kendine ait olduğu Bölüm 27.1'de tek tek sayılıdır.
 
-Çalışmanın tamamı bu üç cümlenin çevresinde düzenlenmiştir. Parçacığın döndüğünde
-Bölge I'in dört boyutunda nereye konumlandığı sorulur; ve "nerede", uzaydaki
-yeriyle sınırlı değildir. Dönüş olayının **zaman** koordinatı cevabın asıl
-parçasıdır. Metin tek bir eşlemeyi kurar:
+### Kurulan eşleme
+
+Soru şudur: parçacık döndüğünde Bölge I'in dört koordinatında nereye oturur.
+"Nerede" sorusu uzaydaki yerle sınırlı değildir; asıl cevap zaman
+koordinatındadır. Metin tek bir eşleme kurar:
 
 $$(\text{öte taraftaki yönelim ve hareket}) \;\longmapsto\; (t, x, y, z)_{\text{dönüş olayı}}$$
 
 **Ana sonuç.** Öte tarafın tek uzay ekseninde $s$ kadar yer değiştirmek, Bölge
-I'in saatinde tam olarak $s$ kadar yer değiştirmektir. Katsayı birdir, uzay
-koordinatlarına sızıntı sıfırdır, yer değiştirmeler toplanır, ve işaret
-geometri tarafından sabitlenmemiştir. Geçiş gecikmesi kalınlıkla doyduğu, yer
-değiştirme ise doymadığı için bir eşik mesafesi doğar; onu aşan her $s$, dönüş
-olayını giriş olayının **öncesine** yerleştirir. Zamanda yolculuk bu eşlemeden
-**okunur**, varsayılmaz: dönüş olayının zaman bileşeni, kesintisiz bir dünya
-çizgisinin koyacağı yerden farklı bir yere düşebiliyorsa, gösterim odur;
-düşemiyorsa bu da hesabın sonucudur.
+I'in saatinde tam olarak $s$ kadar yer değiştirmektir. Katsayı birdir. Uzay
+koordinatlarına sızıntı sıfırdır. Yer değiştirmeler toplanır. İşareti geometri
+sabitlemez.
 
-**Sonucu taşıyan zincir.** $384$ işaretli permütasyon matrisi taranır ve üç koşul
-sekiz aday bırakır; hiçbiri baştan seçilmez. Sekizin tamamı Bölge I'in zamanını
-Bölge II'nin tek uzay eksenine gönderir, yani ortak eksen taramanın sonucudur.
-Sözlüğün katsayısı tam olarak birdir ve öte tarafın diğer üç ekseninin bu yuvaya
-katkısı tam olarak sıfırdır. Aynı katsayı eşlenik değişkenler için de birdir,
-çünkü işaretli permütasyon ortogonaldir ve involüsyon olduğu için simetriktir;
-$|\mathrm{d}\kappa/\mathrm{d}\omega| = 1$ sekiz geçişin tamamında tamdır ve
-dispersiyon bağıntısından bağımsızdır. Yer değiştirme fazın içine konduğunda
-gecikme ile yer değiştirmenin toplanması bir varsayım olmaktan çıkar ve tek bir
-durağan faz koşulundan okunur. Gecikmenin kalınlığa doyması ise bir tabloda fark
-edilen bir olgu değil, kapalı biçimin bir özdeşliğidir: formülde kalınlık geçmez.
-Zincirin tamamı Bölüm 20'de tek yerde yazılıdır.
+Geçiş gecikmesi kalınlıkla doyar, yer değiştirme doymaz. Bu yüzden bir eşik
+mesafesi doğar, ve onu aşan her $s$ dönüşü girişin öncesine koyar. Zamanda
+yolculuk bu eşlemeden okunur, varsayılmaz: dönüş anının kesintisiz bir dünya
+çizgisinin koyacağı yerden farklı bir yere düşüp düşmediği hesabın çıktısıdır.
 
-**İddianın sınırı, aynı yerde.** Zincir bir aritmetiktir ve aritmetiği tamdır;
-bir geçişin fiziksel olarak kurulabildiğinin gösterimi değildir. Üç bedel bunu
-belirler ve türleri farklıdır. Eşiği aşan yapılanmaların genliği $d = 8$'de
-$3{,}46 \times 10^{-12}$'ye çöker; bu bir büyüklük sorunudur. İşaretin seçilebilir
-kalması global bir seçicinin bulunmaması koşuluna bağlıdır; bu bir açık sorudur.
-Ve geçirgen okuma ile bir yüzey katmanı bir arada duramamaktadır; bu, modele
-özgü bir boşluk değil, literatürün zaten taşıdığı güçlü ile zayıf ayrımıdır.
+### Sonucu taşıyan zincir
 
-**Model.** Bölge sayısı iki değil **üçtür**: aradaki geçiş bir yüzey değil, kendi
-kalınlığı ve kendi imzası olan bir bölgedir. Hesaplar bu bölgenin dört tipi ve
-beş kalınlığı için ayrı ayrı yürütülür. Eşik geçirgen alınır; bu, zayıf eklem
-koşulunun seçilmesidir ve bedeli açıkça ödenir: geçiş yüzeyinde gücü kalınlığın
-tersiyle giden bir madde katmanı doğar, o katman yüzey zamansal olmadığı için
-baskın enerji koşulunu ihlal eder, ve ihlal madde seçimiyle onarılamaz. Üçüncü
-ve en ağır bedel Bölüm 3.7'dedir: kullanılan metrik ailesinde oran koşulunu
-geçen tek profil, güçlü koşulu sağlayan, yani geçirmeyen profildir. Parçacık iki
-okumayla birden taşınır; hesap dalga paketiyle, anlatım nokta cisimle yapılır ve
-aradaki sözlüğün dar paket limitinde **tam** olduğu gösterilir.
+$384$ işaretli permütasyon matrisi taranır. Üç koşul geriye sekiz aday bırakır,
+ve hiçbiri baştan seçilmez. Sekizin tamamı Bölge I'in zamanını Bölge II'nin tek
+uzay eksenine gönderir; yani ortak eksen taramanın sonucudur.
 
-**Yolculuğun kendisi.** Öte tarafta parçacığın yapabilecekleri iki bağımsız
-etiketle tükenir: hangi yüzden çıktığı ve enerji vektörünün ne kadar döndüğü.
-Yönü seçilebilir, uzunluğu seçilemez; üç zaman arasındaki $O(3)$ bir ayar
-fazlalığıdır. Tümüyle üç zamanın içinde kalan bir hareket Bölge I saatinde
-**sıfır** yer değiştirme üretir, ve üç zaman ekseni arasındaki dönmeler de
-katsayıya dokunmadığı için kapalı bir gezinti hiçbir iz bırakmaz. Saate açılan
-tek kapı tek uzay eksenidir. Dönüş anı içeride taşınan bir saatten değil, iki
-geçişin ortak genliğinin fazından okunur; engel rejiminde kalınlığa doymuş hâle
-gelir ve o bilgiyi frekans karışımı taşır.
+Sözlüğün katsayısı tam olarak birdir, ve öte tarafın diğer üç ekseninin bu
+yuvaya katkısı tam olarak sıfırdır. Aynı katsayı eşlenik değişkenler için de
+birdir. Nedeni iki adımdır: işaretli permütasyon ortogonaldir, ve involüsyon
+olduğu için simetriktir. Buradan $|\mathrm{d}\kappa/\mathrm{d}\omega| = 1$
+çıkar; sekiz geçişin tamamında tamdır ve dispersiyon bağıntısına bağlı değildir.
 
-**Geri döndüğünde.** Enerji, sürat ve kütle **tam olarak** korunur; korunmayan
-şey yöndür. Öte tarafta fiziksel içeriği olmayan bir ayar dönmesi, bu tarafta
-bedelsiz bir sapma olarak görünür ve sapma açıları sürekli değil, sonlu bir
-kümeden gelir. Çalışmanın ayırt edici öngörüsü budur: geri tepen bir hedef
-olmaksızın gerçekleşen, açıları ayrık bir esnek sapma. Eşlemenin tanım kümesi
-taranmıştır ve tek yönlüdür: $312$ öte taraf durumu $158$ farklı dönüş olayına
-gitmektedir; bu sıkışma, boyut değişiminde kaybolan bilginin niceliksel
-karşılığıdır.
+Yer değiştirmeyi fazın içine koyarsanız, gecikme ile yer değiştirmenin
+toplanması bir varsayım olmaktan çıkar ve tek bir durağan faz koşulundan okunur.
+Gecikmenin kalınlığa doyması da bir tabloda fark edilen olgu değildir; kapalı
+biçimin özdeşliğidir, çünkü formülde kalınlık hiç geçmez. Zincirin tamamı
+Bölüm 20'dedir.
 
-**Neyin gösterilmediği.** Öte tarafta öngörü, oradan bakıldığında çöker ama
-eşikten gelen hiçbir şey için çökmez, çünkü kütle kabuğu üzerindeki bir modun
-büyüme katsayısı özdeş olarak negatiftir. Doymuş gecikmenin bir yayılma hızı
-iddiası **olmadığı**, aynı rejimde içeride grup hızının tanımsız olmasıyla
-birlikte kaydedilmiştir; dahası o gecikmenin depolanan alanın ömründen bağımsız
-bir nicelik olmadığı hesaplanmıştır. Ulaşılabilir altı sonucun dördü sıradan
-fiziğinkiyle aynı ölçümü verir, tayf üzerindeki olasılık dağılımı
-hesaplanmamıştır, ve omurga dışındaki hesaplar eklere alınmıştır.
+### Zincir neyi göstermez
+
+Zincir bir aritmetiktir ve aritmetiği tamdır. Bir geçişin fiziksel olarak
+kurulabildiğini göstermez. Üç bedel bunu belirler, ve üçü farklı türdendir.
+
+Eşiği aşan yapılanmaların genliği $d = 8$'de $3{,}46 \times 10^{-12}$'ye çöker.
+Bu bir büyüklük sorunudur. İşaretin seçilebilir kalması, global bir seçicinin
+bulunmamasına bağlıdır. Bu bir açık sorudur. Geçirgen okuma ile bir yüzey
+katmanı bir arada duramaz. Bu modele özgü bir boşluk değildir; literatürün zaten
+taşıdığı güçlü ile zayıf koşul ayrımıdır.
+
+### Model
+
+Bölge sayısı iki değil üçtür. Aradaki geçiş bir yüzey değildir; kendi kalınlığı
+ve kendi imzası olan bir bölgedir. Hesaplar bu bölgenin dört tipi ve beş
+kalınlığı için ayrı ayrı yürür.
+
+Eşik geçirgen alınır. Bu, zayıf eklem koşulunu seçmek demektir, ve bedeli
+açıktır: geçiş yüzeyinde bir madde katmanı doğar, gücü kalınlığın tersiyle
+gider, yüzey zamansal olmadığı için baskın enerji koşulunu ihlal eder, ve ihlal
+madde seçimiyle onarılamaz. En ağır bedel Bölüm 3.7'dedir: bu metrik ailesinde
+oran koşulunu geçen tek profil, güçlü koşulu sağlayan profildir, yani hiçbir şey
+geçirmeyen profil.
+
+Parçacık iki okumayla birden taşınır. Hesap dalga paketiyle yapılır, anlatım
+nokta cisimle. Aradaki sözlüğün dar paket limitinde tam olduğu gösterilir.
+
+### Yolculuk
+
+Öte tarafta parçacığın yapabilecekleri iki etiketle tükenir: hangi yüzden
+çıktığı, ve enerji vektörünün ne kadar döndüğü. Vektörün yönü seçilebilir,
+uzunluğu seçilemez; üç zaman arasındaki $O(3)$ bir ayar fazlalığıdır.
+
+Tümüyle üç zamanın içinde kalan bir hareket, Bölge I saatinde sıfır yer
+değiştirme üretir. Üç zaman ekseni arasındaki dönmeler de katsayıya dokunmaz,
+dolayısıyla kapalı bir gezinti hiçbir iz bırakmaz. Saate açılan tek kapı, tek
+uzay eksenidir.
+
+Dönüş anı içeride taşınan bir saatten okunmaz. İki geçişin ortak genliğinin
+fazından okunur. Engel rejiminde o faz kalınlığa doyar, ve kalınlık bilgisini
+frekans karışımı taşır.
+
+### Geri döndüğünde
+
+Enerji, sürat ve kütle tam olarak korunur. Korunmayan şey yöndür. Öte tarafta
+fiziksel içeriği olmayan bir ayar dönmesi, burada bedelsiz bir sapma olarak
+görünür, ve sapma açıları sürekli değildir: sonlu bir kümeden gelir. Çalışmanın
+ayırt edici öngörüsü budur, yani geri tepen bir hedef olmadan gerçekleşen ve
+açıları ayrık olan bir esnek sapma.
+
+Eşlemenin tanım kümesi taranmıştır ve eşleme tek yönlüdür: $312$ öte taraf
+durumu $158$ farklı dönüş olayına gider. Bu sıkışma, boyut değişiminde kaybolan
+bilginin niceliksel karşılığıdır.
+
+### Neyin gösterilmediği
+
+Öte tarafta öngörü, oradan bakıldığında çöker. Eşikten gelen hiçbir şey için
+çökmez, çünkü kütle kabuğu üzerindeki bir modun büyüme katsayısı özdeş olarak
+negatiftir.
+
+Doymuş gecikme bir yayılma hızı iddiası değildir. Aynı rejimde içeride grup hızı
+tanımsızdır, ve o gecikmenin depolanan alanın ömründen bağımsız bir nicelik
+olmadığı hesaplanmıştır.
+
+Ulaşılabilir altı sonucun dördü, sıradan fiziğin verdiği ölçümün aynısını verir.
+Tayf üzerindeki olasılık dağılımı hesaplanmamıştır. Omurga dışındaki hesaplar
+eklere alınmıştır.
 
 ## Modelin maddeleri
 
