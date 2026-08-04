@@ -248,7 +248,6 @@ metnin geri kalanında bu ayrım tekrarlanmaz.
 Sayısal katsayı yalnızca birincisinde tanımlanır, ve tek bir yerde ispatlanır.
 Diğer ikisi onu kullanır, yeniden kurmaz.
 
-
 ---
 
 # Kısım I. Bölge I nedir
@@ -1695,7 +1694,6 @@ felsefi tartışmayı ve literatürdeki "zamansız" programların bir taramasın
 taşıyordu. Sonuç değişmediği için tartışma çıkarılmış, sonucun kendisi
 bırakılmıştır.
 
-
 ### 10.4 Zaman yönelimi: neden öte tarafta gelecek ve geçmiş yok
 
 Yukarıdaki ifade sezgiseldir; burada kesinleştirilir. Bir bölgede tutarlı bir
@@ -2874,8 +2872,8 @@ $D$ ise dört koordinatı birden değiştirir ve içinde bir $x \leftrightarrow 
 takası barındırır. Bu takasın üç boyuttaki determinantı $-1$'dir, dolayısıyla
 bir $SO(3)$ elemanı değildir. Bunun doğrudan sonucu şudur:
 
-> $D$, yön-bağımlı involüsyonun ürettiği genişletilmiş grup $L_{\text{ext}}$ içinde
-> **bulunmaz**.
+> $D$, yön-bağımlı involüsyonun ürettiği genişletilmiş grup $L_{\text{ext}}$
+> içinde **bulunmaz**.
 
 Yani $D$ ile yön-bağımlı formlar aynı ailenin iki üyesi değildir; farklı
 yapılardır.
@@ -3019,7 +3017,6 @@ seçilemez, çünkü cisim o eksende geri dönemez. Dönüş anının işareti i
 yürüyüş yönünden gelmez; hangi geçiş eşlemesi kullanıldığından gelir. İki ifade
 farklı niceleyicilere sahiptir ve çelişmezler.
 
-
 ### 20.2 Yönelim var, hareket gözlenmez: ayar fazlalığı
 
 Üç zaman arasında bir $O(3)$ simetrisi vardır ve bu bir ayar fazlalığıdır.
@@ -3049,8 +3046,8 @@ eşleşmeye girer ve dönüş anı o eşleşmenin fazından okunur. Uzunluk sabi
 yalnızca yön değiştirildiğinde dönüş anı değişir: yönelim küresi tarandığında
 ulaşılan aralık, uzunluk $3$ için $62{,}4$ birimdir.
 
-> Öte taraftaki yönelim, Bölge I'in zaman ekseninde **başka bir konumu işaret eder**.
-> Ama bunu koordinat izdüşümüyle değil, eşleşmenin fazıyla yapar.
+> Öte taraftaki yönelim, Bölge I'in zaman ekseninde **başka bir konumu işaret
+> eder**. Ama bunu koordinat izdüşümüyle değil, eşleşmenin fazıyla yapar.
 
 Bu ayrım korunmalıdır, çünkü iki farklı mekanizmadır ve biri diğerinin yerine
 kullanılamaz.
@@ -3078,10 +3075,9 @@ büyüklüğü bu sayının verdiği izlenimden küçüktür.
 
 ### 20.5 Yönelim izi nereden geliyor: zamanlar uzayının eğriliği
 
-> Bu, metnin en güçlü iç denetimidir. Aynı sonuca
-> **tümüyle farklı iki hesap yolundan** varılmakta, iki yol aynı iki dönme
-> düzleminde buluşmaktadır. Bir sonucu iki kez elde etmek, onu bir kez elde
-> edip savunmaktan daha güçlüdür.
+> Bu, metnin en güçlü iç denetimidir. Aynı sonuca **tümüyle farklı iki hesap
+> yolundan** varılmakta, iki yol aynı iki dönme düzleminde buluşmaktadır. Bir
+> sonucu iki kez elde etmek, onu bir kez elde edip savunmaktan daha güçlüdür.
 
 Bölüm 20.3 yönelimin dönüş anını değiştirdiğini saçılma yoluyla buldu. Bu alt
 bölüm aynı soruyu bağımsız bir yoldan sorar ve **etkinin nerede doğduğunu**
@@ -3104,9 +3100,8 @@ enerji vektörünün bileşenleridir ve komüte ederler; üç eğrilik bileşeni
 de tam olarak sıfırdır. Kapalı bir yolun holonomisi, yolun uzunluğu ne olursa
 olsun kaybolur; $1000$ birimlik yol için de sınanmıştır.
 
-> İçerideki yol, serbest evrim tarafından **kaydedilmez**. Dolayısıyla
-> Bölüm 20.3'te bulunan yönelim bağımlılığının kaynağı ara bölgenin içi
-> olamaz.
+> İçerideki yol, serbest evrim tarafından **kaydedilmez**. Dolayısıyla Bölüm
+> 20.3'te bulunan yönelim bağımlılığının kaynağı ara bölgenin içi olamaz.
 
 **Eğriliği yüzeyler getiriyor.** İki eşik yüzeyindeki eşleşme, geçiş
 doğrultusunu enine doğrultulara karıştırır ve üreteçler bu karışım altında
@@ -3432,8 +3427,7 @@ Burada yapılan, bilinen bu bağın bu bölgeye uygulanıp gözlemle karşı kar
 getirilmesidir. Sonuç bu nedenle bir yöntem değil, bir **gerilimdir**:
 
 > İç bölgede kütle kabuğunda bir mod bulunan rejimde varış **öne alınmaz**.
-> Varışın öne alındığı rejimde ise gözlenecek bir kütle kabuğu modu
-> **yoktur**.
+> Varışın öne alındığı rejimde ise gözlenecek bir kütle kabuğu modu **yoktur**.
 
 **Geriye kalan.** İddiayı taşıyan sönümlü rejimde elde kalan gözlenebilirler, bu
 çalışmanın zaten hesapladığı üç sınır niceliğidir: geçen ağırlık, katman şiddeti
@@ -3526,7 +3520,7 @@ hesabıdır; burada yeniden türetilmemekte, çağrılmaktadır.
 
 Dokuzuncu adımdaki dört sayı, dönüş olayının dört koordinatıdır ve **kapalı
 formülden** gelmektedir (Bölüm 21.7); bu döküm onları yeniden hesaplamaz, okur.
-Böylece dökümün zincirden sapması mümkün değildir, olası değil.
+Böylece döküm zincirden sapamaz.
 
 On birinci adımda karşılaştırmanın **iki tarafı da gidiş dönüştür**. Işık $2d/c
 = 16$ harcar, parçacık $-3{,}515480$ ile döner. Kod bu eşitliği denetler. Tek
@@ -3567,8 +3561,8 @@ küçüklüğü bir büyüklük sorunudur, ve Bölüm 4.1.6 bunun seçilmiş bir
 noktası olduğunu gösterir. İşaretin seçilebilirliği bir açık sorudur (Bölüm
 10.4). Geçirgen okuma ile yüzey katmanı bir arada duramaz; bu, literatürün güçlü
 ile zayıf ayrımıdır, modele özgü bir boşluk değil (Bölüm 5.7.1). Zincirin
-kendisi bu boşluktan bağımsız olarak doğrudur; zincirin bir deneye bağlanması
-değildir.
+kendisi bu boşluktan bağımsız olarak doğrudur; eksik olan, zinciri bir deneye
+bağlayan halkadır.
 
 > Bu çalışmanın söylediği şudur: böyle bir geçiş kurulabilirse, dönüş anının
 > nereye düştüğü serbest bir yorum değil, hesaplanmış bir sayıdır.
@@ -3637,8 +3631,9 @@ metriklerle tanımlanır, ve aralarındaki ilişkiyi eklem koşulları ele alır
 imza, bir dönüşümle değil, metriğin kendisinin değişmesiyle değişir ve Sylvester
 engeline takılmaz.
 
-> Modelin sağlam çekirdeği dönüşüm kolu değil, imza-değişimi eklem koşulları koludur.
-> İleride yeniden çerçeveleme yapılacaksa başlangıç noktası bu olmalıdır.
+> Modelin sağlam çekirdeği dönüşüm kolu değil, imza-değişimi eklem koşulları
+> koludur. İleride yeniden çerçeveleme yapılacaksa başlangıç noktası bu
+> olmalıdır.
 
 ---
 
@@ -4490,8 +4485,8 @@ nicelikte ayrışmamaktadır; daha iyi bir düzenek aynı sayıları ölçer.
 sonucu, imzası değişmiş bir bölgenin yapılabilip yapılamayacağına dair bir şey
 söylemez. Sonucun bir öneri değil bir koşullu olarak yazılmasının nedeni budur.
 
-> Dürüst özet şudur: iki engel **sayıdır**, biri **seçimdir**, biri de
-> **öncülün kendisidir**.
+> Dürüst özet şudur: iki engel **sayıdır**, biri **seçimdir**, biri de **öncülün
+> kendisidir**.
 
 ### 28.2 Kapanan ve açık kalan maddeler
 
@@ -4881,8 +4876,9 @@ $+4$, dört için $+8$. Ancak aynı yük çift okumasında da görünür.
 **Enerji ayırt ediyor.** Yaratılmış bir çift, çizgi başına iki durgun enerji
 bedeli öder; dönmüş bir çizgi hiçbir bedel ödemez.
 
-> Açık madde bu nedenle şöyle daralır: kapatacak ölçüm bir **sayım** değil, sınır
-> boyunca bir **enerji bütçesidir**. Sayım ve yük, iki okumada da özdeştir.
+> Açık madde bu nedenle şöyle daralır: kapatacak ölçüm bir **sayım** değil,
+> sınır boyunca bir **enerji bütçesidir**. Sayım ve yük, iki okumada da
+> özdeştir.
 
 **Ölçümün şartnamesi.** Bir ölçümün var olması gerektiğini söylemek yetmez;
 hangi alet, hangi çözünürlük ve hangi zamanlama olduğu aşağıda yazılıdır.
@@ -5001,7 +4997,6 @@ eşlemeye dokunmaz; bu nedenle metinden çıkarılmışlardır.
 
 ---
 
-
 ## 31. Yöntem: anlaşmazlıkların iki türü
 
 Rakip formülasyonları doğrulamak ya da yanlışlamak bir yöntemdir. Bu çalışma
@@ -5063,7 +5058,6 @@ tartışıyordu. Ölçüt bir sonuç değil bir okuma yöntemi olduğu için o t
 çıkarıldı; hesaplanmış iki tablo kaldı.
 
 ---
-
 
 ## Kaynakça
 

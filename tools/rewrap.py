@@ -9,7 +9,7 @@ def is_prose(line):
     s = line.strip()
     if not s:
         return False
-    if s.startswith(("|", "#", ">", "$$", "```", "!")):
+    if s.startswith(("|", "#", "$$", "```", "!")):
         return False
     if re.match(r"^[-*+]\s", s):
         return False
@@ -22,17 +22,17 @@ def is_prose(line):
     return True
 
 
-def wrap(words):
+def wrap(words, prefix=""):
     out = []
     line = ""
     for word in words:
         if not line:
-            line = word
+            line = prefix + word
         elif len(line) + 1 + len(word) <= WIDTH:
             line += " " + word
         else:
             out.append(line)
-            line = word
+            line = prefix + word
     if line:
         out.append(line)
     return out
@@ -64,8 +64,13 @@ while index < len(lines):
     while index < len(lines) and is_prose(lines[index]):
         index += 1
     block = lines[start:index]
-    words = " ".join(block).split()
-    wrapped = wrap(words)
+    quoted = all(l.lstrip().startswith(">") for l in block)
+    if quoted:
+        words = " ".join(l.lstrip().lstrip(">").strip() for l in block).split()
+        wrapped = wrap(words, "> ")
+    else:
+        words = " ".join(block).split()
+        wrapped = wrap(words)
     if wrapped != block:
         changed += 1
     result.extend(wrapped)
