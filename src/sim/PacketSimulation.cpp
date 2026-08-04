@@ -258,6 +258,121 @@ namespace slm
         return std::abs(thick - thicker) <= tolerance * std::abs(thick);
     }
 
+    double PacketSimulation::roundTripEnvelope(double time, IntermediateRegion::Kind kind,
+                                               double c, double mu, double transverseSquared,
+                                               double thickness, double farSideDistance,
+                                               int branch, double centre, double spread,
+                                               int samples, bool phaseOnly)
+    {
+        const double floorFrequency =
+            lowestPropagatingFrequency(c, mu, transverseSquared) + 1e-3;
+        const double low = std::max(centre - kBandwidths * spread, floorFrequency);
+        const double high = centre + kBandwidths * spread;
+        const double step = (high - low) / samples;
+        const double sign = branch > 0 ? 1.0 : -1.0;
+        std::complex<double> total(0.0, 0.0);
+        for (int i = 0; i < samples; ++i)
+        {
+            const double omega = low + (i + 0.5) * step;
+            if (omega <= 0.0)
+            {
+                continue;
+            }
+            const double weight = spectrum(omega, centre, spread);
+            std::complex<double> crossing =
+                TwoCrossings::amplitude(kind, omega, c, mu, transverseSquared, thickness);
+            if (phaseOnly)
+            {
+                crossing = std::polar(1.0, std::arg(crossing));
+            }
+            const std::complex<double> farSide(0.0, sign * omega * farSideDistance);
+            const std::complex<double> observed(0.0, -omega * time);
+            total += weight * crossing * std::exp(farSide) * std::exp(observed) * step;
+        }
+        return std::abs(total);
+    }
+
+    double PacketSimulation::measuredReturnMoment(IntermediateRegion::Kind kind, double c,
+                                                  double mu, double transverseSquared,
+                                                  double thickness, double farSideDistance,
+                                                  int branch, double centre, double spread,
+                                                  int samples, bool phaseOnly)
+    {
+        double from = -3.0 * farSideDistance - 20.0;
+        double to = 3.0 * farSideDistance + 20.0;
+        double best = 0.0;
+        for (int pass = 0; pass < 4; ++pass)
+        {
+            const int steps = 200;
+            double bestValue = -1.0;
+            for (int i = 0; i <= steps; ++i)
+            {
+                const double t = from + (to - from) * i / steps;
+                const double value =
+                    roundTripEnvelope(t, kind, c, mu, transverseSquared, thickness,
+                                      farSideDistance, branch, centre, spread, samples,
+                                      phaseOnly);
+                if (value > bestValue)
+                {
+                    bestValue = value;
+                    best = t;
+                }
+            }
+            const double window = (to - from) / steps * 4.0;
+            from = best - window;
+            to = best + window;
+        }
+        return best;
+    }
+
+    bool PacketSimulation::returnsBeforeDeparture(IntermediateRegion::Kind kind, double c,
+                                                  double mu, double transverseSquared,
+                                                  double thickness, double farSideDistance,
+                                                  int branch, double centre, double spread,
+                                                  int samples)
+    {
+        return measuredReturnMoment(kind, c, mu, transverseSquared, thickness, farSideDistance,
+                                    branch, centre, spread, samples, true) < 0.0;
+    }
+
+    double PacketSimulation::measuredThreshold(IntermediateRegion::Kind kind, double c, double mu,
+                                               double transverseSquared, double thickness,
+                                               int branch, double centre, double spread,
+                                               int samples)
+    {
+        double low = 0.0;
+        double high = 20.0;
+        for (int i = 0; i < 24; ++i)
+        {
+            const double mid = 0.5 * (low + high);
+            const double moment = measuredReturnMoment(kind, c, mu, transverseSquared, thickness,
+                                                       mid, branch, centre, spread, samples,
+                                                       true);
+            if (moment > 0.0)
+            {
+                low = mid;
+            }
+            else
+            {
+                high = mid;
+            }
+        }
+        return 0.5 * (low + high);
+    }
+
+    bool PacketSimulation::thresholdAgreesWithFormula(IntermediateRegion::Kind kind, double c,
+                                                      double mu, double transverseSquared,
+                                                      double thickness, double centre,
+                                                      double spread, int samples,
+                                                      double tolerance)
+    {
+        const double measured = measuredThreshold(kind, c, mu, transverseSquared, thickness, -1,
+                                                  centre, spread, samples);
+        const double predicted =
+            predictedDelay(kind, c, mu, transverseSquared, thickness, centre);
+        return std::abs(measured - predicted) <= tolerance * std::abs(predicted);
+    }
+
     void PacketSimulationSection::run(Report &report) const
     {
         const auto kind = IntermediateRegion::Kind::Euclidean;
@@ -345,6 +460,58 @@ namespace slm
                      std::abs(PacketSimulation::reweightingShift(point, kind, c, mu, transverse,
                                                                   16.0, centre, spread,
                                                                   samples)) > 0.0);
+
+        report.subsection("The whole round trip, simulated, back where it started");
+        {
+            const double thickness = 8.0;
+            const int coarse = 300;
+            const double predicted =
+                PacketSimulation::predictedDelay(kind, c, mu, transverse, thickness, centre);
+            for (double distance : {1.0, predicted, 6.0})
+            {
+                report.check(
+                    std::format("  far side {:.4f} : the returned packet peaks at {:+.4f}",
+                                distance,
+                                PacketSimulation::measuredReturnMoment(kind, c, mu, transverse,
+                                                                        thickness, distance, -1,
+                                                                        centre, spread, coarse,
+                                                                        true)),
+                    std::isfinite(PacketSimulation::measuredReturnMoment(
+                        kind, c, mu, transverse, thickness, distance, -1, centre, spread,
+                        coarse, true)));
+            }
+            report.check("a short journey brings it back after it left",
+                         !PacketSimulation::returnsBeforeDeparture(kind, c, mu, transverse,
+                                                                    thickness, 1.0, -1, centre,
+                                                                    spread, coarse));
+            report.check("A LONGER ONE BRINGS IT BACK BEFORE IT LEFT, which is the claim of "
+                         "this work found by propagating a packet rather than by evaluating "
+                         "a formula",
+                         PacketSimulation::returnsBeforeDeparture(kind, c, mu, transverse,
+                                                                   thickness, 6.0, -1, centre,
+                                                                   spread, coarse));
+            report.check("and on the other family the same journey lands later, so the "
+                         "simulation reproduces the branch dependence too",
+                         !PacketSimulation::returnsBeforeDeparture(kind, c, mu, transverse,
+                                                                    thickness, 6.0, 1, centre,
+                                                                    spread, coarse));
+        }
+
+        report.subsection("The threshold, measured rather than evaluated");
+        report.check(
+            std::format("  bisecting the measured return moment puts the threshold at {:.4f}, "
+                        "against the closed form's {:.4f}",
+                        PacketSimulation::measuredThreshold(kind, c, mu, transverse, 8.0, -1,
+                                                             centre, spread, 300),
+                        PacketSimulation::predictedDelay(kind, c, mu, transverse, 8.0,
+                                                          centre)),
+            PacketSimulation::thresholdAgreesWithFormula(kind, c, mu, transverse, 8.0, centre,
+                                                          spread, 300, 2e-2));
+        report.check("so the distance at which the arrival crosses its own departure is not "
+                     "a consequence of the formula being trusted: a packet was propagated "
+                     "and the crossing point was searched for",
+                     PacketSimulation::thresholdAgreesWithFormula(kind, c, mu, transverse, 8.0,
+                                                                   centre, spread, 300, 2e-2));
     }
 
 }

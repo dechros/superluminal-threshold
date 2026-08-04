@@ -135,6 +135,51 @@ namespace slm
                                          double c, double mu, double transverseSquared,
                                          double centre, double spread, int samples,
                                          double tolerance);
+
+        /// Envelope of the packet after the WHOLE round trip, back at the point
+        /// it started from. Two crossings and a far-side displacement, with the
+        /// displacement entering the phase as the dictionary says it must: the
+        /// far-side coordinate is our time slot, so travelling a distance there
+        /// multiplies each frequency by exp(i omega s) rather than by a spatial
+        /// phase. Nothing else in the sum knows about that; it is the crossing
+        /// dictionary applied once, and the peak is then found the same way as
+        /// everywhere else.
+        static double roundTripEnvelope(double time, IntermediateRegion::Kind kind, double c,
+                                        double mu, double transverseSquared, double thickness,
+                                        double farSideDistance, int branch, double centre,
+                                        double spread, int samples, bool phaseOnly);
+
+        /// Moment at which the returned packet peaks, measured from the moment
+        /// it set out. Negative means the simulation found the particle back
+        /// before it left.
+        static double measuredReturnMoment(IntermediateRegion::Kind kind, double c, double mu,
+                                           double transverseSquared, double thickness,
+                                           double farSideDistance, int branch, double centre,
+                                           double spread, int samples, bool phaseOnly);
+
+        /// Whether the simulated round trip returns before it departed.
+        static bool returnsBeforeDeparture(IntermediateRegion::Kind kind, double c, double mu,
+                                           double transverseSquared, double thickness,
+                                           double farSideDistance, int branch, double centre,
+                                           double spread, int samples);
+
+        /// Far-side distance at which the simulated return lands exactly on the
+        /// departure, found by bisecting the measured moment rather than by
+        /// evaluating any formula. This is the threshold as an experiment sees
+        /// it.
+        static double measuredThreshold(IntermediateRegion::Kind kind, double c, double mu,
+                                        double transverseSquared, double thickness, int branch,
+                                        double centre, double spread, int samples);
+
+        /// Whether that measured threshold agrees with the phase delay the
+        /// closed form gives. Note that the amplitude already describes TWO
+        /// crossings, so the delay it carries is the round trip's; multiplying
+        /// it by two again is the factor-of-two error this work has made twice
+        /// before, and the check is written this way to keep it made once.
+        static bool thresholdAgreesWithFormula(IntermediateRegion::Kind kind, double c, double mu,
+                                               double transverseSquared, double thickness,
+                                               double centre, double spread, int samples,
+                                               double tolerance);
     };
 
     /// Section running the round trip numerically and comparing it against the
