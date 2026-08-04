@@ -5016,9 +5016,9 @@ denetlenmiştir; yaklaşık değil, tamdır.
 | Dispersiyon bağıntısı | geçiş işareti                    | eksi birde Bölge I imzası, artı birde öte taraf          |
 
 İkinci satır kayda değer bir yan sonuç verir: **iki** dönmüş yön hâlinin
-literatürde bir adı yok, dolayısıyla aile tartışılan hâllerden geniş. Üçüncü
-satır ise otuz kat farkla tartışılan iki saatin tek bir fonksiyondan geldiğini
-gösterir; ikisi yalnızca hangi parametrede türev alındığında ayrışır.
+literatürde bir adı yoktur, dolayısıyla aile tartışılan hâllerden geniştir.
+Üçüncü satır ise otuz kat farkla tartışılan iki saatin tek bir fonksiyondan
+geldiğini gösterir; ikisi yalnızca hangi parametrede türev alındığında ayrışır.
 
 İndirgeme, kendi ifadesinin yeniden yazılmasıyla sınanmaz. Güçlü ve zayıf
 sınamalar ayrı ayrı kurulur, sonra profil profil karşılaştırılır. Yani indirgeme
