@@ -10,6 +10,7 @@
 #include "core/Report.h"
 #include "core/Section.h"
 #include "critique/AlternativeRoutes.h"
+#include "critique/ArticleSync.h"
 #include "critique/CommonFormulas.h"
 #include "critique/LiteratureObjections.h"
 #include "critique/ObjectionTests.h"
@@ -126,6 +127,7 @@ namespace
         sections.push_back(std::make_unique<slm::TimeShiftCostSection>());
         sections.push_back(std::make_unique<slm::AssumptionLedgerSection>());
         sections.push_back(std::make_unique<slm::ProseRegisterSection>());
+        sections.push_back(std::make_unique<slm::ArticleSyncSection>());
         sections.push_back(std::make_unique<slm::SphericalSolution>());
         sections.push_back(std::make_unique<slm::CanonicalQuantization>());
         sections.push_back(std::make_unique<slm::PathIntegral>());

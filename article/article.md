@@ -2193,13 +2193,13 @@ en çok
 
 $$\mu_{\max} = \frac{\omega_0^2}{c^2} - k_\perp^2$$
 
-değerine kadar büyür; sınanan yapılandırmada bu $3.84$ çıkar ve kalınlık ifadeye
+değerine kadar büyür; sınanan yapılandırmada bu $3{,}84$ çıkar ve kalınlık ifadeye
 girmez. İkinci sınır bandın genişliğine düşer. Toplamın kapsadığı genişlik sayısı
 $N$ ile yazıldığında alt kenarın kesimi aşması
 
 $$\sigma_{\max} = \frac{\omega_0 - \omega_{\min}}{N}$$
 
-koşulunu verir ve aynı yapılandırmada $0.1128$ çıkar. Birinci sınıra merkez
+koşulunu verir ve aynı yapılandırmada $0{,}1128$ çıkar. Birinci sınıra merkez
 aşağı inerek, ikincisine alt kenar yayılarak varılır.
 
 Bu tavanların aşılması gecikmeyi küçültmez, **tanımsız bırakır**. Aradaki fark
@@ -2770,8 +2770,8 @@ taraf mesafesi dışarıdan oynatılır. Nötr bir durumda bu ayar yoktur, çün
 yükle birlikte sıfırlanır.
 
 Ayarın bir tabanı vardır. Bedel frekansta tek düze değildir: düşer, en küçük
-değerine ulaşır ve yeniden yükselir. Sınanan yapılandırmada taban $1.460405$
-değerinde ve $-0.0395$ potansiyelinde bulunur. Dolayısıyla potansiyelin satın
+değerine ulaşır ve yeniden yükselir. Sınanan yapılandırmada taban $1{,}460405$
+değerinde ve $-0{,}0395$ potansiyelinde bulunur. Dolayısıyla potansiyelin satın
 aldığı şey keyfî ölçüde ucuz bir yolculuk değil, **en ucuz noktaya ayarlanma**
 olanağıdır, ve kazanç bedelin yüzde beşinin altında kalır.
 
@@ -4790,6 +4790,13 @@ dönüşüm çarpanı ışık hızıdır. Bir metre yolculuk $3{,}34$ nanosaniye
 | $1$ dakika         | $1{,}80 \times 10^{10}$ m           |
 | $1$ yıl            | $9{,}46 \times 10^{15}$ m, bir ışık yılı |
 
+Sınanan sürücüde, yani $1{,}5 \times 10^{24}$ rad/s değerinde, geçişin borcu
+$2{,}7307 \times 10^{-24}$ s olarak çıkar. Bu borcu kapatan öte taraf mesafesi
+$8{,}1864 \times 10^{-16}$ m değerindedir, yani protonun kendisinden küçüktür.
+Borç, ölçülmeye değer herhangi bir ilerlemenin yanında ihmal edilir; gereken
+mesafe pratikte ilerleme ile ışık hızının çarpımıdır.
+
+
 Bir yıl geriye taşınma, öte tarafta bir ışık yılı mesafe kat edilmesini
 gerektirir. Önerinin ölçeği en açık biçimde bu satırda görünür.
 
@@ -4819,6 +4826,65 @@ büyük olmasını ister, ve yolculuğu satın alan nicelik o gecikmedir.
 olması için yeterince opak değildir. Kütle duvarını aşan bir sürücü bulunsa bile
 bu gerilim ayakta kalır, ve bu nedenle deneysel tartışmanın merkezine
 konulmalıdır.
+
+### 28.2.6 İşaretin dönmesi için yoğunluk koşulu
+
+Bu çalışma öte bölgeyi verilmiş kabul eder ve yolculuğu oradan hesaplar. Bölgenin
+hangi koşulda ortaya çıktığı ise literatürün bir kolunda bir sayıya bağlanmıştır.
+Döngü kuantum kozmolojisinin etkin dinamiğinde hiperyüzey deformasyon cebiri
+yoğunluğa bağlı bir çarpan kazanır, ve bu çarpan enerji yoğunluğu kritik
+yoğunluğun yarısını geçtiğinde işaret değiştirir. Altında mod denklemi
+hiperboliktir ve geometri Lorentz imzalıdır; üstünde denklem eliptiktir ve
+geometri Öklid imzalıdır.
+
+| Nicelik            | Değer                                     |
+| ------------------ | ----------------------------------------- |
+| Planck yoğunluğu   | $5{,}15 \times 10^{96}$ kg/m$^3$          |
+| Kritik yoğunluk    | $2{,}11 \times 10^{96}$ kg/m$^3$          |
+| Dönme eşiği        | $1{,}06 \times 10^{96}$ kg/m$^3$          |
+
+Maliyet iki parçaya ayrılır, çünkü birlikte anıldığında yanlış okunur.
+Gereken **enerji büyük değildir**: aynı kuramın kabul ettiği en küçük hacme eşiği
+getirmek $4{,}01 \times 10^{8}$ J ister, yani yaklaşık yüz kilogram kimyasal
+patlayıcı karşılığıdır. Engel **yoğunlaştırmadır**. Çekirdek maddesi eşikten
+$78{,}7$, nötron yıldızı çekirdeği $78{,}0$, en yüksek enerjili çarpışma bir
+proton yarıçapı içinde $74{,}1$ mertebe geridedir.
+
+Koşul bir yoğunluk olduğundan yoğunlaştırmayla sağlanır, süreyle değil. Şartı
+zamana yayarak biriktirme yolu bu nedenle kapalıdır.
+
+### 28.2.7 Eşiğin dayandığı iki çarpan
+
+Kritik yoğunluk evrensel bir sabit değildir. İki çarpandan kurulur:
+
+$$\rho_c = \frac{\sqrt{3}}{32\pi^2\gamma^3}\, M_*^4$$
+
+Birinci çarpan serbest değildir. Kuantizasyon parametresi $\gamma$ bir entropi
+sayımından gelir ve $0{,}2375$ değerini alır; buradan türetilen kesir $0{,}4094$
+çıkar. Bu çarpanı ayarlanabilir saymak, aranan sonucu baştan kabul etmek olur.
+
+İkinci çarpan ölçülmüş bir nicelik tarafından sabitlenmemiştir. Ek sıkışmış
+boyutlar bulunuyorsa yer çekiminin güçlendiği ölçek dört boyutlu değerin çok
+altına iner, ve eşik o ölçeğin **dördüncü kuvvetiyle** düşer. Kaldıraç büyüktür:
+ölçeğin on altı mertebe düşmesi eşiği altmış dört mertebe düşürür.
+
+| Yer çekiminin güçlendiği ölçek | Dönme eşiği                       | Kazanç        |
+| ------------------------------ | --------------------------------- | ------------- |
+| $10^{19}$ GeV                  | $4{,}75 \times 10^{95}$ kg/m$^3$  | yok           |
+| $10^{6}$ GeV                   | $4{,}75 \times 10^{43}$ kg/m$^3$  | $52{,}3$ mertebe |
+| $10^{4}$ GeV                   | $4{,}75 \times 10^{35}$ kg/m$^3$  | $60{,}3$ mertebe |
+| $10^{3}$ GeV                   | $4{,}75 \times 10^{31}$ kg/m$^3$  | $64{,}3$ mertebe |
+
+En yoğun kasıtlı yapılandırma $9{,}28 \times 10^{21}$ kg/m$^3$ değerine ulaşır.
+Eşiğin oraya inmesi, yer çekiminin $3{,}74$ GeV ölçeğinde güçlenmesini
+gerektirirdi. Deney $9$ TeV altını dışladığından, kapatan ölçek $3{,}4$ mertebe
+dışlanmıştır. Deneyin açık bıraktığı en elverişli ölçekte bile koşul $13{,}5$
+mertebe uzakta kalır.
+
+Bu hesabın kazandırdığı şudur: açık, çıplak bir imkânsızlık değil tek bir
+parametre üzerindeki ölçülmüş bir mesafedir. Mesafe çarpışmanın enerjisiyle
+değil, ek boyutların varlığıyla kapanır.
+
 
 ### 28.3 Simülasyon ve zincirin sayısal deneyden okunması
 
