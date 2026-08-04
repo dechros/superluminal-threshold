@@ -12,6 +12,15 @@ applying both it and the cell pass to the same text would map an already mapped
 identifier a second time. That failure is quiet: the reference still resolves, it
 just resolves somewhere else.
 
+The first column of a table is remapped only when the table's own header says
+that column holds sections, which means its first cell reads "Bölüm" or "Ek".
+Without that guard the pass remapped any table whose first column was a plain
+integer, and one of those columns held step numbers rather than section numbers:
+inserting a chapter turned the eleven steps of the core calculation into steps
+three through thirteen. Every check passed, because the numbers it produced all
+existed. The header is what tells the two kinds of column apart, and nothing else
+in the row does.
+
 Skipping table rows in the prose pass is not on its own enough. A table row
 carries two different kinds of reference: the first column may be a bare
 identifier, and any later column may carry a prefixed reference in running text.
@@ -56,6 +65,7 @@ CELL = re.compile(
     r"^(\|\s*)((?:Ek\s*)?\d+(?:\.\d+)*(?:\s*[,–-]\s*(?:Ek\s*)?\d+(?:\.\d+)*)*)(\s*\|)"
 )
 REFERENCE = r"(Bölüm |§|Ek )(\d+(?:\.\d+)*)"
+HEADS_SECTIONS = re.compile("^\\|\\s*(Bölüm|Ek)", re.I)
 
 
 def renumber(lines, repeated=None):
@@ -67,9 +77,7 @@ def renumber(lines, repeated=None):
     repeated numbers are collected so the caller can refuse to write.
     """
     mapping = {}
-    first = next((m.group(1) for m in
-                  (re.match(r"^## (\d+)\. ", line) for line in lines) if m), "1")
-    section = int(first) - 1
+    section = 0
     subsection = subsubsection = 0
 
     def record(old, new):
@@ -115,11 +123,16 @@ def repoint_cells(lines, mapping, unmapped):
         unmapped.add(number)
         return match.group(0)
 
+    header = ""
     for index, line in enumerate(lines):
         if not line.startswith("|"):
+            header = ""
+            continue
+        if not header:
+            header = line
             continue
 
-        match = CELL.match(line)
+        match = CELL.match(line) if HEADS_SECTIONS.match(header) else None
         if match:
             def bare(inner):
                 value = inner.group(0)
