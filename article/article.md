@@ -5043,7 +5043,7 @@ göstermektedir.
 
 Eklem koşulu indirgemesini kendi ifadesini yeniden yazarak sınamadım. Güçlü ve
 zayıf sınamaları ayrı ayrı kurdum ve profil profil karşılaştırdım. Yani
-indirgeme varsayılmadı, denetlendi.
+indirgeme bir kabul değil, bir ölçümdür.
 
 ### 29.2 Uzlaşanlar ve uzlaşmayanlar, ikisi de sayılarak
 
