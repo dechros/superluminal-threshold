@@ -121,6 +121,52 @@ namespace slm
         static Grid grid(IntermediateRegion::Kind kind, double c, double mu,
                          double transverseSquared, double thickness, double centre, double spread,
                          int samples, double tolerance);
+
+        /// Moment the state returns, measured from its departure, as the given
+        /// description places it after the given far-side distance. Negative
+        /// means it is back before it left. The description enters through its
+        /// reading of the round trip and nothing else.
+        static double returnMoment(Route route, IntermediateRegion::Kind kind, double omega,
+                                   double c, double mu, double transverseSquared, double thickness,
+                                   double farSideDistance);
+
+        /// Whether that moment falls before the departure.
+        static bool arrivesEarlier(Route route, IntermediateRegion::Kind kind, double omega,
+                                   double c, double mu, double transverseSquared, double thickness,
+                                   double farSideDistance);
+
+        /// Smallest far-side distance for which EVERY description places the
+        /// return before the departure, which is the largest of the three
+        /// round trip readings.
+        ///
+        /// This is the number that decides whether the conclusion is an
+        /// artefact of choosing a clock. Below it the descriptions disagree
+        /// about the sign, and a reader is entitled to ask which clock was
+        /// picked and why. Above it they do not disagree, and the conclusion
+        /// survives the most conservative reading on offer rather than
+        /// resting on the most favourable one.
+        static double distanceForUnanimousAdvance(IntermediateRegion::Kind kind, double omega,
+                                                  double c, double mu, double transverseSquared,
+                                                  double thickness);
+
+        /// Which description is the most conservative here, that is the one
+        /// demanding the greatest distance.
+        static Route mostConservativeRoute(IntermediateRegion::Kind kind, double omega, double c,
+                                           double mu, double transverseSquared, double thickness);
+
+        /// How many cells of the grid place the return before the departure at
+        /// the given far-side distance. Cells barred by their own matching
+        /// requirement are not counted, since they hold no journey to place.
+        static int cellsArrivingEarlier(IntermediateRegion::Kind kind, double c, double mu,
+                                        double transverseSquared, double thickness, double centre,
+                                        double farSideDistance);
+
+        /// Whether every cell holding a journey places the return before the
+        /// departure at that distance, across all matching requirements and
+        /// all descriptions at once.
+        static bool everyCellArrivesEarlier(IntermediateRegion::Kind kind, double c, double mu,
+                                            double transverseSquared, double thickness,
+                                            double centre, double farSideDistance);
     };
 
     /// Section running the round trip from all three descriptions.

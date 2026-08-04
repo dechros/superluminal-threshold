@@ -204,6 +204,91 @@ namespace slm
         return counts;
     }
 
+    double ThreeRoutes::returnMoment(Route route, IntermediateRegion::Kind kind, double omega,
+                                     double c, double mu, double transverseSquared,
+                                     double thickness, double farSideDistance)
+    {
+        return roundTripReading(route, kind, omega, c, mu, transverseSquared, thickness) -
+               farSideDistance;
+    }
+
+    bool ThreeRoutes::arrivesEarlier(Route route, IntermediateRegion::Kind kind, double omega,
+                                     double c, double mu, double transverseSquared,
+                                     double thickness, double farSideDistance)
+    {
+        return returnMoment(route, kind, omega, c, mu, transverseSquared, thickness,
+                            farSideDistance) < 0.0;
+    }
+
+    double ThreeRoutes::distanceForUnanimousAdvance(IntermediateRegion::Kind kind, double omega,
+                                                    double c, double mu, double transverseSquared,
+                                                    double thickness)
+    {
+        double largest = 0.0;
+        for (Route route : all())
+        {
+            largest = std::max(
+                largest, roundTripReading(route, kind, omega, c, mu, transverseSquared, thickness));
+        }
+        return largest;
+    }
+
+    ThreeRoutes::Route ThreeRoutes::mostConservativeRoute(IntermediateRegion::Kind kind,
+                                                          double omega, double c, double mu,
+                                                          double transverseSquared,
+                                                          double thickness)
+    {
+        Route worst = Route::PointBody;
+        double largest = -std::numeric_limits<double>::infinity();
+        for (Route route : all())
+        {
+            const double value =
+                roundTripReading(route, kind, omega, c, mu, transverseSquared, thickness);
+            if (value > largest)
+            {
+                largest = value;
+                worst = route;
+            }
+        }
+        return worst;
+    }
+
+    int ThreeRoutes::cellsArrivingEarlier(IntermediateRegion::Kind kind, double c, double mu,
+                                          double transverseSquared, double thickness,
+                                          double centre, double farSideDistance)
+    {
+        const SurfaceLayer::Profile shape = SurfaceLayer::Profile::Linear;
+        int count = 0;
+        for (JunctionFamily::Requirement requirement : JunctionFamily::all())
+        {
+            if (!JunctionFamily::isApplicable(requirement, shape) ||
+                !JunctionFamily::fixesMatching(requirement) ||
+                !JunctionFamily::admitsOutgoingOnly(requirement))
+            {
+                continue;
+            }
+            for (Route route : all())
+            {
+                if (arrivesEarlier(route, kind, centre, c, mu, transverseSquared, thickness,
+                                   farSideDistance))
+                {
+                    ++count;
+                }
+            }
+        }
+        return count;
+    }
+
+    bool ThreeRoutes::everyCellArrivesEarlier(IntermediateRegion::Kind kind, double c, double mu,
+                                              double transverseSquared, double thickness,
+                                              double centre, double farSideDistance)
+    {
+        const Grid counts =
+            grid(kind, c, mu, transverseSquared, thickness, centre, 0.02, 300, 1e-2);
+        return cellsArrivingEarlier(kind, c, mu, transverseSquared, thickness, centre,
+                                    farSideDistance) == counts.journeys;
+    }
+
     void ThreeRoutesSection::run(Report &report) const
     {
         const IntermediateRegion::Kind kind = IntermediateRegion::Kind::Euclidean;
@@ -306,6 +391,61 @@ namespace slm
                                  "against the one surviving description",
                                  counts.placingTheReturn),
                      counts.placingTheReturn == 4);
+
+        report.subsection("Travel in the second region, priced by each description in turn");
+        const double unanimous = ThreeRoutes::distanceForUnanimousAdvance(kind, centre, c, mu,
+                                                                          transverse, thickness);
+        for (ThreeRoutes::Route route : ThreeRoutes::all())
+        {
+            for (double distance : {2.0, 6.0, 25.0})
+            {
+                const double moment = ThreeRoutes::returnMoment(
+                    route, kind, centre, c, mu, transverse, thickness, distance);
+                report.check(std::format("  {:<11} : covering {:>5.1f} over there returns at "
+                                         "{:+9.4f}, which is {}",
+                                         ThreeRoutes::name(route), distance, moment,
+                                         moment < 0.0 ? "before departure" : "after departure"),
+                             std::isfinite(moment));
+            }
+        }
+        report.check("no description places the return earlier without motion in the second "
+                     "region: with the distance set to zero every one of them returns after the "
+                     "departure, so the advance is bought by the travel there and not by the "
+                     "crossing",
+                     !ThreeRoutes::arrivesEarlier(ThreeRoutes::Route::Wave, kind, centre, c, mu,
+                                                   transverse, thickness, 0.0) &&
+                         !ThreeRoutes::arrivesEarlier(ThreeRoutes::Route::PointBody, kind, centre, c,
+                                                       mu, transverse, thickness, 0.0) &&
+                         !ThreeRoutes::arrivesEarlier(ThreeRoutes::Route::Amplitude, kind, centre, c,
+                                                       mu, transverse, thickness, 0.0));
+        report.check(std::format("every description places the return before the departure once "
+                                 "the far-side distance passes {:.4f}, and the description "
+                                 "demanding that much is the {} one",
+                                 unanimous,
+                                 ThreeRoutes::name(ThreeRoutes::mostConservativeRoute(
+                                     kind, centre, c, mu, transverse, thickness))),
+                     unanimous > 0.0);
+        report.check(std::format("at a far-side distance of 25 all {} cells holding a journey "
+                                 "place the return before the departure, across every applicable "
+                                 "matching requirement and every description at once",
+                                 counts.journeys),
+                     ThreeRoutes::everyCellArrivesEarlier(kind, c, mu, transverse, thickness,
+                                                           centre, 25.0));
+        report.check("so the mechanism is common to all of them and only its price is not: the "
+                     "advance comes from displacement in the second region, which every "
+                     "description converts the same way, while how much displacement is needed "
+                     "depends on which duration is charged for the crossing",
+                     ThreeRoutes::everyCellArrivesEarlier(kind, c, mu, transverse, thickness,
+                                                           centre, 25.0) &&
+                         !ThreeRoutes::everyCellArrivesEarlier(kind, c, mu, transverse, thickness,
+                                                               centre, 6.0));
+        report.check("below that distance the descriptions disagree about the sign, which is "
+                     "exactly the range where a reader is entitled to ask which clock was chosen, "
+                     "and above it the question does not arise",
+                     ThreeRoutes::arrivesEarlier(ThreeRoutes::Route::Wave, kind, centre, c, mu,
+                                                  transverse, thickness, 6.0) &&
+                         !ThreeRoutes::arrivesEarlier(ThreeRoutes::Route::PointBody, kind, centre, c,
+                                                       mu, transverse, thickness, 6.0));
 
         report.subsection("Which readings stop growing with thickness");
         for (ThreeRoutes::Route route : ThreeRoutes::all())
