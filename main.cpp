@@ -81,6 +81,7 @@
 #include "signal/GravitationalChannel.h"
 #include "spherical/SphericalSolution.h"
 #include "transform/SignatureInvolution.h"
+#include "units/PhysicalScales.h"
 
 #include <exception>
 #include <iostream>
@@ -165,6 +166,7 @@ namespace
         sections.push_back(std::make_unique<slm::ThreeRoutesSection>());
         sections.push_back(std::make_unique<slm::ChargedRoundTripSection>());
         sections.push_back(std::make_unique<slm::CrossingAdmissionSection>());
+        sections.push_back(std::make_unique<slm::PhysicalScalesSection>());
         sections.push_back(std::make_unique<slm::TimeProjectionSection>());
         sections.push_back(std::make_unique<slm::FlowAssumptionSection>());
         sections.push_back(std::make_unique<slm::TimeReversalSignatureSection>());
