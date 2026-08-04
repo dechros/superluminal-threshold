@@ -16,7 +16,8 @@ namespace slm
             "rastlamadım", "sınamadım",  "ürettim",   "yazdım",   "kurdum",
             "karşılaştırdım", "etmiyorum", "almadım",  "çıkardım", "türetmedim",
             "buldum",     "gördüm",      "yaptım",    "ettim",    "biz ",
-            "bize ",      "bizim ",      "çalışmamız", "makalemiz", "hesabımız"};
+            "bize ",      "bizim ",      "çalışmamız", "makalemiz", "hesabımız",
+            "bulamadığım", "seçtiğim", "kurduğum", "gördüğüm", "yaptığım"};
 
         const std::vector<std::string> kSelfReference = {
             "karıştırılmamalı", "abartılmamalı", "bırakılmamalı", "kaydedilmeli",
@@ -27,6 +28,9 @@ namespace slm
 
         const std::vector<std::string> kPassive = {"mektedir", "maktadır", "mıştır",
                                                    "miştir",   "muştur",   "müştür"};
+
+        const std::vector<std::string> kNominal = {"ması", "mesi", "dığı", "diği",
+                                                   "tığı", "tiği", "acağı", "eceği"};
 
         bool isProse(const std::string &line)
         {
@@ -227,6 +231,77 @@ namespace slm
         return faults;
     }
 
+    std::vector<ProseRegister::Fault> ProseRegister::openingConjunctions(
+        const std::string &text)
+    {
+        std::vector<Fault> faults;
+        const auto lines = splitLines(text);
+        for (std::size_t index = 0; index < lines.size(); ++index)
+        {
+            if (!isProse(lines[index]))
+            {
+                continue;
+            }
+            for (const auto &mark : {". Ve ", ". Ama ", ". Ki "})
+            {
+                if (lines[index].find(mark) != std::string::npos)
+                {
+                    faults.push_back({"cümle bağlaçla açılıyor",
+                                      static_cast<int>(index) + 1, shorten(lines[index])});
+                    break;
+                }
+            }
+            if (lines[index].rfind("Ve ", 0) == 0 || lines[index].rfind("Ama ", 0) == 0)
+            {
+                faults.push_back({"cümle bağlaçla açılıyor", static_cast<int>(index) + 1,
+                                  shorten(lines[index])});
+            }
+        }
+        return faults;
+    }
+
+    std::vector<ProseRegister::Fault> ProseRegister::nominalChains(const std::string &text)
+    {
+        std::vector<Fault> faults;
+        const auto lines = splitLines(text);
+        std::string sentence;
+        int startLine = 1;
+        const auto examine = [&](const std::string &done, int line)
+        {
+            int total = 0;
+            for (const auto &mark : kNominal)
+            {
+                total += occurrences(done, mark);
+            }
+            if (total > nominalsPerSentence && commaCount(done) < 3)
+            {
+                faults.push_back({std::format("{} ad-fiil", total), line, shorten(done)});
+            }
+        };
+        for (std::size_t index = 0; index < lines.size(); ++index)
+        {
+            if (!isProse(lines[index]))
+            {
+                sentence.clear();
+                continue;
+            }
+            if (sentence.empty())
+            {
+                startLine = static_cast<int>(index) + 1;
+            }
+            sentence += " " + lines[index];
+            const std::size_t stop = sentence.find_last_of('.');
+            if (stop == std::string::npos)
+            {
+                continue;
+            }
+            examine(sentence.substr(0, stop + 1), startLine);
+            sentence = sentence.substr(stop + 1);
+            startLine = static_cast<int>(index) + 1;
+        }
+        return faults;
+    }
+
     std::vector<ProseRegister::Fault> ProseRegister::emDashes(const std::string &text)
     {
         std::vector<Fault> faults;
@@ -246,7 +321,9 @@ namespace slm
     {
         std::vector<Fault> all;
         for (const auto &group : {longSentences(text), stackedPassives(text),
-                                  firstPerson(text), selfReference(text), emDashes(text)})
+                                  firstPerson(text), selfReference(text),
+                                  openingConjunctions(text), nominalChains(text),
+                                  emDashes(text)})
         {
             all.insert(all.end(), group.begin(), group.end());
         }
@@ -307,12 +384,35 @@ namespace slm
                                  ProseRegister::passivesPerParagraph),
                      stacked.empty());
 
+        report.subsection("Sentences opening with a bare conjunction");
+        const auto openers = ProseRegister::openingConjunctions(document);
+        for (const auto &fault : openers)
+        {
+            report.check(std::format("  line {}: {}", fault.line, fault.excerpt), false);
+        }
+        report.check("no sentence begins with a conjunction, which is how breaking a long "
+                     "sentence turns written Turkish into spoken Turkish",
+                     openers.empty());
+
+        report.subsection("Chains of verbal nouns, the fault the other rules leave behind");
+        const auto chains = ProseRegister::nominalChains(document);
+        for (const auto &fault : chains)
+        {
+            report.check(std::format("  line {}: {} | {}", fault.line, fault.rule,
+                                     fault.excerpt),
+                         false);
+        }
+        report.check(std::format("no sentence carries more than {} verbal nouns unless it is "
+                                 "an enumeration",
+                                 ProseRegister::nominalsPerSentence),
+                     chains.empty());
+
         report.subsection("The house rule on the em dash");
         report.check("the em dash appears nowhere", ProseRegister::emDashes(document).empty());
 
-        report.subsection("What this section does not measure");
-        report.check("chains of nominalisation are the remaining fault of this register and no "
-                     "count here detects them, so the absence of failures above is not a "
+        report.subsection("What this section still does not measure");
+        report.check("word order inside a clause, and whether a paragraph argues in the order a "
+                     "reader needs, are not counted anywhere here, so a green run is not a "
                      "certificate that the prose reads well",
                      true);
     }

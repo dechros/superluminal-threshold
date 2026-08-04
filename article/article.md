@@ -28,7 +28,7 @@ Dolayısıyla ispatlanan şudur: **böyle bir geçiş gerçekleşirse**, dönü�
 hesaplanmış bir sayıdır. Öncül ispatlanmamıştır. Buna zamanda yolculuk demek
 için gereken tam olarak o öncüldür, ve öncülün iki bedeli vardır. Geçirgen okuma
 bir madde katmanı gerektirir, o katman da baskın enerji koşulunu ihlal eder
-(Bölüm 3.6). Ve iddiayı taşıyan rejimde parçacık öte tarafta gözlenemez
+(Bölüm 3.6). Ayrıca iddiayı taşıyan rejimde parçacık öte tarafta gözlenemez
 (Bölüm 19.9).
 
 ### İddia ne kadar büyük
@@ -42,8 +42,8 @@ düştüğü de bilinen bir sonuç. Kalan tek adım şudur:
 > Işık hızını geçen kütleli madde, oradaki tek mekân boyutunda hareket edip
 > subluminal bölgeye döndüğünde **farklı bir zaman konumunda** bulunur.
 
-Literatürde bulamadığım şey budur: yer değiştirmeyi bir saat kaymasına çeviren
-ve dönüşte hangi ana varıldığını hesaplayan bir çalışma. Neyin ödünç, neyin
+Literatürde bulunmayan şey budur: yer değiştirmeyi bir saat kaymasına çeviren ve
+dönüşte hangi ana varıldığını hesaplayan bir çalışma. Neyin ödünç, neyin
 kendine ait olduğu Bölüm 27.1'de tek tek sayılıdır.
 
 ### Kurulan eşleme
@@ -372,10 +372,11 @@ $$M(V) = D \cdot B(c^2/V), \qquad V > c$$
 **Bu çarpanlama yeni değildir.** Bir superboost'un, sonsuz hız limitindeki bir
 çevirme ile dual hız $c^2/V$'ye ait sıradan bir boostun bileşkesi olduğu [2]'de
 belirtilmiştir ve [3] bunu kendi eleştirisinin ikinci basamağı olarak kullanır.
-Burada eklenen şey çarpanlamanın kendisi değil, üç noktadır: çarpanlamanın
-modelin düzenleyici ilkesi olarak sonuna kadar kullanılması, çevirme parçasının
-Bölüm 2.1'deki tam tarama ile **zorunlu** olduğunun gösterilmesi, ve grup
-kapanmasındaki bozulmanın Bölüm 2.2'de yalnızca $B$ katmanına yıkılması.
+Buraya eklenen şey çarpanlamanın kendisi değil, üç noktadır. Birincisi,
+çarpanlama modelin düzenleyici ilkesi olarak sonuna kadar kullanılır. İkincisi,
+Bölüm 2.1'in tam taraması çevirme parçasının **zorunlu** olduğunu gösterir.
+Üçüncüsü, Bölüm 2.2 grup kapanmasındaki bozulmayı yalnızca $B$ katmanına
+yıkar.
 
 $V > c$ olduğundan $u = c^2/V < c$'dir, yani $B$ gerçekten subluminaldir. Her $V$
 değeri için
@@ -810,8 +811,8 @@ değildir**: $D$, [4]'ün genişletilmiş grubunda bulunmaz, çünkü içerdiği
 $x \leftrightarrow y$ takasının üç boyuttaki determinantı $-1$'dir ve dolayısıyla
 $SO(3)$ elemanı değildir. Bu, Bölüm 17.7'de hesaplanmıştır.
 
-Bu bölümün taşıdığı tek fark, kapanma bozulmasının hangi katmandan geldiğinin
-ayrıştırılmasıdır: $D$ kapalıdır, $B$ değildir. [4]'te sorun bu biçimde
+Bu bölüm tek bir fark taşır: kapanma bozulmasını hangi katmanın ürettiğini
+ayrıştırır. $D$ kapalıdır, $B$ değildir. [4]'te sorun bu biçimde
 ortaya konmaz, çünkü orada zaten kapalı bir grup inşa edilmiştir.
 
 ---
@@ -1104,10 +1105,10 @@ imza değişiminin bir özelliği mi yoksa bu ailenin yazılış biçiminin bir
 özelliği mi olduğunu belirler.
 
 Literatürün genel olarak kullandığı reçetede iki koşul birlikte dayatılır.
-**Enine olma**, dejenere olan bileşenin birinci mertebeden sıfırlanmasıdır;
-determinantın birinci mertebeden sıfırlanmasını ve yüzeyin düzgün gömülü
-kalmasını sağlayan şey budur. **Tümüyle jeodezik olma** ise dış eğriliğin
-sıfırlanmasıdır; dağılımsal kaynağı kaldıran şey de budur. Bu ikisi **farklı
+**Enine olma**, dejenere bileşenin birinci mertebeden sıfırlanmasıdır. Bu koşul
+iki şeyi sağlar: determinant birinci mertebeden sıfırlanır, ve yüzey düzgün gömülü
+kalır. **Tümüyle jeodezik olma** ise dış eğriliğin sıfırlanmasıdır, ve dağılımsal
+kaynağı kaldıran koşul budur. Bu ikisi **farklı
 bileşenleri** bağlar: enine olma dejenere bileşenin türevine, dış eğrilik ise
 teğet bloğun normal türevinin lapse'a bölümüne bakar. Bağımsız iki ayardır ve
 ikisi birden sağlanabilir. Literatürün ikisini bir arada, aralarında bir
@@ -1223,9 +1224,9 @@ $v_{\text{grup}} < c$'dir; eşik aşılmaz, **teğet** geçilir.
 ### 4.1 Hangi eklem koşulu seçildi, ve seçim ne kadar belirleyici
 
 Yukarıdaki iki koşulun birlikte dayatılması masum bir adım değildir. İmza
-değişimi literatüründe bu tam olarak tartışmalı noktadır: dış eğriliğin yüzeyde
-yalnızca **sürekli** mi olması gerektiği (*zayıf* imza değişimi), yoksa
-**sıfırlanması** mı (*güçlü*). [6] sekiz aday eylem yazıp her birinin hangi
+değişimi literatüründe tartışmalı nokta tam olarak budur. Dış eğrilik yüzeyde
+yalnızca **sürekli** mi kalmalı (*zayıf* imza değişimi), yoksa **sıfırlanmalı**
+mı (*güçlü*). [6] sekiz aday eylem yazıp her birinin hangi
 koşulu verdiğini inceler ve ikisini de savunulabilir bulur. [7] daha ileri gider:
 imza değişiminde kanonik Einstein denklemleri diye bir şey yoktur, seçim
 yapılmak zorundadır; [9] aynı noktayı yineleyip herhangi bir seçimi "asıl"
@@ -1546,17 +1547,17 @@ budur: tek pozitif ekseni çeviren dönüşüm bir izometri olduğu için metrik
 üretilen hiçbir nicelik geleceği geçmişten ayırt edemez. Ufkun içinde ayırt eden
 şey de bir zaman oku değildir, $r$'nin azalmasını dayatan denklemin kendisidir.
 
-Bu karşılaştırma metnin en önemlisidir ve bu yüzden kısa kesilmemelidir. Çalışmanın
-çekirdeği, bir eksenin karakter değiştirmesinden yer değiştirmenin zaman kaymasına
-çevrilmesidir; ufkun içi, yerleşik fizikte bu çevrimin bilinen **tek** örneğidir.
+Bu karşılaştırma metnin en önemlisidir. Çalışmanın çekirdeği bir çevrimdir: bir
+eksen karakter değiştirir, ve kat edilen mesafe bir zaman kaymasına dönüşür. Ufkun
+içi, yerleşik fizikte bu çevrimin bilinen **tek** örneğidir.
 Dolayısıyla asıl soru şudur: aynı değiş tokuş orada da olurken, neden ufkun içi bir
 zaman yolculuğu düzeneği olarak kullanılmıyor.
 
 İki sebep vardır ve ikisi de bu modelde ayrı ayrı hesaplanmıştır.
 
-**Birincisi, ufuk tek yönlüdür.** Karakter değiştiren eksende kat edilen mesafenin
-bir zaman kayması olarak okunabilmesi için, kayması gereken saatin bulunduğu yere
-**geri dönmek** gerekir. Ufkun içinden dışarıya hiçbir yol yoktur, dolayısıyla
+**Birincisi, ufuk tek yönlüdür.** Karakter değiştiren eksende bir mesafe kat
+edilir. O mesafe bir zaman kayması sayılacaksa, kayacak saatin yanına **geri
+dönmek** gerekir. Ufkun içinden dışarıya hiçbir yol yoktur, dolayısıyla
 orada kat edilen $\Delta r$ dışarıdaki hiçbir saate rapor edilemez. Buradaki eşiğin
 iki yüzü vardır ve ikinci geçişin genliği sıfır değildir (Bölüm 3.3, Bölüm 12).
 Çevrimi kullanılabilir kılan şey imzanın dönmesi değil, **dönüşün mümkün olması**dır.
@@ -1760,9 +1761,9 @@ $1+2$ boyutta Newton'un ikinci yasası tam olarak integre edilebilir, ve her
 başlangıç koşulu için **etkin tek zamanlı** bir evrim verir. Kuantum tarafta ise
 düzey aralıkları, toplam süre ve $\hbar$ içeren genelleştirilmiş bir belirsizlik
 bağıntısı çıkar. Bu, üç zamanlı Bölge II'nin dışarıdan bakıldığında tek zamanlı
-görünebileceği anlamına gelir. Buradaki formülasyon ile arasındaki fark, [22]'in
-evrimin üniter ve olasılık koruyan olmasını istemesidir; Bölüm 28'da gösterildiği
-gibi Bölge II'de bu talebin dayandığı yapı zaten mevcut değildir. Yine de bu
+görünebileceği anlamına gelir. Buradaki formülasyondan bir noktada ayrılır: [22]
+evrimin üniter ve olasılık koruyan olmasını ister. Bölüm 28 ise Bölge II'de bu
+talebin dayandığı yapının bulunmadığını gösterir. Yine de bu
 itiraz açık bir sorudur; model onu kendi lehine kapatmamıştır.
 
 ---
@@ -2038,14 +2039,14 @@ hıza ulaşır; ötesinde tanımsızdır.
 
 ## 10. Parçacık nedir: dalga okuması ve parçacık okuması
 
-Bu çalışmanın konusu kütleli bir parçacığın eşiği geçmesi, öte tarafta bir süre
-bulunması ve geri dönmesidir. Dolayısıyla "parçacık" sözcüğünün ne anlama
-geldiği bir ayrıntı değil, bütün hesabın dayanağıdır ve önce sabitlenmelidir.
+Bu çalışma şunu ele alır: kütleli bir parçacık eşiği geçer, öte tarafta bir süre
+kalır, ve geri döner. Dolayısıyla "parçacık" sözcüğü bir ayrıntı değil, bütün
+hesabın dayanağıdır, ve önce sabitlenmesi gerekir.
 
 Sabitlemek zorunludur, çünkü Bölge II'de parçacık kavramı olağan anlamıyla
-mevcut değildir. Bölüm 28.2'de gösterildiği gibi orada pozitif ile negatif frekans
-ayrımı, Hamiltonyenin alttan sınırlı olması ve Poincaré grubunun üniter temsili,
-yani parçacık kavramının dayandığı üç yapının üçü de yoktur. Bölge I'de doğal
+mevcut değildir. Parçacık kavramı üç yapıya dayanır: pozitif ile negatif frekans ayrımı, alttan
+sınırlı bir Hamiltonyen, ve Poincaré grubunun üniter temsili. Bölüm 28.2 orada
+üçünün de bulunmadığını gösterir. Bölge I'de doğal
 görünen bir tanımı öte tarafa taşımak bu yüzden serbest değildir.
 
 Burada benimsenen çözüm, tek bir tanım aramak yerine **iki okumayı birlikte
@@ -2256,7 +2257,7 @@ buradakinden farklıdır. Orada yol şudur. İki boyutlu bir imza değiştiren u
 Schrödinger Hamiltonyeninin öz eşlenik genişlemelerinden çıkar. Alanın sürekli
 olması ve koşulların eklem koşulu biçiminde olması talebi, bu genişlemelerden
 tek bir küme seçer. Klein-Gordon başlangıç değer problemi o kümede kötü
-konumlanmıştır. Ve değişim yüzeyinden uzakta düzgün, tıkız destekli bir
+konumlanmıştır. Ayrıca değişim yüzeyinden uzakta düzgün, tıkız destekli bir
 başlangıç verisi için çözümün $L^2$ normunun **sonlu zamanda ıraksadığı**
 ispatlanır. Yukarıdaki
 mod hesabı aynı sonuca çok daha basit bir yoldan varır ve bir ispat değil,
@@ -2317,7 +2318,7 @@ adayın hangisi doğru olursa olsun, öte tarafa erişen mod kümesi kütle kabu
 üzerindedir.
 
 **Literatürdeki alternatif, ve neden izlenmedi.** Ultrahiperbolik başlangıç
-değer problemi, veriye konan **nonlokal** bir kısıt altında iyi konumlanır. Ama o
+değer problemi, veriye konan **nonlokal** bir kısıt altında iyi konumlanır. Ancak o
 kısıtın kökenine bakıldığında şu görülür: kısıtı sağlayan veriler, tek zamanlı
 bir nesnenin izdüşümüdür. Yani o yol öngörüyü, veriyi örtük biçimde tek zamanlı
 kılarak kurtarır. Buradaki sonuç o yolu izlemez ve ona ihtiyaç duymaz: hiçbir
@@ -2573,9 +2574,9 @@ Bu, Bölüm 17'de kurulan sözlüğün en somut maddesidir ve gidiş dönüşün
 yapabildiği tek şeydir: yön değiştirmek.
 
 **Çekince.** Bu sonuç dönüşüm düzeyindedir ve arayüzün mod süzgecinden
-bağımsızdır. Bir $O(3)$ dönmesinin öte tarafta gerçekten gerçekleşip
-gerçekleşmediği, yani parçacığın orada ne yaptığı, bu hesabın konusu değildir;
-hesaplanan şey, gerçekleşirse Bölge I'de ne göründüğüdür.
+bağımsızdır. Parçacık öte tarafta bir $O(3)$ dönmesi geçirir mi, yani orada ne
+yapar: bu hesabın konusu o değil. Hesap şunu verir: geçirirse Bölge I'de ne
+görünür.
 
 **Kalan çekince.** Bu muhasebe doğrusal ve durağan saçılma kurgusundadır.
 
@@ -2695,7 +2696,7 @@ Karşı yüzden dönüş, başka bir yerden gelmiş gibi değil, **negatif
 enerjiyle** gelmiş gibi görünür.
 
 Bu, tabloyu iki yerden değiştirir. Çıkış yüzü ile yönelim bağımsız etiketler
-değildir, ikisi de aynı vektörün parçalarıdır. Ve "hiç çıkmaz" satırının yanına
+değildir, ikisi de aynı vektörün parçalarıdır. Bir de "hiç çıkmaz" satırının yanına
 üçüncü bir okuma girer: negatif enerjili bir varış, sıradan bir gözlemciye
 parçacık yerine karşıparçacık gibi görünebilir, ki bu literatürdeki çift
 yaratımı okumasıyla aynı yere düşer.
@@ -2758,10 +2759,10 @@ tek bir deney ikisini ayırır.
 Bu, çalışmanın ayırt edici öngörüsünün bulunduğu yerdir ve önceki hâlinden
 farklı olarak ulaşılamaz bir yüzeye değil, ara bölgenin kendisine bağlıdır.
 
-**Çekince.** İki okumanın verdiği sıfır ve bir uçları hesaplanmış değil,
-**varsayılmıştır**: ayar okumasında dönmenin özdeşlik olması ara bölgenin
-simetrik olduğu varsayımına, bilgisizlik okumasında düzgün dağılım ise hiçbir
-yönün ayrıcalıklı olmadığı varsayımına dayanır. Hesaplanan şey, bu varsayımlar
+**Çekince.** İki okumanın verdiği sıfır ve bir uçları hesaplı değil,
+**varsayılmıştır**. Ayar okumasında dönmenin özdeşlik olması, ara bölgenin
+simetrik olduğu varsayımına dayanır. Bilgisizlik okumasındaki düzgün dağılım ise
+hiçbir yönün ayrıcalıklı olmadığı varsayımına. Hesaplanan şey, bu varsayımlar
 verildiğinde ne çıktığıdır. Hangi okumanın doğru olduğunu belirlemek eklem
 koşullarının asimetrik hâlinin çözülmesini gerektirir ve burada yapılmamıştır.
 
@@ -3001,9 +3002,9 @@ ve ikisinde de yön seçilemez.
 ilerleme zorunluluğu, Bölüm 8.3'te ayrılmış ve yalnızca birincisinin
 hesaplandığı orada gösterilmiştir.
 
-Bu ifadenin Bölüm 2.1.3'ün sonucuyla nasıl bir arada durduğu da orada yazılıdır:
-yön seçilememesi cismin o eksende geri dönememesidir, oysa dönüş anının işareti
-cismin yürüyüş yönünden değil hangi geçiş eşlemesinin kullanıldığından gelir. İki
+Bu ifade Bölüm 2.1.3'ün sonucuyla nasıl bir arada durur: o da orada yazılı. Yön
+seçilemez, çünkü cisim o eksende geri dönemez. Dönüş anının işareti ise cismin
+yürüyüş yönünden gelmez; hangi geçiş eşlemesi kullanıldığından gelir. İki
 ifade farklı niceleyicilere sahiptir ve çelişmezler.
 
 
@@ -3233,7 +3234,7 @@ paketin **tepe noktasının** nereye düştüğüdür.
 
 **Ve bir sinyal taşımadığı.** Bu nokta açık değil, hesaplanmıştır. Bölüm 22.7
 cepheyi tepeden ayrı hesaplar. Cephe hızı frekans büyüdükçe ışık hızına düşer.
-Bölge cepheyi hiçbir kalınlıkta öne almaz. Ve öne alma büyürken onu taşıyan
+Bölge cepheyi hiçbir kalınlıkta öne almaz. Öne alma büyürken de onu taşıyan
 genlik $d = 32$ için $5{,}2 \times 10^{-32}$'ye çöker. Yukarıdaki $+29{,}0743$, bir mesajın ışığı
 geçtiği anlamına gelmez ve bu çalışma öyle bir iddiada bulunmamaktadır.
 
@@ -3336,10 +3337,10 @@ Formül, öte taraftaki yer değiştirmeyi veri alır. Yer değiştirmenin **iş
 dönüş anını doğrudan belirlediğine göre, o işaretin buradan kurulup
 kurulamayacağı ayrı ve meşru bir sorudur.
 
-**İki soru birbirinden ayrıdır.** Hangi geçiş eşlemesinin
-gerçekleştiği sorusu, Bölge I'in zaman yuvası ile öte tarafın ayrıcalıklı uzay
-ekseninin **birlikte** ters çevrilmesiyle ilgilidir ve Bölüm 24.7 ile 25'te
-işlenir. Buradaki soru ise eşleme verilmişken **yolculuğun yönüdür** ve
+**İki soru birbirinden ayrıdır.** Birincisi hangi geçiş eşlemesinin
+gerçekleştiğidir. Bu soru, Bölge I'in zaman yuvasıyla öte tarafın ayrıcalıklı uzay
+eksenini **birlikte** ters çeviren dönüşüme bakar, ve Bölüm 24.7 ile 25 onu
+işler. Buradaki soru ise eşleme verilmişken **yolculuğun yönüdür** ve
 yalnızca geçiş ekseninin ters çevrilmesine bakar. İşaret dizileri olarak
 yazıldığında birincisi $(-1,-1,+1,+1)$, ikincisi $(+1,-1,+1,+1)$'dir; çarpımları
 $(-1,+1,+1,+1)$, yani Bölge I zamanının saf ters çevrilmesidir. İki işlem farklı
@@ -3413,9 +3414,9 @@ eksen boyunca dalga sayısının karesi, yani **başka bir nesne**. Bu çalışm
 değişmezi hiçbir yerde hesaplamıyor, dolayısıyla bir kütle imzası da iddia
 etmiyor. Eldeki sonuç rejim ayrımının kendisi.
 
-İki rejim birbirinin tümleyenidir. Bu, iki ayrı yoldan yazılmış iki yüklemin
-hesapla uyuşmasıdır: biri iç dalga sayısından, öteki eşik eniyilemesinin
-kullandığı engel testinden gelmektedir. Taranan dört bin frekansın hiçbiri, iç
+İki rejim birbirinin tümleyenidir. İki ayrı yoldan yazılmış iki yüklem hesapta
+uyuşur: biri iç dalga sayısından gelir, öteki eşik eniyilemesinin kullandığı engel
+testinden. Taranan dört bin frekansın hiçbiri, iç
 modu kütle kabuğuna oturtup aynı anda gecikmenin doymasına izin vermemektedir.
 Bu tümleyenlik de yeni bir olgu değildir: sönümlü modun kendisi geçiş süresine
 katkı vermez, dolayısıyla gecikmenin doyması zaten iç bölgenin sönümlü olmasını
@@ -3551,9 +3552,8 @@ $0{,}3166$ ve $0{,}1000$'e inerken dönen ağırlık $4{,}772425 \times 10^{-10}
 değerinde **kıpırdamamaktadır**. Ödenen şey enerji ve daha ince bir bölgedir.
 
 **Sonucun ifadesi**, Özet'teki "Ana sonuç" paragrafında verilmiştir ve burada
-tekrarlanmaz. Bu bölümün eklediği şey o ifadenin kendisi değil, yukarıdaki yedi
-halkanın onu nasıl ürettiği ve aşağıdaki tek parçacığın onu nasıl
-gerçeklediğidir.
+tekrarlanmaz. Bu bölüm o ifadeyi eklemez; yukarıdaki yedi halkanın onu nasıl
+ürettiğini, ve aşağıdaki tek parçacığın onu nasıl gerçeklediğini gösterir.
 
 **İddianın sınırı**, aynı şekilde Özet'te üç bedel olarak sayılmıştır: genliğin
 küçüklüğü bir büyüklük sorunudur, ve Bölüm 2.1.6 bunun seçilmiş bir çalışma
@@ -3828,7 +3828,7 @@ sınırlar, integrale uydurulmuş değildir.
 
 **Bu maddeyi kapatmaz, daraltır.** Hesap minisüperuzay biçimi üzerinde durur, iki
 geçişin ortak genliğinin kendisi üzerinde değil. Bölüm 27.4'teki madde bu nedenle
-açık kalır. Ama artık "hiçbir ölçüt sınanmadı" demiyor; "sınanan ölçüt tutarlı
+açık kalır. Ancak artık "hiçbir ölçüt sınanmadı" demiyor; "sınanan ölçüt tutarlı
 çıktı, ama indirgenmiş biçimde" diyor.
 
 ### 22.6 Geçiş süresinin beş okuması, tek çözüm üzerinde
@@ -4043,10 +4043,10 @@ bir metin, kolay yarıyı cevaplamış olur.
 Bu nedenle Bölüm 24 tam bir sicil tutar: on beş itiraz, her birinin hükmü, ve
 her hükmün hangi hesaptan geldiği. Hükümler dört türlüdür ve birbirinin yerine
 geçmez. **Cevaplandı**, buradaki bir hesabın itirazın bu kurguya ulaşmadığını
-göstermesidir. **Kabul edildi**, itirazın isabet etmesi ve savunma yerine ilgili
-iddianın geri çekilmesi ya da daraltılmasıdır. **Daraltıldı**, itirazın zeminin
-bir kısmına isabet etmesi ve ayakta kalan kısmın yazılmasıdır. **Sınanmadı**,
-itirazın gerçek olması ama buradaki hiçbir hesabın ona değmemesidir; bunlar
+göstermesidir. **Kabul edildi**: itiraz isabet eder, ve savunma yerine ilgili
+iddia geri çekilir ya da daralır. **Daraltıldı**: itiraz zeminin bir kısmına
+isabet eder, ve ayakta kalan kısım yazılır. **Sınanmadı**: itiraz gerçektir, ama
+buradaki hiçbir hesap ona değmez; bunlar
 atlanmak yerine açıkça taşınır.
 
 ## 24. İtirazlar ve cevaplar
@@ -4326,9 +4326,9 @@ atfı; kod bunu da denetler.
 **Sınıflandırma artık kodda tutulmaktadır**, makalede beyan edilmez
 . Bunun nedeni Bölüm 25.1'in yakalamak için
 var olduğu şeydir: elle bakılan bir tablo, denetlenemeyen bir sayımdır. Sicilde
-her sonuç **ne söylediğiyle** adlandırılır, nerede yayımlandığıyla değil; böylece
-bir bölüm yeniden numaralandığında ya da bir ön baskı aşıldığında kodda bakım
-gerekmez. Kaynakça tarafı bu sicile **konu üzerinden** bağlanır.
+her sonuç **ne söylediğiyle** adlandırılır, nerede yayımlandığıyla değil. Böylece
+bir bölüm yeniden numaralanınca ya da bir ön baskı aşılınca kod bakım
+istemez. Kaynakça tarafı bu sicile **konu üzerinden** bağlanır.
 
 Sicil üç durum ayırır ve sayıları kendisi üretir:
 
@@ -4474,9 +4474,9 @@ edilmesi gereken mesafe $2{,}4845$'ten $0{,}0316$'ya inmektedir. Yani iki talep
 birbiriyle takas edilmez: enerji yükseltmek yolculuğu kısaltırken ağırlıktan
 hiçbir şey götürmez.
 
-**Hiçbir hızın dokunmadığı engel.** Hangi geçişin gerçeklendiği ne enerjiyle ne
-denemeyle belirlenir, çünkü bu, görülemeyecek kadar küçük bir nicelik değil,
-metriğin yapmadığı bir seçimdir. İki aile bu çalışmada hesaplanan **hiçbir**
+**Hiçbir hızın dokunmadığı engel.** Hangi geçiş gerçeklenir: bunu ne enerji ne
+deneme belirler. Söz konusu olan, görülemeyecek kadar küçük bir nicelik değil;
+metriğin yapmadığı bir seçim. İki aile bu çalışmada hesaplanan **hiçbir**
 nicelikte ayrışmamaktadır; daha iyi bir düzenek aynı sayıları ölçer.
 
 **Koşullu ifadenin dayandığı yer** dördüncü satırdır. Bu çalışmanın hiçbir
@@ -4591,7 +4591,7 @@ bildirmek, birini ötekine yazmak olurdu; bu nedenle ayrı ayrı verilmektedirle
 
 **Simülasyonun üç kez düzelttiği yer.** Grup hızı ilk yazımda ters çevrilmişti
 ve arama penceresi tepeyi hiç içermiyordu. Bant, dışarıdaki dalga sayısının
-sanal olduğu bölgeye uzanıyordu. Ve ilk seçtiğim paket genişliğinde yeniden
+sanal olduğu bölgeye uzanıyordu. İlk seçilen paket genişliğinde ise yeniden
 ağırlıklandırma gecikmeye baskın gelmekteydi; kalınlıkla **büyüyen bir öne
 kayma** neredeyse gecikme diye kaydedilecekti. Üçü de simülasyonun kendisi
 tarafından yakalanmıştır, ki bir simülasyonun varlık nedeni budur.
@@ -4654,9 +4654,9 @@ Bölüm 24 ve Bölüm 27.5 onun hangi biçimlerinin kapanmadığını sayar.
 dönebileceğini gösterir, dönüşün **nereye** düştüğünü vermez. Bu çalışmanın
 çekirdeği o eşlemedir (Bölüm 19), ve karşılığı bulunamayan da odur (Bölüm 27.3).
 
-**Sahnenin kendisi de ödünçtür.** Öte tarafın bir uzay ve üç zaman ekseni
-taşıdığı, ve parçacıkların yalnızca o tek uzay ekseni boyunca hareket ettiği
-[2]'nin sonucudur; bu çalışmanın kurgusu değil, çalıştığı zemindir. Bölüm 9.1'in
+**Sahnenin kendisi de ödünçtür.** Öte tarafın bir uzay ve üç zaman ekseni vardır,
+ve parçacıklar yalnızca o tek uzay ekseni boyunca hareket eder. Bu [2]'nin
+sonucudur: çalışmanın kurgusu değil, çalıştığı zemin. Bölüm 9.1'in
 dört yuvayı tek tek tarayan tablosu o zemin üzerinde kurulur. Kendine ait olan,
 tablonun son satırıdır: o tek uzay ekseninde atılan bir birim adımın Bölge I
 saatinde **tam olarak bir birim** ürettiği, ve diğer üç eksenin tam olarak sıfır
@@ -4675,9 +4675,9 @@ ailenin bir üyesidir; Bölüm 2.1'in yaptığı, aileyi tarayıp hangi üyeleri
 kullanılabilir olduğunu saymaktır, değiş tokuşu keşfetmek değildir.
 
 İkinci parça, yani o eksende **kat edilen mesafenin** bir zaman kaymasına çevrilmesi,
-arandı ve bulunamadı. Değiş tokuş bir dönüşüm özelliği olarak sayısız yerde
-geçmektedir; bir **yer değiştirmenin** o dönüşüm altında bir saat kaymasına
-dönüştüğü ve dönüşte hangi ana varıldığının hesaplandığı bir çalışma
+arandı ve bulunamadı. Değiş tokuş, bir dönüşüm özelliği olarak sayısız yerde
+geçer. Şöyle bir çalışma ise yok: bir **yer değiştirme** o dönüşüm altında bir
+saat kaymasına dönüşsün, ve dönüşte hangi ana varıldığı hesaplansın
 bulunmamaktadır. Aradaki fark bir dönüşümün özelliği ile o dönüşümün bir
 düzenek olarak kullanılması arasındaki farktır.
 
@@ -4685,7 +4685,7 @@ Bunun en yakın karşılığı yerleşik fizikte durur, ve modelin en ciddi sın
 odur. Kara delik ufkunun içinde de aynı değiş tokuş olur; $r$ zaman-benzeri hâle
 gelir. Buna rağmen ufkun içi bir zaman yolculuğu düzeneği olarak kullanılmaz. Nedeni iki tanedir: ufuk tek yönlüdür, ve orada eksende yön
 seçilemez. Bölüm 7.2 bu iki itirazı karşılar, ve karşılığında iki hesap
-gösterir. İkinci geçişin genliği sıfır değildir. Ve sekiz geçişin dördü yer
+gösterir. İkinci geçişin genliği sıfır değildir. Sekiz geçişin dördü de yer
 değiştirmeyi geriye taşır. Çekirdeğin ayakta kalması bu ikisine bağlıdır.
 
 **Basit ilmeğe yöneltilen itiraz.** [56] bu kurgunun naif biçimine karşı bir
@@ -4859,14 +4859,14 @@ Dışarıdaki gözlemcinin elinde yalnızca sınırdaki muhasebe vardır: kaç d
 **Sayım ayırt etmiyor.** İleri giderek giren ve geri giderek çıkan bir çizgi,
 tek bir zaman yönünde ısrar eden gözlemciye **iki** çizgi olarak görünür; hep
 aynı türden iki tane, hiçbir zaman biri girip biri çıkan. Sınır sayımı bu
-yüzden ikişer ikişer değişir, ve bu tam olarak bir çift yaratılmasının ya da yok
-olmasının değiştirdiği kadardır: $n$ dönmüş çizgi $+2n$ verir, $n$ yaratılmış
-çift de $+2n$ verir.
+yüzden ikişer ikişer değişir. Bir çift yaratıldığında ya da yok olduğunda sayım
+tam olarak o kadar değişir: $n$ dönmüş çizgi $+2n$ verir, $n$ yaratılmış çift de
+$+2n$ verir.
 
 **Görünür yük de ayırt etmiyor.** Bir çizginin zaman yönünü ters çevirmek
 taşıdığının işaretini de ters çevirir, dolayısıyla bölge, oraya hiçbir yük
 konmamışken dışarıya bir yük gösterir: bir dönmüş çizgi için $+2$, iki için
-$+4$, dört için $+8$. Ama aynı yük çift okumasında da görünür.
+$+4$, dört için $+8$. Ancak aynı yük çift okumasında da görünür.
 
 **Enerji ayırt ediyor.** Yaratılmış bir çift, çizgi başına iki durgun enerji
 bedeli öder; dönmüş bir çizgi hiçbir bedel ödemez.

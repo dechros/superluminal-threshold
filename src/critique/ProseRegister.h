@@ -40,6 +40,18 @@ namespace slm
     /// the reader about the document instead of stating the claim the wrapper
     /// contains. The claim always survived on its own.
     ///
+    /// SENTENCES DO NOT OPEN WITH A BARE CONJUNCTION. Formal Turkish does not
+    /// begin a sentence with "Ve" or "Ama". This rule is here because breaking
+    /// the long sentences introduced nine of them: splitting a clause off and
+    /// leaving its conjunction in front is the easiest way to turn written
+    /// Turkish into spoken Turkish, and it happened while fixing something else.
+    ///
+    /// NOMINALISATION MAY NOT CHAIN. Three or more verbal nouns in one sentence
+    /// is the fault that survives every other rule: each is grammatical, and
+    /// together they put four nouns in front of the verb and the reader holds
+    /// all of them until it arrives. The cure is to let the sentence have a
+    /// verb early, and to make a list into a list.
+    ///
     /// NO EM DASH, which is a house rule rather than a language one, and is
     /// checked here with the rest so there is one place to look.
     class ProseRegister
@@ -59,6 +71,9 @@ namespace slm
         /// Most passive constructions one paragraph may carry.
         static constexpr int passivesPerParagraph = 2;
 
+        /// Most verbal nouns one sentence may carry.
+        static constexpr int nominalsPerSentence = 2;
+
         /// The manuscript, or an empty string when it cannot be opened.
         static std::string text();
 
@@ -75,6 +90,14 @@ namespace slm
 
         /// Sentences that instruct the reader about the text.
         static std::vector<Fault> selfReference(const std::string &text);
+
+        /// Sentences opening with a bare conjunction.
+        static std::vector<Fault> openingConjunctions(const std::string &text);
+
+        /// Sentences carrying more verbal nouns than the limit. Enumerations are
+        /// excluded, since a list of nominalised results reads better as one
+        /// sentence than as five.
+        static std::vector<Fault> nominalChains(const std::string &text);
 
         /// Occurrences of the em dash.
         static std::vector<Fault> emDashes(const std::string &text);
