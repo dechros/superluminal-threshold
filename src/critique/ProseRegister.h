@@ -8,73 +8,60 @@
 namespace slm
 {
 
-    /// Measurable rules for the register the manuscript is written in.
+    /// Measurable rules for the register a Turkish scientific text is written in.
     ///
-    /// The manuscript is in Turkish and had drifted into a register that is
-    /// Turkish by vocabulary and unreadable by construction. The rules below are
-    /// not assembled by ear: they come from the conventions Turkish journals
-    /// state for scientific prose, and from measuring prose that is agreed to be
-    /// well written in that language. Each one is a number, so the text can be
-    /// held to it rather than argued about.
+    /// Each rule is a number, so a text can be held to it instead of argued
+    /// about. The rules come from the conventions Turkish journals state for
+    /// scientific prose and from measuring prose accepted as well written in
+    /// that language.
     ///
     /// FIRST PERSON IS FORBIDDEN. Turkish academic convention rules out first
-    /// person singular and plural, and possessive forms of the work itself. This
-    /// matters here because the obvious cure for the next rule is first person,
-    /// and that cure is not available. A list of verb endings caught the verbs
-    /// and missed the nouns: fifteen quantities in the accounting chapters were
-    /// called ours rather than named, and a table column of them passed every
-    /// check. Turkish marks that with a suffix, so the check now reads the
-    /// suffix, allowing a case ending to follow it, and keeps a short list of
-    /// ordinary words that happen to end the same way.
+    /// person singular and plural, and possessive forms of the work itself. It
+    /// is not enough to look for first person verbs: Turkish marks a possessor
+    /// with a suffix, so a noun can be in the first person while every verb in
+    /// the sentence is impersonal, and a case ending may follow that suffix. A
+    /// few ordinary words end in the same letters and are listed as exceptions.
     ///
     /// PASSIVES MAY NOT STACK. The passive is normal in this register and is not
     /// a fault on its own. Three or more in one paragraph is, because by then
     /// nothing in the paragraph has a subject. The way out is neither the
-    /// passive nor the first person: it is to let the object under study act.
-    /// The table shows, the scan leaves eight, the closed form gives no delay,
-    /// the code refuted the line. Well written Turkish scientific prose does
-    /// this throughout, with an impersonal subject that is nonetheless an agent.
+    /// passive nor the first person, both of which are unavailable here: it is to
+    /// let the object under study act. The table shows, the scan leaves eight,
+    /// the closed form gives no delay. Well written Turkish scientific prose
+    /// does this throughout, with an impersonal subject that is still an agent.
     ///
     /// SENTENCES STAY SHORT. Measured on Turkish prose of this kind, sentences
     /// run from eight to twenty words, with an occasional longer one carrying a
-    /// list. Past thirty two words a sentence in this manuscript was reliably
-    /// doing three jobs at once.
+    /// list. Past the limit set below a sentence is usually doing several jobs
+    /// at once.
     ///
-    /// THE TEXT DOES NOT DISCUSS THE TEXT. Sentences saying that something must
-    /// be recorded, must not be confused, or must not be exaggerated instruct
-    /// the reader about the document instead of stating the claim the wrapper
-    /// contains. The claim always survived on its own.
+    /// THE TEXT DOES NOT DISCUSS THE TEXT. A sentence saying that something must
+    /// be recorded, must not be confused, or must not be exaggerated instructs
+    /// the reader about the document instead of stating the claim it wraps. The
+    /// claim reads the same without the wrapper.
     ///
     /// SENTENCES DO NOT OPEN WITH A BARE CONJUNCTION. Formal Turkish does not
-    /// begin a sentence with "Ve" or "Ama". This rule is here because breaking
-    /// the long sentences introduced nine of them: splitting a clause off and
-    /// leaving its conjunction in front is the easiest way to turn written
-    /// Turkish into spoken Turkish, and it happened while fixing something else.
+    /// begin a sentence with "Ve" or "Ama". Splitting a long sentence and
+    /// leaving its conjunction in front is the usual way this appears, so the
+    /// rule matters most while another rule is being satisfied.
     ///
     /// NOMINALISATION MAY NOT CHAIN. Three or more verbal nouns in one sentence
-    /// is the fault that survives every other rule: each is grammatical, and
-    /// together they put four nouns in front of the verb and the reader holds
-    /// all of them until it arrives. The cure is to let the sentence have a
-    /// verb early, and to make a list into a list.
+    /// survives every other rule: each is grammatical, and together they put
+    /// several nouns in front of the verb and the reader holds all of them until
+    /// it arrives. The cure is a verb early in the sentence, and a list written
+    /// as a list.
     ///
-    /// A SUFFIX AGREES WITH HOW ITS NUMBER IS READ. Turkish attaches a case
-    /// ending to a numeral according to the sound of the spoken word, not the
-    /// digit, so a reference to chapter five takes one ending and a reference to
-    /// chapter six takes another. Fifteen references in this manuscript had the
-    /// wrong possessive, which reads as a misspelling to anyone who says the
-    /// sentence aloud; the first version of this check covered the possessive
-    /// alone and passed the manuscript, and a later reading found thirty eight
-    /// more in the locative, the dative and the accusative. So the check now
-    /// speaks the number and derives every ending from it: the trailing digit
-    /// names the word unless it is a zero, where the tens word takes over, and
-    /// the word's last vowel and last consonant fix both the vowel and the stop
-    /// of the ending. The locative after chapter six is voiced and back, after
-    /// chapter three voiceless and front, and nothing about the digits says so.
-    /// The ending does not have to touch the digits either: a citation closes its
-    /// bracket and a number closes its arithmetic delimiter first, and thirty
-    /// bibliography references sat behind that bracket where the first two
-    /// versions of this check could not see them. A fraction is read digit by
-    /// digit, so its trailing zero is a zero rather than a thousand.
+    /// A CASE ENDING AGREES WITH HOW ITS NUMBER IS READ. Turkish attaches the
+    /// ending by the sound of the spoken word, not by the digit, so the ending
+    /// cannot be looked up from the numeral: it has to be derived. The trailing
+    /// digit names the spoken word, unless it is a zero, where the tens word
+    /// does; that word's last vowel gives the vowel of the ending and its last
+    /// consonant gives the stop. Five and six therefore take different endings
+    /// in every case, and so do three and four. Two further details decide
+    /// whether the check sees an ending at all: it need not touch the digits,
+    /// since a reference closes its bracket and a quantity closes its arithmetic
+    /// delimiter first, and a fraction is read digit by digit, so a trailing zero
+    /// after the separator is a zero rather than a thousand.
     ///
     /// NO EM DASH, which is a house rule rather than a language one, and is
     /// checked here with the rest so there is one place to look.
@@ -98,7 +85,7 @@ namespace slm
         /// Most verbal nouns one sentence may carry.
         static constexpr int nominalsPerSentence = 2;
 
-        /// The manuscript, or an empty string when it cannot be opened.
+        /// The text under review, or an empty string when it cannot be opened.
         static std::string text();
 
         /// Sentences longer than the limit, excluding tables, display equations
@@ -124,7 +111,7 @@ namespace slm
         static std::vector<Fault> nominalChains(const std::string &text);
 
         /// Numerals whose case ending disagrees with how the number is read
-        /// aloud, in any of the cases the manuscript uses.
+        /// aloud, in any of the cases the text uses.
         static std::vector<Fault> numberSuffixes(const std::string &text);
 
         /// Occurrences of the em dash.
@@ -134,13 +121,13 @@ namespace slm
         static std::vector<Fault> faults(const std::string &text);
     };
 
-    /// Section holding the manuscript to the register it declares.
+    /// Section holding a text to the register it declares.
     class ProseRegisterSection : public Section
     {
     public:
         std::string title() const override
         {
-            return "The register the manuscript is held to";
+            return "The register the text is held to";
         }
         void run(Report &report) const override;
     };

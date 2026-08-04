@@ -203,7 +203,7 @@ namespace slm
                      !OpenQuestions::outcomeDistributionKnown());
         report.check(std::format("  the gravitational channel responds, with a contrast of "
                                  "{:.4f} at half a unit, and its capacity is unknown, but the "
-                                 "chapter that used it is out of scope, so this is carried as "
+                                 "construction that used it is out of scope, so this is carried as "
                                  "a record and not as an obstacle to the round trip",
                                  GravitationalChannel::contrast(IntermediateRegion::Kind::Kleinian, 1.0, 1.0, 0.5)),
                      !OpenQuestions::gravitationalCapacityKnown());

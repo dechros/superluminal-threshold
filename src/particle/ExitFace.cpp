@@ -28,7 +28,7 @@ namespace slm
         return std::abs(alongFirst - alongDiagonal) > 1e-9;
     }
 
-    double ExitFace::ourEnergyFromBranch(double crossingWavenumber)
+    double ExitFace::nearEnergyFromBranch(double crossingWavenumber)
     {
         return crossingWavenumber;
     }
@@ -78,19 +78,19 @@ namespace slm
                      "and that needs a time orientation the far side does not have",
                      !ExitFace::farSideSelectsBranch());
 
-        report.subsection("The branch is our own energy");
+        report.subsection("The branch is the near-side energy");
         for (double k1 : {0.0, 2.0})
         {
             const double q = std::sqrt(ExitFace::crossingWavenumberSquared(c, mu, k1, 0.5, 0.5));
             report.check(std::format("  k1 = {:g} : one branch returns energy {:+.4f}", k1,
-                                     ExitFace::ourEnergyFromBranch(q)),
-                         ExitFace::ourEnergyFromBranch(q) > 0.0);
+                                     ExitFace::nearEnergyFromBranch(q)),
+                         ExitFace::nearEnergyFromBranch(q) > 0.0);
             report.check(std::format("  k1 = {:g} : the other returns energy {:+.4f}", k1,
-                                     ExitFace::ourEnergyFromBranch(-q)),
-                         ExitFace::ourEnergyFromBranch(-q) < 0.0);
+                                     ExitFace::nearEnergyFromBranch(-q)),
+                         ExitFace::nearEnergyFromBranch(-q) < 0.0);
         }
         report.checkNear("the two branches differ by an overall sign and nothing else",
-                         ExitFace::ourEnergyFromBranch(3.0) + ExitFace::ourEnergyFromBranch(-3.0),
+                         ExitFace::nearEnergyFromBranch(3.0) + ExitFace::nearEnergyFromBranch(-3.0),
                          1e-15);
 
         report.subsection("What the conjecture turns into");
@@ -98,12 +98,12 @@ namespace slm
                      "conjecture, and the reason is the missing time orientation",
                      !ExitFace::farSideSelectsBranch());
         report.check("and the question of which face is the question of the sign of "
-                     "our own energy, since that slot is the crossing wavenumber",
-                     ExitFace::ourEnergyFromBranch(2.0) * ExitFace::ourEnergyFromBranch(-2.0) <
+                     "the near-side energy, since that slot is the crossing wavenumber",
+                     ExitFace::nearEnergyFromBranch(2.0) * ExitFace::nearEnergyFromBranch(-2.0) <
                          0.0);
         report.check("so a return through the opposite face reads here as a "
                      "negative-energy arrival rather than as a different place",
-                     ExitFace::ourEnergyFromBranch(-2.0) < 0.0);
+                     ExitFace::nearEnergyFromBranch(-2.0) < 0.0);
     }
 
 }

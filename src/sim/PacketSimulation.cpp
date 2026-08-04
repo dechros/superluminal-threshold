@@ -604,7 +604,8 @@ namespace slm
                                                                     spread, coarse));
         }
 
-        report.subsection("The displacement moves the envelope rigidly, and that is why one search suffices");
+        report.subsection("The displacement moves the envelope rigidly, and that is why one "
+                          "search suffices");
         {
             const double thickness = 8.0;
             const int coarse = 300;

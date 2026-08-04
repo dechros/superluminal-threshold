@@ -9,9 +9,9 @@
 namespace slm
 {
 
-    EnergyBookkeeping::Four EnergyBookkeeping::across(const Four &ours)
+    EnergyBookkeeping::Four EnergyBookkeeping::across(const Four &near)
     {
-        return {ours[3], ours[2], ours[1], ours[0]};
+        return {near[3], near[2], near[1], near[0]};
     }
 
     double EnergyBookkeeping::farEnergyMagnitude(const Four &far)
@@ -42,15 +42,15 @@ namespace slm
                vector[3] * vector[3];
     }
 
-    double EnergyBookkeeping::ourMomentumMagnitude(const Four &ours)
+    double EnergyBookkeeping::nearMomentumMagnitude(const Four &near)
     {
-        return std::sqrt(ours[1] * ours[1] + ours[2] * ours[2] + ours[3] * ours[3]);
+        return std::sqrt(near[1] * near[1] + near[2] * near[2] + near[3] * near[3]);
     }
 
     double EnergyBookkeeping::momentumAngle(const Four &first, const Four &second)
     {
         const double dot = first[1] * second[1] + first[2] * second[2] + first[3] * second[3];
-        const double lengths = ourMomentumMagnitude(first) * ourMomentumMagnitude(second);
+        const double lengths = nearMomentumMagnitude(first) * nearMomentumMagnitude(second);
         if (lengths == 0.0)
         {
             return 0.0;
@@ -61,20 +61,20 @@ namespace slm
     void EnergyBookkeepingSection::run(Report &report) const
     {
         using Four = EnergyBookkeeping::Four;
-        const Four ours = {5.0, 1.0, 2.0, 3.0};
+        const Four near = {5.0, 1.0, 2.0, 3.0};
 
-        report.subsection("What the three far-side energies are in our terms");
-        const Four far = EnergyBookkeeping::across(ours);
-        report.checkNear("the far-side energy vector is our three-momentum, reordered",
+        report.subsection("What the three far-side energies are in near-side terms");
+        const Four far = EnergyBookkeeping::across(near);
+        report.checkNear("the far-side energy vector is the near-side three-momentum, reordered",
                          EnergyBookkeeping::farEnergyMagnitude(far) -
-                             EnergyBookkeeping::ourMomentumMagnitude(ours),
+                             EnergyBookkeeping::nearMomentumMagnitude(near),
                          1e-12);
-        report.checkNear("and the far side's single momentum is our energy",
-                         EnergyBookkeeping::farMomentum(far) - EnergyBookkeeping::ourEnergy(ours),
+        report.checkNear("and the far side's single momentum is the near-side energy",
+                         EnergyBookkeeping::farMomentum(far) - EnergyBookkeeping::nearEnergy(near),
                          1e-12);
         report.checkNear("the invariant flips sign, as the metrics require",
                          EnergyBookkeeping::invariant(far, true) +
-                             EnergyBookkeeping::invariant(ours, false),
+                             EnergyBookkeeping::invariant(near, false),
                          1e-12);
 
         report.subsection("A plain round trip returns everything exactly");
@@ -82,11 +82,11 @@ namespace slm
         for (int slot = 0; slot < 4; ++slot)
         {
             report.checkNear(std::format("  slot {} comes back unchanged", slot),
-                             back[slot] - ours[slot], 1e-15);
+                             back[slot] - near[slot], 1e-15);
         }
         report.check("so the transformation itself loses nothing, and every loss "
                      "the model reports comes from the interface instead",
-                     back == ours);
+                     back == near);
 
         report.subsection("Only the length of the far energy is physical");
         for (double angle : {0.3, 1.0, 2.5})
@@ -111,18 +111,21 @@ namespace slm
         {
             const Four turned = EnergyBookkeeping::rotateFarEnergy(far, angle);
             const Four returned = EnergyBookkeeping::across(turned);
-            report.checkNear(std::format("  angle {:g} : our energy comes back the same", angle),
-                             EnergyBookkeeping::ourEnergy(returned) -
-                                 EnergyBookkeeping::ourEnergy(ours),
+            report.checkNear(std::format("  angle {:g} : the near-side energy comes back the "
+                                         "same", angle),
+                             EnergyBookkeeping::nearEnergy(returned) -
+                                 EnergyBookkeeping::nearEnergy(near),
                              1e-12);
-            report.checkNear(std::format("  angle {:g} : the length of our momentum is the same",
+            report.checkNear(std::format("  angle {:g} : the length of the near-side momentum is "
+                                         "the same",
                                          angle),
-                             EnergyBookkeeping::ourMomentumMagnitude(returned) -
-                                 EnergyBookkeeping::ourMomentumMagnitude(ours),
+                             EnergyBookkeeping::nearMomentumMagnitude(returned) -
+                                 EnergyBookkeeping::nearMomentumMagnitude(near),
                              1e-12);
-            report.check(std::format("  angle {:g} : but its direction has turned by {:.4f} radians",
-                                     angle, EnergyBookkeeping::momentumAngle(ours, returned)),
-                         EnergyBookkeeping::momentumAngle(ours, returned) > 1e-6);
+            report.check(std::format("  angle {:g} : but its direction has turned by {:.4f} "
+                                     "radians",
+                                     angle, EnergyBookkeeping::momentumAngle(near, returned)),
+                         EnergyBookkeeping::momentumAngle(near, returned) > 1e-6);
         }
 
         report.subsection("The mass shell survives the whole journey");
@@ -132,7 +135,7 @@ namespace slm
                 EnergyBookkeeping::across(EnergyBookkeeping::rotateFarEnergy(far, angle));
             report.checkNear(std::format("  angle {:g} : the mass is unchanged", angle),
                              EnergyBookkeeping::invariant(returned, false) -
-                                 EnergyBookkeeping::invariant(ours, false),
+                                 EnergyBookkeeping::invariant(near, false),
                              1e-12);
         }
 
@@ -140,14 +143,14 @@ namespace slm
         const Four turned = EnergyBookkeeping::rotateFarEnergy(far, 1.0);
         const Four returned = EnergyBookkeeping::across(turned);
         report.check("energy conserved, speed conserved, mass conserved, direction changed",
-                     std::abs(EnergyBookkeeping::ourEnergy(returned) -
-                              EnergyBookkeeping::ourEnergy(ours)) < 1e-12 &&
-                         std::abs(EnergyBookkeeping::ourMomentumMagnitude(returned) -
-                                  EnergyBookkeeping::ourMomentumMagnitude(ours)) < 1e-12 &&
-                         EnergyBookkeeping::momentumAngle(ours, returned) > 1e-6);
+                     std::abs(EnergyBookkeeping::nearEnergy(returned) -
+                              EnergyBookkeeping::nearEnergy(near)) < 1e-12 &&
+                         std::abs(EnergyBookkeeping::nearMomentumMagnitude(returned) -
+                                  EnergyBookkeeping::nearMomentumMagnitude(near)) < 1e-12 &&
+                         EnergyBookkeeping::momentumAngle(near, returned) > 1e-6);
         report.check("a rotation that is pure gauge over there is an observable "
                      "deflection over here",
-                     EnergyBookkeeping::momentumAngle(ours, returned) > 0.1);
+                     EnergyBookkeeping::momentumAngle(near, returned) > 0.1);
     }
 
 }

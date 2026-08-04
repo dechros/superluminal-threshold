@@ -61,7 +61,7 @@ namespace slm
         const double c = 1.0;
         const double thickness = 1.0;
 
-        report.subsection("A mass on our side changes the layer");
+        report.subsection("A mass on the near side changes the layer");
         for (double distance : {1.0, 2.0, 4.0})
         {
             report.check(std::format("  at distance {:g} the layer moves by {:.4f} per unit mass",
@@ -89,7 +89,7 @@ namespace slm
         report.check("and a Euclidean one does too",
                      GravitationalChannel::modulable(Kind::Euclidean, thickness, 1.0));
 
-        report.subsection("Nothing here outruns light on our own side");
+        report.subsection("Nothing here outruns light on the near side");
         for (double distance : {1.0, 5.0, 20.0})
         {
             report.checkNear(std::format("  the sender's action reaches the surface in {:g}",

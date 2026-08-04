@@ -178,7 +178,7 @@ namespace slm
         /// Envelope of the packet after the WHOLE round trip, back at the point
         /// it started from. Two crossings and a far-side displacement, with the
         /// displacement entering the phase as the dictionary says it must: the
-        /// far-side coordinate is our time slot, so travelling a distance there
+        /// far-side coordinate is the near-side time slot, so travelling a distance there
         /// multiplies each frequency by exp(i omega s) rather than by a spatial
         /// phase. Nothing else in the sum knows about that; it is the crossing
         /// dictionary applied once, and the peak is then found the same way as

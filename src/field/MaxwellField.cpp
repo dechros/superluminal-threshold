@@ -1,7 +1,7 @@
 #include "field/MaxwellField.h"
 
 #include "core/Report.h"
-#include "transform/InvolutionD.h"
+#include "transform/SignatureInvolution.h"
 
 #include <format>
 
@@ -18,7 +18,7 @@ namespace slm
 
     Matrix4 MaxwellField::transformedFieldTensor(const Matrix4 &f)
     {
-        const Matrix4 D = InvolutionD::matrix();
+        const Matrix4 D = SignatureInvolution::matrix();
         return D.transpose() * f * D;
     }
 
@@ -42,7 +42,7 @@ namespace slm
         const double c = 1.0;
         const Matrix4 eta = metricRegionI();
         const Matrix4 etaPrime = metricRegionII();
-        const Matrix4 D = InvolutionD::matrix();
+        const Matrix4 D = SignatureInvolution::matrix();
 
         report.subsection("Four-potential and four-current");
         const Vector4 a = MaxwellField::fourPotential(c, 2.0, 0.5, -1.0, 3.0);
@@ -54,14 +54,14 @@ namespace slm
         report.checkNear("charge density and current component SWAP", jPrime[3] - j[0]);
 
         report.subsection("Interaction term A_mu j^mu");
-        double ourInteraction = 0.0;
-        double theirInteraction = 0.0;
+        double nearInteraction = 0.0;
+        double farInteraction = 0.0;
         for (int i = 0; i < 4; ++i)
         {
-            ourInteraction += a[i] * eta.at(i, i) * j[i];
-            theirInteraction += aPrime[i] * etaPrime.at(i, i) * jPrime[i];
+            nearInteraction += a[i] * eta.at(i, i) * j[i];
+            farInteraction += aPrime[i] * etaPrime.at(i, i) * jPrime[i];
         }
-        report.checkNear("A'.j' = -A.j", theirInteraction + ourInteraction);
+        report.checkNear("A'.j' = -A.j", farInteraction + nearInteraction);
 
         report.subsection("Field tensor F' = D^T F D");
         const Matrix4 f = MaxwellField::fieldTensor(c, 1.0, 2.0, 3.0, 4.0, 5.0, 6.0);
@@ -70,10 +70,10 @@ namespace slm
                      fPrime.isEqual(-fPrime.transpose(), 1e-12));
 
         report.subsection("Invariant, the critical result");
-        const double ourInvariant = MaxwellField::invariant(f, eta);
-        const double theirInvariant = MaxwellField::invariant(fPrime, etaPrime);
+        const double nearInvariant = MaxwellField::invariant(f, eta);
+        const double farInvariant = MaxwellField::invariant(fPrime, etaPrime);
         report.checkNear("EXACT EQUALITY: the kinetic term is invariant under D",
-                         ourInvariant - theirInvariant);
+                         nearInvariant - farInvariant);
 
         report.subsection("Wave equation and charge conservation");
 

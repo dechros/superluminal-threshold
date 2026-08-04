@@ -13,7 +13,7 @@ namespace slm
     /// particle's orientation in the far-side times: it orients itself in time
     /// over there, and coming back that same orientation reads as an
     /// orientation in space here, so which way it comes out may not be
-    /// determined from our side at all.
+    /// determined from the near side at all.
     ///
     /// The calculation supports the conjecture and sharpens it into something
     /// less comfortable. Motion across the region is along the far side's one
@@ -21,7 +21,7 @@ namespace slm
     /// wavenumber along it. The mass shell fixes that wavenumber's magnitude
     /// and leaves its sign free, and the far side carries no time orientation
     /// with which to prefer one sign over the other. Meanwhile that same slot
-    /// is our own energy under the crossing. So the question of which face the
+    /// is the near-side energy under the crossing. So the question of which face the
     /// particle leaves by is the question of the sign of its energy here.
     class ExitFace
     {
@@ -42,9 +42,9 @@ namespace slm
         /// direction of the far-side energy vector rather than only its length.
         static bool crossingDependsOnOrientationDirection(double c, double mu, double length);
 
-        /// Our energy after returning, given the sign of the crossing
+        /// The near-side energy after returning, given the sign of the crossing
         /// wavenumber the particle carried.
-        static double ourEnergyFromBranch(double crossingWavenumber);
+        static double nearEnergyFromBranch(double crossingWavenumber);
 
         /// Whether the far side supplies anything that selects a branch. It
         /// does not, and the reason is that a branch is selected by an

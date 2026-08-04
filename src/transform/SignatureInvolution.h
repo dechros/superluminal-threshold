@@ -11,7 +11,7 @@ namespace slm
     /// The matrix builders are static because none of them depends on any
     /// instance state; the class exists to group them with the verifications
     /// that exercise them.
-    class InvolutionD : public Section
+    class SignatureInvolution : public Section
     {
     public:
         /// The discrete involution D, mapping (ct, x, y, z) to (z, y, x, ct).

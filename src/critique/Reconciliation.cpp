@@ -119,7 +119,7 @@ namespace slm
     {
         const double q = std::sqrt(ExitFace::crossingWavenumberSquared(kC, kMu, magnitude, 0.0,
                                                                        0.0));
-        return {ExitFace::ourEnergyFromBranch(-q), ExitFace::ourEnergyFromBranch(q)};
+        return {ExitFace::nearEnergyFromBranch(-q), ExitFace::nearEnergyFromBranch(q)};
     }
 
     int Reconciliation::standingContradictionCount()

@@ -74,7 +74,7 @@ namespace slm
 
         /// A momentum covector on the region I mass shell at the given
         /// frequency, with transverse components deliberately given a nonlinear
-        /// dependence on the frequency so that any leakage of theirs into the
+        /// dependence on the frequency so that any leakage from the far side into the
         /// derivative would show up.
         static Vector4 shellMomentum(double frequency, double mu);
 

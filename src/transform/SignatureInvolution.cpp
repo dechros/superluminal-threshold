@@ -1,4 +1,4 @@
-#include "transform/InvolutionD.h"
+#include "transform/SignatureInvolution.h"
 
 #include "core/Report.h"
 #include "core/Vector4.h"
@@ -9,7 +9,7 @@
 
 namespace slm
 {
-    Matrix4 InvolutionD::matrix()
+    Matrix4 SignatureInvolution::matrix()
     {
         return Matrix4({{{{0, 0, 0, 1}},
                          {{0, 0, 1, 0}},
@@ -17,7 +17,7 @@ namespace slm
                          {{1, 0, 0, 0}}}});
     }
 
-    Matrix4 InvolutionD::lorentzBoost(double c, double u)
+    Matrix4 SignatureInvolution::lorentzBoost(double c, double u)
     {
         const double beta = u / c;
         const double gamma = 1.0 / std::sqrt(1.0 - beta * beta);
@@ -30,17 +30,17 @@ namespace slm
         return boost;
     }
 
-    Matrix4 InvolutionD::superboost(double c, double V)
+    Matrix4 SignatureInvolution::superboost(double c, double V)
     {
         return matrix() * lorentzBoost(c, c * c / V);
     }
 
-    double InvolutionD::transformVelocity(double c, double v)
+    double SignatureInvolution::transformVelocity(double c, double v)
     {
         return c * c / v;
     }
 
-    void InvolutionD::run(Report &report) const
+    void SignatureInvolution::run(Report &report) const
     {
         const Matrix4 D = matrix();
         const Matrix4 eta = metricRegionI();

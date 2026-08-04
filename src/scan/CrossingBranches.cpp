@@ -2,7 +2,7 @@
 
 #include "core/Report.h"
 #include "core/Vector4.h"
-#include "transform/InvolutionD.h"
+#include "transform/SignatureInvolution.h"
 
 #include <algorithm>
 #include <cmath>
@@ -114,7 +114,7 @@ namespace slm
         return true;
     }
 
-    double CrossingBranches::ourTimeFromUnitFarSide(const Branch &branch)
+    double CrossingBranches::nearTimeFromUnitFarSide(const Branch &branch)
     {
         if (branch.farSideAxis < 0)
         {
@@ -140,7 +140,8 @@ namespace slm
                      oriented.size() == 8);
 
         report.subsection("All survivors agree on the axis, and none on the sign");
-        report.check("every one of the eight sends our time slot to the same far-side axis",
+        report.check("every one of the eight sends the near-side time slot to the same far-side "
+                     "axis",
                      CrossingBranches::axisIsCommon(oriented));
         report.check(std::format("but they divide evenly on its sign: {} later, {} earlier",
                                  CrossingBranches::countWithSign(oriented, 1),
@@ -184,13 +185,13 @@ namespace slm
         if (earlier != oriented.end())
         {
             report.checkNear(std::format("  it sends a unit far-side displacement to {:+.4f} on "
-                                         "our clock",
-                                         CrossingBranches::ourTimeFromUnitFarSide(*earlier)),
-                             CrossingBranches::ourTimeFromUnitFarSide(*earlier) + 1.0);
+                                         "the near-side clock",
+                                         CrossingBranches::nearTimeFromUnitFarSide(*earlier)),
+                             CrossingBranches::nearTimeFromUnitFarSide(*earlier) + 1.0);
         }
 
         report.subsection("What relates the two families");
-        report.check("reversing our time axis alone does not: it turns the determinant "
+        report.check("reversing the near-side time axis alone does not: it turns the determinant "
                      "negative and breaks the closure, leaving the admissible set",
                      [&oriented] {
                          const Matrix4 single = Matrix4::diagonal(-1.0, 1.0, 1.0, 1.0);
@@ -227,15 +228,16 @@ namespace slm
         report.checkNear("with unit determinant, so it satisfies every condition imposed on a "
                          "crossing",
                          CrossingBranches::pairedReversal().determinant() - 1.0);
-        report.check("the pair it reverses is exactly the pair the crossing identifies: our "
-                     "time and their single space direction",
+        report.check("the pair it reverses is exactly the pair the crossing identifies: the "
+                     "near-side "
+                     "time and the far side's single space direction",
                      CrossingBranches::pairedReversal().at(0, 0) < 0.0 &&
                          CrossingBranches::pairedReversal().at(3, 3) < 0.0 &&
                          CrossingBranches::axisIsCommon(oriented) &&
                          oriented.front().farSideAxis == 3);
 
         report.subsection("Where this leaves the selection");
-        const Matrix4 D = InvolutionD::matrix();
+        const Matrix4 D = SignatureInvolution::matrix();
         const auto chosen = std::find_if(oriented.begin(), oriented.end(),
                                          [&D](const CrossingBranches::Branch &branch) {
                                              return branch.matrix.isEqual(D, kEps);

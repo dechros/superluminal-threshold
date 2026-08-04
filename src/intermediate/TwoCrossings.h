@@ -9,7 +9,7 @@ namespace slm
 {
 
     /// The round trip across two crossings, and where it puts the particle back
-    /// on our own time axis.
+    /// on the near-side time axis.
     ///
     /// No duration can be read off inside the intermediate region: the far side
     /// carries no time orientation and the Euclidean case carries no time at
@@ -92,7 +92,7 @@ namespace slm
     public:
         std::string title() const override
         {
-            return "Two crossings, and where the particle lands on our clock";
+            return "Two crossings, and where the particle lands on the near-side clock";
         }
         void run(Report &report) const override;
     };

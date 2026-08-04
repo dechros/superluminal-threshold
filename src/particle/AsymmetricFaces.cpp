@@ -114,7 +114,8 @@ namespace slm
                 }
             }
         }
-        report.check(std::format("  of the 64 pairings, {} conserve our energy", energyConserving),
+        report.check(std::format("  of the 64 pairings, {} conserve the near-side "
+                                 "energy", energyConserving),
                      energyConserving > 0);
         report.check(std::format("  and {} of those turn the momentum", turning), turning > 0);
 

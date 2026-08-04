@@ -80,8 +80,8 @@ namespace slm
         static bool rotationChangesCrossingWavenumber(double c, double mu, const Three &energy);
 
         /// The exit moment as a function of the far-side energy vector alone.
-        /// The vector is our own three-momentum under the crossing, so its
-        /// length fixes our frequency and two of its components are the
+        /// The vector is the near-side three-momentum under the crossing, so its
+        /// length fixes the near-side frequency and two of its components are the
         /// transverse data the slab amplitude needs.
         static double momentFromEnergy(IntermediateRegion::Kind kind, double c, double mu,
                                        const Three &energy, double thickness);

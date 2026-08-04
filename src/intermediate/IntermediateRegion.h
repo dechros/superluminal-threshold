@@ -7,7 +7,7 @@
 namespace slm
 {
 
-    /// The region between our own and the far side, treated as an object in
+    /// The region between the near side and the far side, treated as an object in
     /// its own right rather than as a surface.
     ///
     /// Two independent questions decide what the crossing looks like. The first

@@ -152,7 +152,7 @@ namespace slm
                                  DirectionControl::reciprocityElement()[2],
                                  DirectionControl::reciprocityElement()[3]),
                      DirectionControl::reciprocityElement()[1] < 0.0);
-        report.check(std::format("  the branch reversal turns our time slot with it : "
+        report.check(std::format("  the branch reversal turns the near-side time slot with it : "
                                  "({:+.0f}, {:+.0f}, {:+.0f}, {:+.0f})",
                                  DirectionControl::jointReversalElement()[0],
                                  DirectionControl::jointReversalElement()[1],
@@ -163,7 +163,7 @@ namespace slm
                      "does not settle the other and the two obstructions must be kept "
                      "apart",
                      DirectionControl::operationsAreDistinct());
-        report.check("they differ by a pure reversal of our time slot, which is the "
+        report.check("they differ by a pure reversal of the near-side time slot, which is the "
                      "precise sense in which the direction question and the map "
                      "question are separate",
                      DirectionControl::productIsPureTimeReversal());

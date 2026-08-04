@@ -27,7 +27,7 @@ namespace slm
         /// The round trip when entry and exit realise the given faces.
         static Matrix4 roundTrip(const Matrix4 &entry, const Matrix4 &exit);
 
-        /// Whether the round trip leaves our energy slot alone, which it must
+        /// Whether the round trip leaves the near-side energy slot alone, which it must
         /// if energy is to be conserved.
         static bool conservesEnergy(const Matrix4 &trip);
 

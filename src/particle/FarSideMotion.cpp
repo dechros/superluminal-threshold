@@ -190,7 +190,8 @@ namespace slm
                                                              transverse, thickness);
             const double phase = FarSideMotion::phaseTime(Kind::None, propagatingOmega, c, mu,
                                                            transverse, thickness);
-            report.checkNear(std::format("  d = {:g} : travel time {:.4f} against phase time {:.4f}",
+            report.checkNear(std::format("  d = {:g} : travel time {:.4f} against phase time "
+                                         "{:.4f}",
                                          thickness, travel, phase),
                              travel - phase, 1e-4);
         }
@@ -205,7 +206,8 @@ namespace slm
                                                              transverse, thickness);
             const double phase = FarSideMotion::phaseTime(Kind::Euclidean, barrierOmega, c, mu,
                                                            transverse, thickness);
-            report.check(std::format("  d = {:g} : travel time {:.4f}, phase time {:.4f}", thickness,
+            report.check(std::format("  d = {:g} : travel time {:.4f}, phase time "
+                                     "{:.4f}", thickness,
                                      travel, phase),
                          travel == 0.0 && phase > 0.0);
             if (travel != 0.0)
@@ -302,12 +304,12 @@ namespace slm
                          !FarSideMotion::interiorPropagates(Kind::Euclidean, barrierOmega, c, mu,
                                                             transverse));
         report.check("the orientation the particle takes over there never reaches "
-                     "us as a face, and reaches us as a moment only through the two "
+                     "the near side as a face, and reaches it as a moment only through the two "
                      "planes that touch the crossing direction",
                      !FarSideMotion::rotationChangesCrossingWavenumber(c, mu, turning) &&
                          !FarSideMotion::timePlaneMovesTheMoment(Kind::None, c, mu, turning, 2.0,
                                                                  1));
-        report.check("and it reaches us as a deflection only through the finite "
+        report.check("and it reaches the near side as a deflection only through the finite "
                      "spectrum the two faces allow",
                      FarSideMotion::observableTurnCount(1.0, 2.0, 3.0) > 1);
     }

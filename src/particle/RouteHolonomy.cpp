@@ -2,7 +2,7 @@
 
 #include "core/Report.h"
 #include "scan/CrossingBranches.h"
-#include "transform/InvolutionD.h"
+#include "transform/SignatureInvolution.h"
 
 #include <cmath>
 #include <format>
@@ -127,7 +127,7 @@ namespace slm
 
     void RouteHolonomySection::run(Report &report) const
     {
-        const Matrix4 D = InvolutionD::matrix();
+        const Matrix4 D = SignatureInvolution::matrix();
         const auto eight = CrossingBranches::orientationPreserving();
 
         report.subsection("Both kinds of frame change are legitimate on the far side");
@@ -180,7 +180,7 @@ namespace slm
         report.check("so a route that goes out, rotates and comes back returns the clock to "
                      "where it started, for every angle and distance examined",
                      everyClosedRotationRouteVanishes);
-        report.check("which holds on all eight crossings, since none of their time rows "
+        report.check("which holds on all eight crossings, since none of the far-side time rows "
                      "reaches a like-signed axis",
                      [&eight]()
                      {

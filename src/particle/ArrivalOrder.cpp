@@ -31,7 +31,7 @@ namespace slm
 
     double ArrivalOrder::travelContribution(Direction direction, double distance)
     {
-        const double magnitude = FlowAssumption::ourTimeFromTheirSpace(distance);
+        const double magnitude = FlowAssumption::nearTimeFromFarSpace(distance);
         return direction == Direction::Forward ? magnitude : -magnitude;
     }
 

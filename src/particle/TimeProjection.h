@@ -16,17 +16,17 @@ namespace slm
     /// involution sends (ct, x, y, z) to (z, y, x, ct). Reading that off slot
     /// by slot gives the dictionary this class computes rather than asserts:
     /// the three positive slots beyond the threshold are times and they carry
-    /// our three space directions, while the one negative slot there is a
-    /// space direction and it carries our time.
+    /// the near side's three space directions, while the one negative slot there is a
+    /// space direction and it carries the near-side time.
     ///
-    /// The consequence is that the two sides are one-way in mirror places. Our
-    /// time flows one way and cannot be steered; so does their single space
+    /// The consequence is that the two sides are one-way in mirror places. The near side's
+    /// time flows one way and cannot be steered; so does the far side's single space
     /// axis, and it is the same coordinate. Their three times are free in the
-    /// way our three space directions are free.
+    /// way the near side's three space directions are free.
     ///
     /// The question this leaves is whether an orientation among their three
     /// times can move the time coordinate of the return event here. Directly it
-    /// cannot, because that orientation lands in our space. Indirectly it can,
+    /// cannot, because that orientation lands in the near-side space. Indirectly it can,
     /// because the transverse components of the same vector enter the matching
     /// at the two surfaces and therefore the phase the return moment is read
     /// from. These functions separate the two routes and measure the second.
@@ -51,7 +51,7 @@ namespace slm
         /// \param farSide Selects the region.
         static double metricSign(bool farSide, int slot);
 
-        /// Slot of our own coordinates that the given far-side slot carries.
+        /// Slot of the near-side coordinates that the given far-side slot carries.
         static int imageSlot(int farSideSlot);
 
         /// Whether the given slot is time-like in its own region.
@@ -61,14 +61,14 @@ namespace slm
         /// signs and from whether displacement along it is observable here.
         static Character farSideCharacter(int slot);
 
-        /// Character of the given slot of ours.
-        static Character ourCharacter(int slot);
+        /// Character of the given near-side slot.
+        static Character nearCharacter(int slot);
 
         /// Push a far-side displacement through the involution.
-        static Four toOurCoordinates(const Four &farSide);
+        static Four toNearCoordinates(const Four &farSide);
 
         /// The single far-side slot that is space-like, which is the one
-        /// carrying our time.
+        /// carrying the near-side time.
         static int farSideSpaceSlot();
 
         /// The three far-side slots that are time-like.
@@ -85,17 +85,17 @@ namespace slm
                                       double mu, double thickness, int steps = 24);
 
         /// Return time at the orientation pointing along the slot that carries
-        /// our own time under the involution.
-        static double returnTimeAlongOurTimeAxis(double length, IntermediateRegion::Kind kind,
+        /// the near-side time under the involution.
+        static double returnTimeAlongNearTimeAxis(double length, IntermediateRegion::Kind kind,
                                                  double c, double mu, double thickness);
 
         /// Whether a displacement purely within the three far-side times
-        /// produces any displacement in our time.
-        static bool timeMotionThereMovesOurTime();
+        /// produces any displacement in the near-side time.
+        static bool timeMotionThereMovesNearTime();
 
         /// Whether a displacement along the far side's single space axis
-        /// produces a displacement in our time.
-        static bool spaceMotionThereMovesOurTime();
+        /// produces a displacement in the near-side time.
+        static bool spaceMotionThereMovesNearTime();
     };
 
     /// Section computing what motion along each far-side coordinate means here.

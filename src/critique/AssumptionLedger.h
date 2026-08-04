@@ -64,9 +64,8 @@ namespace slm
         /// the letter n names the line break itself, so a macro beginning with
         /// that letter does not become a control character: it becomes a real
         /// line break, and the rest of the macro becomes prose at the start of
-        /// the next line. Nothing about the file then looks wrong. This happened
-        /// to an inequality sign in chapter eleven and stood in the text until
-        /// someone read the sentence. What it leaves behind is always the same
+        /// the next line. Nothing about the file then looks wrong, and no reader
+        /// of the source sees a defect. What it leaves behind is always the same
         /// shape: a line whose last character is a single backslash.
         static std::vector<int> splitMacros(const std::string &text);
 

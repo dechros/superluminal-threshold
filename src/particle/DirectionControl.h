@@ -11,7 +11,7 @@ namespace slm
     /// along the far side's single spatial axis.
     ///
     /// This is not the question of which crossing map is realised, which is
-    /// settled elsewhere and concerns a joint reversal of our time slot and the
+    /// settled elsewhere and concerns a joint reversal of the near-side time slot and the
     /// far side's distinguished axis. Here the map is given and the question is
     /// the direction of travel under it. The two are separate and the first
     /// business of this class is to show they are separate, because they are
@@ -42,7 +42,7 @@ namespace slm
         static Signs reciprocityElement();
 
         /// The reversal separating the two families of crossing, which turns
-        /// our time slot and the distinguished axis together.
+        /// the near-side time slot and the distinguished axis together.
         static Signs jointReversalElement();
 
         /// Product of the two, componentwise.
@@ -52,7 +52,7 @@ namespace slm
         /// not.
         static bool operationsAreDistinct();
 
-        /// Whether their product is a pure reversal of our time slot, which is
+        /// Whether their product is a pure reversal of the near-side time slot, which is
         /// exactly how they differ.
         static bool productIsPureTimeReversal();
 

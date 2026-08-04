@@ -39,7 +39,8 @@ namespace slm
                          singleSurfaceEnergyDensityScale(hbar, c, 1.0));
 
         report.subsection("Casimir: between two surfaces");
-        report.check("the energy is NEGATIVE, so attractive", casimirEnergyPerArea(hbar, c, 1.0) < 0.0);
+        report.check("the energy is NEGATIVE, so "
+                     "attractive", casimirEnergyPerArea(hbar, c, 1.0) < 0.0);
         report.checkNear("scaling law E ~ L^-3",
                          casimirEnergyPerArea(hbar, c, 2.0) * 8.0 -
                              casimirEnergyPerArea(hbar, c, 1.0),

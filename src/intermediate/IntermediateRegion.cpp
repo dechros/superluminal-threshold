@@ -123,7 +123,7 @@ namespace slm
         const double thicknesses[] = {0.0, 0.1, 1.0, 4.0, 40.0};
 
         report.subsection("What each kind does to the interior mode");
-        report.check("with no intermediate region the interior is our own region",
+        report.check("with no intermediate region the interior is the near-side region",
                      std::abs(IntermediateRegion::insideNormalSquared(Kind::None, c, mu,
                                                                       transverse) -
                               IntermediateRegion::outsideNormalSquared(c, mu, transverse)) < 1e-12);

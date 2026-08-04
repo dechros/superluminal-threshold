@@ -129,7 +129,7 @@ namespace slm
         report.subsection("The two objections meet on one profile");
         report.check("the only profile that passes the rate condition is the same "
                      "one that carries no layer, which the energy conditions had "
-                     "already left as their single escape",
+                     "already left as the only escape left",
                      RateCondition::satisfiesRateCondition(Profile::FlatAtCrossing) &&
                          LayerEnergyConditions::layerIsAbsent(Profile::FlatAtCrossing, 1.0));
         report.check("no profile both keeps a layer and satisfies the rate, so the "

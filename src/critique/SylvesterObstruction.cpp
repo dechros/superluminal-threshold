@@ -2,7 +2,7 @@
 
 #include "core/Matrix4.h"
 #include "core/Report.h"
-#include "transform/InvolutionD.h"
+#include "transform/SignatureInvolution.h"
 
 #include <algorithm>
 #include <cmath>
@@ -40,7 +40,7 @@ namespace slm
     {
         const Matrix4 eta = metricRegionI();
         const Matrix4 etaPrime = metricRegionII();
-        const Matrix4 D = InvolutionD::matrix();
+        const Matrix4 D = SignatureInvolution::matrix();
 
         report.subsection("Numerical scan over 20000 random real matrices");
         const double best = randomSearchBestResidual();

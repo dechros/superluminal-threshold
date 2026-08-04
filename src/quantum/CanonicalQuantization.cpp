@@ -32,8 +32,10 @@ namespace slm
                      timelikeDirectionsOnSlice(true) > 0);
 
         report.subsection("(a continued) Index counting in the equal-time commutator");
-        report.check("index counting is consistent in Region I", commutatorIndicesConsistent(false));
-        report.check("index counting is INCONSISTENT in Region II", !commutatorIndicesConsistent(true));
+        report.check("index counting is consistent in Region "
+                     "I", commutatorIndicesConsistent(false));
+        report.check("index counting is INCONSISTENT in Region "
+                     "II", !commutatorIndicesConsistent(true));
 
         report.subsection("(b) The Feynman propagator is undefined");
         int incomparablePairs = 0;

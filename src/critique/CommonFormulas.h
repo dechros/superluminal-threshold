@@ -88,7 +88,7 @@ namespace slm
         static double dispersionResidual(double crossingSign, double omega, double c, double mu,
                                          double normalSquared, double transverseSquared);
 
-        /// Whether our own signature is recovered at a crossing sign of minus
+        /// Whether the near-side signature is recovered at a crossing sign of minus
         /// one, and the far side at plus one.
         static bool recoversBothSignatures(double omega, double c, double mu,
                                            double transverseSquared);

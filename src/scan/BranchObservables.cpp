@@ -122,13 +122,14 @@ namespace slm
     void BranchObservablesSection::run(Report &report) const
     {
         report.subsection("Why the published constructions do not transfer");
-        report.check(std::format("  the transformation gives our time slot {:+.0f} and the far "
+        report.check(std::format("  the transformation gives the near-side time slot {:+.0f} and "
+                                 "the far "
                                  "side's distinguished axis {:+.0f}",
                                  BranchObservables::timeSign(),
                                  BranchObservables::distinguishedSign()),
                      BranchObservables::timeSign() < 0.0 &&
                          BranchObservables::distinguishedSign() < 0.0);
-        report.check("a quantity odd in our time alone would change under it",
+        report.check("a quantity odd in the near-side time alone would change under it",
                      BranchObservables::oddInTimeAloneChanges());
         report.check("and so would one odd in the distinguished axis alone",
                      BranchObservables::oddInDistinguishedAloneChanges());

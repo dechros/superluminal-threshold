@@ -46,17 +46,17 @@ namespace slm
         /// Rotation angle each turn class stands for.
         static double angle(Turn turn);
 
-        /// Our four-momentum after the journey, for a given turn.
-        static Four returned(const Four &ours, Turn turn);
+        /// The near-side four-momentum after the journey, for a given turn.
+        static Four returned(const Four &near, Turn turn);
 
-        /// Change in our energy over the journey.
-        static double energyChange(const Four &ours, Turn turn);
+        /// Change in the near-side energy over the journey.
+        static double energyChange(const Four &near, Turn turn);
 
-        /// Change in the magnitude of our momentum, also zero.
-        static double speedChange(const Four &ours, Turn turn);
+        /// Change in the magnitude of the near-side momentum, also zero.
+        static double speedChange(const Four &near, Turn turn);
 
         /// One reachable outcome of a round trip, as the two faces produce it:
-        /// whether our energy came back with the sign it left with, and how far
+        /// whether the near-side energy came back with the sign it left with, and how far
         /// the momentum turned.
         struct Outcome
         {
@@ -77,7 +77,7 @@ namespace slm
         /// particle never leaves.
         static int emptyRowCells();
 
-        /// Reachable outcomes in which our energy came back with the sign it
+        /// Reachable outcomes in which the near-side energy came back with the sign it
         /// left with, which is the number of quantised turns available.
         static int outcomesKeepingEnergy(double px, double py, double pz);
 
@@ -89,10 +89,10 @@ namespace slm
         /// nonetheless turned.
         static int discriminatingOutcomes(double px, double py, double pz);
 
-        /// Deflection of our momentum, in radians.
-        static double deflection(const Four &ours, Turn turn);
+        /// Deflection of the near-side momentum, in radians.
+        static double deflection(const Four &near, Turn turn);
 
-        /// Whether an ordinary elastic process on our own side could produce
+        /// Whether an ordinary elastic process on the near side could produce
         /// the same measurement, which is what decides if the cell is a
         /// prediction or only an interpretation.
         static bool degenerateWithOrdinaryPhysics(Exit exit, Turn turn);

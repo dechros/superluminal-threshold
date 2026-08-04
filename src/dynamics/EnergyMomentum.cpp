@@ -2,7 +2,7 @@
 
 #include "core/Matrix4.h"
 #include "core/Report.h"
-#include "transform/InvolutionD.h"
+#include "transform/SignatureInvolution.h"
 
 #include <cmath>
 #include <format>
@@ -16,7 +16,7 @@ namespace slm
 
     Vector4 EnergyMomentum::transformed(double, const Vector4 &p)
     {
-        return InvolutionD::matrix() * p;
+        return SignatureInvolution::matrix() * p;
     }
 
     double EnergyMomentum::invariant(const Vector4 &p)
@@ -52,7 +52,7 @@ namespace slm
 
         const Vector4 incoming = p1 + p2;
         const Vector4 outgoing = p3 + p4;
-        report.checkNear("conservation holds on our side",
+        report.checkNear("conservation holds on the near side",
                          incoming.maxAbsDifference(outgoing));
 
         const Vector4 incomingPrime = transformed(c, incoming);
@@ -64,7 +64,7 @@ namespace slm
         const double mass = 2.0;
         const double energy = shellEnergy(c, mass, 1.0, 0.0, 0.0);
         const Vector4 shell = fourMomentum(c, energy, 1.0, 0.0, 0.0);
-        report.checkNear("our side: p.p = m^2c^2",
+        report.checkNear("the near side: p.p = m^2c^2",
                          shell.contract(eta) - mass * mass * c * c);
         const Vector4 shellPrime = transformed(c, shell);
         report.checkNear("far side: p'.p' = -m^2c^2, the sign flips",

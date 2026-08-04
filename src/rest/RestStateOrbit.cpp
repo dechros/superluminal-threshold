@@ -1,4 +1,4 @@
-#include "rest/SuperluminalRest.h"
+#include "rest/RestStateOrbit.h"
 
 #include "core/Report.h"
 
@@ -26,13 +26,13 @@ namespace slm
         }
     }
 
-    Vector4 SuperluminalRest::restFourMomentum(double c, double mass,
+    Vector4 RestStateOrbit::restFourMomentum(double c, double mass,
                                                double s1, double s2, double s3)
     {
         return Vector4(mass * c * s1, mass * c * s2, mass * c * s3, 0.0);
     }
 
-    Matrix4 SuperluminalRest::timeRotation(double alpha, double beta, double gamma)
+    Matrix4 RestStateOrbit::timeRotation(double alpha, double beta, double gamma)
     {
         const double ca = std::cos(alpha), sa = std::sin(alpha);
         const double cb = std::cos(beta), sb = std::sin(beta);
@@ -45,14 +45,14 @@ namespace slm
         return embed(r);
     }
 
-    Matrix4 SuperluminalRest::timeReflection(int axis)
+    Matrix4 RestStateOrbit::timeReflection(int axis)
     {
         double r[3][3] = {{1, 0, 0}, {0, 1, 0}, {0, 0, 1}};
         r[axis][axis] = -1.0;
         return embed(r);
     }
 
-    void SuperluminalRest::run(Report &report) const
+    void RestStateOrbit::run(Report &report) const
     {
         const double c = 1.0;
         const double mass = 1.0;
@@ -119,7 +119,8 @@ namespace slm
         for (double angle : {0.2, 1.0, 2.5})
         {
             const Matrix4 stabilizer = timeRotation(angle, 0.0, -angle);
-            report.checkNear(std::format("  the O(2) stabiliser leaves s fixed (angle {:g})", angle),
+            report.checkNear(std::format("  the O(2) stabiliser leaves s fixed (angle "
+                                         "{:g})", angle),
                              (stabilizer * north).maxAbsDifference(north), 1e-10);
         }
     }

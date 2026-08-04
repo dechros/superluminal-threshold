@@ -21,8 +21,8 @@ namespace slm
             "yoruz", "iyoruz", "uyoruz", "üyoruz", "ıyoruz", "acağız", "eceğiz",
             "malıyız", "meliyiz"};
 
-        const std::vector<std::string> kNotOurs = {"minimize", "Minimize", "temiz",
-                                                   "Temiz", "vermiz"};
+        const std::vector<std::string> kNotPossessive = {"minimize", "Minimize",
+                                                         "temiz", "Temiz"};
 
         const std::vector<std::string> kSelfReference = {
             "karıştırılmamalı", "abartılmamalı", "bırakılmamalı", "kaydedilmeli",
@@ -306,7 +306,7 @@ namespace slm
     {
         std::vector<Fault> faults;
         const auto lines = splitLines(text);
-        const std::regex ours(
+        const std::regex possessive(
             "[a-zçğıöşüA-ZÇĞİÖŞÜ]+(mız|miz|muz|müz)"
             "(ı|i|u|ü|a|e|la|le|da|de|dan|den|ın|in|un|ün|dır|dir|dur|dür)?"
             "(?![a-zA-ZçğıöşüÇĞİÖŞÜ])");
@@ -327,11 +327,11 @@ namespace slm
             {
                 continue;
             }
-            for (std::sregex_iterator it(lines[index].begin(), lines[index].end(), ours),
+            for (std::sregex_iterator it(lines[index].begin(), lines[index].end(), possessive),
                  stop; it != stop; ++it)
             {
-                if (std::find(kNotOurs.begin(), kNotOurs.end(), (*it)[0].str()) ==
-                    kNotOurs.end())
+                if (std::find(kNotPossessive.begin(), kNotPossessive.end(), (*it)[0].str()) ==
+                    kNotPossessive.end())
                 {
                     faults.push_back({"birinci şahıs çoğul iyelik",
                                       static_cast<int>(index) + 1, (*it)[0].str()});
@@ -505,7 +505,7 @@ namespace slm
             report.check(std::format("  line {}: {}", fault.line, fault.excerpt), false);
         }
         report.check("no sentence is written in the first person, singular or plural, and the "
-                     "work is not called ours",
+                     "work is not spoken of as the writer's own",
                      persons.empty());
 
         report.subsection("The text discussing the text");

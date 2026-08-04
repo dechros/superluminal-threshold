@@ -49,7 +49,7 @@ namespace slm
         const Dispersion massive(c, mass, hbar);
         const Dispersion massless(c, 0.0, hbar);
 
-        report.subsection("Where velocity comes from on our side");
+        report.subsection("Where velocity comes from on the near side");
         for (double k : {0.1, 0.5, 1.0, 2.0, 10.0, 100.0})
         {
             const double vPhase = massive.phaseVelocity(k);

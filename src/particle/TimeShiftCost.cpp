@@ -3,7 +3,7 @@
 #include "core/Report.h"
 #include "particle/ArrivalOrder.h"
 #include "particle/RouteHolonomy.h"
-#include "transform/InvolutionD.h"
+#include "transform/SignatureInvolution.h"
 
 #include <cmath>
 #include <format>
@@ -62,7 +62,7 @@ namespace slm
         const double mu = 1.0;
         const double transverse = 4.0;
         const double thickness = 8.0;
-        const Matrix4 D = InvolutionD::matrix();
+        const Matrix4 D = SignatureInvolution::matrix();
 
         report.subsection("The leg a given displacement asks for");
         const double crossover = ArrivalOrder::crossoverDistance(Kind::Euclidean, c, mu, thickness);

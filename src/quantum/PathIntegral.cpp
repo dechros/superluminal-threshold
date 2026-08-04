@@ -96,7 +96,8 @@ namespace slm
                 smallestDenominator = std::min(smallestDenominator, denominator);
             }
         }
-        report.check("the denominator is always >= mu > 0, so there is NO POLE", smallestDenominator >= mu - 1e-12);
+        report.check("the denominator is always >= mu > 0, so there is NO "
+                     "POLE", smallestDenominator >= mu - 1e-12);
 
         report.subsection("The m = 0 case");
         const double masslessKernelAtZero = euclideanKernel(WickChoice::SingleSpace, c, 0.0, 0.0, 0.0);
@@ -109,7 +110,8 @@ namespace slm
         {
             const double regionI = kSquared + 1.0 + mu;
             const double regionII = euclideanKernel(WickChoice::SingleSpace, c, mu, kSquared, c);
-            report.checkNear(std::format("  k^2 = {:g}: both regions share the same Euclidean kernel", kSquared),
+            report.checkNear(std::format("  k^2 = {:g}: both regions share the same Euclidean "
+                                         "kernel", kSquared),
                              regionI - regionII);
         }
     }

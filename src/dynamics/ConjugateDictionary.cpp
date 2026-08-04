@@ -3,7 +3,7 @@
 #include "core/Report.h"
 #include "scan/CrossingBranches.h"
 #include "scan/SlotDictionary.h"
-#include "transform/InvolutionD.h"
+#include "transform/SignatureInvolution.h"
 
 #include <cmath>
 #include <format>
@@ -94,7 +94,7 @@ namespace slm
     void ConjugateDictionarySection::run(Report &report) const
     {
         const auto eight = CrossingBranches::orientationPreserving();
-        const Matrix4 D = InvolutionD::matrix();
+        const Matrix4 D = SignatureInvolution::matrix();
 
         report.subsection("Coordinates and their conjugates need not share a dictionary");
         report.check("the conjugate map is the inverse transpose, which for a general "

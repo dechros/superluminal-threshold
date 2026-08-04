@@ -1,7 +1,7 @@
 #include "critique/ObjectionTests.h"
 
 #include "core/Report.h"
-#include "transform/InvolutionD.h"
+#include "transform/SignatureInvolution.h"
 
 #include <algorithm>
 #include <cmath>
@@ -101,7 +101,7 @@ namespace slm
                      preserving == 6 && changing == 18);
 
         report.subsection("Where D sits in that split");
-        const Matrix4 D = InvolutionD::matrix();
+        const Matrix4 D = SignatureInvolution::matrix();
         report.check("D does not preserve the region I line element, it is one "
                      "of the eighteen",
                      !D.congruence(eta).isEqual(eta, 1e-12));

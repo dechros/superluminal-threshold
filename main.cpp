@@ -62,7 +62,7 @@
 #include "quantum/LapseContour.h"
 #include "quantum/PathIntegral.h"
 #include "quantum/VacuumCasimir.h"
-#include "rest/SuperluminalRest.h"
+#include "rest/RestStateOrbit.h"
 #include "scan/BranchObservables.h"
 #include "scan/CrossingBranches.h"
 #include "scan/PermutationScan.h"
@@ -75,7 +75,7 @@
 #include "particle/TimeShiftCost.h"
 #include "signal/GravitationalChannel.h"
 #include "spherical/SphericalSolution.h"
-#include "transform/InvolutionD.h"
+#include "transform/SignatureInvolution.h"
 
 #include <exception>
 #include <iostream>
@@ -87,7 +87,7 @@ namespace
     std::vector<std::unique_ptr<slm::Section>> buildSections()
     {
         std::vector<std::unique_ptr<slm::Section>> sections;
-        sections.push_back(std::make_unique<slm::InvolutionD>());
+        sections.push_back(std::make_unique<slm::SignatureInvolution>());
         sections.push_back(std::make_unique<slm::PermutationScan>());
         sections.push_back(std::make_unique<slm::CrossingBranchesSection>());
         sections.push_back(std::make_unique<slm::BranchObservablesSection>());
@@ -109,7 +109,7 @@ namespace
         sections.push_back(std::make_unique<slm::TimeOrientationSection>());
         sections.push_back(std::make_unique<slm::ReversalSymmetrySection>());
         sections.push_back(std::make_unique<slm::DynamicsUnderReversalSection>());
-        sections.push_back(std::make_unique<slm::SuperluminalRest>());
+        sections.push_back(std::make_unique<slm::RestStateOrbit>());
         sections.push_back(std::make_unique<slm::DispersionSection>());
         sections.push_back(std::make_unique<slm::ConjugateDictionarySection>());
         sections.push_back(std::make_unique<slm::RouteHolonomySection>());

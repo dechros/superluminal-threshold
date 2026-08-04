@@ -107,10 +107,10 @@ namespace slm
     bool CommonFormulas::recoversBothSignatures(double omega, double c, double mu,
                                                 double transverseSquared)
     {
-        const double ours = TwoCrossings::outsideSquared(omega, c, mu, transverseSquared);
-        const double hereResidual = dispersionResidual(-1.0, omega, c, mu, ours, transverseSquared);
+        const double near = TwoCrossings::outsideSquared(omega, c, mu, transverseSquared);
+        const double hereResidual = dispersionResidual(-1.0, omega, c, mu, near, transverseSquared);
         const double thereResidual =
-            dispersionResidual(1.0, omega, c, mu, -ours, transverseSquared);
+            dispersionResidual(1.0, omega, c, mu, -near, transverseSquared);
         return std::abs(hereResidual) < kExact && std::abs(thereResidual) < kExact;
     }
 
@@ -210,7 +210,7 @@ namespace slm
                                                             4.0));
 
         report.subsection("One dispersion relation, both signatures");
-        report.check("our own signature is the relation at a crossing sign of minus one, "
+        report.check("the near-side signature is the relation at a crossing sign of minus one, "
                      "and the far side is the same relation at plus one",
                      CommonFormulas::recoversBothSignatures(6.0, c, mu, transverse));
         report.check("so the two sides are not two theories but two values of a sign, "

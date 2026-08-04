@@ -73,11 +73,13 @@ namespace slm
         report.subsection("Equilibrium points");
         for (double p : {0.0, c_, -c_})
         {
-            report.check(std::format("  p = {:g} is an equilibrium point", p), isEquilibrium(c_, p));
+            report.check(std::format("  p = {:g} is an equilibrium "
+                                     "point", p), isEquilibrium(c_, p));
         }
         for (double p : {0.5 * c_, 2.0 * c_})
         {
-            report.check(std::format("  p = {:g} is NOT an equilibrium point", p), !isEquilibrium(c_, p));
+            report.check(std::format("  p = {:g} is NOT an equilibrium "
+                                     "point", p), !isEquilibrium(c_, p));
         }
 
         report.subsection("Behaviour: p = c at t = 0, p -> infinity as t -> sqrt(a)");

@@ -10,7 +10,7 @@ namespace slm
     ///
     /// The admissible crossings split into two families of four, one sending a
     /// given far-side displacement to a later moment here and one to an earlier
-    /// moment. The transformation relating them reverses our time axis and the
+    /// moment. The transformation relating them reverses the near-side time axis and the
     /// far side's distinguished axis together, is an isometry of both metrics
     /// and has unit determinant, so the metric does not choose between them.
     /// That much is settled elsewhere. It leaves the sharper question: is there
@@ -35,13 +35,13 @@ namespace slm
     class BranchObservables
     {
     public:
-        /// Sign the transformation gives our time slot.
+        /// Sign the transformation gives the near-side time slot.
         static double timeSign();
 
         /// Sign it gives the far side's distinguished axis.
         static double distinguishedSign();
 
-        /// Whether a quantity odd in our time alone changes under the joint
+        /// Whether a quantity odd in the near-side time alone changes under the joint
         /// reversal, which it does.
         static bool oddInTimeAloneChanges();
 

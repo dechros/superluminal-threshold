@@ -29,7 +29,7 @@ namespace slm
     {
         return {
             {"a superboost factorises into a flip and a dual-velocity boost",
-             State::Reproduced, "transform/InvolutionD"},
+             State::Reproduced, "transform/SignatureInvolution"},
             {"the transformation extends to a group with representations", State::Reproduced,
              "transform/ExtendedLorentzGroup"},
             {"six of the twenty four coordinate permutations preserve the line element",
@@ -95,7 +95,7 @@ namespace slm
              State::Reproduced, "particle/LoopClosure"},
             {"the infinite velocity limit exchanges a spatial coordinate with the "
              "temporal one, so every member of the extended family swaps their characters",
-             State::Reproduced, "transform/InvolutionD"},
+             State::Reproduced, "transform/SignatureInvolution"},
             {"inside a horizon the radial coordinate becomes timelike and the temporal "
              "one spacelike, and the radial direction cannot be chosen",
              State::Used, "none"},

@@ -56,28 +56,28 @@ namespace slm
         return 0.0;
     }
 
-    StateTable::Four StateTable::returned(const Four &ours, Turn turn)
+    StateTable::Four StateTable::returned(const Four &near, Turn turn)
     {
-        const EnergyBookkeeping::Four far = EnergyBookkeeping::across(ours);
+        const EnergyBookkeeping::Four far = EnergyBookkeeping::across(near);
         const EnergyBookkeeping::Four turned =
             EnergyBookkeeping::rotateFarEnergy(far, angle(turn));
         return EnergyBookkeeping::across(turned);
     }
 
-    double StateTable::energyChange(const Four &ours, Turn turn)
+    double StateTable::energyChange(const Four &near, Turn turn)
     {
-        return returned(ours, turn)[0] - ours[0];
+        return returned(near, turn)[0] - near[0];
     }
 
-    double StateTable::speedChange(const Four &ours, Turn turn)
+    double StateTable::speedChange(const Four &near, Turn turn)
     {
-        return EnergyBookkeeping::ourMomentumMagnitude(returned(ours, turn)) -
-               EnergyBookkeeping::ourMomentumMagnitude(ours);
+        return EnergyBookkeeping::nearMomentumMagnitude(returned(near, turn)) -
+               EnergyBookkeeping::nearMomentumMagnitude(near);
     }
 
-    double StateTable::deflection(const Four &ours, Turn turn)
+    double StateTable::deflection(const Four &near, Turn turn)
     {
-        return EnergyBookkeeping::momentumAngle(ours, returned(ours, turn));
+        return EnergyBookkeeping::momentumAngle(near, returned(near, turn));
     }
 
     bool StateTable::degenerateWithOrdinaryPhysics(Exit exit, Turn turn)
@@ -149,33 +149,33 @@ namespace slm
     {
         using Exit = StateTable::Exit;
         using Turn = StateTable::Turn;
-        const StateTable::Four ours = {5.0, 1.0, 2.0, 3.0};
+        const StateTable::Four near = {5.0, 1.0, 2.0, 3.0};
         const Turn turns[] = {Turn::None, Turn::Partial, Turn::Reversal};
         const Exit exits[] = {Exit::EntryFace, Exit::FarFace, Exit::Never};
 
         report.subsection("Energy and speed are conserved in every cell");
         for (Turn turn : turns)
         {
-            report.checkNear(std::format("  {:14} : our energy is unchanged",
+            report.checkNear(std::format("  {:14} : the near-side energy is unchanged",
                                          StateTable::name(turn)),
-                             StateTable::energyChange(ours, turn), 1e-12);
-            report.checkNear(std::format("  {:14} : our speed is unchanged",
+                             StateTable::energyChange(near, turn), 1e-12);
+            report.checkNear(std::format("  {:14} : the near-side speed is unchanged",
                                          StateTable::name(turn)),
-                             StateTable::speedChange(ours, turn), 1e-12);
+                             StateTable::speedChange(near, turn), 1e-12);
         }
 
         report.subsection("Only the direction distinguishes the cells");
         for (Turn turn : turns)
         {
             report.check(std::format("  {:14} : deflection {:.4f} radians",
-                                     StateTable::name(turn), StateTable::deflection(ours, turn)),
-                         StateTable::deflection(ours, turn) >= 0.0);
+                                     StateTable::name(turn), StateTable::deflection(near, turn)),
+                         StateTable::deflection(near, turn) >= 0.0);
         }
         report.checkNear("no turn leaves the direction alone",
-                         StateTable::deflection(ours, Turn::None), 1e-12);
+                         StateTable::deflection(near, Turn::None), 1e-12);
         report.check("a reversal deflects further than a partial turn",
-                     StateTable::deflection(ours, Turn::Reversal) >
-                         StateTable::deflection(ours, Turn::Partial));
+                     StateTable::deflection(near, Turn::Reversal) >
+                         StateTable::deflection(near, Turn::Partial));
 
         report.subsection("The full table of what an observer here measures");
         int cells = 0;
@@ -209,7 +209,8 @@ namespace slm
                                  StateTable::reachableOutcomeCount(1.0, 2.0, 3.0)),
                      StateTable::reachableOutcomeCount(1.0, 2.0, 3.0) <
                          StateTable::independentLabelCount());
-        report.check(std::format("  the {} reachable ones split into {} keeping our energy and "
+        report.check(std::format("  the {} reachable ones split into {} keeping the near-side "
+                                 "energy and "
                                  "{} returning it with the opposite sign",
                                  StateTable::reachableOutcomeCount(1.0, 2.0, 3.0),
                                  StateTable::outcomesKeepingEnergy(1.0, 2.0, 3.0),
@@ -255,8 +256,8 @@ namespace slm
         report.check("what makes them distinguishable is that the deflection costs "
                      "nothing, where an ordinary deflection needs a target to "
                      "carry the recoil",
-                     std::abs(StateTable::energyChange(ours, Turn::Partial)) < 1e-12 &&
-                         StateTable::deflection(ours, Turn::Partial) > 0.1);
+                     std::abs(StateTable::energyChange(near, Turn::Partial)) < 1e-12 &&
+                         StateTable::deflection(near, Turn::Partial) > 0.1);
     }
 
 }

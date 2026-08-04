@@ -17,7 +17,7 @@ namespace slm
     /// has to be readable from the other side.
     ///
     /// The layer's surface stress-energy is fixed by the jump in extrinsic
-    /// curvature across it. A mass placed on our side bends the metric there,
+    /// curvature across it. A mass placed on the near side bends the metric there,
     /// changes the extrinsic curvature on that face, and so changes the jump.
     /// The calculation below is linearised and weak field: enough to decide
     /// whether the response exists and how it scales, not enough to give a
@@ -25,7 +25,7 @@ namespace slm
     class GravitationalChannel
     {
     public:
-        /// Extrinsic curvature contributed on our face by a mass at a distance,
+        /// Extrinsic curvature contributed on the near face by a mass at a distance,
         /// in the weak field.
         static double curvatureFromMass(double mass, double distance);
 
@@ -44,7 +44,7 @@ namespace slm
         static bool modulable(IntermediateRegion::Kind kind, double thickness, double distance);
 
         /// Time for the sender's action to reach the surface, which is set by
-        /// the speed of light in our own region.
+        /// the speed of light in the near-side region.
         static double responseDelay(double distance, double c);
 
         /// Ratio of the modulated part of the layer to its static part, the

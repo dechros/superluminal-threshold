@@ -1,7 +1,7 @@
 #include "scan/PermutationScan.h"
 
 #include "core/Report.h"
-#include "transform/InvolutionD.h"
+#include "transform/SignatureInvolution.h"
 
 #include <algorithm>
 #include <array>
@@ -102,7 +102,7 @@ namespace slm
         report.check("in ALL eight solutions ct maps to the single space axis", allCtToSpace);
 
         report.subsection("Is D among these eight?");
-        const Matrix4 D = InvolutionD::matrix();
+        const Matrix4 D = SignatureInvolution::matrix();
         const bool contains = std::any_of(both.begin(), both.end(), [&](const Candidate &candidate)
                                           { return candidate.matrix.isEqual(D); });
         report.check("the chosen D is one of the eight solutions found by the scan", contains);

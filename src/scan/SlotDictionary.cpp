@@ -2,7 +2,7 @@
 
 #include "core/Report.h"
 #include "scan/CrossingBranches.h"
-#include "transform/InvolutionD.h"
+#include "transform/SignatureInvolution.h"
 
 #include <algorithm>
 #include <cmath>
@@ -141,7 +141,7 @@ namespace slm
                      "to them leaves the clock where it was",
                      everyOneIsIsolated);
 
-        const Matrix4 D = InvolutionD::matrix();
+        const Matrix4 D = SignatureInvolution::matrix();
         report.check(std::format("for the map used in this work the source axis is {} and the "
                                  "coefficient is {:+.0f}",
                                  SlotDictionary::sourceAxis(D), SlotDictionary::coefficient(D)),
@@ -151,7 +151,8 @@ namespace slm
         report.subsection("So the amount transfers without a factor");
         for (double distance : {0.5, 1.0, 2.0, 4.0, 7.25})
         {
-            report.checkNear(std::format("  {:g} along the far-side axis gives {:+.4f} on the clock",
+            report.checkNear(std::format("  {:g} along the far-side axis gives {:+.4f} on the "
+                                         "clock",
                                          distance,
                                          SlotDictionary::clockDisplacement(D, distance)),
                              SlotDictionary::clockDisplacement(D, distance) - distance);

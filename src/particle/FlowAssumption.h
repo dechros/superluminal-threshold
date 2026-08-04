@@ -22,8 +22,8 @@ namespace slm
     ///
     /// COMPULSION. A body must move along the coordinate, at a rate it cannot
     /// choose. This is not a statement about the metric. Nothing in a metric
-    /// says that a worldline has to advance, and the sense that our own time
-    /// carries us is not evidence that it does.
+    /// says that a worldline has to advance, and the sense that the near-side time
+    /// carries a worldline is not evidence that it does.
     ///
     /// The two are routinely run together, and the cost of running them
     /// together is a hidden assumption. This class separates them, decides the
@@ -34,7 +34,7 @@ namespace slm
     class FlowAssumption
     {
     public:
-        /// Metric of our own region.
+        /// Metric of the near-side region.
         static Matrix4 metricHere();
 
         /// Metric beyond the threshold.
@@ -71,12 +71,12 @@ namespace slm
         /// does.
         static bool compulsionIsUsedAnywhere();
 
-        /// Displacement produced in our time slot by a given displacement along
+        /// Displacement produced in the near-side time slot by a given displacement along
         /// the far side's single space axis.
-        static double ourTimeFromTheirSpace(double displacement);
+        static double nearTimeFromFarSpace(double displacement);
 
         /// Whether that relation is one to one in the amount, so that how far a
-        /// body goes along their space axis is a free choice with a definite
+        /// body goes along the far-side space axis is a free choice with a definite
         /// consequence here.
         static bool amountIsFree();
 

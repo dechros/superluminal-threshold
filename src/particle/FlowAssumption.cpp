@@ -125,23 +125,23 @@ namespace slm
         return std::abs(near.crossing - far.crossing) < kFlowEps;
     }
 
-    double FlowAssumption::ourTimeFromTheirSpace(double displacement)
+    double FlowAssumption::nearTimeFromFarSpace(double displacement)
     {
-        TimeProjection::Four theirs{};
-        theirs[static_cast<std::size_t>(TimeProjection::farSideSpaceSlot())] = displacement;
-        return TimeProjection::toOurCoordinates(theirs)[0];
+        TimeProjection::Four far{};
+        far[static_cast<std::size_t>(TimeProjection::farSideSpaceSlot())] = displacement;
+        return TimeProjection::toNearCoordinates(far)[0];
     }
 
     bool FlowAssumption::amountIsFree()
     {
-        const double unit = ourTimeFromTheirSpace(1.0);
+        const double unit = nearTimeFromFarSpace(1.0);
         if (std::abs(unit) < kFlowEps)
         {
             return false;
         }
         for (double amount : {0.5, 2.0, 7.25})
         {
-            if (std::abs(ourTimeFromTheirSpace(amount) - amount * unit) > 1e-12)
+            if (std::abs(nearTimeFromFarSpace(amount) - amount * unit) > 1e-12)
             {
                 return false;
             }
@@ -193,18 +193,19 @@ namespace slm
                                                                     -1));
 
         report.subsection("The two sides are exact duals in this respect");
-        report.check("our one timelike direction is orientable and their three "
+        report.check("the near side's one timelike direction is orientable and their three "
                      "positive directions are not, which is the same statement seen "
                      "from either side",
                      FlowAssumption::isOrientable(FlowAssumption::metricHere(), 1) &&
                          !FlowAssumption::isOrientable(FlowAssumption::metricThere(), 1));
-        report.check("their one negative direction is orientable and our three "
+        report.check("the far side's one negative direction is orientable and the near side's "
+                     "three "
                      "spacelike directions are not, which is the mirror of it",
                      FlowAssumption::isOrientable(FlowAssumption::metricThere(), -1) &&
                          !FlowAssumption::isOrientable(FlowAssumption::metricHere(), -1));
         report.check("so the far side's single space axis being one way is not an "
                      "extra assumption laid on top of the model: it is the same "
-                     "theorem that gives our own arrow, applied to the other type",
+                     "theorem that gives the near side's arrow, applied to the other type",
                      FlowAssumption::isOrientable(FlowAssumption::metricThere(), -1) ==
                          FlowAssumption::isOrientable(FlowAssumption::metricHere(), 1));
 
@@ -217,25 +218,27 @@ namespace slm
                      "amount enters the return map as an input, so no result would "
                      "change if a body could sit still",
                      !FlowAssumption::compulsionIsUsedAnywhere());
-        report.check("the sense that our own time carries us is therefore outside "
+        report.check("the sense in which the near-side time carries a worldline is therefore "
+                     "outside "
                      "what is computed here, and no claim rests on it",
                      !FlowAssumption::compulsionIsUsedAnywhere());
 
         report.subsection("What survives: the amount is free and the sign is not");
         for (double amount : {0.5, 1.0, 2.0, 7.25})
         {
-            report.check(std::format("  a displacement of {:5g} along their space axis lands "
-                                     "{:+.4f} along our time axis",
-                                     amount, FlowAssumption::ourTimeFromTheirSpace(amount)),
-                         std::abs(FlowAssumption::ourTimeFromTheirSpace(amount)) > 0.0);
+            report.check(std::format("  a displacement of {:5g} along the far-side space axis "
+                                     "lands "
+                                     "{:+.4f} along the near-side time axis",
+                                     amount, FlowAssumption::nearTimeFromFarSpace(amount)),
+                         std::abs(FlowAssumption::nearTimeFromFarSpace(amount)) > 0.0);
         }
         report.check("the relation is exactly linear in the amount, so how far a body "
-                     "goes along their space axis is a free choice with a definite "
-                     "consequence on our clock",
+                     "goes along the far-side space axis is a free choice with a definite "
+                     "consequence on the near-side clock",
                      FlowAssumption::amountIsFree());
         report.check("but the sign cannot be reversed, since that axis is orientable",
                      !FlowAssumption::signCanBeReversed());
-        report.check("so motion over there does reach our timeline, and reaches it in "
+        report.check("so motion over there does reach the near-side timeline, and reaches it in "
                      "an amount the body chooses; what it cannot choose is the "
                      "direction, and that is why the crossing places a body later and "
                      "never earlier by this route",

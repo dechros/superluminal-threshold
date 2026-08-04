@@ -39,12 +39,14 @@ namespace slm
         for (double kSquared : {0.0, 1.0, 9.0, 100.0})
         {
             const double omega = c * std::sqrt(kSquared + mu);
-            report.checkNear(std::format("Region I : k^2 = {:g}, omega = {:.6g} -> field equation residual",
+            report.checkNear(std::format("Region I : k^2 = {:g}, omega = {:.6g} -> field "
+                                         "equation residual",
                                          kSquared, omega),
                              regionIResidual(c, mu, omega, kSquared));
 
             const double q = c * std::sqrt(kSquared + mu);
-            report.checkNear(std::format("Region II: kappa^2 = {:g}, q = {:.6g} -> field equation residual",
+            report.checkNear(std::format("Region II: kappa^2 = {:g}, q = {:.6g} -> field "
+                                         "equation residual",
                                          kSquared, q),
                              regionIIResidual(c, mu, kSquared, q));
         }
@@ -71,7 +73,8 @@ namespace slm
             }
             lastRate = rate;
         }
-        report.check("Region II admits modes with a POSITIVE coefficient, exponential growth", sawBlowUp);
+        report.check("Region II admits modes with a POSITIVE coefficient, exponential "
+                     "growth", sawBlowUp);
         report.check("the growth rate is UNBOUNDED as k_T -> infinity", lastRate > 1e5);
     }
 }

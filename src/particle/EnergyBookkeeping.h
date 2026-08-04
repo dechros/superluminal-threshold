@@ -24,8 +24,8 @@ namespace slm
     public:
         using Four = std::array<double, 4>;
 
-        /// Our four-momentum carried across, giving the far-side quantities.
-        static Four across(const Four &ours);
+        /// The near-side four-momentum carried across, giving the far-side quantities.
+        static Four across(const Four &near);
 
         /// Length of the far-side energy vector, its first three slots.
         static double farEnergyMagnitude(const Four &far);
@@ -39,13 +39,13 @@ namespace slm
         /// The invariant, which flips sign on crossing.
         static double invariant(const Four &vector, bool farSide);
 
-        /// Our energy, read off our own four-momentum.
-        static double ourEnergy(const Four &ours) { return ours[0]; }
+        /// The near-side energy, read off the near-side four-momentum.
+        static double nearEnergy(const Four &near) { return near[0]; }
 
-        /// Length of our three-momentum.
-        static double ourMomentumMagnitude(const Four &ours);
+        /// Length of the near-side three-momentum.
+        static double nearMomentumMagnitude(const Four &near);
 
-        /// Angle between the three-momenta of two of our four-vectors.
+        /// Angle between the three-momenta of two near-side four-vectors.
         static double momentumAngle(const Four &first, const Four &second);
     };
 

@@ -9,7 +9,7 @@ namespace slm
 
     /// Section showing that the family of superluminal rest states is a
     /// single orbit rather than a family of distinct physical states.
-    class SuperluminalRest : public Section
+    class RestStateOrbit : public Section
     {
     public:
         /// Rest four-momentum (m c s1, m c s2, m c s3, 0).

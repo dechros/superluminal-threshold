@@ -1,7 +1,7 @@
 #include "transform/ExtendedLorentzGroup.h"
 
 #include "core/Report.h"
-#include "transform/InvolutionD.h"
+#include "transform/SignatureInvolution.h"
 
 #include <cmath>
 #include <format>
@@ -25,7 +25,7 @@ namespace slm
     {
         const Matrix4 minkowski = Matrix4::diagonal(-1.0, 1.0, 1.0, 1.0);
         const Matrix4 lambda = lambdaAlongZ();
-        const Matrix4 D = InvolutionD::matrix();
+        const Matrix4 D = SignatureInvolution::matrix();
 
         for (int exponent = 0; exponent <= 1; ++exponent)
         {
@@ -48,7 +48,7 @@ namespace slm
 
     void ExtendedLorentzGroup::run(Report &report) const
     {
-        const Matrix4 D = InvolutionD::matrix();
+        const Matrix4 D = SignatureInvolution::matrix();
 
         report.subsection("Sign choice: can +D and -D be told apart?");
         for (double sign : {1.0, -1.0})

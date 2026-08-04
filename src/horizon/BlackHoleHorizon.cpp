@@ -94,7 +94,8 @@ namespace slm
         {
             inverseFails = true;
         }
-        report.check("at the degenerate point the inverse metric does not exist, the field equation is undefined",
+        report.check("at the degenerate point the inverse metric does not exist, the field "
+                     "equation is undefined",
                      inverseFails);
     }
 }
