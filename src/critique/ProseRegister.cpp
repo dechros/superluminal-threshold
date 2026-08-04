@@ -17,7 +17,9 @@ namespace slm
             "karşılaştırdım", "etmiyorum", "almadım",  "çıkardım", "türetmedim",
             "buldum",     "gördüm",      "yaptım",    "ettim",    "biz ",
             "bize ",      "bizim ",      "çalışmamız", "makalemiz", "hesabımız",
-            "bulamadığım", "seçtiğim", "kurduğum", "gördüğüm", "yaptığım"};
+            "bulamadığım", "seçtiğim", "kurduğum", "gördüğüm", "yaptığım",
+            "yoruz", "iyoruz", "uyoruz", "üyoruz", "ıyoruz", "acağız", "eceğiz",
+            "malıyız", "meliyiz"};
 
         const std::vector<std::string> kSelfReference = {
             "karıştırılmamalı", "abartılmamalı", "bırakılmamalı", "kaydedilmeli",

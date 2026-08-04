@@ -836,7 +836,7 @@ ortaya konmaz, çünkü orada zaten kapalı bir grup inşa edilmiştir.
 ## 5. Ara bölge nedir: dört tip, beş kalınlık
 
 Önceki iki bölüm iki bölgeyi tarif etti. Aralarında ne olduğu ayrı bir sorudur ve
-bu çalışmada onu bir yüzey değil, kendi başına bir **bölge** olarak ele alıyoruz.
+bu çalışmada bir yüzey değil, kendi başına bir **bölge** olarak ele alınır.
 Nedeni şudur: geçişin nasıl olacağını belirleyen şey iki uçtaki metrikler değil,
 aralarındaki bölgenin karakteridir.
 
@@ -1499,6 +1499,14 @@ sorudur ve burada karara bağlanmamıştır.
 ## 9. Yırtığın yapısı
 ### 9.1 İki imza arasında sürekli yol ne kadar dejenere olmak zorunda
 
+Önceki bir sürümde bu soru başka bir yoldan cevaplanıyordu, ve cevap yanlıştı.
+$\mathrm{diag}(1, -\cos\lambda, -\cos\lambda, -\cos\lambda)$ yolu üzerinden "iki
+imza sınıfı arasında dejenere olmayan sürekli bir yol yoktur, dolayısıyla geçiş
+sağlanmaz" sonucuna varılıyordu. İki kusuru var. Birincisi, o yol $(3,1)$'e değil
+Öklid imzası $(4,0)$'a varır, yani hedefi ıskalar. İkincisi, $\det \eta = \det \eta' = -1$
+olduğundan, determinant üzerinden yürüyen gerekçe geçersizdir. Aşağıdaki yol
+doğrusudur, ve sonucu farklı çıkar.
+
 Soru şudur: $(1,3)$'ten $(3,1)$'e giden sürekli bir yol boyunca aynı noktada kaç
 öz-değerin birden sıfırlanması gerekir. Dejenereliğin kendisi kaçınılmazdır,
 çünkü pozitif öz-değer sayısının birden üçe çıkması gerekir ve her değişim sıfırdan
@@ -1523,7 +1531,7 @@ Her iki ayakta da rank yalnızca **bir** düşer.
 
 | Yol                                                                  | Varış                | En kötü rank düşüşü |
 | -------------------------------------------------------------------- | -------------------- | ------------------- |
-| $\mathrm{diag}(1,-\cos\lambda,-\cos\lambda,-\cos\lambda)$, Bölüm 9.5 | $(4,0)$, hedef değil | 3                   |
+| Yukarıdaki geri çekilen yol                                          | $(4,0)$, hedef değil | 3                   |
 | Doğrudan, iki bileşen birlikte                                       | $(3,1)$              | 2                   |
 | Kademeli, $(2,2)$ üzerinden                                          | $(3,1)$              | **1**               |
 
@@ -1542,9 +1550,9 @@ geçer. Bu, Bölüm 30'daki sıralama sorunlarının orada da geçerli olacağı
 gelir, ancak üç zaman yerine iki zamanla ve yalnızca ara bölgede. Bu ara bölgenin
 fiziksel olarak var sayılıp sayılamayacağı burada karara bağlanmamıştır.
 
-Bölüm 9.5'in "iki imza sınıfı arasında dejenere olmayan sürekli bir yol yoktur"
-ifadesi doğrudur ve Sylvester'ın sonucudur. Ondan çıkarılan "dolayısıyla geçiş
-sağlanmaz" ifadesi ise **doğru değildir** ve geri çekilmektedir.
+Geri çekilen argümanın "iki imza sınıfı arasında dejenere olmayan sürekli bir yol
+yoktur" kısmı doğrudur, ve Sylvester'ın sonucudur. Ondan çıkarılan "dolayısıyla
+geçiş sağlanmaz" kısmı ise **doğru değildir**.
 
 ---
 
@@ -1555,7 +1563,7 @@ değiştirir: $r$ zaman-benzeri, $t$ uzay-benzeri olur. Merkeze düşmek kaçın
 gelir: $r$ artık tek eksendir ve azalmak zorundadır.
 
 Buradaki "kaçınılmaz" ile dışarıda geleceğe ilerlemenin kaçınılmazlığı **aynı
-türden değildir** ve ikisi birbirine benzetilmemelidir. Ufkun içindeki zorunluluk
+türden değildir**. Ufkun içindeki zorunluluk
 metrikten çıkar; dışarıdaki ise çıkmaz. Bölüm 10.4'te ispatlanan şey tam olarak
 budur: tek pozitif ekseni çeviren dönüşüm bir izometri olduğu için metrikten
 üretilen hiçbir nicelik geleceği geçmişten ayırt edemez. Ufkun içinde ayırt eden
@@ -1610,17 +1618,7 @@ $\Sigma$ için dört koordinat birden döner: $(1,3) \to (3,1)$.
 | Konjuge momentum   | Sürekli; sıfır olmak zorunda değil | İşaret çevirmek zorunda, dolayısıyla $\pi = 0$                                              |
 | Sonuç              | **Geçirgen**                       | **Yansıtıcı**, ancak yalnızca öte taraf sınırsızken; sonlu kalınlıkta geçirgendir (Bölüm 8) |
 
-### 9.5 Geri çekilen argüman
-
-Bu alt bölüm bir kayıttır ve kısa tutulmuştur. Önceki bir sürümde
-$\mathrm{diag}(1, -\cos\lambda, -\cos\lambda, -\cos\lambda)$ yolu üzerinden
-"iki imza sınıfı arasında dejenere olmayan sürekli bir yol yoktur, dolayısıyla
-geçiş sağlanmaz" sonucuna varılıyordu. İki kusuru var. O yol $(3,1)$'e değil
-Öklid imzası $(4,0)$'a varır, yani hedefi ıskalar. Ve
-$\det \eta = \det \eta' = -1$ olduğundan, determinant üzerinden yürüyen gerekçe
-geçersizdir. Doğru yol Bölüm 9.1'de kurulmuştur ve sonucu farklıdır.
-
-### 9.6 Sonuç
+### 9.5 Sonuç
 
 Bu karşılaştırmanın diğer tarafı literatürde ayrıntılı işlenmiştir. [15] bir
 Schwarzschild kara deliğinin yeniden doğuşunu çift imza değişimi olarak modeller.
@@ -4214,7 +4212,7 @@ koşullar da aynı yere çıkmaktadır.
 Bölüm 9.1 onu karşılar. Dejenerelik kaçınılmazdır, ama rank-2 dejenerelik değil.
 $(2,2)$ üzerinden giden kademeli bir yolda her noktada yalnızca tek bir öz-değer
 sıfırlanır; bu da tam olarak [13], [14], [18], [19] ve [16]'ün araçlarının
-çalıştığı sınıf. Bölüm 9.5'in karşıt sonucu geri çekildi.
+çalıştığı sınıf. Bölüm 9.1'in kaydettiği karşıt sonuç geri çekildi.
 Geriye kalan soru geçişin mümkün olup olmadığı değil, $(2,2)$ ara bölgesinin
 fiziksel olarak kabul edilip edilemeyeceğidir.
 
@@ -4526,7 +4524,7 @@ taşınmamaktadır.
 **Bölüm 9.1'de kapanan nokta.** İki imza arasındaki sürekli yolun ne kadar
 dejenere olmak zorunda olduğu sorusu cevaplandı. Her noktada yalnızca tek bir
 öz-değerin sıfırlandığı bir yol vardır; bedeli, $(2,2)$ imzalı iki zamanlı bir
-ara bölgeden geçmektir. Bölüm 9.5'in "geçiş sağlanmaz" sonucu geri çekilmiştir.
+ara bölgeden geçmektir. Bölüm 9.1'deki "geçiş sağlanmaz" sonucu geri çekildi.
 
 **Bölüm 8'da daraltılan nokta.** Eşiğin yansıtıcı olması sınırsız bir öte taraf
 varsayar. Sonlu kalınlıkta bir dilim, üstel olarak bastırılmış ama sıfır olmayan
