@@ -1,3 +1,4 @@
+#include "admission/CrossingAdmission.h"
 #include "boundary/CausalCrossing.h"
 #include "boundary/JunctionFamily.h"
 #include "boundary/JunctionScattering.h"
@@ -163,6 +164,7 @@ namespace
         sections.push_back(std::make_unique<slm::RoundTripInvariantsSection>());
         sections.push_back(std::make_unique<slm::ThreeRoutesSection>());
         sections.push_back(std::make_unique<slm::ChargedRoundTripSection>());
+        sections.push_back(std::make_unique<slm::CrossingAdmissionSection>());
         sections.push_back(std::make_unique<slm::TimeProjectionSection>());
         sections.push_back(std::make_unique<slm::FlowAssumptionSection>());
         sections.push_back(std::make_unique<slm::TimeReversalSignatureSection>());
