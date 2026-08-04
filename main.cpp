@@ -22,6 +22,7 @@
 #include "field/VectorGaugeField.h"
 #include "field/ReversalSymmetry.h"
 #include "field/TimeOrientation.h"
+#include "identity/RoundTripInvariants.h"
 #include "horizon/BlackHoleHorizon.h"
 #include "horizon/DegeneratePath.h"
 #include "horizon/LayerEnergyConditions.h"
@@ -155,6 +156,7 @@ namespace
         sections.push_back(std::make_unique<slm::WorkedRoundTripSection>());
         sections.push_back(std::make_unique<slm::FeasibilitySection>());
         sections.push_back(std::make_unique<slm::PacketSimulationSection>());
+        sections.push_back(std::make_unique<slm::RoundTripInvariantsSection>());
         sections.push_back(std::make_unique<slm::TimeProjectionSection>());
         sections.push_back(std::make_unique<slm::FlowAssumptionSection>());
         sections.push_back(std::make_unique<slm::TimeReversalSignatureSection>());
