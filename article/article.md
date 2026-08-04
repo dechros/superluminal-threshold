@@ -457,7 +457,7 @@ tam olarak kendisidir: Bölge I'in zamanı ve Bölge II'nin tek uzay yönü.
 ailededir; bu, Özet'teki koşul paragrafının söylediği seçimdir. Bu bir seçimdir, üç koşulun bir sonucu değildir. Aileler arasında
 seçim yapan hiçbir şey burada hesaplanmamaktadır ve iki aileyi ayıran dönüşüm iki
 tarafın metriğinin de izometrisi olduğundan, **seçim geometrik değildir**.
-Bölüm 8.4 ile birlikte okunmalıdır: orada da ayrımın iki yakası arasında
+Bölüm 8.4 aynı şeyi başka yerde söyler: orada da ayrımın iki yakası arasında
 metriğin bir tercih yapmadığı gösterilmiştir. Seçimi yapacak şey her iki yerde
 de metriğin dışındadır.
 
@@ -694,7 +694,7 @@ cevaplanabilir (`src/intermediate/ThresholdOptimum`).
 Kapalı biçim soruyu ele verir. Enerji vektörünün birinci bileşeninin karesine
 **normal pay**, kalan ikisinin toplamına **enine pay** denirse, gecikme yalnızca
 bu iki sayıya ve kütleye bağlıdır; kalınlık formülde geçmez. Dolayısıyla ikisi
-üzerinden minimize edilebilir. Çıkan iki hareket birbirine karıştırılmamalıdır.
+üzerinden minimize edilebilir. Çıkan iki hareket birbirinden ayrıdır.
 
 **Birincisi: sabit toplam enerjide bir iç optimum vardır ve etkisi zayıftır.**
 Toplam $6{,}84$ için:
@@ -918,7 +918,7 @@ bulunmadığını gösterir.
 Öklid satırının kalınlıkla üstel kapanması, dolayısıyla bağımsız bir bulgu
 değildir: profilin ayrıntısından bağımsız olarak yalnızca genişliğin sayması
 [45]'ün sonucudur. Bu sonuç burada yeniden üretilmiştir, ve yeniden üretimin ne
-anlama geldiği yazılmalıdır, çünkü tek kalınlıklı bir tablo onu sınamaz.
+anlama geldiği açık olmalı, çünkü tek kalınlıklı bir tablo onu sınamaz.
 Sınamak, biçimleri farklı toplamları aynı profiller gerektirir.
 
 Sınanan nicelik geometrik genişlik değil, sönüm sabitinin **yol boyunca
@@ -937,7 +937,7 @@ gerçekleşen üstel $\ln T / (-2\Sigma)$ olarak okunmuştur; $\Sigma$ integrald
 Beş profilin hepsi $\Sigma = 64$'te $1$'e yüzde birden yakın bir üstel
 gerçekleştirir. İddia bu biçimde doğrulanmıştır.
 
-İddianın **daha güçlü bir biçimi doğru değildir** ve bu da kaydedilmelidir:
+İddianın daha güçlü bir biçimi doğru değildir:
 toplamı eşit iki profil aynı geçirgenliği vermez, $2{,}88\times10^{-7}$ ile
 $1{,}81\times10^{-7}$ verir. Toplamın sabitlediği şey üsteldir, önçarpan
 değildir. Yayınlanmış ifade tam olarak bu kadarını söyler; buradaki hesap onu
@@ -1169,7 +1169,7 @@ bloğun mertebesini ikinci bir parametre olarak taşıyan ve eğrilik ile lapse
 oranını bu iki mertebenin bir bileşimi olarak veren bir sınıflandırmaya
 rastlanmamıştır.
 
-**Kapsam abartılmamalıdır.** Bu itiraz, geçişin **geometrisini**
+**Kapsamı.** Bu itiraz, geçişin **geometrisini**
 bağlar: metrik ara değerlemesinin dönüm noktasındaki davranışını. Bu çalışmada
 mod geçirgenliği ayrı bir eksende hesaplanmaktadır; ara bölgenin tipine bağlıdır,
 ara değerleme profiline değil. İki eksen kodda bağımsızdır. Bu bağımsızlığın
@@ -1179,7 +1179,7 @@ ayakta kalıp kalmayacağı da orada açıktır.
 
 ### 3.8 Çekinceler
 
-Üç varsayım açıkça kaydedilmelidir.
+Üç varsayım var.
 
 Yukarıdaki tablo, enine dalga sayısının yönler arasında eşit paylaşıldığını
 varsayar. Parçacık dalga sayısının çoğunu tam da karakter değiştiren yönde
@@ -1247,7 +1247,7 @@ doğal bir Lagrangian'dan varyasyon almak. İkisi aynı yere varır ve elde edil
 türetim aynı ailenin dört boyutlu ve kütleli üyesidir; yeni olan koşulun kendisi
 değil, hangi geçiş profillerinin onu sağlayabildiğidir (Bölüm 3.5).
 
-Bu çizginin tartışmalı olduğu da kaydedilmelidir: [49] koşulun verdiği çözüm
+Bu çizgi tartışmalıdır: [49] koşulun verdiği çözüm
 sınıfını reddeder, [48] onu savunur. Aşağıdaki saçılma hesabı seçimin ne kadar
 belirleyici olduğunu ölçmek için kurulmuştur ve tartışmanın hangi tarafında
 durulduğunu değiştirmez.
@@ -1735,7 +1735,7 @@ Yollar farklıdır. [14] sonucu geçiş hiperyüzeyinin geometrisinden, Lorentzi
 bölgede global hiperboliklik varsayarak elde eder; burada ise yalnızca zaman
 yönlerinin sayısından, hiperyüzey hakkında hiçbir varsayım yapmadan çıkar.
 
-İki çekince belirtilmelidir. Birincisi, [14]'nın hipotezleri bu modelin geçişi
+İki çekince var. Birincisi, [14]'nın hipotezleri bu modelin geçişi
 tarafından **sağlanmaz**: orada bir taraf Riemann imzalıdır ve dejenerelik
 transvers radikal tipindedir, buradaki doğrudan geçişte ise rank iki düşer
 (Bölüm 7.1). Ortak olan sonuçtur, ispat değildir. Buna karşılık Bölüm 7.1'in
@@ -1765,7 +1765,7 @@ bağıntısı çıkar. Bu, üç zamanlı Bölge II'nin dışarıdan bakıldığ�
 görünebileceği anlamına gelir. Buradaki formülasyon ile arasındaki fark, [22]'in
 evrimin üniter ve olasılık koruyan olmasını istemesidir; Bölüm 28'da gösterildiği
 gibi Bölge II'de bu talebin dayandığı yapı zaten mevcut değildir. Yine de bu
-itiraz açık bir sorudur ve modelin lehine kapatılmış sayılmamalıdır.
+itiraz açık bir sorudur; model onu kendi lehine kapatmamıştır.
 
 ---
 
@@ -2155,7 +2155,7 @@ Bu iki bedel, Bölüm 14'te mod içeriği karşılaştırmasının ölçeceği n
 
 ### 10.5 Bu tanımın sınırları
 
-Üç çekince açıkça kaydedilmelidir.
+Üç çekince var.
 
 Paket burada tek bir enine dalga sayısı değişkeni üzerinde alınmıştır. Gerçek bir
 üç boyutlu paket için aynı hesap üç değişkende yapılmalıdır; sonucun niteliksel
@@ -3069,7 +3069,7 @@ ancak büyüklüğü bu sayının verdiği izlenimden küçüktür.
 
 ### 18.5 Yönelim izi nereden geliyor: zamanlar uzayının eğriliği
 
-> Bu alt bölüm, metnin en güçlü iç denetimidir ve öyle okunmalıdır. Aynı sonuca
+> Bu, metnin en güçlü iç denetimidir. Aynı sonuca
 > **tümüyle farklı iki hesap yolundan** varılmakta, iki yol aynı iki dönme
 > düzleminde buluşmaktadır. Bir sonucu iki kez elde etmek, onu bir kez elde
 > edip savunmaktan daha güçlüdür.
@@ -3224,7 +3224,7 @@ dönüş olayı ışığın varabileceği andan o kadar öne düşer.
 
 ### 19.6 Bu farkın ne olduğu, ve ne olmadığı
 
-Bu sonuç dikkatle okunmalıdır ve çalışmanın kendi çekincesi burada kayda geçer.
+Çalışmanın kendi çekincesi burada durur.
 
 **Olduğu şey.** Dönüş olayının zaman koordinatı, kesintisiz hiçbir ışık
 sinyalinin ulaşamayacağı bir yerdedir. Çekirdek sorunun "zamanda yolculuk"
@@ -3729,7 +3729,7 @@ dolayısıyla iki nicelik birlikte doyamaz ve geçiş okuması ayakta kalır. Bu
 Bölüm 17.9'te bağımsız olarak bulunan ayrımın aynısıdır: parçacık okuması
 yalnızca yayılımlı rejimde meşrudur.
 
-Bu sonucun Bölüm 19.6'daki çekinceyi **güçlendirdiği** kaydedilmelidir. Orada
+Bu sonuç Bölüm 19.6'daki çekinceyi **güçlendirir**. Orada
 kalınlıkla sınırsız büyüyen fark için "bu bir yayılma hızı değildir" denmişti;
 burada ek olarak, o farkın okunduğu niceliğin de bağımsız bir yolculuk saati
 olmadığı gösterilmektedir.
@@ -3893,7 +3893,7 @@ kalınlığın bir kazası değildir; dörtte ve onaltıda aynıdır. Dahası b�
 rastgele değildir: **doyan üç okuma, ışığı geçen üç okumanın aynısıdır.** Bu tek
 bir olgudur, iki değil.
 
-Buradan çıkan sonuç modelin lehine değildir ve öyle sunulmamaktadır:
+Buradan çıkan sonuç modelin lehine değildir ve burada öyle yazılmaz:
 
 > Geçişin ne kadar sürdüğü sorusuna tek bir sayı cevap vermez, ve geçişin ışığın
 > hangi tarafına düştüğü de bölgenin bir özelliği değildir. İkisi de bir ölçüm
@@ -3942,7 +3942,7 @@ genlik çöker:
 
 Aşağıdaki tablo **tek geçiş** ayağındadır: öne alma, tek geçişlik gecikmenin
 $d/c$ ile karşılaştırılmasıdır. Bölüm 19.5'in tablosu gidiş dönüş ayağındadır ve
-sayıları bu nedenle farklıdır; ikisi karıştırılmamalıdır.
+sayıları bu nedenle farklıdır.
 
 | $d$  | Geçen genlik               | Tepenin tek geçişte öne alınması |
 | ---- | -------------------------- | -------------------------------- |
@@ -3974,7 +3974,7 @@ bağlayıcı olduğu.
 
 ### 23.1 Dokuz hücrenin yedisi sıradan fizikle örtüşüyor
 
-Bu, modelin lehine bir sonuç değildir ve öyle sunulmamaktadır.
+Bu, modelin lehine bir sonuç değildir ve burada öyle yazılmaz.
 
 Parçacık hiç çıkmıyorsa, içeride ne olduğundan bağımsız olarak bir soğurulma
 görürüz. Girdiği yüzden geri dönüyorsa, saparak ya da sapmadan, bir yansıma
@@ -4027,7 +4027,7 @@ tam olarak korunur, yalnızca yön değişir.
 
 ### 23.4 Bu tablonun statüsü
 
-Bir çekince açıkça belirtilmelidir. Sapma açıları ve korunan nicelikler
+Bir çekince var. Sapma açıları ve korunan nicelikler
 hesaplanmıştır; hangi hücrenin sıradan fizikle örtüştüğü ise **hesaplanmamış,
 muhakeme edilmiştir**. Üçüncü sütun bir sınıflandırma kararıdır, bir türetim
 değildir.
@@ -4043,7 +4043,7 @@ dağılımı, hesaplanmamıştır ve modelin en büyük eksiğidir.
 
 Bu kısım, çalışmanın nerede durduğunu değil, nerede **duramadığını** yazar.
 
-İki tür sınır ayrılmalıdır. Birincisi modelin kendi kurgusundan doğan cebirsel
+İki tür sınır var. Birincisi modelin kendi kurgusundan doğan cebirsel
 engellerdir; Bölüm 21 bunu ele alır. İkincisi literatürün bu türden bir kurguya
 yönelttiği itirazlardır, ve bunlar yalnızca bu çalışmaya yöneltilmiş olanlarla
 sınırlı değildir. Buradaki kurgu imza değişimini, ışık ötesi taşımayı ve çok
@@ -4124,7 +4124,7 @@ bilinmemektedir, ve bu Bölge II için de geçerlidir.
 **7. "İmza değiştiren arka planda kuantum alanı naif olarak sonsuz sayıda
 parçacık üretir."** [12]. Bölüm 28.2'deki "parçacık değil korelasyon" okuması
 bunu çözmez, sorunun sorulamaz hâle geldiği bir çerçeve önerir. Bu bir cevap
-değildir ve öyle sunulmamaktadır.
+değildir ve burada öyle yazılmaz.
 
 **8. "Olasılık korunumu dayatıldığında fazladan zaman ekseni gözlenemez hâle
 gelir, klasik durumda evrim etkin olarak tek zamanlıdır."** [22]. Bölüm 8.3'te
@@ -4243,7 +4243,7 @@ dururken hükmün sessizce değişmesini engeller.
 **Bilanço.** On beş itirazın **2'si cevaplanmış, 3'ü daraltılmış, 8'i kabul
 edilmiş, 2'si sınanmamıştır.**
 
-Bu bilanço çalışmanın lehine değildir ve öyle sunulmamaktadır. Kabul
+Bu bilanço çalışmanın lehine değildir ve burada öyle yazılmaz. Kabul
 edilenlerin sayısı ötekilerin toplamını aşmaktadır. Kütüphanede bunu izleyen bir
 denetim vardır: cevaplananların sayısı ötekilerin toplamını aşarsa doğrulama
 başarısız olur, çünkü o noktada tutulan şey bir sicil değil bir savunmadır.
@@ -4301,7 +4301,7 @@ yinelendi ve yeni sonuçlardan altısının metne girmediğini gösterdi: geri t
 dalda üç mesafenin varış anları, yayılımlı rejimdeki gecikme, ve çerçeve
 değişiminin üç katsayısı. Altısı da eklenmiştir.
 
-**Süpürmenin kendi sınırı da kaydedilmelidir.** Ham karşılaştırma, makalede
+**Süpürmenin sınırı.** Ham karşılaştırma, makalede
 bulunan sayıların bir kısmını bulunamamış sayar, çünkü metin ondalık ayırıcı
 olarak virgül ve üsleri $10^{-12}$ biçiminde yazarken çıktı nokta ve $e$-gösterimi
 kullanır, ayrıca metin yuvarlanmış değer verir. Bu nedenle süpürmenin ham
@@ -4320,7 +4320,7 @@ açının bir örneği ve oyalanma karşılaştırmasındaki bağıl fark.
 
 İkinci denetim kaynakçayadır ve sorusu şudur: bir kaynağın merkezi hesaplanabilir
 iddiası burada **kendi araçlarımızla yeniden üretilmiş** midir, yoksa
-hesaplanmadan **itibara mı alınmıştır**. İkisi karıştırılmamalıdır; itibara
+hesaplanmadan **itibara mı alınmıştır**. Aradaki fark şudur: itibara
 alınan bir sonucun doğruluğu bu çalışmanın güvencesi altında değildir.
 
 Bu denetimin bulduğu en ağır eksik, **kaynakça boşluğuydu**. Makalenin en çok
@@ -4356,10 +4356,9 @@ Sicilde bir denetim vardır: "yeniden üretilmiş" işaretli her girdi, onu üre
 kütüphaneyi **adıyla** taşımak zorundadır. Adı olmayan bir yeniden üretim iddiası
 doğrulamayı düşürür. Bu, sicilin var olma nedenidir.
 
-Sicilin son üç kalemi bir literatür taramasının ürünüdür ve nasıl eklendikleri
-kaydedilmelidir. Tarama, "karşılığı yok" diye kaydedilmiş sonuçların gerçekten
-karşılıksız olup olmadığını sınamak için yapılmıştır ve biri karşılıklı
-çıkmıştır (Bölüm 27.2). Bulunan çalışmanın sonucu yeniden üretilmiş, ikisi
+Sicilin son üç kalemi bir literatür taramasından geldi. Tarama, "karşılığı yok"
+diye kaydedilmiş sonuçların gerçekten karşılıksız olup olmadığını sınamak için
+yapıldı, ve biri karşılıklı çıktı (Bölüm 27.2). Bulunan çalışmanın sonucu yeniden üretilmiş, ikisi
 itibara alınmıştır. Buradan çıkan yöntem kuralı şudur: bir sicil neyin
 **içinde** olduğunu denetleyebilir, neyin dışında bırakıldığını denetleyemez.
 Dışarıda kalanı yalnızca arama bulur, ve arama denetlenmiş bir işlem değildir.
@@ -4612,9 +4611,9 @@ tarafından yakalanmıştır, ki bir simülasyonun varlık nedeni budur.
 
 Bu bölüm, konuyla ilgili literatürün çözmediği ya da tartışmalı bıraktığı
 soruları dört sınıfa ayırır ve her birinde bu çalışmanın nerede durduğunu
-söyler. Sınıflar farklı muamele gerektirir ve karıştırılmamalıdır.
+söyler. Dört sınıf farklı muamele gerektirir.
 
-**Bölüm 24.7 ile karıştırılmamalıdır.** Orası, literatürün **bu çalışmaya**
+**Bölüm 24.7 ile farkı.** Orası, literatürün **bu çalışmaya**
 yönelttiği itirazları ve her birinin hükmünü sayar. Burası ise literatürün
 **kendi içinde** açık bıraktığı soruları ve bu çalışmanın onların neresinde
 durduğunu sayar. İki sicil aynı kalemleri farklı sözlükle saymaz; farklı
@@ -4735,14 +4734,14 @@ girer, ve işareti hangi geçişin gerçeklendiğine bağlıdır (Bölüm 2.1, B
 gelmektedir. [56]'in itirazı, dolayısıyla, kapatılmamakta ama **kapsam dışında
 kalmaktadır**: itiraz bağıl hızdan işaret üreten kurgulara yöneliktir.
 
-Aynı hedefe götüren geometrik bir rotanın da bulunduğu kaydedilmelidir. [57]
+Aynı hedefe götüren geometrik bir rota da vardır. [57]
 kütleli bir cismi, metriği Lorentz imzasında tutarak ve yerel olarak ışık
 hızının altında bırakarak uzayda ışıktan hızlı taşır. Bu, buradaki rotanın
 rakibidir ve aradaki fark yöntemseldir: orada imza korunur ve enerji koşulu
 ihlal edilir, burada imza değişir ve ihlal eşik katmanında ortaya çıkar
 (Bölüm 3.6). İkisi de bedeli aynı yere yazmaktadır.
 
-Yeniden yorumlama ilkesinin ayrıca **rakip bir okuma** olduğu kaydedilmelidir.
+Yeniden yorumlama ilkesi ayrıca **rakip bir okumadır**.
 [52]'e göre negatif enerjiyle geriye varan bir parçacık, ileri giden bir
 karşıparçacıktan ayırt edilemez. Bu, bu çalışmanın bağımsız olarak vardığı yerin
 ta kendisidir: Bölüm 17.3'te karşı yüzden dönüşün negatif enerjili bir varış gibi
@@ -4792,7 +4791,7 @@ kontrol edecek bir muhatap bulunmamaktadır.
 | Öte taraftaki yönelimden dönüş olayına eşleme | Yayınlanmış çalışma yok                                                                                       |
 
 İlk iki satır bu bölümün ilk yazımında olduğundan **belirgin biçimde daha dar**
-tutulmuştur ve gerekçesi kaydedilmelidir, çünkü daralma iki turda olmuştur.
+tutulmuştur. Gerekçesi şudur, ve daralma iki turda olmuştur.
 
 Önce, imza değişimi boyunca geçirgenliğin hiç hesaplanmadığı yazılıydı; bu
 yanlıştı. [45], [46] ve [47] tam olarak bunu yapmaktadır ve Öklid bölgesi için
@@ -4814,7 +4813,7 @@ tükenmiş sayılamaz.
 
 Üçüncüsü bu çalışmanın çekirdeğidir; dolayısıyla çekirdek, üzerinde
 kıyaslanacak literatürü bulunmayan bir sorudur. Bu hem fırsat hem risktir ve
-ikisi de kaydedilmelidir.
+ikisi de burada durur.
 
 İkinci ve üçüncü satırın aynı kökten geldiği de görülmelidir: ikisi de bir
 **anı** sormaktadır. Literatür imza değişiminden geçen alanı bir spektrum
@@ -4886,7 +4885,7 @@ bedeli öder; dönmüş bir çizgi hiçbir bedel ödemez.
 > boyunca bir **enerji bütçesidir**. Sayım ve yük, iki okumada da özdeştir.
 
 **Ölçümün şartnamesi.** Bir ölçümün var olması gerektiğini söylemek yetmez;
-hangi alet, hangi çözünürlük ve hangi zamanlama olduğu yazılmalıdır.
+hangi alet, hangi çözünürlük ve hangi zamanlama olduğu aşağıda yazılıdır.
 
 *Alet.* Ölçülen şey, sınır yapılanmayı üretirken **çevre bölgenin kaybettiği
 enerjidir**. Dolayısıyla alet, parçacığı izleyen bir dedektör değil, bölgeyi
@@ -4905,7 +4904,7 @@ Durgun enerjinin iki katından daha iyi çözen bir kalorimetre ikisini ayırır
 daha kötü çözen ayıramaz. Bu, gerçek bir aletin karşılanabileceği bir
 şartnamedir.
 
-*Zamanlama.* Ölçüm, varışlarla **çakışma içinde** okunmalıdır. Fark sınırda
+*Zamanlama.* Ölçüm, varışlarla **çakışma içinde** alınır. Fark sınırda
 çekilen tek bir yumrudur; uzun bir pencere üzerinde alınan ortalama onu bölgenin
 yaptığı her şeyin içine gömer.
 
