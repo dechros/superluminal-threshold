@@ -1292,7 +1292,7 @@ ve $F_{II} = |T_+|^2 - |T_-|^2$ ile verilir. Sonuçlar:
 Güçlü koşulda $T_+ = R$ ve $T_- = 1$ çıkar, dolayısıyla
 $F_{II} = |R|^2 - 1 = -F_I$ olur. İki akının eşit olması ancak $1 - |R|^2 = 0$
 ile mümkündür. Yani **tam yansıma ek bir varsayım değil, akı korunumunun tek
-çözümüdür.** Bölüm 6'nın sonucu bu haliyle bir seçimin sonucu olmaktan çıkıp, o
+çözümüdür.** Yukarıdaki sonuç bu hâliyle bir seçimin sonucu olmaktan çıkıp, o
 seçim verildiğinde bir zorunluluk hâline gelir.
 
 Zayıf koşulda ise $T_+ = 1$, $T_- = R$ olur ve akı **her** $R$ için korunur.
@@ -1477,8 +1477,8 @@ daha güçlü bir şey söylemiş olurdu.
 Bu sonucun modeldeki yeri şudur: ara bölgenin **ayrıntılı profili** geçirgenliği
 mertebe olarak belirlemez, yalnızca toplam sönümü belirler. Dolayısıyla Bölüm
 5'in profil ailesi üzerinde yapılan tartışmalar geçirgenliğin mertebesini
-değiştirmez; profilin bağladığı şey, Bölüm 5.6 ile 3.7'de görüldüğü gibi, katman
-ve oran koşuludur.
+değiştirmez; profilin bağladığı şey, Bölüm 5.6 ile Bölüm 5.7'de görüldüğü gibi,
+katman ve oran koşuludur.
 
 [23] ayrıca bu geometrinin bir **analog gerçeklemesini** verir: anizotropik bir
 yarı iletken ile elektronik bir metamalzeme arasındaki eklemde elektron
@@ -1491,6 +1491,7 @@ bağlanmamıştır.
 ---
 
 ## 9. Yırtığın yapısı
+
 ### 9.1 İki imza arasında sürekli yol ne kadar dejenere olmak zorunda
 
 Önceki bir sürümde bu soru başka bir yoldan cevaplanıyordu, ve cevap yanlıştı.
@@ -2219,7 +2220,7 @@ Euler-Lagrange:
 
 $$\frac{1}{c^2}\partial_t^2 \phi - \nabla^2 \phi + \mu \phi = 0$$
 
-$D$ uygulanmış hali:
+$D$ uygulanmış hâli:
 
 $$L' = \tfrac{1}{2}\left[(\partial_{t_1}\psi)^2 + (\partial_{t_2}\psi)^2
       + (\partial_{t_3}\psi)^2 - \frac{(\partial_r \psi)^2}{c^2} + \mu \psi^2\right]$$
@@ -3338,10 +3339,10 @@ kurulamayacağı ayrı ve meşru bir sorudur.
 
 **İki soru birbirinden ayrıdır.** Birincisi hangi geçiş eşlemesinin
 gerçekleştiğidir. Bu soru, Bölge I'in zaman yuvasıyla öte tarafın ayrıcalıklı
-uzay eksenini **birlikte** ters çeviren dönüşüme bakar, ve Bölüm 26.7 ile 25 onu
-işler. Buradaki soru ise eşleme verilmişken **yolculuğun yönüdür** ve yalnızca
-geçiş ekseninin ters çevrilmesine bakar. İşaret dizileri olarak yazıldığında
-birincisi $(-1,-1,+1,+1)$, ikincisi $(+1,-1,+1,+1)$'dir; çarpımları
+uzay eksenini **birlikte** ters çeviren dönüşüme bakar, ve Bölüm 26.7 ile Bölüm
+25 onu işler. Buradaki soru ise eşleme verilmişken **yolculuğun yönüdür** ve
+yalnızca geçiş ekseninin ters çevrilmesine bakar. İşaret dizileri olarak
+yazıldığında birincisi $(-1,-1,+1,+1)$, ikincisi $(+1,-1,+1,+1)$'dir; çarpımları
 $(-1,+1,+1,+1)$, yani Bölge I zamanının saf ters çevrilmesidir. İki işlem farklı
 grup öğeleridir ve biri hakkındaki bir teorem ötekini kapatmaz.
 
@@ -4485,16 +4486,16 @@ söylemez. Sonucun bir öneri değil bir koşullu olarak yazılmasının nedeni 
 
 ### 28.2 Kapanan ve açık kalan maddeler
 
-| Konu                      | Durum                                                                         |
-| ------------------------- | ----------------------------------------------------------------------------- |
-| Üç zamanda zamanın oku    | Kapandı (Bölüm 10 ve 8.4), ok zaman yönü sayısından çıkar, eşik değeri birdir |
-| Dönüşümdeki $\pm$ işareti | Kapanamaz olduğu gösterildi (Bölüm 19.6)                                      |
-| Grup yapısı               | Kapandı (Bölüm 4.2), sorun $B$ katmanında                                     |
-| Küresel simetrik çözüm    | Kapandı (Bölüm 11.5), kapalı form ve yorumu                                   |
-| Superluminal durgunluk    | Kapandı (Bölüm 11.2), ayar fazlalığı                                          |
-| Etkileşim / Maxwell       | Kapsam dışı bırakıldı                                                         |
-| Kuantumlama               | Kapandı (Bölüm 30)                                                            |
-| Takyonların varlığı       | Açık, deneysel soru                                                           |
+| Konu                      | Durum                                                                    |
+| ------------------------- | ------------------------------------------------------------------------ |
+| Üç zamanda zamanın oku    | Kapandı (Bölüm 10.4), ok zaman yönü sayısından çıkar, eşik değeri birdir |
+| Dönüşümdeki $\pm$ işareti | Kapanamaz olduğu gösterildi (Bölüm 19.6)                                 |
+| Grup yapısı               | Kapandı (Bölüm 4.2), sorun $B$ katmanında                                |
+| Küresel simetrik çözüm    | Kapandı (Bölüm 11.5), kapalı form ve yorumu                              |
+| Superluminal durgunluk    | Kapandı (Bölüm 11.2), ayar fazlalığı                                     |
+| Etkileşim / Maxwell       | Kapsam dışı bırakıldı                                                    |
+| Kuantumlama               | Kapandı (Bölüm 30)                                                       |
+| Takyonların varlığı       | Açık, deneysel soru                                                      |
 
 Modele özgü olduğu düşünülen sonuçlar: $D$'nin 384 aday arasından zorunlu
 çıkması (Bölüm 4.1), Wick dönüşünde "tek olan ekseni döndür" kuralı ve iki

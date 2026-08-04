@@ -225,6 +225,8 @@ def unresolved(text):
     refs |= set(re.findall(
         r"(?:Bölüm|§|Ek)\s+[0-9]+(?:\.[0-9]+)*\s*[–-]\s*([0-9]+(?:\.[0-9]+)*)", text))
     refs |= set(re.findall(r"\(([0-9]+\.[0-9]+(?:\.[0-9]+)*)\)", text))
+    refs |= set(re.findall(
+        r"(?:Bölüm|§|Ek)\s+[0-9]+(?:\.[0-9]+)*\s+(?:ile|ve)\s+([0-9]+(?:\.[0-9]+)*)", text))
     return sorted(r for r in refs if r not in have)
 
 
