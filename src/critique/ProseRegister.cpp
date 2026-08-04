@@ -34,6 +34,109 @@ namespace slm
         const std::vector<std::string> kNominal = {"ması", "mesi", "dığı", "diği",
                                                    "tığı", "tiği", "acağı", "eceği"};
 
+        struct SpokenNumber
+        {
+            bool back = false;
+            bool voicelessFinal = false;
+            bool vowelFinal = false;
+            std::string harmony;
+        };
+
+        SpokenNumber spokenNumber(const std::string &digits)
+        {
+            static const std::vector<SpokenNumber> ones = {
+                {true, false, false, "ı"},  {false, false, false, "i"},
+                {false, false, true, "i"},  {false, true, false, "ü"},
+                {false, true, false, "ü"},  {false, true, false, "i"},
+                {true, false, true, "ı"},   {false, false, true, "i"},
+                {false, false, false, "i"}, {true, false, false, "u"}};
+            static const std::vector<SpokenNumber> tens = {
+                {true, false, false, "u"},  {false, false, true, "i"},
+                {true, false, false, "u"},  {true, true, false, "ı"},
+                {false, false, true, "i"},  {true, true, false, "ı"},
+                {false, true, false, "i"},  {false, false, false, "i"},
+                {true, false, false, "ı"}};
+
+            long long value = 0;
+            for (const char character : digits)
+            {
+                if (character >= '0' && character <= '9')
+                {
+                    value = value * 10 + (character - '0');
+                }
+            }
+            if (value % 10 != 0)
+            {
+                return ones[static_cast<std::size_t>(value % 10)];
+            }
+            if (value % 100 != 0)
+            {
+                return tens[static_cast<std::size_t>((value / 10) % 10) - 1];
+            }
+            if (value % 1000 != 0)
+            {
+                return {false, false, false, "ü"};
+            }
+            if (value % 1000000 != 0)
+            {
+                return {false, false, false, "i"};
+            }
+            return {true, false, false, "u"};
+        }
+
+        std::string agreeingSuffix(const std::string &number, const std::string &written)
+        {
+            const std::size_t dot = number.rfind('.');
+            const SpokenNumber spoken =
+                spokenNumber(dot == std::string::npos ? number : number.substr(dot + 1));
+
+            const std::string low = spoken.back ? "a" : "e";
+            const std::string stop = spoken.voicelessFinal ? "t" : "d";
+            const std::string locative = stop + low;
+            const std::string dative = spoken.vowelFinal ? "y" + low : low;
+            const std::string accusative =
+                spoken.vowelFinal ? "y" + spoken.harmony : spoken.harmony;
+            const std::string genitive = spoken.vowelFinal
+                                             ? "n" + spoken.harmony + "n"
+                                             : spoken.harmony + "n";
+            const std::string possessed =
+                spoken.vowelFinal ? "s" + spoken.harmony : spoken.harmony;
+
+            if (std::regex_match(written, std::regex("[dt][ae]ki")))
+            {
+                return locative + "ki";
+            }
+            if (std::regex_match(written, std::regex("[dt][ae]dir")))
+            {
+                return locative + "dir";
+            }
+            if (std::regex_match(written, std::regex("[dt][ae]n")))
+            {
+                return locative + "n";
+            }
+            if (std::regex_match(written, std::regex("[dt][ae]")))
+            {
+                return locative;
+            }
+            if (std::regex_match(written, std::regex("y?[ae]")))
+            {
+                return dative;
+            }
+            if (std::regex_match(written, std::regex("n?(ı|i|u|ü)n")))
+            {
+                return genitive;
+            }
+            if (std::regex_match(written, std::regex("s(ı|i|u|ü)")))
+            {
+                return possessed;
+            }
+            if (std::regex_match(written, std::regex("y?(ı|i|u|ü)")))
+            {
+                return accusative;
+            }
+            return {};
+        }
+
         bool isProse(const std::string &line)
         {
             if (line.empty())
@@ -306,50 +409,21 @@ namespace slm
 
     std::vector<ProseRegister::Fault> ProseRegister::numberSuffixes(const std::string &text)
     {
-        static const std::vector<std::pair<std::string, std::string>> digitEnding = {
-            {"0", "un"}, {"1", "in"}, {"2", "nin"}, {"3", "ün"}, {"4", "ün"},
-            {"5", "in"}, {"6", "nın"}, {"7", "nin"}, {"8", "in"}, {"9", "un"}};
-        static const std::vector<std::pair<std::string, std::string>> roundEnding = {
-            {"10", "un"}, {"20", "nin"}, {"30", "un"}, {"40", "in"}, {"50", "in"}};
-
         std::vector<Fault> faults;
-        const std::regex pattern("(Bölüm|§) ?([0-9]+(?:\\.[0-9]+)*)'"
-                                 "(ın|in|nin|nın|un|ün|nun|nün)");
+        const std::regex pattern("([0-9]+(?:\\.[0-9]+)*)'([a-zçğıöşü]+)");
         const auto lines = splitLines(text);
         for (std::size_t index = 0; index < lines.size(); ++index)
         {
             for (std::sregex_iterator it(lines[index].begin(), lines[index].end(), pattern),
                  stop; it != stop; ++it)
             {
-                const std::string number = (*it)[2].str();
-                const std::string ending = (*it)[3].str();
-                std::string wanted;
-                if (number.find('.') == std::string::npos)
+                const std::string written = (*it)[2].str();
+                const std::string wanted = agreeingSuffix((*it)[1].str(), written);
+                if (!wanted.empty() && wanted != written)
                 {
-                    for (const auto &pair : roundEnding)
-                    {
-                        if (number == pair.first)
-                        {
-                            wanted = pair.second;
-                        }
-                    }
-                }
-                if (wanted.empty())
-                {
-                    const std::string last(1, number.back());
-                    for (const auto &pair : digitEnding)
-                    {
-                        if (last == pair.first)
-                        {
-                            wanted = pair.second;
-                        }
-                    }
-                }
-                if (!wanted.empty() && ending != wanted)
-                {
-                    faults.push_back({"iyelik eki uyumsuz",
+                    faults.push_back({"sayı eki uyumsuz",
                                       static_cast<int>(index) + 1,
-                                      (*it)[0].str() + " -> " + wanted});
+                                      (*it)[0].str() + " -> '" + wanted});
                 }
             }
         }

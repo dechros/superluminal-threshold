@@ -58,6 +58,18 @@ namespace slm
         /// failure.
         static int controlCharacters(const std::string &text);
 
+        /// Lines ending in a lone backslash, which is a macro cut in half.
+        ///
+        /// The count above sees every escape except one. A backslash followed by
+        /// the letter n names the line break itself, so a macro beginning with
+        /// that letter does not become a control character: it becomes a real
+        /// line break, and the rest of the macro becomes prose at the start of
+        /// the next line. Nothing about the file then looks wrong. This happened
+        /// to an inequality sign in chapter eleven and stood in the text until
+        /// someone read the sentence. What it leaves behind is always the same
+        /// shape: a line whose last character is a single backslash.
+        static std::vector<int> splitMacros(const std::string &text);
+
         /// Whether the text opens with a title at the top level.
         ///
         /// A rewrite that rebuilds the document from its blocks can drop the

@@ -209,6 +209,25 @@ namespace slm
         return count;
     }
 
+    std::vector<int> AssumptionLedger::splitMacros(const std::string &text)
+    {
+        std::vector<int> places;
+        const auto rows = lines(text);
+        for (std::size_t index = 0; index < rows.size(); ++index)
+        {
+            std::string row = rows[index];
+            while (!row.empty() && (row.back() == '\r' || row.back() == ' '))
+            {
+                row.pop_back();
+            }
+            if (row.size() >= 2 && row.back() == '\\' && row[row.size() - 2] != '\\')
+            {
+                places.push_back(static_cast<int>(index) + 1);
+            }
+        }
+        return places;
+    }
+
     bool AssumptionLedger::carriesTitle(const std::string &text)
     {
         for (const std::string &line : lines(text))
@@ -420,6 +439,13 @@ namespace slm
                                  "character its escape names",
                                  AssumptionLedger::controlCharacters(document)),
                      AssumptionLedger::controlCharacters(document) == 0);
+        for (const int line : AssumptionLedger::splitMacros(document))
+        {
+            report.check(std::format("  line {} ends in a lone backslash", line), false);
+        }
+        report.check("no line ends in a lone backslash, so no macro has been cut in half by "
+                     "the one escape the count above cannot see, the line break itself",
+                     AssumptionLedger::splitMacros(document).empty());
         report.check("its first line is a title at the top level, which is the one block the "
                      "text carries without a number and so the one a renumbering cannot miss "
                      "losing",

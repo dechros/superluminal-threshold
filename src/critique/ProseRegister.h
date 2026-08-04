@@ -52,13 +52,19 @@ namespace slm
     /// all of them until it arrives. The cure is to let the sentence have a
     /// verb early, and to make a list into a list.
     ///
-    /// A SUFFIX AGREES WITH HOW ITS NUMBER IS READ. Turkish attaches the
-    /// possessive to a numeral according to the sound of the word, not the digit,
-    /// so a reference to chapter five takes one ending and a reference to chapter
-    /// six takes another. Fifteen references in this manuscript had the wrong one,
-    /// which reads as a misspelling to anyone who says the sentence aloud. The
-    /// rule is mechanical enough to check: the last digit fixes the ending, except
-    /// for a round ten or thirty or twenty, where the tens word does.
+    /// A SUFFIX AGREES WITH HOW ITS NUMBER IS READ. Turkish attaches a case
+    /// ending to a numeral according to the sound of the spoken word, not the
+    /// digit, so a reference to chapter five takes one ending and a reference to
+    /// chapter six takes another. Fifteen references in this manuscript had the
+    /// wrong possessive, which reads as a misspelling to anyone who says the
+    /// sentence aloud; the first version of this check covered the possessive
+    /// alone and passed the manuscript, and a later reading found thirty eight
+    /// more in the locative, the dative and the accusative. So the check now
+    /// speaks the number and derives every ending from it: the trailing digit
+    /// names the word unless it is a zero, where the tens word takes over, and
+    /// the word's last vowel and last consonant fix both the vowel and the stop
+    /// of the ending. The locative after chapter six is voiced and back, after
+    /// chapter three voiceless and front, and nothing about the digits says so.
     ///
     /// NO EM DASH, which is a house rule rather than a language one, and is
     /// checked here with the rest so there is one place to look.
@@ -107,8 +113,8 @@ namespace slm
         /// sentence than as five.
         static std::vector<Fault> nominalChains(const std::string &text);
 
-        /// References whose possessive ending disagrees with how the number is
-        /// read aloud.
+        /// Numerals whose case ending disagrees with how the number is read
+        /// aloud, in any of the cases the manuscript uses.
         static std::vector<Fault> numberSuffixes(const std::string &text);
 
         /// Occurrences of the em dash.
