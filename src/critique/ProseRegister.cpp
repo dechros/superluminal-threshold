@@ -312,6 +312,9 @@ namespace slm
             "(?![a-zA-ZçğıöşüÇĞİÖŞÜ])");
         const std::regex plural("[a-zçğıöşü]+(ırız|iriz|uruz|ürüz|arız|eriz|ayız|eyiz)"
                                 "(?![a-zA-ZçğıöşüÇĞİÖŞÜ])");
+        const std::regex reader("(^|[^a-zA-ZçğıöşüÇĞİÖŞÜ])"
+                               "([a-zçğıöşü]*(sınız|siniz|sunuz|sünüz|sanız|seniz)|siz|sizin|size)"
+                               "(?![a-zA-ZçğıöşüÇĞİÖŞÜ])");
         for (std::size_t index = 0; index < lines.size(); ++index)
         {
             bool marked = false;
@@ -349,6 +352,12 @@ namespace slm
             if (std::regex_search(lines[index], found, plural))
             {
                 faults.push_back({"birinci şahıs çoğul fiil",
+                                  static_cast<int>(index) + 1, found[0].str()});
+                continue;
+            }
+            if (std::regex_search(lines[index], found, reader))
+            {
+                faults.push_back({"okura hitap",
                                   static_cast<int>(index) + 1, found[0].str()});
             }
         }

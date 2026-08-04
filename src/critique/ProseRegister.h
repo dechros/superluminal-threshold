@@ -22,6 +22,12 @@ namespace slm
     /// the sentence is impersonal, and a case ending may follow that suffix. A
     /// few ordinary words end in the same letters and are listed as exceptions.
     ///
+    /// NEITHER IS THE READER ADDRESSED. The second person is the same fault
+    /// seen from the other side, and it arrives by a different route: a section
+    /// meant to be reproducible slips into instructions, telling the reader to
+    /// compute this and compare that. The register states what a computation
+    /// gives, not what a reader should do.
+    ///
     /// PASSIVES MAY NOT STACK. The passive is normal in this register and is not
     /// a fault on its own. Three or more in one paragraph is, because by then
     /// nothing in the paragraph has a subject. The way out is neither the

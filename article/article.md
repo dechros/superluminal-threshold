@@ -93,10 +93,10 @@ birdir. Nedeni iki adımdır: işaretli permütasyon ortogonaldir, ve involüsyo
 olduğu için simetriktir. Buradan $|\mathrm{d}\kappa/\mathrm{d}\omega| = 1$
 çıkar; sekiz geçişin tamamında tamdır ve dispersiyon bağıntısına bağlı değildir.
 
-Yer değiştirmeyi fazın içine koyarsanız, gecikme ile yer değiştirmenin
-toplanması bir varsayım olmaktan çıkar ve tek bir durağan faz koşulundan okunur.
-Gecikmenin kalınlığa doyması da bir tabloda fark edilen olgu değildir; kapalı
-biçimin özdeşliğidir, çünkü formülde kalınlık hiç geçmez. Zincirin tamamı Bölüm
+Yer değiştirme fazın içine konduğunda, gecikme ile yer değiştirmenin toplanması
+bir varsayım olmaktan çıkar ve tek bir durağan faz koşulundan okunur. Gecikmenin
+kalınlığa doyması da bir tabloda fark edilen olgu değildir; kapalı biçimin
+özdeşliğidir, çünkü formülde kalınlık hiç geçmez. Zincirin tamamı Bölüm
 22'dedir.
 
 ### 1.5 Zincir neyi göstermez
@@ -252,8 +252,8 @@ Diğer ikisi onu kullanır, yeniden kurmaz.
 
 ## 2. Çekirdek hesap: her şey tek yerde
 
-Çekirdeği yeniden üretmek için gereken her şey bu bölümdedir. Makalenin geri
-kalanına bakmadan uygulayabilirsiniz. Her satırın nerede türetildiği yanında
+Çekirdeği yeniden üretmek için gereken her şey bu bölümdedir ve bölüm, makalenin
+geri kalanına bakılmadan uygulanabilir. Her satırın nerede türetildiği yanında
 yazılıdır; metnin kalanı da o türetmeleri ve karşıladıkları soruları anlatır.
 
 **Girdi.** Öte tarafın enerji vektörü $E = (E_1, E_2, E_3)$. Bu vektör Bölge
@@ -301,11 +301,11 @@ $$E = L(\sin\theta\cos\varphi,\; \sin\theta\sin\varphi,\; \cos\theta),
 | Eşik mesafesi $s^\ast$                            | $2{,}565988$                               |
 
 Altıncı ile yedinci satırın aynı çıkması tesadüf değildir. Biri genliğin sayısal
-frekans türevidir, diğeri kalınlık içermeyen kapalı form. İkisini ayrı ayrı
-hesaplayın ve karşılaştırın. Ayrıldıkları yerde hata sizin uygulamanızdadır,
-modelde değil.
+frekans türevidir, diğeri kalınlık içermeyen kapalı form. İkisi ayrı ayrı
+hesaplanıp karşılaştırılabilir; ayrıldıkları yerde hata uygulamadadır, modelde
+değil.
 
-**Ağırlığı da hesaplayın.** Yukarıdaki sayılar neyin mümkün olduğunu söyler, ne
+**Ağırlık da hesaba girer.** Yukarıdaki sayılar neyin mümkün olduğunu söyler, ne
 kadar sık olacağını söylemez. Aynı yapılanmada geçirgenlik
 $3{,}46 \times 10^{-12}$ mertebesindedir (Bölüm 4.1.3, Bölüm 4.1.5). Dönüş anını
 tek başına vermek yanıltıcıdır; ikisi birlikte gider.
