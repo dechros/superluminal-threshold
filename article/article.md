@@ -3844,7 +3844,7 @@ tek bir kabul görmüş cevabı yoktur, ve anlaşmazlık aritmetik değildir. Bi
 denk olmayan birkaç nicelik bu adı hak eder. Her biri bir ölçümün geri
 döndüreceği şeydir, ve birbirleriyle uyuşmazlar. Bu nedenle bunlardan birini tek
 başına aktarmak bir sonuç değil, savunulması gereken bir seçimdir. Aşağıdaki beş
-okuma, **aynı geçirgenlik genliğinden** türetilerek yan yana hesaplanmıştır
+okuma, **aynı geçirgenlik genliğinden** türetilerek yan yana hesaplanmıştır.
 
 İlk ikisi bilinen okumalardır: **fazdan gecikme**, geçirgenlik fazının frekansa
 göre türevi; **oyalanma süresi**, depolanan normun gelen akıya oranı. Sonraki
@@ -3933,7 +3933,7 @@ $16{,}000005$ gecikir, yani **tam ışık süresi kadar**. Cephe hiçbir kalınl
 öne alınmaz.
 
 **İlerlemiş tepenin üzerinde taşındığı şey.** Öne alma büyürken onu taşıyan
-genlik çöker:
+genlik çöker.
 
 Aşağıdaki tablo **tek geçiş** ayağındadır: öne alma, tek geçişlik gecikmenin
 $d/c$ ile karşılaştırılmasıdır. Bölüm 21.5'in tablosu gidiş dönüş ayağındadır ve
@@ -3958,8 +3958,6 @@ söylemez; orada ne döneceğine cephe değil, kütle kabuğu karar verir.
 
 ---
 
----
-
 ## 25. Yönelim tablosuna yöneltilen sorular
 
 Bölüm 19 yönelim sözlüğünü kurar. Aşağıdaki alt bölümler o sözlüğün dokuz
@@ -3972,8 +3970,9 @@ olduğu.
 Bu, modelin lehine bir sonuç değildir ve burada öyle yazılmaz.
 
 Parçacık hiç çıkmıyorsa, içeride ne olduğundan bağımsız olarak bir soğurulma
-görürüz. Girdiği yüzden geri dönüyorsa, saparak ya da sapmadan, bir yansıma
-görürüz. Sapmadan karşı yüzden çıkıyorsa, sıradan bir geçiş görürüz.
+görünür. Girdiği yüzden geri dönüyorsa, saparak ya da sapmadan, bir yansıma
+görünür. Sapmadan karşı yüzden çıkıyorsa, ölçüm sıradan bir geçişten ayırt
+edilemez.
 
 Yedi hücre, öte taraf hiç olmasaydı da aynı ölçümü verirdi.
 
