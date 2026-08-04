@@ -1295,7 +1295,7 @@ $F_I = 1 - |R|^2$ ve $F_{II} = |T_+|^2 - |T_-|^2$ ile verilir. Sonuçlar:
 
 Güçlü koşulda $T_+ = R$ ve $T_- = 1$ çıkar, dolayısıyla $F_{II} = |R|^2 - 1 = -F_I$
 olur. İki akının eşit olması ancak $1 - |R|^2 = 0$ ile mümkündür. Yani **tam
-yansıma ek bir varsayım değil, akı korunumunun tek çözümüdür.** Bölüm 6'ün sonucu
+yansıma ek bir varsayım değil, akı korunumunun tek çözümüdür.** Bölüm 6'nın sonucu
 bu haliyle bir seçimin sonucu olmaktan çıkıp, o seçim verildiğinde bir zorunluluk
 hâline gelir.
 
@@ -1482,7 +1482,7 @@ yayınlanmış sonuçtan daha güçlü bir şey söylemiş olurdu.
 
 Bu sonucun modeldeki yeri şudur: ara bölgenin **ayrıntılı profili** geçirgenliği
 mertebe olarak belirlemez, yalnızca toplam sönümü belirler. Dolayısıyla Bölüm
-5'ün profil ailesi üzerinde yapılan tartışmalar geçirgenliğin mertebesini
+5'in profil ailesi üzerinde yapılan tartışmalar geçirgenliğin mertebesini
 değiştirmez; profilin bağladığı şey, Bölüm 5.6 ile 3.7'de görüldüğü gibi,
 katman ve oran koşuludur.
 
@@ -1653,7 +1653,7 @@ $L'$ ayrıca üç zaman ekseninde $O(3)$ altında değişmezdir; buradan üç ko
 
 ### 10.2 Roller tam tersine dönmüştür
 
-Aşağıdaki tablo Bölüm 11.1'ın sözlüğünün rol tarafıdır; koordinat karşılıkları
+Aşağıdaki tablo Bölüm 11.1'in sözlüğünün rol tarafıdır; koordinat karşılıkları
 orada, rollerin karşılaştırması burada durur.
 
 |                        | Bölge I          | Bölge II                      |
@@ -1701,9 +1701,9 @@ bırakılmıştır.
 ### 10.4 Zaman yönelimi: neden öte tarafta gelecek ve geçmiş yok
 
 Yukarıdaki ifade sezgiseldir; burada kesinleştirilir. Bir bölgede tutarlı bir
-gelecek-geçmiş ayrımı yapılabilmesi için, zaman-benzeri vektörler kümesinin
-**iki ayrı bileşen** gerekir. Ancak o zaman bileşenlerden birine
-"gelecek", diğerine "geçmiş" denebilir. Bu, tek bir pozitif yön bulunmasının
+gelecek-geçmiş ayrımı için, zaman-benzeri vektörler kümesi **iki ayrı
+bileşenden** oluşmalıdır. Ancak o zaman bileşenlerden birine "gelecek",
+diğerine "geçmiş" denebilir. Bu, tek bir pozitif yön bulunmasının
 tam karşılığıdır.
 
 **Bölge I.** $v = (1,0,0,0)$ ve $-v = (-1,0,0,0)$ vektörlerinin ikisi de
@@ -1843,7 +1843,7 @@ sınıra oturur. Kleinian bu sınıra hiç ulaşmaz; en büyük değeri $0{,}390
 **Buradan çıkan üç sonuç.**
 
 1. Yönü taşıyabilecek nicelik, paketin şekli değil, eşiğin kararsızlığıdır.
-2. Ok, bölgenin içinden değil **yüzeylerinden** doğar. Bu, Bölüm 20.5'nın
+2. Ok, bölgenin içinden değil **yüzeylerinden** doğar. Bu, Bölüm 20.5'in
    bağımsız yoldan bulduğu sonucun aynısıdır: iç bölge düzdür ve hiçbir şey
    kaydetmez, eğriliğin tamamı iki eşik yüzeyinden gelir. İki hesap farklı
    araçlarla aynı yeri işaret etmektedir.
@@ -1917,7 +1917,7 @@ fiziksel değildir, yalnızca uzunluğu fizikseldir. Kapalı bir gezinti de hiç
 bırakmaz, çünkü bu eksenler arasındaki dönmeler ayırt edilmiş ekseni sabit
 bırakır ve sözlüğün katsayısına dokunmaz.
 
-Bu yüzden §11'un "hız yönelime dönüşür" sonucu bu üç eksene aittir: payda üç
+Bu yüzden §11'in "hız yönelime dönüşür" sonucu bu üç eksene aittir: payda üç
 boyutlu olduğu için türev skaler değil gradyandır, ve "ne kadar hızlı" sorusu
 "hangi yönelimde" sorusuna dönüşür.
 
@@ -2102,7 +2102,7 @@ Son satır belirleyicidir ve bu bölümün asıl sonucu oradan çıkar.
 
 ### 12.2 Eşik paketi yeniden ağırlıklandırır
 
-Bölüm 8'nın sonucu, geçirgenliğin moda bağlı olmasıdır. Bir paket birçok moddan
+Bölüm 8'in sonucu, geçirgenliğin moda bağlı olmasıdır. Bir paket birçok moddan
 oluştuğuna göre, eşik paketin bazı bileşenlerini diğerlerinden daha çok geçirir.
 Geçen şey, gelenin sönümlenmiş bir kopyası değil, **başka bir dağılımdır**.
 
@@ -2368,7 +2368,7 @@ hesabın tutarlılık sınamasıdır ve sağlanmaktadır.
 
 ### 14.2 Genliğin taşıdığı iki bilgi
 
-Genliğin **büyüklüğü** ne kadarının geçtiğini söyler ve Bölüm 5'ün geçirgenlik
+Genliğin **büyüklüğü** ne kadarının geçtiğini söyler ve Bölüm 5'in geçirgenlik
 tablosunu verir.
 
 Genliğin **fazı** ise dönüş anını taşır ve asıl konu odur. Bir sonraki bölümün
@@ -2647,7 +2647,7 @@ zinciri tek yerde yazar.
 
 ## 19. Yönelim sözlüğü
 
-Bu bölüm Bölüm 10.5'nın dokuz hücresini tek tek bu tarafa çevirir, sonra o
+Bu bölüm Bölüm 10.5'in dokuz hücresini tek tek bu tarafa çevirir, sonra o
 dokuzun gerçekte kaç tane olduğunu yeniden sayar.
 
 ### 19.1 Her hücrede korunan şeyler
@@ -2677,7 +2677,7 @@ artık sıfırdır. Hücreleri birbirinden ayıran tek şey momentumumuzun yön�
 
 ### 19.3 Çıkış yüzünü ne belirliyor
 
-Bölüm 10.5'nın iki etiketinden biri çıkış yüzüydü ve orada bağımsız bir etiket
+Bölüm 10.5'in iki etiketinden biri çıkış yüzüydü ve orada bağımsız bir etiket
 gibi ele alındı. Değil.
 
 **Kurulum.** Ara bölgeyi geçmek, öte tarafın tek uzay ekseni boyunca hareket
@@ -2971,7 +2971,7 @@ düzlemde döndüğü** buradan çıkarılabilir, çıkış anına bakılarak. B
 İçeride süpürülen açı süreklidir; dönme açısı serbest bir parametredir ve
 birbirine ne kadar yakın iki değer seçilirse seçilsin farklı iki yol elde edilir.
 Örnek olarak, çeyrek turluk bir dönme $1{,}1102$ radyan süpürür.
-Buna karşılık buraya ulaşan sapma, Bölüm 19.5'un nicelenmiş tayfının bir
+Buna karşılık buraya ulaşan sapma, Bölüm 19.5'in nicelenmiş tayfının bir
 elemanıdır ve momentum $(1,2,3)$ için o tayf **üç** değerlidir.
 
 Sürekli bir küme, üç elemanlı bir kümeye düşürülmektedir. Bu düşme, kapsamın
@@ -3037,7 +3037,7 @@ döndürmek uzunluğu değiştirmez, artık $10^{-16}$ mertebesindedir.
 
 Çekirdek sorunun en can alıcı yeri budur ve cevabı iki katmanlıdır.
 
-**Doğrudan yol kapalıdır.** Bölüm 11.1'ın tablosu bunu vermektedir: üç zamanın her
+**Doğrudan yol kapalıdır.** Bölüm 11.1'in tablosu bunu vermektedir: üç zamanın her
 birinde bir birim adımın Bölge I saatindeki karşılığı tam olarak sıfırdır, tek
 uzay ekseninde ise tam olarak birdir.
 
@@ -3741,7 +3741,7 @@ gecikmenin kaybettiği bilgiyi geri veriyor.
 
 ### 24.3 Hangi eksen dönüyor: tablonun en kırılgan varsayımı
 
-Bölüm 5'ün tablosu, karakter değiştiren yönlerin **enine** yönler olduğunu, yani
+Bölüm 5'in tablosu, karakter değiştiren yönlerin **enine** yönler olduğunu, yani
 geçiş doğrultusunun kendisinin dönmediğini varsayar. Bu varsayım altında Kleinian
 bölge yayılımlıdır ve tablodaki tek açık hücreyi verir.
 
@@ -3763,7 +3763,7 @@ engeldir ve hiçbir zaman bir oyuk değildir.** Dahası, o okumada Kleinian ile
 Öklid bölgenin iç dalga sayıları **birbirinin aynıdır**: dört tip ikiye iner ve
 her geçiş tünellemedir.
 
-Bu çalışma iki okumadan birini seçmemektedir. Kaydedilen şudur: Bölüm 5'ün
+Bu çalışma iki okumadan birini seçmemektedir. Kaydedilen şudur: Bölüm 5'in
 "kalın Kleinian tek çalışan hücredir" gözlemi, enine okumaya bağlıdır ve geçiş
 ekseni okumasında geçerli değildir.
 
@@ -4001,7 +4001,7 @@ Sekiz kabul edilebilir matrisin sıralı çiftleri $8 \times 8 = 64$ tanedir. Bu
 | Bunlardan enerjimizi koruyanlar    | $3$   |
 | Enerjiyi ters işaretle döndürenler | $3$   |
 
-Altı sonuç tam ortadan ikiye ayrılır. Enerjiyi koruyan üç sonuç, Bölüm 19.5'un
+Altı sonuç tam ortadan ikiye ayrılır. Enerjiyi koruyan üç sonuç, Bölüm 19.5'in
 nicelenmiş sapma tayfının üç elemanıdır. Enerjiyi ters işaretle döndüren üç
 sonuç, Bölüm 19.3'de tarif edilen dalın, yani negatif enerjili varışın
 karşılığıdır ve çift yaratımı okumasının sahiplendiği kümedir.
@@ -4375,7 +4375,7 @@ kaydedilir, çünkü aksi hâlde Bölüm 27 sağlanmamış bir bütünlük iddia
 
 | Yalnızca sözle kullanılan yöntem                           | Neden kurulmadı                                                                                                                                                                                                                                              |
 | ---------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| Zaman yönlendirilemez bölgede cismin spinör gibi dönüşmesi | Spin bu çalışmada hiçbir yere sokulmamıştır. Karar gözden geçirilmiş ve **korunmuştur**: spin eklemek, kapsamın on bir maddesinin dışına çıkmak olurdu, ve Bölüm 24.6'in saat bileşenleri spin gerektirmeden kurulabildiği için buna zaten gerek kalmamıştır |
+| Zaman yönlendirilemez bölgede cismin spinör gibi dönüşmesi | Spin bu çalışmada hiçbir yere sokulmamıştır. Karar gözden geçirilmiş ve **korunmuştur**: spin eklemek, kapsamın on bir maddesinin dışına çıkmak olurdu, ve Bölüm 24.6'nın saat bileşenleri spin gerektirmeden kurulabildiği için buna zaten gerek kalmamıştır |
 
 > Yeniden üretilenler sicilin yarısından çoğudur. Buna karşılık bu çalışmanın
 > kendi güvencesi altındaki alan, makalenin dayandığı alandan hâlâ **dardır**:

@@ -52,6 +52,14 @@ namespace slm
     /// all of them until it arrives. The cure is to let the sentence have a
     /// verb early, and to make a list into a list.
     ///
+    /// A SUFFIX AGREES WITH HOW ITS NUMBER IS READ. Turkish attaches the
+    /// possessive to a numeral according to the sound of the word, not the digit,
+    /// so a reference to chapter five takes one ending and a reference to chapter
+    /// six takes another. Fifteen references in this manuscript had the wrong one,
+    /// which reads as a misspelling to anyone who says the sentence aloud. The
+    /// rule is mechanical enough to check: the last digit fixes the ending, except
+    /// for a round ten or thirty or twenty, where the tens word does.
+    ///
     /// NO EM DASH, which is a house rule rather than a language one, and is
     /// checked here with the rest so there is one place to look.
     class ProseRegister
@@ -98,6 +106,10 @@ namespace slm
         /// excluded, since a list of nominalised results reads better as one
         /// sentence than as five.
         static std::vector<Fault> nominalChains(const std::string &text);
+
+        /// References whose possessive ending disagrees with how the number is
+        /// read aloud.
+        static std::vector<Fault> numberSuffixes(const std::string &text);
 
         /// Occurrences of the em dash.
         static std::vector<Fault> emDashes(const std::string &text);

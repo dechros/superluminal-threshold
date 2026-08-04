@@ -304,6 +304,58 @@ namespace slm
         return faults;
     }
 
+    std::vector<ProseRegister::Fault> ProseRegister::numberSuffixes(const std::string &text)
+    {
+        static const std::vector<std::pair<std::string, std::string>> digitEnding = {
+            {"0", "un"}, {"1", "in"}, {"2", "nin"}, {"3", "ün"}, {"4", "ün"},
+            {"5", "in"}, {"6", "nın"}, {"7", "nin"}, {"8", "in"}, {"9", "un"}};
+        static const std::vector<std::pair<std::string, std::string>> roundEnding = {
+            {"10", "un"}, {"20", "nin"}, {"30", "un"}, {"40", "in"}, {"50", "in"}};
+
+        std::vector<Fault> faults;
+        const std::regex pattern("(Bölüm|§) ?([0-9]+(?:\\.[0-9]+)*)'"
+                                 "(ın|in|nin|nın|un|ün|nun|nün)");
+        const auto lines = splitLines(text);
+        for (std::size_t index = 0; index < lines.size(); ++index)
+        {
+            for (std::sregex_iterator it(lines[index].begin(), lines[index].end(), pattern),
+                 stop; it != stop; ++it)
+            {
+                const std::string number = (*it)[2].str();
+                const std::string ending = (*it)[3].str();
+                std::string wanted;
+                if (number.find('.') == std::string::npos)
+                {
+                    for (const auto &pair : roundEnding)
+                    {
+                        if (number == pair.first)
+                        {
+                            wanted = pair.second;
+                        }
+                    }
+                }
+                if (wanted.empty())
+                {
+                    const std::string last(1, number.back());
+                    for (const auto &pair : digitEnding)
+                    {
+                        if (last == pair.first)
+                        {
+                            wanted = pair.second;
+                        }
+                    }
+                }
+                if (!wanted.empty() && ending != wanted)
+                {
+                    faults.push_back({"iyelik eki uyumsuz",
+                                      static_cast<int>(index) + 1,
+                                      (*it)[0].str() + " -> " + wanted});
+                }
+            }
+        }
+        return faults;
+    }
+
     std::vector<ProseRegister::Fault> ProseRegister::emDashes(const std::string &text)
     {
         std::vector<Fault> faults;
@@ -325,7 +377,7 @@ namespace slm
         for (const auto &group : {longSentences(text), stackedPassives(text),
                                   firstPerson(text), selfReference(text),
                                   openingConjunctions(text), nominalChains(text),
-                                  emDashes(text)})
+                                  numberSuffixes(text), emDashes(text)})
         {
             all.insert(all.end(), group.begin(), group.end());
         }
@@ -408,6 +460,16 @@ namespace slm
                                  "an enumeration",
                                  ProseRegister::nominalsPerSentence),
                      chains.empty());
+
+        report.subsection("Suffixes agreeing with how a number is read");
+        const auto suffixes = ProseRegister::numberSuffixes(document);
+        for (const auto &fault : suffixes)
+        {
+            report.check(std::format("  line {}: {}", fault.line, fault.excerpt), false);
+        }
+        report.check("every reference takes the possessive ending its number takes when it "
+                     "is said aloud, which the digit alone does not decide",
+                     suffixes.empty());
 
         report.subsection("The house rule on the em dash");
         report.check("the em dash appears nowhere", ProseRegister::emDashes(document).empty());
