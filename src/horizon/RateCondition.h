@@ -77,7 +77,7 @@ namespace slm
     /// interpolation profile alone and the transmission is a function of the
     /// kind of region alone, so the two are separate axes. That is visible in
     /// the signatures rather than in any value, and every transmitting result
-    /// in this work rests on it. Whether they are separate in the physics as
+    /// here rests on it. Whether they are separate in the physics as
     /// well as in these libraries is a different question and is carried as
     /// open.
     class RateConditionSection : public Section

@@ -214,7 +214,7 @@ namespace slm
                      "orientable coordinate, only that it cannot turn round on one",
                      FlowAssumption::isOrientable(FlowAssumption::metricHere(), 1) &&
                          !FlowAssumption::compulsionIsUsedAnywhere());
-        report.check("and nothing in this work uses such a compulsion: the crossing "
+        report.check("and nothing here uses such a compulsion: the crossing "
                      "amount enters the return map as an input, so no result would "
                      "change if a body could sit still",
                      !FlowAssumption::compulsionIsUsedAnywhere());

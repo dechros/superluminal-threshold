@@ -38,7 +38,7 @@ namespace slm
         /// entries are squared by the congruence. The check is kept because the
         /// argument depends on it and because it stops holding the moment the
         /// metric acquires off-diagonal terms, which is the case a curved
-        /// version of this work would have to face.
+        /// version of this model would have to face.
         static bool isIsometry(const Matrix4 &metric, int axis);
 
         /// Number of axes whose reversal is an isometry of @p metric.

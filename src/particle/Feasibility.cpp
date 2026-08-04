@@ -33,7 +33,7 @@ namespace slm
             {"which of the eight crossings is realised", Kind::Selection,
              "a quantity odd in exactly one of the two reversed axes"},
             {"whether a region of changed signature can be made at all", Kind::Existence,
-             "outside this work; the whole conditional rests here"},
+             "outside the model; the whole conditional rests here"},
         };
     }
 
@@ -169,14 +169,14 @@ namespace slm
                      "not make rather than a quantity too small to see",
                      !Feasibility::energySettlesTheSelection());
         report.check("calling it an engineering problem would be dishonest: the two "
-                     "families differ in no quantity computed anywhere in this work, so "
+                     "families differ in no quantity computed anywhere in this library, so "
                      "a better apparatus measures the same numbers",
                      !Feasibility::energySettlesTheSelection() &&
                          Feasibility::countOfKind(Feasibility::Kind::Selection) == 1);
 
         report.subsection("Where the conditional actually rests");
         report.check("the fourth obstacle is whether a region of changed signature can "
-                     "be made at all, and nothing in this work bears on it, which is why "
+                     "be made at all, and nothing here bears on it, which is why "
                      "the result is stated as a conditional and not as a proposal",
                      Feasibility::countOfKind(Feasibility::Kind::Existence) == 1);
         report.check("the honest summary is therefore that two obstacles are numbers, "

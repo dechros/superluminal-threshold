@@ -30,7 +30,7 @@ namespace slm
     /// incident channels, where the direction dependence comes from the
     /// relative phase between channels and not from the barrier. That is the
     /// same shape of requirement the branch sweep reached from the other side:
-    /// a quantity odd in exactly one axis. Whether this work supplies such a
+    /// a quantity odd in exactly one axis. Whether the model supplies such a
     /// channel structure is not claimed, and the class ends by saying so.
     class DirectionControl
     {
@@ -67,7 +67,7 @@ namespace slm
         /// to vanish.
         static double reciprocityResidual(double width, double total, double outsideWavenumber);
 
-        /// Whether any of the asymmetric profiles built in this work transmits
+        /// Whether any of the asymmetric profiles built here transmits
         /// differently from the two sides, which would be a way of steering by
         /// shaping alone.
         static bool anyShapeSteers(double width, double total, double outsideWavenumber,

@@ -12,7 +12,7 @@ namespace slm
     /// back cannot be followed through. What an outside observer has instead is
     /// bookkeeping at the boundary: how many worldlines cross it, in which
     /// direction, and what they carry. Two consequences of that bookkeeping are
-    /// standard, and both bear on a question this work leaves open, namely
+    /// standard, and both bear on a question the model leaves open, namely
     /// whether a returning particle can be told from a freshly created pair.
     ///
     /// The first is that a failure of time orientability looks like a pair
@@ -31,7 +31,7 @@ namespace slm
     ///
     /// These functions compute both from the same count, so the relation
     /// between them is arithmetic rather than analogy, and then ask the
-    /// question this work needs: whether the two readings differ in anything an
+    /// question the model needs: whether the two readings differ in anything an
     /// outside observer could measure.
     class TimeReversalSignature
     {
@@ -56,7 +56,7 @@ namespace slm
         static int pairCreationCount(int pairs);
 
         /// Whether a turned line and a created pair give the same boundary
-        /// count, which is the degeneracy this work carries as open.
+        /// count, which is the degeneracy carried here as open.
         static bool countsAreDegenerate(int turnedLines);
 
         /// Whether the apparent charge distinguishes them, which it does not
@@ -94,7 +94,7 @@ namespace slm
         static bool coincidenceRequired();
 
         /// Whether the transmitted weight makes the measurement practical at
-        /// the configuration the article uses. It does not, and that is the
+        /// the reference configuration. It does not, and that is the
         /// honest state of this proposal: the specification is written, the
         /// rate is not survivable.
         static bool practicalAtWeight(double returnedWeight, double attemptsPerSecond,

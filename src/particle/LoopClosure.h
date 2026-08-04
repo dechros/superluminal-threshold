@@ -19,7 +19,7 @@ namespace slm
     /// The second is the relay: the outbound leg is superluminal in one frame and
     /// the return leg is superluminal in the frame of a relay that is itself in
     /// motion, which is the construction the objection leaves standing. The third
-    /// is the route this work builds, where the return moment is a bounded delay
+    /// is the route built here, where the return moment is a bounded delay
     /// against a displacement covered on the far side.
     ///
     /// The quantity that separates them is the relative velocity the loop needs.

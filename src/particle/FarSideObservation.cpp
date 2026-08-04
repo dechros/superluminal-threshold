@@ -104,7 +104,7 @@ namespace slm
         report.subsection("Localisation is refused, and the refusal is not computed here");
         report.check("a spacelike four-momentum admits no position operator whose "
                      "eigenstates respect causality, so there is no state saying where "
-                     "the particle is over there, and this work does not supply one",
+                     "the particle is over there, and the model does not supply one",
                      !FarSideObservation::localisedStateAvailable());
 
         report.subsection("The method that does exist looks at the boundary, not the traveller");

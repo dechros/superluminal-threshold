@@ -113,7 +113,7 @@ namespace slm
                              1e-12 &&
                          std::fabs(DynamicsUnderReversal::dispersionResidual(-omega, c, mu,
                                                                             4.0)) < 1e-12);
-        report.check("the statement is about the equation this work uses and is not a "
+        report.check("the statement is about the equation modelled here and is not a "
                      "statement about equations in general, the exhibited odd-order term "
                      "being a member of the same family that fails it",
                      std::abs(DynamicsUnderReversal::oddOrderResidual(omega, c, mu, 4.0, 1.0)) >

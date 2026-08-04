@@ -19,14 +19,14 @@ namespace slm
     /// invariant being negative. It is a boundary measurement, and its subject
     /// is the balance rather than the traveller.
     ///
-    /// Whether it reaches this work depends on a necessary condition that has
+    /// Whether it reaches the model depends on a necessary condition that has
     /// to be checked and not assumed: the method presumes a real on-shell
     /// momentum leaving the interaction, and the interior here is sometimes
     /// propagating and sometimes evanescent. Only the first carries one.
     ///
     /// The sufficient condition is NOT checked and is not claimed. What the
     /// method actually reads is the sign of an invariant of the four-momentum,
-    /// and no such invariant is computed anywhere in this work. The quantity
+    /// and no such invariant is computed anywhere in this library. The quantity
     /// available here is the squared wavenumber along the crossing axis, which
     /// is a different object; conflating the two would be claiming a mass
     /// signature that has not been derived.
@@ -35,7 +35,7 @@ namespace slm
     /// than a method. Where an on-shell mode exists inside, the delay does not
     /// saturate and the arrival is not advanced. Where the arrival is
     /// advanced, the interior is evanescent, no on-shell mode exists inside,
-    /// and everything observable sits in the boundary amplitudes this work
+    /// and everything observable sits in the boundary amplitudes the model
     /// already computes. Those amplitudes are moreover even under the reversal
     /// separating the two families, so they do not report which way the
     /// particle went.
@@ -87,7 +87,7 @@ namespace slm
         /// and which is reported as a refusal rather than computed.
         static bool localisedStateAvailable();
 
-        /// Number of boundary quantities this work computes that survive as
+        /// Number of boundary quantities the model computes that survive as
         /// observables in the evanescent regime, taken from the sweep that
         /// tested them rather than written down here.
         static int boundaryObservableCount();

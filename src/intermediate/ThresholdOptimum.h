@@ -49,7 +49,7 @@ namespace slm
         /// region twice and is therefore twice this; the distance that has to
         /// be covered on the far side is compared against the round trip, so
         /// use the function below for that and not this one. Keeping the two
-        /// apart matters: conflating them has cost this work a factor of two
+        /// apart matters: conflating them is a factor-of-two trap
         /// twice already, both times because a name did not say which it was.
         static double saturatedDelay(double normalPart, double transversePart, double mu, double c,
                                      int turned);

@@ -65,7 +65,7 @@ namespace slm
         /// rather than trusted.
         static bool countPredictsOrientability(const Matrix4 &metric, int sign);
 
-        /// Whether anything in this work requires a body to advance along a
+        /// Whether anything in the model requires a body to advance along a
         /// coordinate rather than merely being unable to reverse along it. The
         /// return map takes the amount of crossing as an input, so nothing
         /// does.

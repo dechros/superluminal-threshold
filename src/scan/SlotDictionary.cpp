@@ -142,7 +142,7 @@ namespace slm
                      everyOneIsIsolated);
 
         const Matrix4 D = SignatureInvolution::matrix();
-        report.check(std::format("for the map used in this work the source axis is {} and the "
+        report.check(std::format("for the map used here the source axis is {} and the "
                                  "coefficient is {:+.0f}",
                                  SlotDictionary::sourceAxis(D), SlotDictionary::coefficient(D)),
                      SlotDictionary::sourceAxis(D) == 3 &&

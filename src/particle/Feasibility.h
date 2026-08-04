@@ -22,7 +22,7 @@ namespace slm
     /// The distinction that organises everything here is between an obstacle
     /// that a better apparatus removes and one that no apparatus removes. A
     /// small amplitude is the first: it is a rate, and rates are bought with
-    /// attempts. A quantity that no measurement in this work can reach is the
+    /// attempts. A quantity that no measurement here can reach is the
     /// second, and calling it an engineering problem would be dishonest.
     ///
     /// Four obstacles are examined. Two are rates and are priced. One is a

@@ -216,11 +216,10 @@ namespace slm
         /// before it left.
         ///
         /// Obtained from the rigid shift rather than by searching again at every
-        /// distance: the peak at rest plus the signed displacement, exactly. The
-        /// earlier version searched the whole time axis for each distance and
-        /// then bisected over distances on top of that, which cost minutes and
-        /// bought nothing, since the identity above makes the answer available
-        /// in closed form from a single search.
+        /// distance: the peak at rest plus the signed displacement, exactly.
+        /// Searching the whole time axis per distance, and bisecting over
+        /// distances on top of that, costs minutes and buys nothing, since the
+        /// identity above gives the answer in closed form from a single search.
         static double measuredReturnMoment(IntermediateRegion::Kind kind, double c, double mu,
                                            double transverseSquared, double thickness,
                                            double farSideDistance, int branch, double centre,
@@ -253,7 +252,7 @@ namespace slm
         /// Whether that measured threshold agrees with the phase delay the
         /// closed form gives. Note that the amplitude already describes TWO
         /// crossings, so the delay it carries is the round trip's; multiplying
-        /// it by two again is the factor-of-two error this work has made twice
+        /// it by two again is a factor-of-two error twice over
         /// before, and the check is written this way to keep it made once.
         static bool thresholdAgreesWithFormula(IntermediateRegion::Kind kind, double c, double mu,
                                                double transverseSquared, double thickness,

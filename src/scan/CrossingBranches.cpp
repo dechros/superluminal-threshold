@@ -242,7 +242,7 @@ namespace slm
                                          [&D](const CrossingBranches::Branch &branch) {
                                              return branch.matrix.isEqual(D, kEps);
                                          });
-        report.check("the matrix used throughout this work is one of the eight",
+        report.check("the matrix used throughout is one of the eight",
                      chosen != oriented.end());
         report.check("and it belongs to the later-sending family, which is a choice among "
                      "the eight and not a consequence of the three conditions",

@@ -387,7 +387,7 @@ namespace slm
                          WorkedRoundTrip::journeyAgreesWithReturnEvent(record, kind, c, mu,
                                                                         thickness));
             report.check("both sides of the comparison with light are round trips, which is "
-                         "the mistake this work has made twice and now checks rather than "
+                         "the mistake made twice here and now checks rather than "
                          "assumes",
                          std::abs(record.lightRoundTrip - 2.0 * thickness / c) < 1e-9);
         }
@@ -448,7 +448,7 @@ namespace slm
                                                              thickness) == 0.0 &&
                              !WorkedRoundTrip::thresholdGrowsWithThickness(propagating, kind, c,
                                                                             mu));
-            report.check("the article must therefore not offer a propagating row in the "
+            report.check("a propagating route must therefore not be offered as a row in the "
                          "table of outcomes: what changes there is not the size of the "
                          "price but whether the calculation applies",
                          !ReturnFormula::isBarrier(propagating, kind));

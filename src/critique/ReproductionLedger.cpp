@@ -261,7 +261,7 @@ namespace slm
                      "failure this register exists to prevent",
                      !ReproductionLedger::anyUnsupportedReproduction());
         report.check(std::format("  the reproduced ones are {} of {}, so rather more than "
-                                 "half the register is under this work's own guarantee",
+                                 "half the register is under this library's own guarantee",
                                  ReproductionLedger::countWith(State::Reproduced),
                                  ReproductionLedger::totalCount()),
                      ReproductionLedger::countWith(State::Reproduced) * 2 >

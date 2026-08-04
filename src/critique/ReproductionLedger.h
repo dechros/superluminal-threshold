@@ -26,7 +26,7 @@ namespace slm
     /// Three states are distinguished. REPRODUCED means a library here computes
     /// the result independently and its value can be compared. USED means the
     /// result is relied on without being recomputed, so its correctness is not
-    /// under this work's guarantee. CONTEXT means it is cited for orientation
+    /// under this library's guarantee. CONTEXT means it is cited for orientation
     /// and no result is drawn from it.
     class ReproductionLedger
     {

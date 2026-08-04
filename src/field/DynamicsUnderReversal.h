@@ -15,7 +15,7 @@ namespace slm
     /// result is about the geometry and says nothing about the dynamics, and the
     /// two are separate claims: a geometry with no preferred sense could still
     /// carry an equation that only one sense solves. This class settles the
-    /// second claim for the field this work uses.
+    /// second claim for the field modelled here.
     ///
     /// The reversal enters the equation through the second derivative, so the
     /// coefficient it contributes is squared and the two senses are solutions of

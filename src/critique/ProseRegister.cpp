@@ -504,7 +504,7 @@ namespace slm
     {
         const std::string document = ProseRegister::text();
 
-        report.subsection("The manuscript has to be there to be measured");
+        report.subsection("The text has to be there to be measured");
         report.check("the text was opened and is not empty", !document.empty());
         if (document.empty())
         {

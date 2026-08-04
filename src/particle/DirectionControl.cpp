@@ -182,7 +182,7 @@ namespace slm
         report.check(std::format("  the two differ by {:.3e}",
                                  DirectionControl::reciprocityResidual(width, total, outside)),
                      DirectionControl::reciprocityResidual(width, total, outside) < 1e-9);
-        report.check("no profile built in this work transmits differently from the two "
+        report.check("no profile built here transmits differently from the two "
                      "sides, which reproduces the published reciprocity result rather "
                      "than assuming it",
                      !DirectionControl::anyShapeSteers(width, total, outside, 1e-9));
@@ -216,7 +216,7 @@ namespace slm
                      "for the direction rather than for the map",
                      DirectionControl::pairIsOddInPhase(0.6, 0.8) &&
                          DirectionControl::operationsAreDistinct());
-        report.check("whether this work supplies such a channel structure is not shown: "
+        report.check("whether the model supplies such a channel structure is not shown: "
                      "the far side carries one spatial axis and the pair above is "
                      "written down rather than derived from the crossing, so this is "
                      "where a steer would have to be built and not a steer",

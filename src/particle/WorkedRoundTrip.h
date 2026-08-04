@@ -127,7 +127,7 @@ namespace slm
                                                  double mu, double thickness);
 
         /// Whether the journey beats a light signal covering the same round
-        /// trip, which is the comparison the article makes and which needs both
+        /// trip, which is the comparison that needs both
         /// sides to be a round trip.
         static bool beatsLight(const Journey &record);
 

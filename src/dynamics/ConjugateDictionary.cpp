@@ -141,7 +141,7 @@ namespace slm
         report.check("and its sign is the branch's own time sign, so the direction the "
                      "coordinate dictionary assigns is the direction the phase produces",
                      everyDerivativeMatchesTheSign);
-        report.checkNear(std::format("for the map used in this work the derivative is {:+.0f}",
+        report.checkNear(std::format("for the map used here the derivative is {:+.0f}",
                                      ConjugateDictionary::frequencyDerivative(D)),
                          ConjugateDictionary::frequencyDerivative(D) - 1.0);
 

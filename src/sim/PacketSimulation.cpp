@@ -592,7 +592,7 @@ namespace slm
                                                                     thickness, 1.0, -1, centre,
                                                                     spread, coarse));
             report.check("A LONGER ONE BRINGS IT BACK BEFORE IT LEFT, which is the claim of "
-                         "this work found by propagating a packet rather than by evaluating "
+                         "found by propagating a packet rather than by evaluating "
                          "a formula",
                          PacketSimulation::returnsBeforeDeparture(kind, c, mu, transverse,
                                                                    thickness, 6.0, -1, centre,

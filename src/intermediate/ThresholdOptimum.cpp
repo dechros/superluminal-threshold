@@ -170,7 +170,7 @@ namespace slm
         const double c = 1.0;
         const int turned = 3;
 
-        report.subsection("The configuration the article uses, recovered");
+        report.subsection("The reference configuration, recovered");
         report.check(std::format("  normal 2.84, transverse 4 : delay {:.6f}",
                                  ThresholdOptimum::saturatedDelay(2.84, 4.0, mu, c, turned)),
                      std::abs(ThresholdOptimum::saturatedDelay(2.84, 4.0, mu, c, turned) -
@@ -247,7 +247,7 @@ namespace slm
                          500.0 - ThresholdOptimum::optimalNormalPart(500.0, turned), mu, c, turned,
                          6.0, 1e-2));
 
-        report.subsection("Against the distance the article compares with, which is a round trip");
+        report.subsection("Against the reference distance, which is a round trip");
         report.check(std::format("  the reference configuration gives a threshold distance of "
                                  "{:.6f}",
                                  ThresholdOptimum::thresholdDistance(3.947853, 5.051327, mu, c,
