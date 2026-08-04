@@ -5,6 +5,7 @@
 #include "boundary/ProfiledBarrier.h"
 #include "boundary/SlabTunnelling.h"
 #include "boundary/ThresholdSurface.h"
+#include "charge/ChargedRoundTrip.h"
 #include "core/Report.h"
 #include "core/Section.h"
 #include "critique/AlternativeRoutes.h"
@@ -161,6 +162,7 @@ namespace
         sections.push_back(std::make_unique<slm::PacketSimulationSection>());
         sections.push_back(std::make_unique<slm::RoundTripInvariantsSection>());
         sections.push_back(std::make_unique<slm::ThreeRoutesSection>());
+        sections.push_back(std::make_unique<slm::ChargedRoundTripSection>());
         sections.push_back(std::make_unique<slm::TimeProjectionSection>());
         sections.push_back(std::make_unique<slm::FlowAssumptionSection>());
         sections.push_back(std::make_unique<slm::TimeReversalSignatureSection>());
