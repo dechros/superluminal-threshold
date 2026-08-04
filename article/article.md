@@ -945,9 +945,9 @@ ne genişletir ne daraltır.
 
 Kleinian satırının da öncülü vardır ve bu satır bir kez fazla iddialı yazıldıktan
 sonra düzeltilmiştir. [54] düz bir arka planda metriğin Lorentz imzasından
-Kleinian imzaya geçtiği durumda düzlem dalgaların yayılmasını ele alır; geçiş
-süreksiz olduğunda tamsayı ve yarım tamsayı spinli maddenin farklı davrandığını
-bulur, ve spin yapısı tarafı [55]'tedir. Dolayısıyla "Lorentz'den Kleinian'a
+Kleinian imzaya geçtiği durumda düzlem dalgaların yayılmasını ele alır. Geçiş
+süreksiz olduğunda tamsayı ve yarım tamsayı spinli madde farklı davranır. Spin
+yapısı tarafı [55]'tedir. Dolayısıyla "Lorentz'den Kleinian'a
 geçen dalga" sorusu 1994'te sorulmuştur.
 
 Buradaki tablonun ona eklediği şey **sonlu kalınlıktır**. [54] tek bir imza
@@ -1114,10 +1114,10 @@ teğet bloğun normal türevinin lapse'a bölümüne bakar. Bağımsız iki ayar
 ikisi birden sağlanabilir. Literatürün ikisini bir arada, aralarında bir
 gerilim olduğunu belirtmeden dayatmasının sebebi budur.
 
-Dejenere bileşenin sıfırlanma mertebesi $a$, teğet eğimin sıfırlanma mertebesi
-$b$ yazılırsa (bu bölümde $q$ harfi kullanılmamaktadır, çünkü $q$ metnin geri
-kalanında ara bölgedeki dalga sayısıdır), lapse $d^{a/2}$ gibi, dış eğrilik
-$d^{b}$ gibi gider ve oran koşulunun sınadığı nicelik uzaklığın
+Dejenere bileşenin sıfırlanma mertebesine $a$, teğet eğimin sıfırlanma
+mertebesine $b$ diyelim. Bu bölümde $q$ harfi kullanılmaz, çünkü $q$ metnin geri
+kalanında ara bölgedeki dalga sayısıdır. Lapse $d^{a/2}$ gibi gider, dış eğrilik
+$d^{b}$ gibi. Oran koşulunun sınadığı nicelik ise uzaklığın
 
 $$b - \frac{a}{2}$$
 
@@ -1164,10 +1164,10 @@ tensörü yerine bir hızın tarafından yaklaşılmıştır. **Burada yeni bir 
 iddia edilmemektedir.** Bölüm 3.7'nin sonucuna iliştirilmiş özgünlük payı bu
 nedenle geri çekilmektedir; ayakta kalan katkı, engelin kendisi değil,
 üstelin iki parametreli kapalı biçimidir. Literatürde dejenere bileşenin
-sıfırlanma hızını tek bir parametreyle sınıflandıran çalışmalar vardır; teğet
-bloğun mertebesini ikinci bir parametre olarak taşıyan ve eğrilik ile lapse
-oranını bu iki mertebenin bir bileşimi olarak veren bir sınıflandırmaya
-rastlanmamıştır.
+sıfırlanma hızını tek bir parametreyle sınıflandıran çalışmalar var. Teğet
+bloğun mertebesini ikinci bir parametre olarak taşıyan bir sınıflandırmaya
+rastlamadım; eğrilik ile lapse oranını bu iki mertebenin bileşimi olarak veren
+bir çalışmaya da.
 
 **Kapsamı.** Bu itiraz, geçişin **geometrisini**
 bağlar: metrik ara değerlemesinin dönüm noktasındaki davranışını. Bu çalışmada
@@ -1343,10 +1343,11 @@ meselesidir.
 
 Bu, modelin yerçekimi tarafına atılmış ilk adımdır ve sınırlıdır: Einstein
 denklemleri çözülmemiş, yalnızca eklem koşulunun geometrik karşılığı
-hesaplanmıştır. [7] ve [9]'in uyarısı burada da geçerlidir, imza değişiminde
-kanonik bir alan denklemi kümesi yoktur ve hangi formülasyonun kullanıldığı
-belirtilmek zorundadır; burada kullanılan, dış eğriliğin süreksizliğini gerilim
-tensörünün dağılımsal terimine bağlayan [7] formülasyonudur.
+hesaplanmıştır. [7] ve [9]'in uyarısı burada da geçerlidir: imza
+değişiminde kanonik bir alan denklemi kümesi yoktur. Hangi formülasyonun
+kullanıldığını söylemek gerekir. Burada kullanılan [7]'nin formülasyonudur, yani
+dış eğriliğin süreksizliğini gerilim tensörünün dağılımsal terimine bağlayan
+formülasyon.
 
 Bu formülasyonun pratik aracı [8]'da verilmiştir: öz-zaman koordinat olarak
 alındığında imza değişimi boyunca düzgün genelleştirilmiş ortonormal çatılar
@@ -2254,12 +2255,13 @@ Hadamard anlamında kötü konumlanmıştır.
 Bu sonuç bir yorum değil, denklem tipinin doğrudan sonucudur.
 
 **Öncelik ve yöntem.** Bu sonucun kesin hâli [10]'ye aittir ve yöntemi
-buradakinden farklıdır. Orada iki boyutlu bir imza-değişen uzay-zamanda sınır
-koşulları Schrödinger Hamiltonyeninin öz-eşlenik genişlemelerinden çıkarılır,
-alanın sürekli olması ve koşulların eklem koşulu biçiminde olması talebi tek bir
-küme seçer, Klein-Gordon başlangıç değer problemi bu kümede kötü konumlanmış
-bulunur, ve değişim yüzeyinden uzakta düzgün ve tıkız destekli başlangıç verisi
-için çözümün $L^2$ normunun **sonlu zamanda ıraksadığı** ispatlanır. Yukarıdaki
+buradakinden farklıdır. Orada yol şudur. İki boyutlu bir imza değiştiren uzay zamanda sınır koşulları,
+Schrödinger Hamiltonyeninin öz eşlenik genişlemelerinden çıkar. Alanın sürekli
+olması ve koşulların eklem koşulu biçiminde olması talebi, bu genişlemelerden
+tek bir küme seçer. Klein-Gordon başlangıç değer problemi o kümede kötü
+konumlanmıştır. Ve değişim yüzeyinden uzakta düzgün, tıkız destekli bir
+başlangıç verisi için çözümün $L^2$ normunun **sonlu zamanda ıraksadığı**
+ispatlanır. Yukarıdaki
 mod hesabı aynı sonuca çok daha basit bir yoldan varır ve bir ispat değil,
 bağımsız bir doğrulamadır.
 
@@ -3565,11 +3567,10 @@ halkanın onu nasıl ürettiği ve aşağıdaki tek parçacığın onu nasıl
 gerçeklediğidir.
 
 **İddianın sınırı**, aynı şekilde Özet'te üç bedel olarak sayılmıştır: genliğin
-küçüklüğü bir büyüklük sorunudur ve Bölüm 2.1.6 bunun seçilmiş bir çalışma
-noktası olduğunu göstermektedir; işaretin seçilebilirliği bir açık sorudur
-(Bölüm 8.4); geçirgen okuma ile yüzey katmanının bir arada duramaması ise
-literatürün güçlü ile zayıf ayrımıdır ve bu modele özgü bir boşluk değildir
-(Bölüm 3.7.1). Zincirin
+küçüklüğü bir büyüklük sorunudur, ve Bölüm 2.1.6 bunun seçilmiş bir çalışma
+noktası olduğunu gösterir. İşaretin seçilebilirliği bir açık sorudur
+(Bölüm 8.4). Geçirgen okuma ile yüzey katmanı bir arada duramaz; bu, literatürün
+güçlü ile zayıf ayrımıdır, modele özgü bir boşluk değil (Bölüm 3.7.1). Zincirin
 kendisi bu boşluktan bağımsız olarak doğrudur; zincirin bir deneye bağlanması
 değildir.
 
@@ -3590,10 +3591,10 @@ bağlayıcı olduğu.
 Bu bölüm modelin kendi sınırını belirler ve sonucu kabul edilen bir itirazdır.
 
 Aynı sınıra dışarıdan da işaret edilmiştir. [3], burada kullanılan türden bir
-çevirmenin birim operatör artı keyfi bir yeniden etiketleme olduğunu, 24
-permütasyondan altısının çizgi elemanını koruduğunu ve kalan on sekizinin boost
-yönü ne olursa olsun belirli bir ekseni takas ettiğini, dolayısıyla koordinat
-bağımlı olduğunu savunur; buradaki $D$ o listenin ilk matrisidir. Bu bölümdeki
+çevirmenin birim operatör artı keyfi bir yeniden etiketleme olduğunu savunur.
+Yirmi dört permütasyondan altısı çizgi elemanını korur. Kalan on sekizi, boost
+yönü ne olursa olsun belirli bir ekseni takas eder, dolayısıyla koordinat
+bağımlıdır. Buradaki $D$ o listenin ilk matrisidir. Bu bölümdeki
 sonuç, itirazın cebirsel çekirdeğini kabul eder. [30] ise aynı kopukluğu başka
 bir yönden dile getirir: iki dalı birbirine bağlayan tutarlı bir formalizm
 yoktur. Bu çalışma bu tespiti bir eksiklik değil, Bölüm 4.1'de nicelleştirilen
@@ -4163,10 +4164,10 @@ kaldırmaktadır. Bölüm 28'un üç engeli ayaktadır.
 
 ### 24.3 Vakum Cherenkov sınırı
 
-Superluminal yayılımı sınırlayan çift ışıma mekanizması [29], $\delta = v^2/c^2 - 1$
-parametresi pozitif olduğunda işler; superluminal bir parçacık
-$\nu \to \nu + e^+ + e^-$ süreciyle enerji kaybeder ve bu kaybın gözlenmemesi
-superluminaliteye sıkı bir üst sınır koyar. Bu modelde hiçbir uyarım $\delta > 0$ ile
+Superluminal yayılımı sınırlayan çift ışıma mekanizması [29],
+$\delta = v^2/c^2 - 1$ parametresi pozitif olduğunda işler. Superluminal bir
+parçacık $\nu \to \nu + e^+ + e^-$ süreciyle enerji kaybeder. Bu kaybın
+gözlenmemesi superluminaliteye sıkı bir üst sınır koyar. Bu modelde hiçbir uyarım $\delta > 0$ ile
 yayılmaz; grup hızı her zaman $c$'nin altında ya da ona eşittir. Dolayısıyla
 sınır bu modeli yalnızca boş biçimde kısıtlar. Bu bir üstünlük değil, öngörü
 yoksunluğunun bir başka görünümüdür.
