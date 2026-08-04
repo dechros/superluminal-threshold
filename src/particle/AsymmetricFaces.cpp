@@ -136,7 +136,7 @@ namespace slm
         const std::vector<double> other = AsymmetricFaces::deflectionSpectrum(1.0, 0.0, 0.0);
         report.check(std::format("  along an axis the spectrum has {} values instead of {}",
                                  other.size(), spectrum.size()),
-                     other.size() >= 1);
+                     !other.empty());
         report.check("so the particular angles are not universal, they follow from "
                      "the direction the particle arrived along",
                      other.size() != spectrum.size() ||

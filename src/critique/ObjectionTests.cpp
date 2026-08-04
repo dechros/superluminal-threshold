@@ -69,10 +69,27 @@ namespace slm
         return sum;
     }
 
+    double ObjectionTests::starredSectorCommutator(double separation, double mass, int modes)
+    {
+        double sum = 0.0;
+        const double step = 8.0 * mass / modes;
+        for (int i = 1; i <= modes; ++i)
+        {
+            const double k = mass + i * step;
+            const double omega = std::sqrt(k * k - mass * mass);
+            if (omega <= 0.0)
+            {
+                continue;
+            }
+            sum += std::sin(omega * -separation) / omega * step;
+        }
+        return sum;
+    }
+
     double ObjectionTests::doubledSectorCommutator(double separation, double mass, int modes)
     {
-        return singleSectorCommutator(separation, mass, modes) -
-               singleSectorCommutator(separation, mass, modes);
+        return singleSectorCommutator(separation, mass, modes) +
+               starredSectorCommutator(separation, mass, modes);
     }
 
     double ObjectionTests::superluminalityParameter(double groupVelocity, double c)

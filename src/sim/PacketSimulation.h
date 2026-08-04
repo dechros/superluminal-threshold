@@ -252,8 +252,8 @@ namespace slm
         /// Whether that measured threshold agrees with the phase delay the
         /// closed form gives. Note that the amplitude already describes TWO
         /// crossings, so the delay it carries is the round trip's; multiplying
-        /// it by two again is a factor-of-two error twice over
-        /// before, and the check is written this way to keep it made once.
+        /// it by two again is a factor-of-two error, and the check is written
+        /// this way to keep that mistake from being made twice.
         static bool thresholdAgreesWithFormula(IntermediateRegion::Kind kind, double c, double mu,
                                                double transverseSquared, double thickness,
                                                double centre, double spread, int samples,

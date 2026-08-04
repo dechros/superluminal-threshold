@@ -591,9 +591,8 @@ namespace slm
                          !PacketSimulation::returnsBeforeDeparture(kind, c, mu, transverse,
                                                                     thickness, 1.0, -1, centre,
                                                                     spread, coarse));
-            report.check("A LONGER ONE BRINGS IT BACK BEFORE IT LEFT, which is the claim of "
-                         "found by propagating a packet rather than by evaluating "
-                         "a formula",
+            report.check("A LONGER ONE BRINGS IT BACK BEFORE IT LEFT, found by propagating "
+                         "a packet rather than by evaluating a formula",
                          PacketSimulation::returnsBeforeDeparture(kind, c, mu, transverse,
                                                                    thickness, 6.0, -1, centre,
                                                                    spread, coarse));

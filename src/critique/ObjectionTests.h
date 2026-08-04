@@ -40,9 +40,22 @@ namespace slm
         /// \param modes Number of modes summed.
         static double singleSectorCommutator(double separation, double mass, int modes = 4000);
 
-        /// The same quantity in the doubled construction, where a starred
-        /// sector is adjoined with the opposite sign. The objection is that
-        /// this vanishes identically, leaving no quantum dynamics.
+        /// The same quantity for the starred sector, which carries the
+        /// opposite time orientation and so is summed at the reversed
+        /// separation. It is summed over its own grid rather than derived from
+        /// the sector above, because the cancellation below is the thing being
+        /// measured and a quantity defined as the negative of another cancels
+        /// by arithmetic whatever the modes do.
+        /// \param separation Coordinate separation along the mode direction.
+        /// \param mass Mass parameter setting the threshold.
+        /// \param modes Number of modes summed.
+        static double starredSectorCommutator(double separation, double mass, int modes = 4000);
+
+        /// The two sectors added, which is the doubled construction. The
+        /// objection is that this vanishes identically, leaving no quantum
+        /// dynamics; here it vanishes as a computed cancellation of two
+        /// independent mode sums, so damaging either grid shows up as a
+        /// residue rather than passing unnoticed.
         static double doubledSectorCommutator(double separation, double mass, int modes = 4000);
 
         /// Superluminality parameter of a propagating excitation, v^2/c^2 - 1,

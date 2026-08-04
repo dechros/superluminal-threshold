@@ -306,7 +306,7 @@ namespace slm
         {
             const auto &line = ledger[row];
             Entry entry;
-            entry.section = line.size() > 0 ? line[0] : std::string{};
+            entry.section = !line.empty() ? line[0] : std::string{};
             entry.statement = line.size() > 1 ? line[1] : std::string{};
             entry.disposition = line.size() > 2 ? line[2] : std::string{};
             entry.settledAt = line.size() > 3 ? line[3] : std::string{};

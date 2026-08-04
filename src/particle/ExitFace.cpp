@@ -63,7 +63,7 @@ namespace slm
         }
         report.check("so both branches are available and the two faces are on an "
                      "equal footing",
-                     true == !ExitFace::farSideSelectsBranch());
+                     !ExitFace::farSideSelectsBranch());
 
         report.subsection("The orientation sets the size, not the branch");
         report.check("turning the energy vector without changing its length leaves "

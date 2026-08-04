@@ -191,7 +191,7 @@ namespace slm
         }
         report.check("so every coordinate changes character across the threshold, "
                      "with no slot keeping its kind",
-                     TimeProjection::isTimelike(true, TimeProjection::farSideSpaceSlot()) == false &&
+                     !TimeProjection::isTimelike(true, TimeProjection::farSideSpaceSlot()) &&
                          TimeProjection::isTimelike(
                              false, TimeProjection::imageSlot(TimeProjection::farSideSpaceSlot())));
 

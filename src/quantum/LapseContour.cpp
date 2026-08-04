@@ -9,7 +9,6 @@ namespace slm
 {
     namespace
     {
-        constexpr double kRegulator = 1e-3;
         const std::complex<double> kI(0.0, 1.0);
     }
 
