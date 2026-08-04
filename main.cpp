@@ -82,6 +82,7 @@
 #include "spherical/SphericalSolution.h"
 #include "transform/SignatureInvolution.h"
 #include "units/PhysicalScales.h"
+#include "units/AnalogueRealisation.h"
 #include "units/ProtonJourney.h"
 
 #include <exception>
@@ -169,6 +170,7 @@ namespace
         sections.push_back(std::make_unique<slm::CrossingAdmissionSection>());
         sections.push_back(std::make_unique<slm::PhysicalScalesSection>());
         sections.push_back(std::make_unique<slm::ProtonJourneySection>());
+        sections.push_back(std::make_unique<slm::AnalogueRealisationSection>());
         sections.push_back(std::make_unique<slm::TimeProjectionSection>());
         sections.push_back(std::make_unique<slm::FlowAssumptionSection>());
         sections.push_back(std::make_unique<slm::TimeReversalSignatureSection>());
