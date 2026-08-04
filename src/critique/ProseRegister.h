@@ -3,6 +3,7 @@
 #include "core/Section.h"
 
 #include <string>
+#include <utility>
 #include <vector>
 
 namespace slm
@@ -91,6 +92,14 @@ namespace slm
         /// Most verbal nouns one sentence may carry.
         static constexpr int nominalsPerSentence = 2;
 
+        /// Longest a heading may be, in words.
+        static constexpr int headingWordLimit = 8;
+
+        /// Bands the predicate mix and the passive density have to fall in.
+        static constexpr int copulaShareLimit = 33;
+        static constexpr int continuousShareFloor = 2;
+        static constexpr int passivePerThousandLimit = 29;
+
         /// The text under review, or an empty string when it cannot be opened.
         static std::string text();
 
@@ -122,6 +131,17 @@ namespace slm
 
         /// Occurrences of the em dash.
         static std::vector<Fault> emDashes(const std::string &text);
+
+        /// Headings that assert rather than name: a finite verb, a colon, a
+        /// question, or more words than a name needs.
+        static std::vector<Fault> verbalHeadings(const std::string &text);
+
+        /// Share of prose sentences ending in each predicate form, in whole
+        /// percentages, keyed by the ending.
+        static std::vector<std::pair<std::string, int>> predicateMix(const std::string &text);
+
+        /// Passive constructions per thousand words of prose.
+        static double passiveDensity(const std::string &text);
 
         /// Every fault, in one list.
         static std::vector<Fault> faults(const std::string &text);

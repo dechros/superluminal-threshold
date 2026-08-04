@@ -212,6 +212,75 @@ namespace slm
             }
             return lines;
         }
+
+        std::string trimmed(const std::string &s)
+        {
+            const std::size_t from = s.find_first_not_of(" \t\r");
+            if (from == std::string::npos)
+            {
+                return {};
+            }
+            const std::size_t to = s.find_last_not_of(" \t\r");
+            return s.substr(from, to - from + 1);
+        }
+
+        std::vector<std::string> proseSentences(const std::string &text)
+        {
+            std::vector<std::string> out;
+            std::string paragraph;
+            bool insideMath = false;
+            const auto flush = [&out, &paragraph]() {
+                std::string current;
+                for (std::size_t at = 0; at < paragraph.size(); ++at)
+                {
+                    current.push_back(paragraph[at]);
+                    const bool stop = paragraph[at] == '.' || paragraph[at] == '!' ||
+                                      paragraph[at] == '?';
+                    if (stop && (at + 1 == paragraph.size() || paragraph[at + 1] == ' '))
+                    {
+                        if (current.size() > 12)
+                        {
+                            out.push_back(current);
+                        }
+                        current.clear();
+                    }
+                }
+                paragraph.clear();
+            };
+            for (const std::string &line : splitLines(text))
+            {
+                const std::string flat = trimmed(line);
+                if (flat == "$$")
+                {
+                    insideMath = !insideMath;
+                    continue;
+                }
+                if (insideMath || !isProse(flat))
+                {
+                    flush();
+                    continue;
+                }
+                paragraph += (paragraph.empty() ? "" : " ") + flat;
+            }
+            flush();
+            return out;
+        }
+
+        std::string finalWord(const std::string &sentence)
+        {
+            std::istringstream in(sentence);
+            std::string word;
+            std::string last;
+            while (in >> word)
+            {
+                last = word;
+            }
+            while (!last.empty() && std::string(".,;:!?*)").find(last.back()) != std::string::npos)
+            {
+                last.pop_back();
+            }
+            return last;
+        }
     }
 
     std::string ProseRegister::text()
@@ -481,6 +550,135 @@ namespace slm
         return faults;
     }
 
+    std::vector<ProseRegister::Fault> ProseRegister::verbalHeadings(const std::string &text)
+    {
+        std::vector<Fault> faults;
+        const std::regex opener("^#{1,3} ");
+        const std::regex label("^#{1,3} [0-9IVX.]*[.]?[ ]*");
+        const std::regex finite("(dır|dir|dur|dür|tır|tir|maz|mez|yor|acak|ecek|ıyor|iyor|"
+                                "sın|sin)$|^(ır|ir|ar|er|ur|ür)$");
+        const auto lines = splitLines(text);
+        for (std::size_t index = 0; index < lines.size(); ++index)
+        {
+            if (!std::regex_search(lines[index], opener))
+            {
+                continue;
+            }
+            const std::string name = std::regex_replace(lines[index], label, "");
+            const int line = static_cast<int>(index) + 1;
+            if (name.find(':') != std::string::npos)
+            {
+                faults.push_back({"başlıkta iki nokta", line, name});
+                continue;
+            }
+            if (name.find('?') != std::string::npos)
+            {
+                faults.push_back({"başlıkta soru", line, name});
+                continue;
+            }
+            std::istringstream words(name);
+            std::string word;
+            int count = 0;
+            bool asserted = false;
+            while (words >> word)
+            {
+                ++count;
+                if (std::regex_search(word, finite))
+                {
+                    faults.push_back({"başlıkta çekimli fiil", line, name});
+                    asserted = true;
+                    break;
+                }
+            }
+            if (!asserted && count > headingWordLimit)
+            {
+                faults.push_back({"başlık çok uzun", line, name});
+            }
+        }
+        return faults;
+    }
+
+    std::vector<std::pair<std::string, int>> ProseRegister::predicateMix(const std::string &text)
+    {
+        const std::regex pastPassive("(mış|miş|muş|müş)t(ı|i)r$");
+        const std::regex continuous("(makta|mekte)d(ı|i)r$");
+        const std::regex copula("(dır|dir|dur|dür|tır|tir|tur|tür)$");
+        const std::regex aorist("(ır|ir|ur|ür|ar|er)$");
+
+        int past = 0;
+        int present = 0;
+        int isForm = 0;
+        int does = 0;
+        int total = 0;
+        for (const std::string &sentence : proseSentences(text))
+        {
+            const std::string tail = finalWord(sentence);
+            if (tail.empty())
+            {
+                continue;
+            }
+            ++total;
+            if (std::regex_search(tail, pastPassive))
+            {
+                ++past;
+            }
+            else if (std::regex_search(tail, continuous))
+            {
+                ++present;
+            }
+            else if (std::regex_search(tail, copula))
+            {
+                ++isForm;
+            }
+            else if (std::regex_search(tail, aorist))
+            {
+                ++does;
+            }
+        }
+        if (total == 0)
+        {
+            return {};
+        }
+        return {{"-mıştır", 100 * past / total},
+                {"-maktadır", 100 * present / total},
+                {"-dır", 100 * isForm / total},
+                {"-ir", 100 * does / total}};
+    }
+
+    double ProseRegister::passiveDensity(const std::string &text)
+    {
+        // The suffix that marks the passive also ends a good many words that are
+        // not passive at all, "değildir" being the commonest, and counting those
+        // inflates the density by a sixth. The stop list is what the count is
+        // worth: without it the measure reports a fault the prose does not have.
+        const std::regex passive("([a-zçğıöşü]{2,})(ıl|il|ul|ül|ın|in|un|ün)"
+                                 "(mış|miş|muş|müş|makta|mekte|ır|ir|ur|ür|dı|di|du|dü|"
+                                 "acak|ecek)([a-zçğıöşü]*)");
+        const std::regex notPassive("^(değil|sınır|olabil|görün|bilin|gerekir|kalır|gelir|"
+                                    "verir|olur|kesin|derin|yakın|sakin|emin|için|gibi|"
+                                    "bütün|üzerin|altın|yerin|birin)");
+        int words = 0;
+        int hits = 0;
+        for (const std::string &sentence : proseSentences(text))
+        {
+            std::istringstream in(sentence);
+            std::string word;
+            while (in >> word)
+            {
+                ++words;
+            }
+            for (std::sregex_iterator it(sentence.begin(), sentence.end(), passive), stop;
+                 it != stop; ++it)
+            {
+                if (!std::regex_search((*it)[0].str(), notPassive))
+                {
+                    ++hits;
+                }
+            }
+        }
+        return words == 0 ? 0.0 : 1000.0 * hits / words;
+    }
+
     std::vector<ProseRegister::Fault> ProseRegister::emDashes(const std::string &text)
     {
         std::vector<Fault> faults;
@@ -595,6 +793,53 @@ namespace slm
         report.check("every reference takes the possessive ending its number takes when it "
                      "is said aloud, which the digit alone does not decide",
                      suffixes.empty());
+
+        report.subsection("Headings that name rather than assert");
+        const auto headings = ProseRegister::verbalHeadings(document);
+        for (const auto &fault : headings)
+        {
+            report.check(std::format("  line {}: {} ({})", fault.line, fault.excerpt,
+                                     fault.rule),
+                         false);
+        }
+        report.check("every heading is a noun phrase, which is what all one hundred and "
+                     "ninety two headings of the measured corpus are",
+                     headings.empty());
+
+        report.subsection("The mix of predicate forms, which a drifting text concentrates");
+        const auto mix = ProseRegister::predicateMix(document);
+        for (const auto &form : mix)
+        {
+            report.check(std::format("  {} carries {}% of the sentence endings",
+                                     form.first, form.second),
+                         true);
+        }
+        int copula = 0;
+        int continuous = 0;
+        for (const auto &form : mix)
+        {
+            if (form.first == "-dır")
+            {
+                copula = form.second;
+            }
+            if (form.first == "-maktadır")
+            {
+                continuous = form.second;
+            }
+        }
+        report.check(std::format("the copula carries {}% of the endings, at most {}",
+                                 copula, ProseRegister::copulaShareLimit),
+                     copula <= ProseRegister::copulaShareLimit);
+        report.check(std::format("the present continuous carries {}%, at least {}",
+                                 continuous, ProseRegister::continuousShareFloor),
+                     continuous >= ProseRegister::continuousShareFloor);
+
+        report.subsection("Passive density, which a per-paragraph cap cannot see");
+        const double density = ProseRegister::passiveDensity(document);
+        report.check(std::format("the prose carries {:.1f} passives per thousand words, "
+                                 "at most {}",
+                                 density, ProseRegister::passivePerThousandLimit),
+                     density <= ProseRegister::passivePerThousandLimit);
 
         report.subsection("The house rule on the em dash");
         report.check("the em dash appears nowhere", ProseRegister::emDashes(document).empty());
