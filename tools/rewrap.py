@@ -22,6 +22,17 @@ def is_prose(line):
     return True
 
 
+def atoms(text):
+    """Split on spaces, keeping each inline maths span as one unbreakable piece."""
+    pieces = []
+    for word in text.split():
+        if pieces and len(re.findall(r"(?<!\$)\$(?!\$)", pieces[-1])) % 2:
+            pieces[-1] += " " + word
+        else:
+            pieces.append(word)
+    return pieces
+
+
 def wrap(words, prefix=""):
     out = []
     line = ""
@@ -66,10 +77,10 @@ while index < len(lines):
     block = lines[start:index]
     quoted = all(l.lstrip().startswith(">") for l in block)
     if quoted:
-        words = " ".join(l.lstrip().lstrip(">").strip() for l in block).split()
+        words = atoms(" ".join(l.lstrip().lstrip(">").strip() for l in block))
         wrapped = wrap(words, "> ")
     else:
-        words = " ".join(block).split()
+        words = atoms(" ".join(block))
         wrapped = wrap(words)
     if wrapped != block:
         changed += 1

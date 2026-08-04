@@ -308,9 +308,9 @@ hesaplayın ve karşılaştırın. Ayrıldıkları yerde hata sizin uygulamanız
 modelde değil.
 
 **Ağırlığı da hesaplayın.** Yukarıdaki sayılar neyin mümkün olduğunu söyler, ne
-kadar sık olacağını söylemez. Aynı yapılanmada geçirgenlik $3{,}46 \times
-10^{-12}$ mertebesindedir (Bölüm 4.1.3, Bölüm 4.1.5). Dönüş anını tek başına
-vermek yanıltıcıdır; ikisi birlikte gider.
+kadar sık olacağını söylemez. Aynı yapılanmada geçirgenlik
+$3{,}46 \times 10^{-12}$ mertebesindedir (Bölüm 4.1.3, Bölüm 4.1.5). Dönüş anını
+tek başına vermek yanıltıcıdır; ikisi birlikte gider.
 
 ### 2.1 Bir gidiş dönüşün bütün ihtimalleri
 
@@ -412,9 +412,10 @@ olarak incelenir ve kozmolojik sabitle ilişkilendirilir. Buradaki kullanım ond
 dardır: genel işaret çevrilmesi tek başına ele alınmaz, iki metrik arasındaki
 eşlemenin bir özelliği olarak ortaya çıkar.
 
-Işık konisi testi $(1,1,0,0)$, $(1,0,1,0)$, $(1,0,0,1)$ ve $(1, 1/\sqrt{3},
-1/\sqrt{3}, 1/\sqrt{3})$ ışınları üzerinde yapılır; her birinde $s'^2 = -s^2 =
-0$ çıkar. Genel bir aralık için de $s'^2 = -s^2$ tam olarak sağlanır.
+Işık konisi testi $(1,1,0,0)$, $(1,0,1,0)$, $(1,0,0,1)$ ve
+$(1, 1/\sqrt{3}, 1/\sqrt{3}, 1/\sqrt{3})$ ışınları üzerinde yapılır; her birinde
+$s'^2 = -s^2 = 0$ çıkar. Genel bir aralık için de $s'^2 = -s^2$ tam olarak
+sağlanır.
 
 **Bu çarpanlama yeni değildir.** Bir superboost'un, sonsuz hız limitindeki bir
 çevirme ile dual hız $c^2/V$'ye ait sıradan bir boostun bileşkesi olduğu [2]'de
@@ -487,8 +488,8 @@ ayırt edilmiş ekseni üzerindedir ve büyüklüğü birdir. Dolayısıyla o ek
 kadar yer değiştirme, saatte **tam olarak** $s$ kadar yer değiştirme üretir; bir
 katsayıyla ölçeklenmez. Diğer üç eksenin bu yuvaya katkısı **tam olarak
 sıfırdır**, yani tümüyle o üç eksenin içinde kalan bir hareket saati oynatmaz.
-Sınanan değerler: $0{,}5 \to 0{,}5000$, $1 \to 1{,}0000$, $2 \to 2{,}0000$, $4
-\to 4{,}0000$, $7{,}25 \to 7{,}2500$.
+Sınanan değerler: $0{,}5 \to 0{,}5000$, $1 \to 1{,}0000$, $2 \to 2{,}0000$,
+$4 \to 4{,}0000$, $7{,}25 \to 7{,}2500$.
 
 **Yer değiştirmeler toplanır.** Eşleme lineer olduğundan, $s_1$ sonra $s_2$
 gitmek ile $s_1 + s_2$ birden gitmek aynı saat yer değiştirmesini verir. Bu
@@ -570,10 +571,10 @@ değil, hesaplanmış bir olgudur.
 **Dispersiyon bağıntısı neden girmiyor.** Aynı katsayıya bir grup hızı
 argümanıyla gitmek mümkün görünür, ama o yol kapalıdır: $k/\sqrt{k^2+\mu}$
 niceliği $\mu > 0$ için hiçbir sonlu $k$'de bire ulaşmaz. Hesaplanan değerler
-$\mu = 1$ için $k = 1$'de $0{,}707106781$, $k = 10$'da $0{,}995037190$, $k =
-1000$'de $0{,}999999500$. Yukarıdaki birim katsayı bir hızın kütlesiz limiti
-değildir; eşlemenin tam bir özelliğidir ve sonlu kütlede de geçerlidir. Ayrım
-önemlidir, çünkü bir asimptotik yaklaşım sonucu yalnızca yaklaşık kılardı.
+$\mu = 1$ için $k = 1$'de $0{,}707106781$, $k = 10$'da $0{,}995037190$,
+$k = 1000$'de $0{,}999999500$. Yukarıdaki birim katsayı bir hızın kütlesiz
+limiti değildir; eşlemenin tam bir özelliğidir ve sonlu kütlede de geçerlidir.
+Ayrım önemlidir, çünkü bir asimptotik yaklaşım sonucu yalnızca yaklaşık kılardı.
 
 ### 4.1.3 Dönüş anının işareti
 
@@ -599,10 +600,10 @@ mesafelerin çok ötesindedir ve eşik mesafesine ulaşılmaz.
 
 Bu sonucun ağırlığı da hesaplanmıştır ve küçüktür. Eşik mesafesine ulaşan
 yapılanmalar kalın bariyerlerdir, kalın bariyer ise neredeyse hiçbir şey
-geçirmez: $d = 2$ için geçirgenlik $3{,}67 \times 10^{-3}$, $d = 4$ için $3{,}60
-\times 10^{-6}$, $d = 8$ için $3{,}46 \times 10^{-12}$. Dizi aynı anda hem kabul
-edilebilir hem de kuvvetle bastırılmıştır; sonuç bir olabilirlik ifadesidir, bir
-verim ifadesi değildir.
+geçirmez: $d = 2$ için geçirgenlik $3{,}67 \times 10^{-3}$, $d = 4$ için
+$3{,}60 \times 10^{-6}$, $d = 8$ için $3{,}46 \times 10^{-12}$. Dizi aynı anda
+hem kabul edilebilir hem de kuvvetle bastırılmıştır; sonuç bir olabilirlik
+ifadesidir, bir verim ifadesi değildir.
 
 Ayrıca bu bölümde toplanan iki terimin toplamı, Bölüm 4.1.2'nin tek genlikten
 okunan anıyla üç mesafede karşılaştırılmış ve aynı çıkmıştır. Yani makalenin bu
@@ -762,11 +763,12 @@ $2{,}565988$ veriyor, yani Bölüm 4.1.3'ün sayısının aynısını. Bu ikinci
 önemsiz değildir; tek geçiş ile gidiş dönüşü karıştırmak bu çalışmaya iki kez
 ikilik çarpana mal olmuştur.
 
-**Bunun makaleye katkısı.** Bölüm 4.1.5'in ağırlık tablosu ($d = 8$'de $3{,}46
-\times 10^{-12}$) tek bir kalınlıkta okunmuş bir sayıdır ve bir sınır değildir.
-Aynı doyum derinliğinde daha yüksek enerjide çalışıldığında hem gereken mesafe
-hem gereken kalınlık düşer, genlik ise düşmez. Dolayısıyla "mümkün ama ağırlığı
-$10^{-12}$" ifadesi bir yasak değil, bir **çalışma noktası** ifadesidir.
+**Bunun makaleye katkısı.** Bölüm 4.1.5'in ağırlık tablosu ($d = 8$'de
+$3{,}46 \times 10^{-12}$) tek bir kalınlıkta okunmuş bir sayıdır ve bir sınır
+değildir. Aynı doyum derinliğinde daha yüksek enerjide çalışıldığında hem
+gereken mesafe hem gereken kalınlık düşer, genlik ise düşmez. Dolayısıyla
+"mümkün ama ağırlığı $10^{-12}$" ifadesi bir yasak değil, bir **çalışma
+noktası** ifadesidir.
 
 **Toplu değerlendirme, bir sınırlama olarak.** Üç niceliğin ikisi zayıftır:
 genlik ağırlığı bacağı görmez, düz bacak enerji gerektirmez; üçüncüsü gerçek bir
@@ -820,9 +822,9 @@ formülasyon yan yana konursa:
 | Dalga denklemleri  | Yok                            | Casimir öz-değer probleminden türetilmiş, bilinen bütün denklemler artı yeni takyonik sınıflar |
 
 Kapsam bakımından [4] bu bölümü içerir ve aşar. İki formülasyon **aynı grup
-değildir**: $D$, [4]'ün genişletilmiş grubunda bulunmaz, çünkü içerdiği $x
-\leftrightarrow y$ takasının üç boyuttaki determinantı $-1$'dir ve dolayısıyla
-$SO(3)$ elemanı değildir. Bu, Bölüm 19.7'de hesaplanmıştır.
+değildir**: $D$, [4]'ün genişletilmiş grubunda bulunmaz, çünkü içerdiği
+$x \leftrightarrow y$ takasının üç boyuttaki determinantı $-1$'dir ve
+dolayısıyla $SO(3)$ elemanı değildir. Bu, Bölüm 19.7'de hesaplanmıştır.
 
 Bu bölüm tek bir fark taşır: kapanma bozulmasını hangi katmanın ürettiğini
 ayrıştırır. $D$ kapalıdır, $B$ değildir. [4]'te sorun bu biçimde ortaya konmaz,
@@ -1289,11 +1291,11 @@ ve $F_{II} = |T_+|^2 - |T_-|^2$ ile verilir. Sonuçlar:
 | Dirichlet duvar | Bölge II ayrık                | $R = -1$              | Tam yansıma                       |
 | Neumann duvar   | Bölge II ayrık                | $R = +1$              | Tam yansıma                       |
 
-Güçlü koşulda $T_+ = R$ ve $T_- = 1$ çıkar, dolayısıyla $F_{II} = |R|^2 - 1 =
--F_I$ olur. İki akının eşit olması ancak $1 - |R|^2 = 0$ ile mümkündür. Yani
-**tam yansıma ek bir varsayım değil, akı korunumunun tek çözümüdür.** Bölüm
-6'nın sonucu bu haliyle bir seçimin sonucu olmaktan çıkıp, o seçim verildiğinde
-bir zorunluluk hâline gelir.
+Güçlü koşulda $T_+ = R$ ve $T_- = 1$ çıkar, dolayısıyla
+$F_{II} = |R|^2 - 1 = -F_I$ olur. İki akının eşit olması ancak $1 - |R|^2 = 0$
+ile mümkündür. Yani **tam yansıma ek bir varsayım değil, akı korunumunun tek
+çözümüdür.** Bölüm 6'nın sonucu bu haliyle bir seçimin sonucu olmaktan çıkıp, o
+seçim verildiğinde bir zorunluluk hâline gelir.
 
 Zayıf koşulda ise $T_+ = 1$, $T_- = R$ olur ve akı **her** $R$ için korunur.
 Zayıf koşul geçişe izin verir ama ne kadar geçtiğini söylemez; Bölge II bir
@@ -1497,9 +1499,9 @@ bağlanmamıştır.
 $\mathrm{diag}(1, -\cos\lambda, -\cos\lambda, -\cos\lambda)$ yolu üzerinden "iki
 imza sınıfı arasında dejenere olmayan sürekli bir yol yoktur, dolayısıyla geçiş
 sağlanmaz" sonucuna varılıyordu. İki kusuru var. Birincisi, o yol $(3,1)$'e
-değil Öklid imzası $(4,0)$'a varır, yani hedefi ıskalar. İkincisi, $\det \eta =
-\det \eta' = -1$ olduğundan, determinant üzerinden yürüyen gerekçe geçersizdir.
-Aşağıdaki yol doğrusudur, ve sonucu farklı çıkar.
+değil Öklid imzası $(4,0)$'a varır, yani hedefi ıskalar. İkincisi,
+$\det \eta = \det \eta' = -1$ olduğundan, determinant üzerinden yürüyen gerekçe
+geçersizdir. Aşağıdaki yol doğrusudur, ve sonucu farklı çıkar.
 
 Soru şudur: $(1,3)$'ten $(3,1)$'e giden sürekli bir yol boyunca aynı noktada kaç
 öz-değerin birden sıfırlanması gerekir. Dejenereliğin kendisi kaçınılmazdır,
@@ -1715,10 +1717,10 @@ gelecek ile geçmiş iyi tanımlıdır.
 
 $$v(\theta)^T \eta'\, v(\theta) = \cos^2\theta + \sin^2\theta = 1$$
 
-verir; aralık **hiç** değişmez ve daima pozitiftir. $\theta = \pi$'de $v(\pi) =
--v(0)$ olur. Yani bir zaman-benzeri vektör, zaman-benzeri kümeden hiç çıkmadan
-kendi negatifine sürekli olarak taşınmıştır. Böyle bir taşıma varken ikili bir
-etiketleme yapılamaz: gelecek ile geçmiş ayrımı **yoktur**.
+verir; aralık **hiç** değişmez ve daima pozitiftir. $\theta = \pi$'de
+$v(\pi) = -v(0)$ olur. Yani bir zaman-benzeri vektör, zaman-benzeri kümeden hiç
+çıkmadan kendi negatifine sürekli olarak taşınmıştır. Böyle bir taşıma varken
+ikili bir etiketleme yapılamaz: gelecek ile geçmiş ayrımı **yoktur**.
 
 **Ara bölge.** Bölüm 9.1'deki kademeli yolun geçtiği $(2,2)$ imzasında da durum
 aynıdır; iki pozitif yön bulunması yeterlidir. Dolayısıyla yönelim, kademeli
@@ -1926,9 +1928,9 @@ $$\left|\frac{\mathrm{d}q}{\mathrm{d}\kappa}\right| = \frac{c\,\kappa}{\sqrt{\ka
 
 sınanan bütün dalga sayılarında $c$'nin altındadır ve $\kappa \to \infty$
 limitinde $c$'ye gider. Yani **öte tarafın da bir hız sınırı vardır**, ve o
-sınır bu tarafın sınırıyla aynı sayıdır. Durgun bir cisim için $q(0) =
-mc^2/\hbar \neq 0$'dır, yani o eksende duran bir cismin bile sıfırdan farklı bir
-eşlenik niceliği vardır.
+sınır bu tarafın sınırıyla aynı sayıdır. Durgun bir cisim için
+$q(0) = mc^2/\hbar \neq 0$'dır, yani o eksende duran bir cismin bile sıfırdan
+farklı bir eşlenik niceliği vardır.
 
 Sonucu taşıyan eksen budur. Bu eksende $s$ kadar yer değiştirmek, Bölge I
 saatinde tam olarak $s$ kadar yer değiştirmektir; katsayı birdir ve diğer üç
@@ -2019,8 +2021,8 @@ $$p = \frac{dr}{dt} = \pm\,\frac{c\,a}{\sqrt{a^2 - t^4}}$$
 
 Bu ifadenin denklemi sağladığı doğrulanmıştır; eliptik fonksiyona gerek yoktur.
 
-**Denge noktaları.** $p' = 0$ koşulu $p\,(p^2 - c^2) = 0$ verir, yani $p \in
-\{0, +c, -c\}$, sabit çözüm ve ışık hızında genişleyen kabuk.
+**Denge noktaları.** $p' = 0$ koşulu $p\,(p^2 - c^2) = 0$ verir, yani
+$p \in \{0, +c, -c\}$, sabit çözüm ve ışık hızında genişleyen kabuk.
 
 **Davranış.** $t = 0$'da $p = c$; $t \to \sqrt{a}$ iken $p \to \infty$.
 
@@ -2194,9 +2196,9 @@ tarafta da otomatik sağlanır; fark tam olarak sıfırdır. Bunun nedeni $D$'ni
 doğrusal olmasıdır: toplamların görüntüsü, görüntülerin toplamına eşittir.
 
 **Karışık çarpışma.** Duran bir subluminal cisim ile sonsuz hızlı bir takyon
-çarpıştığında cisim momentum kazanır, enerjisi değişmez. Başlangıç durumu $(E_1,
-p_1) = (mc^2, 0)$ ve $(E_2, p_2) = (0, Mc)$ alınır; çarpışma sonrasında takyon
-yine sonsuz hızlıdır ($E_4 = 0$) ve momentumu $M'c$ olur.
+çarpıştığında cisim momentum kazanır, enerjisi değişmez. Başlangıç durumu
+$(E_1, p_1) = (mc^2, 0)$ ve $(E_2, p_2) = (0, Mc)$ alınır; çarpışma sonrasında
+takyon yine sonsuz hızlıdır ($E_4 = 0$) ve momentumu $M'c$ olur.
 
 **Sonsuz hız limiti.** $V \to \infty$ iken $E \to 0$ ve $p \to mc$.
 
@@ -2278,9 +2280,10 @@ Yukarıdaki kötü konumlanmışlık sonucu doğrudur, ancak eksik okunmuştur. 
 daha atıldığında kapsamı büyük ölçüde daralır.
 
 **Argümanın dayandığı serbestlik.** Bölüm 13.1'deki hesap, bir modun $k_2$,
-$k_3$ ve $q$ dalga sayılarını **birbirinden bağımsız** seçer ve $k_2^2 + k_3^2 +
-\mu > q^2/c^2$ olduğunda katsayının pozitif olduğunu bulur. Bu serbestlik
-altında patlayan modlar gerçekten vardır ve katsayı yukarıdan sınırsızdır.
+$k_3$ ve $q$ dalga sayılarını **birbirinden bağımsız** seçer ve
+$k_2^2 + k_3^2 + \mu > q^2/c^2$ olduğunda katsayının pozitif olduğunu bulur. Bu
+serbestlik altında patlayan modlar gerçekten vardır ve katsayı yukarıdan
+sınırsızdır.
 
 **Eşikten gelen modun bu serbestliği yoktur.** Yüzeydeki eşleştirmeden doğan
 geçen dalga, tanımı gereği Bölge II'nin alan denklemini çözer, dolayısıyla dört
@@ -3306,8 +3309,8 @@ bir **özdeşliktir**. Saçılma hesabıyla karşılaştırıldığında:
 | $32$ | $1{,}462864$   | $1{,}462864$ | $7{,}2 \times 10^{-11}$ |
 
 **Sonlu kalınlık biçimi.** Doyum henüz kurulmamışken de geçerli olan tam biçim,
-doyuran çarpanı açıkça taşır. $u = 2\kappa\beta / [(\kappa^2-\beta^2)\tanh(\beta
-d)]$ olmak üzere:
+doyuran çarpanı açıkça taşır.
+$u = 2\kappa\beta / [(\kappa^2-\beta^2)\tanh(\beta d)]$ olmak üzere:
 
 $$\arg T = \frac{\pi}{2} - \arctan u, \qquad t = -\frac{1}{1+u^2}\,\frac{du}{d\omega}$$
 
@@ -3401,8 +3404,9 @@ bilançodur.
 
 Ne var ki yöntem, etkileşimden ayrılan **gerçek bir kütle kabuğu momentumunu**
 varsayar; ve bu çalışmadaki iç bölge her zaman böyle bir momentum taşımaz.
-Öklidyen bir bölgede, enine kare toplamı 4 ve $c = \mu = 1$ iken, iç mod $\omega
-= \sqrt{13} \approx 3{,}6056$ frekansının altında söner, üstünde yayılır:
+Öklidyen bir bölgede, enine kare toplamı 4 ve $c = \mu = 1$ iken, iç mod
+$\omega = \sqrt{13} \approx 3{,}6056$ frekansının altında söner, üstünde
+yayılır:
 
 | $\omega$ | Geçiş dalga sayısının karesi | Kütle kabuğunda | Gidiş dönüş rejimi |
 | -------- | ---------------------------- | --------------- | ------------------ |
@@ -3522,10 +3526,10 @@ Dokuzuncu adımdaki dört sayı, dönüş olayının dört koordinatıdır ve **
 formülden** gelmektedir (Bölüm 21.7); bu döküm onları yeniden hesaplamaz, okur.
 Böylece döküm zincirden sapamaz.
 
-On birinci adımda karşılaştırmanın **iki tarafı da gidiş dönüştür**. Işık $2d/c
-= 16$ harcar, parçacık $-3{,}515480$ ile döner. Kod bu eşitliği denetler. Tek
-geçiş ile gidiş dönüşü karıştırmak bu çalışmaya iki kez ikilik çarpana mal oldu;
-artık bir kabul değil, bir sınama.
+On birinci adımda karşılaştırmanın **iki tarafı da gidiş dönüştür**. Işık
+$2d/c = 16$ harcar, parçacık $-3{,}515480$ ile döner. Kod bu eşitliği denetler.
+Tek geçiş ile gidiş dönüşü karıştırmak bu çalışmaya iki kez ikilik çarpana mal
+oldu; artık bir kabul değil, bir sınama.
 
 **Tablodaki mesafenin nerede olduğu.** Burada iki ayrı yer var, ve örneğin
 geçerliliği bu ikisinin ayrı tutulmasına bağlı.
@@ -3594,9 +3598,9 @@ tespiti bir eksiklik değil, Bölüm 6.1'de nicelleştirilen bir sonuç olarak o
 > Reel hiçbir $M$ için $M^T \eta\, M = -\eta$ olamaz.
 
 Gerekçe: kongruan matrisler aynı imzaya sahiptir (Sylvester atalet yasası).
-$\eta$'nın imzası $(1,3)$, $-\eta$'nınki $(3,1)$'dir. Sayısal tarama da yapıldı
-- 20.000 rastgele reel $4\times4$ matris üzerinde $M^T \eta M + \eta$ hatasının
-ulaşabildiği en küçük değer sıfıra yaklaşmaz.
+$\eta$'nın imzası $(1,3)$, $-\eta$'nınki $(3,1)$'dir. Sayısal tarama da bunu
+verir: 20.000 rastgele reel $4\times4$ matris üzerinde $M^T \eta M + \eta$
+hatasının ulaşabildiği en küçük değer sıfıra yaklaşmaz.
 
 ### 23.2 Bu modelin $D$'si ne sağlıyor
 
@@ -3615,9 +3619,9 @@ gelir.
 | Bu modelin $D$'si         | Hayır         | Hayır ($\eta'$ elle konur) |
 | $\pm i \Lambda$           | Evet          | Evet, ama reel değil       |
 
-İkisini birden veren reel dönüşüm yoktur; Sylvester bunu yasaklar. $\pm
-i\Lambda$ uygulamak, metriği sabit tutup $m \to \pm im$ yapmakla eşdeğerdir,
-yani sanal kütle.
+İkisini birden veren reel dönüşüm yoktur; Sylvester bunu yasaklar.
+$\pm i\Lambda$ uygulamak, metriği sabit tutup $m \to \pm im$ yapmakla
+eşdeğerdir, yani sanal kütle.
 
 ### 23.4 Modelin duruşu
 
@@ -3921,11 +3925,12 @@ frekansta geçmez, ve çarpımları tam olarak birdir:
 | $20$     | $1{,}0063$ | $0{,}9937$ | $1{,}000000$ |
 
 **Cephe sınırı alır ve sınır ışıktır.** Faz hızının ışığı aşma payı frekans
-büyüdükçe sıfıra düşer: $\omega = 10$ için $2{,}598 \times 10^{-2}$, $\omega =
-100$ için $2{,}501 \times 10^{-4}$, $\omega = 1000$ için $2{,}500 \times
-10^{-6}$, $\omega = 10^{5}$ için $2{,}500 \times 10^{-10}$. Bölge cepheye
-saydamdır: $d = 4$ için cephe $4{,}000001$, $d = 16$ için $16{,}000005$ gecikir,
-yani **tam ışık süresi kadar**. Cephe hiçbir kalınlıkta öne alınmaz.
+büyüdükçe sıfıra düşer: $\omega = 10$ için $2{,}598 \times 10^{-2}$,
+$\omega = 100$ için $2{,}501 \times 10^{-4}$, $\omega = 1000$ için
+$2{,}500 \times 10^{-6}$, $\omega = 10^{5}$ için $2{,}500 \times 10^{-10}$.
+Bölge cepheye saydamdır: $d = 4$ için cephe $4{,}000001$, $d = 16$ için
+$16{,}000005$ gecikir, yani **tam ışık süresi kadar**. Cephe hiçbir kalınlıkta
+öne alınmaz.
 
 **İlerlemiş tepenin üzerinde taşındığı şey.** Öne alma büyürken onu taşıyan
 genlik çöker:
@@ -4152,13 +4157,13 @@ kaldırmaktadır. Bölüm 30'un üç engeli ayaktadır.
 
 ### 26.3 Vakum Cherenkov sınırı
 
-Superluminal yayılımı sınırlayan çift ışıma mekanizması [29], $\delta = v^2/c^2
-- 1$ parametresi pozitif olduğunda işler. Superluminal bir parçacık $\nu \to \nu
-+ e^+ + e^-$ süreciyle enerji kaybeder. Bu kaybın gözlenmemesi superluminaliteye
-sıkı bir üst sınır koyar. Bu modelde hiçbir uyarım $\delta > 0$ ile yayılmaz;
-grup hızı her zaman $c$'nin altında ya da ona eşittir. Dolayısıyla sınır bu
-modeli yalnızca boş biçimde kısıtlar. Bu bir üstünlük değil, öngörü
-yoksunluğunun bir başka görünümüdür.
+Superluminal yayılımı sınırlayan çift ışıma mekanizması [29],
+$\delta = v^2/c^2 - 1$ parametresi pozitif olduğunda işler. Superluminal bir
+parçacık $\nu \to \nu + e^+ + e^-$ süreciyle enerji kaybeder. Bu kaybın
+gözlenmemesi superluminaliteye sıkı bir üst sınır koyar. Bu modelde hiçbir
+uyarım $\delta > 0$ ile yayılmaz; grup hızı her zaman $c$'nin altında ya da ona
+eşittir. Dolayısıyla sınır bu modeli yalnızca boş biçimde kısıtlar. Bu bir
+üstünlük değil, öngörü yoksunluğunun bir başka görünümüdür.
 
 ### 26.4 Fazladan zamanın tek zamana çökmesi
 
