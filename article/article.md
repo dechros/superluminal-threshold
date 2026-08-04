@@ -23,12 +23,30 @@ koşulu, geçiş genliği, kütleli parçacık.
 
 ## 1. Giriş
 
-Bu bölüm Öz'deki üç cümleyi açar. Sırası şudur: sonucun hangi koşula bağlı
-olduğu, iddianın ne kadarının yeni olduğu, kurulan eşleme, sonucu taşıyan zincir,
-zincirin neyi göstermediği, modelin kendisi, yolculuk, dönüşte ne değiştiği, ve
-neyin gösterilmediği. Sonunda modelin maddeleri ile metnin okuma haritası durur.
+Kütleli bir cismi zamanda geriye taşımanın bilinen bir yolu yoktur. Bu metin bir
+yol önerir ve onun aritmetiğini kurar: parçacık ışık hızı eşiğini geçer, öte
+tarafta mekânda mesafe kat eder, ve geri döner. Sorulan şey, orada harcanan
+mesafenin buradaki saatte nereye düştüğüdür.
 
-### 1.1 Sonuç koşulludur, ve koşul bir seçimdir
+### 1.1 Kurulan eşleme
+
+Soru şudur: parçacık döndüğünde Bölge I'in dört koordinatında nereye oturur.
+"Nerede" sorusu uzaydaki yerle sınırlı değildir; asıl cevap zaman
+koordinatındadır. Metin tek bir eşleme kurar:
+
+$$(\text{öte taraftaki yönelim ve hareket}) \;\longmapsto\; (t, x, y, z)_{\text{dönüş olayı}}$$
+
+**Ana sonuç.** Öte tarafın tek uzay ekseninde $s$ kadar yer değiştirmek, Bölge
+I'in saatinde tam olarak $s$ kadar yer değiştirmektir. Katsayı birdir. Uzay
+koordinatlarına sızıntı sıfırdır. Yer değiştirmeler toplanır. İşareti geometri
+sabitlemez.
+
+Geçiş gecikmesi kalınlıkla doyar, yer değiştirme doymaz. Bu yüzden bir eşik
+mesafesi doğar, ve onu aşan her $s$ dönüşü girişin öncesine koyar. Zamanda
+yolculuk bu eşlemeden okunur, varsayılmaz: dönüş anının kesintisiz bir dünya
+çizgisinin koyacağı yerden farklı bir yere düşüp düşmediği hesabın çıktısıdır.
+
+### 1.2 Sonuç koşulludur, ve koşul bir seçimdir
 
 Geçişi yapabilecek sekiz matris vardır. Hangisinin gerçeklendiğini geometri
 belirlemez: iki aileyi birbirine bağlayan dönüşüm, her iki bölgenin metriğini de
@@ -48,10 +66,10 @@ bir madde katmanı gerektirir, o katman da baskın enerji koşulunu ihlal eder
 (Bölüm 5.6). Ayrıca iddiayı taşıyan rejimde parçacık öte tarafta gözlenemez
 (Bölüm 21.9).
 
-### 1.2 İddia ne kadar büyük
+### 1.3 İddia ne kadar büyük
 
-Yukarıdaki üç cümleden yalnızca üçüncüsü yenidir. Üstışık hızın geçmişe varmayı
-mümkün kıldığını 1962 ile 1970 arası kurdu. Öte tarafın bir uzay ve üç zaman
+Yukarıdaki sonucun üç bileşeni var, ve yalnızca üçüncüsü yenidir. Üstışık hızın
+geçmişe varmayı mümkün kıldığını 1962 ile 1970 arası kurdu. Öte tarafın bir uzay ve üç zaman
 ekseni taşıdığını, parçacıkların da yalnızca o tek uzay ekseninde hareket
 ettiğini literatür biliyor. Bir uzay ekseninin bu geçiş altında zaman eksenine
 düştüğü de bilinen bir sonuç. Kalan tek adım şudur:
@@ -62,24 +80,6 @@ düştüğü de bilinen bir sonuç. Kalan tek adım şudur:
 Literatürde bulunmayan şey budur: yer değiştirmeyi bir saat kaymasına çeviren ve
 dönüşte hangi ana varıldığını hesaplayan bir çalışma. Neyin ödünç, neyin
 kendine ait olduğu Bölüm 29.1'de tek tek sayılıdır.
-
-### 1.3 Kurulan eşleme
-
-Soru şudur: parçacık döndüğünde Bölge I'in dört koordinatında nereye oturur.
-"Nerede" sorusu uzaydaki yerle sınırlı değildir; asıl cevap zaman
-koordinatındadır. Metin tek bir eşleme kurar:
-
-$$(\text{öte taraftaki yönelim ve hareket}) \;\longmapsto\; (t, x, y, z)_{\text{dönüş olayı}}$$
-
-**Ana sonuç.** Öte tarafın tek uzay ekseninde $s$ kadar yer değiştirmek, Bölge
-I'in saatinde tam olarak $s$ kadar yer değiştirmektir. Katsayı birdir. Uzay
-koordinatlarına sızıntı sıfırdır. Yer değiştirmeler toplanır. İşareti geometri
-sabitlemez.
-
-Geçiş gecikmesi kalınlıkla doyar, yer değiştirme doymaz. Bu yüzden bir eşik
-mesafesi doğar, ve onu aşan her $s$ dönüşü girişin öncesine koyar. Zamanda
-yolculuk bu eşlemeden okunur, varsayılmaz: dönüş anının kesintisiz bir dünya
-çizgisinin koyacağı yerden farklı bir yere düşüp düşmediği hesabın çıktısıdır.
 
 ### 1.4 Sonucu taşıyan zincir
 
@@ -385,23 +385,12 @@ $$M(V) = D \cdot B(c^2/V), \qquad V > c$$
 - $D$, sabit, parametresiz involüsyon; imza değişimini tek başına yapar.
 - $B(c^2/V)$, sıradan subluminal Lorentz boostu; $V$ bilgisini taşır.
 
-**Bu çarpanlama yeni değildir.** Bir superboost'un, sonsuz hız limitindeki bir
-çevirme ile dual hız $c^2/V$'ye ait sıradan bir boostun bileşkesi olduğu [2]'de
-belirtilmiştir ve [3] bunu kendi eleştirisinin ikinci basamağı olarak kullanır.
-Buraya eklenen şey çarpanlamanın kendisi değil, üç noktadır. Birincisi,
-çarpanlama modelin düzenleyici ilkesi olarak sonuna kadar kullanılır. İkincisi,
-Bölüm 4.1'in tam taraması çevirme parçasının **zorunlu** olduğunu gösterir.
-Üçüncüsü, Bölüm 4.2 grup kapanmasındaki bozulmayı yalnızca $B$ katmanına
-yıkar.
-
 $V > c$ olduğundan $u = c^2/V < c$'dir, yani $B$ gerçekten subluminaldir. Her $V$
 değeri için
 
 $$M(V)^T \eta' M(V) = -\eta$$
 
 sağlanır: çarpanlama geçerlidir ve imza değişimi bütünüyle $D$'nin üzerindedir.
-
----
 
 $$D = \begin{pmatrix} 0&0&0&1 \\ 0&0&1&0 \\ 0&1&0&0 \\ 1&0&0&0 \end{pmatrix}
 \qquad\text{yani}\qquad (ct, x, y, z) \longmapsto (z, y, x, ct)$$
@@ -427,6 +416,15 @@ eşlemenin bir özelliği olarak ortaya çıkar.
 Işık konisi testi $(1,1,0,0)$, $(1,0,1,0)$, $(1,0,0,1)$ ve
 $(1, 1/\sqrt{3}, 1/\sqrt{3}, 1/\sqrt{3})$ ışınları üzerinde yapılır; her birinde
 $s'^2 = -s^2 = 0$ çıkar. Genel bir aralık için de $s'^2 = -s^2$ tam olarak sağlanır.
+
+**Bu çarpanlama yeni değildir.** Bir superboost'un, sonsuz hız limitindeki bir
+çevirme ile dual hız $c^2/V$'ye ait sıradan bir boostun bileşkesi olduğu [2]'de
+belirtilmiştir ve [3] bunu kendi eleştirisinin ikinci basamağı olarak kullanır.
+Buraya eklenen şey çarpanlamanın kendisi değil, üç noktadır. Birincisi,
+çarpanlama modelin düzenleyici ilkesi olarak sonuna kadar kullanılır. İkincisi,
+Bölüm 4.1'in tam taraması çevirme parçasının **zorunlu** olduğunu gösterir.
+Üçüncüsü, Bölüm 4.2 grup kapanmasındaki bozulmayı yalnızca $B$ katmanına
+yıkar.
 
 ### 4.1 384 işaretli permütasyon matrisinin taranması
 
