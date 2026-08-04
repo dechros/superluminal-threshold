@@ -39,7 +39,7 @@ namespace slm
                     LiteratureObjections::noTimeOrientationExists(),
                     LiteratureObjections::saturatingDelayIsNotTransit(),
                     LiteratureObjections::advancedPeakCarriesNoSignal(),
-                    LiteratureObjections::vacuumCherenkovExcludesIt(),
+                    LiteratureObjections::pairEmissionExcludesIt(),
                     LiteratureObjections::superluminalFieldTheoryIsEmpty(),
                     LiteratureObjections::transformationsGiveIndeterminism(),
                     LiteratureObjections::boundaryChoiceIsArbitrary(),
@@ -114,7 +114,7 @@ namespace slm
 
     LiteratureObjections::Verdict LiteratureObjections::noTimeOrientationExists()
     {
-        return TimeOrientation::admitsTimeOrientation(TimeOrientation::metricKleinian())
+        return TimeOrientation::admitsTimeOrientation(TimeOrientation::metricSplitSignature())
                    ? Verdict::Answered
                    : Verdict::Conceded;
     }
@@ -140,7 +140,7 @@ namespace slm
                    : Verdict::Conceded;
     }
 
-    LiteratureObjections::Verdict LiteratureObjections::vacuumCherenkovExcludesIt()
+    LiteratureObjections::Verdict LiteratureObjections::pairEmissionExcludesIt()
     {
         const double groupSpeed = SignalFront::groupSpeed(6.0, kC, kMu, kTransverse);
         return ObjectionTests::superluminalityParameter(groupSpeed, kC) <= 0.0 ? Verdict::Answered
@@ -245,8 +245,8 @@ namespace slm
             {"an advanced peak carries no signal",
              LiteratureObjections::advancedPeakCarriesNoSignal(),
              "the front is delayed by the full light time at every thickness"},
-            {"a superluminal excitation is excluded by vacuum Cherenkov bounds",
-             LiteratureObjections::vacuumCherenkovExcludesIt(),
+            {"a superluminal excitation is excluded by vacuum pair emission bounds",
+             LiteratureObjections::pairEmissionExcludesIt(),
              "the group speed of every propagating excitation here stays below c, "
              "so the bound has nothing to constrain"},
             {"a field theory of superluminal excitations has no dynamics",

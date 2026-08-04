@@ -159,7 +159,7 @@ namespace slm
         const double omega = 6.0;
 
         report.subsection("The amplitude across two crossings is well defined");
-        for (Kind kind : {Kind::None, Kind::Kleinian, Kind::Euclidean})
+        for (Kind kind : {Kind::None, Kind::SplitSignature, Kind::Euclidean})
         {
             const double magnitude =
                 std::abs(TwoCrossings::amplitude(kind, omega, c, mu, transverse, 1.0));
@@ -220,14 +220,14 @@ namespace slm
                      TwoCrossings::delayInLightTimes(Kind::Euclidean, barrierOmega, c, mu,
                                                      transverse, 8.0) < 1.0);
 
-        report.subsection("A Kleinian region resonates instead of saturating");
+        report.subsection("A split-signature region resonates instead of saturating");
         double smallest = 1e9;
         double largest = -1e9;
         for (int step = 1; step <= 40; ++step)
         {
             const double thickness = 0.2 * step;
             const double delay =
-                TwoCrossings::returnDelay(Kind::Kleinian, omega, c, mu, transverse, thickness);
+                TwoCrossings::returnDelay(Kind::SplitSignature, omega, c, mu, transverse, thickness);
             smallest = std::min(smallest, delay);
             largest = std::max(largest, delay);
         }
@@ -235,7 +235,7 @@ namespace slm
                                  "thickness is scanned",
                                  smallest, largest),
                      largest > smallest);
-        report.check("so for a Kleinian region the return moment depends on the "
+        report.check("so for a split-signature region the return moment depends on the "
                      "thickness periodically rather than monotonically",
                      largest - smallest > 0.05);
 
@@ -244,25 +244,25 @@ namespace slm
         for (double testOmega : {2.8, 6.0, 12.0})
         {
             const double transverseCase = TwoCrossings::insideSquaredOn(
-                Axis::Transverse, Kind::Kleinian, testOmega, c, mu, transverse);
+                Axis::Transverse, Kind::SplitSignature, testOmega, c, mu, transverse);
             const double crossingCase = TwoCrossings::insideSquaredOn(
-                Axis::Crossing, Kind::Kleinian, testOmega, c, mu, transverse);
+                Axis::Crossing, Kind::SplitSignature, testOmega, c, mu, transverse);
             report.check(std::format("  omega = {:g} : turning the crossing axis is evanescent "
                                      "while turning a transverse axis gives {:.2f}",
                                      testOmega, transverseCase),
                          crossingCase < 0.0);
         }
-        report.check("so on the crossing-axis reading a Kleinian region is a "
+        report.check("so on the crossing-axis reading a split-signature region is a "
                      "barrier at every frequency, and never a cavity",
-                     TwoCrossings::insideSquaredOn(Axis::Crossing, Kind::Kleinian, 50.0, c, mu,
+                     TwoCrossings::insideSquaredOn(Axis::Crossing, Kind::SplitSignature, 50.0, c, mu,
                                                    transverse) < 0.0);
         report.check("while on the transverse reading it propagates once the "
                      "frequency is high enough",
-                     TwoCrossings::insideSquaredOn(Axis::Transverse, Kind::Kleinian, 50.0, c, mu,
+                     TwoCrossings::insideSquaredOn(Axis::Transverse, Kind::SplitSignature, 50.0, c, mu,
                                                    transverse) > 0.0);
-        report.check("on the crossing-axis reading the Kleinian and Euclidean "
+        report.check("on the crossing-axis reading the split-signature and Euclidean "
                      "interiors coincide, so the four kinds collapse to two",
-                     std::abs(TwoCrossings::insideSquaredOn(Axis::Crossing, Kind::Kleinian, omega,
+                     std::abs(TwoCrossings::insideSquaredOn(Axis::Crossing, Kind::SplitSignature, omega,
                                                             c, mu, transverse) -
                               TwoCrossings::insideSquaredOn(Axis::Crossing, Kind::Euclidean, omega,
                                                             c, mu, transverse)) < 1e-12);

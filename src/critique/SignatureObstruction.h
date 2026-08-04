@@ -7,7 +7,7 @@ namespace slm
 
     /// Section on the inertia law forbidding a real transformation from
     /// flipping the signature of one metric.
-    class SylvesterObstruction : public Section
+    class SignatureObstruction : public Section
     {
     public:
         /// Smallest residual of M^T eta M + eta found by random search.
@@ -18,7 +18,7 @@ namespace slm
 
         std::string title() const override
         {
-            return "Sylvester obstruction and where the model stands";
+            return "signature obstruction and where the model stands";
         }
         void run(Report &report) const override;
     };

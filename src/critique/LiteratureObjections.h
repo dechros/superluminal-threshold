@@ -81,7 +81,7 @@ namespace slm
 
         /// That a superluminal excitation would radiate into the vacuum and is
         /// therefore excluded by the observed absence of that radiation.
-        static Verdict vacuumCherenkovExcludesIt();
+        static Verdict pairEmissionExcludesIt();
 
         /// That a quantum field theory of superluminal excitations has no
         /// dynamics, its commutator function vanishing identically.

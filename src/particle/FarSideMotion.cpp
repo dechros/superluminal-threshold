@@ -149,7 +149,7 @@ namespace slm
         report.subsection("What motion over there consists of");
         report.check("crossing the region is displacement along the far side's one "
                      "spatial axis, and it has a wavenumber",
-                     FarSideMotion::crossingWavenumber(Kind::Kleinian, propagatingOmega, c, mu,
+                     FarSideMotion::crossingWavenumber(Kind::SplitSignature, propagatingOmega, c, mu,
                                                        transverse) > 0.0);
         report.checkNear("everything else is rotation of the energy vector in the "
                          "three time planes, which preserves its length",
@@ -167,7 +167,7 @@ namespace slm
         }
 
         report.subsection("The exit moment is a travel time only while the interior propagates");
-        for (Kind kind : {Kind::None, Kind::Kleinian, Kind::Euclidean})
+        for (Kind kind : {Kind::None, Kind::SplitSignature, Kind::Euclidean})
         {
             const double speed =
                 FarSideMotion::crossingGroupSpeed(kind, propagatingOmega, c, mu, transverse);

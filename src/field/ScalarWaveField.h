@@ -5,9 +5,9 @@
 namespace slm
 {
 
-    /// Section on the Klein-Gordon Lagrangian on both sides and on the well
+    /// Section on the massive scalar Lagrangian on both sides and on the well
     /// posedness of the resulting initial value problems.
-    class KleinGordonField : public Section
+    class ScalarWaveField : public Section
     {
     public:
         /// Coefficient in d_t^2 f = coefficient * f for a region I plane wave.
@@ -19,7 +19,7 @@ namespace slm
         ///        two time axes.
         /// \param q Frequency along the single space axis.
         /// \return May be positive and grows without bound, which is what
-        ///         makes the Cauchy problem ill posed.
+        ///         makes the initial value problem ill posed.
         static double regionIIGrowthCoefficient(double c, double mu, double kTransverseSquared,
                                                 double q);
 

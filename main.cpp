@@ -14,12 +14,12 @@
 #include "critique/ProseRegister.h"
 #include "critique/Reconciliation.h"
 #include "critique/ReproductionLedger.h"
-#include "critique/SylvesterObstruction.h"
+#include "critique/SignatureObstruction.h"
 #include "dynamics/Dispersion.h"
 #include "dynamics/EnergyMomentum.h"
 #include "field/DynamicsUnderReversal.h"
-#include "field/KleinGordonField.h"
-#include "field/MaxwellField.h"
+#include "field/ScalarWaveField.h"
+#include "field/VectorGaugeField.h"
 #include "field/ReversalSymmetry.h"
 #include "field/TimeOrientation.h"
 #include "horizon/BlackHoleHorizon.h"
@@ -35,7 +35,7 @@
 #include "intermediate/ThresholdOptimum.h"
 #include "intermediate/TraversalClocks.h"
 #include "intermediate/TwoCrossings.h"
-#include "transform/ExtendedLorentzGroup.h"
+#include "transform/ExtendedIsometryGroup.h"
 #include "particle/ArrivalOrder.h"
 #include "particle/AsymmetricFaces.h"
 #include "particle/CellDistribution.h"
@@ -57,11 +57,11 @@
 #include "particle/WavePacket.h"
 #include "particle/WorkedRoundTrip.h"
 #include "quantum/CanonicalQuantization.h"
-#include "quantum/CasimirDiscriminant.h"
+#include "quantum/QuadraticInvariant.h"
 #include "quantum/DerivedTransition.h"
 #include "quantum/LapseContour.h"
 #include "quantum/PathIntegral.h"
-#include "quantum/VacuumCasimir.h"
+#include "quantum/BoundaryVacuumEnergy.h"
 #include "rest/RestStateOrbit.h"
 #include "scan/BranchObservables.h"
 #include "scan/CrossingBranches.h"
@@ -104,7 +104,7 @@ namespace
         sections.push_back(std::make_unique<slm::ProfiledBarrierSection>());
         sections.push_back(std::make_unique<slm::DegeneratePathSection>());
         sections.push_back(std::make_unique<slm::BlackHoleHorizon>());
-        sections.push_back(std::make_unique<slm::KleinGordonField>());
+        sections.push_back(std::make_unique<slm::ScalarWaveField>());
         sections.push_back(std::make_unique<slm::EnergyMomentum>());
         sections.push_back(std::make_unique<slm::TimeOrientationSection>());
         sections.push_back(std::make_unique<slm::ReversalSymmetrySection>());
@@ -121,8 +121,8 @@ namespace
         sections.push_back(std::make_unique<slm::PathIntegral>());
         sections.push_back(std::make_unique<slm::LapseContourSection>());
         sections.push_back(std::make_unique<slm::DerivedTransitionSection>());
-        sections.push_back(std::make_unique<slm::VacuumCasimir>());
-        sections.push_back(std::make_unique<slm::CasimirDiscriminantSection>());
+        sections.push_back(std::make_unique<slm::BoundaryVacuumEnergy>());
+        sections.push_back(std::make_unique<slm::QuadraticInvariantSection>());
         sections.push_back(std::make_unique<slm::WavePacketSection>());
         sections.push_back(std::make_unique<slm::ModeFilterSection>());
         sections.push_back(std::make_unique<slm::TwoCrossingsSection>());
@@ -137,11 +137,11 @@ namespace
         sections.push_back(std::make_unique<slm::ExitFaceSection>());
         sections.push_back(std::make_unique<slm::CellDistributionSection>());
         sections.push_back(std::make_unique<slm::AsymmetricFacesSection>());
-        sections.push_back(std::make_unique<slm::ExtendedLorentzGroup>());
+        sections.push_back(std::make_unique<slm::ExtendedIsometryGroup>());
         sections.push_back(std::make_unique<slm::ChannelsSection>());
         sections.push_back(std::make_unique<slm::GravitationalChannelSection>());
-        sections.push_back(std::make_unique<slm::MaxwellSection>());
-        sections.push_back(std::make_unique<slm::SylvesterObstruction>());
+        sections.push_back(std::make_unique<slm::VectorGaugeFieldSection>());
+        sections.push_back(std::make_unique<slm::SignatureObstruction>());
         sections.push_back(std::make_unique<slm::ObjectionTestsSection>());
         sections.push_back(std::make_unique<slm::LiteratureObjectionsSection>());
         sections.push_back(std::make_unique<slm::AlternativeRoutesSection>());

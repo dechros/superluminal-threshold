@@ -17,7 +17,7 @@ namespace slm
                          {{1, 0, 0, 0}}}});
     }
 
-    Matrix4 SignatureInvolution::lorentzBoost(double c, double u)
+    Matrix4 SignatureInvolution::hyperbolicRotation(double c, double u)
     {
         const double beta = u / c;
         const double gamma = 1.0 / std::sqrt(1.0 - beta * beta);
@@ -32,7 +32,7 @@ namespace slm
 
     Matrix4 SignatureInvolution::superboost(double c, double V)
     {
-        return matrix() * lorentzBoost(c, c * c / V);
+        return matrix() * hyperbolicRotation(c, c * c / V);
     }
 
     double SignatureInvolution::transformVelocity(double c, double v)
@@ -67,7 +67,7 @@ namespace slm
         double worstDrift = 0.0;
         for (double V : {1.5, 2.0, 10.0, 1000.0})
         {
-            const Matrix4 factor = superboost(c, V) * lorentzBoost(c, c * c / V).inverse();
+            const Matrix4 factor = superboost(c, V) * hyperbolicRotation(c, c * c / V).inverse();
             worstDrift = std::max(worstDrift, factor.maxAbsDifference(D));
         }
         report.checkNear("the factor left after removing the boost is the same matrix at "
@@ -105,7 +105,7 @@ namespace slm
         }
 
         report.subsection("Where closure breaks: D B D^-1");
-        const Matrix4 B = lorentzBoost(c, 0.6 * c);
+        const Matrix4 B = hyperbolicRotation(c, 0.6 * c);
         const Matrix4 conjugated = D * B * D.inverse();
         report.check("conjugation does not keep the SO(1,3) boost of the same type",
                      !conjugated.isEqual(B, 1e-10));

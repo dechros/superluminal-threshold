@@ -134,7 +134,7 @@ namespace slm
                      std::abs(ObjectionTests::doubledSectorCommutator(0.5, 1.0)) < 1e-12 &&
                          std::abs(ObjectionTests::singleSectorCommutator(0.5, 1.0)) > 1e-12);
 
-        report.subsection("The vacuum Cherenkov bound does not bite");
+        report.subsection("The pair emission bound does not bite");
         for (double v : {0.5, 0.9, 1.0})
         {
             const double delta = ObjectionTests::superluminalityParameter(v, 1.0);

@@ -122,7 +122,7 @@ namespace slm
                          ChannelEntropy::incomingEntropy());
 
         report.subsection("What each region type produces at unit thickness");
-        for (Kind kind : {Kind::Kleinian, Kind::Euclidean, Kind::Degenerate})
+        for (Kind kind : {Kind::SplitSignature, Kind::Euclidean, Kind::Degenerate})
         {
             const double transmitted =
                 IntermediateRegion::transmission(kind, c, mu, transverse, thickness);
@@ -157,13 +157,14 @@ namespace slm
         report.check("so there is a thickness at which the crossing is maximally undecided",
                      ChannelEntropy::reachesEvenSplit(Kind::Euclidean, c, mu, transverse));
 
-        const double kleinianBest =
-            ChannelEntropy::maximalEntropyOverThickness(Kind::Kleinian, c, mu, transverse);
-        report.check(std::format("Kleinian never does: its largest is {:.6f}, short of ln 2",
-                                 kleinianBest),
-                     kleinianBest < ChannelEntropy::maximalEntropy() - 0.1);
+        const double splitSignatureBest =
+            ChannelEntropy::maximalEntropyOverThickness(Kind::SplitSignature, c, mu, transverse);
+        report.check(std::format("The split signature never does: its largest is {:.6f}, short "
+                                 "of ln 2",
+                                 splitSignatureBest),
+                     splitSignatureBest < ChannelEntropy::maximalEntropy() - 0.1);
         report.check("because its interior propagates, so transmission stays near one",
-                     IntermediateRegion::transmission(Kind::Kleinian, c, mu, transverse, 0.1) > 0.9);
+                     IntermediateRegion::transmission(Kind::SplitSignature, c, mu, transverse, 0.1) > 0.9);
 
         report.subsection("The thick limit produces none either");
         report.check("Euclidean transmission falls to zero with thickness",
@@ -183,20 +184,20 @@ namespace slm
         const double centre = 2.0;
         const double spread = 0.3;
         const double incomingShape = RoundTrip::incomingEntropy(centre, spread);
-        const double kleinianShape =
-            RoundTrip::returnedEntropy(centre, spread, Kind::Kleinian, c, mu, thickness);
+        const double splitSignatureShape =
+            RoundTrip::returnedEntropy(centre, spread, Kind::SplitSignature, c, mu, thickness);
         const double euclideanShape =
             RoundTrip::returnedEntropy(centre, spread, Kind::Euclidean, c, mu, thickness);
-        report.check(std::format("the packet's own entropy rises for Kleinian, {:+.6f}",
-                                 kleinianShape - incomingShape),
-                     kleinianShape > incomingShape);
+        report.check(std::format("the packet's own entropy rises for split signature, {:+.6f}",
+                                 splitSignatureShape - incomingShape),
+                     splitSignatureShape > incomingShape);
         report.check(std::format("and falls for Euclidean, {:+.6f}",
                                  euclideanShape - incomingShape),
                      euclideanShape < incomingShape);
         report.check("so the mode-distribution entropy has no fixed sign and cannot carry a "
                      "direction, while the channel entropy is non-negative by construction",
-                     (kleinianShape - incomingShape) * (euclideanShape - incomingShape) < 0.0 &&
-                         ChannelEntropy::entropyGain(Kind::Kleinian, c, mu, transverse,
+                     (splitSignatureShape - incomingShape) * (euclideanShape - incomingShape) < 0.0 &&
+                         ChannelEntropy::entropyGain(Kind::SplitSignature, c, mu, transverse,
                                                      thickness) >= 0.0 &&
                          ChannelEntropy::entropyGain(Kind::Euclidean, c, mu, transverse,
                                                      thickness) >= 0.0);

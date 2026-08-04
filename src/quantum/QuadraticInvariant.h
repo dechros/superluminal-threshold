@@ -5,11 +5,11 @@
 namespace slm
 {
 
-    /// Casimir energy between two threshold surfaces, and what it
+    /// boundary vacuum energy between two threshold surfaces, and what it
     /// discriminates.
     ///
     /// Every self-adjoint condition at a single wall reflects completely, so
-    /// one surface distinguishes nothing. Two surfaces do: the Casimir energy
+    /// one surface distinguishes nothing. Two surfaces do: the boundary vacuum energy
     /// between them depends on whether the walls carry the same condition or
     /// opposite ones, and the two cases differ in sign. Equal conditions give
     /// attraction.
@@ -17,8 +17,8 @@ namespace slm
     /// The mode sums are regularised through the identity
     /// sum (n + 1/2)^{-s} = (2^s - 1) zeta(s), verified numerically where it
     /// converges and then continued to s = -3, which is the exponent the
-    /// Casimir energy needs.
-    class CasimirDiscriminant
+    /// boundary vacuum energy needs.
+    class QuadraticInvariant
     {
     public:
         /// Sum of n^{-s} over n from 1, truncated.
@@ -30,11 +30,11 @@ namespace slm
         /// The ratio the two sums are claimed to have, 2^s - 1.
         static double expectedRatio(double s);
 
-        /// Casimir energy per unit area for two walls carrying the same
-        /// condition, either both Dirichlet or both Neumann.
+        /// vacuum energy per unit area for two walls carrying the same
+        /// condition, either both vanishing-value or both vanishing-slope.
         static double energySameCondition(double hbar, double c, double separation);
 
-        /// Casimir energy per unit area for walls carrying opposite
+        /// vacuum energy per unit area for walls carrying opposite
         /// conditions, which is -7/8 of the previous value and therefore
         /// repulsive.
         static double energyOppositeConditions(double hbar, double c, double separation);
@@ -44,7 +44,7 @@ namespace slm
     };
 
     /// Section deriving what an experiment at the threshold would have to see.
-    class CasimirDiscriminantSection : public Section
+    class QuadraticInvariantSection : public Section
     {
     public:
         std::string title() const override

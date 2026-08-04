@@ -702,7 +702,7 @@ Yukarıdaki bütün muhasebe, eşik mesafesini **verili** kabul eder. Etmemesi
 gerekir. Doymuş gecikme bir bariyerin değişmez bir özelliği gibi ele alınır ve
 literatürde sorulan soru onun **doyup doymadığıdır**; ne kadar
 **küçültülebileceği** sorulmamıştır. Burada o gecikme fiyattır, dolayısıyla soru
-anlamlıdır ve cevaplanabilir (`src/intermediate/ThresholdOptimum`).
+anlamlıdır ve cevaplanabilir.
 
 Kapalı biçim soruyu ele verir. Enerji vektörünün birinci bileşeninin karesine
 **normal pay**, kalan ikisinin toplamına **enine pay** denirse, gecikme yalnızca
@@ -4926,7 +4926,7 @@ yer alır ve numaraları kesintisiz devam eder.
 
 Bu bölüm bir alan kuramı kurmaz. Öte tarafta olağan kanonik yapının neden
 çalışmadığını kaydeder, çalışan tek şeyi kaydeder, ve zincirin bunların
-hiçbirine dayanmadığını söyler. Ayrıntılı hesaplar `quantum/` kütüphanesinde
+hiçbirine dayanmadığını söyler. Ayrıntılı hesaplar doğrulama kütüphanelerinde
 durmaktadır; buradaki özet onların sonuçlarıdır.
 
 ### 30.1 Üç engel, tek kökten
@@ -4983,8 +4983,8 @@ kullanmamaktadır.
 
 Bu bölümün önceki hali, Casimir etkisini, iki eşik yüzeyinin ayırt edeceği
 düzeneği ve türetilmiş bir geçişle karşılaştırmayı da taşıyordu. Üçü de doğrudur
-ve `quantum/` içinde hesaplıdır, ama hiçbiri yönelimden dönüş olayına giden
-eşlemeye dokunmaz; bu nedenle metinden çıkarılmışlardır.
+ve doğrulamada hesaplıdır, ama hiçbiri yönelimden dönüş olayına giden eşlemeye
+dokunmaz; bu nedenle metinden çıkarılmışlardır.
 
 ---
 

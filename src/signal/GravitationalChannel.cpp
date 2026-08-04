@@ -66,12 +66,12 @@ namespace slm
         {
             report.check(std::format("  at distance {:g} the layer moves by {:.4f} per unit mass",
                                      distance,
-                                     GravitationalChannel::responseToMass(Kind::Kleinian, thickness,
+                                     GravitationalChannel::responseToMass(Kind::SplitSignature, thickness,
                                                                           distance)),
-                         GravitationalChannel::modulable(Kind::Kleinian, thickness, distance));
+                         GravitationalChannel::modulable(Kind::SplitSignature, thickness, distance));
         }
         report.check("so the channel is not merely present, it can be modulated",
-                     GravitationalChannel::modulable(Kind::Kleinian, thickness, 1.0));
+                     GravitationalChannel::modulable(Kind::SplitSignature, thickness, 1.0));
 
         report.subsection("The response is linear in the mass and falls as the square");
         report.checkNear("doubling the mass doubles the change",
@@ -105,18 +105,18 @@ namespace slm
         for (double distance : {0.5, 1.0, 4.0})
         {
             const double ratio =
-                GravitationalChannel::contrast(Kind::Kleinian, thickness, 1.0, distance);
+                GravitationalChannel::contrast(Kind::SplitSignature, thickness, 1.0, distance);
             report.check(std::format("  distance {:g} : contrast {:.4f}", distance, ratio),
                          ratio > 0.0);
         }
         report.check("the contrast falls off quickly with distance, so the sender "
                      "has to sit close to the surface",
-                     GravitationalChannel::contrast(Kind::Kleinian, thickness, 1.0, 4.0) <
-                         0.1 * GravitationalChannel::contrast(Kind::Kleinian, thickness, 1.0, 1.0));
+                     GravitationalChannel::contrast(Kind::SplitSignature, thickness, 1.0, 4.0) <
+                         0.1 * GravitationalChannel::contrast(Kind::SplitSignature, thickness, 1.0, 1.0));
         report.check("and a thicker region makes the contrast easier, since the "
                      "static layer it is measured against is weaker",
-                     GravitationalChannel::contrast(Kind::Kleinian, 8.0, 1.0, 1.0) >
-                         GravitationalChannel::contrast(Kind::Kleinian, 0.5, 1.0, 1.0));
+                     GravitationalChannel::contrast(Kind::SplitSignature, 8.0, 1.0, 1.0) >
+                         GravitationalChannel::contrast(Kind::SplitSignature, 0.5, 1.0, 1.0));
 
         report.subsection("The verdict");
         report.check("the gravitational channel carries a signal rather than only "
@@ -126,7 +126,7 @@ namespace slm
                              0.0);
         report.check("but it is the weakest channel to arrange, needing the sender "
                      "near the surface and a thick region to read against",
-                     GravitationalChannel::contrast(Kind::Kleinian, thickness, 1.0, 10.0) < 0.02);
+                     GravitationalChannel::contrast(Kind::SplitSignature, thickness, 1.0, 10.0) < 0.02);
     }
 
 }

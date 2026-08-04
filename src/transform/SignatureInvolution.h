@@ -17,10 +17,10 @@ namespace slm
         /// The discrete involution D, mapping (ct, x, y, z) to (z, y, x, ct).
         static Matrix4 matrix();
 
-        /// Ordinary Lorentz boost along x.
+        /// Ordinary hyperbolic rotation along x.
         /// \param c Speed of light.
         /// \param u Boost speed, expected below c.
-        static Matrix4 lorentzBoost(double c, double u);
+        static Matrix4 hyperbolicRotation(double c, double u);
 
         /// The composite transformation M(V) = D * B(c^2/V).
         /// \param c Speed of light.

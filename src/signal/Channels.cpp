@@ -56,7 +56,7 @@ namespace slm
         const double c = 1.0;
         const double mu = 1.0;
         const double transverse = 4.0;
-        const Kind kinds[] = {Kind::Kleinian, Kind::Euclidean, Kind::Degenerate};
+        const Kind kinds[] = {Kind::SplitSignature, Kind::Euclidean, Kind::Degenerate};
 
         report.subsection("Being massless does not help");
         for (Kind kind : kinds)
@@ -75,11 +75,11 @@ namespace slm
                      Channels::masslessTransmission(Kind::Euclidean, c, transverse, 1.0) <
                          Channels::massiveTransmission(Kind::Euclidean, c, mu, transverse, 1.0));
 
-        report.subsection("A Kleinian region is open to both");
+        report.subsection("A split-signature region is open to both");
         report.check("the massless field crosses it",
-                     Channels::masslessTransmission(Kind::Kleinian, c, transverse, 1.0) > 0.1);
+                     Channels::masslessTransmission(Kind::SplitSignature, c, transverse, 1.0) > 0.1);
         report.check("and so does the massive one",
-                     Channels::massiveTransmission(Kind::Kleinian, c, mu, transverse, 1.0) > 0.1);
+                     Channels::massiveTransmission(Kind::SplitSignature, c, mu, transverse, 1.0) > 0.1);
 
         report.subsection("Gravity does not have to cross");
         for (Kind kind : kinds)
@@ -103,11 +103,11 @@ namespace slm
 
         report.subsection("But the gravitational channel weakens as the region opens");
         report.check("a thicker region couples more weakly",
-                     Channels::gravitationalCoupling(Kind::Kleinian, 8.0) <
-                         Channels::gravitationalCoupling(Kind::Kleinian, 0.5));
-        report.check("and a thicker region transmits a Kleinian field no worse, so "
+                     Channels::gravitationalCoupling(Kind::SplitSignature, 8.0) <
+                         Channels::gravitationalCoupling(Kind::SplitSignature, 0.5));
+        report.check("and a thicker region transmits a split-signature field no worse, so "
                      "the two channels trade against each other",
-                     Channels::massiveTransmission(Kind::Kleinian, c, mu, transverse, 8.0) > 0.1);
+                     Channels::massiveTransmission(Kind::SplitSignature, c, mu, transverse, 8.0) > 0.1);
 
         report.subsection("Correlation is not a signal");
         for (Kind kind : kinds)
@@ -126,8 +126,8 @@ namespace slm
                      "that the sender can modulate",
                      !Channels::carriesControllableSignal(Kind::Degenerate, c, mu, transverse,
                                                           1.0));
-        report.check("whereas a Kleinian region does carry one",
-                     Channels::carriesControllableSignal(Kind::Kleinian, c, mu, transverse, 1.0));
+        report.check("whereas a split-signature region does carry one",
+                     Channels::carriesControllableSignal(Kind::SplitSignature, c, mu, transverse, 1.0));
     }
 
 }

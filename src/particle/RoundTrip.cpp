@@ -213,7 +213,7 @@ namespace slm
                          1e-12);
 
         report.subsection("The ledger of what came back");
-        for (Kind kind : {Kind::Kleinian, Kind::Euclidean})
+        for (Kind kind : {Kind::SplitSignature, Kind::Euclidean})
         {
             const double fraction =
                 RoundTrip::survivingFraction(centre, 0.3, kind, c, mu, thickness);
@@ -221,7 +221,7 @@ namespace slm
                                      IntermediateRegion::name(kind), fraction),
                          fraction > 0.0 && fraction < 1.0);
         }
-        for (Kind kind : {Kind::Kleinian, Kind::Euclidean})
+        for (Kind kind : {Kind::SplitSignature, Kind::Euclidean})
         {
             report.check(std::format("  {:22} : the return leg costs again, {:.4f} against {:.4f}",
                                      IntermediateRegion::name(kind),

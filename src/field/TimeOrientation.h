@@ -48,7 +48,7 @@ namespace slm
         static bool admitsTimeOrientation(const Matrix4 &metric);
 
         /// Metric of the intermediate region of the staged path, signature (2,2).
-        static Matrix4 metricKleinian();
+        static Matrix4 metricSplitSignature();
     };
 
     /// Section on the time orientation of each region and on what it shares

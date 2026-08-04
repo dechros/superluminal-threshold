@@ -53,7 +53,7 @@ namespace slm
         return timeDirectionCount(metric) == 1;
     }
 
-    Matrix4 TimeOrientation::metricKleinian()
+    Matrix4 TimeOrientation::metricSplitSignature()
     {
         return Matrix4::diagonal(1.0, 1.0, -1.0, -1.0);
     }
@@ -62,7 +62,7 @@ namespace slm
     {
         const Matrix4 etaI = metricRegionI();
         const Matrix4 etaII = metricRegionII();
-        const Matrix4 etaK = TimeOrientation::metricKleinian();
+        const Matrix4 etaK = TimeOrientation::metricSplitSignature();
         const double pi = std::numbers::pi;
 
         report.subsection("Region I: the timelike set falls into two pieces");
@@ -95,7 +95,7 @@ namespace slm
         report.check("so no consistent future and past split exists in region II",
                      !TimeOrientation::admitsTimeOrientation(etaII));
 
-        report.subsection("The intermediate Kleinian region behaves the same way");
+        report.subsection("The intermediate split signature region behaves the same way");
         report.check("signature (2,2) has two time directions",
                      TimeOrientation::timeDirectionCount(etaK) == 2);
         report.check("its timelike set is connected as well",
@@ -108,7 +108,7 @@ namespace slm
         report.check("region I, one time direction, orientation exists",
                      TimeOrientation::timeDirectionCount(etaI) == 1 &&
                          TimeOrientation::admitsTimeOrientation(etaI));
-        report.check("Kleinian, two time directions, orientation lost",
+        report.check("split signature, two time directions, orientation lost",
                      TimeOrientation::timeDirectionCount(etaK) == 2 &&
                          !TimeOrientation::admitsTimeOrientation(etaK));
         report.check("region II, three time directions, orientation lost",

@@ -10,7 +10,7 @@ namespace slm
     /// Builders for the electromagnetic quantities used by the section below.
     ///
     /// Every member is static; the class is a namespace with a name.
-    class MaxwellField
+    class VectorGaugeField
     {
     public:
         /// Field tensor F_munu in the (ct, x, y, z) ordering.
@@ -31,7 +31,7 @@ namespace slm
     };
 
     /// Section running the electromagnetic verifications.
-    class MaxwellSection : public Section
+    class VectorGaugeFieldSection : public Section
     {
     public:
         std::string title() const override

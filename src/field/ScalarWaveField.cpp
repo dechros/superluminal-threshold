@@ -1,4 +1,4 @@
-#include "field/KleinGordonField.h"
+#include "field/ScalarWaveField.h"
 
 #include "core/Report.h"
 
@@ -7,28 +7,28 @@
 
 namespace slm
 {
-    double KleinGordonField::regionIGrowthCoefficient(double c, double mu, double kSquared)
+    double ScalarWaveField::regionIGrowthCoefficient(double c, double mu, double kSquared)
     {
         return -c * c * (kSquared + mu);
     }
 
-    double KleinGordonField::regionIIGrowthCoefficient(double c, double mu,
+    double ScalarWaveField::regionIIGrowthCoefficient(double c, double mu,
                                                        double kTransverseSquared, double q)
     {
         return kTransverseSquared - q * q / (c * c) + mu;
     }
 
-    double KleinGordonField::regionIResidual(double c, double mu, double omega, double kSquared)
+    double ScalarWaveField::regionIResidual(double c, double mu, double omega, double kSquared)
     {
         return omega * omega / (c * c) - kSquared - mu;
     }
 
-    double KleinGordonField::regionIIResidual(double c, double mu, double kSquared, double q)
+    double ScalarWaveField::regionIIResidual(double c, double mu, double kSquared, double q)
     {
         return kSquared - q * q / (c * c) + mu;
     }
 
-    void KleinGordonField::run(Report &report) const
+    void ScalarWaveField::run(Report &report) const
     {
         const double c = 1.0;
         const double mass = 1.0;
@@ -59,7 +59,7 @@ namespace slm
                          coefficient < 0.0);
         }
 
-        report.subsection("Loss of determinism: the Region II Cauchy problem");
+        report.subsection("Loss of determinism: the Region II initial value problem");
         const double qFixed = 1.0;
         bool sawBlowUp = false;
         double lastRate = 0.0;

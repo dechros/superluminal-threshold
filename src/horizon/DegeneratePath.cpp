@@ -107,7 +107,7 @@ namespace slm
         report.check("first leg starts at (1,3)",
                      DegeneratePath::signature(DegeneratePath::stagedFirst(0.0)) ==
                          std::array<int, 3>{1, 3, 0});
-        report.check("first leg ends at (2,2), the Kleinian signature",
+        report.check("first leg ends at (2,2), the split-signature signature",
                      DegeneratePath::signature(DegeneratePath::stagedFirst(pi)) ==
                          std::array<int, 3>{2, 2, 0});
         report.check("second leg ends at (3,1)",

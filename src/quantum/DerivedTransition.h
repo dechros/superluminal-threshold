@@ -23,9 +23,9 @@ namespace slm
         /// \param criticalDensity Density at which the bounce occurs.
         static double deformation(double density, double criticalDensity);
 
-        /// True while the deformation is positive, which is the Lorentzian
+        /// True while the deformation is positive, which is the one-time-axis
         /// regime.
-        static bool isLorentzian(double density, double criticalDensity);
+        static bool carriesOneTimeAxis(double density, double criticalDensity);
 
         /// Density at which the deformation vanishes and the signature turns
         /// over, which is half the critical density.
@@ -36,7 +36,7 @@ namespace slm
         static double deformationSlope(double criticalDensity);
 
         /// Number of coordinates whose causal character changes at the
-        /// transition: one for a Lorentzian to Euclidean change, four when
+        /// transition: one for a one-time-axis to Euclidean change, four when
         /// every coordinate changes character.
         static int changingCoordinates(bool euclideanTarget);
     };

@@ -1,4 +1,4 @@
-#include "transform/ExtendedLorentzGroup.h"
+#include "transform/ExtendedIsometryGroup.h"
 
 #include "core/Report.h"
 #include "transform/SignatureInvolution.h"
@@ -8,7 +8,7 @@
 
 namespace slm
 {
-    Matrix4 ExtendedLorentzGroup::lambdaAlongZ()
+    Matrix4 ExtendedIsometryGroup::lambdaAlongZ()
     {
         return Matrix4({{{{0, 0, 0, -1}},
                          {{0, 1, 0, 0}},
@@ -16,14 +16,14 @@ namespace slm
                          {{-1, 0, 0, 0}}}});
     }
 
-    double ExtendedLorentzGroup::xySwapDeterminant3D()
+    double ExtendedIsometryGroup::xySwapDeterminant3D()
     {
         return -1.0;
     }
 
-    bool ExtendedLorentzGroup::isInExtendedGroup()
+    bool ExtendedIsometryGroup::isInExtendedGroup()
     {
-        const Matrix4 minkowski = Matrix4::diagonal(-1.0, 1.0, 1.0, 1.0);
+        const Matrix4 flatMetric = Matrix4::diagonal(-1.0, 1.0, 1.0, 1.0);
         const Matrix4 lambda = lambdaAlongZ();
         const Matrix4 D = SignatureInvolution::matrix();
 
@@ -33,11 +33,11 @@ namespace slm
             {
                 const Matrix4 prefactor = lambda.power(exponent) * sign;
                 const Matrix4 remainder = prefactor.inverse() * D;
-                const bool isLorentz =
-                    (remainder.congruence(minkowski) - minkowski).isZero(1e-10);
+                const bool preservesFlatMetric =
+                    (remainder.congruence(flatMetric) - flatMetric).isZero(1e-10);
                 const bool properOrthochronous =
                     std::abs(remainder.determinant() - 1.0) < 1e-10 && remainder.at(0, 0) > 0.0;
-                if (isLorentz && properOrthochronous)
+                if (preservesFlatMetric && properOrthochronous)
                 {
                     return true;
                 }
@@ -46,7 +46,7 @@ namespace slm
         return false;
     }
 
-    void ExtendedLorentzGroup::run(Report &report) const
+    void ExtendedIsometryGroup::run(Report &report) const
     {
         const Matrix4 D = SignatureInvolution::matrix();
 

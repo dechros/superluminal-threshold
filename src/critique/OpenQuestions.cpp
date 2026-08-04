@@ -205,7 +205,7 @@ namespace slm
                                  "{:.4f} at half a unit, and its capacity is unknown, but the "
                                  "construction that used it is out of scope, so this is carried as "
                                  "a record and not as an obstacle to the round trip",
-                                 GravitationalChannel::contrast(IntermediateRegion::Kind::Kleinian, 1.0, 1.0, 0.5)),
+                                 GravitationalChannel::contrast(IntermediateRegion::Kind::SplitSignature, 1.0, 1.0, 0.5)),
                      !OpenQuestions::gravitationalCapacityKnown());
         report.check("the complex-time construction the return uses needs an "
                      "allowability criterion; one has now been computed and found "

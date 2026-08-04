@@ -1,4 +1,4 @@
-#include "critique/SylvesterObstruction.h"
+#include "critique/SignatureObstruction.h"
 
 #include "core/Matrix4.h"
 #include "core/Report.h"
@@ -11,7 +11,7 @@
 
 namespace slm
 {
-    double SylvesterObstruction::randomSearchBestResidual(int trials, unsigned seed)
+    double SignatureObstruction::randomSearchBestResidual(int trials, unsigned seed)
     {
         std::mt19937 generator(seed);
         std::normal_distribution<double> normal(0.0, 1.0);
@@ -36,7 +36,7 @@ namespace slm
         return best;
     }
 
-    void SylvesterObstruction::run(Report &report) const
+    void SignatureObstruction::run(Report &report) const
     {
         const Matrix4 eta = metricRegionI();
         const Matrix4 etaPrime = metricRegionII();

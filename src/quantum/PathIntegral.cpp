@@ -8,25 +8,26 @@
 
 namespace slm
 {
-    double PathIntegral::euclideanKernel(WickChoice choice, double c, double mu,
+    double PathIntegral::euclideanKernel(ImaginaryRotationChoice choice, double c, double mu,
                                          double kSquared, double q)
     {
         switch (choice)
         {
-        case WickChoice::AllThreeTimes:
+        case ImaginaryRotationChoice::AllThreeTimes:
             return mu - kSquared - q * q / (c * c);
-        case WickChoice::SingleSpace:
+        case ImaginaryRotationChoice::SingleSpace:
             return kSquared + q * q / (c * c) + mu;
-        case WickChoice::Composite:
+        case ImaginaryRotationChoice::Composite:
             throw std::domain_error(
-                "Wick choice (c): a composite direction is not O(3) invariant, undefined");
+                "imaginary rotation choice (c): a composite direction is not O(3) invariant, "
+                "undefined");
         }
-        throw std::domain_error("unknown Wick choice");
+        throw std::domain_error("unknown imaginary rotation choice");
     }
 
-    bool PathIntegral::isPositiveDefinite(WickChoice choice, double c, double mu)
+    bool PathIntegral::isPositiveDefinite(ImaginaryRotationChoice choice, double c, double mu)
     {
-        if (choice == WickChoice::Composite)
+        if (choice == ImaginaryRotationChoice::Composite)
         {
             return false;
         }
@@ -45,7 +46,7 @@ namespace slm
 
     double PathIntegral::euclideanPropagator(double c, double mu, double kSquared, double q)
     {
-        return 1.0 / euclideanKernel(WickChoice::SingleSpace, c, mu, kSquared, q);
+        return 1.0 / euclideanKernel(ImaginaryRotationChoice::SingleSpace, c, mu, kSquared, q);
     }
 
     void PathIntegral::run(Report &report) const
@@ -55,30 +56,30 @@ namespace slm
         const double hbar = 1.0;
         const double mu = (mass * c / hbar) * (mass * c / hbar);
 
-        report.subsection("Wick rotation: three options tested");
+        report.subsection("imaginary rotation: three options tested");
         double previousKernel = mu + 1.0;
         for (double kSquared : {0.0, 1.0, 100.0})
         {
-            const double kernel = euclideanKernel(WickChoice::AllThreeTimes, c, mu, kSquared, 1.0);
+            const double kernel = euclideanKernel(ImaginaryRotationChoice::AllThreeTimes, c, mu, kSquared, 1.0);
             report.check(std::format("  (a) k^2 = {:g} : kernel decreasing", kSquared),
                          kernel < previousKernel);
             previousKernel = kernel;
         }
         report.check("(a) NOT positive definite, the Gaussian integral DIVERGES",
-                     !isPositiveDefinite(WickChoice::AllThreeTimes, c, mu));
+                     !isPositiveDefinite(ImaginaryRotationChoice::AllThreeTimes, c, mu));
 
         for (double kSquared : {0.0, 1.0, 100.0})
         {
             report.check(std::format("  (b) k^2 = {:g} : kernel positive", kSquared),
-                         euclideanKernel(WickChoice::SingleSpace, c, mu, kSquared, 1.0) > 0.0);
+                         euclideanKernel(ImaginaryRotationChoice::SingleSpace, c, mu, kSquared, 1.0) > 0.0);
         }
         report.check("(b) POSITIVE DEFINITE, the Gaussian integral CONVERGES",
-                     isPositiveDefinite(WickChoice::SingleSpace, c, mu));
+                     isPositiveDefinite(ImaginaryRotationChoice::SingleSpace, c, mu));
 
         bool compositeUndefined = false;
         try
         {
-            (void)euclideanKernel(WickChoice::Composite, c, mu, 1.0, 1.0);
+            (void)euclideanKernel(ImaginaryRotationChoice::Composite, c, mu, 1.0, 1.0);
         }
         catch (const std::domain_error &)
         {
@@ -92,7 +93,7 @@ namespace slm
         {
             for (double q : {0.0, 2.0, 50.0})
             {
-                const double denominator = euclideanKernel(WickChoice::SingleSpace, c, mu, kSquared, q);
+                const double denominator = euclideanKernel(ImaginaryRotationChoice::SingleSpace, c, mu, kSquared, q);
                 smallestDenominator = std::min(smallestDenominator, denominator);
             }
         }
@@ -100,8 +101,8 @@ namespace slm
                      "POLE", smallestDenominator >= mu - 1e-12);
 
         report.subsection("The m = 0 case");
-        const double masslessKernelAtZero = euclideanKernel(WickChoice::SingleSpace, c, 0.0, 0.0, 0.0);
-        const double masslessKernelNearby = euclideanKernel(WickChoice::SingleSpace, c, 0.0, 1e-6, 0.0);
+        const double masslessKernelAtZero = euclideanKernel(ImaginaryRotationChoice::SingleSpace, c, 0.0, 0.0, 0.0);
+        const double masslessKernelNearby = euclideanKernel(ImaginaryRotationChoice::SingleSpace, c, 0.0, 1e-6, 0.0);
         report.check("the denominator vanishes only at k = q = 0",
                      masslessKernelAtZero == 0.0 && masslessKernelNearby > 0.0);
 
@@ -109,7 +110,7 @@ namespace slm
         for (double kSquared : {0.5, 7.0, 120.0})
         {
             const double regionI = kSquared + 1.0 + mu;
-            const double regionII = euclideanKernel(WickChoice::SingleSpace, c, mu, kSquared, c);
+            const double regionII = euclideanKernel(ImaginaryRotationChoice::SingleSpace, c, mu, kSquared, c);
             report.checkNear(std::format("  k^2 = {:g}: both regions share the same Euclidean "
                                          "kernel", kSquared),
                              regionI - regionII);

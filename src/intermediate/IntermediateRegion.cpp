@@ -17,7 +17,7 @@ namespace slm
         {
         case Kind::None:
             return 0;
-        case Kind::Kleinian:
+        case Kind::SplitSignature:
             return 1;
         case Kind::Euclidean:
             return 3;
@@ -33,8 +33,8 @@ namespace slm
         {
         case Kind::None:
             return "no intermediate region";
-        case Kind::Kleinian:
-            return "Kleinian (2,2)";
+        case Kind::SplitSignature:
+            return "split signature (2,2)";
         case Kind::Euclidean:
             return "Euclidean (4,0)";
         case Kind::Degenerate:
@@ -119,7 +119,7 @@ namespace slm
         const double c = 1.0;
         const double mu = 1.0;
         const double transverse = 4.0;
-        const Kind kinds[] = {Kind::None, Kind::Kleinian, Kind::Euclidean, Kind::Degenerate};
+        const Kind kinds[] = {Kind::None, Kind::SplitSignature, Kind::Euclidean, Kind::Degenerate};
         const double thicknesses[] = {0.0, 0.1, 1.0, 4.0, 40.0};
 
         report.subsection("What each kind does to the interior mode");
@@ -127,9 +127,9 @@ namespace slm
                      std::abs(IntermediateRegion::insideNormalSquared(Kind::None, c, mu,
                                                                       transverse) -
                               IntermediateRegion::outsideNormalSquared(c, mu, transverse)) < 1e-12);
-        report.check("a Kleinian region still propagates when the wavenumber is "
+        report.check("a split-signature region still propagates when the wavenumber is "
                      "shared evenly, so it is not a barrier by itself",
-                     !IntermediateRegion::blocks(Kind::Kleinian, c, mu, transverse));
+                     !IntermediateRegion::blocks(Kind::SplitSignature, c, mu, transverse));
         report.check("a Euclidean region blocks once the transverse wavenumber "
                      "exceeds the mass",
                      IntermediateRegion::blocks(Kind::Euclidean, c, mu, transverse));
@@ -169,12 +169,12 @@ namespace slm
                      "degenerate one, both closed",
                      IntermediateRegion::transmission(Kind::Euclidean, c, mu, transverse, 40.0) <
                          1e-30);
-        report.check("but a Kleinian region of any thickness stays open for this mode",
-                     IntermediateRegion::transmission(Kind::Kleinian, c, mu, transverse, 40.0) >
+        report.check("but a split-signature region of any thickness stays open for this mode",
+                     IntermediateRegion::transmission(Kind::SplitSignature, c, mu, transverse, 40.0) >
                          1e-3);
 
         report.subsection("The matter layer the junction carries");
-        for (Kind kind : {Kind::Kleinian, Kind::Euclidean})
+        for (Kind kind : {Kind::SplitSignature, Kind::Euclidean})
         {
             for (double thickness : {0.1, 1.0, 4.0})
             {
@@ -187,20 +187,20 @@ namespace slm
         }
         report.check("the layer weakens as the region thickens, in proportion to "
                      "one over the thickness",
-                     IntermediateRegion::layerStrength(Kind::Kleinian, 4.0) <
-                         IntermediateRegion::layerStrength(Kind::Kleinian, 0.1));
+                     IntermediateRegion::layerStrength(Kind::SplitSignature, 4.0) <
+                         IntermediateRegion::layerStrength(Kind::SplitSignature, 0.1));
         report.check("a zero-thickness junction carries an unbounded layer, which "
                      "is why the sharp interface is the worst case",
-                     std::isinf(IntermediateRegion::layerStrength(Kind::Kleinian, 0.0)));
+                     std::isinf(IntermediateRegion::layerStrength(Kind::SplitSignature, 0.0)));
 
         report.subsection("The one way to avoid the layer");
         report.checkNear("a profile stationary at the crossing carries no layer at all",
-                         IntermediateRegion::layerStrengthStationaryProfile(Kind::Kleinian, 1.0));
+                         IntermediateRegion::layerStrengthStationaryProfile(Kind::SplitSignature, 1.0));
         report.check("so transmission without a matter layer is available, but "
                      "only for a tuned profile rather than a generic one",
-                     IntermediateRegion::transmission(Kind::Kleinian, c, mu, transverse, 1.0) >
+                     IntermediateRegion::transmission(Kind::SplitSignature, c, mu, transverse, 1.0) >
                              0.0 &&
-                         IntermediateRegion::layerStrengthStationaryProfile(Kind::Kleinian, 1.0) ==
+                         IntermediateRegion::layerStrengthStationaryProfile(Kind::SplitSignature, 1.0) ==
                              0.0);
     }
 

@@ -25,10 +25,10 @@ namespace slm
 
     void CanonicalQuantization::run(Report &report) const
     {
-        report.subsection("(a) No Cauchy surface");
-        report.check("the Region I slice is SPACELIKE, a Cauchy surface exists",
+        report.subsection("(a) No initial data surface");
+        report.check("the Region I slice is SPACELIKE, a initial data surface exists",
                      timelikeDirectionsOnSlice(false) == 0);
-        report.check("the Region II slice is NOT spacelike, no Cauchy surface",
+        report.check("the Region II slice is NOT spacelike, no initial data surface",
                      timelikeDirectionsOnSlice(true) > 0);
 
         report.subsection("(a continued) Index counting in the equal-time commutator");
@@ -37,7 +37,7 @@ namespace slm
         report.check("index counting is INCONSISTENT in Region "
                      "II", !commutatorIndicesConsistent(true));
 
-        report.subsection("(b) The Feynman propagator is undefined");
+        report.subsection("(b) The time-ordered propagator is undefined");
         int incomparablePairs = 0;
         int comparablePairs = 0;
         for (int i = 0; i < 27; ++i)

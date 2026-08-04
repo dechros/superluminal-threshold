@@ -32,7 +32,7 @@ namespace slm
                norm * effectiveSingleTime(v1, v2, t1, t2);
     }
 
-    double AlternativeRoutes::robinReflectionMagnitude(double mixing, double wavenumber)
+    double AlternativeRoutes::mixedConditionReflection(double mixing, double wavenumber)
     {
         const std::complex<double> i{0.0, 1.0};
         const double a = std::cos(mixing);
@@ -52,7 +52,7 @@ namespace slm
         for (int i = 0; i < samples; ++i)
         {
             const double mixing = pi * static_cast<double>(i) / (samples - 1);
-            if (std::abs(robinReflectionMagnitude(mixing, wavenumber) - 1.0) > 1e-9)
+            if (std::abs(mixedConditionReflection(mixing, wavenumber) - 1.0) > 1e-9)
             {
                 return false;
             }
@@ -84,14 +84,14 @@ namespace slm
                      "Lagrangian rather than about a single trajectory",
                      true);
 
-        report.subsection("Dirichlet, Neumann, and everything between");
+        report.subsection("vanishing-value, vanishing-slope, and everything between");
         for (double k : {0.5, 1.0, 3.0})
         {
-            report.checkNear(std::format("  k = {:g} : Dirichlet wall gives |R| = 1", k),
-                             AlternativeRoutes::robinReflectionMagnitude(0.0, k) - 1.0);
-            report.checkNear(std::format("  k = {:g} : Neumann wall gives |R| = 1", k),
-                             AlternativeRoutes::robinReflectionMagnitude(pi / 2.0, k) - 1.0);
-            report.check(std::format("  k = {:g} : every Robin condition in between "
+            report.checkNear(std::format("  k = {:g} : vanishing-value wall gives |R| = 1", k),
+                             AlternativeRoutes::mixedConditionReflection(0.0, k) - 1.0);
+            report.checkNear(std::format("  k = {:g} : vanishing-slope wall gives |R| = 1", k),
+                             AlternativeRoutes::mixedConditionReflection(pi / 2.0, k) - 1.0);
+            report.check(std::format("  k = {:g} : every mixed condition in between "
                                      "reflects completely",
                                      k),
                          AlternativeRoutes::wholeFamilyReflects(k));
@@ -102,8 +102,8 @@ namespace slm
                          AlternativeRoutes::wholeFamilyReflects(2.5));
         report.check("what the choice does change is the phase of the reflected "
                      "wave, which is where any observable difference would sit",
-                     std::abs(AlternativeRoutes::robinReflectionMagnitude(0.0, 1.0) -
-                              AlternativeRoutes::robinReflectionMagnitude(pi / 2.0, 1.0)) < 1e-9);
+                     std::abs(AlternativeRoutes::mixedConditionReflection(0.0, 1.0) -
+                              AlternativeRoutes::mixedConditionReflection(pi / 2.0, 1.0)) < 1e-9);
     }
 
 }

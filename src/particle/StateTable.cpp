@@ -220,11 +220,11 @@ namespace slm
                          StateTable::reachableOutcomeCount(1.0, 2.0, 3.0));
         report.check(std::format("  the row in which the particle never leaves is empty, since "
                                  "the two exit weights already come to {:.4f}",
-                                 CellDistribution::exitFarFace(IntermediateRegion::Kind::Kleinian,
+                                 CellDistribution::exitFarFace(IntermediateRegion::Kind::SplitSignature,
                                                                1.0, 1.0, 4.0, 1.0) +
                                      CellDistribution::exitEntryFace(
-                                         IntermediateRegion::Kind::Kleinian, 1.0, 1.0, 4.0, 1.0)),
-                     CellDistribution::exitNever(IntermediateRegion::Kind::Kleinian, 1.0, 1.0, 4.0,
+                                         IntermediateRegion::Kind::SplitSignature, 1.0, 1.0, 4.0, 1.0)),
+                     CellDistribution::exitNever(IntermediateRegion::Kind::SplitSignature, 1.0, 1.0, 4.0,
                                                  1.0) < 1e-12);
         report.check(std::format("  so of the {} cells, {} are emptied by flux and {} of the rest "
                                  "have no ordinary counterpart",

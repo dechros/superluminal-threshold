@@ -124,7 +124,7 @@ namespace slm
                      ? 1
                      : 0;
         count += (reproducesKind(IntermediateRegion::Kind::None, 6.0, 1.0, 1.0, 4.0) &&
-                  reproducesKind(IntermediateRegion::Kind::Kleinian, 6.0, 1.0, 1.0, 4.0) &&
+                  reproducesKind(IntermediateRegion::Kind::SplitSignature, 6.0, 1.0, 1.0, 4.0) &&
                   reproducesKind(IntermediateRegion::Kind::Euclidean, 6.0, 1.0, 1.0, 4.0))
                      ? 1
                      : 0;
@@ -179,7 +179,7 @@ namespace slm
                          std::isfinite(
                              CommonFormulas::interiorSquared(turned, 6.0, c, mu, transverse)));
         }
-        for (Kind kind : {Kind::None, Kind::Kleinian, Kind::Euclidean})
+        for (Kind kind : {Kind::None, Kind::SplitSignature, Kind::Euclidean})
         {
             report.check(std::format("  {:10} is the same expression at {} turned directions",
                                      IntermediateRegion::name(kind),

@@ -6,7 +6,7 @@
 #include "intermediate/IntermediateRegion.h"
 #include "intermediate/TwoCrossings.h"
 #include "particle/ExitFace.h"
-#include "quantum/CasimirDiscriminant.h"
+#include "quantum/QuadraticInvariant.h"
 
 #include <cmath>
 #include <format>
@@ -26,10 +26,10 @@ namespace slm
         using Kind = IntermediateRegion::Kind;
         const double omega = 12.0;
         const double transverseReading =
-            TwoCrossings::insideSquaredOn(Axis::Transverse, Kind::Kleinian, omega, kC, kMu,
+            TwoCrossings::insideSquaredOn(Axis::Transverse, Kind::SplitSignature, omega, kC, kMu,
                                           kTransverse);
         const double crossingReading =
-            TwoCrossings::insideSquaredOn(Axis::Crossing, Kind::Kleinian, omega, kC, kMu,
+            TwoCrossings::insideSquaredOn(Axis::Crossing, Kind::SplitSignature, omega, kC, kMu,
                                           kTransverse);
         return transverseReading > 0.0 && crossingReading < 0.0;
     }
@@ -92,7 +92,7 @@ namespace slm
     {
         const double strong =
             JunctionScattering::fluxRegionII(JunctionScattering::Matching::Strong, {1.0, 0.0});
-        const double weak = IntermediateRegion::transmission(IntermediateRegion::Kind::Kleinian, kC,
+        const double weak = IntermediateRegion::transmission(IntermediateRegion::Kind::SplitSignature, kC,
                                                              kMu, kTransverse, thickness);
         return {strong, weak};
     }
@@ -100,14 +100,14 @@ namespace slm
     Reconciliation::Rivals Reconciliation::surfaceLayer(double thickness)
     {
         using Kind = IntermediateRegion::Kind;
-        return {IntermediateRegion::layerStrength(Kind::Kleinian, thickness),
-                IntermediateRegion::layerStrengthStationaryProfile(Kind::Kleinian, thickness)};
+        return {IntermediateRegion::layerStrength(Kind::SplitSignature, thickness),
+                IntermediateRegion::layerStrengthStationaryProfile(Kind::SplitSignature, thickness)};
     }
 
-    Reconciliation::Rivals Reconciliation::casimirEnergy(double separation)
+    Reconciliation::Rivals Reconciliation::boundaryEnergy(double separation)
     {
-        return {CasimirDiscriminant::energySameCondition(1.0, kC, separation),
-                CasimirDiscriminant::energyOppositeConditions(1.0, kC, separation)};
+        return {QuadraticInvariant::energySameCondition(1.0, kC, separation),
+                QuadraticInvariant::energyOppositeConditions(1.0, kC, separation)};
     }
 
     Reconciliation::Rivals Reconciliation::returnedQuanta()
@@ -127,7 +127,7 @@ namespace slm
         int standing = 0;
         standing += transmittedFlux(1.0).disagree() ? 1 : 0;
         standing += surfaceLayer(1.0).disagree() ? 1 : 0;
-        standing += casimirEnergy(1.0).disagree() ? 1 : 0;
+        standing += boundaryEnergy(1.0).disagree() ? 1 : 0;
         standing += (returnedQuanta().disagree() && returnedEnergy(2.0).disagree()) ? 1 : 0;
         return standing;
     }
@@ -178,11 +178,12 @@ namespace slm
                                  layer.first, layer.second),
                      layer.disagree());
 
-        const Reconciliation::Rivals casimir = Reconciliation::casimirEnergy(1.0);
-        report.check(std::format("  Casimir energy: equal wall conditions give {:+.6f}, opposite "
+        const Reconciliation::Rivals boundaryEnergy = Reconciliation::boundaryEnergy(1.0);
+        report.check(std::format("  boundary vacuum energy: equal wall conditions give {:+.6f}, "
+                                 "opposite "
                                  "ones give {:+.6f}, decided by measuring the sign of the force",
-                                 casimir.first, casimir.second),
-                     casimir.disagree() && casimir.first * casimir.second < 0.0);
+                                 boundaryEnergy.first, boundaryEnergy.second),
+                     boundaryEnergy.disagree() && boundaryEnergy.first * boundaryEnergy.second < 0.0);
 
         const Reconciliation::Rivals quanta = Reconciliation::returnedQuanta();
         const Reconciliation::Rivals energy = Reconciliation::returnedEnergy(2.0);

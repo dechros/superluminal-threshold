@@ -22,7 +22,7 @@ namespace slm
     class Reconciliation
     {
     public:
-        /// A Kleinian region is a cavity or a barrier according to which axis
+        /// A SplitSignature region is a cavity or a barrier according to which axis
         /// turns over, and nothing else.
         static bool cavityAndBarrierAreOneCoin();
 
@@ -66,10 +66,10 @@ namespace slm
         /// by measuring the surface energy density.
         static Rivals surfaceLayer(double thickness);
 
-        /// Casimir energy per unit area between two threshold surfaces, when
+        /// vacuum energy per unit area between two threshold surfaces, when
         /// they carry the same self-adjoint condition and when they carry
         /// opposite ones. Decided by measuring the sign of the force.
-        static Rivals casimirEnergy(double separation);
+        static Rivals boundaryEnergy(double separation);
 
         /// Quanta arriving at the entry face after a return through the
         /// opposite face, read as one particle of negative energy and as a

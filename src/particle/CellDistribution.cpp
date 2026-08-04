@@ -88,7 +88,7 @@ namespace slm
         const double thickness = 1.0;
 
         report.subsection("The exit face is settled by flux conservation");
-        for (Kind kind : {Kind::Kleinian, Kind::Euclidean, Kind::Degenerate})
+        for (Kind kind : {Kind::SplitSignature, Kind::Euclidean, Kind::Degenerate})
         {
             const double far = CellDistribution::exitFarFace(kind, c, mu, transverse, thickness);
             const double entry =
@@ -123,7 +123,7 @@ namespace slm
                      CellDistribution::isotropicFractionBeyond(0.05) > 0.999);
 
         report.subsection("The two readings give opposite predictions");
-        for (Kind kind : {Kind::Kleinian, Kind::Euclidean})
+        for (Kind kind : {Kind::SplitSignature, Kind::Euclidean})
         {
             report.check(
                 std::format("  {:22} : signature probability {:.4f} on the ignorance "
@@ -140,15 +140,15 @@ namespace slm
         }
         report.checkNear("on the gauge reading a symmetric region turns nothing, so "
                          "the model predicts no signature at all",
-                         CellDistribution::signatureProbabilityGauge(Kind::Kleinian, c, mu,
+                         CellDistribution::signatureProbabilityGauge(Kind::SplitSignature, c, mu,
                                                                      transverse, thickness),
                          1e-15);
         report.checkNear("on the ignorance reading every transmitted particle "
                          "carries the signature, so its probability is just the "
                          "transmission",
-                         CellDistribution::signatureProbabilityIsotropic(Kind::Kleinian, c, mu,
+                         CellDistribution::signatureProbabilityIsotropic(Kind::SplitSignature, c, mu,
                                                                          transverse, thickness) -
-                             CellDistribution::exitFarFace(Kind::Kleinian, c, mu, transverse,
+                             CellDistribution::exitFarFace(Kind::SplitSignature, c, mu, transverse,
                                                            thickness),
                          1e-15);
 
@@ -156,10 +156,10 @@ namespace slm
         report.check("the two readings are as far apart as they can be, one "
                      "predicting the signature at the transmission rate and the "
                      "other predicting it never",
-                     CellDistribution::signatureProbabilityIsotropic(Kind::Kleinian, c, mu,
+                     CellDistribution::signatureProbabilityIsotropic(Kind::SplitSignature, c, mu,
                                                                      transverse, thickness) >
                              0.5 &&
-                         CellDistribution::signatureProbabilityGauge(Kind::Kleinian, c, mu,
+                         CellDistribution::signatureProbabilityGauge(Kind::SplitSignature, c, mu,
                                                                      transverse, thickness) ==
                              0.0);
         report.check("so a single experiment that transmits and looks for free "

@@ -46,7 +46,7 @@ namespace slm
         static double doubledSectorCommutator(double separation, double mass, int modes = 4000);
 
         /// Superluminality parameter of a propagating excitation, v^2/c^2 - 1,
-        /// which the vacuum Cherenkov bound constrains. It vanishes for any
+        /// which the pair emission bound constrains. It vanishes for any
         /// excitation whose group velocity stays at or below c.
         static double superluminalityParameter(double groupVelocity, double c);
     };

@@ -9,8 +9,8 @@ namespace slm
     ///
     /// The first asks whether imposing probability conservation collapses
     /// several time directions to one effective time. The second asks whether
-    /// self-adjointness at a reflecting wall selects Dirichlet conditions over
-    /// Neumann ones, and whether the reflection coefficient depends on that
+    /// self-adjointness at a reflecting wall selects vanishing-value conditions over
+    /// vanishing-slope ones, and whether the reflection coefficient depends on that
     /// choice.
     class AlternativeRoutes
     {
@@ -31,14 +31,14 @@ namespace slm
         /// independent dynamical content.
         static double collapseResidual(double v1, double v2, double t1, double t2);
 
-        /// Reflection amplitude for a wall carrying a Robin condition
-        /// cos(a) psi + sin(a) psi' = 0, which interpolates between Dirichlet
-        /// at a = 0 and Neumann at a = pi/2.
+        /// Reflection amplitude for a wall carrying a mixed condition
+        /// cos(a) psi + sin(a) psi' = 0, which interpolates between vanishing-value
+        /// at a = 0 and vanishing-slope at a = pi/2.
         /// \param mixing The angle a.
         /// \param wavenumber Normal wavenumber of the incident mode.
-        static double robinReflectionMagnitude(double mixing, double wavenumber);
+        static double mixedConditionReflection(double mixing, double wavenumber);
 
-        /// Whether every member of the Robin family reflects completely,
+        /// Whether every member of the mixed-condition family reflects completely,
         /// sampled over the range of mixing angles.
         static bool wholeFamilyReflects(double wavenumber, int samples = 2001);
     };

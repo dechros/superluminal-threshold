@@ -114,9 +114,9 @@ namespace slm
                          std::abs(fluxMismatch(Matching::Weak, {0.9, 0.0})) < 1e-12);
 
         report.subsection("Decoupled wall conditions");
-        report.checkNear("Dirichlet wall: R = -1, zero transmitted flux",
+        report.checkNear("vanishing-value wall: R = -1, zero transmitted flux",
                          std::abs(std::complex<double>{-1.0, 0.0}) - 1.0);
-        report.checkNear("Neumann wall: R = +1, zero transmitted flux",
+        report.checkNear("vanishing-slope wall: R = +1, zero transmitted flux",
                          std::abs(std::complex<double>{1.0, 0.0}) - 1.0);
         report.check("both give |R| = 1, so the reflecting reading does not "
                      "depend on which of the two is chosen",

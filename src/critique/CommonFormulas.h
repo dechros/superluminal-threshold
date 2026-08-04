@@ -52,7 +52,7 @@ namespace slm
         static bool recoversWeakChoice(SurfaceLayer::Profile shape);
 
         /// The interior squared wavenumber as one expression in the number of
-        /// turned directions, which runs from none through the Kleinian case to
+        /// turned directions, which runs from none through the SplitSignature case to
         /// the fully turned one.
         static double interiorSquared(int turnedDirections, double omega, double c, double mu,
                                       double transverseSquared);

@@ -18,9 +18,9 @@ namespace slm
         if (shape == SurfaceLayer::Profile::FlatAtCrossing)
         {
             return IntermediateRegion::layerStrengthStationaryProfile(
-                IntermediateRegion::Kind::Kleinian, thickness);
+                IntermediateRegion::Kind::SplitSignature, thickness);
         }
-        return IntermediateRegion::layerStrength(IntermediateRegion::Kind::Kleinian, thickness);
+        return IntermediateRegion::layerStrength(IntermediateRegion::Kind::SplitSignature, thickness);
     }
 
     double LayerEnergyConditions::surfaceDensity(SurfaceLayer::Profile shape, double thickness)

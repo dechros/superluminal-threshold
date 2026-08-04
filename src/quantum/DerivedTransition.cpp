@@ -13,7 +13,7 @@ namespace slm
         return 1.0 - 2.0 * density / criticalDensity;
     }
 
-    bool DerivedTransition::isLorentzian(double density, double criticalDensity)
+    bool DerivedTransition::carriesOneTimeAxis(double density, double criticalDensity)
     {
         return deformation(density, criticalDensity) > 0.0;
     }
@@ -43,15 +43,15 @@ namespace slm
                              DerivedTransition::transitionDensity(rhoC), rhoC));
         for (double rho : {0.1, 0.3, 0.49})
         {
-            report.check(std::format("  rho = {:g} rho_c : Lorentzian, deformation {:+.3f}",
+            report.check(std::format("  rho = {:g} rho_c : one-time-axis, deformation {:+.3f}",
                                      rho, DerivedTransition::deformation(rho, rhoC)),
-                         DerivedTransition::isLorentzian(rho, rhoC));
+                         DerivedTransition::carriesOneTimeAxis(rho, rhoC));
         }
         for (double rho : {0.51, 0.8, 1.0})
         {
             report.check(std::format("  rho = {:g} rho_c : Euclidean, deformation {:+.3f}",
                                      rho, DerivedTransition::deformation(rho, rhoC)),
-                         !DerivedTransition::isLorentzian(rho, rhoC));
+                         !DerivedTransition::carriesOneTimeAxis(rho, rhoC));
         }
 
         report.subsection("The transition is gradual, not abrupt");

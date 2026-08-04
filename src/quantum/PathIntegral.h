@@ -5,12 +5,12 @@
 namespace slm
 {
 
-    /// Section on the Wick rotation and the Euclidean propagator.
+    /// Section on the imaginary rotation and the Euclidean propagator.
     class PathIntegral : public Section
     {
     public:
-        /// Which axes a Wick rotation turns.
-        enum class WickChoice
+        /// Which axes a imaginary rotation turns.
+        enum class ImaginaryRotationChoice
         {
             AllThreeTimes, ///< Rotate the three time axes together.
             SingleSpace,   ///< Rotate the single space axis.
@@ -18,20 +18,20 @@ namespace slm
         };
 
         /// Euclidean kernel produced by the given rotation.
-        /// \throws std::domain_error for WickChoice::Composite.
-        static double euclideanKernel(WickChoice choice, double c, double mu,
+        /// \throws std::domain_error for ImaginaryRotationChoice::Composite.
+        static double euclideanKernel(ImaginaryRotationChoice choice, double c, double mu,
                                       double kSquared, double q);
 
         /// Whether the kernel stays positive over a wide range of modes, so
         /// that the Gaussian integral converges.
-        static bool isPositiveDefinite(WickChoice choice, double c, double mu);
+        static bool isPositiveDefinite(ImaginaryRotationChoice choice, double c, double mu);
 
         /// Euclidean propagator, the reciprocal of the convergent kernel.
         static double euclideanPropagator(double c, double mu, double kSquared, double q);
 
         std::string title() const override
         {
-            return "Path integral, Wick rotation and the shared Euclidean theory";
+            return "Path integral, imaginary rotation and the shared Euclidean theory";
         }
         void run(Report &report) const override;
     };

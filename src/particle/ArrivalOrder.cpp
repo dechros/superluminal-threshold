@@ -86,7 +86,7 @@ namespace slm
         report.check("in the barrier regime the crossing delay stops growing",
                      ArrivalOrder::delaySaturates(Kind::Euclidean, c, mu));
         report.check("  and it does not in the propagating one",
-                     !ArrivalOrder::delaySaturates(Kind::Kleinian, c, mu));
+                     !ArrivalOrder::delaySaturates(Kind::SplitSignature, c, mu));
         for (double distance : {1.0, 2.0, 4.0, 8.0})
         {
             report.checkNear(
@@ -123,16 +123,17 @@ namespace slm
         report.check("the forward branch never does, at any of those distances",
                      !ArrivalOrder::arrivesBeforeEntry(Kind::Euclidean, c, mu, 8.0,
                                                        Direction::Forward, 8.0) &&
-                         !ArrivalOrder::arrivesBeforeEntry(Kind::Kleinian, c, mu, 8.0,
+                         !ArrivalOrder::arrivesBeforeEntry(Kind::SplitSignature, c, mu, 8.0,
                                                            Direction::Forward, 8.0));
 
         report.subsection("The propagating region does not reach the crossover");
-        report.check(std::format("Kleinian, d = 8: the delay is {:.4f}, far beyond the distances "
+        report.check(std::format("split signature, d = 8: the delay is {:.4f}, far beyond the "
+                                 "distances "
                                  "examined",
-                                 ArrivalOrder::crossingDelay(Kind::Kleinian, c, mu, 8.0)),
-                     ArrivalOrder::crossingDelay(Kind::Kleinian, c, mu, 8.0) > 8.0);
+                                 ArrivalOrder::crossingDelay(Kind::SplitSignature, c, mu, 8.0)),
+                     ArrivalOrder::crossingDelay(Kind::SplitSignature, c, mu, 8.0) > 8.0);
         report.check("  so no arrival before entry occurs there for a distance of 8",
-                     !ArrivalOrder::arrivesBeforeEntry(Kind::Kleinian, c, mu, 8.0,
+                     !ArrivalOrder::arrivesBeforeEntry(Kind::SplitSignature, c, mu, 8.0,
                                                        Direction::Backward, 8.0));
 
         report.subsection("The sum used above is the one a single phase produces");

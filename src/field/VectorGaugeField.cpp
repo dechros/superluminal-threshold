@@ -1,4 +1,4 @@
-#include "field/MaxwellField.h"
+#include "field/VectorGaugeField.h"
 
 #include "core/Report.h"
 #include "transform/SignatureInvolution.h"
@@ -7,7 +7,7 @@
 
 namespace slm
 {
-    Matrix4 MaxwellField::fieldTensor(double c, double ex, double ey, double ez,
+    Matrix4 VectorGaugeField::fieldTensor(double c, double ex, double ey, double ez,
                                       double bx, double by, double bz)
     {
         return Matrix4({{{{0.0, ex / c, ey / c, ez / c}},
@@ -16,28 +16,28 @@ namespace slm
                          {{-ez / c, -by, bx, 0.0}}}});
     }
 
-    Matrix4 MaxwellField::transformedFieldTensor(const Matrix4 &f)
+    Matrix4 VectorGaugeField::transformedFieldTensor(const Matrix4 &f)
     {
         const Matrix4 D = SignatureInvolution::matrix();
         return D.transpose() * f * D;
     }
 
-    double MaxwellField::invariant(const Matrix4 &f, const Matrix4 &metric)
+    double VectorGaugeField::invariant(const Matrix4 &f, const Matrix4 &metric)
     {
         return (f * metric * f * metric).trace();
     }
 
-    Vector4 MaxwellField::fourPotential(double c, double phi, double ax, double ay, double az)
+    Vector4 VectorGaugeField::fourPotential(double c, double phi, double ax, double ay, double az)
     {
         return Vector4(phi / c, ax, ay, az);
     }
 
-    Vector4 MaxwellField::fourCurrent(double c, double rho, double jx, double jy, double jz)
+    Vector4 VectorGaugeField::fourCurrent(double c, double rho, double jx, double jy, double jz)
     {
         return Vector4(rho * c, jx, jy, jz);
     }
 
-    void MaxwellSection::run(Report &report) const
+    void VectorGaugeFieldSection::run(Report &report) const
     {
         const double c = 1.0;
         const Matrix4 eta = metricRegionI();
@@ -45,8 +45,8 @@ namespace slm
         const Matrix4 D = SignatureInvolution::matrix();
 
         report.subsection("Four-potential and four-current");
-        const Vector4 a = MaxwellField::fourPotential(c, 2.0, 0.5, -1.0, 3.0);
-        const Vector4 j = MaxwellField::fourCurrent(c, 1.5, -0.25, 2.0, 0.75);
+        const Vector4 a = VectorGaugeField::fourPotential(c, 2.0, 0.5, -1.0, 3.0);
+        const Vector4 j = VectorGaugeField::fourCurrent(c, 1.5, -0.25, 2.0, 0.75);
         const Vector4 aPrime = D * a;
         const Vector4 jPrime = D * j;
         report.checkNear("the electric potential becomes the single SPACE component",
@@ -64,20 +64,20 @@ namespace slm
         report.checkNear("A'.j' = -A.j", farInteraction + nearInteraction);
 
         report.subsection("Field tensor F' = D^T F D");
-        const Matrix4 f = MaxwellField::fieldTensor(c, 1.0, 2.0, 3.0, 4.0, 5.0, 6.0);
-        const Matrix4 fPrime = MaxwellField::transformedFieldTensor(f);
+        const Matrix4 f = VectorGaugeField::fieldTensor(c, 1.0, 2.0, 3.0, 4.0, 5.0, 6.0);
+        const Matrix4 fPrime = VectorGaugeField::transformedFieldTensor(f);
         report.check("F stays antisymmetric",
                      fPrime.isEqual(-fPrime.transpose(), 1e-12));
 
         report.subsection("Invariant, the critical result");
-        const double nearInvariant = MaxwellField::invariant(f, eta);
-        const double farInvariant = MaxwellField::invariant(fPrime, etaPrime);
+        const double nearInvariant = VectorGaugeField::invariant(f, eta);
+        const double farInvariant = VectorGaugeField::invariant(fPrime, etaPrime);
         report.checkNear("EXACT EQUALITY: the kinetic term is invariant under D",
                          nearInvariant - farInvariant);
 
         report.subsection("Wave equation and charge conservation");
 
-        const Vector4 j2 = MaxwellField::fourCurrent(c, -0.5, 1.0, -2.0, 0.5);
+        const Vector4 j2 = VectorGaugeField::fourCurrent(c, -0.5, 1.0, -2.0, 0.5);
         report.checkNear("D is linear: D(j1+j2) = D j1 + D j2",
                          (D * (j + j2)).maxAbsDifference(jPrime + (D * j2)));
     }

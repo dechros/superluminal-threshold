@@ -24,7 +24,7 @@ namespace slm
         enum class Kind
         {
             None,
-            Kleinian,
+            SplitSignature,
             Euclidean,
             Degenerate
         };
