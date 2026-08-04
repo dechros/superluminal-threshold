@@ -2453,8 +2453,31 @@ parçasıdır, ve iki yüzeyin ortak çözümü tek bir genlik verir.
 genliğinin var olduğudur; büyüklüğü Bölüm 14.2'nin verdiği $|A|$ değeridir ve
 söndürücü rejimde küçüktür.
 
+### 14.5 Öte taraftaki gidiş yönünün önceden belirlenmesi
 
----
+Parçacığın öte tarafta hangi yöne gideceği, gönderme biçimiyle **belirlenemez**.
+Sebep bir karşılıklılık teoremidir: her iki asimptotik tarafta yön başına tek bir
+yayılan kanal bulunduğunda, uzamsal olarak bakışımsız bir engelden geçirgenlik
+soldan ve sağdan giriş için aynıdır. Teorem zamanda tersinirlik ile birimsellikten
+çıkar.
+
+Bu sonuç burada varsayılmamış, kurulmuş profiller üzerinde sınanmıştır. Çarpık
+profil gerçekten bakışımsızdır, ve geçirgenlik iki yönde
+$4{,}9096125448 \times 10^{-3}$ olarak eşit çıkar; fark $6{,}9 \times 10^{-18}$
+düzeyinde kalır. Geçişin şekli yönü yanlı kılmaz.
+
+Tek kanal için sonuç kesindir: geçen parçacığın yönü, girerken taşıdığı işaretten
+başka bir şeye bağlı değildir. Pozitif dalga sayısıyla gelen bir kanal $+1$
+yönüyle, negatif olan $-1$ yönüyle çıkar.
+
+Karşılıklılığın açık bıraktığı tek yer eşevreli bir kanal çiftidir. Böyle bir
+çiftin taşıdığı yön, kanallar arasındaki bağıl fazda tektir: faz $-0{,}7$ iken
+yön $-0{,}618$, faz $+0{,}7$ iken $+0{,}618$ olur. Yanlılık engelde değil, gelen
+durumun kendisinde bulunur.
+
+Bu sonucun kapsamı tek kanallı girişle sınırlıdır, ve yukarıdaki çift türetilmiş
+değil elle yazılmıştır.
+
 
 ## 15. Dönüş anı
 
@@ -4796,7 +4819,6 @@ büyük olmasını ister, ve yolculuğu satın alan nicelik o gecikmedir.
 olması için yeterince opak değildir. Kütle duvarını aşan bir sürücü bulunsa bile
 bu gerilim ayakta kalır, ve bu nedenle deneysel tartışmanın merkezine
 konulmalıdır.
-
 
 ### 28.3 Simülasyon ve zincirin sayısal deneyden okunması
 
