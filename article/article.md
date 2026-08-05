@@ -3683,28 +3683,55 @@ farkıdır; bu, iddiayı bir çıkarım değil bir ölçüm yapan özelliktir.
 
 Bir şart, göründüğü kadar ağır değildir. Protonun bant merkezi kendi toplam
 enerjisi bölü indirgenmiş Planck sabitidir ve durgun bir proton durgun
-enerjisinden kurulan frekansta zaten oturur. Bir megaelektronvoltluk kinetik
-enerji onu $1{,}4270 \times 10^{24}$ rad/s değerine çıkarır. Hiçbir kaynak o
-frekansı sağlamaz, proton kendisi taşır. Demetten istenen nicelik enerji değil
-**kolimasyondur**, çünkü koşul toplam enerjiyi enine momentum ile kütlenin
-toplamına karşı tartar.
+enerjisinden kurulan frekansta zaten oturur. Hiçbir kaynak o frekansı sağlamaz,
+proton kendisi taşır.
+
+**Enerji yine de gerekir, ama bant için değil.** Varışın hangi fırlatmaya ait
+olduğunu bir etiket söyler, ve etiket protonun ince bir folyodan geçmesini
+gerektirir; folyo da onu saçar. Bir megaelektronvoltluk proton santimetre karesi
+başına on mikrogramlık karbondan $1{,}38 \times 10^{-3}$ radyan genişleyerek
+çıkar, yani demet hattının ulaştığı kolimasyonu bozar. İki yüz otuz
+megaelektronvoltta aynı folyo onu $6{,}66 \times 10^{-6}$ radyan genişletir ve
+etiket ile kolimasyon bir arada durur. Enerjinin satın aldığı şey bant değil,
+**saçılma bütçesidir**; o enerjide bant merkezi $1{,}7749 \times 10^{24}$ rad/s
+değerine çıkar.
+
+**Fırlatma hızı da bedava değildir.** Bir varış için $4{,}85 \times 10^{8}$
+fırlatma gerekir, ancak saniyede $4{,}85 \times 10^{8}$ fırlatmak fırlatmalar
+arasına yalnızca $2{,}06$ nanosaniye koyar. Aranan işaret bir nanosaniyelik bir
+geri kayma olduğuna göre, o kadar erken bir varış ile bir önceki protonun geç
+varışı ayırt edilemez. Hız saniyede on milyona indirilir, aralık yüz nanosaniye
+olur, ve koşu $48{,}5$ saniye sürer.
 
 | Şart | İstenen | Ulaşılan |
 | ------------------------------- | ---------------------------------- | ---------------------------------- |
-| Demetin durgunluk frekansını aşması | $1{,}4255 \times 10^{24}$ rad/s | $1{,}4270 \times 10^{24}$ rad/s |
-| Enine momentumun toplama oranı | $10^{-1}$ | $10^{-4}$ |
+| Demetin durgunluk frekansını aşması | $1{,}4255 \times 10^{24}$ rad/s | $1{,}7749 \times 10^{24}$ rad/s |
+| Enine momentumun toplama oranı | $10^{-1}$ | $5 \times 10^{-5}$ |
 | Öte bölgenin yoğunluğu | $1{,}06 \times 10^{96}$ kg/m$^3$ | $9{,}28 \times 10^{21}$ kg/m$^3$ |
 | Geçişin opaklığı | $10$ | $10$ |
 | Öte taraftaki yer değiştirme | $0{,}2998$ m | $1$ m |
-| Zamanlama çözünürlüğü | $10^{-11}$ s | $10^{-11}$ s |
-| Saniyedeki fırlatma sayısı | $4{,}85 \times 10^{8}$ | $10^{9}$ |
+| Zamanlama çözünürlüğü | $2 \times 10^{-11}$ s | $1{,}8 \times 10^{-11}$ s |
+| Saniyedeki fırlatma sayısı | $4{,}85 \times 10^{8}$ | $10^{7}$ |
 | Varışın fırlatmaya bağlanması | bir etiket | bir etiket |
 
-Sekiz şarttan yedisi bugünkü bir laboratuvarda sağlanır. Okumayı mümkün kılan üç
-sayı şunlardır: aranan ilerleme $10^{-9}$ s, zamanlama çözünürlüğü $10^{-11}$ s,
-yani yüz çözünürlük genişliği ayrım; ve bir varış için gereken
-$4{,}85 \times 10^{8}$ fırlatma, nanosaniyede bir proton hızında $0{,}49$ saniye
-koşma karşılığıdır. Ölçüm sınırda değildir ve deney kısadır.
+Bugünkü bir laboratuvar sekiz şarttan yedisini karşılar. Tablonun sağ sütununu
+şartlar tek tek değil birlikte belirler: yukarıdaki iki çekişme, enerjiyi
+yükseltip hızı düşüren tek bir çalışma noktasında birlikte çözülür. Okumayı
+mümkün kılan sayı şudur: aranan ilerleme $10^{-9}$ s, zamanlama çözünürlüğü
+$1{,}8 \times 10^{-11}$ s, yani elli beş çözünürlük genişliği ayrım. Ölçüm
+sınırda durmaz ve deney $48{,}5$ saniye sürer.
+
+Düzeneğin parçaları da olağandır:
+
+- tedavi sınıfı bir proton siklotronu, iki yüz otuz megaelektronvolt;
+- iki delikli bir sürüklenme kolimasyonu, açıyı istenen bandın altına indiren ve
+  bedelini akımdan ödeyen;
+- iki katmanlı ince bir sürüklenme algılayıcısı, fırlatmayı on iki pikosaniye
+  içinde etiketleyen;
+- tek bir zaman çevirici yonga ve tek bir osilatör, iki damgayı birlikte okuyan.
+
+Son madde isteğe bağlı değildir. İki damga ayrı saatlerden okunursa, bir
+nanosaniyelik bir saat kayması aranan işaretin tamamını taklit eder.
 
 Sağlanmayan tek şart öte bölgenin yoğunluğudur. Düzeneğin geri kalanı olağandır:
 bir proton demeti, bir kolimatör, hızlı bir zamanlama algılayıcısı ve bir

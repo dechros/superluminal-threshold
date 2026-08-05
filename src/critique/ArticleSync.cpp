@@ -127,7 +127,7 @@ namespace slm
              "0{,}4094"},
             {"the beam frequency with kinetic energy",
              RoundTripExperiment::available(RoundTripExperiment::Requirement::BeamEnergy),
-             "1{,}4270"},
+             "1{,}7749"},
             {"the far-side displacement", RoundTripExperiment::displacementMetres(), "0{,}2998"},
             {"the launches per arrival", RoundTripExperiment::launchesNeeded(), "4{,}85"},
             {"the running time", RoundTripExperiment::runTimeSeconds(), "0{,}49"},

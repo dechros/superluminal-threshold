@@ -84,6 +84,30 @@ namespace slm
         /// standard deviations, which is what makes the result a measurement
         /// rather than a coincidence.
         static double separationInResolutions();
+
+        /// Angle a proton of the given kinetic energy picks up crossing the
+        /// thin foil that timestamps its launch, from the Highland formula
+        /// with ten micrograms per square centimetre of carbon.
+        ///
+        /// THIS IS WHY THE BEAM CARRIES ENERGY. The band centre needs none:
+        /// a proton at rest already sits above the frequency floor. The tag
+        /// does need it, because a launch cannot be timestamped without
+        /// something for the proton to pass through, and what it passes
+        /// through scatters it. Scattering falls with momentum, so the energy
+        /// buys the collimation back rather than the band.
+        static double scatteringAngle(double kineticJoules);
+
+        /// Whether the tag foil leaves the collimation the beam line reached.
+        static bool tagPreservesCollimation();
+
+        /// Seconds between launches, which has to exceed the advance being
+        /// looked for. Otherwise an arrival one advance early is the previous
+        /// proton arriving late, and no timing resolution separates them.
+        static double launchSpacingSeconds();
+
+        /// Whether an arrival that early is unambiguous against the launch
+        /// before it.
+        static bool arrivalIsUnambiguous();
     };
 
     /// Section specifying the apparatus for the core measurement.

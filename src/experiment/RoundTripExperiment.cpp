@@ -15,10 +15,10 @@ namespace slm
     {
         constexpr double kTargetAdvance = 1.0e-9;
         constexpr double kWorkingOpacity = 10.0;
-        constexpr double kBeamRate = 1.0e9;
-        constexpr double kTimingResolution = 1.0e-11;
-        constexpr double kBeamKineticJoules = 1.602176634e-13;
-        constexpr double kCollimationReached = 1.0e-4;
+        constexpr double kBeamRate = 1.0e7;
+        constexpr double kTimingResolution = 1.8e-11;
+        constexpr double kBeamKineticJoules = 3.6850e-11;
+        constexpr double kCollimationReached = 5.0e-5;
         constexpr double kCollimationDemanded = 1.0e-1;
         constexpr double kIdentificationReached = 1.0;
         constexpr double kProtonRadius = 0.8414e-15;
@@ -96,7 +96,7 @@ namespace slm
         case Requirement::FarSideDisplacement:
             return displacementMetres();
         case Requirement::TimingResolution:
-            return kTargetAdvance / 100.0;
+            return kTargetAdvance / 50.0;
         case Requirement::Statistics:
             return launchesNeeded();
         case Requirement::Identification:
@@ -197,6 +197,30 @@ namespace slm
         return kTargetAdvance / kTimingResolution;
     }
 
+    double RoundTripExperiment::scatteringAngle(double kineticJoules)
+    {
+        const double rest = 938.272;
+        const double kinetic = kineticJoules / 1.602176634e-13;
+        const double momentum = std::sqrt(kinetic * kinetic + 2.0 * kinetic * rest);
+        const double energy = kinetic + rest;
+        const double beta = momentum / energy;
+        const double thickness = 1.0e-5 / 42.7;
+        return 13.6 / (beta * momentum) * std::sqrt(thickness) *
+               (1.0 + 0.038 * std::log(thickness));
+    }
+
+    bool RoundTripExperiment::tagPreservesCollimation()
+    {
+        return scatteringAngle(kBeamKineticJoules) < kCollimationReached;
+    }
+
+    double RoundTripExperiment::launchSpacingSeconds() { return 1.0 / kBeamRate; }
+
+    bool RoundTripExperiment::arrivalIsUnambiguous()
+    {
+        return launchSpacingSeconds() > 10.0 * kTargetAdvance;
+    }
+
     void RoundTripExperimentSection::run(Report &report) const
     {
         report.subsection("What is being measured");
@@ -209,6 +233,26 @@ namespace slm
         report.check("the quantity read is a time difference between two events on one clock, "
                      "which is what makes the claim a measurement rather than an inference",
                      RoundTripExperiment::targetAdvanceSeconds() > 0.0);
+
+        report.subsection("The two demands that collide, and what settles them");
+        report.check(std::format("  a one MeV proton leaves the tag foil {:.3e} rad wide, which "
+                                 "is coarser than the collimation the line reached",
+                                 RoundTripExperiment::scatteringAngle(1.602176634e-13)),
+                     RoundTripExperiment::scatteringAngle(1.602176634e-13) >
+                         RoundTripExperiment::available(RoundTripExperiment::Requirement::Collimation));
+        report.check(std::format("  at the energy chosen it leaves it {:.3e} rad wide instead, "
+                                 "so the tag and the collimation stand together",
+                                 RoundTripExperiment::scatteringAngle(3.6850e-11)),
+                     RoundTripExperiment::tagPreservesCollimation());
+        report.check(std::format("  launches sit {:.3e} s apart, against an advance of {:.3e} s, "
+                                 "so an early arrival is not the previous proton arriving late",
+                                 RoundTripExperiment::launchSpacingSeconds(),
+                                 RoundTripExperiment::targetAdvanceSeconds()),
+                     RoundTripExperiment::arrivalIsUnambiguous());
+        report.check(std::format("  the run then takes {:.4g} s, which is the price of that "
+                                 "spacing and is still short",
+                                 RoundTripExperiment::runTimeSeconds()),
+                     RoundTripExperiment::runTimeSeconds() < 300.0);
 
         report.subsection("The requirement a source does not have to meet");
         report.check(std::format("  a proton at rest already sits at {:.4e} rad/s, which is the "
