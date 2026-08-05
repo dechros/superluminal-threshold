@@ -180,6 +180,54 @@ namespace slm
             return count;
         }
 
+        /// Turkish marks the passive with -Il after a consonant and with a bare
+        /// -n after a vowel, so the morphology is the only thing that separates
+        /// "göstermektedir" from "gösterilmektedir". A pattern built on the
+        /// tense suffix alone counts every active -maktadır and -mıştır as well.
+        ///
+        /// Three shapes wear the same letters without being passive, and each
+        /// one has to go or the count doubles. The ability suffix -abil/-ebil
+        /// ends in the same syllable the passive uses, so "yapabilir" and
+        /// "seçilebilir" both look like passives. The ablative followed by the
+        /// copula does the same: "türdendir" is a noun in a case, not a verb.
+        /// And a short list of verbs simply ends this way without being
+        /// passive at all, "kullanır" and "tükenir" among them.
+        ///
+        /// The match must also be a whole word ending in a finite tense, which
+        /// is what keeps the verbal nouns out: "gerçeklendiğini" carries the
+        /// same morpheme but is not a predicate, and counting it would report a
+        /// paragraph as subjectless when it has a subject in every sentence.
+        int passiveCount(const std::string &text)
+        {
+            static const std::regex passive(
+                "(^|[^a-zçğıöşü])([a-zçğıöşü]{2,})(ıl|il|ul|ül|[aeıioöuü]n)"
+                "(mış|miş|muş|müş|makta|mekte|ır|ir|ur|ür)"
+                "(tır|tir|tur|tür|dır|dir|dur|dür)?([^a-zçğıöşü]|$)");
+            static const std::regex ability("(abil|ebil)$");
+            static const std::regex ablative("(den|dan)$");
+            static const std::vector<std::string> lexical = {
+                "kullanır", "tükenir", "bulunur", "görünür", "bilinir", "dayanır",
+                "uzanır", "inanır", "değildir", "kalınır", "sunar"};
+
+            int hits = 0;
+            for (std::sregex_iterator it(text.begin(), text.end(), passive), stop;
+                 it != stop; ++it)
+            {
+                const std::string base = (*it)[2].str() + (*it)[3].str();
+                std::string word = base + (*it)[4].str() + (*it)[5].str();
+                if (std::regex_search(base, ability) || std::regex_search(base, ablative))
+                {
+                    continue;
+                }
+                if (std::find(lexical.begin(), lexical.end(), word) != lexical.end())
+                {
+                    continue;
+                }
+                ++hits;
+            }
+            return hits;
+        }
+
         std::string shorten(const std::string &s, std::size_t width = 62)
         {
             std::string flat;
@@ -342,11 +390,7 @@ namespace slm
             {
                 return;
             }
-            int total = 0;
-            for (const auto &mark : kPassive)
-            {
-                total += occurrences(paragraph, mark);
-            }
+            const int total = passiveCount(paragraph);
             if (total > passivesPerParagraph)
             {
                 faults.push_back({std::format("{} edilgen", total), startLine,
@@ -615,6 +659,33 @@ namespace slm
         return faults;
     }
 
+    int ProseRegister::headingWordMean(const std::string &text)
+    {
+        const std::regex label("^#{1,3} [0-9IVX.]*[.]?[ ]*");
+        int headings = 0;
+        int words = 0;
+        for (const std::string &line : splitLines(text))
+        {
+            if (line.rfind('#', 0) != 0)
+            {
+                continue;
+            }
+            const std::string name = std::regex_replace(line, label, "");
+            if (name.empty())
+            {
+                continue;
+            }
+            ++headings;
+            std::istringstream in(name);
+            std::string word;
+            while (in >> word)
+            {
+                ++words;
+            }
+        }
+        return headings == 0 ? 0 : 10 * words / headings;
+    }
+
     std::vector<std::pair<std::string, int>> ProseRegister::predicateMix(const std::string &text)
     {
         const std::regex pastPassive("(mış|miş|muş|müş)t(ı|i)r$");
@@ -664,20 +735,6 @@ namespace slm
 
     double ProseRegister::passiveDensity(const std::string &text)
     {
-        // The suffix that marks the passive also ends a good many words that are
-        // not passive at all, "değildir" being the commonest, and counting those
-        // inflates the density by a sixth. The stop list is what the count is
-        // worth: without it the measure reports a fault the prose does not have.
-        // Turkish marks the passive with -Il after a consonant and with a bare -n
-        // after a vowel, and a pattern that knows only the first form misses
-        // every verb whose stem ends in a vowel: "hesaplanmıştır", "okunur",
-        // "başlanır". Leaving that out halves the count.
-        const std::regex passive("([a-zçğıöşü]{2,})(ıl|il|ul|ül|[aeıioöuü]n)"
-                                 "(mış|miş|muş|müş|makta|mekte|ır|ir|ur|ür|dı|di|du|dü|"
-                                 "acak|ecek)([a-zçğıöşü]*)");
-        const std::regex notPassive("^(değil|sınır|olabil|görün|bilin|gerekir|kalır|gelir|"
-                                    "verir|olur|kesin|derin|yakın|sakin|emin|için|gibi|"
-                                    "bütün|üzerin|altın|yerin|birin)");
         int words = 0;
         int hits = 0;
         for (const std::string &sentence : proseSentences(text))
@@ -688,14 +745,7 @@ namespace slm
             {
                 ++words;
             }
-            for (std::sregex_iterator it(sentence.begin(), sentence.end(), passive), stop;
-                 it != stop; ++it)
-            {
-                if (!std::regex_search((*it)[0].str(), notPassive))
-                {
-                    ++hits;
-                }
-            }
+            hits += passiveCount(sentence);
         }
         return words == 0 ? 0.0 : 1000.0 * hits / words;
     }
@@ -858,9 +908,17 @@ namespace slm
                                      fault.rule),
                          false);
         }
-        report.check("every heading is a noun phrase, which is what all one hundred and "
-                     "ninety two headings of the measured corpus are",
+        report.check("every heading is a noun phrase, which is what the two hundred and "
+                     "thirty eight headings of the measured corpus are",
                      headings.empty());
+        report.check(std::format("  the headings average {}.{} words, at most {}.{}, against a "
+                                 "corpus median of three",
+                                 ProseRegister::headingWordMean(document) / 10,
+                                 ProseRegister::headingWordMean(document) % 10,
+                                 ProseRegister::headingMeanTenths / 10,
+                                 ProseRegister::headingMeanTenths % 10),
+                     ProseRegister::headingWordMean(document) <=
+                         ProseRegister::headingMeanTenths);
 
         report.subsection("The mix of predicate forms, which a drifting text concentrates");
         const auto mix = ProseRegister::predicateMix(document);
@@ -872,6 +930,8 @@ namespace slm
         }
         int copula = 0;
         int continuous = 0;
+        int aorist = 0;
+        int pastPassive = 0;
         for (const auto &form : mix)
         {
             if (form.first == "-dır")
@@ -882,13 +942,29 @@ namespace slm
             {
                 continuous = form.second;
             }
+            if (form.first == "-ir")
+            {
+                aorist = form.second;
+            }
+            if (form.first == "-mıştır")
+            {
+                pastPassive = form.second;
+            }
         }
         report.check(std::format("the copula carries {}% of the endings, at most {}",
                                  copula, ProseRegister::copulaShareLimit),
                      copula <= ProseRegister::copulaShareLimit);
+        report.check(std::format("the aorist carries {}%, at most {}, so a finding is not "
+                                 "always stated as a timeless law",
+                                 aorist, ProseRegister::aoristShareLimit),
+                     aorist <= ProseRegister::aoristShareLimit);
         report.check(std::format("the present continuous carries {}%, at least {}",
                                  continuous, ProseRegister::continuousShareFloor),
                      continuous >= ProseRegister::continuousShareFloor);
+        report.check(std::format("the reported past carries {}%, at least {}, which is the form "
+                                 "a completed operation takes",
+                                 pastPassive, ProseRegister::pastPassiveShareFloor),
+                     pastPassive >= ProseRegister::pastPassiveShareFloor);
 
         report.subsection("Passive density, which a per-paragraph cap cannot see");
         const double density = ProseRegister::passiveDensity(document);

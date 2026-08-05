@@ -95,10 +95,35 @@ namespace slm
         /// Longest a heading may be, in words.
         static constexpr int headingWordLimit = 8;
 
+        /// Longest the headings may be on average, in tenths of a word. A
+        /// single long heading is a local choice; a high average means the
+        /// headings are being written as statements rather than as names.
+        static constexpr int headingMeanTenths = 40;
+
         /// Bands the predicate mix and the passive density have to fall in.
-        static constexpr int copulaShareLimit = 33;
-        static constexpr int continuousShareFloor = 2;
-        static constexpr int passivePerThousandLimit = 40;
+        ///
+        /// The numbers come from twenty long Turkish physics texts, some three
+        /// hundred thousand words, measured on the same scale this class
+        /// applies here. Each bound is inside the observed range rather than at
+        /// its edge, because the range is wide and its edges are single authors.
+        ///
+        /// Observed, as a share of sentence endings: copula 10.8 to 37.3 with a
+        /// median of 15.5; aorist 9.0 to 44.0, median 24.4; past passive 0.0 to
+        /// 25.4, median 10.9; present continuous 4.3 to 39.2, median 15.3.
+        ///
+        /// The floors matter more than the ceilings. A text that states every
+        /// finding as a timeless law reads flat, and the form it is missing is
+        /// the present continuous: the one that says what the object or the
+        /// calculation is doing rather than what is eternally the case.
+        static constexpr int copulaShareLimit = 30;
+        static constexpr int aoristShareLimit = 33;
+        static constexpr int continuousShareFloor = 8;
+        static constexpr int pastPassiveShareFloor = 6;
+        /// Passive density band, per thousand words. Measured on the same
+        /// twenty texts with the same morphology: 8.6 to 34.1, median 17.8.
+        /// The earlier ceiling of forty came from a pattern that counted every
+        /// active -maktadır as a passive, so it was never a real bound.
+        static constexpr int passivePerThousandLimit = 34;
 
         /// The text under review, or an empty string when it cannot be opened.
         static std::string text();
@@ -142,6 +167,11 @@ namespace slm
         /// Headings that assert rather than name: a finite verb, a colon, a
         /// question, or more words than a name needs.
         static std::vector<Fault> verbalHeadings(const std::string &text);
+
+        /// Mean heading length in tenths of a word. Reported in tenths because
+        /// the difference between naming and asserting shows up in the first
+        /// decimal place, and rounding to whole words hides it.
+        static int headingWordMean(const std::string &text);
 
         /// Share of prose sentences ending in each predicate form, in whole
         /// percentages, keyed by the ending.
