@@ -222,9 +222,9 @@ detaydadır, ikisinde birden değil.
 | 20 | Yöntem ve üç denetim | Bu sayılar doğrulanmış mı, ve doğrulama kendini kandırıyor olabilir mi |
 | 21 | Açık kalanlar | Neyin gösterilmediği yazılı mı |
 
-Üç defter, yani Bölüm 14 ve Bölüm 15 eşiğin mod filtresi olmasıyla
-birlikte omurga ile detay arasında durur: sonucu taşımazlar, ama
-sonucun tutarlı olması onlara bağlıdır.
+İki defter, yani Bölüm 14 ile Bölüm 15, eşiğin bir mod filtresi olmasıyla
+birlikte omurga ile detay arasında durur. Sonucu taşımazlar, ancak sonucun
+tutarlı olması onlara bağlıdır.
 
 **"Sözlük" sözcüğü üç ayrı nesneyi adlandırır.** Üçü aşağıda bir kez ayrılır, ve
 metnin geri kalanında bu ayrım tekrarlanmaz.
