@@ -10,6 +10,7 @@
 #include "core/Report.h"
 #include "core/Section.h"
 #include "critique/ArticleSync.h"
+#include "critique/CitationCoverage.h"
 #include "critique/ProseRegister.h"
 #include "dynamics/Dispersion.h"
 #include "field/TimeOrientation.h"
@@ -63,6 +64,7 @@ namespace
         sections.push_back(std::make_unique<slm::AssumptionLedgerSection>());
         sections.push_back(std::make_unique<slm::ProseRegisterSection>());
         sections.push_back(std::make_unique<slm::ArticleSyncSection>());
+        sections.push_back(std::make_unique<slm::CitationCoverageSection>());
         sections.push_back(std::make_unique<slm::WavePacketSection>());
         sections.push_back(std::make_unique<slm::TwoCrossingsSection>());
         sections.push_back(std::make_unique<slm::DwellTimeSection>());

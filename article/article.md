@@ -68,7 +68,7 @@ bir madde katmanı gerektirir, o katman da baskın enerji koşulunu ihlal eder
 
 ### 1.3 İddianın büyüklüğü
 
-Yukarıdaki sonucun üç bileşeni var, ve yalnızca üçüncüsü yenidir. Üstışık hızın
+Yukarıdaki sonucun dört bileşeni var, ve yalnızca dördüncüsü yenidir. Üstışık hızın
 geçmişe varmayı mümkün kıldığını 1962 ile 1970 arası kurdu. Öte tarafın bir uzay
 ve üç zaman ekseni taşıdığını, parçacıkların da yalnızca o tek uzay ekseninde
 hareket ettiğini literatür biliyor. Bir uzay ekseninin bu geçiş altında zaman
@@ -78,8 +78,8 @@ eksenine düştüğü de bilinen bir sonuç. Kalan tek adım şudur:
 > subluminal bölgeye döndüğünde **farklı bir zaman konumunda** bulunur.
 
 Literatürde bulunmayan şey budur: yer değiştirmeyi bir saat kaymasına çeviren ve
-dönüşte hangi ana varıldığını hesaplayan bir çalışma. Neyin ödünç, neyin kendine
-ait olduğu tek tek sayılıdır.
+dönüşte hangi ana varıldığını hesaplayan bir çalışma. Önceki üç bileşenin her
+biri yukarıda kaynağıyla anılmıştır; dördüncüsünün kaynağı yoktur.
 
 ### 1.4 Sonucu taşıyan zincir
 
@@ -163,9 +163,9 @@ Doymuş gecikme bir yayılma hızı iddiası taşımaz. Aynı rejimde içeride g
 tanımsızdır, ve o gecikmenin depolanan alanın ömründen bağımsız bir nicelik
 olmadığı hesaplanmıştır.
 
-Ulaşılabilir altı sonucun dördü, sıradan fiziğin verdiği ölçümün aynısını verir.
-Tayf üzerindeki olasılık dağılımı hesap dışında kalmaktadır. Omurga dışındaki hesaplar
-eklere alınmıştır.
+İddiayı taşıyan rejimde parçacık öte tarafta doğrudan görünmez; geriye üç sınır
+niceliği kalır ve üçü de yalnızca bir geçişin olduğunu bildirir (Bölüm 18.9).
+Tayf üzerindeki olasılık dağılımı hesap dışında kalmaktadır.
 
 ### 1.10 Modelin maddeleri
 
@@ -199,24 +199,29 @@ parçacığı zamanda geriye taşımak.
 
 | Adım | Sorusu | Kurulduğu bölümler |
 | ------ | ----------------------------------------------------- | ----------------------------------------------------------- |
-| Geçiş | Kütleli bir parçacık eşiğin ötesine nasıl geçer | Bölüm 3, Bölüm 4, Bölüm 5, Bölüm 6, Bölüm 8 |
+| Geçiş | Kütleli bir parçacık eşiğin ötesine nasıl geçer | Bölüm 3, Bölüm 4, Bölüm 5, Bölüm 6, Bölüm 8, Bölüm 12 |
 | Mesafe | Öte tarafta mekânda kat edilen mesafe ne anlama gelir | Bölüm 4.1.1, Bölüm 4.1.2, Bölüm 4.1.3, Bölüm 9, Bölüm 10.1 |
-| Dönüş | Geri döndüğünde saatte nereye düşer | Bölüm 13, Bölüm 14.1, Bölüm 14.2, Bölüm 18, Bölüm 19 |
+| Dönüş | Geri döndüğünde saatte nereye düşer | Bölüm 13, Bölüm 16, Bölüm 17, Bölüm 18, Bölüm 19 |
+
+Bölüm 2 bu üç adımın tamamını tek bir hesap olarak, sayılarıyla birlikte önden
+verir; kalan bölümler o hesabın halkalarını ayrı ayrı kurar.
 
 **Simülasyon için gereken en kısa yol.** Zincirin yedi halkası Bölüm 19'da tek
 yerde toplanır, ve her halkanın nerede kurulduğu orada yazılıdır. Çekirdeği
 hesaplamak isteyen için en kısa okuma budur: Bölüm 19, sonra oradan işaret
 edilen yedi adres.
 
-Geri kalan bölümler detaydır, ve hepsi aynı türdendir: omurganın bir adımına
+Aşağıdaki bölümler detaydır, ve hepsi aynı türdendir: omurganın bir adımına
 yöneltilebilecek bir soruyu karşılarlar. Hiçbiri anlatıyı ilerletmez; her biri
-bir soruyu kapatır. İki tablo **ayrıktır**: bir bölüm ya omurgadadır ya
-detaydadır, ikisinde birden değil.
+İki tablo **ayrıktır**: hiçbir adres ikisinde birden geçmez. Omurga bölümlerinin
+bir kısmının alt bölümleri aşağıda görünür, çünkü bir bölüm sonucu taşırken onun
+bir alt bölümü yalnızca bir itirazı karşılayabilir.
 
 | Bölüm | Konusu | Karşıladığı soru |
 | ---------- | ---------------------------------------------------------- | ---------------------------------------------------------------------------- |
 | 5.6, 5.7 | Katmanın enerji koşulları ve oran koşulu | Geçirgen eşiğin doğurduğu madde katmanı fiziksel olarak kabul edilebilir mi |
 | 7 | Geometrinin izin verdiği geçiş | Böyle bir geçişe geometri izin veriyor mu |
+| 11 | Dalga ve nokta cisim okumaları | Hesabı paketle yapıp anlatımı cisimle kurmak meşru mu |
 | 9.3 | Yönlendirilebilirlik ile ilerleme zorunluluğunun ayrılması | Ayrım metrikte var, zorunluluk hiçbir metrikte yok |
 | 10.2, 10.5 | Dispersiyon, grup hızı, kapalı form çözüm | Üç zamanlı bir bölgede hız kavramı ne oluyor |
 | 20 | Yöntem ve üç denetim | Bu sayılar doğrulanmış mı, ve doğrulama kendini kandırıyor olabilir mi |
@@ -317,8 +322,10 @@ Varış anı, kalkışa göre, her durumda
 
 $$t_{\text{dönüş}} = 2\tau \;\pm\; s$$
 
-biçimindedir; işaret dalın, $s$ ise yolculuğun katkısıdır. Buradan altı hâl
-çıkar ve altısı da bu modelin içindedir:
+biçimindedir; işaret dalın, $s$ ise yolculuğun katkısıdır. Buradan beş hâl
+çıkar ve beşi de bu modelin içindedir. Aşağıdaki sayılar Bölüm 19'un yürüttüğü
+gidiş dönüşe aittir, Bölüm 2'nin denetim yapılanmasına değil; iki yapılanma
+farklı bir $2\tau$ verir ve tablo yalnızca hâllerin listesini gösterir:
 
 | Dal | Mesafe | Varış anı | Ne olur |
 | --------- | ----------- | --------------- | ------------------------------------------------ |
@@ -329,8 +336,8 @@ biçimindedir; işaret dalın, $s$ ise yolculuğun katkısıdır. Buradan altı 
 | Her ikisi | $s = 0$ | $2\tau$ | Yolculuk yok, yalnızca iki geçişin faz gecikmesi |
 
 Son satır gecikmenin yolculuktan bağımsız bir taban olduğunu gösterir. Parçacık
-öte tarafta hiç yürümese bile iki geçiş bir bedel yükler; bu yapılanmada
-$2{,}484520$.
+öte tarafta hiç yürümese bile iki geçiş bir bedel yükler; Bölüm 19'un
+yapılanmasında $2{,}484520$.
 
 Dördüncü satır bir beyan taşımaz, bir hesap verir. İleri dal iki yüz birime kadar
 tarandı ve hiçbir mesafede daha erken bir ana varmadı. İşareti belirleyen şey
@@ -456,9 +463,11 @@ de izometrisidir** ve determinantı birdir. Yani bir geçişe dayatılan koşull
 tamamını sağlar. Çevirdiği çift, geçişin birbirine eşlediği çiftin tam olarak
 kendisidir: Bölge I'in zamanı ve Bölge II'nin tek uzay yönü.
 
-**Sonuç.** Bu çalışmanın kullandığı $D$ sekizliden biridir ve **ileri gönderen**
-ailededir; bu, Özet'teki koşul paragrafı o seçimi söyler. Bu bir seçimdir,
-üç koşulun bir sonucu değildir. Aileler arasında seçim yapan hiçbir şey burada
+**Sonuç.** Yukarıda yazılan $D$ sekizliden biridir ve **ileri gönderen**
+ailededir. Bu metnin sonucunu taşıyan hesaplar ise **geri taşıyan** eşi
+üzerinde yürür, yani $SD$ üzerinde; $S$ sekizliyi kendi üzerine gönderdiğinden
+o eş de sekizliden biridir ve üç koşulun tamamını sağlar. Aileyi seçmek bir
+seçimdir, üç koşulun bir sonucu değildir. Aileler arasında seçim yapan hiçbir şey burada
 hesaplanmamaktadır ve iki aileyi ayıran dönüşüm iki tarafın metriğinin de
 izometrisi olduğundan, **seçim geometrik değildir**. Bölüm 9.4 aynı şeyi başka
 yerde söyler: orada da ayrımın iki yakası arasında metriğin bir tercih yapmadığı
@@ -469,7 +478,7 @@ gösterilmiştir. Seçimi her iki yerde de metrik dışında bir şey yapar.
 Bu çalışmanın merkezindeki ifade şudur: öte tarafın tek uzay ekseni Bölge I'in
 zamanıdır. İfade nitel bırakılırsa "o eksende ilerlemek zamanda yer
 değiştirmektir" cümlesi bir benzetmeye dönüşür. Aşağıdaki iki sonuç onu
-niceliksel yapar ve sekiz geçişin **tamamı** üzerinde doğrulanmıştır
+niceliksel yapar ve sekiz geçişin **tamamı** üzerinde doğrulanmıştır.
 
 **Katsayı tam olarak bire eşit çıkar.** Sekiz geçişin her birinde, zaman koordinatını
 üreten satırın sıfırdan farklı **tek** bir girdisi vardır, o girdi öte tarafın
@@ -775,8 +784,8 @@ artırır ve tek boyutlu olmayan bir engel gerektirir. Burada küçültülen nic
 geçirgenlik değil, **sabit genlikte doymuş gecikmedir** ve engel tek boyutludur;
 sönüm katsayısı ile kalınlığın çarpımı sabit tutulduğu için genlik zaten
 kıpırdamamaktadır. İki sonuç aynı niceliği aynı kurulumda eniyilemediğinden,
-buradaki hesap o mekanizmanın yeniden keşfi değildir; sicilde bağlam olarak
-kayıtlıdır.
+buradaki hesap o mekanizmanın yeniden keşfi değildir; bu bölüm ona yalnızca
+konum belirlemek için değinir.
 
 ### 4.1.7 Grup kapalılığının bozulduğu katman
 
@@ -842,11 +851,16 @@ içinden çıkmaz; çıkan şey, her tipin neye yol açtığıdır.
 ### 5.1 Dört aday
 
 **Ara bölge yok.** İki bölge doğrudan birbirine değer, aralarında yalnızca bir
-yüzey vardır. bu yüzeyde rank iki düşer.
+yüzey vardır. O yüzeyde iki enine yön aynı anda karakter değiştirir, yani rank
+iki düşer.
+
+**Kademeli yol** bu tek adımın alternatifidir: enine yönler aynı anda değil,
+teker teker çevrilir. $(1,3)$ imzasından $(2,2)$ imzasına, oradan $(3,1)$
+imzasına gidilir; her ayakta yalnızca tek bir öz değer sıfırdan geçer ve rank
+yalnızca bir düşer. Aşağıdaki adaylardan ikincisi bu yolun durağıdır.
 
 **Kleinian, $(2,2)$.** İki zaman ve iki uzay taşıyan bir ara bölge. Enine
-yönlerden yalnızca biri karakter değiştirmiştir. yukarıdaki kademeli yolun
-durağıdır ve her ayakta rank yalnızca bir düşer.
+yönlerden yalnızca biri karakter değiştirmiştir. Kademeli yolun durağı budur.
 
 **Öklid, $(4,0)$.** Bütün enine yönler karakter değiştirmiştir; bölgede zaman
 yönü kalmamıştır. İmza değişimi literatürünün büyük bölümünün ele aldığı geçiş
@@ -1311,8 +1325,8 @@ koşul yalnızca sürekli olmasını ister [5]. [6]'nın genelleştirilmiş Lanc
 denklemine göre gerilim tensöründe dağılımsal bir terim, yani bir **yüzey
 katmanı**, tam olarak dış eğrilik sürekli olduğunda yoktur.
 
-Bunu somutlaştırmak için oranın ilk ayağı bir koordinatın fonksiyonu
-yapılır:
+Bunu somutlaştırmak için Bölüm 5.1'deki kademeli yolun ilk ayağı bir
+koordinatın fonksiyonu yapılır:
 
 $$g(\xi) = \mathrm{diag}\big(1,\, -\cos\lambda(\xi),\, -1,\, -1\big),
  \qquad \xi \in [-1, 1]$$
@@ -1396,7 +1410,7 @@ Klein-Gordon parçacıklarının Lorentzian imzadan Kleinian imzaya geçişi
 incelenir, düzlemsel bir sınırda parçacık akısı için **ayna davranışı** bulunur,
 ve ardından sonlu kalınlıkta bir çift eklem ele alınarak **tünelleme olasılığı**
 gösterilir. Dikkat çekici olan, oradaki geçişin $(-,+,+,+) \to (-,+,+,-)$
-olması, yani yukarıdaki kademeli yolun tam olarak birinci ayağıdır.
+olması, yani Bölüm 5.1'deki kademeli yolun tam olarak birinci ayağıdır.
 
 Aynı hesap bu modelin değişkenleriyle yapıldığında şu çıkar. Dilimin dışında
 normal doğrultudaki dalga sayısı karesi daima pozitiftir; içeride ise işaret
@@ -1571,7 +1585,7 @@ $v(\pi) = -v(0)$ olur. Yani bir zaman-benzeri vektör, zaman-benzeri kümeden hi
 çıkmadan kendi negatifine sürekli olarak taşınmıştır. Böyle bir taşıma varken
 ikili bir etiketleme yapılamaz: gelecek ile geçmiş ayrımı **yoktur**.
 
-**Ara bölge.** yukarıdaki kademeli yolun geçtiği $(2,2)$ imzasında da durum
+**Ara bölge.** Bölüm 5.1'deki kademeli yolun geçtiği $(2,2)$ imzasında da durum
 aynıdır; iki pozitif yön bulunması yeterlidir. Dolayısıyla yönelim, kademeli
 yolun daha **ilk ayağında** kaybolur, ikinci ayağı beklemez.
 
@@ -1596,7 +1610,7 @@ yönlerinin sayısından, hiperyüzey hakkında hiçbir varsayım yapmadan çık
 İki çekince var. Birincisi, [11]'in hipotezlerini bu modelin geçişi
 **sağlamaz**. Orada bir taraf Riemann imzalıdır ve dejenerelik transvers radikal
 tipindedir; buradaki doğrudan geçişte ise rank iki düşer. Ortak olan
-sonuçtur, ispat değildir. Buna karşılık oranın kademeli yolu her ayakta
+sonuçtur, ispat değildir. Buna karşılık Bölüm 5.1'in kademeli yolu her ayakta
 rank-1 dejenereliğe sahiptir, yani [10] ve [11]'in geometrik çerçevesine buradan
 bakıldığından daha yakındır.
 
@@ -1905,7 +1919,7 @@ hesabın dayanağıdır, ve önce sabitlenmesi gerekir.
 Sabitlemek zorunludur, çünkü Bölge II'de parçacık kavramı olağan anlamıyla
 mevcut değildir. Parçacık kavramı üç yapıya dayanır: pozitif ile negatif frekans
 ayrımı, alttan sınırlı bir Hamiltonyen, ve Poincaré grubunun üniter temsili.
-orada üçünün de bulunmadığını gösterir. Bölge I'de doğal görünen bir
+Bölüm 9 üçünün de öte tarafta bulunmadığını gösterir. Bölge I'de doğal görünen bir
 tanımı öte tarafa taşımak bu yüzden serbest değildir.
 
 Burada benimsenen çözüm, tek bir tanım aramak yerine **iki okumayı birlikte
@@ -3090,18 +3104,18 @@ sinyalinin ulaşamayacağı bir yerdedir. Çekirdek sorunun "zamanda yolculuk"
 kısmı, bu koordinatın konumu olarak tanımlanmıştır ve hesap onu vermektedir.
 
 **Olmadığı şey.** Bu, ışıktan hızlı bir **yayılma** değildir. Aynı rejimde
-içeride grup hızı diye bir nicelik yoktur, çünkü mod sönümlüdür ve 
-gösterildiği gibi kat edilen bir mesafe bulunmaz. Ölçülen şey, dönen paketin
+içeride grup hızı diye bir nicelik yoktur, çünkü mod sönümlüdür ve sönümlü
+bir modda kat edilen bir mesafe bulunmaz. Ölçülen şey, dönen paketin
 **tepe noktasının** nereye düştüğüdür.
 
-**Ve bir sinyal taşımadığı.** Bu nokta açık değil, hesaplanmıştır. 
+**Ve bir sinyal taşımadığı.** Bu nokta açık değil, hesaplanmıştır. Bu çalışma
 cepheyi tepeden ayrı hesaplar. Cephe hızı frekans büyüdükçe ışık hızına düşer.
 Bölge cepheyi hiçbir kalınlıkta öne almaz. Öne alma büyürken de onu taşıyan
 genlik $d = 32$ için $5{,}2 \times 10^{-32}$'ye çöker. Yukarıdaki $+29{,}0743$,
 bir mesajın ışığı geçtiği anlamına gelmez ve bu çalışma öyle bir iddiada
 bulunmamaktadır.
 
-**Ayrıca tek okuma da değildir.** aynı genlikten türetilen beş
+**Ayrıca tek okuma da değildir.** Aynı genlikten türetilen beş
 okumadan üçü geçişi ışığın üstüne, ikisi altına koyar. Yukarıdaki tablo faz
 okumasıyla kurulmuştur, çünkü sorulan soru dışarıdaki bir dedektörde tepenin ne
 zaman göründüğüdür; ama bu bir seçimdir ve gerekçesi verilmiştir.
@@ -3495,71 +3509,35 @@ rejimde faz ile yarı klasik okumanın tam örtüşmesi, kapalı bölgede yer ç
 korelasyonunun değerleri, Kleinian ve Öklid bölgelerin grup hızları, süpürülen
 açının bir örneği ve oyalanma karşılaştırmasındaki bağıl fark.
 
-### 20.2 İkinci denetim, kaynakların yeniden üretimi ve itibarı
+### 20.2 İkinci denetim, atıflar ile kaynakça listesinin birbirini kapsaması
 
-İkinci denetim kaynakçayadır ve sorusu şudur: bir kaynağın merkezi
-hesaplanabilir iddiası burada **bu çalışmanın araçlarıyla yeniden üretilmiş**
-midir, yoksa hesaplanmadan **itibara mı alınmıştır**. Aradaki fark şudur:
-itibara alınan bir sonucun doğruluğu bu çalışmanın güvencesi altında değildir.
+İkinci denetim kaynakçayadır ve iki yönlü sorar. Metindeki her atıf numarasının
+listede bir karşılığı var mı? Listedeki her künyeye metinden en az bir atıf
+düşüyor mu? İki yön ayrı ayrı gereklidir, çünkü liste iki ayrı biçimde çürür.
+Numaralar kısaldığında ya da yeniden sıralandığında bir atıf listenin sonunu
+aşar. Bir pasaj çıkarıldığında ise künye yerinde kalır ve onu gösteren hiçbir
+şey kalmaz.
 
-Bu denetimin bulduğu en ağır eksik **kaynakça boşluğuydu**. Makalenin en çok
-yaslandığı dokuz kaynak metinde kavram olarak geçiyor, ama kaynakçada yoktu:
-oyalanma süresi tartışması, zamansal olmayan kabukların enerji koşulları, imza
-değiştiren zarlar, korunum yasaları tartışmasının dört raundu, ve çok zamanlı
-tutarlılık. Dokuzu da girdi.
+**Denetimin var olma nedeni bu iki yönden de ağırdır.** Bir bölüm silindiğinde
+dosyada ondan sonra gelen her şey onunla birlikte gider, ve kaynakça dosyanın
+son öğesidir. Bu çalışmada tam olarak bu oldu: makale kısaltılırken kaynakça
+listesi bütünüyle düştü ve metindeki bütün atıflar boşluğu gösterir hâle geldi.
+Hiçbir sayısal denetim bunu görmedi, çünkü bir atıf numarası hiçbir hesabın
+ürettiği bir sayı değildir. Bu nedenle denetimin ilk sorduğu şey listenin var
+olup olmadığı, ikinci sorduğu şey ise boş olup olmadığıdır.
 
-Kaynakça o turda $41$'den $50$'ye çıktı, sonraki turlarda büyüdü, ve makale
-kısaltılırken artık hiçbir yerde anılmayan on dört kaynak düşerek $57$'ye indi.
-Şu an her atfın kaynakçada bir karşılığı var, her kaynağın da metinde en az bir
-atfı; kod bunu da denetler.
+Denetim makaleyi kendisi okur. Metni bulamazsa atlamaz, koşuyu düşürür; girdisi
+yokken sessizce geçen bir kontrol, hiçbir şey yapmadığı için başarı bildirir.
+Numaralandırma kaynakçada konu başlıklarının altında yeniden başladığından
+künyenin kimliğini basılı rakam değil listedeki sırası taşır.
 
-**Sınıflandırma artık kodda tutulmaktadır**, makalede beyan edilmez. Bunun
-nedeni Bölüm 20.1'in yakalamak için var olduğu şeydir: elle bakılan bir tablo,
-denetlenemeyen bir sayımdır. Sicilde her sonuç **ne söylediğiyle** adlandırılır,
-nerede yayımlandığıyla değil. Böylece bir bölüm yeniden numaralanınca ya da bir
-ön baskı aşılınca kod bakım istemez. Kaynakça tarafı bu sicile **konu
-üzerinden** bağlanır.
+Denetimin bugünkü çıktısı şudur: metin $28$ ayrı numaraya atıf yapmakta, liste
+$28$ künye taşımakta, listenin sonunu aşan atıf ve atıfsız künye bulunmamaktadır.
 
-Sicil üç durum ayırır ve sayıları kendisi üretir:
-
-| Durum | Anlamı | Kaç |
-| ----------------- | ------------------------------------------------------------------------------------------ | ---- |
-| Yeniden üretilmiş | Buradaki bir kütüphane sonucu bağımsız olarak hesaplar ve değeri karşılaştırılabilir | $40$ |
-| İtibara alınmış | Sonuç yeniden hesaplanmadan kullanılır; doğruluğu bu çalışmanın güvencesi altında değildir | $23$ |
-| Yalnızca bağlam | Konumlandırma için anılır, ondan hiçbir sonuç çıkarılmaz | $9$ |
-| **Toplam** | | $72$ |
-
-Sayılar koddan alınmıştır ve elle güncellenmemelidir; sicil onları kendisi
-saymaktadır.
-
-Sicilde bir denetim vardır: "yeniden üretilmiş" işaretli her girdi, onu üreten
-kütüphaneyi **adıyla** taşımak zorundadır. Adı olmayan bir yeniden üretim
-iddiası doğrulamayı düşürür. Bu, sicilin var olma nedenidir.
-
-Sicilin son üç kalemi bir literatür taramasından geldi. Tarama, "karşılığı yok"
-diye kaydedilmiş sonuçların gerçekten karşılıksız olup olmadığını sınamak için
-yapıldı, ve biri karşılıklı çıktı. Bulunan çalışmanın sonucu
-yeniden üretilmiş, ikisi itibara alınmıştır. Buradan çıkan yöntem kuralı şudur:
-bir sicil neyin **içinde** olduğunu denetleyebilir, neyin dışında bırakıldığını
-denetleyemez. Dışarıda kalanı yalnızca arama bulur, ve arama denetlenmiş bir
-işlem değildir.
-
-**Yöntem tarafındaki eksik.** Bu denetimin ikinci bulgusu şudur: literatür
-notlarının öncelik tablosundaki $24$ satırdan dördünün burada bir C++ karşılığı
-yoktu, ve makale onları yalnızca sözle kullanıyordu. Biri o zamandan beri kurulu
-(lapse kontur ölçütü, ). İkisi daha bu turda kuruldu: çift yok oluşu
-okuması, ve görünür yük (bağlanan ilgili doğrulama). Geriye **bir**
-yöntem kalıyor, ve o da kapsam kararı gereği. Bunlar açıkça kaydedilir, çünkü
-aksi hâlde Bölüm 20 sağlanmamış bir bütünlük iddia etmiş olur:
-
-| Yalnızca sözle kullanılan yöntem | Neden kurulmadı |
-| ---------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Zaman yönlendirilemez bölgede cismin spinör gibi dönüşmesi | Spin bu çalışmada hiçbir yere sokulmamıştır. Karar gözden geçirilmiş ve **korunmuştur**: spin eklemek, kapsamın on bir maddesinin dışına çıkmak olurdu, ve oranın saat bileşenleri spin gerektirmeden kurulabildiği için buna zaten gerek kalmamıştır |
-
-> Yeniden üretilenler sicilin yarısından çoğudur. Buna karşılık bu çalışmanın
-> kendi güvencesi altındaki alan, makalenin dayandığı alandan hâlâ **dardır**:
-> on dokuz sonuç ya itibara alınmakta ya da yalnızca bağlam olarak
-> kullanılmaktadır, ve yukarıdaki yöntem o darlığın adı konmuş kısmıdır.
+Denetimin kendisi de üç ayrı bozma ile sınanmıştır. Metne listede karşılığı
+olmayan bir atıf eklendiğinde, kaynakça listesi silindiğinde, ve bir künyeye
+giden tek atıf başka bir numaraya çevrildiğinde koşu her seferinde düşmüş,
+bozma geri alındığında tekrar geçmiştir.
 
 ### 20.3 Üçüncü denetim, varsayımların sicildeki karşılığı
 
@@ -3615,7 +3593,7 @@ varsayımı eleştiren bir cümle ile varsayan bir cümle aynı kelimeyi taşır
 | 4.1.6 | Minimize edilen niceliğin Bölüm 4.1.3'ün karşılaştırdığı nicelik olması | türetildi | Aynı bölüm: referans yapılandırma $2{,}565988$ verir, yani o bölümün sayısının aynısı |
 | 18.9 | Eksik kütle yönteminin kütle kabuğunda gerçek bir momentum varsayması | iki yönlü hesaplandı | Aynı bölüm: iç mod $\sqrt{13}$ altında söner, üstünde yayılır; iki rejim birbirinin tümleyenidir ve hiçbir frekans ikisini birden vermez |
 
-Sicilde $19$ kalem var, tarama ise $14$ bölümde iddia buluyor. Sicil taramadan
+Sicilde $16$ kalem var, tarama ise $10$ bölümde iddia buluyor. Sicil taramadan
 geniştir: sonradan olumsuzlanan bir ifade taramadan düşer, ama hükmü kayıtta
 kalır.
 
