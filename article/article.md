@@ -4885,6 +4885,45 @@ Bu hesabın kazandırdığı şudur: açık, çıplak bir imkânsızlık değil 
 parametre üzerindeki ölçülmüş bir mesafedir. Mesafe çarpışmanın enerjisiyle
 değil, ek boyutların varlığıyla kapanır.
 
+### 28.2.8 Çekirdek ölçümün düzeneği
+
+Ölçülen nicelik tektir. Bir proton fırlatılır, eşiği geçer, öte tarafta tek
+uzamsal eksen boyunca yer değiştirir, geri geçer, ve **aynı saat üzerinde**
+fırlatılışından önceki bir anda kaydedilir. Okunan şey iki olay arasındaki zaman
+farkıdır; bu, iddiayı bir çıkarım değil bir ölçüm yapan özelliktir.
+
+Bir şart, göründüğü kadar ağır değildir. Protonun bant merkezi kendi toplam
+enerjisi bölü indirgenmiş Planck sabitidir, ve durgun bir proton durgun
+enerjisinden kurulan frekansta zaten oturur. Bir megaelektronvoltluk kinetik
+enerji onu $1{,}4270 \times 10^{24}$ rad/s değerine çıkarır. Hiçbir kaynak o
+frekansı sağlamaz, proton kendisi taşır. Demetten istenen nicelik enerji değil
+**kolimasyondur**, çünkü koşul toplam enerjiyi enine momentum ile kütlenin
+toplamına karşı tartar.
+
+| Şart                            | İstenen                            | Ulaşılan                           |
+| ------------------------------- | ---------------------------------- | ---------------------------------- |
+| Demetin durgunluk frekansını aşması | $1{,}4255 \times 10^{24}$ rad/s | $1{,}4270 \times 10^{24}$ rad/s    |
+| Enine momentumun toplama oranı  | $10^{-1}$                          | $10^{-4}$                          |
+| Öte bölgenin yoğunluğu          | $1{,}06 \times 10^{96}$ kg/m$^3$   | $9{,}28 \times 10^{21}$ kg/m$^3$   |
+| Geçişin opaklığı                | $10$                               | $10$                               |
+| Öte taraftaki yer değiştirme    | $0{,}2998$ m                       | $1$ m                              |
+| Zamanlama çözünürlüğü           | $10^{-11}$ s                       | $10^{-11}$ s                       |
+| Saniyedeki fırlatma sayısı      | $4{,}85 \times 10^{8}$             | $10^{9}$                           |
+| Varışın fırlatmaya bağlanması   | bir etiket                         | bir etiket                         |
+
+Sekiz şarttan yedisi bugünkü bir laboratuvarda sağlanır. Okumayı mümkün kılan üç
+sayı şunlardır: aranan ilerleme $10^{-9}$ s, zamanlama çözünürlüğü $10^{-11}$ s,
+yani yüz çözünürlük genişliği ayrım; ve bir varış için gereken
+$4{,}85 \times 10^{8}$ fırlatma, nanosaniyede bir proton hızında $0{,}49$ saniye
+koşma karşılığıdır. Ölçüm sınırda değildir ve deney kısadır.
+
+Sağlanmayan tek şart öte bölgenin yoğunluğudur. Düzeneğin geri kalanı olağandır:
+bir proton demeti, bir kolimatör, hızlı bir zamanlama algılayıcısı ve bir
+tetikleyici. Dolayısıyla deney tarif edilmiş olup gerçekleştirilebilir değildir,
+ve ikisinin arasında duran şey bir liste değil tek bir şart üzerindeki tek bir
+sayıdır.
+
+
 
 ### 28.3 Simülasyon ve zincirin sayısal deneyden okunması
 

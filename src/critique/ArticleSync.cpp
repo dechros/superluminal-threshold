@@ -2,6 +2,7 @@
 
 #include "charge/ChargedRoundTrip.h"
 #include "core/Report.h"
+#include "experiment/RoundTripExperiment.h"
 #include "identity/RoundTripInvariants.h"
 #include "intermediate/IntermediateRegion.h"
 #include "routes/ThreeRoutes.h"
@@ -124,6 +125,15 @@ namespace slm
             {"the derived critical fraction",
              ThresholdScaling::criticalFraction(ThresholdScaling::quantisationParameter()),
              "0{,}4094"},
+            {"the beam frequency with kinetic energy",
+             RoundTripExperiment::available(RoundTripExperiment::Requirement::BeamEnergy),
+             "1{,}4270"},
+            {"the far-side displacement", RoundTripExperiment::displacementMetres(), "0{,}2998"},
+            {"the launches per arrival", RoundTripExperiment::launchesNeeded(), "4{,}85"},
+            {"the running time", RoundTripExperiment::runTimeSeconds(), "0{,}49"},
+            {"the density reached",
+             RoundTripExperiment::available(RoundTripExperiment::Requirement::RegionDensity),
+             "9{,}28"},
             {"the scale that would close the gap",
              ThresholdScaling::scaleThatClosesGap(
                  SignatureThreshold::densityInSphere(2.08e-6, 0.8414e-15)),
