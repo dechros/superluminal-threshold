@@ -867,7 +867,7 @@ $$q_{\text{iç}}^2 = \frac{\omega^2}{c^2} - \left(1 + \frac{2n}{3}\right)k_T^2 -
 
 olur; burada $n$ karakter değiştiren enine yön sayısıdır. İfade dışarıdaki
 $\kappa^2 = \omega^2/c^2 - k_T^2 - \mu$ değerinden, çevrilen her yönün üçte iki
-ağırlıkla düşülmesiyle çıkar, ve Bölüm 18.7'nin $\beta^2$ tanımıyla
+ağırlıkla düşülmesiyle çıkar ve Bölüm 18.7'nin $\beta^2$ tanımıyla
 $q_{\text{iç}}^2 = -\beta^2$ bağıntısıyla aynıdır.
 
 **İç mod frekansa bakar.** Bir ara bölgenin engel olup olmadığı yalnızca tipine
@@ -1916,7 +1916,7 @@ Geçişin ne kadar sürdüğü sorusuna üç kurgu üç ayrı yanıt verir. Nokt
 kalınlığı bir hıza böler, dalga fazı frekansa göre türetir, genlik depolanan
 normu gelen akıya böler. Üçü de adı konmuş niceliklerdir ve bu çalışmaya ait
 değildir: fazın frekans türevi [31]'e, depolanan normun akıya oranı [32]'nin
-ikamet süresine karşılık gelir, ve tanımların hangisinin neyi ölçtüğü [33]'te
+ikamet süresine karşılık gelir ve tanımların hangisinin neyi ölçtüğü [33]'te
 derlenmiştir. Sınanan yapılanmada bir katediş için sırasıyla $9{,}861$,
 $1{,}462864$ ve $0{,}519$ çıkar. Geçişin tek bir süresi yoktur.
 
@@ -1933,7 +1933,7 @@ süresini, öteki yasak iç bölgenin geçilmesini ölçer.
 **Hakemin taraflı olabileceği kayda geçer.** Burada hakem, yayılan paketin
 tepesidir; tepe konumu durağan faz koşulundan çıktığı için faz okumasına yatkın
 bir ölçüttür. Bağımsız bir hakem seçilseydi sonuç değişebilirdi: ikamet süresi
-ultrasoğuk atomlarda Larmor saatiyle doğrudan ölçülmüştür [34], ve o ölçümün
+ultrasoğuk atomlarda Larmor saatiyle doğrudan ölçülmüştür [34] ve o ölçümün
 konusu tepe değil, parçacığın engelde geçirdiği süredir. Bu çalışma dönüş anını
 yerleştiren okumayı seçmektedir, en fiziksel okumayı değil; ikisi aynı soru
 değildir.
@@ -2033,7 +2033,7 @@ söylenebilecek olan, geçme şansının $|A|^2$ olduğudur. Geçiş ayrıca
 
 Deney bu nedenle tek bir parçacığa dayanmaz. Düzenek çok sayıda parçacığı aynı
 eşiğe fırlatır ve geri dönenleri sayar. Gereken fırlatma sayısı opaklığın
-üstelidir ve Bölüm 21.2.4 onu sayılara bağlamaktadır.
+üstelidir ve Bölüm 21.2.3 onu sayılara bağlamaktadır.
 
 ### 12.4 Dönüşün kendiliğinden olmasının sebebi
 
@@ -2128,13 +2128,13 @@ sonucun bu geometrideki karşılığıdır. Bu çalışmanın kendi katkısı do
 varlığı değil, doymuş gecikmenin ne kadar küçültülebileceğidir (Bölüm 4.1.6).
 
 **Aynı soruyu iki engelli hâlde de sordular ve kapatamadılar.** [41] iki ardışık
-engel arasındaki açıklığın da gecikmeye girmemesini bekler, ve [42] bunu optik
+engel arasındaki açıklığın da gecikmeye girmemesini bekler ve [42] bunu optik
 çift bariyerde beş ayrı açıklıkta ölçer. Sonuç tartışmalıdır. [43] ölçülen
 niceliğin bir kat etme süresi değil kavite ömrü olduğunu savunur; [44] ile [45]
 bağımsızlığın kendisini reddeder.
 
 Bu metnin hiçbir sonucu o tartışmaya dayanmaz. Buradaki hesap tek bir bölgenin
-kalınlığını konu alır, ve öte tarafta kat edilen mesafe gecikmeye değil ona
+kalınlığını konu alır ve öte tarafta kat edilen mesafe gecikmeye değil ona
 karşı çalışan terime girer. Kayıt, aynı yöne bakan bir soruyu açık olarak
 göstermek içindir.
 
@@ -3371,7 +3371,7 @@ listedeki her künyeye metinden en az bir atıf aranır. İki yön ayrı ayrı
 gereklidir, çünkü liste iki ayrı biçimde çürür: numaralar kayarsa bir atıf
 listenin sonunu aşar, bir pasaj çıkarılırsa künye sahipsiz kalır. Denetimin
 ağırlığı şuradan gelir: bir bölüm silindiğinde dosyada ondan sonra gelen her şey
-onunla birlikte gider, ve kaynakça dosyanın son öğesidir. Bu çalışmada tam
+onunla birlikte gider ve kaynakça dosyanın son öğesidir. Bu çalışmada tam
 olarak bu oldu; hiçbir sayısal denetim görmedi, çünkü bir atıf numarası hiçbir
 hesabın ürettiği bir sayı değildir. Künyenin kimliğini basılı rakam değil
 listedeki sırası taşır.
@@ -3425,7 +3425,7 @@ varsayımı eleştiren bir cümle ile varsayan bir cümle aynı kelimeyi taşım
 | 9.3 | Denklem düzeyinde ve durum düzeyinde tek yönlülüğün aynı iddia olması | başka kurguya ait | İki okuma orada ayrılır ve yalnızca ikincisi savunulur |
 | 4.1.6 | Sabit tutulan derinlikte gecikmenin doymuş olması | türetildi | Aynı bölüm: dört enerjinin dördünde de sonlu kalınlık gecikmesi doymuş değerin yüzde biri içindedir |
 | 4.1.6 | Minimize edilen niceliğin Bölüm 4.1.3'ün karşılaştırdığı nicelik olması | türetildi | Aynı bölüm: referans yapılanma $2{,}565988$ verir, yani o bölümün sayısının aynısı |
-| 21.2.7 | Yer çekiminin güçlendiği ölçeğin dört boyutlu Planck ölçeğinin yerini alması | ilan edilmiş sınırlama | Sonucu yazılı: ölçekleme bu varsayıma dayanır ve burada gerekçelendirilmediği aynı bölümde belirtilir |
+| 21.2.6 | Yer çekiminin güçlendiği ölçeğin dört boyutlu Planck ölçeğinin yerini alması | ilan edilmiş sınırlama | Sonucu yazılı: ölçekleme bu varsayıma dayanır ve burada gerekçelendirilmediği aynı bölümde belirtilir |
 | 18.9 | Eksik kütle yönteminin kütle kabuğunda gerçek bir momentum varsayması | iki yönlü hesaplandı | Aynı bölüm: iç mod $\sqrt{13}$ altında söner, üstünde yayılır; iki rejim birbirinin tümleyenidir ve hiçbir frekans ikisini birden vermez |
 
 Sicilde $16$ kalem var, tarama ise $10$ bölümde iddia buluyor. Sicil taramadan
@@ -3561,7 +3561,7 @@ yönlendirilir ve şart bu yolla dolanılmaz.
 ayarlarıdır, dördüncüsü sonucun kendisidir ve Bölüm 13.8'de gösterildiği üzere
 deneyin asıl güçlüğü oradadır.
 
-### 21.2.3 Zaman ile mesafenin kuru
+### 21.2.2 Zaman ile mesafenin kuru
 
 Öte tarafta kat edilen uzunluk ile yakın tarafta kazanılan süre arasındaki
 dönüşüm çarpanı ışık hızıdır. Bir metre yolculuk $3{,}34$ nanosaniye kazandırır.
@@ -3584,7 +3584,7 @@ mesafe pratikte ilerleme ile ışık hızının çarpımıdır.
 Bir yıl geriye taşınma, öte tarafta bir ışık yılı mesafe kat edilmesini
 gerektirmektedir. Önerinin ölçeği en açık biçimde bu satırda görünür.
 
-### 21.2.4 Zayıflayan nicelik
+### 21.2.3 Zayıflayan nicelik
 
 Geri dönen parçacığın hiçbir özelliği azalmaz. Kütlesi, yükü ve mod ızgarası
 gidişteki değerlerini korur, çünkü geçiş mod genliklerini ölçekler ve mod
@@ -3600,7 +3600,7 @@ protondur ve küçük olan sayı onun gelme şansıdır.
 | $20$ | $4{,}25 \times 10^{-18}$ | $2{,}35 \times 10^{17}$ |
 | $40$ | $1{,}80 \times 10^{-35}$ | $5{,}54 \times 10^{34}$ |
 
-### 21.2.5 Görünürlük ile doyum
+### 21.2.4 Görünürlük ile doyum
 
 Deneyin asıl engeli kütle duvarı değildir. Varışın milyarda birin üzerinde
 kalması opaklığı $10{,}36$ ile sınırlar. Gecikmenin doyması ise aynı çarpımın
@@ -3611,7 +3611,7 @@ olması için yeterince opak değildir. Kütle duvarını aşan bir sürücü bu
 bu gerilim ayakta kalır ve bu nedenle deneysel tartışmanın merkezine
 konulmalıdır.
 
-### 21.2.6 Yoğunluk koşulu
+### 21.2.5 Yoğunluk koşulu
 
 Bu çalışma öte bölgeyi verilmiş kabul eder ve yolculuğu oradan hesaplamaktadır. Bölgenin
 hangi koşulda ortaya çıktığını ise literatürün bir kolu bir sayıya bağlar.
@@ -3639,7 +3639,7 @@ proton yarıçapı içinde $74{,}1$ mertebe geridedir.
 Koşul bir yoğunluk olduğundan yoğunlaştırmayla sağlanır, süreyle değil. Şartı
 zamana yayarak biriktirme yolu bu nedenle kapalı kalır.
 
-### 21.2.7 Eşiğin dayandığı iki çarpan
+### 21.2.6 Eşiğin dayandığı iki çarpan
 
 Kritik yoğunluk evrensel bir sabit değildir. İki çarpandan kurulur:
 
@@ -3674,7 +3674,7 @@ Bu hesabın kazandırdığı şudur: açık, çıplak bir imkânsızlık değil 
 parametre üzerindeki ölçülmüş bir mesafedir. Mesafe çarpışmanın enerjisiyle
 değil, ek boyutların varlığıyla kapanır.
 
-### 21.2.8 Çekirdek ölçümün düzeneği
+### 21.2.7 Çekirdek ölçümün düzeneği
 
 Ölçülen nicelik tektir. Bir proton fırlatılır, eşiği geçer, öte tarafta tek
 uzamsal eksen boyunca yer değiştirir, geri geçer ve **aynı saat üzerinde**
@@ -3687,7 +3687,7 @@ enerjisinden kurulan frekansta zaten oturur. Hiçbir kaynak o frekansı sağlama
 proton kendisi taşır.
 
 **Enerji yine de gerekir, ama bant için değil.** Varışın hangi fırlatmaya ait
-olduğunu bir etiket söyler, ve etiket protonun ince bir folyodan geçmesini
+olduğunu bir etiket söyler ve etiket protonun ince bir folyodan geçmesini
 gerektirir; folyo da onu saçar. Bir megaelektronvoltluk proton santimetre karesi
 başına on mikrogramlık karbondan $1{,}38 \times 10^{-3}$ radyan genişleyerek
 çıkar, yani demet hattının ulaştığı kolimasyonu bozar. İki yüz otuz
@@ -3701,7 +3701,7 @@ fırlatma gerekir, ancak saniyede $4{,}85 \times 10^{8}$ fırlatmak fırlatmalar
 arasına yalnızca $2{,}06$ nanosaniye koyar. Aranan işaret bir nanosaniyelik bir
 geri kayma olduğuna göre, o kadar erken bir varış ile bir önceki protonun geç
 varışı ayırt edilemez. Hız saniyede on milyona indirilir, aralık yüz nanosaniye
-olur, ve koşu $48{,}5$ saniye sürer.
+olur ve koşu $48{,}5$ saniye sürer.
 
 | Şart | İstenen | Ulaşılan |
 | ------------------------------- | ---------------------------------- | ---------------------------------- |
