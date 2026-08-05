@@ -71,8 +71,8 @@ namespace slm
     {
         const double c = 1.0;
         const double mu = 1.0;
-        const double kT = 0.5;
-        const double flipped = 2.0;
+        const double kT = 4.0;
+        const double flipped = 4.0;
 
         report.subsection("The interior mode can be evanescent");
         report.check("outside the slab the squared wavenumber is positive",

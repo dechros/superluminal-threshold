@@ -60,6 +60,19 @@ namespace slm
         return c * c * (share * transverseSquared + mu);
     }
 
+    double IntermediateRegion::fixedFrequency(double c, double mu, double transverseSquared)
+    {
+        return c * std::sqrt(outsideNormalSquared(c, mu, transverseSquared) + transverseSquared +
+                             mu);
+    }
+
+    double IntermediateRegion::insideFromFrequency(int turned, double c, double mu,
+                                                   double transverseSquared, double frequency)
+    {
+        return frequency * frequency / (c * c) - (1.0 + turnedWeight(turned)) * transverseSquared -
+               mu;
+    }
+
     bool IntermediateRegion::blocks(Kind kind, double c, double mu, double transverseSquared)
     {
         return insideNormalSquared(kind, c, mu, transverseSquared) < 0.0;
@@ -138,6 +151,38 @@ namespace slm
         report.check("a degenerate layer blocks whatever the mode",
                      IntermediateRegion::blocks(Kind::Degenerate, c, mu, transverse) &&
                          IntermediateRegion::blocks(Kind::Degenerate, c, mu, 0.01));
+
+        report.subsection("The frequency this grid is evaluated at");
+        {
+            const double omega = IntermediateRegion::fixedFrequency(c, mu, transverse);
+            report.checkNear("the grid sits on one frequency, and it is the one where the "
+                             "outside wavenumber equals the transverse part plus the mass",
+                             omega - std::sqrt(2.0 * (transverse + mu)), 1e-12);
+            for (Kind kind : kinds)
+            {
+                if (kind == Kind::Degenerate)
+                {
+                    continue;
+                }
+                const int turned = IntermediateRegion::flippedDirections(kind);
+                report.checkNear(
+                    std::format("  {:22} : the general form from a frequency agrees here",
+                                IntermediateRegion::name(kind)),
+                    IntermediateRegion::insideFromFrequency(turned, c, mu, transverse, omega) -
+                        IntermediateRegion::insideNormalSquared(kind, c, mu, transverse),
+                    1e-12);
+            }
+            report.check("and it disagrees away from that frequency, so the choice is a "
+                         "choice rather than an identity",
+                         std::abs(IntermediateRegion::insideFromFrequency(
+                                      3, c, mu, transverse, omega * 1.5) -
+                                  IntermediateRegion::insideNormalSquared(Kind::Euclidean, c, mu,
+                                                                          transverse)) > 1.0);
+            report.check("a Euclidean region stops blocking once the frequency is raised "
+                         "far enough, which the fixed-frequency reading cannot show",
+                         IntermediateRegion::insideFromFrequency(3, c, mu, transverse,
+                                                                 omega * 1.5) > 0.0);
+        }
 
         report.subsection("Transmission across the whole grid");
         for (Kind kind : kinds)

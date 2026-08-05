@@ -35,12 +35,37 @@ namespace slm
         static std::string name(Kind kind);
 
         /// Squared normal wavenumber outside the region, always positive.
+        ///
+        /// THIS FIXES A FREQUENCY. In general the outside wavenumber is
+        /// omega squared over c squared, less the transverse part and the
+        /// mass; here it is set to c squared times the transverse part plus
+        /// the mass, which is the same thing only on the surface where omega
+        /// squared equals twice c squared times that sum. Every quantity in
+        /// this class therefore describes one frequency rather than a family,
+        /// and the class is not the place to ask how a region behaves as the
+        /// frequency moves: the crossing amplitude is, since it carries omega
+        /// explicitly. The choice is checked against the general form below
+        /// rather than left to be rediscovered.
         static double outsideNormalSquared(double c, double mu, double transverseSquared);
 
         /// Squared normal wavenumber inside the region. Negative means the
-        /// interior mode decays instead of propagating.
+        /// interior mode decays instead of propagating. Carries the same
+        /// fixed frequency as the outside value, and is the general
+        /// expression evaluated there: each turned direction subtracts two
+        /// thirds of the transverse part.
         static double insideNormalSquared(Kind kind, double c, double mu,
                                           double transverseSquared);
+
+        /// The frequency the two wavenumbers above are evaluated at, so that
+        /// the choice can be stated and tested instead of being implicit.
+        static double fixedFrequency(double c, double mu, double transverseSquared);
+
+        /// The inside wavenumber written the general way, from a frequency.
+        /// Agrees with insideNormalSquared exactly at fixedFrequency, and
+        /// departs from it everywhere else, which is what makes the choice
+        /// visible.
+        static double insideFromFrequency(int turned, double c, double mu,
+                                          double transverseSquared, double frequency);
 
         /// Whether the interior blocks propagation.
         static bool blocks(Kind kind, double c, double mu, double transverseSquared);

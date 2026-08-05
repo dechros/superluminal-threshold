@@ -87,7 +87,7 @@ namespace slm
             return 0.0;
         }
         const double weight = IntermediateRegion::turnedWeight(turned);
-        return weight * total / (2.0 * weight + 1.0);
+        return weight * total / (2.0 * (weight + 1.0));
     }
 
     double ThresholdOptimum::smallestDelayAtTotal(double total, double mu, double c, int turned)
@@ -120,10 +120,11 @@ namespace slm
         const double thickness = thicknessForDepth(normalPart, transversePart, turned, depth);
         (void)mu;
         (void)c;
-        return 4.0 * kappa * beta / ((kappa * kappa + beta * beta) * std::sinh(beta * thickness) *
-                                         2.0 +
-                                     4.0 * kappa * beta * std::cosh(beta * thickness)) *
-               2.0;
+        const double difference = kappa * kappa - beta * beta;
+        const double product = 2.0 * kappa * beta;
+        const double real = difference * std::sinh(beta * thickness);
+        const double imaginary = product * std::cosh(beta * thickness);
+        return product / std::hypot(real, imaginary);
     }
 
     bool ThresholdOptimum::delayFallsWithoutBound(double mu, double c, int turned)
