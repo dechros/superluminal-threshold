@@ -108,17 +108,17 @@ namespace slm
                      ProtonJourney::driveIsSufficient(drive));
 
         report.subsection("What the crossing charges");
-        report.check(std::format("  the round trip delay is {:.6f} in units and {:.4e} s in the "
-                                 "laboratory",
+        report.check(std::format("  the round trip delay is {:.6f} in units, twice one "
+                                 "crossing, and {:.4e} s in the laboratory",
                                  ProtonJourney::referenceDelay(),
                                  ProtonJourney::debtInSeconds(drive)),
                      ProtonJourney::debtInSeconds(drive) > 0.0);
-        report.check(std::format("  clearing that debt takes {:.4e} m of far-side travel, which "
-                                 "is smaller than the proton itself",
+        report.check(std::format("  clearing that debt takes {:.4e} m of far-side travel, a few "
+                                 "proton radii",
                                  ProtonJourney::breakEvenDistance(drive)),
                      ProtonJourney::breakEvenDistance(drive) < 1e-14);
-        report.check("so the crossing is not what holds the journey back: its debt is paid off by "
-                     "a distance under a femtometre, and everything beyond that is advance",
+        report.check("so the crossing is not what holds the journey back: its debt is paid off "
+                     "inside a nuclear diameter, and everything beyond that is advance",
                      ProtonJourney::breakEvenDistance(drive) < 1e-14);
 
         report.subsection("Travelling backwards over there, and where it lands");
@@ -130,9 +130,10 @@ namespace slm
                                      arrival < 0.0 ? "before departure" : "after departure"),
                          std::isfinite(arrival));
         }
-        report.check("a femtometre of travel already brings it back before it left, because the "
-                     "debt is smaller than that",
-                     ProtonJourney::arrivesBeforeDeparture(drive, 1e-15));
+        report.check("two femtometres of travel already bring it back before it left, and one "
+                     "does not, which is where the round trip debt falls",
+                     ProtonJourney::arrivesBeforeDeparture(drive, 2e-15) &&
+                         !ProtonJourney::arrivesBeforeDeparture(drive, 1e-15));
 
         report.subsection("What a wanted advance costs in metres");
         for (double advance : {kNanosecond, 1e-6, 1e-3, 1.0})

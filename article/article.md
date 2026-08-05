@@ -2082,13 +2082,14 @@ kalınlığı bir hıza böler, dalga fazı frekansa göre türetir, genlik depo
 normu gelen akıya böler. Üçü de adı konmuş niceliklerdir ve bu çalışmaya ait
 değildir: fazın frekans türevi [31]'e, depolanan normun akıya oranı [32]'nin
 ikamet süresine karşılık gelir, ve tanımların hangisinin neyi ölçtüğü [33]'te
-derlenmiştir. Sınanan yapılanmada sırasıyla $9{,}861$, $0{,}731$
-ve $0{,}519$ çıkar. Geçişin tek bir süresi yoktur.
+derlenmiştir. Sınanan yapılanmada bir katediş için sırasıyla $9{,}861$,
+$1{,}462864$ ve $0{,}519$ çıkar. Geçişin tek bir süresi yoktur.
 
 Hangisinin dönüş anını yerleştirdiği ölçümle karara bağlanmıştır. Yayılan paketin
 tepesi hiçbir okumaya ait olmayan bir hakem sağlamaktadır. Yalnızca dalga okuması
-tutar; bağıl fark $4{,}5 \times 10^{-4}$ düzeyinde kalır. Nokta cisim okuması on
-iki kat, genlik okuması yüzde yirmi dokuz şaşar.
+tutar; bağıl fark $4{,}5 \times 10^{-4}$ düzeyinde kalır. Nokta cisim okuması
+altı katı aşan bir bağıl sapmayla, genlik okuması yüzde altmış beşlik bir bağıl
+sapmayla şaşar.
 
 Dönen durumun zaman ekseni üzerindeki yeri bu nedenle **fazın** özelliğidir,
 bölgede geçirilen sürenin değil. Diğer iki okuma yanlış değildir; biri ikamet
@@ -2317,6 +2318,17 @@ onu doğrulamış, [30] ise doymuş süreyi bir kat etme süresi olarak değil,
 engelde depolanan alanın boşalma süresi olarak okumuştur. Yukarıdaki tablo o
 sonucun bu geometrideki karşılığıdır. Bu çalışmanın kendi katkısı doyumun
 varlığı değil, doymuş gecikmenin ne kadar küçültülebileceğidir (Bölüm 4.1.6).
+
+**Aynı soruyu iki engelli hâlde de sordular ve kapatamadılar.** [41] iki ardışık
+engel arasındaki açıklığın da gecikmeye girmemesini bekler, ve [42] bunu optik
+çift bariyerde beş ayrı açıklıkta ölçer. Sonuç tartışmalıdır. [43] ölçülen
+niceliğin bir kat etme süresi değil kavite ömrü olduğunu savunur; [44] ile [45]
+bağımsızlığın kendisini reddeder.
+
+Bu metnin hiçbir sonucu o tartışmaya dayanmaz. Buradaki hesap tek bir bölgenin
+kalınlığını konu alır, ve öte tarafta kat edilen mesafe gecikmeye değil ona
+karşı çalışan terime girer. Kayıt, aynı yöne bakan bir soruyu açık olarak
+göstermek içindir.
 
 **İkincisi ve bu modelin aleyhinedir, dönüş anı kalınlığı unutur.** Bir
 birimlik ara bölgeyle sekiz birimlik ara bölge parçacığı Bölge I saatinde **aynı
@@ -2552,7 +2564,7 @@ taraf mesafesi dışarıdan oynatılır. Nötr bir durumda bu ayar yoktur, çün
 yükle birlikte sıfırlanır.
 
 Ayarın bir tabanı vardır. Bedel frekansta tek düze değildir: düşer, en küçük
-değerine ulaşır ve yeniden yükselir. Sınanan yapılanmada taban $1{,}460405$
+değerine ulaşır ve yeniden yükselir. Sınanan yapılanmada taban $2{,}920810$
 değerinde ve $-0{,}0395$ potansiyelinde bulunur. Dolayısıyla potansiyelin satın
 aldığı şey keyfî ölçüde ucuz bir yolculuk değil, **en ucuz noktaya ayarlanma**
 olanağıdır ve kazanç bedelin yüzde beşinin altında kalır.
@@ -3840,9 +3852,10 @@ dönüşüm çarpanı ışık hızıdır. Bir metre yolculuk $3{,}34$ nanosaniye
 | $1$ dakika | $1{,}80 \times 10^{10}$ m |
 | $1$ yıl | $9{,}46 \times 10^{15}$ m, bir ışık yılı |
 
-Sınanan sürücüde, yani $1{,}5 \times 10^{24}$ rad/s değerinde, geçişin borcu
-$2{,}7307 \times 10^{-24}$ s olarak çıkar. Bu borcu kapatan öte taraf mesafesi
-$8{,}1864 \times 10^{-16}$ m değerindedir, yani protonun kendisinden küçüktür.
+Sınanan sürücüde, yani $1{,}5 \times 10^{24}$ rad/s değerinde, gidiş dönüşün
+borcu $5{,}4614 \times 10^{-24}$ s olarak çıkar. Bu borcu kapatan öte taraf
+mesafesi $1{,}6373 \times 10^{-15}$ m değerindedir, yani protonun birkaç
+yarıçapı kadardır.
 Borç, ölçülmeye değer herhangi bir ilerlemenin yanında ihmal edilir; gereken
 mesafe pratikte ilerleme ile ışık hızının çarpımıdır.
 
@@ -4145,3 +4158,19 @@ tarafından yakalanmıştır, ki bir simülasyonun varlık nedeni budur.
 40. ATLAS Collaboration. *Search for new phenomena in events with an energetic
     jet and missing transverse momentum in $pp$ collisions at
     $\sqrt{s} = 13$ TeV*. Phys. Rev. D **103** (2021) 112006. arXiv:2102.10874
+
+**İki engelli hâl ve ona yöneltilen itirazlar**
+
+41. V. S. Olkhovsky, E. Recami, G. Salesi. *Superluminal tunneling through two
+    successive barriers*. Europhys. Lett. **57** (2002) 879.
+42. S. Longhi, P. Laporta, M. Belmonte, E. Recami. *Measurement of superluminal
+    optical tunneling times in double-barrier photonic band gaps*. Phys. Rev. E
+    **65** (2002) 046610.
+43. H. G. Winful. *Apparent superluminality and the generalized Hartman effect
+    in double-barrier tunneling*. Phys. Rev. E **72** (2005) 046608; erratum
+    Phys. Rev. E **73** (2006) 039901.
+44. H. P. Simanjuntak, P. Pereyra. *On the generalized Hartman effect
+    presumption in semiconductors and photonic structures*. Nanoscale Res.
+    Lett. **8** (2013) 145.
+45. S. Kudaka, S. Matsumoto. *A mathematically rigorous approach raises
+    questions concerning the generalized Hartman effect*. arXiv:1105.2159

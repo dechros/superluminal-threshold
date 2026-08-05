@@ -58,8 +58,7 @@ namespace slm
             return TraversalClocks::semiclassicalTime(kind, omega, c, mu, transverseSquared,
                                                       thickness);
         case Route::Wave:
-            return 0.5 * TwoCrossings::returnDelay(kind, omega, c, mu, transverseSquared,
-                                                   thickness);
+            return TwoCrossings::returnDelay(kind, omega, c, mu, transverseSquared, thickness);
         case Route::Amplitude:
             return DwellTime::dwellTime(kind, omega, c, mu, transverseSquared, thickness);
         }
@@ -91,8 +90,7 @@ namespace slm
         {
             return std::numeric_limits<double>::infinity();
         }
-        const double claimed =
-            thresholdFromRoute(route, kind, centre, c, mu, transverseSquared, thickness);
+        const double claimed = reading(route, kind, centre, c, mu, transverseSquared, thickness);
         return std::abs(claimed - measured) / std::abs(measured);
     }
 
