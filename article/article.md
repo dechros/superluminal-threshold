@@ -213,7 +213,8 @@ edilen yedi adres.
 
 Aşağıdaki bölümler detaydır, ve hepsi aynı türdendir: omurganın bir adımına
 yöneltilebilecek bir soruyu karşılarlar. Hiçbiri anlatıyı ilerletmez; her biri
-İki tablo **ayrıktır**: hiçbir adres ikisinde birden geçmez. Omurga bölümlerinin
+bir soruyu kapatır. İki tablo **ayrıktır**: hiçbir adres ikisinde birden
+geçmez. Omurga bölümlerinin
 bir kısmının alt bölümleri aşağıda görünür, çünkü bir bölüm sonucu taşırken onun
 bir alt bölümü yalnızca bir itirazı karşılayabilir.
 
@@ -466,12 +467,13 @@ kendisidir: Bölge I'in zamanı ve Bölge II'nin tek uzay yönü.
 **Sonuç.** Yukarıda yazılan $D$ sekizliden biridir ve **ileri gönderen**
 ailededir. Bu metnin sonucunu taşıyan hesaplar ise **geri taşıyan** eşi
 üzerinde yürür, yani $SD$ üzerinde; $S$ sekizliyi kendi üzerine gönderdiğinden
-o eş de sekizliden biridir ve üç koşulun tamamını sağlar. Aileyi seçmek bir
-seçimdir, üç koşulun bir sonucu değildir. Aileler arasında seçim yapan hiçbir şey burada
-hesaplanmamaktadır ve iki aileyi ayıran dönüşüm iki tarafın metriğinin de
+o eş de sekizliden biridir ve üç koşulun tamamını sağlar. Aileyi seçmek bu
+metnin kararıdır, üç koşulun bir sonucu değildir. Aileler arasında seçim yapan
+hiçbir şey burada hesaplanmamaktadır ve iki aileyi ayıran dönüşüm iki tarafın
+metriğinin de
 izometrisi olduğundan, **seçim geometrik değildir**. Bölüm 9.4 aynı şeyi başka
-yerde söyler: orada da ayrımın iki yakası arasında metriğin bir tercih yapmadığı
-gösterir. Seçimi her iki yerde de metrik dışında bir şey yapar.
+yerde söyler: orada da ayrımın iki yakası arasında metriğin bir tercih
+yapmadığını gösterir. Seçimi her iki yerde de metrik dışında bir şey yapar.
 
 ### 4.1.1 Sözlük katsayısının ispatı
 
@@ -504,8 +506,8 @@ oynadığını sabitlemez.
 **Bu bölümün tek başına meşru kılmadığı.** Yukarıdakilerin hepsi öte taraf yer
 değiştirmeleri hakkındadır. Bir saçılma fazından okunan gecikme bunlardan biri
 değildir; dolayısıyla o gecikmeyi bu yer değiştirmelerle toplamak yalnızca
-buradan çıkmaz. Toplama ayrı bir sonuçtur ve Bölüm 4.1.2'de eşlenik değişkenler
-üzerinden türetir. Ayrım kasten keskin durur: silikleştirilirse iki
+buradan çıkmaz. Toplama ayrı bir sonuçtur; Bölüm 4.1.2 onu eşlenik değişkenler üzerinden
+türetir. Ayrım kasten keskin durur: silikleştirilirse iki
 ayrı sonuçtan biri, yalnızca ifade biçimiyle diğerinin doğal sonucu gibi
 görünür.
 
@@ -648,7 +650,8 @@ $-0{,}382878$, $-1{,}629242$, $-8{,}286587$. Kalıntının işareti negatiftir, 
 dönüş düz rotaya göre saati **geriye** taşır.
 
 **Kalıntının değeri ve bedeli.** Aynı hiperbolik kosinüs, Bölge I'de sıradan bir
-Lorentz dönüşümünün bir zaman aralığına uyguladığı çarpana karşılık gelir. Kalıntı bu yüzden
+Lorentz dönüşümünün bir zaman aralığına uyguladığı çarpana karşılık gelir.
+Kalıntı bu yüzden
 bilinen bir genleşmenin öte taraftan görünüşüdür, bağımsız bir etki değildir, ve
 bu bölüm onu böyle kaydeder. Bedelini de hesap verir: sıfırdan farklı
 hızlılıkla bileşke alınan geçiş metrik bağıntısını korur, yani kabul edilebilir
@@ -826,7 +829,7 @@ dolayısıyla $SO(3)$ elemanı değildir. Bölüm 16.7 bunu hesaplar.
 
 Bu bölüm tek bir fark taşır: kapanma bozulmasını hangi katmanın ürettiğini
 ayrıştırır. $D$ kapalıdır, $B$ değildir. [3]'te sorun bu biçimde ortaya konmaz,
-çünkü orası zaten kapalı bir grup inşa eder.
+çünkü o çalışma zaten kapalı bir grup inşa eder.
 
 ---
 
@@ -990,7 +993,7 @@ sonlu kalınlıkta ise geçiş bölgesine yayılmış etkin bir gerilim olarak d
 gerekir: geçişe izin veren seçim, aynı zamanda yüzeye bir madde katmanı koyan
 seçimdir. Katmanın genel formülasyonu [17]'dedir: imza değiştiren bir zarın
 dağılımsal gerilimi, imzanın değiştiği yüzeyin zamansal olamaması da dahil olmak
-üzere orası konuyu tam olarak ele alır. Buradaki hesap onun bu geometrideki
+üzere o çalışma konuyu tam olarak ele alır. Buradaki hesap onun bu geometrideki
 sayısal karşılığıdır.
 
 Katmanın gücü, imzanın döndüğü mesafeyle ters orantılıdır. Hesaplanan değerler:
@@ -1250,7 +1253,7 @@ değişiminde kanonik Einstein denklemleri diye bir şey yoktur, seçim yapılma
 zorundadır; [8] aynı noktayı yineleyip herhangi bir seçimi "asıl" denklemler
 diye adlandırmanın retorik olduğunu söyler.
 
-Yukarıdaki $\pi|_\Sigma = 0$ sonucu **güçlü** koşuldur. Aynı sonuç, aynı
+Yukarıdaki $\pi|_\Sigma = 0$ sonucu **güçlü** koşuldur. Aynı sonucu, aynı
 yöntemle, [4] daha önce elde eder: orada Klein-Gordon alanı imza
 değiştiren bir arka planda ele alınır ve eklem koşulu, alan denklemlerindeki
 Dirac dağılımının katsayısı olarak $\phi' \delta = 0$ biçiminde **türetilir**,
@@ -1266,8 +1269,8 @@ türetim aynı ailenin dört boyutlu ve kütleli üyesidir; yeni olan koşulun k
 değil, hangi geçiş profillerinin onu sağlayabildiğidir (Bölüm 5.5).
 
 Bu çizgi tartışmalıdır: [24] koşulun verdiği çözüm sınıfını reddeder, [23] onu
-savunur. Aşağıdaki saçılma hesabı seçimin ne kadar belirleyici olduğunu ölçmek
-için durur, ve tartışmanın hangi tarafında durulduğunu değiştirmez.
+savunur. Aşağıdaki saçılma hesabı seçimin ne kadar belirleyici olduğunu ölçer,
+ve tartışmanın hangi tarafında durulduğunu değiştirmez.
 
 Seçimin ne kadar belirleyici olduğunu ölçmek için $\Sigma$ üzerinde bir mod
 saçılması kurulur. Normal koordinat $\xi$, Bölge I $\xi<0$, Bölge II $\xi>0$:
@@ -1365,7 +1368,8 @@ Bölüm 5.4 ise geçişi kalınlığı $d$ olan bir katmana sıkıştırır ve g
 $1/d$ ile gittiğini bulur; o güç, buradaki sürekli eğriliğin sıfır kalınlık
 limitinde aldığı biçimdir. Dolayısıyla "katman" sözcüğü Bölüm 5.4 ile Bölüm
 5.6'da dağılımsal bir terimi değil, geçiş bölgesinin sonlu kalınlıkta taşıdığı
-etkin gerilimi adlandırır. Bölüm 5.6'nın enerji koşulu hükmü o etkin gerilime bakar ve sonlu kalınlıkta da
+etkin gerilimi adlandırır. Bölüm 5.6'nın enerji koşulu hükmü o etkin gerilime
+bakar ve sonlu kalınlıkta da
 ayakta kalır; kaybolan şey yalnızca terimin dağılımsal olması.
 
 Bu, modelin yerçekimi tarafına atılmış ilk adımdır ve sınırlıdır: Einstein
@@ -1463,8 +1467,8 @@ Yukarıdaki hesap sönüm katsayısını dilim boyunca sabit almaktadır. Gerçe
 geçişte katsayı konuma bağlıdır, ve o zaman şu sorulur: geçen şeyi profilin
 **biçimi** mi belirler, yoksa yalnızca **integrali** mi?
 
-Beş profil integralleri eşit tutarak yarışır: düz, üçgen, yarım
-sinüs, plato ve çarpık. Biçim farkı gerçektir ve hesaba girer: kenara yakın
+Beş profil, integralleri eşit tutan bir karşılaştırmaya girer: düz, üçgen,
+yarım sinüs, plato ve çarpık. Biçim farkı gerçektir ve hesaba girer: kenara yakın
 yerde biçimlendirilmiş profil düz olanın dörtte birinden azdır, merkezde ise
 belirgin biçimde üstündedir. Ayrıca bir uyarı olarak, üçgen ile düz profil bir
 iç noktada tam olarak kesişir; tek bir noktada yapılan bir karşılaştırma hiçbir
@@ -1655,8 +1659,8 @@ yönelimin kendisi öte tarafta ayar fazlalığıdır; fiziksel olan tek şey gi
 çıkış arasındaki **bağıl** dönmedir. Üç sınıf ayırt edilir: dönme yok, kısmi
 dönme, ve tam ters çevirme.
 
-Üç çarpı üç, dokuz hücrelik bir tablo. Her hücrenin bu tarafta ne göründüğü
-Bölüm 16 hücreleri tek tek hesaplar.
+Üç çarpı üç, dokuz hücrelik bir tablo. Her hücrenin bu tarafta ne göründüğünü
+Bölüm 16 tek tek hesaplar.
 
 ### 9.6 Yönü taşıyan nicelik ve iki entropi ölçüsü
 
@@ -1973,8 +1977,8 @@ Bölüm 8 geçirgenliğin moda bağlı olduğunu vermektedir. Bir paket birçok 
 oluştuğuna göre, eşik paketin bazı bileşenlerini diğerlerinden daha çok geçirir.
 Geçen şey, gelenin sönümlenmiş bir kopyası değil, **başka bir dağılımdır**.
 
-Geçen ağırlık oranı şu değerleri alır. $\mu = 1$, dilim kalınlığı $d = 1$ ve paket
-merkezi $k_0 = 2$ için:
+Geçen ağırlık oranı, $\mu = 1$, dilim kalınlığı $d = 1$ ve paket merkezi
+$k_0 = 2$ için şu değerleri alır:
 
 | Paket genişliği $\sigma$ | Geçen ağırlık oranı |
 | ------------------------ | ------------------- |
@@ -2191,7 +2195,8 @@ yayılan kanal bulunduğunda, uzamsal olarak bakışımsız bir engelden geçirg
 soldan ve sağdan giriş için aynıdır. Teorem zamanda tersinirlik ile birimsellikten
 çıkar.
 
-Bu sonucu burada kurulmuş profiller sınar; hiçbir yer onu kabul olarak almaz. Çarpık
+Bu sonucu burada kurulmuş profiller sınar; bu metin onu bir kabul olarak
+almaz. Çarpık
 profil gerçekten bakışımsızdır, ve geçirgenlik iki yönde
 $4{,}9096125448 \times 10^{-3}$ olarak eşit çıkar; fark $6{,}9 \times 10^{-18}$
 düzeyinde kalır. Geçişin şekli yönü yanlı kılmaz.
@@ -2492,8 +2497,8 @@ kadar yük bulunduğu sorusu, yakın tarafta sorulan soruyla aynı soru değildi
 ### 15.6 Yükün zamanlamaya katkısı ve potansiyelin ayar aralığı
 
 Yük, zamanlamayı kendi başına değiştirmez. Uygulanan potansiyel sıfır olduğunda
-yükün beş katına çıkarılması gidiş dönüş okumasını oynatmaz, ve bu üç okumanın
-hepsinde ayrı ayrı sınar.
+yükün beş katına çıkarılması gidiş dönüş okumasını oynatmaz, ve kod bunu üç
+okumanın hepsinde ayrı ayrı sınar.
 
 Yükün getirdiği şey bölge dışından işleyen bir ayardır. Minimal bağlaşım etkin
 frekansı yük ile potansiyelin çarpımı kadar kaydırır, dolayısıyla gereken öte
@@ -2590,7 +2595,8 @@ enerjiyle ileri giden bir karşıparçacıktan ayırt edilemez. Yukarıdaki hesa
 ilkeyi doğrulamakta, kurmamaktadır; ilke 1967'ye aittir. Buradaki hesap ayırt
 edilemezliğin **hangi nicelikten** çıktığını gösterir. İşaret, çıkış yüzünü
 belirleyen vektörün aynı bileşenidir. Dolayısıyla "hangi yüz" ile "hangi işaret"
-bağımsız iki soru değildir. Ayırt edilemezliğin nerede kırıldığı bu çalışmanın kapsamı dışındadır.
+bağımsız iki soru değildir. Ayırt edilemezliğin nerede kırıldığı bu çalışmanın
+kapsamı dışındadır.
 
 **Çekince.** Bu bölümde hesaplanan şey, dispersiyon bağıntısının iki dalı da
 kabul ettiği ve yönelim yönünün geçiş dalga sayısını değiştirmediğidir. "Öte
@@ -2850,8 +2856,9 @@ ve momentum $(1,2,3)$ için o tayf **üç** değerlidir.
 
 Sürekli bir küme, üç elemanlı bir kümeye düşürülmektedir. Bu düşme, Bölüm
 1.10'un dokuzuncu maddesinin, yani öte taraftaki yönelimin dönüş olayının
-koordinatlarına ancak bir kısmıyla ulaşmasının somut karşılığıdır: kaybolan şey, parçacığın öte tarafta izlediği
-yolun kendisidir. Geriye kalan, o yolun iki uç noktası arasındaki bileşke
+koordinatlarına ancak bir kısmıyla ulaşmasının somut karşılığıdır: kaybolan şey,
+parçacığın öte tarafta izlediği yolun kendisidir. Geriye kalan, o yolun iki uç
+noktası arasındaki bileşke
 dönmenin nicelenmiş izidir.
 
 **Bağlantının özeti.**
@@ -2884,9 +2891,9 @@ Tek yönlü koordinatın iki bölgede **ayna yerlerde** durması bu sözlüğün
 ifadesidir: Bölge I'in zamanı ile Bölge II'nin tek uzay ekseni aynı
 koordinattır, ve ikisinde de yön seçilemez.
 
-"Tek yönlü" ifadesinin içindeki iki ayrı iddia, yani yönlendirilebilirlik ile
-ilerleme zorunluluğu, Bölüm 9.3'te ayrılmış ve yalnızca birincisinin
-hesaplandığını orası gösterir.
+"Tek yönlü" ifadesinin içindeki iki ayrı iddiayı, yani yönlendirilebilirlik ile
+ilerleme zorunluluğunu, Bölüm 9.3 ayırır ve yalnızca birincisinin hesaplandığını
+gösterir.
 
 Bu ifade Bölüm 4.1.3'ün sonucuyla nasıl bir arada durur: o da orada yazılı. Yön
 seçilemez, çünkü cisim o eksende geri dönemez. Dönüş anının işareti ise cismin
@@ -2964,8 +2971,8 @@ biri kendi üretecini taşır ve bu evrimler ancak zamanlar uzayındaki taşıma
 yoldan bağımsız olması hâlinde tutarlıdır. Bu koşul, bileşenleri üreteçlerin
 ikişerli komütatörleri olan bir eğriliğin sıfırlanmasını gerektirir. Ölçüt bu
 çalışmaya ait değildir: çok zamanlı dalga fonksiyonları için [18] ve [19]'da
-kurulmuş, ikincisinde genel etkileşim potansiyelleri için tutarlılığın tam
-koşulu olarak çıkar. [18] ayrıca burada önemli olan ayrımı yapar: çok
+kurulmuştur; ikincisi onu genel etkileşim potansiyelleri için tutarlılığın tam
+koşulu olarak verir. [18] ayrıca burada önemli olan ayrımı yapar: çok
 zamanlı bir betimleme, birden çok zamansı boyut demek değildir. Burada
 uygulanan, o ölçütün kendisidir. Eğrilik sıfırsa yol hiçbir bilgi taşımaz ve tek
 zamana indirgeme belirsizlik içermez; sıfır değilse kapalı bir yol durumun
@@ -3219,7 +3226,8 @@ kurulamayacağı ayrı ve meşru bir sorudur.
 
 **İki soru birbirinden ayrıdır.** Birincisi hangi geçiş eşlemesinin
 gerçekleştiğidir. Bu soru, Bölge I'in zaman yuvasıyla öte tarafın ayrıcalıklı
-uzay eksenini **birlikte** ters çeviren dönüşüme bakar, ve o dönüşüm ayrıca incelenir. Buradaki soru ise eşleme verilmişken **yolculuğun yönüdür** ve
+uzay eksenini **birlikte** ters çeviren dönüşüme bakar, ve o dönüşüm ayrıca
+incelenir. Buradaki soru ise eşleme verilmişken **yolculuğun yönüdür** ve
 yalnızca geçiş ekseninin ters çevrilmesine bakar. İşaret dizileri olarak
 yazıldığında birincisi $(-1,-1,+1,+1)$, ikincisi $(+1,-1,+1,+1)$'dir; çarpımları
 $(-1,+1,+1,+1)$, yani Bölge I zamanının saf ters çevrilmesidir. İki işlem farklı
@@ -3255,7 +3263,7 @@ olağan sınıflandırmasında karşılıklılık, zamanda tersinme ve uzaysal e
 Burada yapılan, o sınıflandırmanın bu geçişe uygulanmasıdır.
 
 **Burada bir sonuç iddiası yok.** Öte tarafın tek bir uzay ekseni var, ve
-yukarıdaki çift geçişten türemez; elden gelir. Bu çalışma böyle bir kanal
+yukarıdaki çift geçişten türemez; bu bölüm onu elle yazar. Bu çalışma böyle bir kanal
 yapısı **sağlamıyor**. Yani bu alt bölüm bir yön verme yöntemi değil; yön
 vermenin inşa edilmesi gereken **tek yerini** işaret ediyor.
 
@@ -3747,7 +3755,7 @@ $$m_{\max} = \frac{\hbar \omega_0}{c^2}$$
 Durumun durgun enerjisi, bandı kuran enerji kuantumunun altında kalmak
 zorundadır. Aşağıdaki tablo bu aritmetiği ölçek ölçek verir.
 
-| Sürücü | Kuantum | En büyük kütle |
+| Bandı kuran kuantum | Enerjisi | En büyük kütle |
 | -------------------- | ---------------------- | ------------------------------------- |
 | Görünür lazer | $3{,}16 \times 10^{-19}$ J | $3{,}52 \times 10^{-36}$ kg, $1{,}97$ eV |
 | Sert X-ışını | $1{,}58 \times 10^{-15}$ J | $1{,}76 \times 10^{-32}$ kg, $9{,}87$ keV |
