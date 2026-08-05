@@ -3,6 +3,10 @@
 #include "boundary/JunctionScattering.h"
 #include "boundary/SlabTunnelling.h"
 #include "charge/ChargedRoundTrip.h"
+#include "boundary/ProfiledBarrier.h"
+#include "intermediate/ThresholdOptimum.h"
+#include "particle/AsymmetricFaces.h"
+#include "scan/PermutationScan.h"
 #include "core/Report.h"
 #include "core/Section.h"
 #include "critique/ArticleSync.h"
@@ -46,6 +50,10 @@ namespace
         std::vector<std::unique_ptr<slm::Section>> sections;
         sections.push_back(std::make_unique<slm::SignatureInvolution>());
         sections.push_back(std::make_unique<slm::IntermediateRegionSection>());
+        sections.push_back(std::make_unique<slm::PermutationScan>());
+        sections.push_back(std::make_unique<slm::ProfiledBarrierSection>());
+        sections.push_back(std::make_unique<slm::ThresholdOptimumSection>());
+        sections.push_back(std::make_unique<slm::AsymmetricFacesSection>());
         sections.push_back(std::make_unique<slm::JunctionScattering>());
         sections.push_back(std::make_unique<slm::JunctionFamilySection>());
         sections.push_back(std::make_unique<slm::SurfaceLayerSection>());
