@@ -3485,8 +3485,9 @@ bütünüyle öte tarafta kat edilmektedir.
 **Bedeli aynı nefeste.** Bu yolculukta parçacık $1{,}83 \times 10^{-41}$
 ağırlıkla dönmektedir. Ne var ki bu ağırlık bir yasak değildir: doyum derinliği
 sabit tutulup enerji yükseltildiğinde gereken mesafe $2{,}4343$'ten $0{,}9895$,
-$0{,}3101$ ve $0{,}0980$'a inerken dönen ağırlık $4{,}293312 \times 10^{-3}$
-değerinde **kıpırdamamaktadır**. Ödenen şey enerji ve daha ince bir bölgedir.
+$0{,}3101$ ve $0{,}0980$'a inerken tek geçişin genliği
+$4{,}293312 \times 10^{-3}$, dolayısıyla gidiş dönüşün ağırlığı
+$3{,}397579 \times 10^{-10}$ değerinde **kıpırdamamaktadır**. Ödenen şey enerji ve daha ince bir bölgedir.
 
 **Sonucun ifadesini** Bölüm 1.1'in "Ana sonuç" paragrafı verir ve bu bölüm
 onu tekrarlamaz. Bu bölüm o ifadeyi eklemez; yukarıdaki yedi halkanın onu nasıl
@@ -3703,9 +3704,9 @@ Dört engel vardır ve türleri şöyledir:
 
 **Hızların fiyatı.** Bölüm 19'un yürüttüğü gidiş dönüşün ağırlığında tek bir
 olay için $5{,}5 \times 10^{40}$ deneme gerekir. Enerji yükseltmek bunu
-**değiştirmez**: doyum derinliği sabit tutulduğunda ağırlık, toplam enerji
-dokuzdan elli bine çıkarken $4{,}29 \times 10^{-3}$ değerinde kalmaktadır. Bu
-bir umut değil, hesaplanmış bir sonuçtur.
+**değiştirmez**: doyum derinliği sabit tutulduğunda gidiş dönüşün ağırlığı,
+toplam enerji dokuzdan elli bine çıkarken $3{,}397579 \times 10^{-10}$
+değerinde kalır. Bu bir umut değil, hesaplanmış bir sonuçtur.
 
 **Enerjinin satın aldığı şey mesafedir.** Aynı aralıkta öte tarafta kat edilmesi
 gereken mesafe $2{,}4343$'ten $0{,}0980$'a inmektedir. Yani iki talep

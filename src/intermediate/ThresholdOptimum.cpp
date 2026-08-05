@@ -230,6 +230,21 @@ namespace slm
                      ThresholdOptimum::delayFallsWithoutBound(mu, c, turned) &&
                          ThresholdOptimum::amplitudeHoldsAtFixedDepth(mu, c, turned, 1e-3));
 
+        {
+            const double normal = ThresholdOptimum::optimalNormalPart(6.84, turned);
+            const double single =
+                ThresholdOptimum::amplitudeAtDepth(normal, 6.84 - normal, mu, c, turned, 6.0);
+            const double weight = single * single * single * single;
+            report.check(
+                std::format("  a round trip is two crossings, so its weight is the fourth "
+                            "power of that amplitude: {:.6e}",
+                            weight),
+                weight > 0.0 && weight < single * single);
+            report.checkNear("and the weight quoted for the fixed depth is that number "
+                             "rather than the amplitude, which are four orders apart",
+                             weight - 3.397579e-10, 1e-15);
+        }
+
         report.subsection("The saturation the whole comparison assumes, checked");
         for (double each : {6.84, 50.0, 500.0, 5000.0})
         {
