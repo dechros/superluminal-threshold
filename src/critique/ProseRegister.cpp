@@ -690,7 +690,13 @@ namespace slm
     {
         const std::regex pastPassive("(mış|miş|muş|müş)t(ı|i)r$");
         const std::regex continuous("(makta|mekte)d(ı|i)r$");
-        const std::regex copula("(dır|dir|dur|dür|tır|tir|tur|tür)$");
+        // The copula in its -tir shape attaches only after a voiceless
+        // consonant, so a word ending in those letters after a vowel is not a
+        // copula at all: it is a verb whose stem ends in t carrying the aorist.
+        // "üretir" and "türetir" are that shape, and counting them as copulas
+        // moves several points of the mix into the wrong column.
+        const std::regex copula("(dır|dir|dur|dür)$|"
+                                "([pçtkfhsş])(tır|tir|tur|tür)$");
         const std::regex aorist("(ır|ir|ur|ür|ar|er)$");
 
         int past = 0;
