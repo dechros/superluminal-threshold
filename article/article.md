@@ -556,14 +556,14 @@ $$\left|\frac{\mathrm{d}\kappa}{\mathrm{d}\omega}\right| = 1$$
 
 sekiz geçişin tamamında **tam olarak** sağlanır. Bu makalede kullanılan eşleme
 için değer $+1$'dir. İşaret her dalda o dalın kendi zaman işaretine eşittir:
-koordinat sözlüğünün atadığı yön ile fazın ürettiği yön aynı yöndür, ve bu
-eşitliği hiçbir yerde varsaymaz; sekiz dalın hepsinde ayrı ayrı hesaplar.
+koordinat sözlüğünün atadığı yön ile fazın ürettiği yön aynı yöndür. Bu eşitlik
+bir kabul değildir; kod onu sekiz dalın hepsinde ayrı ayrı hesaplar.
 
 İkinci bir yol aynı sonucu verir: Bölge I kütle kabuğu üzerinde
 frekansa göre merkezî fark alınarak. Dört kütle değeri ($\mu = 0$, $0{,}25$,
 $1$, $9$), üç frekans ve sekiz geçiş üzerinde sayısal türev cebirsel değeri
-dokuz basamağa kadar üretir. Enine bileşenlere frekansta kasten **lineer
-olmayan** bir bağımlılık verilmiştir; sonuçta görünmemeleri bu yüzden bir ihmal
+dokuz basamağa kadar üretir. Enine bileşenler frekansta kasten **lineer
+olmayan** bir bağımlılık taşır; sonuçta görünmemeleri bu yüzden bir ihmal
 değil, hesaplanmış bir olgudur.
 
 **Dispersiyon bağıntısı neden girmiyor.** Aynı katsayıya bir grup hızı
@@ -2044,7 +2044,8 @@ paketin geçiş sırasında dağılması ayrı bir olgudur.
 
 Nokta cisim katmanı Bölge I'de tanımlıdır. Bölge II'de "konum" kavramı tek bir
 uzay ekseni olan $r$ üzerinde daralır ve üç zaman yönü boyunca karşılığı yoktur.
-Öte tarafta parçacığın nerede olduğu sorusunu bu nedenle Bölüm 10 karşılar.
+Öte tarafta hareketin ne anlama geldiğini bu nedenle Bölüm 10 karşılar. Konumun
+kendisi ise orada da tanımlı değildir; Bölüm 18.9 bunu reddeder.
 
 ### 11.6 Geçiş süresi okumalarının ölçümle karara bağlanması
 
@@ -2265,8 +2266,8 @@ Bunun iki sonucu vardır ve ikisi de önemlidir.
 
 **Birincisi, geçiş ışıktan hızlı görünür.** Sekiz birim kalınlıkta gecikme
 ışığın alacağı sürenin beşte biri kadardır. Bu, bu modelde bir uyarımın ışıktan
-hızlı **yayılması** anlamına gelmez; Bölüm 10.2'de grup hızının daima $c$'nin
-altında kalır. Anlamı, geçen paketin tepe noktasının beklenenden
+hızlı **yayılması** anlamına gelmez; Bölüm 10.2 grup hızının daima $c$'nin
+altında kaldığını hesaplar. Anlamı, geçen paketin tepe noktasının beklenenden
 erken çıkmasıdır ve bu, engel geçişlerinde bilinen bir olgudur.
 
 **İkincisi, ve bu modelin aleyhinedir, dönüş anı kalınlığı unutur.** Bir
