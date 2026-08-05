@@ -1640,8 +1640,8 @@ başlangıç koşulu için **etkin tek zamanlı** bir evrim verir. Kuantum taraf
 düzey aralıkları, toplam süre ve $\hbar$ içeren genelleştirilmiş bir belirsizlik
 bağıntısı çıkar. Bu, üç zamanlı Bölge II'nin dışarıdan bakıldığında tek zamanlı
 görünebileceği anlamına gelir. [14] buradaki formülasyondan bir noktada ayrılır: orada
-evrim üniter ve olasılık koruyan sayılır. Bölüm 9.4 ise Bölge II'de o talebin
-dayandığı yapının bulunmadığını gösterir. Yine de bu itiraz açık bir sorudur;
+evrim üniter ve olasılık koruyan sayılır. Yukarıdaki hesap ise Bölge II'de o
+talebin dayandığı yapının bulunmadığını gösterir. Yine de bu itiraz açık bir sorudur;
 model onu kendi lehine kapatmamıştır.
 
 ### 9.5 Yolculuğun tanımı ve davranış ihtimalleri
@@ -2848,9 +2848,9 @@ edilir. Örnek olarak, çeyrek turluk bir dönme $1{,}1102$ radyan süpürür. B
 karşılık buraya ulaşan sapma, Bölüm 16.5'in nicelenmiş tayfının bir elemanıdır
 ve momentum $(1,2,3)$ için o tayf **üç** değerlidir.
 
-Sürekli bir küme, üç elemanlı bir kümeye düşürülmektedir. Bu düşme, kapsamın
-dördüncü maddesinin, yani "zaman ile mekân rol değiştirirken kaybolan bilgi"
-sorusunun somut karşılığıdır: kaybolan şey, parçacığın öte tarafta izlediği
+Sürekli bir küme, üç elemanlı bir kümeye düşürülmektedir. Bu düşme, Bölüm
+1.10'un dokuzuncu maddesinin, yani öte taraftaki yönelimin dönüş olayının
+koordinatlarına ancak bir kısmıyla ulaşmasının somut karşılığıdır: kaybolan şey, parçacığın öte tarafta izlediği
 yolun kendisidir. Geriye kalan, o yolun iki uç noktası arasındaki bileşke
 dönmenin nicelenmiş izidir.
 
@@ -2978,7 +2978,7 @@ de tam olarak sıfırdır. Kapalı bir yolun holonomisi, yolun uzunluğu ne olur
 olsun kaybolur; $1000$ birimlik yol için de sınanmıştır.
 
 > İçerideki yol, serbest evrim tarafından **kaydedilmez**. Dolayısıyla Bölüm
-> 20.3'te bulunan yönelim bağımlılığının kaynağı ara bölgenin içi olamaz.
+> 17.3'te bulunan yönelim bağımlılığının kaynağı ara bölgenin içi olamaz.
 
 **Eğriliği yüzeyler getiriyor.** İki eşik yüzeyindeki eşleşme, geçiş
 doğrultusunu enine doğrultulara karıştırır ve üreteçler bu karışım altında
@@ -3069,10 +3069,9 @@ geçiş yer değiştirmesi ise yönelime tümüyle kördür.
 ### 18.4 Eşlemenin tanım kümesini sıkıştırması
 
 $312$ durum $158$ farklı olaya gitmektedir. Eşleme birebir değildir; öte
-taraftaki farklı durumlar burada aynı olaya varır. Bu sıkışma, kapsamın "boyut
-değişiminde kaybolan bilgi" maddesinin niceliksel karşılığıdır ve Bölüm
-16.12'deki sapma tayfının sürekliden ayrığa düşmesiyle aynı olgunun bir başka
-görünümüdür.
+taraftaki farklı durumlar burada aynı olaya varır. Bu sıkışma, boyut
+değişiminde kaybolan bilginin niceliksel ölçüsüdür ve Bölüm 16.12'deki sapma
+tayfının sürekliden ayrığa düşmesiyle aynı olgunun bir başka görünümüdür.
 
 ### 18.5 Zaman bileşeni ve kesintisiz bir sinyalle karşılaştırma
 
@@ -3121,10 +3120,12 @@ genlik $d = 32$ için $5{,}2 \times 10^{-32}$'ye çöker. Yukarıdaki $+29{,}074
 bir mesajın ışığı geçtiği anlamına gelmez ve bu çalışma öyle bir iddiada
 bulunmamaktadır.
 
-**Ayrıca tek okuma da değildir.** Aynı genlikten türetilen beş
-okumadan üçü geçişi ışığın üstüne, ikisi altına koyar. Yukarıdaki tablo faz
-okumasıyla kurulmuştur, çünkü sorulan soru dışarıdaki bir dedektörde tepenin ne
-zaman göründüğüdür; ama bu bir seçimdir ve gerekçesi verilmiştir.
+**Ayrıca tek okuma da değildir.** Aynı genlikten türetilen beş okuma vardır ve
+üçü geçişi ışığın üstüne, ikisi altına koyar; ayrım kalınlıkla değişmez.
+Yukarıdaki tablo faz okumasıyla kurulmuştur, çünkü sorulan soru dışarıdaki bir
+dedektörde tepenin ne zaman göründüğüdür. Bu bir seçimdir, ve seçimi kurmayan
+bir hakem Bölüm 11.6'da onu doğrular: yayılan paketin tepesi ölçüldüğünde
+tutan okuma fazdır.
 
 ### 18.7 Eşlemenin kapalı biçimi
 
@@ -3427,11 +3428,11 @@ sabit tutulup enerji yükseltildiğinde gereken mesafe $2{,}4845$'ten $1{,}0100$
 $0{,}3166$ ve $0{,}1000$'a inerken dönen ağırlık $4{,}772425 \times 10^{-10}$
 değerinde **kıpırdamamaktadır**. Ödenen şey enerji ve daha ince bir bölgedir.
 
-**Sonucun ifadesi**, Özet'teki "Ana sonuç" paragrafında verilmiştir ve burada
-tekrarlanmaz. Bu bölüm o ifadeyi eklemez; yukarıdaki yedi halkanın onu nasıl
+**Sonucun ifadesi**, Bölüm 1.1'in "Ana sonuç" paragrafında verilmiştir ve
+burada tekrarlanmaz. Bu bölüm o ifadeyi eklemez; yukarıdaki yedi halkanın onu nasıl
 ürettiğini, ve aşağıdaki tek parçacığın onu nasıl gerçeklediğini gösterir.
 
-**İddianın sınırı**, aynı şekilde Özet'te üç bedel olarak sayılmıştır: genliğin
+**İddianın sınırı**, aynı şekilde Bölüm 1.5'te üç bedel olarak sayılmıştır: genliğin
 küçüklüğü bir büyüklük sorunudur, ve Bölüm 4.1.6 bunun seçilmiş bir çalışma
 noktası olduğunu gösterir. İşaretin seçilebilirliği bir açık sorudur (Bölüm
 9.4). Geçirgen okuma ile yüzey katmanı bir arada duramaz; bu, literatürün güçlü
@@ -3700,7 +3701,7 @@ bağlıdır.
 | ------------------------------------------------------------- | -------------------------------------------------------------------------- |
 | Güçlü ile zayıf eklem koşulu arasındaki tercihin gerekçesi | Bölüm 5.7 ve 4.1; oran koşulu hesaplanmış, sonuç zayıf seçimin aleyhinedir |
 | Geçirgen okumanın daha geniş bir metrik ailesinde temsilcisi | Kapandı, Bölüm 5.7.1 |
-| Geçiş süresinin beş okumasından hangisinin fiziksel olduğu | Kapandı, Bölüm 11.6; yayılan paketin tepesi faz okumasını seçer |
+| Geçiş süresinin beş okumasından hangisinin fiziksel olduğu | Dönüş anını yerleştiren okuma için kapandı, Bölüm 11.6; kalan okumaların neyi ölçtüğü açık |
 | $(2,2)$ ara bölgesinin fiziksel olarak savunulabilirliği | Açık; Bölüm 5.3 onun madde geçirdiğini hesaplar, var olabilirliğini değil |
 | Üç zamanın olasılık korunumu altında tek zamana çökmesi | Bölüm 9.3 |
 | İmza değiştiren arka planda parçacık üretimi | Açık; Bölüm 5.3'te anılan frekans karışımı hesabı bu soruya bakar, bu çalışma bakmaz |
@@ -3736,14 +3737,15 @@ yönlendirilir, ve şart bu yolla dolanılmaz.
 ayarlarıdır, dördüncüsü sonucun kendisidir ve Bölüm 13.8'de gösterildiği üzere
 deneyin asıl güçlüğü oradadır.
 
-### 21.2.2 Sürücünün taşıyabileceği en büyük kütle
+### 21.2.2 Bant merkezinin taşıyabileceği en büyük kütle
 
 Geçiş, bant merkezinin durgun enerjiden kurulan frekansı aşmasını gerektirdiğinden,
-taşınabilecek en büyük kütle sürücünün enerji kuantumuna bağlanır:
+verilen bir bant merkezinin taşıyabileceği en büyük kütle doğrudan yazılır:
 
 $$m_{\max} = \frac{\hbar \omega_0}{c^2}$$
 
-Durumun durgun enerjisi sürücünün tek foton enerjisinin altında kalmak zorundadır.
+Durumun durgun enerjisi, bandı kuran enerji kuantumunun altında kalmak
+zorundadır. Aşağıdaki tablo bu aritmetiği ölçek ölçek verir.
 
 | Sürücü | Kuantum | En büyük kütle |
 | -------------------- | ---------------------- | ------------------------------------- |
@@ -3753,8 +3755,15 @@ Durumun durgun enerjisi sürücünün tek foton enerjisinin altında kalmak zoru
 | $938$ MeV gama ışını | $1{,}50 \times 10^{-10}$ J | $1{,}67 \times 10^{-27}$ kg, proton |
 
 Elektron için $7{,}76 \times 10^{20}$ rad/s, proton için $1{,}43 \times 10^{24}$
-rad/s gerekir. Bugün kullanılabilen sürücüler en hafif yüklü durumun bile
-mertebelerce altında kalır.
+rad/s gerekir.
+
+**Bu tablo dış bir kaynak şartı değildir.** Kütleli bir durumun bant merkezi
+kendi toplam enerjisi bölü indirgenmiş Planck sabitidir, dolayısıyla durgun bir
+proton yukarıdaki satırın istediği frekansta zaten oturur ve her kinetik enerji
+onu yukarı taşır (Bölüm 21.2.8). Tablonun söylediği şey, verilen bir frekansın
+hangi kütleye kadar yer bıraktığıdır; taşınacak kütleyi bir sürücüden istemek
+gerekmez. Dış bir kaynağın frekansı ancak bandı parçacığın kendisi kurmadığında
+şart olurdu, ve bu çalışmanın kurgusunda bandı parçacık kurar.
 
 ### 21.2.3 Kazanılan zaman ile kat edilen mesafe arasındaki kur
 
@@ -3774,7 +3783,6 @@ $2{,}7307 \times 10^{-24}$ s olarak çıkar. Bu borcu kapatan öte taraf mesafes
 $8{,}1864 \times 10^{-16}$ m değerindedir, yani protonun kendisinden küçüktür.
 Borç, ölçülmeye değer herhangi bir ilerlemenin yanında ihmal edilir; gereken
 mesafe pratikte ilerleme ile ışık hızının çarpımıdır.
-
 
 Bir yıl geriye taşınma, öte tarafta bir ışık yılı mesafe kat edilmesini
 gerektirir. Önerinin ölçeği en açık biçimde bu satırda görünür.
