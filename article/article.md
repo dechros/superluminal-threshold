@@ -983,8 +983,10 @@ Bu tablonun kendine ait olan kısmı, dolayısıyla, Kleinian imzanın kendisi d
 Geçirgenlik hikâyenin yarısıdır. Diğer yarısı, geçişin yüzeyde bıraktığı izdir.
 
 Zayıf eklem koşulu seçildiğinde geçiş yüzeyinde dış eğrilik sıfırlanmaz, ve
-sıfırlanmayan bir dış eğrilik gerilim tensöründe dağılımsal bir terime, yani bir
-**madde katmanına** karşılık gelir. Bu, zayıf koşulun bedelidir ve gizlenmemesi
+sıfırlanmayan bir dış eğrilik gerilim tensöründe bir **madde katmanına**
+karşılık gelir. Katman sıfır kalınlık limitinde dağılımsal bir terime iner;
+sonlu kalınlıkta ise geçiş bölgesine yayılmış etkin bir gerilim olarak kalır
+(Bölüm 6.2). Bu, zayıf koşulun bedelidir ve gizlenmemesi
 gerekir: geçişe izin veren seçim, aynı zamanda yüzeye bir madde katmanı koyan
 seçimdir. Katmanın genel formülasyonu [17]'dedir: imza değiştiren bir zarın
 dağılımsal gerilimi, imzanın değiştiği yüzeyin zamansal olamaması da dahil olmak
@@ -1190,18 +1192,18 @@ mertebenin bileşimi olarak veren bir çalışma da yoktur.
 değerlemesinin dönüm noktasındaki davranışını. Mod geçirgenliği ise ayrı bir
 eksende durur: ara bölgenin tipine bağlıdır, ara değerleme profiline değil. İki
 eksen kodda bağımsız. Bu bağımsızlığın fiziksel olarak savunulabilirliği açık
-kalıyor, ve onu açık olarak sayıyor. Geçirgen okumanın daha geniş bir
-geçiş ailesinde ayakta kalıp kalmayacağı da orada açıktır.
+kalıyor, ve Bölüm 21.2 onu açık olarak sayıyor. Geçirgen okumanın daha geniş bir
+geçiş ailesindeki temsilcisi ise yukarıdaki kapalı biçimle bulunmuştur.
 
 ### 5.8 Çekinceler
 
 Üç varsayım vardır.
 
-Yukarıdaki tablo, enine dalga sayısının yönler arasında eşit paylaşıldığını
-varsayar. Parçacık dalga sayısının çoğunu tam da karakter değiştiren yönde
+Bölüm 5.3'ün geçirgenlik tablosu, enine dalga sayısının yönler arasında eşit
+paylaşıldığını varsayar. Parçacık dalga sayısının çoğunu tam da karakter değiştiren yönde
 taşıyorsa Kleinian bölge de kapanır. Kleinian bölgenin açık olması bu nedenle
-mutlak değil, **mod içeriğine bağlıdır**; bu, yukarıdaki mod filtresi
-sonucunun aynı olgunun başka bir yüzüdür.
+mutlak değil, **mod içeriğine bağlıdır**. Bölüm 13.3'ün mod filtresi sonucu
+aynı olgunun başka bir yüzüdür.
 
 Dejenere katman, içeride hiçbir modun yayılamayacağı biçiminde modellenmiştir.
 Gerçek bir dejenere metrik hesabı daha incedir ve tam sıfır vermeyebilir.
@@ -1351,10 +1353,21 @@ yaklaşıldığı** hakkında bir kısıttır: geçiş profilinin tam o noktada 
 olmasını ister. Doğrusal ya da $\tanh$ tipi bir geçiş bunu sağlamaz; $\tanh$ en
 kötüsüdür, çünkü en dik olduğu yer tam geçiş noktasıdır.
 
-Üç profilin hiçbirinde yüzey katmanı doğmaz, çünkü dış eğrilik her üçünde de
-süreklidir. Yani Bölüm 6.1'deki ayrım, gerilim tensöründe dağılımsal bir terim
-olup olmaması meselesi değildir; profilin geçişe teğet gelip gelmediği
-meselesidir.
+Üç profilin hiçbirinde dağılımsal bir yüzey katmanı doğmaz, çünkü dış eğrilik
+her üçünde de süreklidir. Yani Bölüm 6.1'deki ayrım, gerilim tensöründe
+dağılımsal bir terim olup olmaması meselesi değildir; profilin geçişe teğet
+gelip gelmediği meselesidir.
+
+**Bölüm 5.4 ile bunun bağı.** İki hesap aynı geçişin iki idealleştirmesine
+bakar ve sonuçları birbirini yalanlamaz. Burada geçiş sonlu bir aralığa yayılır
+ve profil düzgündür; dış eğrilik süreklidir, dolayısıyla delta terimi yoktur.
+Bölüm 5.4 ise geçişi kalınlığı $d$ olan bir katmana sıkıştırır ve gücün
+$1/d$ ile gittiğini bulur; o güç, buradaki sürekli eğriliğin sıfır kalınlık
+limitinde aldığı biçimdir. Dolayısıyla "katman" sözcüğü Bölüm 5.4 ile Bölüm
+5.6'da dağılımsal bir terimi değil, geçiş bölgesinin sonlu kalınlıkta taşıdığı
+etkin gerilimi adlandırır. Bölüm 5.6'nın enerji koşulu hükmü o etkin gerilim
+hakkındadır ve sonlu kalınlıkta da ayaktadır; kaybolan şey yalnızca terimin
+dağılımsal olması.
 
 Bu, modelin yerçekimi tarafına atılmış ilk adımdır ve sınırlıdır: Einstein
 denklemleri çözülmemiş, yalnızca eklem koşulunun geometrik karşılığı
@@ -1484,14 +1497,6 @@ mertebe olarak belirlemez, yalnızca toplam sönümü belirler. Dolayısıyla B�
 5'in profil ailesi üzerinde yapılan tartışmalar geçirgenliğin mertebesini
 değiştirmez; profilin bağladığı şey, Bölüm 5.6 ile Bölüm 5.7'de görüldüğü gibi,
 katman ve oran koşuludur.
-
-[15] ayrıca bu geometrinin bir **analog gerçeklemesini** verir: anizotropik bir
-yarı iletken ile elektronik bir metamalzeme arasındaki eklemde elektron
-yayılımı, aynı denklemi sağlar. Bu, modelin sınanabilirliği açısındaki temel
-çıkmaza bir alternatif sunar: $v = c$ yüzeyi hazırlanamaz, ancak aynı denklemi
-sağlayan bir malzeme ekleminde ayna davranışı ve tünelleme ölçülebilir. Bunun bu
-modelin bir sınaması sayılıp sayılamayacağı ayrı bir sorudur ve burada karara
-bağlanmamıştır.
 
 ---
 
@@ -1634,10 +1639,10 @@ $1+2$ boyutta Newton'un ikinci yasası tam olarak integre edilebilir, ve her
 başlangıç koşulu için **etkin tek zamanlı** bir evrim verir. Kuantum tarafta ise
 düzey aralıkları, toplam süre ve $\hbar$ içeren genelleştirilmiş bir belirsizlik
 bağıntısı çıkar. Bu, üç zamanlı Bölge II'nin dışarıdan bakıldığında tek zamanlı
-görünebileceği anlamına gelir. Buradaki formülasyondan bir noktada ayrılır: [14]
-evrimin üniter ve olasılık koruyan olmasını ister. Bölge II'de bu
-talebin dayandığı yapının bulunmadığını gösterir. Yine de bu itiraz açık bir
-sorudur; model onu kendi lehine kapatmamıştır.
+görünebileceği anlamına gelir. [14] buradaki formülasyondan bir noktada ayrılır: orada
+evrim üniter ve olasılık koruyan sayılır. Bölüm 9.4 ise Bölge II'de o talebin
+dayandığı yapının bulunmadığını gösterir. Yine de bu itiraz açık bir sorudur;
+model onu kendi lehine kapatmamıştır.
 
 ### 9.5 Yolculuğun tanımı ve davranış ihtimalleri
 
@@ -1709,12 +1714,14 @@ sınıra oturur. Kleinian bu sınıra hiç ulaşmaz; en büyük değeri $0{,}390
 3. Ok, ara bölgenin **tipine ve kalınlığına** bağlıdır; evrensel bir arka plan
  özelliği değildir.
 
-**Ve buradan çıkan itiraz, bu çalışmanın aleyhinedir.** Bölüm 5.7'de oran
-koşulunu geçen tek profilin güçlü koşulu sağlayan, yani yansıtan profil olduğu
-bulunmuştu. Yansıtan bir eşiğin çıktısı tek kanaldır ve bu bölümün ölçüsüne göre
-**hiç entropi üretmez**. Dolayısıyla bu metrik ailesinde geometrik olarak kabul
-edilebilir tek yapılanma, aynı zamanda ok üretmeyen yapılanmadır. Bölüm 5.7'nin
-kaydettiği bağımsızlık burada da geçerlidir: kanal entropisi ara bölgenin
+**Ve buradan çıkan itiraz, bu çalışmanın aleyhinedir.** Bölüm 5.7'nin
+ailesinde oran koşulunu geçen tek profil, güçlü koşulu sağlayan yani yansıtan
+profildir. Yansıtan bir eşiğin çıktısı tek kanaldır ve bu bölümün ölçüsüne göre
+**hiç entropi üretmez**. Dolayısıyla o ailede geometrik olarak kabul edilebilir
+tek yapılanma, aynı zamanda ok üretmeyen yapılanmadır. İtiraz o aileyle
+sınırlıdır: Bölüm 5.7.1 iki mertebeli genel reçetede üç koşulu birden sağlayan
+yapılanmalar bulur, ve orada eşiğin yansıtıcı olması gerekmez. Bölüm 5.7'nin
+kaydettiği bağımsızlık ise burada da geçerlidir: kanal entropisi ara bölgenin
 tipinden hesaplanır, ara değerleme profilinden değil. O bağımsızlığın fiziksel
 gerekçesi gösterilmediği sürece bu bölümün sonuçları da aynı koşula bağlıdır ve
 açık olarak durmaktadır.
@@ -2240,8 +2247,8 @@ frekansta yayılımlı, düşük frekansta söndürücüdür. Öklid bölge içi
 $$\omega^2 < k_T^2\left(1 + \tfrac{2n}{3}\right) + \mu$$
 
 koşuluyla verilir. Yani "ara bölge bir duvar mıdır" sorusunun tek bir cevabı
-yoktur; gelen parçacığın frekansına bağlıdır. Bu, yukarıdaki mod filtresi
-sonucunun aynı olgunun başka bir yüzü olduğunu bir kez daha gösterir.
+yoktur; gelen parçacığın frekansına bağlıdır. Eşik bu nedenle bir duvar değil
+bir **mod filtresidir**, ve metnin başka yerleri bu adla ona geri döner.
 
 ### 13.4 Engel rejiminde gecikmenin doyumu
 
@@ -3677,10 +3684,11 @@ Eskiden bu listede olan "eşikte tam yansımanın akı korunumunun tek çözüm�
 olması" maddesi **çıkarılmıştır**; eşik geçirgen okunduğundan beri o iddia
 taşınmamaktadır.
 
-**kapanan nokta.** İki imza arasındaki sürekli yolun ne kadar
+**Bölüm 5.1'de kapanan nokta.** İki imza arasındaki sürekli yolun ne kadar
 dejenere olmak zorunda olduğu sorusu cevaplandı. Her noktada yalnızca tek bir
 öz-değerin sıfırlandığı bir yol vardır; bedeli, $(2,2)$ imzalı iki zamanlı bir
-ara bölgeden geçmektir. yukarıdaki "geçiş sağlanmaz" sonucu geri çekildi.
+ara bölgeden geçmektir. Daha önce yazılan "geçiş sağlanmaz" sonucu geri
+çekilmiştir.
 
 **Bölüm 8'de daraltılan nokta.** Eşiğin yansıtıcı olması sınırsız bir öte taraf
 varsayar. Sonlu kalınlıkta bir dilim, üstel olarak bastırılmış ama sıfır olmayan
@@ -3693,10 +3701,10 @@ bağlıdır.
 | ------------------------------------------------------------- | -------------------------------------------------------------------------- |
 | Güçlü ile zayıf eklem koşulu arasındaki tercihin gerekçesi | Bölüm 5.7 ve 4.1; oran koşulu hesaplanmış, sonuç zayıf seçimin aleyhinedir |
 | Geçirgen okumanın daha geniş bir metrik ailesinde temsilcisi | Kapandı, Bölüm 5.7.1 |
-| Geçiş süresinin beş okumasından hangisinin fiziksel olduğu | |
-| $(2,2)$ ara bölgesinin fiziksel olarak savunulabilirliği | |
+| Geçiş süresinin beş okumasından hangisinin fiziksel olduğu | Kapandı, Bölüm 11.6; yayılan paketin tepesi faz okumasını seçer |
+| $(2,2)$ ara bölgesinin fiziksel olarak savunulabilirliği | Açık; Bölüm 5.3 onun madde geçirdiğini hesaplar, var olabilirliğini değil |
 | Üç zamanın olasılık korunumu altında tek zamana çökmesi | Bölüm 9.3 |
-| İmza değiştiren arka planda parçacık üretimi | |
+| İmza değiştiren arka planda parçacık üretimi | Açık; Bölüm 5.3'te anılan frekans karışımı hesabı bu soruya bakar, bu çalışma bakmaz |
 | Eşik duvarlarının kuantum kararlılığı | Bölüm 6.1 |
 | Geçişin varsayılmak yerine türetilebilmesi | Kapsam dışı bırakıldı |
 | Yerçekiminin eklem koşulunun ötesine götürülmesi | Bölüm 6.2 |
