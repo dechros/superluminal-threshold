@@ -715,13 +715,48 @@ namespace slm
         return faults;
     }
 
+    std::vector<ProseRegister::Fault> ProseRegister::decimalPoints(const std::string &text)
+    {
+        std::vector<Fault> faults;
+        const auto lines = splitLines(text);
+        for (std::size_t index = 0; index < lines.size(); ++index)
+        {
+            const std::string &line = lines[index];
+            bool inside = false;
+            bool found = false;
+            for (std::size_t i = 0; i < line.size() && !found; ++i)
+            {
+                if (line[i] == '$')
+                {
+                    inside = !inside;
+                    continue;
+                }
+                if (!inside || line[i] != '.' || i == 0 || i + 1 >= line.size())
+                {
+                    continue;
+                }
+                if (std::isdigit(static_cast<unsigned char>(line[i - 1])) != 0 &&
+                    std::isdigit(static_cast<unsigned char>(line[i + 1])) != 0)
+                {
+                    found = true;
+                }
+            }
+            if (found)
+            {
+                faults.push_back({"ondalik nokta", static_cast<int>(index) + 1, shorten(line)});
+            }
+        }
+        return faults;
+    }
+
     std::vector<ProseRegister::Fault> ProseRegister::faults(const std::string &text)
     {
         std::vector<Fault> all;
         for (const auto &group : {longSentences(text), stackedPassives(text),
                                   firstPerson(text), selfReference(text),
                                   openingConjunctions(text), nominalChains(text),
-                                  numberSuffixes(text), emDashes(text)})
+                                  numberSuffixes(text), emDashes(text),
+                                  decimalPoints(text)})
         {
             all.insert(all.end(), group.begin(), group.end());
         }
@@ -864,6 +899,9 @@ namespace slm
 
         report.subsection("The house rule on the em dash");
         report.check("the em dash appears nowhere", ProseRegister::emDashes(document).empty());
+        report.check("every number inside mathematics carries a comma for its decimal "
+                     "separator, the way the text reads it aloud",
+                     ProseRegister::decimalPoints(document).empty());
 
         report.subsection("What this section still does not measure");
         report.check("word order inside a clause, and whether a paragraph argues in the order a "

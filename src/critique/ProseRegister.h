@@ -132,6 +132,13 @@ namespace slm
         /// Occurrences of the em dash.
         static std::vector<Fault> emDashes(const std::string &text);
 
+        /// Numbers written with a point for the decimal separator. The text
+        /// reads its numbers aloud in Turkish, where the separator is a comma,
+        /// and a run of computed values pasted in from a program carries the
+        /// program's separator instead. The two forms sit in the same table
+        /// often enough that a reading does not catch them.
+        static std::vector<Fault> decimalPoints(const std::string &text);
+
         /// Headings that assert rather than name: a finite verb, a colon, a
         /// question, or more words than a name needs.
         static std::vector<Fault> verbalHeadings(const std::string &text);

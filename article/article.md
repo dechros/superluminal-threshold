@@ -1787,8 +1787,8 @@ Bu yüzden yukarıdaki "hız yönelime dönüşür" sonucu bu üç eksene aittir
 boyutlu olduğu için türev skaler değil gradyandır, ve "ne kadar hızlı" sorusu
 "hangi yönelimde" sorusuna dönüşür.
 
-**Tek uzay ekseninde hareket.** Burada durum başkadır ve bu ayrım metnin başka
-hiçbir yerinde yapılmamıştır. O eksen tek olduğu için türev **skalerdir**, yani
+**Tek uzay ekseninde hareket.** Burada durum başkadır. O eksen tek olduğu için
+türev **skalerdir**, yani
 orada hız yönelime dönüşmez; sıradan anlamda bir yayılma hızı tanımlıdır ve bir
 üst sınırı vardır. Hesaplanan büyüklük
 
@@ -2067,7 +2067,6 @@ Ayrımın en keskin biçimi kalınlık bağımlılığıdır. Nokta cisim okumas
 büyür, dalga ve genlik okumaları durur. Kalınlıkla doyan bir okuma ile doymayan
 bir okuma aynı kalınlığın geçiş süresi olamaz.
 
-
 ### 11.7 Geçişin kütle ve genişlik tavanları
 
 Paketin bölgeyi geçebilmesi iki üst sınırla kısıtlanmıştır ve ikisi tek bir
@@ -2096,17 +2095,16 @@ yolculuk yapmaz, yolculuk yapmaz.
 ### 11.8 Kütlenin ve genişliğin ölçülen etkisi
 
 Tavanların altında kalan bölgede iki bağımlılık ölçülmüştür. Kütle parametresi
-$0.25$'ten $3.00$'a çıkarıldığında gereken öte taraf mesafesi $1.408$'den
-$2.297$'ye yükselir. Kütle bir kazanç değil maliyettir. Doyum her kütlede
+$0{,}25$'ten $3{,}00$'a çıkarıldığında gereken öte taraf mesafesi $1{,}408$'den
+$2{,}297$'ye yükselir. Kütle bir kazanç değil maliyettir. Doyum her kütlede
 ayaktadır.
 
 Genişliğin etkisi ikinci mertebedendir ve kapalı biçimde **hiç görünmez**, çünkü
 kapalı biçim bandın merkezinde değerlendirilir ve genişliği taşımaz. Yayılan
 paketin tepesi ölçüldüğünde genişliğin on altı katlık değişimi eşiği binde
-$7.5$ oranında oynatır, ve her adımda aynı yönde: geniş paket daha geç döner.
+$7{,}5$ oranında oynatır, ve her adımda aynı yönde: geniş paket daha geç döner.
 Ölçüm ile kapalı biçimin ayrıldığı tek yer burasıdır, ve iki rotanın birlikte
 koşturulmasının gerekçesi budur.
-
 
 ---
 
@@ -2295,14 +2293,14 @@ veren birden çok kalınlık vardır.
 
 Dönüş anı tek bir çıkarma işlemidir. Öte tarafta kat edilen mesafe $s$, gidiş
 dönüşün bedeli $\tau$ ile yazıldığında, kalkışa göre varış anı $\tau - s$
-değerindedir. Sınanan yapılandırmada $\tau = 1.462864$ olarak çıkar.
+değerindedir. Sınanan yapılandırmada $\tau = 1{,}462864$ olarak çıkar.
 
 | Öte tarafta kat edilen mesafe | Varış anı | Konum |
 | ----------------------------- | ---------- | -------------------- |
-| $1.000000$ | $+0.462864$| Kalkıştan sonra |
-| $1.462864$ | $0.000000$ | Tam kalkış anında |
-| $6.000000$ | $-4.537136$| Kalkıştan önce |
-| $25.000000$ | $-23.537136$| Kalkıştan önce |
+| $1{,}000000$ | $+0{,}462864$| Kalkıştan sonra |
+| $1{,}462864$ | $0{,}000000$ | Tam kalkış anında |
+| $6{,}000000$ | $-4{,}537136$| Kalkıştan önce |
+| $25{,}000000$ | $-23{,}537136$| Kalkıştan önce |
 
 Yolcunun denetlediği tek nicelik $s$ değeridir. Bedel durumun ve bölgenin
 özelliklerinden çıkar ve yolculuk sırasında değiştirilemez.
@@ -2326,19 +2324,20 @@ tanedir.
 Bu koşullar aynı biçimde başarısız olmaz, ve ayrım sonucun okunuşunu belirler.
 Yedisi başarısız olduğunda yolculuk ortadan kalkar ya da işareti döner. Yalnızca
 son koşul, yani öte taraf mesafesi, **daha fazla ödenerek** giderilir. Duvarlar
-tek tek denendiğinde kütle parametresinin $8$ olması, bant genişliğinin $0.5$
-olması ve ters dalın seçilmesi birinci türden, mesafenin $0.5$ kalması ikinci
+tek tek denendiğinde kütle parametresinin $8$ olması, bant genişliğinin $0{,}5$
+olması ve ters dalın seçilmesi birinci türden, mesafenin $0{,}5$ kalması ikinci
 türden başarısızlık verir.
 
 ### 13.8 Geriye gidişin sınırının ağırlığa düşmesi
 
 Mesafeyi yukarıdan bağlayan bir koşul yoktur. Dolayısıyla varış anı sınırsız
 geriye iner. Onunla birlikte düşen nicelik **ağırlıktır**: sınanan
-yapılandırmada bandın $7.8 \times 10^{-36}$ katı geri döner. Daha geriye gitmenin
+yapılandırmada bandın $7{,}8 \times 10^{-36}$ katı geri döner. Daha geriye gitmenin
 sınırı bu nedenle varmaya değil **görülmeye** konmuştur. Sorunun ölçülebilir
 biçimi ne kadar geriye gitmek istendiği değil, hangi zayıflıkta bir sinyalin
 ölçülebildiğidir.
 
+---
 
 ## 14. Mod içeriğinin geçiş boyunca değişimi
 
@@ -2482,8 +2481,8 @@ Yüklü bir durum için muhasebe bir bileşen daha taşır. Yük yoğunluğu dö
 zaman bileşenidir ve geçiş yakın tarafın zaman eksenini öte tarafın bir uzay
 ekseni üzerine taşır. Dolayısıyla yakın tarafta yoğunluk olarak okunan nicelik
 öte tarafta bir **akım bileşeni**, akımlardan biri ise yoğunluktur. Yakın
-tarafta $(3.0,\, 0,\, 0,\, 0.5)$ olarak yazılan dört akım öte tarafta
-$(0.5,\, 0,\, 0,\, 3.0)$ olarak görünür.
+tarafta $(3{,}0,\, 0,\, 0,\, 0{,}5)$ olarak yazılan dört akım öte tarafta
+$(0{,}5,\, 0,\, 0,\, 3{,}0)$ olarak görünür.
 
 Dört akım bütün hâlinde taşınır ve bileşenlerinden hiçbiri kaybolmaz; yalnızca
 yoğunluk ile akım arasındaki bölünme yeniden dağılır. Dört akımın değişmez
