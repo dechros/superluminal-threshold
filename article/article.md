@@ -2467,7 +2467,7 @@ yüzde beşinin altında kalmaktadır.
 
 Bu kısım eşlemenin girdi tarafını, yani öte taraftaki yönelimin ne anlama
 geldiğini tanımlar; sonra girdiyi dönüş olayının dört koordinatına bağlar; ve
-zinciri tek yerde yazar.
+yedi adımı tek yerde yazar.
 
 ## 16. Yönelim sözlüğü
 
@@ -3064,11 +3064,11 @@ bir modda kat edilen bir mesafe bulunmaz. Ölçülen şey, dönen paketin
 **Ve bir sinyal taşımadığı.** Ayrım burada zorunludur, çünkü üstışık bir
 sinyalin geçmişe ulaşmasının nedensel bedeli [36]'da sayılmıştır: böyle bir
 düzenek ya negatif sonuç verir ya da çelişki üretir. Aşağıdaki hesap bir sinyal
-iddiası taşımadığı için o ikilemin dışında durur. Bu nokta açık kalmaz, hesaba
-girer. Bu çalışma
-cepheyi tepeden ayrı hesaplamaktadır. Cephe hızı frekans büyüdükçe ışık hızına düşer.
-Bölge cepheyi hiçbir kalınlıkta öne almaz. Öne alma büyürken de onu taşıyan
-genlik $d = 32$ için $5{,}2 \times 10^{-32}$'ye çöker. Yukarıdaki $+29{,}0743$,
+iddiası taşımadığı için o ikilemin dışında durur. Bu nokta açık bırakılmamış,
+hesaba dâhil edilmiştir: çalışma dalganın ön cephesini tepesinden ayrı
+hesaplamaktadır. Cephe hızı frekans büyüdükçe ışık hızına iner ve ara bölge
+cepheyi hiçbir kalınlıkta öne almaz. Tepenin öne alınması büyürken de onu
+taşıyan genlik çökmektedir: $d = 32$ için $5{,}2 \times 10^{-32}$'ye iner. Yukarıdaki $+29{,}0743$,
 bir mesajın ışığı geçtiği anlamına gelmez ve bu çalışma öyle bir iddiada
 bulunmamaktadır.
 
@@ -3270,14 +3270,14 @@ Bu bir tavizdir. İddiayı taşıyan rejimde öte taraf yalnızca iki yüzündek
 
 ---
 
-## 19. Sonuç ve zincir
+## 19. Sonuç ve yedi adım
 
-Önceki bölümler zincirin halkalarını ayrı ayrı kurdu. Bu bölüm halkaları tek bir
-yerde birleştirir ve her birinin nerede kurulduğunu göstermektedir. Yeni bir hesap
-içermez; içerdiği tek yeni şey, iddianın **tam olarak ne kadar** olduğunun tek
-cümlede sabitlenmesidir.
+Önceki bölümler sonuca giden adımları ayrı ayrı kurdu. Bu bölüm adımları tek bir
+yerde birleştirir ve her birinin hangi bölümde kurulduğunu göstermektedir. Yeni
+bir hesap içermez. Eklediği tek şey, iddianın **tam olarak ne kadar** olduğunun
+tek cümlede sabitlenmesidir.
 
-**Zincir.**
+**Yedi adım.**
 
 1. **İmza değişimini yapan dönüşüm zorunludur.** $384$ işaretli permütasyon
  matrisi taranır; metrik bağıntısı $96$'ya, involüsyon $12$'ye, birim
@@ -3306,8 +3306,8 @@ cümlede sabitlenmesidir.
  Öklidyen ara bölge, $d = 8$, $c = \mu = 1$ için eşik $2{,}565988$'dir (Bölüm
  4.1.3).
 
-**Zincirin tek bir parçacık üzerinde yürütülmesi.** Yukarıdaki halkalar ayrı
-ayrı kuruludur; kapanmış tek bir örnek ise şudur. Öklidyen bir ara bölge,
+**Yedi adımın tek bir parçacık üzerinde yürütülmesi.** Yukarıdaki adımlar ayrı
+ayrı kuruludur; hepsini birden kapatan tek bir örnek ise şudur. Öklidyen bir ara bölge,
 kalınlık $8$, $c = \mu = 1$, toplam enerjisi $9$ olan bir parçacık; enerji
 vektörü $(1{,}732051,\ 1{,}732051,\ 1{,}732051)$, frekansı $3{,}162278$, dışarıdaki
 dalga sayısı $1{,}732051$, içerideki sönüm katsayısı $3{,}000000$. Parçacık
@@ -3349,16 +3349,18 @@ hesabıdır; burada yeniden türetilmemekte, çağrılmaktadır.
 | 11 | Parçacığın ışığa karşı önceliği | $19{,}565678$ |
 
 Dokuzuncu adımdaki dört sayı, dönüş olayının dört koordinatıdır ve **kapalı
-formülden** gelmektedir (Bölüm 18.7); bu döküm onları yeniden hesaplamaz, okur.
-Böylece döküm zincirden sapamaz.
+formülden** gelmektedir (Bölüm 18.7). Bu döküm onları yeniden hesaplamaz,
+doğrudan formülden okur, ve böylece yukarıdaki yedi adımdan sapması imkânsız
+kalır.
 
 On birinci adımda karşılaştırmanın **iki tarafı da gidiş dönüştür**. Işık
-$2d/c = 16$ harcar, parçacık $-3{,}565678$ ile döner. Bu eşitlik denetlenmiştir.
-Tek geçiş ile gidiş dönüşü karıştırmak bu çalışmaya iki kez ikilik çarpana mal
-oldu; artık bir kabul değil, bir sınama.
+$2d/c = 16$ harcar, parçacık ise $-3{,}565678$ ile döner. Bu eşitlik
+denetlenmiştir. Tek geçiş ile gidiş dönüşü birbirine karıştırmak bu çalışmada
+iki kez ikilik çarpan hatasına yol açtı; bugün o eşitlik bir kabul değil, ayrı
+bir denetimdir.
 
-**Tablodaki mesafenin nerede olduğu.** Burada iki ayrı yer var ve örneğin
-geçerliliği bu ikisinin ayrı tutulmasına bağlı.
+**Tablodaki mesafe nerede kat ediliyor.** Söz konusu iki ayrı yer vardır, ve
+örneğin geçerliliği bu ikisinin birbirinden ayrı tutulmasına bağlıdır.
 
 **Ara bölgenin içinde** kat edilen bir mesafe **yoktur**. İçerideki mod
 sönümlüdür, grup hızı tanımsız kalır ve gecikmenin kalınlıkla artmaması hızlı bir
@@ -3376,24 +3378,24 @@ yolculuk diline başvurmak, Bölüm 16.9'un tam olarak reddettiği şeydir. Örn
 buna başvurmamaktadır; ara bölge yalnızca bir faz gecikmesi katmakta, mesafe ise
 bütünüyle öte tarafta kat edilmektedir.
 
-**Bedeli aynı nefeste.** Bu yolculukta parçacık $1{,}83 \times 10^{-41}$
-ağırlıkla dönmektedir. Ne var ki bu ağırlık bir yasak değildir: doyum derinliği
+**Bedeli de aynı yerde yazılıdır.** Bu yolculukta parçacık
+$1{,}83 \times 10^{-41}$ ağırlıkla dönmektedir. Ne var ki bu ağırlık bir yasak değildir: doyum derinliği
 sabit tutulup enerji yükseltildiğinde gereken mesafe $2{,}4343$'ten $0{,}9895$,
 $0{,}3101$ ve $0{,}0980$'a inerken tek geçişin genliği
 $4{,}293312 \times 10^{-3}$, dolayısıyla gidiş dönüşün ağırlığı
 $3{,}397579 \times 10^{-10}$ değerinde **kıpırdamamaktadır**. Ödenen şey enerji ve daha ince bir bölgedir.
 
 **Sonucun ifadesini** Bölüm 1.1'in "Ana sonuç" paragrafı verir ve bu bölüm
-onu tekrarlamaz. Bu bölüm o ifadeyi eklemez; yukarıdaki yedi halkanın onu nasıl
+onu tekrarlamaz. Bu bölüm o ifadeyi eklemez; yukarıdaki yedi adımın onu nasıl
 ürettiğini ve aşağıdaki tek parçacığın onu nasıl gerçeklediğini göstermektedir.
 
 **İddianın sınırı**, aynı şekilde Bölüm 1.5'te üç bedel olarak sayılmıştır: genliğin
 küçüklüğü bir büyüklük sorunudur ve Bölüm 4.1.6 bunun seçilmiş bir çalışma
 noktası olduğunu göstermektedir. İşaretin seçilebilirliği bir açık sorudur (Bölüm
 9.4). Geçirgen okuma ile yüzey katmanı bir arada duramaz; bu, literatürün güçlü
-ile zayıf ayrımıdır, modele özgü bir boşluk değil (Bölüm 5.7.1). Zincirin
-kendisi bu boşluktan bağımsız olarak doğrudur; eksik olan, zinciri bir deneye
-bağlayan halkadır.
+ile zayıf ayrımıdır, modele özgü bir boşluk değil (Bölüm 5.7.1). Yedi
+adımın kendisi bu boşluktan bağımsız olarak doğrudur; eksik olan, adımları bir
+deneye bağlayan son adımdır.
 
 > Bu çalışmanın söylediği şudur: böyle bir geçiş kurulabilirse, dönüş anının
 > nereye düştüğü serbest bir yorum değil, hesaplanmış bir sayıdır.
@@ -3497,7 +3499,7 @@ varsayımı eleştiren bir cümle ile varsayan bir cümle aynı kelimeyi taşım
 | 5.8 | Dejenere katmanın içerideki her modu tam olarak bloklaması | ilan edilmiş sınırlama | Katmanın bir modeli olarak konur, tam hesabın sıfır vermeyebileceği yazılıdır |
 | 5.8 | Madde katmanının gücünün imza dönüşünün eğimini izlemesi | ilan edilmiş sınırlama | Vekil ölçü olarak konur, tam gerilim tensörünün hesaplanmadığı yazılıdır |
 | 6.1 | Yansıyan bir bileşenin bulunabilmesi | türetildi | Aynı bölüm: akı korunumu başka çözüm bırakmaz |
-| 19 | Dökümün zincirden sapmaması, yani dönüş olayının kapalı formülden okunması | türetildi | Aynı bölüm: dört koordinatın hepsi Bölüm 18.7'nin formülünden gelir ve döküm onları yeniden hesaplamaz |
+| 19 | Dökümün yedi adımdan sapmaması, yani dönüş olayının kapalı formülden okunması | türetildi | Aynı bölüm: dört koordinatın hepsi Bölüm 18.7'nin formülünden gelir ve döküm onları yeniden hesaplamaz |
 | 9.4 | Global hiperbolikliğin sağlanması | başka kurguya ait | Karşılaştırılan formülasyonun ihtiyacıdır; buradaki sonuç yalnızca zaman yönlerinin sayısından çıkar |
 | 16.4 | Dönmenin bir okumada özdeşlik, ötekinde düzgün olması | geçersiz kılındı | Dönmeyi nicelendirerek iki uca da ihtiyaç bırakmayan bölüm |
 | 16.4 | Geçişin kayıpsız olması, ki bir satırı sıfırlayan budur | ilan edilmiş sınırlama | Sonucu yazılı: madde katmanı o sıfırı kaldırır |
@@ -3531,11 +3533,11 @@ tekrar geçmiştir.
 
 ## 21. Açık kalanlar
 
-Bu bölüm zincirin neresinin eksik olduğunu sayar ve eksikleri türlerine göre
+Bu bölüm yedi adımın neresinin eksik olduğunu sayar ve eksikleri türlerine göre
 ayırır: hangisi bir sayı, hangisi bir seçim, hangisi öncülün kendisi. Son alt
-bölüm zinciri formülden değil sayısal deneyden okur.
+bölüm adımları formülden değil sayısal deneyden okur.
 
-### 21.1 Zincir ile deney arası
+### 21.1 Hesap ile deney arası
 
 Açık maddeler tek bir liste olarak sayıldığında yanıltıcıdır, çünkü hepsi aynı
 türden değildir. Belirleyici ayrım şudur: **daha iyi bir düzeneğin
