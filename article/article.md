@@ -1611,10 +1611,10 @@ varsaymaz.** Bölge I'de de varsaymaz, Bölge II'de de. Yönelim metriktedir,
 zorunluluk hiçbir metrikte değildir; ok, denklemlerde bulunmadığı için başka bir
 yere, duruma yazılmak zorundadır.
 
-Bu ayrım bir beyan değil, bir hesaptır. Yönelebilirlik bir birim vektörün yarım
-tur döndürülmesinden çıkar; zorunluluk ise hiçbir yerde işe girmez. Öte tarafın
-bu tartışmadaki yeri de dikkat çekici: orada ayrımın kendisi yok (Bölüm 9.4),
-dolayısıyla oku duruma yazma imkânı da yoktur.
+Bu ayrım bir iddia değil, bir hesaptır. Yönelebilirlik, bir birim vektörün yarım
+tur döndürülmesinden çıkar; zorunluluk ise hesabın hiçbir adımına girmez. Öte
+tarafın bu tartışmadaki yeri de dikkat çekicidir: orada ayrımın kendisi
+bulunmaz (Bölüm 9.4), dolayısıyla zamanın okunu duruma yazma imkânı da doğmaz.
 
 **Kapsam dışı bırakılan.** Aynı sonuca varan felsefi tartışma ve literatürdeki
 "zamansız" programların taraması bu alt bölümün dışındadır; sonucu
@@ -1682,9 +1682,9 @@ fiziksel yorumunu da verir: hiperyüzey yakınındaki bir gözlemciye böyle bir
 ilmek, iki ayrı noktada bir parçacık-karşıparçacık çiftinin yaratılması gibi
 görünebilir.
 
-Görünüşte bir gerilim vardır: Bölüm 6.1 eşiğin geçirgen olmadığını söylerken,
-[11] yüzeyden geçen ilmeklerden söz etmektedir. Gerilim görünüştedir ve Bölüm 7 onu
-çözer. İki metrik arasındaki fark bir kareler toplamıdır, dolayısıyla Bölge I'de
+İlk bakışta bir çelişki görünür: Bölüm 6.1 eşiğin geçirgen olmadığını söylerken,
+[11] yüzeyden geçen ilmeklerden söz etmektedir. Çelişki yalnızca görünüştedir ve
+Bölüm 7 onu çözer. İki metrik arasındaki fark bir kareler toplamıdır, dolayısıyla Bölge I'de
 zaman-benzeri olan her yön Bölge II'de de zaman-benzeridir. Yani eşikte bir
 eğriyi durduran nedensel engel yoktur. Yasaklanan şey akıdır. Geometrik eğriler
 ile alan akısı farklı nesnelerdir ve iki sonuç aynı anda doğru olabilir.
@@ -1714,13 +1714,13 @@ yönelimin kendisi öte tarafta ayar fazlalığıdır; fiziksel olan tek şey gi
 çıkış arasındaki **bağıl** dönmedir. Üç sınıf ayırt edilir: dönme yok, kısmi
 dönme ve tam ters çevirme.
 
-Üç çarpı üç, dokuz hücrelik bir tablo. Her hücrenin bu tarafta ne göründüğünü
-Bölüm 16 hücreleri tek tek hesaplamıştır.
+İki etiket birlikte üç çarpı üç, yani dokuz hücrelik bir tablo verir. Bölüm 16
+bu hücrelerin her birinin Bölge I'de nasıl göründüğünü tek tek hesaplamıştır.
 
 ## 10. Orada hareket ve yönelim
 
-$D$'de $V$ geçmez. Bu bir eksiklik değildir; hız kavramının kendisi türetilerek
-gösterilir ki gerekli değildir.
+İmza değişimini yapan $D$ matrisinde hız hiç geçmez. Bu bir eksiklik değildir.
+Aşağıdaki türetim, hız kavramının burada zaten gerekmediğini göstermektedir.
 
 Bölge I'de hız zaten temel bir büyüklük olmayıp dispersiyondan çıkar:
 
@@ -1733,9 +1733,9 @@ $$\omega(k) = c\sqrt{k^2 + \mu}, \qquad
 
 $$\frac{dq}{d\kappa} \;\longrightarrow\; \text{skaler/vektör} = \text{gradyan} = \text{VEKTÖR}$$
 
-**Sonuç:** Hız skaler olmaktan çıkıp yönelime dönüşür. "Ne kadar hızlı" sorusu
-"hangi yönelimde" sorusuna dönüşür. $V$ bilgisi $B$ boostunda, yani üç-zaman
-uzayındaki yönelimde yaşar.
+**Sonuç:** Hız orada bir sayı olmaktan çıkar ve bir yönelime dönüşür. "Ne kadar
+hızlı" sorusunun yerini "hangi yönelimde" sorusu alır. Hız bilgisini taşıyan tek
+yer $B$ boostudur, yani üç zamanlı uzaydaki yönelim.
 
 Hız dönüşümü $v' = c^2/v$'dir; ışık hızı sabit noktadır ve subluminal ile
 superluminal bölgeleri birbirine eşler.
