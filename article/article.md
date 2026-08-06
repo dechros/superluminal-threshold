@@ -699,68 +699,71 @@ $3{,}762196$. Buradan çıkan kalıntılar, $3$ birimlik gidiş dönüş için:
 $-0{,}382878$, $-1{,}629242$, $-8{,}286587$. Kalıntının işareti negatiftir, yani
 dönüş düz rotaya göre saati **geriye** taşır.
 
-**Kalıntının değeri ve bedeli.** Aynı hiperbolik kosinüs, Bölge I'de sıradan bir
-Lorentz dönüşümünün bir zaman aralığına uyguladığı çarpana karşılık gelir.
-Kalıntı bu yüzden
-bilinen bir genleşmenin öte taraftan görünüşüdür, bağımsız bir etki değildir, ve
-bu bölüm onu böyle kaydeder. Bedelini de hesap verir: sıfırdan farklı
-hızlılıkla bileşke alınan geçiş metrik bağıntısını korur, yani kabul edilebilir
-aileden çıkmaz, ama **involüsyon olmaktan çıkar**. Bölüm 4.1'in tarama
-koşullarından biri olan "iki kez geçince başlangıç çerçevesine dönme" özelliği
-bu durumda kaybolur.
+**Bu artığın ne olduğu ve neye mal olduğu.** Yukarıdaki hiperbolik kosinüs, Bölge
+I'de sıradan bir Lorentz dönüşümünün bir zaman aralığına uyguladığı çarpanın
+aynısıdır. Dolayısıyla artık, bilinen zaman genleşmesinin öte taraftan görünen
+hâli olur, yeni ve bağımsız bir etki değil. Hesap bunun bedelini de verir:
+sıfırdan farklı bir hızlılıkla bileşke alınan geçiş metrik bağıntısını korur,
+yani kabul edilebilir ailenin dışına çıkmaz, ancak **iki kez uygulanınca başa
+dönme özelliğini kaybeder**. Bölüm 4.1'in tarama koşullarından biri olan bu
+özellik böyle bir bileşkede ortadan kalkar.
 
 ### 4.1.5 Yer değiştirmenin bedeli
 
-Yer değiştirmenin iki niceliği vardır ve ikisi farklı davranır: dizinin genlik
-ağırlığı ve gereken enerji.
+Öte tarafta yol almanın iki ayrı karşılığı vardır ve ikisi birbirinden farklı
+davranır: yolculuğun ne olasılıkla gerçekleşeceğini veren genlik ağırlığı, ve
+yolculuk için harcanması gereken enerji.
 
-**Genlik ağırlığı.** Girişten $\Delta$ kadar önce varmak için öte taraf
-bacağının doymuş geçiş gecikmesini $\Delta$ kadar aşması gerekir; gecikme bacak
-tarafından değil bölge tarafından sabitlendiğinden, gereken bacak istenen yer
-değiştirmeyle **birebir** büyür: $\Delta = 0$ için $2{,}565988$, $\Delta = 1000$
-için $1002{,}565988$. Dizinin genlik ağırlığını ise yalnızca bölge belirler.
-Kalınlık $2$'de $3{,}67 \times 10^{-3}$, $8$'de $3{,}46 \times 10^{-12}$
-olduğuna göre ağırlık bölgeye duyarlıdır, yani sabit bir niceliğin
-duyarsızlığından söz edilmemektedir. Buna karşın **bacak uzunluğu, ağırlığı
-veren ifadenin değişkenleri arasında hiç geçmez**. Dolayısıyla bu modelde keyfi
-büyüklükte bir yer değiştirme, en küçüğüyle aynı ağırlığı taşır.
+**Genlik ağırlığı.** Parçacık kalkıştan $\Delta$ kadar önce dönecekse, öte
+tarafta aldığı yol doymuş geçiş gecikmesini $\Delta$ kadar aşmalıdır.
+Gecikmeyi yolun uzunluğu değil ara bölge sabitlediğinden, gereken yol istenen
+kaymayla **birebir** büyür: $\Delta = 0$ için $2{,}565988$, $\Delta = 1000$ için
+$1002{,}565988$ birim. Geçişin genlik ağırlığını ise yalnızca ara bölge belirler.
+Ağırlık kalınlık $2$'de $3{,}67 \times 10^{-3}$, kalınlık $8$'de
+$3{,}46 \times 10^{-12}$ çıkar, yani bölgeye gerçekten duyarlı bir niceliktir.
+Buna karşın **yolun uzunluğu, ağırlığı veren ifadede hiç geçmez**. Dolayısıyla bu
+modelde ne kadar uzun bir yolculuk yapılırsa yapılsın, ağırlık en kısa
+yolculuktakiyle aynı kalır.
 
-Bu, serbestlikten çıkmaz. Modelde öte taraf yol uzunluğu genliğe hiç
-girmemektedir, yani bir **eksikliktir**; yolculuğun ağırlığa katkısının
-hesaplanabilmesi için genliğin önce bir yol uzunluğu değişkeni kazanması
-gerekir. Rakamlar bundan fazlasını taşımaz.
+Bu durum bir serbestlik değildir. Öte tarafta alınan yol genliğe hiç girmiyorsa,
+modelde bir **eksik** var demektir. Yolculuğun ağırlığa ne kattığını
+hesaplayabilmek için genliğin önce yol uzunluğuna bağlı bir değişken kazanması
+gerekir. Yukarıdaki sayılar bundan fazlasını söylemez.
 
-**Düz bir bacağın enerjisi.** Öte taraf, ayırt edilmiş ekseni boyunca ötelemeye
-göre değişmezdir; eşlenik nicelik korunur ve düz bir bacağın uzunluğu enerji
-gerektirmez. Aynı işaretli eksenler arasındaki dönmeler de gerektirmez. Ama
-Bölüm 4.1.4'e göre bu iki işlemin ikisi de hiçbir yer değiştirme üretmez.
+**Düz bir yolun enerjisi.** Öte tarafın geometrisi, ayırt edilmiş eksen boyunca
+kaydırma altında değişmez. Bu yüzden o eksene eşlenik nicelik korunur ve düz bir
+yolun uzunluğu hiç enerji istemez. Aynı işaretli eksenler arasındaki dönmeler de
+enerji istemez. Ancak Bölüm 4.1.4'e göre bu iki işlemin hiçbiri saatte bir kayma
+üretmez.
 
-**Çerçeve değişiminin enerjisi.** Yer değiştirme üreten tek işlem olan
-hiperbolik dönme, enerjiyi hızlılığının hiperbolik kosinüsüyle çarpar. Hızlılık
-iki bağıntı arasından elenirse geriye serbest parametresi olmayan bir ilişki
-kalır:
+**Çerçeve değiştirmenin enerjisi.** Saatte kayma üreten tek işlem hiperbolik
+dönmedir, ve o da parçacığın enerjisini kendi hızlılığının hiperbolik
+kosinüsüyle çarpar. Hızlılık iki bağıntı arasından elenirse geriye hiçbir serbest
+parametre içermeyen bir ilişki kalır:
 
 $$\frac{\Delta E}{E} \;=\; \frac{\Delta}{s},$$
 
-yani ek yer değiştirmenin bacak uzunluğuna oranı. İlişki yer değiştirmede
-**lineerdir**, üstel değil. Uzun bacak aynı yer değiştirmeyi daha küçük bir
-enerji artışıyla verir: $10$ birimlik bacakta $2$ birim ek yer değiştirme
-enerjiyi $\%20$, $100$ birimlik bacakta $\%2$ artırır. $1000$ birimlik bir
-bacakta enerjinin $\%1$ artması $10$ birim, iki katına çıkması $1000$ birim ek
-yer değiştirme üretir.
+yani harcanan fazladan enerjinin oranı, kazanılan ek kaymanın yol uzunluğuna
+bölünmesine eşit çıkar. İlişki kaymada **doğrusaldır**, üstel değil. Uzun bir
+yol aynı kaymayı daha küçük bir enerji artışıyla verir: $10$ birimlik bir yolda
+$2$ birim ek kayma enerjiyi yüzde $20$ artırır, $100$ birimlik bir yolda yüzde
+$2$ artırır. $1000$ birimlik bir yolda enerjiyi yüzde $1$ artırmak $10$ birim ek
+kayma getirir, enerjiyi ikiye katlamak ise $1000$ birim getirir.
 
 ### 4.1.6 Doymuş gecikmenin küçültülmesi
 
-Yukarıdaki bütün muhasebe, eşik mesafesini **verili** kabul eder. Etmemesi
-gerekir. Doymuş gecikme bir bariyerin değişmez bir özelliği gibi ele alınır ve
-literatürde sorulan soru onun **doyup doymadığıdır**; ne kadar
-**küçültülebileceği** sorulmamıştır. Burada o gecikme fiyattır, dolayısıyla soru
-anlamlıdır ve cevaplanabilir.
+Yukarıdaki hesapların hepsi eşik mesafesini **verili** almaktadır. Oysa bu
+mesafe verili değildir. Literatür doymuş gecikmeyi bariyerin değişmez bir
+özelliği gibi ele alır ve orada sorulan soru gecikmenin **doyup doymadığıdır**;
+ne kadar **küçültülebileceğini** kimse sormamıştır. Bu modelde o gecikme,
+parçacığın geçmişe varmak için aşması gereken mesafeyi belirler. Dolayısıyla
+soru hem anlamlı hem de cevaplanabilir hâle gelir.
 
-Kapalı biçim soruyu ele vermektedir. Enerji vektörünün birinci bileşeninin karesine
-**normal pay**, kalan ikisinin toplamına **enine pay** denirse, gecikme yalnızca
-bu iki sayıya ve kütleye bağlıdır; kalınlık formülde geçmez. Dolayısıyla ikisi
-üzerinden minimize edilebilir. Çıkan iki hareket birbirinden ayrılır.
+Kapalı form cevabı doğrudan vermektedir. Enerji vektörünün birinci bileşeninin
+karesine **normal pay**, kalan iki bileşenin kareleri toplamına **enine pay**
+denmektedir. Gecikme yalnızca bu iki sayıya ve kütleye bağlı kalır, kalınlık
+formülde hiç geçmez. Öyleyse gecikme bu iki pay üzerinden küçültülebilir.
+Küçültme iki ayrı yönde işler.
 
 **Birincisi: sabit toplam enerjide bir iç optimum vardır ve etkisi zayıftır.**
 Toplam $6{,}84$ için:
@@ -772,13 +775,14 @@ Toplam $6{,}84$ için:
 | $2{,}84$ | $1{,}462864$ |
 | $4$ | $2{,}160247$ |
 
-En küçük değer $1{,}418053$'tür ve normal payın $2{,}2800$ olduğu yerde bulunur.
-Makalede kullanılan yapılanma bu en iyinin **yüzde birkaçı** içindedir; yani
-payları yeniden dengelemekten alınacak fazla bir şey yoktur.
+En küçük gecikme $1{,}418053$ çıkar ve normal payın $2{,}2800$ olduğu noktada
+bulunur. Metinde kullanılan yapılanma bu en iyi değerin **yüzde birkaçı**
+içinde kalmaktadır, yani iki payı yeniden dengelemek kayda değer bir kazanç
+getirmez.
 
-**İkincisi: toplam enerjiyi yükseltmek zayıf kalmaz.** En iyi bölüşümde
-gereken öte taraf mesafesi (gidiş dönüş ayağında, yani makalenin karşılaştırdığı
-nicelik):
+**İkincisi: toplam enerjiyi yükseltmek güçlü bir etki yapar.** Payların en iyi
+bölüşümünde parçacığın öte tarafta almak zorunda kaldığı yol, gidiş dönüş
+boyunca şu değerlere iner:
 
 | Toplam enerji | Gereken öte taraf mesafesi |
 | ------------- | -------------------------- |
@@ -787,14 +791,14 @@ nicelik):
 | $500$ | $0{,}310148$ |
 | $5000$ | $0{,}097990$ |
 
-Mesafe **sınırsız** küçülür. Yani öte tarafta kat edilmesi gereken yol sabit bir
-fiyat değil, **seçilen** bir fiyattır.
+Mesafe **sınırsız** küçülmektedir. Yani öte tarafta alınması gereken yol sabit
+bir zorunluluk değil, deneyi kuranın **seçtiği** bir büyüklüktür.
 
-**Bunun neye mal olduğu ve olmadığı.** Asıl soru budur, çünkü geçirgenlik
-kalınlıkla üstel çöker. Cevap: genlikten hiçbir şeye mal olmaz. Doyum, sönüm
-sabiti çarpı kalınlığın büyük olmasını ister; genlik de aynı çarpımla
-belirlenmektedir. O çarpım sabit tutulduğunda genlik **basılan her basamakta
-değişmeden** kalır:
+**Bu kısaltmanın neye mal olduğu.** Asıl soru budur, çünkü geçirgenlik kalınlıkla
+üstel olarak çöker. Cevap şudur: genlik hiçbir şey kaybetmez. Gecikmenin doyması
+için sönüm sabiti ile kalınlığın çarpımının büyük olması gerekir, ve genliği
+belirleyen de tam olarak aynı çarpımdır. O çarpım sabit tutulduğunda genlik,
+basılan bütün basamaklarda **değişmeden** kalır:
 
 | Toplam enerji | Kalınlık | Genlik |
 | ------------- | ------------ | --------------------------- |
@@ -803,42 +807,44 @@ değişmeden** kalır:
 | $500$ | $0{,}268328$ | $4{,}293312 \times 10^{-3}$ |
 | $5000$ | $0{,}084853$ | $4{,}293312 \times 10^{-3}$ |
 
-> Küçülen mesafeyi genlik ödemez. Ödenen şey **enerji ve daha ince bir
-> bölgedir** ve bu ikisi birlikte iner çıkar.
+> Kısalan mesafenin bedelini genlik ödemez. Bedeli **daha yüksek enerji ve daha
+> ince bir ara bölge** öder, ve bu ikisi birlikte hareket eder.
 
-**İki varsayım denetlendi, kabul edilmedi.** Birincisi, sabit tutulan derinlikte
-gecikmenin gerçekten doyduğu. Dört enerjinin dördünde de sonlu kalınlık
-gecikmesi, doymuş değerin yüzde biri içinde kalıyor. İkincisi, minimize edilen
-niceliğin makalenin karşılaştırdığı nicelik olduğu. Referans yapılanma
-$1{,}462864$ veriyor, yani Bölüm 13.4'ün doymuş değerinin aynısını. Bu ikincisi
-önemsiz değildir; tek geçiş ile gidiş dönüşü karıştırmak bu çalışmaya iki kez
-ikilik çarpana mal olmuştur.
+**İki nokta denetlendi ve doğrulanmadan geçilmedi.** Birincisi, sabit tutulan
+derinlikte gecikmenin gerçekten doyup doymadığı. Dört enerjinin dördünde de
+sonlu kalınlıktaki gecikme, doymuş değerin yüzde biri içinde kalmaktadır.
+İkincisi, küçültülen niceliğin metnin başka yerlerde karşılaştırdığı nicelikle
+aynı olup olmadığı. Referans yapılanma $1{,}462864$ vermektedir, yani
+Bölüm 13.4'ün doymuş değerinin tam olarak aynısını. Bu ikinci denetim önemsiz
+değildir: tek geçiş ile gidiş dönüşü birbirine karıştırmak bu çalışmada iki kez
+ikilik bir çarpan hatasına yol açmıştır.
 
-**Bunun makaleye katkısı.** Bölüm 4.1.5'in ağırlık tablosu ($d = 8$'de
-$3{,}46 \times 10^{-12}$) tek bir kalınlıkta okunmuş bir sayıdır ve bir sınır
-değildir. Aynı doyum derinliğinde daha yüksek enerjide çalışıldığında hem
-gereken mesafe hem gereken kalınlık düşer, genlik ise düşmez. Dolayısıyla
-"mümkün ama ağırlığı $10^{-12}$" ifadesi bir yasak değil, bir **çalışma
-noktası** ifadesidir.
+**Bunun metne kattığı.** Bölüm 4.1.5'in ağırlık tablosundaki sayı, yani $d = 8$
+için $3{,}46 \times 10^{-12}$, tek bir kalınlıkta okunmuş bir değerdir ve bir üst
+sınır değildir. Aynı doyum derinliğinde daha yüksek enerjiyle çalışılırsa hem
+gereken mesafe hem gereken kalınlık düşer, genlik ise yerinde kalır. Dolayısıyla
+"mümkün, ama ağırlığı $10^{-12}$" cümlesi bir yasak bildirmez; yalnızca hangi
+çalışma noktasının seçildiğini bildirir.
 
-**Toplu değerlendirme, bir sınırlama olarak.** Üç niceliğin ikisi zayıftır:
-genlik ağırlığı bacağı görmez, düz bacak enerji gerektirmez; üçüncüsü gerçek bir
-enerji artışıdır ama tanıdıktır: sıradan bir Lorentz dönüşümünün bir zaman
-aralığına uyguladığı çarpanın aynısıdır. Yani bu değerlendirmede kurguya özgü
-hiçbir nicelik yoktur. Modelin hesaplayamadığı şey yolculuğun kendisinin
-katkısıdır ve bunun nedeni yapısaldır: genliği veren ifadedeki hiçbir değişken
+**Üçünün birlikte değerlendirilmesi, bir sınırlama olarak.** Üç nicelikten
+ikisi zayıf kalır: genlik ağırlığı yolun uzunluğunu hiç görmez, ve düz bir yol
+enerji istemez. Üçüncüsü gerçek bir enerji artışı getirir, ancak tanıdık bir
+niceliktir: sıradan bir Lorentz dönüşümünün bir zaman aralığına uyguladığı
+çarpanın aynısı. Yani bu üçlünün içinde bu kurguya özgü hiçbir nicelik
+bulunmamaktadır. Modelin hesaplayamadığı şey yolculuğun kendisinin katkısıdır,
+ve bunun nedeni yapısaldır: genliği veren ifadedeki değişkenlerin hiçbiri
 parçacığın öte tarafta ne kadar gittiğine bağlı değildir.
 
-**Literatürdeki en yakın sonuç ve neden aynı sonuç olmadığı.** Tünellemenin
-engel biçimi ile parçacık enerjisi ayarlanarak güçlendirilebildiği
-bilinmektedir; belirli koşullarda geçirgenlik, saydam olmayan bir engelde bile
-üstel olarak küçük kalmaz. Ne var ki o mekanizma **geçirgenlik olasılığını**
-artırır ve tek boyutlu olmayan bir engel gerektirir. Burada küçültülen nicelik
-geçirgenlik değil, **sabit genlikte doymuş gecikmedir** ve engel tek boyutludur;
-sönüm katsayısı ile kalınlığın çarpımı sabit tutulduğu için genlik zaten
-kıpırdamamaktadır. İki sonuç aynı niceliği aynı kurulumda eniyilemediğinden,
-buradaki hesap o mekanizmanın yeniden keşfi değildir; bu bölüm ona yalnızca
-konum belirlemek için değinir.
+**Literatürdeki en yakın sonuç ve ondan farkı.** Engelin biçimi ile parçacığın
+enerjisi ayarlanarak tünellemenin güçlendirilebildiği bilinmektedir; belirli
+koşullarda geçirgenlik, saydam olmayan bir engelde bile üstel olarak küçük
+kalmaz. Ancak o mekanizma **geçme olasılığını** artırır ve tek boyutlu olmayan
+bir engel ister. Buradaki hesap ise geçirgenliği değil, **genlik sabit tutulurken
+doymuş gecikmeyi** küçültmektedir, ve kullanılan engel tek boyutludur. Sönüm
+katsayısı ile kalınlığın çarpımı sabit kaldığından genlik zaten yerinden
+kıpırdamaz. İki sonuç ne aynı niceliği ne de aynı kurulumu ele aldığından,
+buradaki hesap o mekanizmanın yeniden bulunması sayılmaz. Bu bölüm ona yalnızca
+kendi yerini göstermek için değinmektedir.
 
 ### 4.1.7 Grup kapalılığının bozulduğu katman
 
