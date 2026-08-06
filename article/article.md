@@ -2207,7 +2207,7 @@ engelde depolanan alanın boşalma süresi olarak okumuştur. Yukarıdaki tablo 
 sonucun bu geometrideki karşılığıdır. Bu çalışmanın kendi katkısı doyumun
 varlığı değil, doymuş gecikmenin ne kadar küçültülebileceğidir (Bölüm 4.1.6).
 
-**Aynı soruyu iki engelli hâlde de sordular ve kapatamadılar.** [41] iki ardışık
+**Aynı soru iki engelli hâlde de sorulmuş, ancak kapatılamamıştır.** [41] iki ardışık
 engel arasındaki açıklığın da gecikmeye girmemesini bekler ve [42] bunu optik
 çift bariyerde beş ayrı açıklıkta ölçer. Sonuç tartışmalıdır. [43] ölçülen
 niceliğin bir kat etme süresi değil kavite ömrü olduğunu savunur; [44] ile [45]
@@ -2274,19 +2274,20 @@ tanedir.
 
 Bu koşullar aynı biçimde başarısız olmaz ve ayrım sonucun okunuşunu belirlemektedir.
 Yedisi başarısız olduğunda yolculuk ortadan kalkar ya da işareti döner. Yalnızca
-son koşul, yani öte taraf mesafesi, **daha fazla ödenerek** giderilir. Duvarlar
-tek tek denendiğinde kütle parametresinin $8$ olması, bant genişliğinin $0{,}5$
-olması ve ters dalın seçilmesi birinci türden, mesafenin $0{,}5$ kalması ikinci
-türden başarısızlık verir.
+son koşul, yani öte tarafta alınan mesafe, **daha fazla ödenerek** sağlanabilir.
+Koşullar tek tek bozulduğunda şu çıkar: kütle parametresinin $8$ olması, bant
+genişliğinin $0{,}5$ olması ve ters dalın seçilmesi birinci türden bir
+başarısızlık verir; mesafenin $0{,}5$'te kalması ise ikinci türden bir
+başarısızlık verir.
 
 ### 13.8 Sınırın ağırlığa düşmesi
 
-Mesafeyi yukarıdan bağlayan bir koşul yoktur. Dolayısıyla varış anı sınırsız
-geriye iner. Onunla birlikte düşen nicelik **ağırlıktır**: sınanan
-yapılanmada bandın $7{,}8 \times 10^{-36}$ katı geri döner. Daha geriye gitmenin
-sınırı bu nedenle varmaya değil **görülmeye** konmuştur. Sorunun ölçülebilir
-biçimi ne kadar geriye gitmek istendiği değil, hangi zayıflıkta bir sinyalin
-ölçülebildiğidir.
+Öte tarafta alınacak mesafeyi yukarıdan sınırlayan bir koşul yoktur, dolayısıyla
+varış anı sınırsız geriye iner. Bununla birlikte düşen nicelik **ağırlıktır**:
+sınanan yapılanmada gönderilen bandın yalnızca $7{,}8 \times 10^{-36}$ katı geri
+dönmektedir. Daha geriye gitmenin sınırı bu yüzden varabilmeye değil,
+**görülebilmeye** konmuştur. Sorunun ölçülebilir biçimi şudur: ne kadar geriye
+gitmek istendiği değil, ne kadar zayıf bir sinyalin algılanabildiği.
 
 ---
 
@@ -2331,9 +2332,10 @@ gelenin aynı şey sayılabilmesini sağlayan koşuldur.
 
 ## 15. Korunan yüklerin muhasebesi
 
-Bir öncekinin karşıtı olan soru: geçişin **dokunamadığı** nedir.
+Önceki bölüm geçişin neyi değiştirdiğini saydı. Bu bölüm ters soruyu sorar:
+geçiş neye **dokunamaz**.
 
-Üç nicelik değişmeden geçer ve üçü de hesapla denetlenmiştir.
+Üç nicelik geçişten değişmeden çıkar ve üçü de hesapla denetlenmiştir.
 
 **Frekans.** Eklem koşulları sabit frekansta dayatıldığı için, ara bölgenin
 dayattığı dalga sayısı adımı frekanstan bağımsızdır. Üç ayrı frekansta adım aynı
@@ -2380,9 +2382,9 @@ doğrulanmıştır.
 $D$ bir involüsyondur, dolayısıyla iki kez uygulanınca dört-momentumun dört
 bileşeni de **tam olarak** başlangıç değerine döner; sayısal artık sıfırdır.
 
-Bunun önemi şudur: modelin raporladığı bütün kayıplar dönüşümden değil,
-**arayüzden** gelir. Cebir kusursuz kalmakta; bedeli eklem koşulları
-ödetmektedir.
+Bunun önemi şudur: modelin bildirdiği bütün kayıplar dönüşümden değil, iki
+bölgenin birleştiği **yüzeyden** gelmektedir. Cebir hiçbir şey kaybetmez; bedeli
+eklem koşulları ödetir.
 
 ### 15.3 Öte tarafta uzunluğun fizikselliği
 
@@ -2451,11 +2453,12 @@ frekansı yük ile potansiyelin çarpımı kadar kaydırır, dolayısıyla gerek
 taraf mesafesi dışarıdan oynatılır. Nötr bir durumda bu ayar yoktur, çünkü kayma
 yükle birlikte sıfırlanır.
 
-Ayarın bir tabanı vardır. Bedel frekansta tek düze değildir: düşer, en küçük
-değerine ulaşır ve yeniden yükselir. Sınanan yapılanmada taban $2{,}920810$
-değerinde ve $-0{,}0395$ potansiyelinde bulunur. Dolayısıyla potansiyelin satın
-aldığı şey keyfî ölçüde ucuz bir yolculuk değil, **en ucuz noktaya ayarlanma**
-olanağıdır ve kazanç bedelin yüzde beşinin altında kalır.
+Bu ayarın bir alt sınırı vardır. Gereken mesafe frekansla tek düze gitmez: önce
+düşer, en küçük değerine ulaşır, sonra yeniden yükselir. Sınanan yapılanmada bu
+en küçük değer $2{,}920810$ olup $-0{,}0395$ potansiyelinde bulunur. Yani
+potansiyelin sağladığı şey istenildiği kadar ucuz bir yolculuk değil, yalnızca
+**en ucuz noktaya ayarlanma** imkânıdır, ve buradan gelen kazanç toplam bedelin
+yüzde beşinin altında kalmaktadır.
 
 
 ---
@@ -2500,7 +2503,7 @@ momentumunun yönüdür.
 ### 16.3 Çıkış yüzünü belirleyen nicelik
 
 Bölüm 9.5'in iki etiketinden biri çıkış yüzüydü ve orada bağımsız bir etiket
-gibi ele alındı. Değil.
+gibi ele alınmıştı. Oysa bağımsız değildir.
 
 **Kurulum.** Ara bölgeyi geçmek, öte tarafın tek uzay ekseni boyunca hareket
 etmektir. Hangi yüzden çıkıldığı, o eksendeki dalga sayısının **işaretiyle**
