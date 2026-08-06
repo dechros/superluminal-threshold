@@ -3642,7 +3642,7 @@ Koşul bir yoğunluk olduğundan yoğunlaştırmayla sağlanır, süreyle değil
 zamana yayarak biriktirme yolu bu nedenle kapalı kalır.
 
 **Bölge yapılırsa dokuzuncu bir şart doğar.** Bölüm 13.7'nin sekiz şartı öte
-bölgeyi **verilmiş** kabul eder, ve bu meşrudur: geçiş hesabının hiçbir adımı
+bölgeyi **verilmiş** kabul eder ve bu meşrudur: geçiş hesabının hiçbir adımı
 bölgenin nasıl üretildiğine bakmaz. Bir üretim yolu adlandırıldığı anda durum
 değişir, çünkü üretilen bir bölge kalıcı değildir. Bir proton büyüklüğündeki
 bölgenin ömrü, ışığın onu geçme süresi kadardır:
