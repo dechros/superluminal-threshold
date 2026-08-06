@@ -237,12 +237,11 @@ yerde toplanmıştır ve her adımın hangi bölümde kurulduğu orada yazılıd
 tekrar etmek isteyen okuyucu için en kısa yol budur: önce Bölüm 19, sonra oradan
 işaret edilen yedi adres.
 
-Aşağıdaki bölümler detaydır ve hepsi aynı türdendir: omurganın bir adımına
-yöneltilebilecek bir soruyu karşılarlar. Hiçbiri anlatıyı ilerletmez; her biri
-bir soruyu kapatır. İki tablo **ayrıktır**: hiçbir adres ikisinde birden
-geçmez. Omurga bölümlerinin
-bir kısmının alt bölümleri aşağıda görünür, çünkü bir bölüm sonucu taşırken onun
-bir alt bölümü yalnızca bir itirazı karşılayabilir.
+Aşağıdaki bölümler ana hattı ilerletmez. Her biri, üç adımdan birine
+yöneltilebilecek belirli bir itirazı karşılar ve o itirazı kapatınca işi biter.
+Yukarıdaki tablo ile aşağıdaki tablo hiçbir adresi paylaşmaz. Ana hatta yer alan
+bazı bölümlerin alt bölümleri aşağıda görünür, çünkü bir bölüm sonucu taşırken
+onun bir alt bölümü yalnızca bir itiraza cevap veriyor olabilir.
 
 | Bölüm | Konusu | Karşıladığı soru |
 | ---------- | ---------------------------------------------------------- | ---------------------------------------------------------------------------- |
@@ -254,12 +253,12 @@ bir alt bölümü yalnızca bir itirazı karşılayabilir.
 | 20 | Yöntem ve üç denetim | Bu sayılar doğrulanmış mı ve doğrulama kendini kandırıyor olabilir mi |
 | 21 | Açık kalanlar | Neyin gösterilmediği yazılı mı |
 
-İki defter, yani Bölüm 14 ile Bölüm 15, eşiğin bir mod filtresi olmasıyla
-birlikte omurga ile detay arasında durmaktadır. Sonucu taşımazlar, ancak sonucun
-tutarlılığını onlar sağlar.
+Bölüm 14 ile Bölüm 15, eşiğin hangi modları geçirdiğini kayda geçiren iki
+dökümdür ve ana hat ile itiraz bölümlerinin arasında durmaktadır. Sonucu
+üretmezler, ancak sonucun kendi içinde tutarlı kalmasını onlar sağlar.
 
-**"Sözlük" sözcüğü üç ayrı nesneyi adlandırır.** Üçü aşağıda bir kez ayrılır, ve
-metnin geri kalanında bu ayrım tekrarlanmaz.
+**"Sözlük" sözcüğü üç ayrı nesneyi adlandırır.** Üçü aşağıda bir kez ayrılmıştır ve
+metnin geri kalanında bu ayrım tekrarlanmamaktadır.
 
 | Nerede | Neyi eşler | Çekirdek için rolü |
 | ---------- | -------------------------------------------------------------------------------------- | ------------------------------------------------ |
@@ -276,16 +275,19 @@ Diğer ikisi onu kullanır, yeniden kurmaz.
 
 ## 2. Çekirdek hesap
 
-Çekirdeği yeniden üretmek için gereken her şey bu bölümdedir ve bölüm, makalenin
-geri kalanına bakılmadan uygulanabilir. Her satırın nerede türetildiği yanında
-yazılıdır; metnin kalanı da o türetmeleri ve karşıladıkları soruları anlatmaktadır.
+Hesabı baştan sona tekrar etmek için gereken her şey bu bölümde toplanmıştır ve
+bölüm, makalenin geri kalanı okunmadan uygulanabilir. Her satırın hangi bölümde
+türetildiği yanında yazılıdır. Metnin kalanı da o türetmeleri ve her birinin
+hangi itirazı karşıladığını anlatmaktadır.
 
-**Girdi.** Öte tarafın enerji vektörü $E = (E_1, E_2, E_3)$. Bu vektör Bölge
-I'in üç momentumudur (Bölüm 15.1); yönü öte tarafta fiziksel değildir, yalnızca
-uzunluğu fizikseldir (Bölüm 15.3). Ara bölge tipi, çevrilen yön sayısı $n$ ile
-girer; Öklid için $n = 3$. Kalınlık $d$, kütle parametresi $\mu$, hız $c$.
+**Girdi.** Hesap, öte tarafın enerji vektörü $E = (E_1, E_2, E_3)$ ile başlar. Bu
+vektör Bölge I'de parçacığın üç momentum bileşenine karşılık gelir (Bölüm 15.1).
+Vektörün öte taraftaki yönü fiziksel bir fark yaratmaz, yalnızca uzunluğu yaratır
+(Bölüm 15.3). Ara bölgenin tipi hesaba, imzası çevrilen yönlerin sayısı olan $n$
+ile girer; Öklid tipi için $n = 3$. Geri kalan girdiler ara bölgenin kalınlığı
+$d$, kütle parametresi $\mu$ ve hız $c$ olur.
 
-**Zincir.**
+**Adımlar.**
 
 | Adım | Nicelik | Nerede |
 | ---- | ---------------------------------------------------------------------------------- | ------------------------ |
@@ -299,11 +301,12 @@ girer; Öklid için $n = 3$. Kalınlık $d$, kütle parametresi $\mu$, hız $c$.
 | 8 | Gidiş dönüş gecikmesi $= 2\tau$ | Bölüm 12 |
 | 9 | Varış anı $= 2\tau - s$, geri taşıyan dalda | Bölüm 4.1.2, Bölüm 4.1.3 |
 | 10 | Eşik mesafesi $s^\ast = 2\tau$ | Bölüm 4.1.3 |
-| 11 | Bedel $\Delta E / E = \Delta / s$ | Bölüm 4.1.5 |
+| 11 | Ödenen enerji oranı $\Delta E / E = \Delta / s$ | Bölüm 4.1.5 |
 
-Dokuzuncu satırdaki $s$ katsayısı **birdir** ve bir hıza bölünmez; bu,
-çalışmanın çekirdeğidir (Bölüm 4.1.1, Bölüm 4.1.2). İşareti hangi geçişin
-gerçeklendiği belirler, öte tarafta hangi yöne yürünüldüğü değil (Bölüm 4.1.3).
+Dokuzuncu satırda $s$'nin önündeki katsayı **bire eşittir** ve araya bir hız
+girmez. Çalışmanın asıl sonucu budur (Bölüm 4.1.1, Bölüm 4.1.2). O terimin
+işaretini, hangi geçiş eşlemesinin gerçeklendiği belirler; parçacığın öte tarafta
+hangi yöne yürüdüğü belirlemez (Bölüm 4.1.3).
 
 **Denetim değerleri.** Aşağıdaki yapılanma metnin bütün çekirdek sayılarını
 üretir ve bir uygulamanın doğru çalıştığı buradan sınanabilir.
@@ -324,38 +327,42 @@ $$E = L(\sin\theta\cos\varphi,\; \sin\theta\sin\varphi,\; \cos\theta),
 | Gidiş dönüş gecikmesi $2\tau$ | $2{,}565988$ |
 | Eşik mesafesi $s^\ast$ | $2{,}565988$ |
 
-Altıncı ile yedinci satır tesadüfen aynı çıkmaz. Biri genliğin sayısal
-frekans türevidir, diğeri kalınlık içermeyen kapalı form. İkisi ayrı ayrı
-hesaplanıp karşılaştırılabilir; ayrıldıkları yerde hata uygulamadadır, modelde
-değil.
+Altıncı ile yedinci satırın aynı çıkması bir rastlantı değildir. Biri genliğin
+frekansa göre sayısal türevinden gelir, diğeri kalınlık hiç geçmeyen kapalı
+formdan. İkisi birbirinden bağımsız hesaplanıp karşılaştırılabilir. Ayrıldıkları
+noktada hatanın kaynağı uygulamada bulunur, modelde değil.
 
-**Ağırlık da hesaba girer.** Yukarıdaki sayılar neyin mümkün olduğunu söyler, ne
-kadar sık olacağını söylemez. Yukarıdaki yapılanmada tek geçişin genliği
-$4{,}692932 \times 10^{-9}$, geçirgenliği $2{,}202361 \times 10^{-17}$
-değerindedir. Bölüm 4.1.3 ile Bölüm 4.1.5'in kalınlığa göre verdiği
-$3{,}46 \times 10^{-12}$ dizisi başka bir yapılanmadan çıkar, yani buradaki
-sayının kalınlıkla ölçeklenmiş hâli değildir. Dönüş anını tek başına vermek
-yanıltıcıdır; ikisi birlikte gider.
+**Geçişin ne sıklıkta olacağı da hesaba girer.** Yukarıdaki sayılar neyin mümkün
+olduğunu söyler, o şeyin ne kadar sık gerçekleşeceğini söylemez. Aynı
+yapılanmada tek bir geçişin genliği $4{,}692932 \times 10^{-9}$, geçirgenliği
+$2{,}202361 \times 10^{-17}$ çıkmaktadır. Bölüm 4.1.3 ile Bölüm 4.1.5'in
+kalınlığa göre verdiği $3{,}46 \times 10^{-12}$ dizisi ise başka bir
+yapılanmaya aittir, yani buradaki sayının kalınlıkla ölçeklenmiş hâli değildir.
+Dönüş anı tek başına eksik kalır, çünkü o anın ne sıklıkta gerçekleşeceğini
+yalnızca bu iki sayı verir.
 
 ### 2.1 Gidiş dönüşün hâlleri
 
-Zincir tek bir sonuç değil, bir sonuç kümesi vermektedir. Kümenin tamamı aşağıdadır;
-yalnızca geriye götüren dalı göstermek, kadranın öteki konumlarını gizlemek
-olurdu.
+Yukarıdaki adımlar tek bir sonuç değil, bir sonuç kümesi üretmektedir. Kümenin
+tamamı aşağıda verilmiştir, çünkü yalnızca geriye götüren durumu göstermek öteki
+durumları saklamak olurdu.
 
-İki bağımsız seçim var. **Dal**, yani hangi geçiş eşlemesinin gerçeklendiği:
-dört aday ileriye, dört aday geriye gönderir ve metrik ikisi arasında seçim
-yapmaz. **Mesafe**, yani öte tarafta ne kadar gidildiği. Bir de rejim var: ara
-bölge söndürücüyse gecikme kalınlığa doyar, yayılımlıysa doymaz.
+Sonucu iki bağımsız seçim belirlemiştir. Birincisi **dal**, yani sekiz geçiş
+eşlemesinden hangisinin gerçeklendiği: dördü parçacığı ileriye, dördü geriye
+gönderir ve metrik ikisi arasında bir tercih yapmaz. İkincisi **mesafe**, yani
+parçacığın öte tarafta ne kadar yol aldığı. Bunların üstünde bir de ara bölgenin
+rejimi durur: bölge söndürücüyse gecikme kalınlıkla bir tavana oturur,
+yayılımlıysa oturmaz.
 
 Varış anı, kalkışa göre, her durumda
 
 $$t_{\text{dönüş}} = 2\tau \;\pm\; s$$
 
-biçimindedir; işaret dalın, $s$ ise yolculuğun katkısıdır. Buradan beş hâl
-çıkar ve beşi de bu modelin içindedir. Aşağıdaki sayılar Bölüm 19'un yürüttüğü
-gidiş dönüşe aittir, Bölüm 2'nin denetim yapılanmasına değil; iki yapılanma
-farklı bir $2\tau$ verir ve tablo yalnızca hâllerin listesini gösterir:
+biçimini alır. Buradaki işareti dal belirler, $s$'yi ise yolculuğun uzunluğu.
+Formülden beş ayrı durum çıkar ve beşi de bu modelin içinde kalır. Aşağıdaki
+sayılar Bölüm 19'un yürüttüğü gidiş dönüşe aittir, Bölüm 2'nin denetim
+yapılanmasına değil. İki yapılanma farklı bir $2\tau$ verdiğinden tablo yalnızca
+durumların listesini göstermektedir:
 
 | Dal | Mesafe | Varış anı | Ne olur |
 | --------- | ----------- | --------------- | ------------------------------------------------ |
@@ -365,30 +372,33 @@ farklı bir $2\tau$ verir ve tablo yalnızca hâllerin listesini gösterir:
 | İleri | herhangi | $2\tau + s > 0$ | Her zaman sonra döner, mesafe gecikmeyi büyütür |
 | Her ikisi | $s = 0$ | $2\tau$ | Yolculuk yok, yalnızca iki geçişin faz gecikmesi |
 
-Son satır gecikmenin yolculuktan bağımsız bir taban olduğunu göstermektedir. Parçacık
-öte tarafta hiç yürümese bile iki geçiş bir bedel yükler; Bölüm 19'un
-yapılanmasında $2{,}434322$.
+Son satır, gecikmenin yolculuktan bağımsız bir tabanı olduğunu göstermektedir.
+Parçacık öte tarafta hiç yürümese bile iki geçişin kendisi bir süre yer:
+Bölüm 19'un yapılanmasında $2{,}434322$ birim.
 
-Dördüncü satır bir beyan taşımaz, bir hesap vermektedir. İleri dal iki yüz birime kadar
-tarandı ve hiçbir mesafede daha erken bir ana varmadı. İşareti yolculuk değil, hangi geçişin
+Dördüncü satır bir iddia değil, taranmış bir sonuç taşımaktadır. İleri dal iki
+yüz birim mesafeye kadar tarandı ve hiçbir mesafede parçacık kalkıştan önceki bir
+ana varmadı. Varış anının işaretini yolculuğun uzunluğu değil, hangi geçişin
 gerçeklendiği belirler.
 
-**Rejim tablonun bir satırını oluşturmaz.** Bu tablo, ara bölgenin parçacığa engel
-olduğu hâli anlatmaktadır. Engel olmadığında eşik mesafesi büyümez: kapalı biçim o
-durumda hiç gecikme vermez, çünkü sönüm katsayısı sıfırdır. Yayılımlı rejimde
-değişen şey bedelin büyüklüğü değil, hesabın uygulanıp uygulanmadığıdır.
+**Ara bölgenin rejimi tabloya ayrı bir satır olarak girmez.** Tablonun tamamı,
+ara bölgenin parçacığa engel olduğu duruma aittir. Bölge engel olmaktan çıkınca
+eşik mesafesi büyümez, çünkü sönüm katsayısı sıfırlanır ve kapalı form hiç
+gecikme vermez. Yayılımlı rejimde değişen şey sürelerin büyüklüğü değil, bu
+hesabın orada geçerli olup olmadığıdır.
 
-**Kapsanmayan tek hâl**, dalın yolculuk sırasında değişmesine karşılık gelir. Dal, geçiş
-eşlemesinin bir özelliğidir ve yolculuk boyunca sabit kalır. Değişmesi için
-parçacığın öte tarafta bir etkileşime girmesi gerekirdi; böyle bir etkileşim
-burada kurulmadı.
+**Tablonun kapsamadığı tek durum**, dalın yolculuk sırasında değişmesidir. Dal,
+geçiş eşlemesinin bir özelliğidir ve yolculuk boyunca sabit kalır. Değişmesi
+için parçacığın öte tarafta bir etkileşime girmesi gerekirdi; böyle bir
+etkileşim bu modelde kurulmamıştır.
 
 ---
 
 ## 3. İki bölge ve metrikleri
 
-Bölge I eşiğin bu yanıdır: bir zaman, üç uzay. Bölge II ışık hızının ötesidir:
-üç zaman, bir uzay.
+Bölge I eşiğin bu yanında kalır ve bir zaman ekseni ile üç uzay ekseni taşır.
+Bölge II ışık hızının ötesinde durur ve üç zaman ekseni ile bir uzay ekseni
+taşır.
 
 $$\text{Bölge I koordinatları: } (ct, x, y, z), \qquad
  \text{Bölge II koordinatları: } (t_1, t_2, t_3, r)$$
@@ -401,12 +411,15 @@ Kütle parametresi $\mu = (mc/\hbar)^2$ ile yazılır.
 
 ## 4. Geçişi yapan yapı
 
-Superboost dönüşümü iki bağımsız parçanın çarpımıdır:
+Eşiği geçiren superboost dönüşümü, birbirinden bağımsız iki parçanın çarpımına
+ayrılır:
 
 $$M(V) = D \cdot B(c^2/V), \qquad V > c$$
 
-- $D$, sabit, parametresiz involüsyon; imza değişimini tek başına yapar.
-- $B(c^2/V)$, sıradan subluminal Lorentz boostu; $V$ bilgisini taşır.
+- $D$, hiçbir parametreye bağlı olmayan sabit bir matristir ve imza değişimini
+ tek başına yapar. İki kez uygulanınca başa döner.
+- $B(c^2/V)$, sıradan bir subluminal Lorentz boostudur ve hız bilgisini taşıyan
+ tek parça odur.
 
 $V > c$ olduğundan $u = c^2/V < c$'dir, yani $B$ gerçekten subluminaldir. Her
 $V$ değeri için
@@ -429,12 +442,13 @@ Doğrulanan özellikler:
 | Grup | $\mathbb{Z}_2$ |
 | $V$ bağımlılığı | Yok |
 
-$D$ aralığın **genel işaretini** çevirir. Metriğin genel işaretinin değişmesi ve
-bunun fiziksel sonuçlarını [12] ayrıca ele alır; orada bu, göreliliğin
-farklı formülasyonlarında klasik bir imza değişimi türü olarak incelenir ve
-kozmolojik sabitle ilişkilendirilmiştir. Buradaki kullanım ondan dardır: genel
-işaret çevrilmesi tek başına ele alınmaz, iki metrik arasındaki eşlemenin bir
-özelliği olarak ortaya çıkar.
+$D$, iki olay arasındaki aralığın **işaretini bütünüyle** ters çevirir. Metriğin
+işaretinin böyle değişmesini ve bunun fiziksel sonuçlarını [12] ayrıca ele
+almıştır; orada konu, göreliliğin farklı formülasyonlarında klasik bir imza
+değişimi türü olarak incelenir ve kozmolojik sabitle ilişkilendirilir. Buradaki
+kullanım daha dardır: işaret çevrilmesi başlı başına bir konu olarak ele
+alınmaz, yalnızca iki metrik arasındaki eşlemenin bir özelliği olarak ortaya
+çıkar.
 
 Işık konisi testi $(1,1,0,0)$, $(1,0,1,0)$, $(1,0,0,1)$ ve
 $(1, 1/\sqrt{3}, 1/\sqrt{3}, 1/\sqrt{3})$ ışınları üzerinde yapılır; her birinde
@@ -442,18 +456,21 @@ $s'^2 = -s^2 = 0$ çıkar. Genel bir aralık için de $s'^2 = -s^2$ tam olarak
 sağlanmıştır.
 
 **Bu çarpanlama yenilik taşımaz.** Bir superboost'un, sonsuz hız limitindeki bir
-çevirme ile dual hız $c^2/V$'ye ait sıradan bir boostun bileşkesi olduğu [1]'de
-belirtilmiştir ve [2] bunu kendi eleştirisinin ikinci basamağı olarak kullanır.
-Bu bölüm çarpanlamanın kendisini değil, üç noktayı eklemektedir. Birincisi,
-model çarpanlamayı düzenleyici ilke olarak sonuna kadar kullanmaktadır. İkincisi,
-Bölüm 4.1'in tam taraması çevirme parçasının **zorunlu** olduğunu göstermektedir.
-Üçüncüsü, Bölüm 4.2 grup kapanmasındaki bozulmayı yalnızca $B$ katmanına yıkar.
+çevirme ile dual hız $c^2/V$'ye ait sıradan bir boostun bileşkesi olduğunu [1]
+belirtir, ve [2] bunu kendi eleştirisinin ikinci basamağı olarak kullanır.
+
+Bu bölümün eklediği şey çarpanlamanın kendisi değil, onun üzerine kurulan üç
+sonuçtur. Birincisi, model bu ayrıştırmayı baştan sona düzenleyici bir ilke
+olarak kullanmaktadır. İkincisi, Bölüm 4.1'in tam taraması çevirme parçasının
+seçilmiş değil **zorunlu** olduğunu göstermektedir. Üçüncüsü,
+Bölüm 4.2 grup kapanmasındaki bozulmanın tamamının $B$ parçasından geldiğini
+ortaya koyar.
 
 ### 4.1 Permütasyon taraması
 
-$D$'nin bir seçim değil zorunluluk olduğunu göstermek için bütün işaretli
-permütasyon matrisleri tarandı: $4!$ permütasyon çarpı $2^4$ işaret, toplam 384
-aday.
+$D$'nin bir seçim değil bir zorunluluk olduğunu göstermek için işaretli
+permütasyon matrislerinin tamamı tek tek tarandı. Aday sayısı $4!$ permütasyon
+ile $2^4$ işaret bileşiminin çarpımından çıkar, yani 384 matris denendi.
 
 | Filtre | Kalan aday |
 | ---------------------------------- | ---------- |
@@ -461,11 +478,12 @@ aday.
 | ve involüsyon ($M^2 = I$) | 12 |
 | ve $\det = +1$ | 8 |
 
-Kalan sekiz çözümün **tamamı** $ct$'yi tek bir uzay eksenine gönderir. "Bölge I'in
-zamanı Bölge II'nin uzayı olur" sonucu bir seçim değil, zorunluluktur.
+Elde kalan sekiz çözümün **tamamı** $ct$ eksenini tek bir uzay eksenine
+göndermektedir. Yani "Bölge I'in zamanı Bölge II'nin uzayı olur" cümlesi bir
+tercih değil, üç koşulun zorladığı tek sonuçtur.
 
-**Ancak sekiz çözüm arasındaki fark yalnızca uzay eksenlerinin etiketlenmesi
-değildir.** Sekizi, $ct$ yuvasına verilen **işarete** göre dörde dört bölünür:
+**Sekiz çözüm arasındaki fark yalnızca eksenlerin nasıl etiketlendiği değildir.**
+Sekizi, $ct$ yuvasına düşen **işarete** göre dörde dört ayrılır:
 
 | Filtre | Aday | İleri ($+$) | Geri ($-$) |
 | -------------- | ---- | ----------- | ---------- |
@@ -473,40 +491,43 @@ değildir.** Sekizi, $ct$ yuvasına verilen **işarete** göre dörde dört böl
 | ve involüsyon | $12$ | $6$ | $6$ |
 | ve $\det = +1$ | $8$ | $4$ | $4$ |
 
-Bölünme filtrenin **her** aşamasında eşittir, dolayısıyla bu üç koşulun
-güçlendirilmesi geri dalını elemez. Dört geri dalın her biri üç koşulun tamamını
-ayrı ayrı sağlar ve birim öte taraf yer değiştirmesini Bölge I saatinde
+Bölünme filtrenin **her** aşamasında yarı yarıya kalmaktadır, dolayısıyla üç
+koşulu daha da sıkılaştırmak geri götüren dalı elemez. Dört geri dalın her biri
+üç koşulu ayrı ayrı sağlar ve öte tarafta atılan birim adımı Bölge I'in saatinde
 $-1{,}0000$'a gönderir.
 
-**İki aileyi ne ayırıyor.** Bölge I'in zaman eksenini tek başına çevirmek
-ayırmıyor: determinantı negatife çeviriyor ve kapanmayı bozuyor, yani adayı
-kümeden çıkarıyor. Öte tarafın ayırt edilmiş eksenini tek başına çevirmek de
-aynı sebeple ayırmıyor. **İkisini birlikte çevirmek** ayırıyor:
+**İki aileyi birbirinden ne ayırır.** Yalnızca Bölge I'in zaman eksenini ters
+çevirmek ayırmaz, çünkü bu işlem determinantı negatife düşürür ve grup
+kapanmasını bozar, yani adayı kümenin dışına atar. Yalnızca öte tarafın ayırt
+edilmiş eksenini çevirmek de aynı sebeple ayırmaz. Ayıran işlem **ikisini
+birlikte çevirmektir**:
 
 $$S = \mathrm{diag}(-1, +1, +1, -1)$$
 
-$S$ sekizliyi kendi üzerine gönderir ve her işareti ters çevirir; **iki metriğin
-de izometrisidir** ve determinantı birdir. Yani bir geçişe dayatılan koşulların
-tamamını sağlar. Çevirdiği çift, geçişin birbirine eşlediği çiftin tam olarak
-kendisidir: Bölge I'in zamanı ve Bölge II'nin tek uzay yönü.
+$S$ sekiz çözümü yine sekiz çözüme gönderir ve bu sırada her birinin işaretini
+ters çevirir. Determinantı bire eşittir ve **her iki metriği de bozmadan
+bırakır**, yani bir geçişten istenen bütün koşulları sağlar. Ters çevirdiği
+eksen çifti de tam olarak geçişin birbirine eşlediği çifttir: Bölge I'in zamanı
+ile Bölge II'nin tek uzay yönü.
 
-**Sonuç.** Yukarıda yazılan $D$ sekizliden biridir ve **ileri gönderen**
-ailededir. Bu metnin sonucunu taşıyan hesaplar ise **geri taşıyan** eşi
-üzerinde yürür, yani $SD$ üzerinde; $S$ sekizliyi kendi üzerine gönderdiğinden
-o eş de sekizliden biridir ve üç koşulun tamamını sağlar. Aileyi seçmek bu
-metnin kararıdır, üç koşulun bir sonucu değildir. Aileler arasında seçim yapan
-hiçbir şey burada hesaplanmamaktadır ve iki aileyi ayıran dönüşüm iki tarafın
-metriğinin de
-izometrisi olduğundan, **seçim geometrik değildir**. Bölüm 9.4 aynı şeyi başka
-yerde söyler: orada da ayrımın iki yakası arasında metriğin bir tercih
-yapmadığını gösterir. Seçimi her iki yerde de metrik dışında bir şey yapar.
+**Sonuç.** Yukarıda yazılan $D$ bu sekizden biridir ve parçacığı **ileri
+gönderen** ailede yer alır. Metnin sonucunu taşıyan hesaplar ise onun **geri
+taşıyan** eşi olan $SD$ üzerinde yürümektedir. $S$ sekizliyi kendi üzerine
+gönderdiğinden $SD$ de sekizden biri olur ve üç koşulu eksiksiz sağlar. Hangi
+ailenin kullanılacağını bu metin karara bağlamıştır; karar üç koşuldan çıkmaz.
+İki aile arasında seçim yapan hiçbir nicelik burada hesaplanmamıştır, ve
+aileleri ayıran dönüşüm her iki metriği de bozmadan bıraktığından **seçimin
+kaynağı geometri değildir**. Bölüm 9.4 aynı durumu başka bir yerde daha
+göstermektedir: orada da metrik, ayrımın iki yakası arasında bir tercih
+yapmamaktadır. Seçimi iki yerde de geometri dışında bir şey yapar.
 
 ### 4.1.1 Sözlük katsayısının ispatı
 
-Bu çalışmanın merkezindeki ifade şudur: öte tarafın tek uzay ekseni Bölge I'in
-zamanıdır. İfade nitel bırakılırsa "o eksende ilerlemek zamanda yer
-değiştirmektir" cümlesi bir benzetmeye dönüşür. Aşağıdaki iki sonuç onu
-niceliksel yapar; ikisi sekiz geçişin **tamamı** üzerinde denetlenmiştir.
+Çalışmanın merkezinde şu cümle durur: öte tarafın tek uzay ekseni, Bölge I'in
+zaman eksenine karşılık gelir. Cümle bu hâliyle bırakılırsa "o eksende
+ilerlemek zamanda yer değiştirmektir" ifadesi bir benzetmeden öteye geçmez.
+Aşağıdaki iki sonuç ona sayı verir ve ikisi de sekiz geçişin **tamamı**
+üzerinde ayrı ayrı denetlenmiştir.
 
 **Katsayı tam olarak bire eşit çıkar.** Sekiz geçişin her birinde, zaman koordinatını
 üreten satırın sıfırdan farklı **tek** bir girdisi vardır, o girdi öte tarafın
@@ -529,13 +550,13 @@ mesafe verildiğinde, ürettikleri yer değiştirmeler eşit büyüklükte ve te
 işaret taşımaktadır. Yani sözlük saatin **ne kadar** oynadığını sabitler, **hangi yöne**
 oynadığını sabitlemez.
 
-**Bu bölümün tek başına meşru kılmadığı.** Yukarıdakilerin hepsi öte taraf yer
-değiştirmeleri hakkındadır. Bir saçılma fazından okunan gecikme bunlardan biri
-değildir; dolayısıyla o gecikmeyi bu yer değiştirmelerle toplamak yalnızca
-buradan çıkmaz. Toplama ayrı bir sonuçtur; Bölüm 4.1.2 onu eşlenik değişkenler üzerinden
-türetir. Ayrım kasten keskin durur: silikleştirilirse iki
-ayrı sonuçtan biri, yalnızca ifade biçimiyle diğerinin doğal sonucu gibi
-görünür.
+**Bu bölümün tek başına haklı çıkarmadığı adım.** Yukarıdaki sonuçların hepsi
+öte tarafta atılan adımlarla ilgilidir. Eşikten geçerken saçılma fazından okunan
+gecikme ise bu adımlardan biri değildir. Dolayısıyla gecikmeyi öte taraftaki yer
+değiştirmeyle toplama işlemi buradan çıkmaz, ayrı bir sonuç olarak kurulmalıdır.
+Bölüm 4.1.2 o toplamı eşlenik değişkenler üzerinden türetmektedir. Ayrım bilerek
+keskin tutulmuştur, çünkü bulanıklaştığında iki ayrı sonuçtan biri, yalnızca
+yazılış biçimi yüzünden diğerinin doğal devamı gibi görünür.
 
 ### 4.1.2 Toplamanın tek fazdan türetimi
 
@@ -561,10 +582,10 @@ Sekiz aday için iki cebirsel olgu bunu kurar:
 Bu iki olgu, taramanın zaten dayattığı koşulların sonucudur; toplanabilirlik
 için yeni bir varsayım eklenmemiştir.
 
-Buradan asıl adım geliyor. Yer değiştirme fazın **dışında** bırakılıp sonradan
-eklenmez, **içine** konmuştur. Saçılma fazı $\varphi(\omega)$ taşıyan ve öte tarafın
-ayırt edilmiş ekseni boyunca $s$ kadar yer değiştiren tek bir genliğin toplam
-fazı
+Asıl adım bundan sonra gelir. Öte taraftaki yer değiştirme, fazın dışında
+tutulup sonradan eklenmez; doğrudan fazın **içine** yerleştirilmiştir. Saçılma
+fazı $\varphi(\omega)$ taşıyan ve öte tarafın ayırt edilmiş ekseni boyunca $s$
+kadar ilerleyen tek bir genliğin toplam fazı
 
 $$\Phi(\omega) \;=\; \varphi(\omega) + \kappa(\omega)\, s,$$
 
@@ -573,9 +594,9 @@ ve durağan faz koşulu çıkan paketin anını
 $$t \;=\; \frac{\mathrm{d}\varphi}{\mathrm{d}\omega}
  \;+\; s\,\frac{\mathrm{d}\kappa}{\mathrm{d}\omega}$$
 
-olarak verir. Toplam artık iki ayrı hesabın arasına yerleştirilen bir varsayım
-değil, **tek** bir hesaptan okunan bir sonuçtur; ikinci terimin ağırlığı da bir
-seçim değil, hesaplanabilir bir türevdir.
+olarak verir. Böylece toplam, iki ayrı hesabın arasına elle konan bir varsayım
+olmaktan çıkıp **tek** bir hesaptan okunan bir sonuca dönüşür. İkinci terimin
+önündeki çarpan da bir seçim değil, hesaplanabilen bir türev olur.
 
 O türev hesaplanmıştır. Eşlenik değişkeni üreten satırın sıfırdan farklı tek bir
 girdisi olduğundan $\kappa$ yalnızca frekansla orantılıdır, ve
@@ -624,52 +645,55 @@ varış anı orada sıfırlanmıştır. Hesaplanan varış anları:
 rejimde gecikme doymaz; $d = 8$ için değeri $97{,}0543$'tür, yani incelenen
 mesafelerin çok ötesindedir ve eşik mesafesine ulaşılmaz.
 
-Bu sonucun ağırlığı da küçük çıkmıştır. Eşik mesafesine ulaşan
-yapılanmalar kalın bariyerlerdir, kalın bariyer ise neredeyse hiçbir şey
-geçirmez: $d = 2$ için geçirgenlik $3{,}67 \times 10^{-3}$, $d = 4$ için
-$3{,}60 \times 10^{-6}$, $d = 8$ için $3{,}46 \times 10^{-12}$. Dizi aynı anda
-hem kabul edilebilir hem de kuvvetle bastırılmıştır; sonuç bir olabilirlik
-ifadesidir, bir verim ifadesi değildir.
+Bu sonucun gerçekleşme olasılığı ise küçük kalmaktadır. Eşik mesafesine
+ulaşabilen yapılanmalar kalın bariyerlerdir, ve kalın bir bariyer neredeyse
+hiçbir şey geçirmez: geçirgenlik $d = 2$ için $3{,}67 \times 10^{-3}$, $d = 4$
+için $3{,}60 \times 10^{-6}$, $d = 8$ için $3{,}46 \times 10^{-12}$ çıkar. Yani
+geçiş hem mümkün kalır hem de son derece seyrek gerçekleşir. Buradaki sonuç
+neyin olabileceğini söyler, ne kadarının olacağını söylemez.
 
-Ayrıca bu bölümde toplanan iki terimin toplamı, Bölüm 4.1.2'nin tek genlikten
-okunan anıyla üç mesafede karşılaştırılmış ve aynı çıkmıştır. Yani makalenin bu
-noktadaki toplaması, yerine geçen türetmeyle uyumlu bulunmuştur.
+Bu bölümde toplanan iki terimin toplamı, Bölüm 4.1.2'nin tek genlikten okuduğu
+varış anıyla üç ayrı mesafede karşılaştırılmış ve her üçünde de aynı çıkmıştır.
+Yani buradaki toplama işlemi, onun yerine geçebilecek bağımsız türetmeyle uyumlu
+kalmıştır.
 
-**Geri varış, öte tarafta geri yürümekle örtüşmez.** Bu ayrım burada yapılmalıdır,
-çünkü metnin başka bir yerinde öte tarafın tek uzay ekseninin
-**yönlendirilebilir** olduğu hesaptan çıkar: bir cisim o eksende geri dönemez,
-yani yer değiştirmenin miktarı serbesttir, işareti değildir. Yukarıdaki geri
-varış o sonuçla çelişmez, çünkü işaret cismin o eksende hangi yöne yürüdüğünden
-değil, **hangi geçiş eşlemesinin kullanıldığından** gelir. Bölüm 4.1'in sekiz
-adayının dördü verilen bir yer değiştirmeyi daha geç, dördü daha erken bir ana
-taşır ve iki aile her iki metriğin de izometrisi olan bir dönüşümle birbirine
-bağlıdır. Cisim öte tarafta tek yönde yürür; o yürüyüşün bu tarafta hangi yöne
-düştüğünü eşleme belirlemektedir. Dolayısıyla "geri yürümek" diye bir işlem bu kurguda
-yoktur ve gerekmez.
+**Erken varmak ile öte tarafta geri yürümek aynı şey değildir.** Bu ayrımı burada
+yapmak gerekir. Metnin başka bir yerinde, öte tarafın tek uzay ekseninin
+**yönlendirilebildiği** hesaptan çıkmaktadır. Bir cisim o eksende geri dönemez:
+ne kadar ilerleyeceğini seçebilir, hangi yöne ilerleyeceğini seçemez.
+Yukarıdaki erken varış bu sonuçla çelişmez, çünkü varış anının işareti cismin
+öte tarafta hangi yöne yürüdüğünden değil, **hangi geçiş eşlemesinin
+kullanıldığından** doğar. Bölüm 4.1'in sekiz adayından dördü aynı yer
+değiştirmeyi daha geç bir ana, dördü daha erken bir ana taşır, ve iki aileyi
+birbirine bağlayan dönüşüm her iki metriği de bozmadan bırakır. Cisim öte
+tarafta hep tek yönde yürür; o yürüyüşün Bölge I'de hangi zaman yönüne düştüğünü
+eşleme belirlemektedir. Dolayısıyla bu kurguda "geri yürümek" diye bir işlem
+bulunmaz, ve zaten gerekmez.
 
 ### 4.1.4 Çerçeve değişimi
 
-Sözlük lineer olduğundan, tek eksende kalan bir yolculuğun saatte ürettiği yer
-değiştirme yalnızca **net** miktara bağlıdır; gidiş ve eşit dönüş tam olarak
-sadeleşir (Bölüm 4.1.1). Bacaklar arasında **çerçeve** değişirse soru
-başkalaşır, çünkü katsayıyı bir matris verir ve o matris çerçeve değişimiyle
-bileşke almaktadır. Öte tarafın metriğini koruyan iki tür çerçeve değişimi vardır ve
-ikisi farklı davranır.
+Sözlük lineer olduğundan, tek eksende kalan bir yolculuğun saatte ürettiği kayma
+yalnızca **net** yol miktarına bağlı kalır; gidilen yol ile eşit uzunlukta bir
+dönüş tam olarak birbirini götürür (Bölüm 4.1.1). Yolculuğun iki bacağı arasında
+**çerçeve** değişirse soru başkalaşır, çünkü katsayıyı bir matris verir ve o
+matris çerçeve değişimiyle bileşke alır. Öte tarafın metriğini bozmadan bırakan
+iki tür çerçeve değişimi bulunur, ve ikisi birbirinden farklı davranır.
 
 **Aynı işaretli eksenler arasındaki dönmeler hiçbir şey bırakmaz.** Üç aynı
-işaretli ekseni birbirine döndüren bir dönme, ayırt edilmiş ekseni **sabit
-bırakır**; dolayısıyla ilgili matris girdisine dokunmaz. Katsayı incelenen bütün
-açılarda değişmeden $1$ kalır ve net yer değiştirmesi sıfır olan her rota, ne
-kadar dolambaçlı olursa olsun, saati başladığı yere döndürür. Bu sekiz geçişin
-hepsinde tutmuştur. Yani **gezinmek tek başına hiçbir şey kazandırmaz**;
-bu, öte tarafta dolaşmanın kendi başına zaman kazandıracağı beklentisini
-dışlayan olumsuz bir sonuçtur.
+işaretli ekseni birbirine döndüren bir dönme, ayırt edilmiş ekseni **yerinde
+bırakır** ve dolayısıyla katsayıyı veren matris girdisine dokunmaz. Katsayı
+incelenen bütün açılarda $1$ olarak kalır. Net yer değiştirmesi sıfır olan bir
+rota, ne kadar dolambaçlı olursa olsun saati başladığı yere geri getirir, ve bu
+sekiz geçişin hepsinde doğrulanmıştır. Yani **öte tarafta dolaşmak tek başına
+hiçbir şey kazandırmaz**. Bu olumsuz bir sonuçtur ve dolaşmanın kendiliğinden
+zaman kazandıracağı beklentisini ortadan kaldırır.
 
-**Ayırt edilmiş ekseni karıştıran hiperbolik dönme bırakır.** Ayırt edilmiş
-ekseni aynı işaretli bir eksenle karıştıran dönüşüm de öte taraf metriğinin bir
-izometrisidir, ama o ekseni sabit bırakmaz: katsayıyı hızlılığının hiperbolik
-kosinüsüyle çarpar. İki bacağı böyle bir dönüşümle ayıran kapalı bir rota
-artık kalıntı bırakır ve kalıntı hızlılıkta sınırsız büyümektedir. Katsayı hızlılığın
+**Ayırt edilmiş ekseni karıştıran hiperbolik dönme ise iz bırakır.** Ayırt
+edilmiş ekseni aynı işaretli bir eksenle karıştıran dönüşüm de öte tarafın
+metriğini bozmaz, ancak o ekseni yerinde bırakmaz: katsayıyı, dönüşümün
+hızlılığının hiperbolik kosinüsüyle çarpar. İki bacağı böyle bir dönüşümle
+ayrılan kapalı bir rota artık başladığı yere dönmez, geriye bir artık bırakır,
+ve o artık hızlılık büyüdükçe sınırsız büyür. Katsayı hızlılığın
 hiperbolik kosinüsüdür: $0{,}5$'te $1{,}127626$, $1$'de $1{,}543081$, $2$'de
 $3{,}762196$. Buradan çıkan kalıntılar, $3$ birimlik gidiş dönüş için:
 $-0{,}382878$, $-1{,}629242$, $-8{,}286587$. Kalıntının işareti negatiftir, yani
