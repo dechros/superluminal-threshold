@@ -882,9 +882,9 @@ değildir**: $D$, [3]'ün genişletilmiş grubunda bulunmaz, çünkü içerdiği
 $x \leftrightarrow y$ takasının üç boyuttaki determinantı $-1$'dir ve
 dolayısıyla $SO(3)$ elemanı değildir. Bölüm 16.7 bunu hesaplamıştır.
 
-Bu bölüm tek bir fark taşır: kapanma bozulmasını hangi katmanın ürettiğini
-ayrıştırır. $D$ kapalı kalır, $B$ değildir. [3]'te sorun bu biçimde ortaya konmaz,
-çünkü o çalışma zaten kapalı bir grup inşa etmektedir.
+Bu bölüm tek bir şey ekler: grup kapanmasındaki bozulma hangi parçadan geliyor,
+onu ayırır. $D$ kapalı bir grup üretir, $B$ üretmez. [3] sorunu bu
+biçimde ortaya koymaz, çünkü o çalışma baştan kapalı bir grup kurmaktadır.
 
 ---
 
@@ -892,19 +892,20 @@ ayrıştırır. $D$ kapalı kalır, $B$ değildir. [3]'te sorun bu biçimde orta
 
 ## 5. Ara bölgenin tipleri ve kalınlığı
 
-Önceki iki bölüm iki bölgeyi tarif etti. Aralarında ne olduğu ayrı bir sorudur
-ve bu çalışmada bir yüzey değil, kendi başına bir **bölge** olarak ele alınmıştır.
-Nedeni şudur: geçişin nasıl olacağını iki uçtaki metrikler değil, aralarındaki
-bölgenin karakteri belirler.
+Önceki iki bölüm Bölge I ile Bölge II'yi tarif etti. İkisinin arasında ne
+olduğu ayrı bir sorudur, ve bu çalışma orayı kalınlıksız bir yüzey olarak değil
+kendi başına bir **bölge** olarak ele almıştır. Bunun nedeni şudur: geçişin nasıl
+olacağını iki uçtaki metrikler değil, aradaki bölgenin karakteri belirler.
 
 Soru iki bağımsız eksene ayrılır ve biri diğerini belirlemez:
 
 - **Ara bölge neyden yapılmıştır?** Yani hangi imzayı taşır.
 - **Ne kadar kalındır?** Sıfır kalınlıktan sınırsıza.
 
-Bu çalışma hiçbir tipi baştan seçmez. Dört tip ve beş kalınlık için hesap ayrı
-ayrı yapılır ve sonuçlar yan yana konmuştur. Hangi tipin doğru olduğu bu modelin
-içinden çıkmaz; çıkan şey, her tipin neye yol açtığıdır.
+Bu çalışma tiplerden hiçbirini baştan seçmez. Hesap dört tip ve beş kalınlık
+için ayrı ayrı yürütülmüş, sonuçlar yan yana konmuştur. Hangi tipin gerçekleştiği
+modelin içinden çıkmaz. Modelin verdiği şey, her tipin hangi sonuçlara yol
+açtığıdır.
 
 ### 5.1 Dört aday
 
@@ -924,8 +925,9 @@ yönlerden yalnızca biri karakter değiştirmiştir. Kademeli yolun durağı bu
 yönü kalmamıştır. İmza değişimi literatürünün büyük bölümünün ele aldığı geçiş
 budur.
 
-**Dejenere katman.** Metriğin tersinin bulunmadığı bir tabaka. Diğer üçünden
-farklı olarak burada bir imza yoktur, yayılım operatörünün kendisi tanımsız kalır.
+**Dejenere katman.** Metriğin tersi bulunmayan bir tabaka. Öteki üç adaydan
+farklı olarak burada bir imzadan söz edilemez, çünkü yayılımı yöneten operatörün
+kendisi tanımsız kalır.
 
 ### 5.2 İçerideki modun davranışı
 
@@ -981,10 +983,11 @@ bölgenin tipi ancak kalınlığı varsa fizik taşır.
 geçirgenlik milyonda üçe iner. Yeterince kalın bir Öklid bölge, dejenere
 katmandan ayırt edilemez.
 
-**Kleinian bölge hiçbir kalınlıkta kapanmaz, ama salınır.** Geçirgenlik
-kalınlıkla tekdüze azalmaz; artıp azalır. İç mod yayıldığı için bölge bir engel
-değil, bir **girişim odası** gibi davranır. Kırk birim kalınlıkta bile
-geçirgenlik yüzde seksen yediye yakındır.
+**Kleinian bölge hiçbir kalınlıkta kapanmaz, geçirgenliği salınır.** Geçirgenlik
+kalınlık arttıkça tekdüze azalmaz, artıp azalır. İç mod bölgenin içinde
+yayılabildiğinden bölge bir engel gibi değil, dalganın iki yüz arasında gidip
+gelerek kendisiyle girişime girdiği bir **oda** gibi davranır. Kırk birim
+kalınlıkta bile geçirgenlik yüzde seksen yedi civarında kalmaktadır.
 
 **Literatürdeki karşılığı.** Bu tablonun üçüncü satırının bir öncülü vardır ve
 karşılaştırma yapılmalıdır. [20] ve [21] kütlesiz skaler alanı iki boyutta imza
@@ -1020,29 +1023,31 @@ geçen dalga" sorusu 1994'te sorulmuştur.
 Buradaki tablonun ona eklediği şey **sonlu kalınlıktır**. [27] tek bir imza
 değişimi yüzeyinden geçişi ele almaktadır. Buradaki hesapta ise ara bölgenin iki yüzü
 ve aralarında bir kalınlığı var. Tablo o kalınlığın işlevini anlatır: Öklid
-bölge kalınlıkla kapanır, Kleinian bölge kapanmaz. Nedeni, iki yüz arasında
-yayılan bir iç mod bir girişim odası kurar. Salınımın kendisi kalınlığın
-ürünüdür ve tek yüzlü bir hesapta görünmez.
+bölge kalınlık arttıkça kapanır, Kleinian bölge kapanmaz. Bunun nedeni, iki yüz
+arasında yayılabilen bir iç modun ortaya çıkmasıdır: mod iki yüz arasında gidip
+gelir ve kendisiyle girişime girer. Geçirgenlikteki salınım doğrudan kalınlığın
+ürünüdür, ve tek yüzlü bir hesapta hiç görünmez.
 
-Bu tablonun kendine ait olan kısmı, dolayısıyla, Kleinian imzanın kendisi değil
+Dolayısıyla bu tablonun kendine ait olan kısmı Kleinian imzanın kendisi değil,
 **iki yüz arasındaki girişimdir**.
 
 ### 5.4 Eşiğin taşıdığı madde katmanı
 
-Geçirgenlik hikâyenin yarısını verir. Diğer yarısını geçişin yüzeyde bıraktığı iz
-oluşturur.
+Geçirgenlik sorunun yalnızca yarısını cevaplar. Kalan yarısını, geçişin yüzeyde
+bıraktığı iz oluşturur.
 
 Zayıf eklem koşulu seçildiğinde geçiş yüzeyinde dış eğrilik sıfırlanmaz, ve
-sıfırlanmayan bir dış eğrilik gerilim tensöründe bir **madde katmanına**
-karşılık gelir. Katman sıfır kalınlık limitinde dağılımsal bir terime iner;
-sonlu kalınlıkta ise geçiş bölgesine yayılmış etkin bir gerilim olarak durur
-(Bölüm 6.2). Zayıf koşul bunu bedel olarak yükler: geçişe izin veren seçim, aynı zamanda
-yüzeye bir madde katmanı koyar. Katmanın genel formülasyonu [17]'dedir: imza değiştiren bir zarın
-dağılımsal gerilimi, imzanın değiştiği yüzeyin zamansal olamaması da dahil olmak
-üzere o çalışma konuyu tam olarak ele almaktadır. Buradaki hesap onun bu geometrideki
-sayısal karşılığıdır.
+sıfırlanmayan bir dış eğrilik gerilim tensöründe bir **madde tabakasına**
+karşılık gelir. Kalınlık sıfıra giderken tabaka noktasal bir terime iner. Sonlu
+kalınlıkta ise geçiş bölgesinin içine yayılmış bir gerilim olarak durur
+(Bölüm 6.2). Zayıf koşulun bedeli budur: parçacığın geçmesine izin veren seçim,
+aynı anda yüzeye bir madde tabakası koyar. Böyle bir tabakanın genel
+formülasyonunu [17] vermiştir; o çalışma, imzanın değiştiği yüzeyin zamansal
+olamaması da dahil olmak üzere konuyu tam olarak ele alır. Buradaki hesap onun
+bu geometrideki sayısal karşılığını çıkarmaktadır.
 
-Katmanın gücü, imzanın döndüğü mesafeyle ters orantılı gitmektedir. Hesaplanan değerler:
+Tabakanın gücü, imzanın döndüğü mesafeyle ters orantılı gitmektedir. Hesaplanan
+değerler:
 
 | Tip | $d = 0{,}1$ | $d = 1$ | $d = 4$ |
 | -------- | ----------- | ------- | -------- |
@@ -1123,9 +1128,9 @@ da genel bir yapılanma değil, ince ayarlanmış bir özel durumdur.
 Zayıf seçime karşı yöneltilmiş en güçlü itiraz felsefi değildir ve burada
 felsefeyle değil, hesapla karşılanmaktadır. Alan denklemleri yüzey boyunca
 yazıldığında, **normal türev çarpı delta bölü lapse** biçiminde bir terim doğar.
-Lapse dönüm noktasında sıfıra gittiği için bu terim sıfır bölü sıfır
-biçimindedir ve **beyanla sıfıra eşitlenemez**: payın paydadan daha hızlı
-sıfırlandığı gösterilmek zorundadır. Gösterilirse terim düşer ve zayıf seçim
+Lapse dönüm noktasında sıfıra gittiğinden bu terim sıfır bölü sıfır biçimini
+alır, ve **ilan ederek sıfır sayılamaz**: terimin düşmesi, payın paydadan daha
+hızlı sıfırlandığının ayrıca gösterilmesine bağlıdır. Gösterilirse terim düşer ve zayıf seçim
 ayakta kalır; gösterilemezse terim kalır ve denklemler ancak normal türev
 tümüyle sıfırlanarak, yani güçlü koşul benimsenerek tutarlı olur.
 
@@ -1178,9 +1183,9 @@ teğet bloğun normal türevinin lapse'a bölümüne bakar. Bağımsız iki ayar
 ikisi birden sağlanabilir. Literatürün ikisini bir arada, aralarında bir gerilim
 olduğunu belirtmeden dayatmasının sebebi budur.
 
-Dejenere bileşenin sıfırlanma mertebesine $a$, teğet eğimin sıfırlanma
-mertebesine $b$ diyelim. Bu bölümde $q$ harfi kullanılmaz, çünkü $q$ metnin geri
-kalanında ara bölgedeki dalga sayısıdır. Lapse $d^{a/2}$ gibi gider, dış eğrilik
+Dejenere bileşenin sıfırlanma mertebesi $a$, teğet eğimin sıfırlanma mertebesi
+$b$ ile gösterilir. Burada $q$ harfi kullanılmaz, çünkü $q$ metnin geri kalanında
+ara bölgedeki dalga sayısını taşır. Lapse $d^{a/2}$ gibi gider, dış eğrilik ise
 $d^{b}$ gibi. Oran koşulunun sınadığı nicelik ise uzaklığın
 
 $$b - \frac{a}{2}$$
