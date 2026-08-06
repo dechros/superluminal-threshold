@@ -1129,8 +1129,8 @@ Zayıf seçime karşı yöneltilmiş en güçlü itiraz felsefi değildir ve bur
 felsefeyle değil, hesapla karşılanmaktadır. Alan denklemleri yüzey boyunca
 yazıldığında, **normal türev çarpı delta bölü lapse** biçiminde bir terim doğar.
 Lapse dönüm noktasında sıfıra gittiğinden bu terim sıfır bölü sıfır biçimini
-alır, ve **ilan ederek sıfır sayılamaz**: terimin düşmesi, payın paydadan daha
-hızlı sıfırlandığının ayrıca gösterilmesine bağlıdır. Gösterilirse terim düşer ve zayıf seçim
+alır, ve **ilan ederek sıfır sayılamaz**. Terim ancak pay paydadan daha hızlı
+sıfırlanırsa düşer, ve bunu ayrı bir hesap göstermelidir. Gösterilirse terim düşer ve zayıf seçim
 ayakta kalır; gösterilemezse terim kalır ve denklemler ancak normal türev
 tümüyle sıfırlanarak, yani güçlü koşul benimsenerek tutarlı olur.
 
@@ -1220,13 +1220,13 @@ Dahası oran koşulu, tümüyle jeodezik olma koşuluna bir şey **eklemez**; on
 hız olarak yeniden ifade eder. Oranı tam olarak teğet eğimin dönüm noktasında
 sıfırlanması sağlar, ki bu koşulun kendisine karşılık gelir.
 
-**Ayakta kalan engel başkadır.** Bir yüzey katmanı, dış eğriliğin dönüm
-noktasında sıfırdan farklı olmasını gerektirir; oran koşulu ise aynı eğriliğin
-lapse'tan hızlı ölmesini gerektirir. Sınanan oran, dış eğriliğin tam iki
-katıdır; dolayısıyla "katman taşımak" ile "oranı geçememek" **aynı nicelik
-üzerinde aynı ölçümdür** ve dışlayıcılıkları bir arama sonucu değil, bir
-aritmetik sonucudur. Seksen bir mertebe çifti taranmış, ikisini birden sağlayan
-çift bulunmamıştır.
+**Ayakta kalan engel başkadır.** Bir yüzey tabakasının doğması için dış
+eğriliğin dönüm noktasında sıfırdan farklı olması gerekir. Oran koşulu ise aynı
+eğriliğin lapse'tan daha hızlı sıfırlanmasını ister. Sınanan oran dış eğriliğin
+tam iki katı olduğundan, "tabaka taşımak" ile "oranı geçememek" **aynı nicelik
+üzerinde yapılan aynı ölçüme** dönüşür. İkisinin bir arada bulunamaması bir
+arama sonucu değil, doğrudan bu aritmetiğin sonucudur. Seksen bir mertebe çifti
+taranmış ve ikisini birden sağlayan tek bir çift bile çıkmamıştır.
 
 Bu, literatürün zaten taşıdığı güçlü ile zayıf ayrımıdır. Buradaki yol ona iyi
 tanımlı bir Ricci tensörü yerine bir hız üzerinden yaklaşmaktadır. **Yeni bir
@@ -1259,8 +1259,8 @@ aynı olgunun başka bir yüzüdür.
 Dejenere katman, içeride hiçbir modun yayılamayacağı biçiminde modellenmiştir.
 Gerçek bir dejenere metrik hesabı daha incedir ve tam sıfır vermeyebilir.
 
-Madde katmanının gücü, imza dönüşünün dik eğimi üzerinden bir vekil ölçüyle
-alınmıştır. Tam gerilim tensörü hesaplanmamıştır.
+Madde tabakasının gücü doğrudan hesaplanmamış, imza dönüşünün dik eğimi
+üzerinden dolaylı bir ölçüyle alınmıştır. Tam gerilim tensörü çıkarılmamıştır.
 
 ---
 
@@ -1284,11 +1284,12 @@ geçemez, tam yansır.
 **İstisna.** $\mu = 0$ (kütlesiz) durumunda koşul kendiliğinden sağlanır, ama
 kütlesiz alan zaten $c$'dedir, geçmesi gerekmez.
 
-Bu sonuç modele elle konmamıştır; kendi Lagrangian'ından çıkmıştır.
+Bu sonuç modele elle konmamış, doğrudan kendi Lagrangian'ından çıkmıştır.
 
-Dispersiyon tarafındaki karşılığı: $v_{\text{faz}} = v_{\text{grup}} = c$ ancak
-$\mu = 0$ için sağlanır. Kütleli alan için $v_{\text{faz}} > c$ ama
-$v_{\text{grup}} < c$'dir; eşik aşılmaz, **teğet** geçilir.
+Aynı sonucun dispersiyon tarafındaki karşılığı şudur: faz hızı ile grup hızının
+ikisi birden $c$'ye ancak $\mu = 0$ için eşitlenir. Kütleli bir alanda faz hızı
+$c$'yi aşar, grup hızı ise $c$'nin altında kalır. Yani parçacık eşiği aşmaz,
+ona yalnızca **teğet** geçer.
 
 ### 6.1 Seçimin belirleyiciliği
 
@@ -1333,8 +1334,8 @@ için "dışarı giden dalga" koşulu **tanımlanamaz**.
 
 $$\frac{d^2}{d\xi^2} + \kappa^2 = 0, \qquad \kappa^2 = c^2(k_T^2 + \mu)$$
 
-yani yüzeyde bir **empedans basamağı yoktur**. Geçirgenliği yalnızca momentum eşleşmesinin
-işareti belirler.
+yani dalga yüzeye geldiğinde ortam değişmiş gibi bir **basamakla karşılaşmaz**.
+Geçirgenliği belirleyen tek şey, momentum eşleşmesinin işaretidir.
 
 Eklem koşulları $1 + R = T_+ + T_-$ ve $1 - R = s\,(T_+ - T_-)$ olur; burada
 güçlü koşul için $s = -1$, zayıf koşul için $s = +1$. Akılar $F_I = 1 - |R|^2$
@@ -1354,10 +1355,10 @@ ile mümkündür. Yani **tam yansıma ek bir varsayım değil, akı korunumunun 
 seçim verildiğinde bir zorunluluk hâline gelir.
 
 Zayıf koşulda ise $T_+ = 1$, $T_- = R$ olur ve akı **her** $R$ için korunur.
-Zayıf koşul geçişe izin verir ama ne kadar geçtiğini söylemez; Bölge II bir
-radyasyon koşulu sağlayamadığı için $R$ serbest kalır. Bu, zayıf koşulun "geçiş
-var" demekten çok "bu problem iyi konumlanmamış" demek olduğu anlamına gelir ve
-yukarıdaki sonuçla tutarlı kalır.
+Zayıf koşul geçişe izin verir, ancak ne kadarının geçtiğini söylemez. Bölge
+II'de dışarı giden dalgayı seçecek bir koşul kurulamadığından $R$ serbest kalır.
+Yani zayıf koşul "geçiş vardır" demekten çok, "bu problem iyi konumlanmamıştır"
+demektedir, ve bu da yukarıdaki sonuçla tutarlı kalır.
 
 Dört durumdan üçü yansıtmaktadır. Özellikle [9]'un öz-eşlenik genişlemelerden
 çıkardığı **Dirichlet** koşulu, buradaki Neumann koşulunun tersi olmasına rağmen
@@ -1371,9 +1372,9 @@ soruya girilmemiştir ve açık bırakılmaktadır.
 
 ### 6.2 Seçimin yerçekimi görünümü
 
-Yukarıdaki tercih madde tarafında, konjuge momentum üzerinden yapıldı. Aynı
-tercih geometri tarafında geçiş yüzeyinin **dış eğriliği** üzerinde bir koşul
-olarak yeniden ortaya çıkar: güçlü koşul onun yüzeyde sıfırlanmasını, zayıf
+Yukarıdaki tercih madde tarafında, konjuge momentum üzerinden yapılmıştı. Aynı
+tercih geometri tarafında yeniden belirir ve orada geçiş yüzeyinin **dış
+eğriliği** üzerine konan bir koşula dönüşür: güçlü koşul onun yüzeyde sıfırlanmasını, zayıf
 koşul yalnızca sürekli olmasını ister [5]. [6]'nın genelleştirilmiş Lanczos
 denklemine göre gerilim tensöründe dağılımsal bir terim, yani bir **yüzey
 katmanı**, tam olarak dış eğrilik sürekli olduğunda yoktur.
