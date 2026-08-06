@@ -1494,10 +1494,10 @@ buradaki sonuç alan akısı hakkındadır.
 
 ## 8. Sonlu kalınlıkta dilimden geçiş
 
-Bölüm 6.1 öte tarafı **sınırsız** kabul etmektedir. Sonlu kalınlıkta bir dilim ayrı
-bir problemdir ve sonucu farklıdır.
+Bölüm 6.1 öte tarafı **sınırsız** kabul etmektedir. Oysa sonlu kalınlıkta bir
+dilim ayrı bir problemdir, ve sonucu da farklı çıkar.
 
-Bu ayrımı [15] kurmuştur ve o çalışma bu bölümün öncülüdür. Orada
+Bu ayrımı ilk kuran [15] olmuştur ve o çalışma bu bölümün öncülüdür. Orada
 Klein-Gordon parçacıklarının Lorentzian imzadan Kleinian imzaya geçişi
 incelenir, düzlemsel bir sınırda parçacık akısı için **ayna davranışı** bulunur,
 ve ardından sonlu kalınlıkta bir çift eklem ele alınarak **tünelleme olasılığı**
@@ -1532,15 +1532,15 @@ sıfır değildir, ancak kalınlıkla üstel olarak bastırılır. Dolayısıyla
 6.1'in tam yansıması ayrı bir ifade değil, bu ifadenin **kalın dilim
 limitidir**. Sıfır kalınlıkta her şey geçer, kalın dilimde hiçbir şey geçmez.
 
-Bir ikinci koşul daha vardır: iç modun sönümlü olup olmadığını gelen alanın mod
-içeriği belirler. İşaret değiştiren yön az dalga sayısı taşıyorsa iç mod
-yayılmaya devam eder ve geçirgenlik bastırılmak yerine **salınır**, rezonansta
-bire ulaşır. Yani engeli yaratan imza değişiminin kendisi değil, gelen alanın
-hangi modlardan oluştuğudur.
+Buna ikinci bir koşul daha eklenir, çünkü iç modun sönümlü olup olmadığını gelen
+alanın mod içeriği belirler. İşaret değiştiren yön az dalga sayısı taşıyorsa iç
+mod yayılmaya devam eder, ve geçirgenlik bastırılmak yerine **salınır**,
+rezonansta bire kadar çıkar. Öyleyse engeli yaratan şey imza değişiminin kendisi
+değil, gelen alanın hangi modlardan oluştuğudur.
 
-Bu, Bölüm 6.1'in sonucunu geçersiz kılmaz ama kapsamını daraltır: eşiğin
-yansıtıcı olması, öte tarafın sınırsız olduğu ve gelen modun uygun içerikte
-olduğu durum için geçerli kalır.
+İki koşul birlikte Bölüm 6.1'in sonucunu geçersiz kılmaz, yalnızca kapsamını
+daraltır: eşiğin yansıtıcı olması, öte tarafın sınırsız olduğu ve gelen modun
+uygun içerikte kaldığı durum için geçerlidir.
 
 ### 8.1 Geçirgenliği belirleyen toplam
 
@@ -1548,15 +1548,16 @@ Yukarıdaki hesap sönüm katsayısını dilim boyunca sabit almaktadır. Gerçe
 geçişte katsayı konuma bağlıdır ve o zaman şu sorulur: geçen şeyi profilin
 **biçimi** mi belirler, yoksa yalnızca **integrali** mi?
 
-Beş profil, integralleri eşit tutulacak biçimde karşılaştırılır: düz, üçgen,
-yarım sinüs, plato ve çarpık. Biçim farkı gerçektir ve hesaba girer. Kenara yakın
-bölgede biçimlendirilmiş bir profil, düz profilin dörtte birinden az sönüm
-taşır; merkezde ise onu belirgin biçimde aşar. Bir uyarı da şudur: üçgen profil
-ile düz profil bir iç noktada tam olarak kesişir, dolayısıyla yalnızca tek bir
-noktaya bakan bir karşılaştırma aralarında hiçbir fark bulamazdı.
+Soruyu cevaplamak için beş profil, integralleri eşit tutulacak biçimde
+karşılaştırılmıştır: düz, üçgen, yarım sinüs, plato ve çarpık. Aralarındaki biçim
+farkı gerçektir ve hesaba girer, çünkü kenara yakın bölgede biçimlendirilmiş bir
+profil düz profilin dörtte birinden az sönüm taşırken merkezde onu belirgin
+biçimde aşar. Bir uyarı da buradan doğar: üçgen profil ile düz profil bir iç
+noktada tam olarak kesişir, dolayısıyla yalnızca tek bir noktaya bakan bir
+karşılaştırma aralarında hiçbir fark bulamazdı.
 
-Buna karşın geçirgenlik üsteli, biçimden bağımsız olarak toplamın belirlediği
-bir değere yakınsar:
+Bütün bu biçim farkına karşın geçirgenliğin üsteli, biçimden bağımsız olarak
+toplamın belirlediği bir değere yakınsamaktadır:
 
 | Toplam | Üstelin bütün biçimlerde düştüğü aralık | Biçimler arası yayılım |
 | ------ | --------------------------------------- | ---------------------- |
@@ -1594,14 +1595,15 @@ taşıyan adım, orada zamanın bir yönünün bulunmamasıdır.
 
 ### 9.1 Noether yükleri
 
-$L'$ dört koordinatın hiçbirine açıkça bağlı değildir, dolayısıyla dört öteleme
-simetrisi vardır:
+Öte tarafın Lagrangian'ı $L'$, dört koordinatın hiçbirine açıkça bağlı değildir.
+Bu yüzden dört öteleme simetrisi taşır, ve her biri korunan bir yük verir:
 
 - üç "enerji" bileşeni ($t_1, t_2, t_3$ ötelemeleri),
 - tek "momentum" ($r$ ötelemesi).
 
-$L'$ ayrıca üç zaman ekseninde $O(3)$ altında değişmezdir; buradan üç korunan
-"zamansal açı momentumu" çıkar, Bölge I'in uzaysal açı momentumunun aynası.
+Aynı Lagrangian üç zaman ekseni arasındaki $O(3)$ dönmeleri altında da değişmez
+kalır. Buradan üç korunan "zamansal açı momentumu" daha çıkar, ve bunlar Bölge
+I'in uzaysal açı momentumunun aynasıdır.
 
 ### 9.2 Rollerin tersine dönmesi
 
@@ -1617,22 +1619,22 @@ orada, rollerin karşılaştırması burada durmaktadır.
 
 ### 9.3 Ayrım ve zorunluluk
 
-Bölge II'de zamanın oku **yoktur**. Ok, ilgili boyutun **tek** olmasının
-sonucudur; üç boyutlu olan eksen kümesi uzay gibi davranır ve yön ayrımı ortadan
-kalkar. Buna karşılık orada bir **uzay ayrımı** vardır, çünkü tek eksen uzay
-eksenidir.
+Bölge II'de zamanın oku **yoktur**, çünkü ok ilgili boyutun **tek** olmasının
+sonucudur. Üç boyutlu bir eksen kümesi uzay gibi davranır ve yön ayrımı ortadan
+kalkar. Buna karşılık orada bir **uzay ayrımı** doğar, çünkü tek olan eksen bu
+kez uzay eksenidir.
 
-Bu ifadenin iki kez daraltılması gerekir ve daraltma bu çalışmanın duruşunun
-tamamıdır.
+Bu ifadenin iki kez daraltılması gerekir, ve bu iki daraltma çalışmanın
+duruşunun tamamını verir.
 
 **Birincisi.** Boyut sayısından çıkan şey **ayrımın varlığıdır**, ayrımın iki
 yakasından hangisinin gelecek olduğu değil. Bir koridorun iki ucu olması, hangi
 ucun ileri olduğunu söylemez.
 
-**İkincisi.** Ayrım metrikte durur; **etiket durmaz**. Denklemler bir yönü
-tercih etmez. Zamanda ileri giden her çözümün geriye giden bir eşi vardır ve
-ikisi de aynı denklemi sağlar. Bir yönün seçilmesi için denkleme bir şey
-eklenmesi gerekirdi ve eklenmemiştir.
+**İkincisi.** Ayrım metrikte durur, ama **etiket durmaz**, çünkü denklemler bir
+yönü tercih etmez. Zamanda ileri giden her çözümün geriye giden bir eşi bulunur
+ve ikisi de aynı denklemi sağlar. Bir yönün seçilmesi için denkleme fazladan bir
+şey eklenmesi gerekirdi, ve böyle bir şey eklenmemiştir.
 
 Buradan çıkan sonuç şudur: **bu metin zamanın zorunlu bir akışı olduğunu
 varsaymaz.** Bölge I'de de varsaymaz, Bölge II'de de. Yönelim metriktedir,
@@ -1650,10 +1652,11 @@ değiştirmezler.
 
 ### 9.4 Zaman yöneliminin yokluğu
 
-Yukarıdaki ifade sezgiseldir; burada kesinleştirilmiştir. Bir bölgede tutarlı bir
-gelecek-geçmiş ayrımı için, zaman-benzeri vektörler kümesi **iki ayrı
-bileşenden** oluşmalıdır. Ancak o zaman bileşenlerden birine "gelecek", diğerine
-"geçmiş" denebilir. Bu koşula, tek bir pozitif yön bulunması karşılık gelir.
+Yukarıdaki ifade sezgisel kalır, ve bu alt bölüm onu kesinleştirmektedir. Bir
+bölge tutarlı bir gelecek-geçmiş ayrımı ancak zaman-benzeri vektörler kümesi
+**iki ayrı bileşene** düştüğünde taşır; yalnızca o durumda bileşenlerden birine
+"gelecek", diğerine "geçmiş" denebilir. Bu koşulun
+karşılığı da tek bir pozitif yön bulunmasıdır.
 
 **Bölge I.** $v = (1,0,0,0)$ ve $-v = (-1,0,0,0)$ vektörlerinin ikisi de
 zaman-benzeridir. Birini diğerine götüren $(x^0, x^1)$ düzlemindeki dönme
