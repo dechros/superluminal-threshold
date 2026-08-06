@@ -2073,7 +2073,7 @@ değil, iki geçişin ortak genliğinin fazından okunmaktadır.
 
 Gidiş tek bir yüzeyin problemidir; gidiş dönüş iki yüzeyin problemidir ve
 farklıdır. İki yüzey arasındaki bölge, dalganın bir kez geçtiği bir engel değil,
-içinde ileri geri yansımaların üst üste bindiği bir **oyuk** gibi davranır.
+içinde ileri geri yansımaların üst üste bindiği bir **boşluk** gibi davranır.
 
 ### 12.1 Geçiş genliği
 
@@ -2330,7 +2330,7 @@ gelenin aynı şey sayılabilmesini sağlayan koşuldur.
 
 ---
 
-## 15. Korunan yüklerin muhasebesi
+## 15. Korunan nicelikler
 
 Önceki bölüm geçişin neyi değiştirdiğini saydı. Bu bölüm ters soruyu sorar:
 geçiş neye **dokunamaz**.
@@ -2426,11 +2426,11 @@ bağımsızdır. Parçacık öte tarafta bir $O(3)$ dönmesi geçirir mi, yani o
 yapar: bu hesabın konusu o değil. Hesap şunu verir: geçirirse Bölge I'de ne
 görünür.
 
-**Kalan çekince.** Bu muhasebe doğrusal ve durağan saçılma kurgusundadır.
+**Kalan çekince.** Bu döküm doğrusal ve durağan bir saçılma kurgusuna dayanır.
 
 ### 15.5 Yükün yeniden dağılması
 
-Yüklü bir durum için muhasebe bir bileşen daha taşır. Yük yoğunluğu dört akımın
+Yüklü bir durum için döküme bir kalem daha girer. Yük yoğunluğu dört akımın
 zaman bileşenidir ve geçiş yakın tarafın zaman eksenini öte tarafın bir uzay
 ekseni üzerine taşır. Dolayısıyla yakın tarafta yoğunluk olarak okunan nicelik
 öte tarafta bir **akım bileşeni**, akımlardan biri ise yoğunluktur. Yakın
@@ -2642,7 +2642,7 @@ Ayar okuması bir rakip değil, tayfın sıfır elemanıdır. Bilgisizlik okumas
 elenir, çünkü sürekli bir sapma dağılımı bu yapıda bulunmaz.
 
 > Model, gelişigüzel bir sapma değil, **belirli açılarda** sapma öngörür. Bu,
-> çatalın iki ucundan da keskin bir iddiadır ve sınanması da daha kolaydır:
+> iki okumanın ikisinden de keskin bir iddiadır ve sınanması da daha kolaydır:
 > sapma açılarının dağılımı sürekli değil, ayrık çıkmalıdır.
 
 **Bu mekanizma türünün öncülü.** Ayrık sapmanın sürekli geri tepen bir hedef
@@ -3076,7 +3076,7 @@ bulunmamaktadır.
 üçü geçişi ışığın üstüne, ikisi altına koyar; ayrım kalınlıkla değişmez.
 Yukarıdaki tablo faz okumasına dayanır, çünkü sorulan soru dışarıdaki bir
 dedektörde tepenin ne zaman göründüğüdür. Bu bir seçimdir ve seçimi kurmayan
-bir hakem Bölüm 11.6'da onu doğrular: yayılan paketin tepesi ölçüldüğünde
+bir ölçüt Bölüm 11.6'da onu doğrular: yayılan paketin tepesi ölçüldüğünde
 tutan okuma fazdır.
 
 ### 18.7 Eşlemenin kapalı biçimi
@@ -3497,7 +3497,7 @@ varsayımı eleştiren bir cümle ile varsayan bir cümle aynı kelimeyi taşım
 | 4.1.2 | Faz gecikmesi ile öte taraf yer değiştirmesinin toplanabilmesi | türetildi | Aynı bölüm, tek bir durağan faz koşulundan |
 | 5.8 | Enine dalga sayısının yönler arasında eşit paylaşılması | ilan edilmiş sınırlama | Sonucu yazılı: açık hücre mod içeriğine bağlıdır ve mod filtresi bölümünde hesaplanır |
 | 5.8 | Dejenere katmanın içerideki her modu tam olarak bloklaması | ilan edilmiş sınırlama | Katmanın bir modeli olarak konur, tam hesabın sıfır vermeyebileceği yazılıdır |
-| 5.8 | Madde katmanının gücünün imza dönüşünün eğimini izlemesi | ilan edilmiş sınırlama | Vekil ölçü olarak konur, tam gerilim tensörünün hesaplanmadığı yazılıdır |
+| 5.8 | Madde katmanının gücünün imza dönüşünün eğimini izlemesi | ilan edilmiş sınırlama | Dolaylı bir ölçü olarak konur, tam gerilim tensörünün hesaplanmadığı yazılıdır |
 | 6.1 | Yansıyan bir bileşenin bulunabilmesi | türetildi | Aynı bölüm: akı korunumu başka çözüm bırakmaz |
 | 19 | Dökümün yedi adımdan sapmaması, yani dönüş olayının kapalı formülden okunması | türetildi | Aynı bölüm: dört koordinatın hepsi Bölüm 18.7'nin formülünden gelir ve döküm onları yeniden hesaplamaz |
 | 9.4 | Global hiperbolikliğin sağlanması | başka kurguya ait | Karşılaştırılan formülasyonun ihtiyacıdır; buradaki sonuç yalnızca zaman yönlerinin sayısından çıkar |
@@ -3515,12 +3515,12 @@ varsayımı eleştiren bir cümle ile varsayan bir cümle aynı kelimeyi taşım
 | 21.2.6 | Yer çekiminin güçlendiği ölçeğin dört boyutlu Planck ölçeğinin yerini alması | ilan edilmiş sınırlama | Sonucu yazılı: ölçekleme bu varsayıma dayanır ve burada gerekçelendirilmediği aynı bölümde belirtilir |
 | 18.9 | Eksik kütle yönteminin kütle kabuğunda gerçek bir momentum varsayması | iki yönlü hesaplandı | Aynı bölüm: iç mod $\sqrt{13}$ altında söner, üstünde yayılır; iki rejim birbirinin tümleyenidir ve hiçbir frekans ikisini birden vermez |
 
-Sicilde $16$ kalem var, tarama ise $10$ bölümde iddia buluyor. Sicil taramadan
-geniştir: sonradan olumsuzlanan bir ifade taramadan düşer, ama hükmü kayıtta
-kalır.
+Sicil $20$ kalem taşır, tarama ise $14$ bölümde iddia bulmaktadır. Sicilin
+taramadan geniş olmasının nedeni şudur: sonradan olumsuzlanan bir ifade taramaya
+takılmaz, ama hükmü kayıtta kalır.
 
-Bu metnin **kendi** taşıdığı varsayım yalnızca beş satırdır, hepsi de "ilan
-edilmiş sınırlama" hükmünde ve beşinin de sonucu metinde yazılı. Geri kalan
+Bu metnin **kendi** taşıdığı varsayım sekiz satırdır, sekizi de "ilan edilmiş
+sınırlama" hükmündedir ve sekizinin de sonucu metinde yazılıdır. Geri kalan
 kalemler beş türden birine girer: türetilmiş olanlar, iki yönü de hesaplananlar,
 sonradan kaldırılanlar, karşılaştırılan bir formülasyona ait olanlar ve hiç
 varsayım yapmayan pasajlar.
@@ -3648,10 +3648,10 @@ yönlendirilir ve şart bu yolla dolanılmaz.
 ayarlarıdır, dördüncüsü sonucun kendisidir ve Bölüm 13.8'de gösterildiği üzere
 deneyin asıl güçlüğü oradadır.
 
-### 21.2.2 Zaman ile mesafenin kuru
+### 21.2.2 Mesafenin süreye çevrimi
 
-Öte tarafta kat edilen uzunluk ile yakın tarafta kazanılan süre arasındaki
-dönüşüm çarpanı ışık hızıdır. Bir metre yolculuk $3{,}34$ nanosaniye kazandırır.
+Öte tarafta kat edilen uzunluğu Bölge I'de kazanılan süreye çeviren çarpan ışık
+hızıdır. Bir metrelik yolculuk $3{,}34$ nanosaniye kazandırır.
 
 | Kazanılan süre | Gereken öte taraf mesafesi |
 | ------------------ | ----------------------------------- |
@@ -3693,10 +3693,10 @@ Deneyin asıl engeli kütle duvarı değildir. Varışın milyarda birin üzerin
 kalması opaklığı $10{,}36$ ile sınırlar. Gecikmenin doyması ise aynı çarpımın
 büyük olmasını ister ve yolculuğu satın alan nicelik o gecikmedir.
 
-İki şart birbirini çekiştirir. Görülecek kadar ince bir engel, gecikmenin doymuş
-olması için yeterince opak değildir. Kütle duvarını aşan bir sürücü bulunsa bile
-bu gerilim ayakta kalır ve bu nedenle deneysel tartışmanın merkezine
-konulmalıdır.
+İki şart birbirini ters yöne çeker. Sonucun görülebileceği kadar ince bir engel,
+gecikmenin doyması için yeterince opak kalmaz. Kütle duvarını aşan bir sürücü
+bulunsa bile bu gerilim ayakta kalır, ve deneyin asıl güçlüğünü de o
+oluşturmaktadır.
 
 ### 21.2.5 Yoğunluk koşulu
 
@@ -3716,10 +3716,11 @@ geometri Öklid imzalıdır.
 | Kritik yoğunluk | $2{,}11 \times 10^{96}$ kg/m$^3$ |
 | Dönme eşiği | $1{,}06 \times 10^{96}$ kg/m$^3$ |
 
-Maliyet iki parçaya ayrılır, çünkü birlikte anıldığında yanlış okunur.
-Gereken **enerji büyük değildir**: aynı kuramın kabul ettiği en küçük hacme eşiği
-getirmek $4{,}01 \times 10^{8}$ J ister, yani yaklaşık yüz kilogram kimyasal
-patlayıcı karşılığıdır. Engel **yoğunlaştırmadır**. Çekirdek maddesi eşikten
+Maliyet burada iki parçaya ayrılmaktadır, çünkü ikisi birlikte anıldığında
+yanlış okunur. Gereken **enerji büyük değildir**: aynı kuramın kabul ettiği en
+küçük hacmi eşiğe getirmek $4{,}01 \times 10^{8}$ J ister, yani yaklaşık yüz
+kilogram kimyasal patlayıcının açığa çıkardığı enerji kadardır. Asıl engel
+**o enerjiyi o kadar küçük bir hacme sıkıştırmaktır**. Çekirdek maddesi eşikten
 $78{,}7$, nötron yıldızı çekirdeği $78{,}0$, en yüksek enerjili çarpışma bir
 proton yarıçapı içinde $74{,}1$ mertebe geridedir.
 
