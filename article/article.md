@@ -650,9 +650,9 @@ rejiminde faz gecikmesi kalınlıkla **doyar**, öte taraf yer değiştirmesi is
 doymaz ve $s$ ile sınırsız büyür. Doyan gecikme bu yüzden bir **eşik mesafesi**
 tanımlar; öte tarafta bundan daha uzağa gidilirse ikinci terim birinciyi yener.
 
-Öklidyen ara bölge, $d = 8$, $c = \mu = 1$ için hesaplanan gecikme
-$2{,}565988$'dir ve eşik mesafesi tam olarak bu sayıdır: geri taşıyan dalda
-varış anı orada sıfırlanmıştır. Hesaplanan varış anları:
+Öklidyen bir ara bölgede, $d = 8$ ve $c = \mu = 1$ için hesaplanan gecikme
+$2{,}565988$ çıkmıştır. Eşik mesafesi de tam olarak bu sayıya eşittir, çünkü geri
+taşıyan dalda varış anı orada sıfırlanır. Hesaplanan varış anları şöyledir:
 
 | Öte taraf mesafesi | Varış anı | Girişe göre |
 | ------------------ | ----------- | ----------- |
@@ -660,9 +660,10 @@ varış anı orada sıfırlanmıştır. Hesaplanan varış anları:
 | $4$ | $-1{,}4340$ | **önce** |
 | $8$ | $-5{,}4340$ | **önce** |
 
-İleri taşıyan dalda incelenen hiçbir mesafede bu olmaz. Yayılımlı (Kleinyen)
-rejimde gecikme doymaz; $d = 8$ için değeri $97{,}0543$'tür, yani incelenen
-mesafelerin çok ötesindedir ve eşik mesafesine ulaşılmaz.
+İleri taşıyan dalda ise incelenen hiçbir mesafede bu olmaz. Yayılımlı (Kleinyen)
+rejimde de olmaz, çünkü orada gecikme doymaz: $d = 8$ için değeri $97{,}0543$'e
+çıkar, yani incelenen mesafelerin çok ötesinde kalır ve eşik mesafesine hiç
+ulaşılamaz.
 
 Bu sonucun gerçekleşme olasılığı ise küçük kalmaktadır. Eşik mesafesine
 ulaşabilen yapılanmalar kalın bariyerlerdir, ve kalın bir bariyer neredeyse
@@ -671,10 +672,10 @@ için $3{,}60 \times 10^{-6}$, $d = 8$ için $3{,}46 \times 10^{-12}$ çıkar. Y
 geçiş hem mümkün kalır hem de son derece seyrek gerçekleşir. Buradaki sonuç
 neyin olabileceğini söyler, ne kadarının olacağını söylemez.
 
-Bu bölümde toplanan iki terimin toplamı, Bölüm 4.1.2'nin tek genlikten okuduğu
-varış anıyla üç ayrı mesafede karşılaştırılmış ve her üçünde de aynı çıkmıştır.
-Yani buradaki toplama işlemi, onun yerine geçebilecek bağımsız türetmeyle uyumlu
-kalmıştır.
+Buradaki toplama işlemi ayrıca bağımsız bir türetmeyle karşılaştırılmıştır.
+Bölüm 4.1.2 varış anını tek bir genlikten okumakta, ve iki yol üç ayrı mesafede
+karşılaştırıldığında her üçünde de aynı sayı çıkmıştır. Dolayısıyla bu
+bölümdeki toplam, yerine geçebilecek türetmeyle uyumlu kalmıştır.
 
 **Erken varmak ile öte tarafta geri yürümek aynı şey değildir.** Bu ayrımı burada
 yapmak gerekir. Metnin başka bir yerinde, öte tarafın tek uzay ekseninin
@@ -916,7 +917,7 @@ olduğu ayrı bir sorudur, ve bu çalışma orayı kalınlıksız bir yüzey ola
 kendi başına bir **bölge** olarak ele almıştır. Bunun nedeni şudur: geçişin nasıl
 olacağını iki uçtaki metrikler değil, aradaki bölgenin karakteri belirler.
 
-Soru iki bağımsız eksene ayrılır ve biri diğerini belirlemez:
+Bu soru da kendi içinde birbirini belirlemeyen iki ayrı soruya bölünür:
 
 - **Ara bölge neyden yapılmıştır?** Yani hangi imzayı taşır.
 - **Ne kadar kalındır?** Sıfır kalınlıktan sınırsıza.
@@ -928,25 +929,26 @@ açtığıdır.
 
 ### 5.1 Dört aday
 
-**Ara bölge yok.** İki bölge doğrudan birbirine değer, aralarında yalnızca bir
-yüzey vardır. O yüzeyde iki enine yön aynı anda karakter değiştirir, yani rank
-iki düşer.
+**Ara bölge yok.** Bu ilk durumda iki bölge doğrudan birbirine değer ve aralarında
+yalnızca bir yüzey kalır. O yüzeyde iki enine yön aynı anda karakter değiştirir,
+yani metriğin rankı bir defada iki düşer.
 
-**Kademeli yol** bu tek adımın alternatifidir: enine yönler aynı anda değil,
-teker teker çevrilir. $(1,3)$ imzasından $(2,2)$ imzasına, oradan $(3,1)$
-imzasına gidilir; her ayakta yalnızca tek bir öz değer sıfırdan geçer ve rank
-yalnızca bir düşer. Aşağıdaki adaylardan ikincisi bu yolun durağıdır.
+**Kademeli yol** bu tek adımın alternatifini sunar: enine yönler aynı anda değil,
+teker teker çevrilir. Yol $(1,3)$ imzasından $(2,2)$ imzasına, oradan da $(3,1)$
+imzasına gider; her ayakta yalnızca tek bir öz değer sıfırdan geçtiğinden rank da
+yalnızca bir düşer. Aşağıdaki adaylardan ikincisi tam olarak bu yolun durağıdır.
 
-**Kleinian, $(2,2)$.** İki zaman ve iki uzay taşıyan bir ara bölge. Enine
-yönlerden yalnızca biri karakter değiştirmiştir. Kademeli yolun durağı budur.
+**Kleinian, $(2,2)$.** Bu ara bölge iki zaman ve iki uzay ekseni taşır, çünkü
+enine yönlerden yalnızca biri karakter değiştirmiştir. Yukarıda anılan kademeli
+yol da burada durur.
 
-**Öklid, $(4,0)$.** Bütün enine yönler karakter değiştirmiştir; bölgede zaman
-yönü kalmamıştır. İmza değişimi literatürünün büyük bölümünün ele aldığı geçiş
-budur.
+**Öklid, $(4,0)$.** Burada enine yönlerin hepsi karakter değiştirmiştir ve
+bölgede hiç zaman yönü kalmamıştır. İmza değişimi literatürünün büyük bölümü tam
+olarak bu geçişi ele almaktadır.
 
-**Dejenere katman.** Metriğin tersi bulunmayan bir tabaka. Öteki üç adaydan
-farklı olarak burada bir imzadan söz edilemez, çünkü yayılımı yöneten operatörün
-kendisi tanımsız kalır.
+**Dejenere katman.** Son aday, metriğin tersi bulunmayan bir tabakadır. Öteki üç
+adaydan farklı olarak burada bir imzadan söz edilemez, çünkü yayılımı yöneten
+operatörün kendisi tanımsız kalır.
 
 ### 5.2 İçerideki modun davranışı
 
@@ -994,13 +996,14 @@ $\mu = 1$, $k_T^2 = 4$ için dört tip ve beş kalınlıkta hesaplanan geçirgen
 
 Tablodan üç sonuç doğrudan okunmaktadır.
 
-**Sıfır kalınlıkta tip önemsizdir.** Dört satırın dördü de bir verir. Kalınlığı olmayan
-bir ara bölge, neyden yapıldığından bağımsız olarak her şeyi geçirir. Ara
-bölgenin tipi ancak kalınlığı varsa fizik taşır.
+**Sıfır kalınlıkta tip önemsizdir.** İlk sütunda dört satırın dördü de bir verir,
+yani kalınlığı olmayan bir ara bölge neyden yapıldığından bağımsız olarak her
+şeyi geçirir. Öyleyse ara bölgenin tipi ancak bir kalınlığı varsa fizik taşır.
 
 **Öklid bölge kalınlıkla üstel olarak kapanır.** Dört birim kalınlıkta
-geçirgenlik milyonda üçe iner. Yeterince kalın bir Öklid bölge, dejenere
-katmandan ayırt edilemez.
+geçirgenlik milyonda üçe iner, kırk birimde ise altmış mertebe aşağı düşer. Bu
+yüzden yeterince kalın bir Öklid bölge, dejenere katmandan ayırt edilemez hâle
+gelir.
 
 **Kleinian bölge hiçbir kalınlıkta kapanmaz, geçirgenliği salınır.** Geçirgenlik
 kalınlık arttıkça tekdüze azalmaz, artıp azalır. İç mod bölgenin içinde
