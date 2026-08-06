@@ -319,8 +319,9 @@ girmez. Çalışmanın asıl sonucu budur (Bölüm 4.1.1, Bölüm 4.1.2). O teri
 işaretini, hangi geçiş eşlemesinin gerçeklendiği belirler; parçacığın öte tarafta
 hangi yöne yürüdüğü belirlemez (Bölüm 4.1.3).
 
-**Denetim değerleri.** Aşağıdaki yapılanma metnin bütün çekirdek sayılarını
-üretir ve bir uygulamanın doğru çalıştığı buradan sınanabilir.
+**Denetim değerleri.** Yukarıdaki adımları uygulayan bir programın doğru
+çalışıp çalışmadığı aşağıdaki yapılanmadan sınanabilir, çünkü bu yapılanma
+metnin bütün çekirdek sayılarını üretmektedir.
 
 $$c = \mu = 1, \qquad n = 3, \qquad d = 8$$
 $$E = L(\sin\theta\cos\varphi,\; \sin\theta\sin\varphi,\; \cos\theta),
@@ -338,10 +339,11 @@ $$E = L(\sin\theta\cos\varphi,\; \sin\theta\sin\varphi,\; \cos\theta),
 | Gidiş dönüş gecikmesi $2\tau$ | $2{,}565988$ |
 | Eşik mesafesi $s^\ast$ | $2{,}565988$ |
 
-Altıncı ile yedinci satırın aynı çıkması bir rastlantı değildir. Biri genliğin
-frekansa göre sayısal türevinden gelir, diğeri kalınlık hiç geçmeyen kapalı
-formdan. İkisi birbirinden bağımsız hesaplanıp karşılaştırılabilir. Ayrıldıkları
-noktada hatanın kaynağı uygulamada bulunur, modelde değil.
+Altıncı ile yedinci satırın aynı çıkması bir rastlantı değildir, çünkü iki sayı
+iki ayrı yoldan gelir: biri genliğin frekansa göre sayısal türevinden, diğeri
+kalınlığın hiç geçmediği kapalı formdan. Bu yüzden ikisi birbirinden bağımsız
+hesaplanıp karşılaştırılabilir, ve ayrıldıkları noktada hatanın kaynağı
+uygulamada bulunur, modelde değil.
 
 **Geçişin ne sıklıkta olacağı da hesaba girer.** Yukarıdaki sayılar neyin mümkün
 olduğunu söyler, o şeyin ne kadar sık gerçekleşeceğini söylemez. Aynı
@@ -387,10 +389,10 @@ Son satır, gecikmenin yolculuktan bağımsız bir tabanı olduğunu göstermekt
 Parçacık öte tarafta hiç yürümese bile iki geçişin kendisi bir süre yer:
 Bölüm 19'un yapılanmasında $2{,}434322$ birim.
 
-Dördüncü satır bir iddia değil, taranmış bir sonuç taşımaktadır. İleri dal iki
-yüz birim mesafeye kadar tarandı ve hiçbir mesafede parçacık kalkıştan önceki bir
-ana varmadı. Varış anının işaretini yolculuğun uzunluğu değil, hangi geçişin
-gerçeklendiği belirler.
+Dördüncü satır ise bir iddia değil, taranmış bir sonuç taşımaktadır. İleri dal
+iki yüz birim mesafeye kadar tarandı, ve hiçbir mesafede parçacık kalkıştan
+önceki bir ana varmadı. Buradan da aynı sonuç çıkar: varış anının işaretini
+yolculuğun uzunluğu değil, hangi geçişin gerçeklendiği belirler.
 
 **Ara bölgenin rejimi tabloya ayrı bir satır olarak girmez.** Tablonun tamamı,
 ara bölgenin parçacığa engel olduğu duruma aittir. Bölge engel olmaktan çıkınca
@@ -407,9 +409,10 @@ etkileşim bu modelde kurulmamıştır.
 
 ## 3. İki bölge ve metrikleri
 
-Bölge I eşiğin bu yanında kalır ve bir zaman ekseni ile üç uzay ekseni taşır.
-Bölge II ışık hızının ötesinde durur ve üç zaman ekseni ile bir uzay ekseni
-taşır.
+İki bölge eksen sayılarında birbirinin tersidir. Bölge I eşiğin bu yanında kalır
+ve bir zaman ekseni ile üç uzay ekseni taşır; Bölge II ise ışık hızının ötesinde
+durur ve üç zaman ekseni ile bir uzay ekseni taşır. Koordinatları ve metrikleri
+aşağıdaki gibi yazılır.
 
 $$\text{Bölge I koordinatları: } (ct, x, y, z), \qquad
  \text{Bölge II koordinatları: } (t_1, t_2, t_3, r)$$
@@ -432,12 +435,14 @@ $$M(V) = D \cdot B(c^2/V), \qquad V > c$$
 - $B(c^2/V)$, sıradan bir subluminal Lorentz boostudur ve hız bilgisini taşıyan
  tek parça odur.
 
-$V > c$ olduğundan $u = c^2/V < c$'dir, yani $B$ gerçekten subluminaldir. Her
-$V$ değeri için
+Burada $V > c$ olduğundan $u = c^2/V$ değeri $c$'nin altında kalır, yani $B$
+gerçekten subluminal bir boosttur. Bu ayrıştırma her $V$ değeri için geçerlidir,
+çünkü
 
 $$M(V)^T \eta' M(V) = -\eta$$
 
-sağlanır: çarpanlama geçerli kalır ve imza değişimi bütünüyle $D$'nin üzerindedir.
+bağıntısı sağlanır ve imza değişiminin tamamı $D$'nin üzerinde kalır. $D$
+matrisinin kendisi de şudur:
 
 $$D = \begin{pmatrix} 0&0&0&1 \\ 0&0&1&0 \\ 0&1&0&0 \\ 1&0&0&0 \end{pmatrix}
 \qquad\text{yani}\qquad (ct, x, y, z) \longmapsto (z, y, x, ct)$$
@@ -461,10 +466,10 @@ kullanım daha dardır: işaret çevrilmesi başlı başına bir konu olarak ele
 alınmaz, yalnızca iki metrik arasındaki eşlemenin bir özelliği olarak ortaya
 çıkar.
 
-Işık konisi testi $(1,1,0,0)$, $(1,0,1,0)$, $(1,0,0,1)$ ve
-$(1, 1/\sqrt{3}, 1/\sqrt{3}, 1/\sqrt{3})$ ışınları üzerinde yapılır; her birinde
-$s'^2 = -s^2 = 0$ çıkar. Genel bir aralık için de $s'^2 = -s^2$ tam olarak
-sağlanmıştır.
+Tablonun ikinci satırındaki ışık konisi testi dört ışın üzerinde yapılmıştır:
+$(1,1,0,0)$, $(1,0,1,0)$, $(1,0,0,1)$ ve
+$(1, 1/\sqrt{3}, 1/\sqrt{3}, 1/\sqrt{3})$. Dördünde de $s'^2 = -s^2 = 0$ çıkar,
+ve genel bir aralık için de $s'^2 = -s^2$ tam olarak sağlanmaktadır.
 
 **Bu çarpanlama yenilik taşımaz.** Bir superboost'un, sonsuz hız limitindeki bir
 çevirme ile dual hız $c^2/V$'ye ait sıradan bir boostun bileşkesi olduğunu [1]
@@ -540,26 +545,27 @@ ilerlemek zamanda yer değiştirmektir" ifadesi bir benzetmeden öteye geçmez.
 Aşağıdaki iki sonuç ona sayı verir ve ikisi de sekiz geçişin **tamamı**
 üzerinde ayrı ayrı denetlenmiştir.
 
-**Katsayı tam olarak bire eşit çıkar.** Sekiz geçişin her birinde, zaman koordinatını
-üreten satırın sıfırdan farklı **tek** bir girdisi vardır, o girdi öte tarafın
-ayırt edilmiş ekseni üzerindedir ve büyüklüğü birdir. Dolayısıyla o eksende $s$
-kadar yer değiştirme, saatte **tam olarak** $s$ kadar yer değiştirme üretir; bir
-katsayıyla ölçeklenmez. Diğer üç eksenin bu yuvaya katkısı **tam olarak
-sıfırdır**, yani tümüyle o üç eksenin içinde kalan bir hareket saati oynatmaz.
-Sınanan değerler: $0{,}5 \to 0{,}5000$, $1 \to 1{,}0000$, $2 \to 2{,}0000$,
-$4 \to 4{,}0000$, $7{,}25 \to 7{,}2500$.
+**Katsayı tam olarak bire eşit çıkar.** Sekiz geçişin her birinde, zaman
+koordinatını üreten satırın sıfırdan farklı **tek** bir girdisi bulunur; o girdi
+öte tarafın ayırt edilmiş ekseni üzerinde durur ve büyüklüğü bire eşittir. Bu
+yüzden o eksende alınan $s$ kadar yol, saatte **tam olarak** $s$ kadar kayma
+üretir ve hiçbir katsayıyla ölçeklenmez. Diğer üç eksenin aynı yuvaya katkısı ise
+**tam olarak sıfır** çıkar, yani tümüyle o üç eksenin içinde kalan bir hareket
+saati hiç oynatmaz. Sınanan değerler bunu doğrular:
+$0{,}5 \to 0{,}5000$, $1 \to 1{,}0000$, $2 \to 2{,}0000$, $4 \to 4{,}0000$,
+$7{,}25 \to 7{,}2500$.
 
-**Yer değiştirmeler toplanır.** Eşleme lineer olduğundan, $s_1$ sonra $s_2$
-gitmek ile $s_1 + s_2$ birden gitmek aynı saat yer değiştirmesini vermektedir. Bu
-eşitlik sekiz geçiş ve dokuz bacak çiftinin tamamında, artık $10^{-12}$ altında
-kalacak biçimde sağlanmıştır. Eşleme ayrıca miktar bakımından homojendir ve bir bacak
-ile tersi **tam olarak** sadeleşir: kapalı bir öte taraf gezisi saati başladığı
-yere döndürür.
+**Yer değiştirmeler toplanır.** Eşleme doğrusal olduğundan, önce $s_1$ sonra
+$s_2$ kadar gitmek ile $s_1 + s_2$ kadar birden gitmek saatte aynı kaymayı
+vermektedir. Bu eşitlik sekiz geçişin ve dokuz bacak çiftinin tamamında, artığı
+$10^{-12}$ altında kalacak biçimde sağlanmıştır. Aynı doğrusallıktan bir sonuç
+daha çıkar: bir bacak ile onun tersi **tam olarak** sadeleşir, yani kapalı bir
+öte taraf gezisi saati başladığı yere döndürür.
 
-**İki işaret miktarı eşit taşır.** İleri ve geri aileden birer geçiş alınıp aynı
-mesafe verildiğinde, ürettikleri yer değiştirmeler eşit büyüklükte ve ters
-işaret taşımaktadır. Yani sözlük saatin **ne kadar** oynadığını sabitler, **hangi yöne**
-oynadığını sabitlemez.
+**İki işaret aynı miktarı taşır.** İleri ve geri aileden birer geçiş alınıp
+ikisine de aynı mesafe verildiğinde, ürettikleri kaymalar eşit büyüklükte ama
+ters işaretli çıkar. Öyleyse sözlük saatin **ne kadar** oynadığını sabitler,
+**hangi yöne** oynadığını sabitlemez.
 
 **Bu bölümün tek başına haklı çıkarmadığı adım.** Yukarıdaki sonuçların hepsi
 öte tarafta atılan adımlarla ilgilidir. Eşikten geçerken saçılma fazından okunan
@@ -609,21 +615,23 @@ olarak verir. Böylece toplam, iki ayrı hesabın arasına elle konan bir varsay
 olmaktan çıkıp **tek** bir hesaptan okunan bir sonuca dönüşür. İkinci terimin
 önündeki çarpan da bir seçim değil, hesaplanabilen bir türev olur.
 
-O türev hesaplanmıştır. Eşlenik değişkeni üreten satırın sıfırdan farklı tek bir
-girdisi olduğundan $\kappa$ yalnızca frekansla orantılıdır, ve
+Söz konusu türev de hesaplanmıştır. Eşlenik değişkeni üreten satırın sıfırdan
+farklı tek bir girdisi bulunduğundan $\kappa$ yalnızca frekansla orantılı kalır,
+ve buradan
 
 $$\left|\frac{\mathrm{d}\kappa}{\mathrm{d}\omega}\right| = 1$$
 
-sekiz geçişin tamamında **tam olarak** sağlanmıştır. Bu makalede kullanılan eşleme
-için değer $+1$'dir. İşaret her dalda o dalın kendi zaman işaretine eşittir:
-koordinat sözlüğünün atadığı yön ile fazın ürettiği yön aynı yöndür. Bu eşitlik
-bir kabul değildir; sekiz dalın hepsinde ayrı ayrı hesaplanmıştır.
+eşitliği sekiz geçişin tamamında **tam olarak** sağlanmaktadır. Bu makalede
+kullanılan eşleme için değer $+1$ çıkar, ve işaret her dalda o dalın kendi zaman
+işaretine eşit kalır. Yani koordinat sözlüğünün atadığı yön ile fazın ürettiği
+yön aynı yöndür. Bu eşitlik bir kabul değildir, çünkü sekiz dalın hepsinde ayrı
+ayrı hesaplanmıştır.
 
-İkinci bir yol aynı sonucu verir: Bölge I kütle kabuğu üzerinde
-frekansa göre merkezî fark alınarak. Dört kütle değeri ($\mu = 0$, $0{,}25$,
-$1$, $9$), üç frekans ve sekiz geçiş üzerinde sayısal türev cebirsel değeri
-dokuz basamağa kadar üretir. Enine bileşenler frekansta kasten **lineer
-olmayan** bir bağımlılık taşır; sonuçta görünmemeleri bu yüzden bir ihmal
+Aynı sonuca ikinci bir yoldan da varılır: Bölge I'in kütle kabuğu üzerinde
+frekansa göre merkezî fark alınarak. Dört kütle değeri ($\mu = 0$, $0{,}25$, $1$,
+$9$), üç frekans ve sekiz geçiş üzerinde sayısal türev, cebirsel değeri dokuz
+basamağa kadar yeniden üretmektedir. Enine bileşenler frekansta bilerek **doğrusal
+olmayan** bir bağımlılık taşır; bu yüzden sonuçta hiç görünmemeleri bir ihmal
 değil, hesaplanmış bir olgudur.
 
 **Dispersiyon bağıntısı neden girmiyor.** Aynı katsayıya bir grup hızı
