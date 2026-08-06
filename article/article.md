@@ -1795,9 +1795,10 @@ eksenin bu yuvaya katkısı tam olarak sıfırdır. İspatı Bölüm 4.1.1'dedir
 işaretin nereden geldiği Bölüm 4.1.3'te ve o eksende geri dönülemiyor olmasının
 bu sonuçla nasıl bir arada durduğu da orada yazılmıştır.
 
-**Dördünün özeti.** Üç eksen serbesttir ama saate hiçbir şey taşımaz; bir eksen
-serbest değildir ama saate her şeyi taşır. Yolculuğun tamamı bu asimetri
-üzerinde durur.
+**Dört eksenin özeti.** Parçacık üç eksende serbestçe hareket eder, ama o üç
+eksen saate hiçbir şey taşımaz. Kalan tek eksende hareket serbest değildir, ama
+saate taşınan her şey oradan gelir. Yolculuğun tamamı bu dengesizlik üzerine
+kuruludur.
 
 ### 10.2 Dispersiyon ve grup hızı
 
@@ -1855,15 +1856,17 @@ sorusuna uygulanmasıdır.
 
 ## 11. Parçacığın iki okuması
 
-Bu çalışma şunu ele alır: kütleli bir parçacık eşiği geçer, öte tarafta bir süre
-kalır ve geri döner. Dolayısıyla "parçacık" sözcüğü bir ayrıntı değil, bütün
-hesabın dayanağıdır ve önce sabitlenmesi gerekir.
+Bu çalışmanın ele aldığı olay şudur: kütleli bir parçacık eşiği geçer, öte
+tarafta bir süre kalır ve geri döner. Öyleyse "parçacık" sözcüğü küçük bir
+ayrıntı değil, bütün hesabın dayanağıdır, ve ne anlama geldiği baştan
+sabitlenmelidir.
 
-Sabitlemek zorunludur, çünkü Bölge II'de parçacık kavramı olağan anlamıyla
-mevcut değildir. Parçacık kavramı üç yapıya dayanır: pozitif ile negatif frekans
-ayrımı, alttan sınırlı bir Hamiltonyen ve Poincaré grubunun üniter temsili.
-Bölüm 9 üçünün de öte tarafta bulunmadığını göstermektedir. Bölge I'de doğal görünen bir
-tanımı öte tarafa taşımak bu yüzden serbest değildir.
+Bunu yapmak zorunludur, çünkü Bölge II'de parçacık kavramı olağan anlamıyla
+bulunmaz. O kavram üç yapıya dayanır: pozitif ile negatif frekansın
+birbirinden ayrılması, alttan sınırlı bir Hamiltonyen ve Poincaré grubunun
+üniter bir temsili. Bölüm 9 bu üçünün de öte tarafta bulunmadığını
+göstermektedir. Bu yüzden Bölge I'de doğal görünen bir tanımı öte tarafa
+taşımak serbest değildir.
 
 Burada benimsenen çözüm, tek bir tanım aramak yerine **iki okumayı birlikte
 yürütmektir**. Bu, yalnızca bu bölümün değil, metnin tamamının yöntemidir:
@@ -1902,7 +1905,7 @@ olduğu hesaplanabilir bir sorudur.
 | Parçacığın tekliği | Paketin dar olması, $\sigma \ll k_0$ |
 | Parçacığın aynı parçacık kalması | Momentlerin geçiş boyunca korunması |
 
-Son satır belirleyici olup bu bölümün asıl sonucunu vermektedir.
+Bu bölümün asıl sonucunu son satır taşır.
 
 ### 11.2 Eşiğin paketi yeniden ağırlıklandırması
 
@@ -1949,18 +1952,19 @@ için merkez kayması istenildiği kadar küçüktür.
 > geçerli kalır. Geçen cisim, giden cismin aynısıdır; yalnızca paket dar tutulduğu
 > sürece.
 
-Bu, bütün gidiş dönüş anlatısının dayandığı meşruiyet belgesidir. Paket dar
-tutulmadığı sürece "parçacık gitti ve geri döndü" cümlesi anlamlı değildir,
-çünkü dönen şey gidenden farklı bir mod dağılımıdır.
+Gidiş dönüş anlatısının tamamı bu sonuca dayanır. Paket dar tutulmadığında
+"parçacık gitti ve geri döndü" cümlesi anlamını yitirir, çünkü dönen şey gidenden
+farklı bir mod dağılımı olur.
 
 ### 11.4 Dar paketin bedeli
 
 Dar paket limiti merkezi korur, ama her şeyi korumaz. İki bedel kalır.
 
-Birincisi, geçen ağırlık oranı hiçbir zaman bire ulaşmaz. Dar bir paket için de
-geçen oran birden küçüktür: dönen cisim, gidenden **daha soluktur**. Bu bir
-konum ya da momentum kaybı değil, varlık ağırlığının kaybıdır ve Bölüm 14'teki
-bilgi muhasebesinin ilk kalemidir.
+Birincisi, geçen ağırlığın oranı hiçbir zaman bire ulaşmaz. Dar bir pakette de
+bu oran birden küçük kalır, yani dönen paketin toplam ağırlığı gidenin altındadır.
+Bu bir konum ya da momentum kaybı değildir; kaybolan şey doğrudan parçacığın
+orada bulunma ağırlığıdır, ve Bölüm 14'ün bilgi dökümü bunu ilk kalem olarak
+sayar.
 
 İkincisi, paketin genişliği de değişir, dar limitte kendi büyüklüğünün binde
 biri mertebesinde. Merkez kadar temiz korunmaz, ancak merkeze göre ikinci
@@ -1979,8 +1983,9 @@ niteliksel olarak değişmesi beklenmez, ancak gösterilmemiştir.
 Hesap doğrusaldır ve alanın kendisiyle etkileşimi yoktur. Etkileşen bir alanda
 paketin geçiş sırasında dağılması ayrı bir olgudur.
 
-Nokta cisim katmanı Bölge I'de tanımlıdır. Bölge II'de "konum" kavramı tek bir
-uzay ekseni olan $r$ üzerinde daralır ve üç zaman yönü boyunca karşılığı yoktur.
+Nokta cisim okuması yalnızca Bölge I'de tanımlıdır. Bölge II'de "konum" kavramı
+tek uzay ekseni olan $r$ üzerine daralır ve üç zaman yönü boyunca hiçbir
+karşılığı kalmaz.
 Öte tarafta hareketin ne anlama geldiğini bu nedenle Bölüm 10 karşılar. Konumun
 kendisi ise orada da tanımlı değildir; Bölüm 18.9 bunu reddeder.
 
@@ -1994,21 +1999,22 @@ ikamet süresine karşılık gelir ve tanımların hangisinin neyi ölçtüğü 
 derlenmiştir. Sınanan yapılanmada bir katediş için sırasıyla $9{,}861$,
 $1{,}462864$ ve $0{,}519$ çıkar. Geçişin tek bir süresi yoktur.
 
-Hangisinin dönüş anını yerleştirdiği ölçümle karara bağlanmıştır. Yayılan paketin
-tepesi hiçbir okumaya ait olmayan bir hakem sağlamaktadır. Yalnızca dalga okuması
-tutar; bağıl fark $4{,}5 \times 10^{-4}$ düzeyinde kalır. Nokta cisim okuması
-altı katı aşan bir bağıl sapmayla, genlik okuması yüzde altmış beşlik bir bağıl
-sapmayla şaşar.
+Dönüş anını hangisinin doğru yerleştirdiği ölçümle karara bağlanmıştır. Yayılan
+paketin tepesi, üç okumadan hiçbirine ait olmadığı için tarafsız bir ölçüt
+sağlar. Üç okumadan yalnızca dalga okuması tutmaktadır; aradaki bağıl fark
+$4{,}5 \times 10^{-4}$ düzeyinde kalır. Nokta cisim okuması altı katı aşan bir
+bağıl sapmayla, genlik okuması ise yüzde altmış beşlik bir bağıl sapmayla
+şaşar.
 
 Dönen durumun zaman ekseni üzerindeki yeri bu nedenle **fazın** özelliğidir,
 bölgede geçirilen sürenin değil. Diğer iki okuma yanlış değildir; biri ikamet
 süresini, öteki yasak iç bölgenin geçilmesini ölçer.
 
-**Hakemin taraflı olabileceği kayda geçer.** Burada hakem, yayılan paketin
-tepesidir; tepe konumu durağan faz koşulundan çıktığı için faz okumasına yatkın
-bir ölçüttür. Bağımsız bir hakem seçilseydi sonuç değişebilirdi: ikamet süresi
-ultrasoğuk atomlarda Larmor saatiyle doğrudan ölçülmüştür [34] ve o ölçümün
-konusu tepe değil, parçacığın engelde geçirdiği süredir. Bu çalışma dönüş anını
+**Bu ölçütün taraflı olabileceği kayda geçer.** Kullanılan ölçüt yayılan paketin
+tepesidir, ve tepenin konumu durağan faz koşulundan çıktığı için ölçüt baştan
+faz okumasına yatkındır. Bağımsız bir ölçüt seçilseydi sonuç değişebilirdi: ikamet süresi ultrasoğuk
+atomlarda Larmor saatiyle doğrudan ölçülmüştür [34], ve o ölçümün konusu tepe
+değil, parçacığın engelde geçirdiği süredir. Bu çalışma dönüş anını
 yerleştiren okumayı seçmektedir, en fiziksel okumayı değil; ikisi aynı soru
 değildir.
 
