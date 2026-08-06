@@ -1859,10 +1859,9 @@ her iki tarafta aynıdır: $\kappa \to 0$'da sıfır, $\kappa \to \infty$'da $c$
 
 ### 10.3 Durgunluğun tek yörüngeye indirgenmesi
 
-Durgun superluminal dört-momentum $p' = (mc\,\mathbf{s},\, 0)$ biçimindedir ve
-her $\mathbf{s}$ seçimi ayrı bir dünya çizgisi demeti veriyormuş gibi görünür.
-
-Hesap:
+Öte tarafta durgun bir cismin dört-momentumu $p' = (mc\,\mathbf{s},\, 0)$
+biçimindedir, ve ilk bakışta her $\mathbf{s}$ seçimi ayrı bir dünya çizgisi
+demeti veriyormuş gibi görünür. Hesap bunun böyle olmadığını gösterir:
 
 - Kütle kabuğu koşulu $s_1^2 + s_2^2 + s_3^2 = 1$ verir, yani
  $\mathbf{s} \in S^2$.
@@ -1873,19 +1872,19 @@ Hesap:
  $\mathbf{s}$'yi herhangi bir $\mathbf{s}'$ye götüren bir dönme her zaman
  vardır.
 
-**Sonuç:** Bütün $\mathbf{s}$ seçimleri aynı yörüngededir. Sonsuz sayıda
-fiziksel durum yoktur; **tek bir durumu yazmanın sonsuz yolu** vardır. Bu bir
-ayar (gauge) fazlalığıdır.
+**Sonuç:** Bütün $\mathbf{s}$ seçimleri aynı yörünge üzerinde durur. Yani ortada
+sonsuz sayıda fiziksel durum yoktur; **tek bir durumu yazmanın sonsuz yolu**
+vardır, ve bu da bir ayar fazlalığıdır.
 
 $$\text{Stabilizatör} = O(2), \qquad \text{Yörünge uzayı} = O(3)/O(2) = S^2$$
 
-**Öncelik.** Fazladan zaman boyutunun bir ayar simetrisiyle elenmesi [13]'ün
-kurduğu mekanizmadır. $Sp(2,\mathbb{R})$ ayar simetrisi altında tek zamanlı
-sistemler, aynı iki zamanlı sistemin farklı ayar sabitlemeleri olarak ortaya
-çıkar. Aynı mekanizma alan teorisine, etkileşimlere ve ayar arka planlarına
-kadar götürülmüştür. Yukarıdaki $O(3)$ fazlalığı aynı türden ve çok daha dar bir
-olgudur. Buradaki katkı mekanizma değil, mekanizmanın bu modeldeki durgunluk
-sorusuna uygulanmasıdır.
+**Öncelik.** Fazladan bir zaman boyutunun ayar simetrisiyle elenmesini mekanizma
+olarak ilk kuran [13] olmuştur. Orada $Sp(2,\mathbb{R})$ ayar simetrisi altında
+tek zamanlı sistemler, aynı iki zamanlı sistemin farklı ayar sabitlemeleri olarak
+ortaya çıkar, ve aynı mekanizma alan teorisine, etkileşimlere ve ayar arka
+planlarına kadar götürülmüştür. Yukarıdaki $O(3)$ fazlalığı da aynı türdendir,
+yalnızca çok daha dardır. Buradaki katkı mekanizmanın kendisi değil, onun bu
+modeldeki durgunluk sorusuna uygulanmasıdır.
 
 # Kısım IV. Üç bölgede madde
 
@@ -1907,8 +1906,8 @@ Burada benimsenen çözüm, tek bir tanım aramak yerine **iki okumayı birlikte
 yürütmektir**. Bu, yalnızca bu bölümün değil, metnin tamamının yöntemidir:
 parçacık hakkında bir şey söyleyen her bölüm, söylediğini iki kez söyler.
 
-**Dalga okuması.** Parçacık, kütleli reel skaler alanın dar bir mod demetidir.
-Enine dalga sayısı üzerinde Gauss ağırlıklı bir paket alınır,
+**Dalga okuması.** Bu okumada parçacık, kütleli reel skaler alanın dar bir mod
+demetidir. Enine dalga sayısı üzerinde Gauss ağırlıklı bir paket alınır,
 
 $$A(k) = \exp\!\left[-\frac{(k - k_0)^2}{2\sigma^2}\right]$$
 
@@ -1917,18 +1916,18 @@ genliğinkinden $\sqrt{2}$ kat dardır; aşağıdaki bütün nicelikler yoğunlu
 üzerinden tanımlanmıştır. Eşikten geçiş Bölüm 8'de mod diliyle kurulduğu için,
 geçişle ilgili her nicelik bu okumada doğrudan hesaplanabilir.
 
-**Parçacık okuması.** Parçacık, konumu, momentumu ve bir yörüngesi olan bir
-cisimdir. Bu okumada sorular "nereye gitti", "ne zaman döndü", "hangi yönelimi
-kazandı" biçimindedir ve cevapları tek tek sayılardır.
+**Parçacık okuması.** İkinci okumada parçacık, konumu, momentumu ve bir yörüngesi
+olan bir cisimdir. Buradaki sorular "nereye gitti", "ne zaman döndü", "hangi
+yönelimi kazandı" biçimini alır, ve cevapları tek tek sayılardır.
 
-İki okuma birbirinin yalınlaştırılmış hâli değildir; ikisi de kendi içinde
-eksiksizdir ve metin ikisini yan yana yürütmektedir. Uyuştukları yerde metin
-uyuşmanın nedenini de yazar. Ayrıldıkları yerde ayrılma **gizlenmez, sonuç
-olarak kaydedilir**; çünkü bu modelde ikisinin ayrıldığı yerler tam olarak öte tarafın
-kendine özgü davrandığı yerlerdir.
+İki okuma birbirinin basitleştirilmiş hâli değildir; ikisi de kendi içinde
+eksiksizdir, ve metin ikisini yan yana yürütmektedir. Uyuştukları yerde metin
+uyuşmanın nedenini de yazar. Ayrıldıkları yerde ise ayrılmayı **gizlemez, sonuç
+olarak kaydeder**, çünkü bu modelde ikisinin ayrıldığı yerler tam olarak öte
+tarafın kendine özgü davrandığı yerlerdir.
 
-Aralarındaki bağ, aşağıda kurulan sözlüktür ve bu sözlüğün nerede geçerli
-olduğu hesaplanabilir bir sorudur.
+İkisini birbirine bağlayan şey aşağıda kurulan sözlüktür, ve o sözlüğün nerede
+geçerli kaldığı hesaplanabilir bir sorudur.
 
 ### 11.1 Sözlük
 
@@ -1944,12 +1943,13 @@ Bu bölümün asıl sonucunu son satır taşır.
 
 ### 11.2 Eşiğin paketi yeniden ağırlıklandırması
 
-Bölüm 8 geçirgenliğin moda bağlı olduğunu vermektedir. Bir paket birçok moddan
-oluştuğuna göre, eşik paketin bazı bileşenlerini diğerlerinden daha çok geçirir.
-Geçen şey, gelenin sönümlenmiş bir kopyası değil, **başka bir dağılımdır**.
+Bölüm 8 geçirgenliğin moda bağlı olduğunu vermişti. Bir paket birçok moddan
+oluştuğuna göre, eşik o paketin bazı bileşenlerini ötekilerden daha çok geçirir.
+Dolayısıyla karşı tarafa ulaşan şey, gelenin sönümlenmiş bir kopyası değil,
+**başka bir dağılımdır**.
 
-Geçen ağırlık oranı, $\mu = 1$, dilim kalınlığı $d = 1$ ve paket merkezi
-$k_0 = 2$ için şu değerleri alır:
+Geçen ağırlığın oranı, $\mu = 1$, dilim kalınlığı $d = 1$ ve paket merkezi
+$k_0 = 2$ için şu değerleri almaktadır:
 
 | Paket genişliği $\sigma$ | Geçen ağırlık oranı |
 | ------------------------ | ------------------- |
@@ -1957,11 +1957,11 @@ $k_0 = 2$ için şu değerleri alır:
 | $0{,}4$ | $0{,}634$ |
 | $1{,}0$ | $0{,}618$ |
 
-Geçen oran her durumda sıfır ile bir arasındadır: paket ne tamamen yansır ne
-tamamen geçer.
+Geçen oran her durumda sıfır ile bir arasında kalır, yani paket ne tamamen
+yansır ne de tamamen geçer.
 
-Asıl etki oranda değil, dağılımın kaymasındadır. Ağırlık merkezinin kayması,
-paketin kendi genişliği birimiyle şu değerleri alır:
+Asıl etki bu oranda değil, dağılımın kaymasında görünür. Ağırlık merkezinin
+kayması, paketin kendi genişliği birim alınarak şu değerleri almaktadır:
 
 | Paket genişliği $\sigma$ | Merkez kayması (genişlik birimiyle) |
 | ------------------------ | ----------------------------------- |
@@ -1976,12 +1976,12 @@ yaklaşır, ki bu paketin kimliğini yitirmesi demektir.
 
 ### 11.3 Nokta cisim koşulu
 
-Tablodaki kayma, paket genişliğiyle **doğru orantılıdır**: genişlik yarıya
-indiğinde kayma da yarıya iner. Bu, sayısal olarak ardışık genişliklerde
-doğrulanmıştır.
+Yukarıdaki tabloda kayma, paket genişliğiyle **doğru orantılı** gitmektedir:
+genişlik yarıya indiğinde kayma da yarıya iner, ve bu ardışık genişliklerde
+sayısal olarak doğrulanmıştır.
 
 Orantının sonucu şudur: kaymanın bir alt sınırı yoktur. Yeterince dar bir paket
-için merkez kayması istenildiği kadar küçüktür.
+seçilirse merkez kayması istenildiği kadar küçük tutulabilir.
 
 > Nokta cisim dili yaklaşık bir kolaylık değil, dar paket limitinde **tam**
 > geçerli kalır. Geçen cisim, giden cismin aynısıdır; yalnızca paket dar tutulduğu
@@ -2001,11 +2001,11 @@ Bu bir konum ya da momentum kaybı değildir; kaybolan şey doğrudan parçacı�
 orada bulunma ağırlığıdır, ve Bölüm 14'ün bilgi dökümü bunu ilk kalem olarak
 sayar.
 
-İkincisi, paketin genişliği de değişir, dar limitte kendi büyüklüğünün binde
-biri mertebesinde. Merkez kadar temiz korunmaz, ancak merkeze göre ikinci
-mertebeden küçüktür.
+İkincisi, paketin genişliği de sabit kalmaz; dar limitte kendi büyüklüğünün binde
+biri mertebesinde değişir. Yani genişlik merkez kadar temiz korunmaz, ama merkeze
+göre ikinci mertebeden küçük kalır.
 
-Bu iki bedel, Bölüm 14'te mod içeriği karşılaştırmasının ölçeceği niceliklerdir.
+Bölüm 14'ün mod içeriği karşılaştırması tam olarak bu iki niceliği ölçmektedir.
 
 ### 11.5 Bu tanımın sınırları
 
