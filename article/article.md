@@ -1400,9 +1400,8 @@ indirgenmiştir. Üç profil şu değerleri verir:
 | $\tanh$ basamağı | $2{,}368$ | Sağlanmıyor | Sağlanıyor |
 | $\lambda = \pi/2 + (\pi/2)\sin^3(\pi\xi/2)$ | $0$ | **Sağlanıyor** | Sağlanıyor |
 
-**Sonuç.** Güçlü koşul, ulaşılan metrik hakkında değil, ona **nasıl
-yaklaşıldığı** hakkında bir kısıttır: geçiş profilinin tam o noktada durağan
-olmasını ister. Doğrusal ya da $\tanh$ tipi bir geçiş bunu sağlamaz; $\tanh$ en
+**Sonuç.** Güçlü koşul varılan metriği kısıtlamaz, ona **nasıl yaklaşıldığını**
+kısıtlar. Geçiş profili tam dönüm noktasında durağan olmalıdır. Doğrusal ya da $\tanh$ tipi bir geçiş bunu sağlamaz; $\tanh$ en
 kötüsüdür, çünkü en dik olduğu yer tam geçiş noktasıdır.
 
 Üç profilin hiçbirinde dağılımsal bir yüzey katmanı doğmaz, çünkü dış eğrilik
@@ -1417,9 +1416,9 @@ Bölüm 5.4 ise geçişi kalınlığı $d$ olan bir katmana sıkıştırır ve g
 $1/d$ ile gittiğini bulur; o güç, buradaki sürekli eğriliğin sıfır kalınlık
 limitinde aldığı biçimdir. Dolayısıyla "katman" sözcüğü Bölüm 5.4 ile Bölüm
 5.6'da dağılımsal bir terimi değil, geçiş bölgesinin sonlu kalınlıkta taşıdığı
-etkin gerilimi adlandırır. Bölüm 5.6'nın enerji koşulu hükmü o etkin gerilime
-bakar ve sonlu kalınlıkta da
-ayakta kalır; kaybolan şey yalnızca terimin dağılımsal olması.
+etkin gerilimi adlandırır. Bölüm 5.6'nın enerji koşulu hükmü o etkin gerilime bakmaktadır ve sonlu
+kalınlıkta da ayakta kalır. Sonlu kalınlıkta kaybolan tek şey, terimin noktasal
+olmasıdır.
 
 Bu, modelin yerçekimi tarafına atılmış ilk adımdır ve sınırlıdır: Einstein
 denklemleri çözülmemiş, yalnızca eklem koşulunun geometrik karşılığı
@@ -1521,12 +1520,12 @@ Yukarıdaki hesap sönüm katsayısını dilim boyunca sabit almaktadır. Gerçe
 geçişte katsayı konuma bağlıdır ve o zaman şu sorulur: geçen şeyi profilin
 **biçimi** mi belirler, yoksa yalnızca **integrali** mi?
 
-Beş profil, integralleri eşit tutan bir karşılaştırmaya girer: düz, üçgen,
-yarım sinüs, plato ve çarpık. Biçim farkı gerçektir ve hesaba girer: kenara yakın
-yerde biçimlendirilmiş profil düz olanın dörtte birinden azdır, merkezde ise
-belirgin biçimde üstündedir. Ayrıca bir uyarı olarak, üçgen ile düz profil bir
-iç noktada tam olarak kesişir; tek bir noktada yapılan bir karşılaştırma hiçbir
-fark bulamazdı.
+Beş profil, integralleri eşit tutulacak biçimde karşılaştırılır: düz, üçgen,
+yarım sinüs, plato ve çarpık. Biçim farkı gerçektir ve hesaba girer. Kenara yakın
+bölgede biçimlendirilmiş bir profil, düz profilin dörtte birinden az sönüm
+taşır; merkezde ise onu belirgin biçimde aşar. Bir uyarı da şudur: üçgen profil
+ile düz profil bir iç noktada tam olarak kesişir, dolayısıyla yalnızca tek bir
+noktaya bakan bir karşılaştırma aralarında hiçbir fark bulamazdı.
 
 Buna karşın geçirgenlik üsteli, biçimden bağımsız olarak toplamın belirlediği
 bir değere yakınsar:
@@ -1542,12 +1541,12 @@ Yayılım toplam büyüdükçe daralmakta ve üstel beş profilde de birin yirmi
 içinde kalmaktadır: düz $1{,}02172$, üçgen $1{,}00127$, yarım sinüs $1{,}00236$,
 plato $1{,}00485$, çarpık $1{,}00383$.
 
-**İfadenin tam biçimi, daha güçlüsü değil.** Biçim tümüyle görünmez de değildir:
-eşit toplamlı iki biçim $2{,}881 \times 10^{-7}$ ve $1{,}807 \times 10^{-7}$
-geçirmekte, yani farklı sayılar vermektedir. Toplamın sabitlediği şey
-**üsteldir**, önçarpan değildir. Bu ayrım korunmalıdır, çünkü "geçen şey
-yalnızca toplama bağlıdır" ifadesi olduğu gibi alındığında yayınlanmış sonuçtan
-daha güçlü bir şey söylemiş olurdu.
+**İfadenin tam biçimi, ondan güçlüsü değil.** Biçim tümüyle görünmez de değildir:
+toplamları eşit olan iki profil $2{,}881 \times 10^{-7}$ ve
+$1{,}807 \times 10^{-7}$ geçirmekte, yani farklı sayılar vermektedir. Toplamın
+sabitlediği şey **üsteldir**, üstelin önündeki çarpan değil. Bu ayrım yerinde
+durmalıdır, çünkü "geçen şeyi yalnızca toplam belirler" cümlesi olduğu gibi
+alındığında yayımlanmış sonuçtan daha güçlü bir iddia hâline gelir.
 
 Bu sonucun modeldeki yeri şudur: geçirgenliğin mertebesini ara bölgenin
 **ayrıntılı profili** değil, yalnızca toplam sönüm belirlemektedir. Dolayısıyla Bölüm
@@ -1561,9 +1560,9 @@ katman ve oran koşuludur.
 
 ## 9. Öte tarafta zaman ve mekân
 
-Öte tarafta hangi nicelikler korunur, hangi roller yer değiştirir ve "yolculuk"
-sözcüğü orada ne anlama gelir: bu bölüm bunları sırayla kurmaktadır. Sonucu taşıyan
-adım, zamanın okunun oradaki yokluğudur.
+Bu bölüm üç soruyu sırayla cevaplar: öte tarafta hangi nicelikler korunur, hangi
+roller yer değiştirir, ve "yolculuk" sözcüğü orada ne anlama gelir. Sonucu
+taşıyan adım, orada zamanın bir yönünün bulunmamasıdır.
 
 ### 9.1 Noether yükleri
 
