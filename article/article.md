@@ -1753,14 +1753,16 @@ bu hücrelerin her birinin Bölge I'de nasıl göründüğünü tek tek hesaplam
 İmza değişimini yapan $D$ matrisinde hız hiç geçmez. Bu bir eksiklik değildir.
 Aşağıdaki türetim, hız kavramının burada zaten gerekmediğini göstermektedir.
 
-Bölge I'de hız zaten temel bir büyüklük olmayıp dispersiyondan çıkar:
+Bölge I'de bile hız temel bir büyüklük değildir, dispersiyon bağıntısından
+türetilir:
 
 $$\omega(k) = c\sqrt{k^2 + \mu}, \qquad
  v_{\text{faz}} = \frac{\omega}{k}, \qquad
  v_{\text{grup}} = \frac{d\omega}{dk}, \qquad
  v_{\text{faz}} \cdot v_{\text{grup}} = c^2$$
 
-Öte tarafta aynı türev alınır, ancak payda vektördür, zaman üç boyutludur:
+Öte tarafta da aynı türev alınabilir, ancak orada zaman üç boyutlu olduğundan
+payda bir vektöre dönüşür:
 
 $$\frac{dq}{d\kappa} \;\longrightarrow\; \text{skaler/vektör} = \text{gradyan} = \text{VEKTÖR}$$
 
@@ -1768,8 +1770,9 @@ $$\frac{dq}{d\kappa} \;\longrightarrow\; \text{skaler/vektör} = \text{gradyan} 
 hızlı" sorusunun yerini "hangi yönelimde" sorusu alır. Hız bilgisini taşıyan tek
 yer $B$ boostudur, yani üç zamanlı uzaydaki yönelim.
 
-Hız dönüşümü $v' = c^2/v$'dir; ışık hızı sabit noktadır ve subluminal ile
-superluminal bölgeleri birbirine eşler.
+Hızın kendisi de geçiş altında $v' = c^2/v$ kuralıyla dönüşür. Bu kuralın sabit
+noktası ışık hızıdır, ve kural subluminal ile superluminal bölgeleri birbirine
+eşler.
 
 ### 10.1 Dört eksende hareketin tanımı
 
@@ -1788,29 +1791,30 @@ birim adımın Bölge I saatinde ne ürettiği.
 | $2$ | zaman | $1$ | uzay | **tam olarak $0$** |
 | $3$ | uzay | $0$ | zaman | **tam olarak $1$** |
 
-Dört yuvanın dördü de eşikte karakter değiştirir; hiçbiri türünü korumaz. Buna
-karşılık **hareket serbestliği yuva yuva korunur.** Öte tarafın üç zamanında
-serbestçe hareket edilir ve o üç zamanın taşıdığı Bölge I uzay yönlerinde de.
-Öte tarafın tek uzay ekseninde yön seçilemez ve onun taşıdığı Bölge I zamanında
-da seçilemez.
+Tablo iki sonucu birden verir. Dört yuvanın dördü de eşikte karakter değiştirir,
+yani hiçbiri türünü korumaz. Buna karşılık **hareket serbestliği yuva yuva
+aynı kalır**: parçacık öte tarafın üç zamanında serbestçe hareket eder, ve o üç
+zamanın taşıdığı Bölge I uzay yönlerinde de aynı serbestliği bulur. Aynı biçimde,
+öte tarafın tek uzay ekseninde yön seçemez, ve onun taşıdığı Bölge I zamanında da
+seçemez.
 
-**Üç zaman ekseninde hareket.** Serbesttir, ama iki nedenle sonucu taşıyamaz.
-Birincisi, tümüyle bu üç eksenin içinde kalan bir yer değiştirme Bölge I
-saatinde **tam olarak sıfır** üretir; üç eksenin her birinde birim adım tek tek
-denenmiş, üçünün de izdüşümü sıfır çıkmıştır. İkincisi, bu üç eksen arasında bir
-$O(3)$ simetrisi vardır ve bu bir ayar fazlalığıdır: enerji vektörünün yönü
-orada fiziksel değildir, yalnızca uzunluğu fizikseldir. Kapalı bir gezinti de
-hiçbir iz bırakmaz, çünkü bu eksenler arasındaki dönmeler ayırt edilmiş ekseni
-sabit bırakır ve sözlüğün katsayısına dokunmaz.
+**Üç zaman ekseninde hareket.** Bu eksenlerde hareket serbesttir, ama iki nedenle
+sonucu taşıyamaz. Birincisi, tümüyle bu üç eksenin içinde kalan bir yer
+değiştirme Bölge I saatinde **tam olarak sıfır** üretir; üç eksenin her birinde
+birim adım tek tek denenmiş ve üçünün de izdüşümü sıfır çıkmıştır. İkincisi, bu
+üç eksen arasındaki $O(3)$ simetrisi bir ayar fazlalığıdır, yani enerji
+vektörünün yönü orada fiziksel değildir ve yalnızca uzunluğu fizikseldir. Aynı
+nedenle kapalı bir gezinti de hiçbir iz bırakmaz, çünkü bu eksenler arasındaki
+dönmeler ayırt edilmiş ekseni yerinde bırakır ve sözlüğün katsayısına dokunmaz.
 
 Bu yüzden yukarıdaki "hız yönelime dönüşür" sonucu bu üç eksene aittir: payda üç
 boyutlu olduğu için türev skaler değil gradyandır ve "ne kadar hızlı" sorusu
 "hangi yönelimde" sorusuna dönüşür.
 
-**Tek uzay ekseninde hareket.** Burada durum başkadır. O eksen tek olduğu için
-türev **skalerdir**, yani
-orada hız yönelime dönüşmez; sıradan anlamda bir yayılma hızı tanımlıdır ve bir
-üst sınırı vardır. Hesaplanan büyüklük
+**Tek uzay ekseninde hareket.** Dördüncü eksende durum başkadır. O eksen tek
+olduğundan türev bir vektör değil **skaler** çıkar, dolayısıyla hız orada
+yönelime dönüşmez: sıradan anlamda bir yayılma hızı tanımlıdır ve bir üst sınırı
+vardır. Hesaplanan büyüklük
 
 $$\left|\frac{\mathrm{d}q}{\mathrm{d}\kappa}\right| = \frac{c\,\kappa}{\sqrt{\kappa^2+\mu}}$$
 
@@ -1820,11 +1824,11 @@ sınır bu tarafın sınırıyla aynı sayıdır. Durgun bir cisim için
 $q(0) = mc^2/\hbar \neq 0$'dır, yani o eksende duran bir cismin bile sıfırdan
 farklı bir eşlenik niceliği vardır.
 
-Sonucu taşıyan eksen budur. Bu eksende $s$ kadar yer değiştirmek, Bölge I
-saatinde tam olarak $s$ kadar yer değiştirmektir; katsayı birdir ve diğer üç
-eksenin bu yuvaya katkısı tam olarak sıfırdır. İspatı Bölüm 4.1.1'dedir,
-işaretin nereden geldiği Bölüm 4.1.3'te ve o eksende geri dönülemiyor olmasının
-bu sonuçla nasıl bir arada durduğu da orada yazılmıştır.
+Çalışmanın sonucunu taşıyan eksen de budur. Parçacık bu eksende $s$ kadar
+ilerlerse Bölge I'in saati tam $s$ kadar kayar, çünkü katsayı bire eşittir ve
+diğer üç eksenin aynı yuvaya katkısı tam olarak sıfır kalır. Bunun ispatını
+Bölüm 4.1.1 verir; işaretin nereden geldiğini ve o eksende geri dönülememesinin
+bu sonuçla nasıl bir arada durduğunu ise Bölüm 4.1.3 yazar.
 
 **Dört eksenin özeti.** Parçacık üç eksende serbestçe hareket eder, ama o üç
 eksen saate hiçbir şey taşımaz. Kalan tek eksende hareket serbest değildir, ama
