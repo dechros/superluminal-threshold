@@ -2,26 +2,27 @@
 
 ## Öz
 
-Kütleli bir parçacığı zamanda geriye taşımanın bir yolu aranmaktadır. Önerilen
-yol üç adım yürür: parçacık ışık hızı eşiğini geçer, öte tarafta mekânda bir
-mesafe kat eder ve aynı eşikten geri döner. Bu metin, orada kat edilen mesafenin
-dönüşte hangi ana denk düştüğünü hesaplamıştır.
+Kütleli bir parçacığı zamanda geriye taşımanın bir yolu aranmaktadır. Aranan yol
+üç adım yürür: parçacık ışık hızı eşiğini geçer, öte tarafta mekânda bir mesafe
+kat eder ve aynı eşikten geri döner. Bu metin de o mesafenin dönüşte hangi ana
+denk düştüğünü hesaplamıştır.
 
-Hesap şunu verir: öte tarafta $s$ kadar yol almak, dönüşte saati tam $s$ kadar
-kaydırır. Katsayı bire eşit çıkar, yani mesafe bir hıza bölünmeden doğrudan
-süreye dönüşür. Eşikten geçmenin kendisi de bir gecikme yaratır, ancak o gecikme
-eşik kalınlaştıkça artmayı bırakır ve bir tavana oturur. Saat kayması ise
-mesafeyle sınırsız büyür. İki nicelik bir mesafede eşitlenir ve o mesafeyi aşan
-her yolculuk parçacığı, yola çıktığı andan önce geri getirir.
+Hesabın verdiği sonuç şudur: parçacık öte tarafta $s$ kadar yol alırsa, dönüşte
+saat tam $s$ kadar kayar. Aradaki katsayı bire eşit çıktığından, mesafe bir hıza
+bölünmeden doğrudan süreye dönüşür. Eşikten geçmenin kendisi de bir gecikme
+yaratır, ancak o gecikme eşik kalınlaştıkça artmayı bırakır ve bir tavana oturur.
+Saat kayması ise böyle bir tavan tanımaz, mesafeyle sınırsız büyür. Bu yüzden iki
+nicelik belirli bir mesafede eşitlenir, ve o mesafeyi aşan her yolculuk parçacığı
+yola çıktığı andan önce geri getirir.
 
-Sonuç bir koşula bağlı kalır. Eşikten geçişi sekiz ayrı matris gerçekleştirebilir
-ve hangisinin işlediğini geometri seçmez: dördü dönüşü ileri bir ana, dördü geri
-bir ana taşır. Dolayısıyla kanıtlanan önerme şu olur: böyle bir geçiş
-gerçekleşirse, dönüş anı hesaplanmış bir sayıya oturur. Geçişin gerçekten
-kurulabildiği kanıtlanmamıştır ve önünde iki engel durur. Eşiği geçirgen kabul
-eden okuma, geçiş yüzeyinde ince bir madde tabakası doğurur ve o tabaka baskın
-enerji koşulunu çiğner. Ayrıca iddiayı taşıyan aralıkta parçacık öte tarafta
-gözlenemez.
+Ne var ki bu sonuç bir koşula bağlı kalır. Eşikten geçişi sekiz ayrı matris
+gerçekleştirebilir, ve hangisinin işlediğini geometri seçmez: dördü dönüşü ileri
+bir ana, dördü geri bir ana taşır. Dolayısıyla kanıtlanan önerme yalnızca şu
+olur: böyle bir geçiş gerçekleşirse, dönüş anı hesaplanmış bir sayıya oturur.
+Geçişin gerçekten kurulabildiği ise kanıtlanmamıştır, çünkü önünde iki engel
+durmaktadır. Birincisi, eşiği geçirgen kabul eden okuma geçiş yüzeyinde ince bir
+madde tabakası doğurur ve o tabaka baskın enerji koşulunu çiğner. İkincisi,
+iddiayı taşıyan aralıkta parçacık öte tarafta gözlenemez.
 
 **Anahtar kelimeler:** imza değişimi, üstışık dönüşüm, zaman yolculuğu, eklem
 koşulu, geçiş genliği, kütleli parçacık.
@@ -33,12 +34,13 @@ yol önerir ve onun aritmetiğini kurar: parçacık ışık hızı eşiğini ge�
 tarafta mekânda mesafe kat eder ve geri döner. Metnin sorduğu soru, orada
 harcanan mesafenin dönüşte saati ne kadar kaydırdığıdır.
 
-Metin iki bölgeyi birbirinden ayırmaktadır. **Bölge I**, parçacığın yola çıktığı
-sıradan bölgedir. Orada ışık hızı bir üst sınır olarak durur ve zaman tek yönde
-işler. **Bölge II** ise eşiğin öte yanında kalır. Orada metriğin imzası dönmüştür:
-tek bir mekân ekseni ile üç zaman ekseni bulunur. Parçacık o bölgede yalnızca tek
-mekân ekseni boyunca ilerleyebilir. "Öte taraf" sözü metin boyunca Bölge II
-anlamına gelmektedir.
+Soruyu kurabilmek için metin iki bölgeyi birbirinden ayırmaktadır. **Bölge I**,
+parçacığın yola çıktığı sıradan bölgedir; orada ışık hızı bir üst sınır olarak
+durur ve zaman tek yönde işler. **Bölge II** ise eşiğin öte yanında kalır ve
+orada metriğin imzası dönmüştür: tek bir mekân ekseni ile üç zaman ekseni
+bulunur. Bu yüzden parçacık Bölge II'de yalnızca o tek mekân ekseni boyunca
+ilerleyebilir. Metin boyunca "öte taraf" sözü de aynı bölgeyi, yani Bölge II'yi
+adlandırmaktadır.
 
 ### 1.1 Kurulan eşleme
 
@@ -49,17 +51,19 @@ kurmuştur ve onu şöyle yazar:
 
 $$(\text{öte taraftaki yönelim ve hareket}) \;\longmapsto\; (t, x, y, z)_{\text{dönüş olayı}}$$
 
-**Ana sonuç.** Parçacık öte tarafın tek uzay ekseninde $s$ kadar ilerlerse,
-Bölge I'in saati tam $s$ kadar kayar. Katsayı bire eşit çıkar, yani araya bir
-hız ya da bir ölçek çarpanı girmez. Dönüş olayının uzay koordinatlarına hiçbir
-şey sızmaz; kayma yalnızca zaman koordinatında görünür. Arka arkaya yapılan
-yolculukların kaymaları da basitçe toplanır. Kaymanın işaretini, yani saatin
-ileri mi geri mi gittiğini, geometri tek başına belirlemez.
+**Ana sonuç.** Parçacık öte tarafın tek uzay ekseninde $s$ kadar ilerlerse, Bölge
+I'in saati tam $s$ kadar kayar. Aradaki katsayı bire eşit olduğundan araya bir
+hız ya da bir ölçek çarpanı girmez. Kayma yalnızca zaman koordinatında görünür,
+çünkü dönüş olayının uzay koordinatlarına hiçbir şey sızmaz. Eşleme doğrusal
+olduğu için arka arkaya yapılan yolculukların kaymaları da basitçe toplanır.
+Bütün bunlara karşın geometri tek başına kaymanın işaretini, yani saatin ileri
+mi geri mi gittiğini belirlemez.
 
-Eşikten geçmenin yarattığı gecikme, eşik kalınlaştıkça bir tavana oturur ve orada
-kalır. Saat kayması ise mesafeyle sınırsız büyür. İkisi bir mesafede eşitlenir;
-o mesafeyi aşan her $s$, parçacığı yola çıktığı andan önce geri getirir. Bu metin
-zamanda yolculuğu baştan kabul etmez, eşlemeden okumaktadır: dönüş anının,
+İkinci sonucu, eşikten geçmenin kendi yarattığı gecikme verir. O gecikme eşik
+kalınlaştıkça bir tavana oturur ve orada kalır, saat kayması ise mesafeyle
+sınırsız büyür. Dolayısıyla ikisi belirli bir mesafede eşitlenir, ve o mesafeyi
+aşan her $s$ parçacığı yola çıktığı andan önce geri getirir. Bu metin zamanda
+yolculuğu baştan kabul etmez, yukarıdaki eşlemeden okumaktadır: dönüş anının,
 parçacık hiç eşiğe girmeseydi bulunacağı andan farklı olup olmadığını hesap
 söyler.
 
@@ -78,27 +82,30 @@ ileri yürür ve eşleme onu geriye taşır. Geçmişe varmak için iki şey bir
 gerekir: geriye taşıyan bir matris ve gecikmeyi aşacak kadar büyük bir $s$.
 
 Dolayısıyla metnin kanıtladığı önerme şu olur: **böyle bir geçiş gerçekleşirse**,
-dönüş anı hesaplanmış bir sayıya oturur. Geçişin kurulabildiği kanıtlanmamıştır,
-ve zamanda yolculuktan söz edebilmek tam olarak onu gerektirir. Önünde iki engel
-durur. Eşiği geçirgen kabul eden okuma, geçiş yüzeyinde bir madde tabakası
-doğurur ve o tabaka baskın enerji koşulunu çiğner (Bölüm 5.6). Ayrıca iddiayı
-taşıyan aralıkta parçacık öte tarafta gözlenemez (Bölüm 18.9).
+dönüş anı hesaplanmış bir sayıya oturur. Geçişin kurulabildiği ise
+kanıtlanmamıştır, oysa zamanda yolculuktan söz edebilmek tam olarak onu
+gerektirir. Kurulmasının önünde de iki engel durmaktadır. Birincisi, eşiği
+geçirgen kabul eden okuma geçiş yüzeyinde bir madde tabakası doğurur ve o tabaka
+baskın enerji koşulunu çiğner (Bölüm 5.6). İkincisi, iddiayı taşıyan aralıkta
+parçacık öte tarafta gözlenemez (Bölüm 18.9).
 
 ### 1.3 İddianın büyüklüğü
 
-Yukarıdaki sonuç dört parçadan kurulur ve bunlardan yalnızca dördüncüsü yenidir.
-Işıktan hızlı hareketin geçmişe varmayı mümkün kıldığını literatür 1962 ile 1970
-arasında göstermiştir. Öte tarafın bir uzay ve üç zaman ekseni taşıdığını,
-parçacıkların da yalnızca o tek uzay ekseninde ilerleyebildiğini literatür
-biliyor. Bir uzay ekseninin bu geçiş altında zaman eksenine dönüştüğü de bilinen
-bir sonuç sayılır. Geriye kalan tek adımı aşağıdaki cümle taşır:
+Yukarıdaki sonuç dört parçadan kurulur, ancak bunlardan yalnızca dördüncüsü
+yenidir. İlkini literatür 1962 ile 1970 arasında göstermiştir: ışıktan hızlı
+hareket geçmişe varmayı mümkün kılar. İkincisini de yine literatür bilmektedir,
+yani öte tarafın bir uzay ve üç zaman ekseni taşıdığını, parçacıkların da
+yalnızca o tek uzay ekseninde ilerleyebildiğini. Üçüncüsü, bir uzay ekseninin bu
+geçiş altında zaman eksenine dönüşmesidir, ve o da bilinen bir sonuç sayılır.
+Geriye kalan dördüncü adımı ise aşağıdaki cümle taşır:
 
 > Işık hızını geçen kütleli madde, oradaki tek mekân boyutunda hareket edip
 > subluminal bölgeye döndüğünde **farklı bir zaman konumunda** bulunur.
 
-Literatürde bulunmayan şey budur: öte taraftaki yer değiştirmeyi bir saat
-kaymasına çeviren ve dönüşte hangi ana varıldığını sayıyla veren bir çalışma. İlk
-üç parçanın her biri yukarıda kaynağıyla anılmıştır; dördüncüsünün kaynağı yoktur.
+Literatürde bulunmayan şey tam olarak budur: öte taraftaki yer değiştirmeyi bir
+saat kaymasına çeviren ve dönüşte hangi ana varıldığını sayıyla veren bir
+çalışma. İlk üç parçanın her biri yukarıda kaynağıyla anılmıştır, dördüncüsünün
+ise anılacak bir kaynağı yoktur.
 
 ### 1.4 Sonucu taşıyan adımlar
 
@@ -109,18 +116,19 @@ isteyen okuyucu orayı okursa yeter.
 ### 1.5 Bu adımların göstermedikleri
 
 Yedi adım bir aritmetik kurar ve o aritmetik kendi içinde eksiksiz işler. Ancak
-böyle bir geçişin fiziksel olarak kurulabildiğini göstermez. Üç ayrı engel bunu
-belirler ve üçü birbirinden farklı türdendir.
+aynı aritmetik, böyle bir geçişin fiziksel olarak kurulabildiğini göstermez.
+Kurulmasının önüne üç ayrı engel çıkar, ve üçü birbirinden farklı türdendir.
 
-Birincisi bir büyüklük sorunudur: eşiği geçebilen yapılanmalarda parçacığın
-geçme olasılığını veren genlik, kalınlık $d = 8$'e çıktığında
-$3{,}46 \times 10^{-12}$'ye kadar düşer, yani geçiş neredeyse hiç
-gerçekleşmez. İkincisi bir açık sorudur: saat kaymasının işaretini seçebilmek,
-sekiz matris arasından birini evrensel olarak sabitleyen bir kuralın
-bulunmamasına dayanır ve böyle bir kuralın yokluğu kanıtlanmamıştır. Üçüncüsü,
-eşiği geçirgen kabul eden okuma ile geçiş yüzeyindeki madde tabakasının bir
-arada duramamasıdır. Bu son engel bu modele özgü değildir; literatürün zaten
-taşıdığı güçlü ile zayıf eklem koşulu ayrımından doğar.
+Birincisi bir büyüklük sorunudur. Eşiği geçebilen yapılanmalarda parçacığın geçme
+olasılığını veren genlik, kalınlık $d = 8$'e çıktığında
+$3{,}46 \times 10^{-12}$'ye kadar iner; yani geçiş mümkün kalır ama neredeyse hiç
+gerçekleşmez. İkincisi ise bir açık sorudur. Saat kaymasının işaretini
+seçebilmek, sekiz matris arasından birini evrensel olarak sabitleyen bir kuralın
+bulunmamasına dayanır, oysa böyle bir kuralın yokluğu kanıtlanmamıştır.
+Üçüncüsü, eşiği geçirgen kabul eden okuma ile geçiş yüzeyindeki madde
+tabakasının bir arada duramamasıdır. Bu son engel bu modele özgü değildir, çünkü
+kaynağını literatürün zaten taşıdığı güçlü ile zayıf eklem koşulu ayrımından
+alır.
 
 ### 1.6 Model
 
@@ -130,15 +138,15 @@ geçiş, kalınlıksız bir yüzey olarak alınmaz; kendi kalınlığı ve kendi
 ayrı kalınlığı için ayrı ayrı yürütülmüştür.
 
 Eşik geçirgen alınmıştır, yani parçacık oradan geçebilmektedir. Bu seçim, iki
-bölgeyi birbirine bağlarken zayıf eklem koşulunu benimsemek anlamına gelir ve
-bedelini açıkça öder. Geçiş yüzeyinde bir madde tabakası
-doğar; tabakanın gücü kalınlık arttıkça azalır. Yüzey zamansal olmadığından bu
-tabaka baskın enerji koşulunu çiğner, ve daha uygun bir madde seçerek bundan
-kurtulmak mümkün olmaz. En ağır sonucu Bölüm 5.7 verir: bu metrik ailesinde oran
-koşulunu geçebilen tek profil, güçlü koşulu sağlayan profil çıkar, yani hiçbir
-şey geçirmeyen profil.
+bölgeyi birbirine bağlarken zayıf eklem koşulunu benimsemek anlamına gelir, ve
+bedelini de açıkça öder. Ödenen bedel, geçiş yüzeyinde doğan bir madde
+tabakasıdır; tabakanın gücü kalınlık arttıkça azalır, ama hiç sıfırlanmaz. Yüzey
+zamansal olmadığından bu tabaka baskın enerji koşulunu çiğner, ve daha uygun bir
+madde seçerek bundan kurtulmak mümkün olmaz. En ağır sonucu ise Bölüm 5.7 verir:
+bu metrik ailesinde oran koşulunu geçebilen tek profil, güçlü koşulu sağlayan
+profil çıkar, yani hiçbir şey geçirmeyen profil.
 
-Metin parçacığı iki ayrı okumayla birden taşır. Hesaplar dalga paketi üzerinden
+Metin parçacığı ayrıca iki okumayla birden taşır. Hesaplar dalga paketi üzerinden
 yürür, anlatım ise noktasal bir cisim dilini kullanır. İki okumayı birbirine
 çeviren sözlüğün, paket yeterince dar tutulduğunda tam olarak işlediği
 gösterilmiştir.
@@ -150,30 +158,31 @@ hangi yüzünden çıktığı ve enerji vektörünün ne kadar döndüğü. Vekt
 serbest kalır, uzunluğu ise sabit durur; üç zaman ekseni arasındaki $O(3)$
 dönmeleri fiziksel bir fark üretmez, yalnızca aynı durumu farklı biçimde yazar.
 
-Tümüyle üç zaman ekseninin içinde kalan bir hareket, Bölge I'in saatini hiç
-kaydırmaz. Üç zaman ekseni arasındaki dönmeler de eşlemenin katsayısına
-dokunmaz, dolayısıyla başladığı yere dönen bir gezinti hiçbir iz bırakmaz.
-Saati oynatan tek şey, tek uzay ekseni boyunca alınan yoldur.
+Bu iki etiketten hareketin saate ne taşıdığı da çıkar. Tümüyle üç zaman ekseninin
+içinde kalan bir hareket Bölge I'in saatini hiç kaydırmaz, çünkü o eksenler
+arasındaki dönmeler eşlemenin katsayısına dokunmaz. Aynı nedenle başladığı yere
+dönen bir gezinti de hiçbir iz bırakmaz. Geriye saati oynatan tek şey kalır: tek
+uzay ekseni boyunca alınan yol.
 
-Dönüş anını, parçacığın yanında taşıdığı bir saat vermez. O an, ara bölgeye giriş
-ve çıkış genliklerinin ortak fazından okunur. Engel rejiminde bu faz kalınlık
-arttıkça bir tavana oturur, ve kalınlığın bilgisi fazda değil, frekans
-bileşenlerinin karışımında kalır.
+Dönüş anını ise parçacığın yanında taşıdığı bir saat vermez. O an, ara bölgeye
+giriş ve çıkış genliklerinin ortak fazından okunur. Engel rejiminde bu faz
+kalınlık arttıkça bir tavana oturur, ve kalınlığın bilgisi artık fazda değil,
+frekans bileşenlerinin karışımında kalır.
 
 ### 1.8 Geri döndüğünde
 
-Parçacık geri döndüğünde enerjisi, sürati ve kütlesi tam olarak korunur.
-Korunmayan tek şey gittiği yön olur. Öte tarafta hiçbir fiziksel iz bırakmayan
-bir ayar dönmesi, Bölge I'de parçacığın yön değiştirmesi olarak görünür ve bu
-yön değişikliği hiçbir enerji harcamaz. Sapma açıları da her değeri alamaz,
-sonlu bir kümeden gelir. Çalışmanın deneyle ayırt edilebilecek öngörüsü budur:
-çarptığı hedefin geri tepmediği ve açıları ayrık değerlere oturan bir esnek
-sapma.
+Parçacık geri döndüğünde enerjisi, sürati ve kütlesi tam olarak korunur;
+korunmayan tek şey gittiği yön olur. Bunun nedeni şudur: öte tarafta hiçbir
+fiziksel iz bırakmayan bir ayar dönmesi, Bölge I'de parçacığın yön değiştirmesi
+olarak görünür, ve bu yön değişikliği hiçbir enerji harcamaz. Üstelik sapma
+açıları her değeri de alamaz, sonlu bir kümeden gelir. İki özellik birleşince
+çalışmanın deneyle ayırt edilebilecek öngörüsü ortaya çıkar: çarptığı hedefin
+geri tepmediği ve açıları ayrık değerlere oturan bir esnek sapma.
 
-Tarama, eşlemenin bütün girdilerini tek tek denemiştir ve eşlemenin tek yönlü
-olduğunu göstermektedir: $312$ ayrı öte taraf durumu, yalnızca $158$ farklı dönüş
-olayına düşer. Bu sıkışma, boyut değişiminde kaybolan bilginin sayısal ölçüsünü
-verir.
+Eşlemenin kendisi ise tek yönlüdür. Tarama bütün girdileri tek tek denemiş ve
+$312$ ayrı öte taraf durumunun yalnızca $158$ farklı dönüş olayına düştüğünü
+göstermektedir. Buradaki sıkışma, boyut değişiminde kaybolan bilginin sayısal
+ölçüsünü verir.
 
 ### 1.9 Gösterilmeyenler
 
@@ -182,14 +191,15 @@ oradaki başlangıç değeri problemi iyi konumlanmaz. Ancak bu çöküş, eşik
 geçerek oraya giren hiçbir şeyi etkilemez: kütle kabuğu üzerindeki bir modun
 büyüme katsayısı her durumda negatif çıkar, yani mod büyümek yerine sönümlenir.
 
-Gecikmenin kalınlıkla doyması, içeride bir yayılma hızı ölçüldüğü anlamına
-gelmez. Aynı rejimde grup hızı zaten tanımsız kalır. Hesap ayrıca şunu göstermiştir:
-bu gecikme, ara bölgede depolanan alanın ne kadar süre orada durduğundan bağımsız
-bir sayı değildir.
+İkinci sınır gecikmeyle ilgilidir. Gecikmenin kalınlıkla doyması, içeride bir
+yayılma hızının ölçüldüğü anlamına gelmez, çünkü aynı rejimde grup hızı zaten
+tanımsız kalır. Hesap bir şeyi daha göstermiştir: bu gecikme, ara bölgede
+depolanan alanın orada ne kadar durduğundan bağımsız bir sayı değildir.
 
-İddiayı taşıyan aralıkta parçacık öte tarafta doğrudan görünmez. Geriye yalnızca
-üç sınır niceliği kalır ve üçü de tek bir bilgi verir: bir geçiş olmuştur
-(Bölüm 18.9). Geçişin tayf üzerinde hangi olasılıkla dağıldığı hesaplanmamıştır.
+Üçüncü sınır ise gözlemdedir. İddiayı taşıyan aralıkta parçacık öte tarafta
+doğrudan görünmez, ve geriye yalnızca üç sınır niceliği kalır. Üçü de tek bir
+bilgi verir, yani bir geçişin olduğunu (Bölüm 18.9). Geçişin tayf üzerinde hangi
+olasılıkla dağıldığı ise hesaplanmamıştır.
 
 ### 1.10 Modelin maddeleri
 
@@ -220,8 +230,9 @@ girdisini, ya bir kısıtını, ya da bir sonucunu kaydeder.
 
 ### 1.11 Okuma haritası
 
-Metin üç adım üzerine kurulmuştur ve üçü de tek bir amaca hizmet eder: kütleli bir
-parçacığı zamanda geriye taşımak.
+Metin üç adım üzerine kurulmuştur, ve üçü de tek bir amaca hizmet eder: kütleli
+bir parçacığı zamanda geriye taşımak. Aşağıdaki tablo her adımın hangi bölümlerde
+kurulduğunu gösterir.
 
 | Adım | Sorusu | Kurulduğu bölümler |
 | ------ | ----------------------------------------------------- | ----------------------------------------------------------- |
@@ -237,11 +248,11 @@ yerde toplanmıştır ve her adımın hangi bölümde kurulduğu orada yazılıd
 tekrar etmek isteyen okuyucu için en kısa yol budur: önce Bölüm 19, sonra oradan
 işaret edilen yedi adres.
 
-Aşağıdaki bölümler ana hattı ilerletmez. Her biri, üç adımdan birine
+Geri kalan bölümler ise ana hattı ilerletmez. Her biri, üç adımdan birine
 yöneltilebilecek belirli bir itirazı karşılar ve o itirazı kapatınca işi biter.
-Yukarıdaki tablo ile aşağıdaki tablo hiçbir adresi paylaşmaz. Ana hatta yer alan
-bazı bölümlerin alt bölümleri aşağıda görünür, çünkü bir bölüm sonucu taşırken
-onun bir alt bölümü yalnızca bir itiraza cevap veriyor olabilir.
+Bu yüzden yukarıdaki tablo ile aşağıdaki tablo hiçbir adresi paylaşmaz. Yine de
+ana hatta yer alan bazı bölümlerin alt bölümleri aşağıda görünür, çünkü bir bölüm
+sonucu taşırken onun bir alt bölümü yalnızca bir itiraza cevap veriyor olabilir.
 
 | Bölüm | Konusu | Karşıladığı soru |
 | ---------- | ---------------------------------------------------------- | ---------------------------------------------------------------------------- |
