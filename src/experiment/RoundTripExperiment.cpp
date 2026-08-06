@@ -8,6 +8,7 @@
 
 #include <cmath>
 #include <format>
+#include <limits>
 
 namespace slm
 {
@@ -216,6 +217,22 @@ namespace slm
 
     double RoundTripExperiment::launchSpacingSeconds() { return 1.0 / kBeamRate; }
 
+    double RoundTripExperiment::regionLifetimeSeconds(double radiusMetres)
+    {
+        return 2.0 * radiusMetres / PhysicalScales::lightSpeed();
+    }
+
+    double RoundTripExperiment::debtOverLifetime(double radiusMetres,
+                                                 double driveAngularFrequency)
+    {
+        const double lifetime = regionLifetimeSeconds(radiusMetres);
+        if (lifetime <= 0.0)
+        {
+            return std::numeric_limits<double>::infinity();
+        }
+        return ProtonJourney::debtInSeconds(driveAngularFrequency) / lifetime;
+    }
+
     bool RoundTripExperiment::arrivalIsUnambiguous()
     {
         return launchSpacingSeconds() > 10.0 * kTargetAdvance;
@@ -253,6 +270,25 @@ namespace slm
                                  "spacing and is still short",
                                  RoundTripExperiment::runTimeSeconds()),
                      RoundTripExperiment::runTimeSeconds() < 300.0);
+
+        report.subsection("A ninth requirement, which appears only once the region is made");
+        {
+            const double radius = 0.8414e-15;
+            const double drive = 1.7749e24;
+            report.check(std::format("  a region the size of a proton lasts about {:.4e} s, if "
+                                     "whatever made it was itself transient",
+                                     RoundTripExperiment::regionLifetimeSeconds(radius)),
+                         RoundTripExperiment::regionLifetimeSeconds(radius) > 0.0);
+            report.check(std::format("  the round trip debt is {:.4e} s, so it takes {:.2f} of "
+                                     "that lifetime",
+                                     ProtonJourney::debtInSeconds(drive),
+                                     RoundTripExperiment::debtOverLifetime(radius, drive)),
+                         RoundTripExperiment::debtOverLifetime(radius, drive) < 1.0);
+            report.check("the two are within one factor of each other, so a region produced "
+                         "rather than given carries a ninth requirement that the eight do not "
+                         "state, and it is nearly binding",
+                         RoundTripExperiment::debtOverLifetime(radius, drive) > 0.1);
+        }
 
         report.subsection("The requirement a source does not have to meet");
         report.check(std::format("  a proton at rest already sits at {:.4e} rad/s, which is the "

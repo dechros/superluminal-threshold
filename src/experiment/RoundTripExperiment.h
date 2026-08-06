@@ -108,6 +108,22 @@ namespace slm
         /// Whether an arrival that early is unambiguous against the launch
         /// before it.
         static bool arrivalIsUnambiguous();
+
+        /// How long a region of the given size lasts if whatever made it was
+        /// itself transient, taken as the light crossing time of the region.
+        ///
+        /// THIS IS A CONDITIONAL REQUIREMENT, NOT ONE OF THE EIGHT. The eight
+        /// take the far region as given, because nothing in the crossing
+        /// calculation refers to how it was produced. A region produced by a
+        /// collision is not given: it lasts about as long as light takes to
+        /// cross it, and the crossing debt has to fit inside that. The two
+        /// come out within one factor of each other, which is close enough
+        /// that a ninth requirement appears the moment a production mechanism
+        /// is named.
+        static double regionLifetimeSeconds(double radiusMetres);
+
+        /// Crossing debt over that lifetime. Below one the round trip fits.
+        static double debtOverLifetime(double radiusMetres, double driveAngularFrequency);
     };
 
     /// Section specifying the apparatus for the core measurement.

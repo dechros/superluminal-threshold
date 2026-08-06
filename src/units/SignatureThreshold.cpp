@@ -5,6 +5,7 @@
 
 #include <cmath>
 #include <format>
+#include <algorithm>
 #include <numbers>
 
 namespace slm
@@ -103,6 +104,42 @@ namespace slm
         return densityFromEnergy(joules, sphereVolume(radiusMetres));
     }
 
+    double SignatureThreshold::densityInContractedOverlap(double centreOfMassJoules,
+                                                          double radiusMetres)
+    {
+        const double rest = PhysicalScales::protonMass() * PhysicalScales::lightSpeed() *
+                            PhysicalScales::lightSpeed();
+        const double gamma = centreOfMassJoules / 2.0 / rest;
+        if (gamma <= 1.0)
+        {
+            return densityInSphere(centreOfMassJoules, radiusMetres);
+        }
+        const double volume = std::numbers::pi * radiusMetres * radiusMetres *
+                              (2.0 * radiusMetres / gamma);
+        return densityFromEnergy(centreOfMassJoules, volume);
+    }
+
+    double SignatureThreshold::densityAtFormationTime(double centreOfMassJoules,
+                                                      double radiusMetres, double formationSeconds)
+    {
+        const double volume = std::numbers::pi * radiusMetres * radiusMetres *
+                              PhysicalScales::lightSpeed() * formationSeconds;
+        return densityFromEnergy(centreOfMassJoules, volume);
+    }
+
+    double SignatureThreshold::conventionSpreadInDecades(double centreOfMassJoules,
+                                                         double radiusMetres,
+                                                         double formationSeconds)
+    {
+        const double sphere = densityInSphere(centreOfMassJoules, radiusMetres);
+        const double overlap = densityInContractedOverlap(centreOfMassJoules, radiusMetres);
+        const double formed = densityAtFormationTime(centreOfMassJoules, radiusMetres,
+                                                     formationSeconds);
+        const double high = std::max({sphere, overlap, formed});
+        const double low = std::min({sphere, overlap, formed});
+        return std::log10(high / low);
+    }
+
     void SignatureThresholdSection::run(Report &report) const
     {
         report.subsection("The condition, as a density");
@@ -168,6 +205,35 @@ namespace slm
                      SignatureThreshold::shortfallInDecades(
                          SignatureThreshold::densityInSphere(kCollisionEnergy, kProtonRadius)) >
                      70.0);
+
+        report.subsection("The volume a collision is credited with, which is a convention");
+        {
+            const double formation = 1.0e-15 / PhysicalScales::lightSpeed();
+            const double sphere =
+                SignatureThreshold::densityInSphere(kCollisionEnergy, kProtonRadius);
+            const double overlap =
+                SignatureThreshold::densityInContractedOverlap(kCollisionEnergy, kProtonRadius);
+            const double formed = SignatureThreshold::densityAtFormationTime(
+                kCollisionEnergy, kProtonRadius, formation);
+            report.check(std::format("  sphere at rest             : {:.4e} kg per cubic metre",
+                                     sphere),
+                         sphere > 0.0);
+            report.check(std::format("  contracted overlap         : {:.4e}, higher because the "
+                                     "projectiles are flattened",
+                                     overlap),
+                         overlap > sphere);
+            report.check(std::format("  one femtometre of formation: {:.4e}", formed), formed > 0.0);
+            report.check(std::format("  so one collision carries three densities spanning {:.1f} "
+                                     "decades, and a figure quoted without its convention is not "
+                                     "a measurement of anything",
+                                     SignatureThreshold::conventionSpreadInDecades(
+                                         kCollisionEnergy, kProtonRadius, formation)),
+                         SignatureThreshold::conventionSpreadInDecades(
+                             kCollisionEnergy, kProtonRadius, formation) > 3.0);
+            report.check("the widest convention still falls far short, so the spread changes the "
+                         "figure quoted and not the verdict",
+                         !SignatureThreshold::reachesTurn(overlap));
+        }
 
         report.subsection("What follows for this work");
         report.check("the far region has a stated physical condition rather than none, which "

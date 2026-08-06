@@ -76,6 +76,30 @@ namespace slm
         /// sphere of the given radius, which is the form the accelerator
         /// numbers come in.
         static double densityInSphere(double joules, double radiusMetres);
+
+        /// Density reached in the same collision when the overlap is taken as
+        /// the Lorentz contracted pancake rather than a sphere at rest.
+        ///
+        /// THE VOLUME IS A CONVENTION, NOT A MEASUREMENT. A collision does not
+        /// come with a well defined volume: the sphere at rest ignores that
+        /// the projectiles are flattened, the contracted overlap takes the
+        /// geometric extreme and credits energy that has not yet formed into
+        /// matter, and a formation time puts a slab of about one femtometre
+        /// between the two. The three answers to one question differ by
+        /// several orders, so a density quoted for a collision carries its
+        /// convention or it carries nothing.
+        static double densityInContractedOverlap(double centreOfMassJoules,
+                                                  double radiusMetres);
+
+        /// The same collision read with a formation time instead, which is the
+        /// convention the heavy ion literature reports.
+        static double densityAtFormationTime(double centreOfMassJoules, double radiusMetres,
+                                             double formationSeconds);
+
+        /// How many orders separate the widest and the narrowest convention
+        /// for one collision, which is the width the quoted figure hides.
+        static double conventionSpreadInDecades(double centreOfMassJoules, double radiusMetres,
+                                                double formationSeconds);
     };
 
     /// Section reporting the density condition and its cost.

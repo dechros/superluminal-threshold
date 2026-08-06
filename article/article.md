@@ -3425,6 +3425,8 @@ varsayımı eleştiren bir cümle ile varsayan bir cümle aynı kelimeyi taşım
 | 9.3 | Denklem düzeyinde ve durum düzeyinde tek yönlülüğün aynı iddia olması | başka kurguya ait | İki okuma orada ayrılır ve yalnızca ikincisi savunulur |
 | 4.1.6 | Sabit tutulan derinlikte gecikmenin doymuş olması | türetildi | Aynı bölüm: dört enerjinin dördünde de sonlu kalınlık gecikmesi doymuş değerin yüzde biri içindedir |
 | 4.1.6 | Minimize edilen niceliğin Bölüm 4.1.3'ün karşılaştırdığı nicelik olması | türetildi | Aynı bölüm: referans yapılanma $2{,}565988$ verir, yani o bölümün sayısının aynısı |
+| 21.2.5 | Üretilen bir bölgenin ömrünün ışık geçiş süresi kadar olması | ilan edilmiş sınırlama | Sonucu yazılı: borç ömrün 0,82'sini alır, şart sağlanır ama payı yoktur |
+| 21.2.6 | Bir çarpışmanın ulaştığı yoğunluğun durgun küre sözleşmesiyle okunması | ilan edilmiş sınırlama | Sonucu yazılı: üç sözleşme 3,7 mertebe yayılır ve en cömerti bile eşiğin çok altında kalır |
 | 21.2.6 | Yer çekiminin güçlendiği ölçeğin dört boyutlu Planck ölçeğinin yerini alması | ilan edilmiş sınırlama | Sonucu yazılı: ölçekleme bu varsayıma dayanır ve burada gerekçelendirilmediği aynı bölümde belirtilir |
 | 18.9 | Eksik kütle yönteminin kütle kabuğunda gerçek bir momentum varsayması | iki yönlü hesaplandı | Aynı bölüm: iç mod $\sqrt{13}$ altında söner, üstünde yayılır; iki rejim birbirinin tümleyenidir ve hiçbir frekans ikisini birden vermez |
 
@@ -3639,6 +3641,19 @@ proton yarıçapı içinde $74{,}1$ mertebe geridedir.
 Koşul bir yoğunluk olduğundan yoğunlaştırmayla sağlanır, süreyle değil. Şartı
 zamana yayarak biriktirme yolu bu nedenle kapalı kalır.
 
+**Bölge yapılırsa dokuzuncu bir şart doğar.** Bölüm 13.7'nin sekiz şartı öte
+bölgeyi **verilmiş** kabul eder, ve bu meşrudur: geçiş hesabının hiçbir adımı
+bölgenin nasıl üretildiğine bakmaz. Bir üretim yolu adlandırıldığı anda durum
+değişir, çünkü üretilen bir bölge kalıcı değildir. Bir proton büyüklüğündeki
+bölgenin ömrü, ışığın onu geçme süresi kadardır:
+$5{,}6132 \times 10^{-24}$ s. Gidiş dönüşün borcu ise
+$4{,}6155 \times 10^{-24}$ s, yani o ömrün $0{,}82$'si.
+
+İkisi aynı mertebededir. Dolayısıyla şart bugün sağlanır, ama payı yoktur:
+bölgeyi biraz küçülten ya da borcu biraz büyüten her seçim onu ihlal eder.
+Bu metin bir üretim yolu önermediği için şartı sekizin arasına yazmaz, ancak
+üretimi konuşan her öneriye onu iliştirmek gerekir.
+
 ### 21.2.6 Eşiğin dayandığı iki çarpan
 
 Kritik yoğunluk evrensel bir sabit değildir. İki çarpandan kurulur:
@@ -3673,6 +3688,19 @@ dışlanmış kalır ve koşul $13{,}5$ mertebe uzaktadır.
 Bu hesabın kazandırdığı şudur: açık, çıplak bir imkânsızlık değil tek bir
 parametre üzerindeki ölçülmüş bir mesafedir. Mesafe çarpışmanın enerjisiyle
 değil, ek boyutların varlığıyla kapanır.
+
+**Ulaşılan yoğunluk bir sözleşme taşır.** Yukarıdaki $9{,}28 \times 10^{21}$
+sayısı, çarpışma enerjisini durgun bir proton küresine koyar. Bir çarpışma iyi
+tanımlı bir hacimle gelmez ve üç sözleşme üç ayrı cevap verir: durgun küre
+$9{,}28 \times 10^{21}$, Lorentz büzülmüş geometrik örtüşme
+$4{,}28 \times 10^{25}$, bir femtometrelik oluşum dilimi
+$1{,}04 \times 10^{22}$ kg/m$^3$. Aradaki yayılım $3{,}7$ mertebedir ve ölçüm
+değil tanım farkıdır: büzülmüş örtüşme henüz maddeye dönüşmemiş enerjiyi
+sayar, durgun küre ise düzleşmeyi hiç saymaz.
+
+Yayılım yukarıdaki hükmü değiştirmez, çünkü en cömert sözleşme bile eşiğin
+çok altında kalır; değiştirdiği şey, mesafenin üç anlamlı basamakla yazılamaz
+olmasıdır. Bu metin durgun küreyi kullanır ve seçimini burada kaydeder.
 
 ### 21.2.7 Çekirdek ölçümün düzeneği
 
