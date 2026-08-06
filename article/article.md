@@ -2590,10 +2590,10 @@ taşır**.
 | Ayar | $0$ | $0$ |
 | Bilgisizlik | $0{,}868$ | $0{,}111$ |
 
-**Bu çatalın değeri.** İki okuma olabilecek en uzak iki tahmini veriyor: biri
-imzayı geçirgenlik oranında öngörüyor, diğeri hiç öngörmüyor. Aradaki fark yorum
-farkı değil, **ölçülebilir** bir farktır. Geçiren ve bedelsiz sapma arayan tek
-bir deney ikisini ayırır.
+**İki okumanın ayrılmasının değeri.** İkisi olabilecek en uzak iki tahmini
+vermektedir: biri imzayı geçirgenlik oranında öngörür, diğeri hiç öngörmez.
+Aradaki fark bir yorum farkı değil, **ölçülebilir** bir farktır. Parçacığı
+geçiren ve bedelsiz sapma arayan tek bir deney ikisini birbirinden ayırır.
 
 Bu, çalışmanın ayırt edici öngörüsünün bulunduğu yerdir ve ulaşılamaz bir
 yüzeye değil ara bölgenin kendisine bağlıdır.
@@ -2628,7 +2628,7 @@ matrisin bileşkelerinin oluşturduğu **sonlu bir kümeden** değer alır.
 
 $$\theta \in \{0{,}\ 0{,}873{,}\ 1{,}281\}$$
 
-Üç değer, süreklilik değil.
+Tayf üç ayrı değerden oluşur, sürekli bir aralıktan değil.
 
 **Sonuç.**
 
@@ -2659,8 +2659,9 @@ doğrultuda geldiğine bağlıdır. Eksen boyunca gelen bir parçacık için far
 tayf çıkar. Evrensel olan, tayfın **sonlu** olmasıdır, çünkü bileşkeler sonlu
 bir grup oluşturur.
 
-İkinci çekince: hangi yüzün hangi matrisi gerçeklediğini belirleyen şey bu
-çalışmada yok. Tayf hesaplanmıştır; tayf üzerindeki olasılık dağılımı değil.
+İkinci çekince: hangi yüzün hangi matrisi gerçeklediğini belirleyen mekanizma bu
+çalışmada kurulmamıştır. Tayfın kendisi hesaplanmıştır, tayf üzerindeki olasılık
+dağılımı hesaplanmamıştır.
 
 ### 16.6 İşaret sorusunun yeniden okunması
 
@@ -2799,12 +2800,11 @@ edilir. Örnek olarak, çeyrek turluk bir dönme $1{,}1102$ radyan süpürür. B
 karşılık buraya ulaşan sapma, Bölüm 16.5'in nicelenmiş tayfının bir elemanıdır
 ve momentum $(1,2,3)$ için o tayf **üç** değerlidir.
 
-Sürekli bir küme, üç elemanlı bir kümeye düşürülmektedir. Bu düşme, Bölüm
-1.10'un dokuzuncu maddesinin, yani öte taraftaki yönelimin dönüş olayının
-koordinatlarına ancak bir kısmıyla ulaşmasının somut karşılığıdır: kaybolan şey,
-parçacığın öte tarafta izlediği yolun kendisidir. Geriye kalan, o yolun iki uç
-noktası arasındaki bileşke
-dönmenin nicelenmiş izidir.
+Sürekli bir küme burada üç elemanlı bir kümeye düşmektedir. Bu düşüş, Bölüm
+1.10'un dokuzuncu maddesinin somut karşılığıdır: öte taraftaki yönelim, dönüş
+olayının koordinatlarına ancak bir kısmıyla ulaşır. Kaybolan şey, parçacığın öte
+tarafta izlediği yolun kendisidir. Geriye yalnızca o yolun iki ucu arasındaki
+bileşke dönmenin nicelenmiş izi kalır.
 
 **Bağlantının özeti.**
 
@@ -2840,10 +2840,10 @@ koordinattır ve ikisinde de yön seçilemez.
 ilerleme zorunluluğunu, Bölüm 9.3 ayırır ve yalnızca birincisinin hesaplandığını
 göstermektedir.
 
-Bu ifade Bölüm 4.1.3'ün sonucuyla nasıl bir arada durur: o da orada yazılı. Yön
-seçilemez, çünkü cisim o eksende geri dönemez. Dönüş anının işareti ise cismin
-yürüyüş yönünden gelmez; hangi geçiş eşlemesi kullanıldığından gelir. İki ifade
-farklı niceleyicilere sahiptir ve çelişmezler.
+Bu ifadenin Bölüm 4.1.3'ün sonucuyla nasıl bir arada durduğu da orada yazılıdır.
+Yön seçilemez, çünkü cisim o eksende geri dönemez. Dönüş anının işareti ise
+cismin yürüyüş yönünden değil, hangi geçiş eşlemesinin kullanıldığından gelir.
+İki ifade farklı niceliklerden söz eder ve birbiriyle çelişmez.
 
 ### 17.2 Yönelimin gözlenemezliği
 
