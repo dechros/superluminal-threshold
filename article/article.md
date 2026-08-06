@@ -1288,23 +1288,25 @@ Madde tabakasının gücü doğrudan hesaplanmamış, imza dönüşünün dik e�
 
 ## 6. Eşik yüzeyi ve eklem koşulu
 
-İki bölge arasındaki $\Sigma$ yüzeyi için eklem koşulları:
+İki bölgeyi birbirine bağlayan $\Sigma$ yüzeyi iki eklem koşulu taşır:
 
 1. Alan sürekli: $\psi_I|_\Sigma = \psi_{II}|_\Sigma$
 2. Konjuge momentum sürekli: $\pi_I|_\Sigma = \pi_{II}|_\Sigma$
 
-Normal yön Bölge I'de zaman-benzeri, Bölge II'de uzay-benzeridir. Bu yüzden
-$\pi_{II} = -\pi_I$ olur. İkinci koşul ancak
+Bu iki koşuldan ikincisi beklenmedik bir sonuç doğurur. Yüzeyin normali Bölge
+I'de zaman-benzeri, Bölge II'de ise uzay-benzeri olduğundan $\pi_{II} = -\pi_I$
+çıkar, ve ikinci koşul ancak
 
 $$\pi|_\Sigma = 0$$
 
-ise sağlanabilir. Buna **düğüm koşulu** denir: eşikte akı sıfırlanır.
+olursa sağlanabilir. Bu eşitliğe **düğüm koşulu** denir ve anlamı şudur: eşikte
+akı sıfırlanır.
 
 **Sonuç:** $\Sigma$ geçirgen değil, **yansıtıcıdır**. Kütleli madde eşikten
 geçemez, tam yansır.
 
-**İstisna.** $\mu = 0$ (kütlesiz) durumunda koşul kendiliğinden sağlanır, ama
-kütlesiz alan zaten $c$'dedir, geçmesi gerekmez.
+**İstisna.** Kütlesiz durumda, yani $\mu = 0$ için koşul kendiliğinden sağlanır.
+Ancak kütlesiz alan zaten $c$ hızında gittiğinden onun geçmesi de gerekmez.
 
 Bu sonuç modele elle konmamış, doğrudan kendi Lagrangian'ından çıkmıştır.
 
@@ -1315,11 +1317,11 @@ ona yalnızca **teğet** geçer.
 
 ### 6.1 Seçimin belirleyiciliği
 
-Yukarıdaki iki koşulun birlikte dayatılması masum bir adım değildir. İmza
-değişimi literatüründe tartışmalı nokta tam olarak budur. Dış eğrilik yüzeyde
-yalnızca **sürekli** mi kalmalı (*zayıf* imza değişimi), yoksa **sıfırlanmalı**
-mı (*güçlü*). [5] sekiz aday eylem yazıp her birinin hangi koşulu verdiğini
-inceler ve ikisini de savunulabilir bulur. [6] daha ileri gider: imza
+Yukarıdaki iki koşulun birlikte dayatılması masum bir adım değildir, çünkü imza
+değişimi literatüründeki tartışmalı nokta tam olarak budur. Soru şudur: dış
+eğrilik yüzeyde yalnızca **sürekli** mi kalmalı (*zayıf* imza değişimi), yoksa
+**sıfırlanmalı** mı (*güçlü*). [5] sekiz aday eylem yazıp her birinin hangi
+koşulu verdiğini incelemiş ve ikisini de savunulabilir bulmuştur. [6] daha ileri gider: imza
 değişiminde kanonik Einstein denklemleri diye bir şey yoktur, seçim yapılmak
 zorundadır; [8] aynı noktayı yineleyip herhangi bir seçimi "asıl" denklemler
 diye adlandırmanın retorik olduğunu söyler.
@@ -1339,12 +1341,13 @@ doğal bir Lagrangian'dan varyasyon almak. İkisi aynı yere varır ve elde edil
 türetim aynı ailenin dört boyutlu ve kütleli üyesidir; yeni olan koşulun kendisi
 değil, hangi geçiş profillerinin onu sağlayabildiğidir (Bölüm 5.5).
 
-Bu çizgi tartışmalıdır: [24] koşulun verdiği çözüm sınıfını reddeder, [23] onu
-savunur. Aşağıdaki saçılma hesabı seçimin ne kadar belirleyici olduğunu ölçer,
-ve tartışmanın hangi tarafında durulduğunu değiştirmez.
+Yine de bu çizgi tartışmalıdır: [24] koşulun verdiği çözüm sınıfını reddederken
+[23] onu savunmaktadır. Aşağıdaki hesap tartışmanın hangi tarafında durulduğunu
+değiştirmez; yalnızca seçimin ne kadar belirleyici olduğunu ölçer.
 
-Seçimin ne kadar belirleyici olduğunu ölçmek için $\Sigma$ üzerinde bir mod
-saçılması kurulmuştur. Normal koordinat $\xi$, Bölge I $\xi<0$, Bölge II $\xi>0$:
+Ölçüm için $\Sigma$ üzerinde bir mod saçılması kurulmuştur. Normal koordinat
+$\xi$ ile gösterilir; Bölge I $\xi<0$ tarafında, Bölge II ise $\xi>0$ tarafında
+kalır:
 
 $$\phi = e^{i\kappa\xi} + R\,e^{-i\kappa\xi}, \qquad
  \psi = T_+ e^{i\kappa\xi} + T_- e^{-i\kappa\xi}$$
@@ -1352,7 +1355,8 @@ $$\phi = e^{i\kappa\xi} + R\,e^{-i\kappa\xi}, \qquad
 Bölge II'de iki genlik birden tutulur, çünkü orada zaman sıralaması olmadığı
 için "dışarı giden dalga" koşulu **tanımlanamaz**.
 
-İlk gözlem: normal doğrultudaki indirgenmiş denklem iki tarafta da aynıdır,
+İlk gözlem şudur: normal doğrultudaki indirgenmiş denklem iki tarafta da aynı
+kalır,
 
 $$\frac{d^2}{d\xi^2} + \kappa^2 = 0, \qquad \kappa^2 = c^2(k_T^2 + \mu)$$
 
@@ -1370,11 +1374,11 @@ ve $F_{II} = |T_+|^2 - |T_-|^2$ ile verilir. Sonuçlar:
 | Dirichlet duvar | Bölge II ayrık | $R = -1$ | Tam yansıma |
 | Neumann duvar | Bölge II ayrık | $R = +1$ | Tam yansıma |
 
-Güçlü koşulda $T_+ = R$ ve $T_- = 1$ çıkar, dolayısıyla
-$F_{II} = |R|^2 - 1 = -F_I$ olur. İki akının eşit olması ancak $1 - |R|^2 = 0$
-ile mümkündür. Yani **tam yansıma ek bir varsayım değil, akı korunumunun tek
-çözümüdür.** Yukarıdaki sonuç bu hâliyle bir seçimin sonucu olmaktan çıkıp, o
-seçim verildiğinde bir zorunluluk hâline gelir.
+Tablonun ilk satırı şöyle çıkar. Güçlü koşulda $T_+ = R$ ve $T_- = 1$ olur,
+dolayısıyla $F_{II} = |R|^2 - 1 = -F_I$ elde edilir. İki akı ancak
+$1 - |R|^2 = 0$ olduğunda eşitlenebilir, yani **tam yansıma ek bir varsayım
+değil, akı korunumunun tek çözümüdür.** Böylece Bölüm 6'nın sonucu bir seçimin
+ürünü olmaktan çıkar ve o seçim verildiğinde bir zorunluluğa dönüşür.
 
 Zayıf koşulda ise $T_+ = 1$, $T_- = R$ olur ve akı **her** $R$ için korunur.
 Zayıf koşul geçişe izin verir, ancak ne kadarının geçtiğini söylemez. Bölge
@@ -1382,11 +1386,12 @@ II'de dışarı giden dalgayı seçecek bir koşul kurulamadığından $R$ serbe
 Yani zayıf koşul "geçiş vardır" demekten çok, "bu problem iyi konumlanmamıştır"
 demektedir, ve bu da yukarıdaki sonuçla tutarlı kalır.
 
-Dört durumdan üçü yansıtmaktadır. Özellikle [9]'un öz-eşlenik genişlemelerden
-çıkardığı **Dirichlet** koşulu, buradaki Neumann koşulunun tersi olmasına rağmen
-aynı yere varır: orada da Minkowski bölgesi Kleinian bölgeden kopar. Dolayısıyla
-"eşikten akı geçmez" sonucu, Neumann ile Dirichlet arasındaki tercihe duyarlı
-**değildir**. Duyarlı olduğu tek şey güçlü ile zayıf arasındaki tercihtir.
+Tablodaki dört durumdan üçü yansıtmaktadır. Bunların içinde en dikkate değeri
+[9]'un öz-eşlenik genişlemelerden çıkardığı **Dirichlet** koşuludur: buradaki
+Neumann koşulunun tersi olmasına rağmen aynı yere varır ve orada da Minkowski
+bölgesi Kleinian bölgeden kopar. Öyleyse "eşikten akı geçmez" sonucu Neumann ile
+Dirichlet arasındaki tercihe duyarlı **değildir**, ve duyarlı olduğu tek şey
+güçlü ile zayıf arasındaki tercih olarak kalır.
 
 Buna karşılık [9] bir uyarı da içerir: kuantum alanların varlığı bu duvarları
 **kararsız** kılar, Kleinian bölge ya çöker ya sınırsız genişler. Burada bu
@@ -1423,13 +1428,14 @@ indirgenmiştir. Üç profil şu değerleri verir:
 | $\lambda = \pi/2 + (\pi/2)\sin^3(\pi\xi/2)$ | $0$ | **Sağlanıyor** | Sağlanıyor |
 
 **Sonuç.** Güçlü koşul varılan metriği kısıtlamaz, ona **nasıl yaklaşıldığını**
-kısıtlar. Geçiş profili tam dönüm noktasında durağan olmalıdır. Doğrusal ya da $\tanh$ tipi bir geçiş bunu sağlamaz; $\tanh$ en
-kötüsüdür, çünkü en dik olduğu yer tam geçiş noktasıdır.
+kısıtlar: geçiş profili tam dönüm noktasında durağan olmalıdır. Doğrusal ya da
+$\tanh$ tipi bir geçiş bunu sağlamaz, ve $\tanh$ en kötüsü çıkar, çünkü en dik
+olduğu yer tam geçiş noktasına denk gelir.
 
-Üç profilin hiçbirinde dağılımsal bir yüzey katmanı doğmaz, çünkü dış eğrilik
-her üçünde de süreklidir. Yani Bölüm 6.1'deki ayrım, gerilim tensöründe
-dağılımsal bir terim olup olmaması meselesi değildir; profilin geçişe teğet
-gelip gelmediği meselesidir.
+Buna karşılık üç profilin hiçbirinde noktasal bir yüzey tabakası doğmaz, çünkü
+dış eğrilik her üçünde de süreklidir. Yani Bölüm 6.1'deki ayrım gerilim
+tensöründe noktasal bir terim olup olmaması meselesi değildir; profilin geçişe
+teğet gelip gelmediği meselesidir.
 
 **Bölüm 5.4 ile bunun bağı.** İki hesap aynı geçişin iki idealleştirmesine
 bakar ve sonuçları birbirini yalanlamaz. Burada geçiş sonlu bir aralığa yayılır
@@ -1458,21 +1464,21 @@ noktası burasıdır.
 
 ## 7. Geometrinin izin verdiği geçiş
 
-Bölüm 6.1'in sonucu akı hakkındadır. Bundan ayrı ve daha zayıf bir soru vardır:
-bir eğrinin teğeti, yüzeyi geçerken nedensel karakterini koruyor mu. Bu yalnızca
-iki metriğe bakan bir sorudur.
-
-İki metrik arasındaki fark hesaplanır:
+Bölüm 6.1'in sonucu akı hakkındaydı. Ondan ayrı ve daha zayıf bir soru daha
+sorulabilir: bir eğrinin teğeti yüzeyi geçerken nedensel karakterini koruyor mu.
+Bu soruyu cevaplamak için iki metriğe bakmak yeter, çünkü cevabı yalnızca
+aralarındaki farka bağlıdır:
 
 $$v^T \eta' v - v^T \eta\, v = 2\,(v_1^2 + v_2^2) \;\geq\; 0$$
 
-Fark hiçbir zaman negatif değildir. Sonuç doğrudan çıkar:
+Sağ taraf bir kareler toplamı olduğundan fark hiçbir zaman negatif olamaz, ve
+sonuç doğrudan çıkar:
 
 > Bölge I'de zaman-benzeri olan **her** yön, Bölge II'de de zaman-benzeridir.
 
-Kapsama tek yönlüdür, tersi doğru değildir: örneğin $(0,1,0,0)$ Bölge I'de
-uzay-benzeri, Bölge II'de zaman-benzeridir. Bölge II'nin zaman-benzeri yönleri
-kesin olarak daha fazladır.
+Bu kapsama tek yönlüdür, tersi doğru değildir: örneğin $(0,1,0,0)$ yönü Bölge
+I'de uzay-benzeri, Bölge II'de ise zaman-benzeri çıkar. Dolayısıyla Bölge II'nin
+zaman-benzeri yönleri kesin olarak daha fazladır.
 
 **Ayrımın önemi.** Eşikte bir eğriyi durduran nedensel bir engel **yoktur**;
 teğeti karakterini koruyarak geçer. Bölüm 6.1'in yasakladığı şey akıdır ve akı
