@@ -3337,10 +3337,18 @@ yazmıştır. Böyle bir kanal yapısını bu çalışma **sağlamamaktadır**. 
 bu bölümün hesabı bir yön verme yöntemi kurmaz, yalnızca yön vermenin inşa edilmesi
 gereken **tek yerini** işaret eder.
 
-### 18.9 Parçacık Bölge II'deyken gözlenebilenler
+### 18.9 Bölge I'de ölçülebilenler
 
-Yer değiştirmenin Bölge I'den seçilemediği görüldüğüne göre, sıradaki soru şudur:
-en azından gözlenebilir mi.
+Bu çalışmanın aradığı ölçüm Bölge II'nin içinde değil, Bölge I'de durmaktadır.
+Deney parçacığı gönderir, parçacık geri döner, ve Bölge I'in saati dönüş anını
+verir; iddia da bu tek okumaya dayanmıştır. Bu bölümün sorusu bu yüzden
+"içerisi görülebilir mi" değil, **dönüşte Bölge I'de ne okunabildiğidir**.
+
+Bölge I üç nicelik verir: dönüş anının kendisi, eşiğin iki yüzü arasında geçen
+ağırlık, ve katman şiddeti. İddiayı taşıyan sonuç birincisinden çıkmıştır.
+Kalan ikisi ise geçişin gerçekleştiğini bildirir. Buna karşılık Bölge II'nin
+içi doğrudan ölçüme kapalı kalmıştır, ve bölümün geri kalanı bu kapalılığın
+nereden geldiğini kurar.
 
 **Konumlandırma reddedilir.** Uzaysal türden bir dörtlü momentum, öz durumları
 nedenselliğe saygı gösteren bir konum işlemcisini kabul etmemektedir. Dolayısıyla
@@ -3391,8 +3399,10 @@ bu çalışmanın zaten hesapladığı iki sınır niceliğidir: geçen ağırl�
 bir geçişin **olduğunu** bildirebilirler. İçeride ne olduğunu söylemezler,
 parçacığın hangi yöne gittiğini hiç söylemezler.
 
-Bu bir tavizdir: iddiayı taşıyan rejimde Bölge II ancak iki yüzündeki genlikler
-üzerinden görünmekte, doğrudan hiç görünmemektedir.
+Bu sonuç iddiayı düşürmez, çünkü iddia zaten Bölge I'de okunan dönüş anına
+dayanmaktadır. Düşen şey **tanı gücüdür**: bir geçişin olduğu ve dönüşün hangi
+ana düştüğü ölçülebilir, ancak parçacığın Bölge II'de izlediği yol
+ölçülemez.
 
 ---
 
