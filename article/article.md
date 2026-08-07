@@ -745,17 +745,12 @@ Bölüm 4.1.2 varış anını tek bir genlikten okumakta, ve iki yol üç ayrı 
 karşılaştırıldığında her üçünde de aynı sayı çıkmıştır. Dolayısıyla bu
 bölümdeki toplam, yerine geçebilecek türetmeyle uyumlu kalmıştır.
 
-**Erken varmak ile Bölge II'de ters yönde ilerlemek aynı şey değildir.** Bu ayrımı bu bölüm
-yapmak gerekir. Çalışmanın başka bir yerinde, Bölge II'nin tek uzay ekseninin
-**yönlendirilebildiği** hesaptan çıkmaktadır. Bir cisim o eksende geri dönemez:
-ne kadar ilerleyeceğini seçebilir, hangi yöne ilerleyeceğini seçemez.
-Yukarıdaki erken varış bu sonuçla çelişmez, çünkü varış anının işareti cismin
-Bölge II'de hangi yöne ilerlediğinden değil, **hangi geçiş dönüşümünün
-kullanıldığından** doğar. Bölüm 4.1'in sekiz adayından dördü aynı yer
-değiştirmeyi daha geç bir ana, dördü daha erken bir ana taşır, ve iki aileyi
-birbirine bağlayan dönüşüm her iki metriği de bozmadan bırakır. Cisim Bölge II'de hep tek yönde ilerler, ve bu ilerlemenin Bölge I'de hangi zaman
-yönüne düştüğünü dönüşüm belirlemektedir. Dolayısıyla bu kurguda "geri gitmek" diye bir işlem
-bulunmaz, ve zaten gerekmez.
+**Erken varmak ile Bölge II'de ters yönde ilerlemek aynı şey değildir.** Bölge
+II'nin tek uzay ekseni yönlendirilebilir çıkmaktadır, yani bir cisim o eksende
+ne kadar ilerleyeceğini seçebilir ama hangi yöne ilerleyeceğini seçemez.
+Yukarıdaki erken varış bu sonuçla çelişmez, çünkü varış anının işaretini cismin
+ilerleme yönü değil, kullanılan geçiş dönüşümü belirler (Bölüm 1.2). Dolayısıyla
+bu kurguda "geri gitmek" diye bir işlem bulunmaz, ve zaten gerekmez.
 
 ### 4.1.4 Çerçeve değişimi
 
