@@ -1477,7 +1477,7 @@ sonuç doğrudan çıkar:
 > Bölge I'de zaman-benzeri olan **her** yön, Bölge II'de de zaman-benzeridir.
 
 Bu kapsama tek yönlüdür, tersi doğru değildir: örneğin $(0,1,0,0)$ yönü Bölge
-I'de uzay-benzeri, Bölge II'de ise zaman-benzeri çıkar. Dolayısıyla Bölge II'nin
+I'de uzay-benzeri, Bölge II'de ise zaman-benzeridir. Dolayısıyla Bölge II'nin
 zaman-benzeri yönleri kesin olarak daha fazladır.
 
 **Ayrımın önemi.** Eşikte bir eğriyi durduran nedensel bir engel **yoktur**;
@@ -3335,12 +3335,12 @@ karşıya getirmektir. Sonuç bu nedenle bir yöntem değil, bir **gerilim** ola
 
 **Geriye kalan.** İddiayı taşıyan sönümlü rejimde elde kalan gözlenebilirler,
 bu çalışmanın zaten hesapladığı iki sınır niceliğidir: geçen ağırlık ve katman
-şiddeti. İkisi de iki aileyi ayıran ters çevirme altında çifttir; dolayısıyla
-bir geçişin **olduğunu** bildirirler, içeride ne olduğunu değil, parçacığın
-hangi yöne gittiğini hiç değil.
+şiddeti. İkisi de iki aileyi ayıran ters çevirme altında çift olduğundan, yalnızca
+bir geçişin **olduğunu** bildirebilirler. İçeride ne olduğunu söylemezler,
+parçacığın hangi yöne gittiğini hiç söylemezler.
 
-Bu bir tavizdir. İddiayı taşıyan rejimde öte taraf yalnızca iki yüzündeki genlikler
-üzerinden görünür; doğrudan hiç görünmez.
+Bu bir tavizdir: iddiayı taşıyan rejimde öte taraf ancak iki yüzündeki genlikler
+üzerinden görünmekte, doğrudan hiç görünmemektedir.
 
 ---
 
@@ -3381,14 +3381,15 @@ tek cümlede sabitlenmesidir.
  4.1.3).
 
 **Yedi adımın tek bir parçacık üzerinde yürütülmesi.** Yukarıdaki adımlar ayrı
-ayrı kuruludur; hepsini birden kapatan tek bir örnek ise şudur. Öklidyen bir ara bölge,
-kalınlık $8$, $c = \mu = 1$, toplam enerjisi $9$ olan bir parçacık; enerji
-vektörü $(1{,}732051,\ 1{,}732051,\ 1{,}732051)$, frekansı $3{,}162278$, dışarıdaki
-dalga sayısı $1{,}732051$, içerideki sönüm katsayısı $3{,}000000$. Parçacık
-bölgeyi engel olarak görmektedir, dolayısıyla gecikme doymuştur.
+ayrı kuruludur, ve hepsini birden kapatan tek bir örnek şudur. Ara bölge Öklidyen
+ve kalınlığı $8$ alınır, $c = \mu = 1$ seçilir, parçacığın toplam enerjisi $9$
+olur. Bu parçacığın enerji vektörü
+$(1{,}732051,\ 1{,}732051,\ 1{,}732051)$, frekansı $3{,}162278$, dışarıdaki dalga
+sayısı $1{,}732051$ ve içerideki sönüm katsayısı $3{,}000000$ değerindedir. Parçacık
+bölgeyi engel olarak gördüğünden gecikme de doymuştur.
 
-Gidiş dönüş bölgenin içinde $2{,}434322$ harcamaktadır. Öte tarafta kat edilen
-mesafeye göre, kalkışına göre ölçülen dönüş anı:
+Gidiş dönüş bölgenin içinde $2{,}434322$ birim harcamaktadır. Kalkışa göre ölçülen
+dönüş anı ise öte tarafta kat edilen mesafeyle birlikte şöyle değişmektedir:
 
 | Öte tarafta kat edilen | Dönüş anı | Sonuç |
 | ---------------------- | ------------- | -------------------------- |
@@ -3396,14 +3397,13 @@ mesafeye göre, kalkışına göre ölçülen dönüş anı:
 | $2{,}434322$ | $0{,}000000$ | tam kalktığı anda döner |
 | $6{,}000000$ | $-3{,}565678$ | kalkmadan **önce** döner |
 
-Üç yolculuk yalnızca öte tarafta ne kadar gidildiğinde ayrışmaktadır; parçacık,
-bölge ve enerji aynıdır. Öteki dal seçildiğinde aynı yolculuk daha geç
-inmektedir, dolayısıyla işaret yolculuğun bir özelliği değil, geçişin bir
-seçimidir.
+Üç yolculuğun parçacığı, bölgesi ve enerjisi aynıdır; ayrıştıkları tek yer öte
+tarafta ne kadar gidildiğidir. Öteki dal seçilseydi aynı yolculuk daha geç
+inecekti, yani işaret yolculuğun bir özelliği değil geçişin bir seçimidir.
 
-**Yolculuğun adım adım dökümü.** Yukarıdaki üçüncü satır, yani eşiği aşan
-yolculuk, her ara niceliğiyle birlikte şudur. Her satır ilgili bölümün
-hesabıdır; burada yeniden türetilmemekte, çağrılmaktadır.
+**Yolculuğun adım adım dökümü.** Tablonun üçüncü satırı, yani eşiği aşan yolculuk,
+bütün ara nicelikleriyle birlikte aşağıda verilmiştir. Her satır ilgili bölümün
+hesabıdır ve burada yeniden türetilmez, yalnızca çağrılır.
 
 | Adım | Nicelik | Değer |
 | ---- | ----------------------------------------- | ------------------------------- |
