@@ -40,6 +40,26 @@ namespace slm
         return c * c / v;
     }
 
+    int SignatureInvolution::plusCount(const Matrix4 &metric)
+    {
+        int plus = 0;
+        for (int slot = 0; slot < 4; ++slot)
+        {
+            if (metric.at(slot, slot) > 0.0)
+            {
+                ++plus;
+            }
+        }
+        return plus;
+    }
+
+    bool SignatureInvolution::isMereRelabelling(const Matrix4 &from, const Matrix4 &onto)
+    {
+        const int fromPlus = plusCount(from);
+        const int ontoPlus = plusCount(onto);
+        return fromPlus == ontoPlus || fromPlus == 4 - ontoPlus;
+    }
+
     void SignatureInvolution::run(Report &report) const
     {
         const Matrix4 D = matrix();
@@ -109,6 +129,27 @@ namespace slm
         const Matrix4 conjugated = D * B * D.inverse();
         report.check("conjugation does not keep the SO(1,3) boost of the same type",
                      !conjugated.isEqual(B, 1e-10));
+
+        report.subsection("Is the far metric only the near one in the opposite convention?");
+        report.check(std::format("  the near metric carries {} plus signs, the far one {}",
+                                 plusCount(eta), plusCount(etaPrime)),
+                     plusCount(eta) == 1 && plusCount(etaPrime) == 3);
+        report.check("the two are the same geometry written in opposite conventions, because "
+                     "one signature is the reverse of the other, and this is the objection the "
+                     "chain has to survive rather than a result it can lean on",
+                     isMereRelabelling(eta, etaPrime));
+        const Matrix4 kleinian = Matrix4::diagonal(1.0, 1.0, -1.0, -1.0);
+        report.check(std::format("  the split metric carries {} plus signs, and its own reverse "
+                                 "carries {} as well",
+                                 plusCount(kleinian), 4 - plusCount(kleinian)),
+                     plusCount(kleinian) == 2);
+        report.check("but the split-signature region is not the near one relabelled, because "
+                     "reversing two plus signs and two minus signs returns the same pair of "
+                     "counts while the near metric returns a different one",
+                     !isMereRelabelling(eta, kleinian));
+        report.check("so a path that goes through the split region changes the geometry, "
+                     "whereas a direct swap of the two end metrics need not",
+                     !isMereRelabelling(eta, kleinian) && isMereRelabelling(eta, etaPrime));
 
         report.subsection("Velocity transformation: v' = c^2/v");
         for (double v : {0.25, 0.5, 0.9, 1.0, 2.0, 4.0})

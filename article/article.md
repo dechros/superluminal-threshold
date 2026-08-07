@@ -4178,17 +4178,30 @@ zorundadır. İtirazı [2] kurmaktadır.
 
 **Vurduğu halka.** Geçiş ve çevrim, ikisi birden.
 
-**Yanıt.** İtiraz iki bölgenin doğrudan karşılaştırılması için geçerlidir, ve bu
-çalışma onu geçersiz kılan bir hesap taşımamaktadır. Buna karşılık geçiş bu
-modelde doğrudan kurulmamıştır: araya kendi imzası olan üçüncü bir bölge girer
-(Bölüm 5). Ara bölgenin Kleinyen hâli $(2,2)$ imzasını taşır, ve $(2,2)$ ne
-$(1,3)$'ün kendisidir ne de negatifidir; iki artı ile iki eksi, genel işaret
-çevrildiğinde yine iki artı ile iki eksi verir. Bu yüzden $(1,3)$'ten
-$(2,2)$'ye geçiş bir yeniden adlandırma değildir, ve Bölüm 5.1 bu yolun her
-adımında yalnızca tek bir öz-değerin sıfırlandığını göstermektedir. Yanıtın
-sınırı da açıktır: kademeli yolun bir uzlaşım değişimi olmadığı gösterilmekte,
-$D$'nin uçtan uca uygulanışı için aynı şey gösterilmemektedir. İtiraz bu
-hâliyle **açık kalmaktadır**, ve zincirin en zayıf halkası burasıdır.
+**Yanıt.** İtiraz sayıya dökülebilir bir ölçüt taşımaktadır, ve bu çalışma o
+ölçütü hesaplamaktadır. Köşegen bir metrik için ölçüt artı işaretlerinin
+sayısıdır: iki metrik, artı sayıları ya eşitse ya da birbirinin tümleyeni ise
+aynı geometriyi ters uzlaşımla yazar. Hesap üç satır vermektedir.
+
+| Metrik | Artı sayısı | Tümleyeni | Uzlaşım değişimi mi |
+| ------------------- | ----------- | --------- | ------------------- |
+| Bölge I, $(1,3)$ | $1$ | $3$ | ölçüt bu satıra göre |
+| Bölge II, $(3,1)$ | $3$ | $1$ | **evet** |
+| Ara bölge, $(2,2)$ | $2$ | $2$ | **hayır** |
+
+İkinci satır itirazı doğrulamaktadır: Bölge I ile Bölge II arasındaki doğrudan
+takas bir uzlaşım değişimidir, ve bu çalışma onu geçersiz kılan bir hesap
+taşımamaktadır. Üçüncü satır ise yanıtı vermektedir. Geçiş bu modelde doğrudan
+kurulmamış, araya kendi imzası olan üçüncü bir bölge konmuştur (Bölüm 5).
+$(2,2)$ imzası kendi tümleyenine eşit olduğundan $(1,3)$'ün ters uzlaşımı
+değildir, ve $(1,3)$'ten $(2,2)$'ye geçiş bir yeniden adlandırma sayılmaz.
+Bölüm 5.1 bu yolun her adımında yalnızca tek bir öz-değerin sıfırlandığını
+göstermektedir.
+
+Yanıtın sınırı da açıktır. Hesap, kademeli yolun bir uzlaşım değişimi
+olmadığını verir; $D$'nin uçtan uca tek adımda uygulanışı için aynı şeyi
+vermez. Zincir ancak ara bölgeden geçen okumada ayakta kalır, ve doğrudan
+okumada itiraz **açık kalmaktadır**. Bu, zincirin en zayıf halkasıdır.
 
 ### 22.2 İmza değişimi sınırsız parçacık üretebilir
 

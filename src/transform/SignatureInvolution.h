@@ -31,6 +31,19 @@ namespace slm
         /// \return The transformed speed; c is the fixed point.
         static double transformVelocity(double c, double v);
 
+        /// Whether one diagonal metric is carried onto another by nothing more
+        /// than renaming the axes and flipping the overall sign. A signature
+        /// that answers true is the same geometry written in the opposite
+        /// convention, so no transformation between the two carries physical
+        /// content; a signature that answers false is a different geometry.
+        /// \param from The metric written in the first convention.
+        /// \param onto The metric the caller wants to reach.
+        static bool isMereRelabelling(const Matrix4 &from, const Matrix4 &onto);
+
+        /// The count of plus signs on the diagonal of a diagonal metric, which
+        /// with the dimension fixes the signature.
+        static int plusCount(const Matrix4 &metric);
+
         std::string title() const override
         {
             return "Factorisation, the matrix D and group closure";
