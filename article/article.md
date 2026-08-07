@@ -257,10 +257,11 @@ açıları her değeri de alamaz, sonlu bir kümeden gelir. İki özellik birle�
 çalışmanın deneyle ayırt edilebilecek öngörüsü ortaya çıkar: çarptığı hedefin
 geri tepmediği ve açıları ayrık değerlerde kalan bir esnek sapma.
 
-Dönüşümün kendisi ise tek yönlüdür. Tarama bütün girdileri tek tek denemiş ve
-$312$ ayrı Bölge II durumunun yalnızca $158$ farklı dönüş olayına düştüğünü
-göstermektedir. Bu sıkışma, boyut değişiminde kaybolan bilginin sayısal
-ölçüsünü verir.
+Dönüşümün kendisi ise tek yönlüdür. Tarama on üç kutup açısı ile on iki azimut
+açısını iki ilerleme işaretiyle çarpar, ve böylece $312$ Bölge II durumu
+sınanır. Bu $312$ durum yalnızca $158$ farklı dönüş olayına düşmektedir. İki
+sayının oranı ızgaranın çözünürlüğüne bağlı olduğundan bir ölçü değildir; sabit
+kalan şey, hangi koordinatın hangi girdiden bağımsız olduğudur (Bölüm 18.3).
 
 ### 1.9 Modelin maddeleri
 
@@ -765,8 +766,9 @@ karşılaştırıldığında her üçünde de aynı sayı çıkmıştır. Dolay�
 bölümdeki toplam, yerine geçebilecek türetmeyle uyumlu kalmıştır.
 
 **Erken varmak ile Bölge II'de ters yönde ilerlemek aynı şey değildir.** Bölge
-II'nin tek uzay ekseni yönlendirilebilir çıkmaktadır, yani bir cisim o eksende
-ne kadar ilerleyeceğini seçebilir ama hangi yöne ilerleyeceğini seçemez.
+II'nin tek uzay ekseni **yönlendirilmiş** çıkmaktadır, yani üzerinde ayırt
+edilmiş bir yön taşır. Yönü eksenin kendisi verir. Bir cisim o eksende yalnızca
+mesafeyi seçer, yönü seçemez.
 Yukarıdaki erken varış bu sonuçla çelişmez, çünkü varış anının işaretini cismin
 ilerleme yönü değil, kullanılan geçiş dönüşümü belirler (Bölüm 1.2). Dolayısıyla
 bu kurguda "geri gitmek" diye bir işlem bulunmaz, ve zaten gerekmez.
@@ -3129,7 +3131,9 @@ Bölge II'deki bir durum iki veriden oluşur:
  bağlı olduğunu Bölüm 18.3 vermektedir.
 
 İki veri birleşince dönüşümün tanım kümesi $S^2 \times \mathbb{Z}_2$ olmaktadır.
-Tarama bu uzayı $312$ ayrık duruma bölmüştür.
+Tarama bu sürekli uzayı bir ızgarayla örnekler: kutup açısı on üç, azimut açısı
+on iki değer alır, ve iki ilerleme işaretiyle birlikte $312$ durum çıkar. Izgara
+sürekli kümenin yerini tutmaz, yalnızca onu örnekler.
 
 ### 18.2 Değer kümesi
 
