@@ -18,9 +18,12 @@ Bölge I'in saatinde hangi ana denk düşmektedir.
 
 Hesabın verdiği cevap şudur. Parçacığın döndüğü an ile parçacık hiç yola
 çıkmasaydı bulunacağı an arasında bir fark oluşur, ve bu fark **saat farkı**
-adını alır. Farkın büyüklüğü tam olarak $s$ kadardır. Bir mesafeyi süreye
-çevirmek normalde onu bir hıza bölmeyi gerektirir, oysa bu hesapta böyle bir bölme
-yer almaz, çünkü hesaptan çıkan katsayı tam olarak bire eşittir.
+adını alır. Farkın büyüklüğü, doğal birimlerde ($c = 1$) tam olarak $s$ kadar
+çıkar; SI birimlerinde ise $s/c$ olur, yani bir metrelik yolculuk $3{,}34$
+nanosaniye verir (Bölüm 21.2.2). Sonucun taşıdığı bilgi bu bölmede değil,
+bölenin **ne olduğundadır**: araya parçacığın hızı, geçişin hızı ya da bir ölçek
+çarpanı girmez, yalnızca $c$ girer. Hesaptan çıkan katsayı tam olarak bire
+eşittir.
 
 Bu farkın karşısında bir gecikme durmaktadır. Eşik, kalınlıksız bir yüzey
 olarak değil, sonlu kalınlıkta bir katman olarak ele alınmaktadır. Parçacık o
@@ -77,6 +80,13 @@ $M(V)$ matrisidir (Bölüm 4):
 $$M(V)\,(t_1,\, t_2,\, t_3,\, r)^{\mathsf{T}} \;=\;
 (ct,\, x,\, y,\, z)^{\mathsf{T}}_{\text{dönüş olayı}},
 \qquad M(V) = D \cdot B(c^2/V), \qquad V > c$$
+
+Buradaki $V$, dönüşümün etiketidir: iki bölge arasındaki bağıntıyı $c$'yi aşan
+bir $V$ değeri parametrelendirir, ve $B(c^2/V)$ ışık hızının altında kalan
+sıradan bir boosttur. $D$ ise imza değişimini tek başına yapan, hiçbir
+parametreye bağlı olmayan sabit matristir. Aşağıdaki ana sonuç $V$'den
+bağımsızdır, çünkü sonucu taşıyan çarpan $D$'dir; $V$ yalnızca hangi ailenin
+kullanıldığını gösterir (Bölüm 4).
 
 **Ana sonuç.** Parçacık Bölge II'nin tek uzay ekseninde $s$ kadar ilerlediğinde
 dönüş olayının $t$ bileşeni $s$ kadar değişmektedir. İki nicelik arasındaki
@@ -2358,9 +2368,24 @@ $2\tau = 2{,}925728$ değerindedir.
 | $6{,}000000$ | $-3{,}074272$ | Kalkıştan önce |
 | $25{,}000000$ | $-22{,}074272$ | Kalkıştan önce |
 
-Yolculuk sırasında değiştirilebilen tek nicelik $s$ değeridir. Eşik gecikmesi
-ise durumun ve ara bölgenin özelliklerinden çıkar, ve yolculuk başladıktan
-sonra sabit kalır.
+**$s$ değerini ne belirler.** Bu soru bu çalışmada cevapsızdır, ve cevapsız
+kaldığı burada kayda geçirilmektedir. Bölüm 12.4 parçacığın Bölge II'de kalmayı
+seçemeyeceğini göstermişti, çünkü seçimi tanımlayacak bir zaman oku yoktur.
+Dolayısıyla $s$, parçacığın yolculuk sırasında ayarladığı bir nicelik değildir.
+Model içinde $s$, iki yüzeyin ortak çözümünde serbest kalan bir parametredir:
+hesap her $s$ için varış anını verir, ancak hangi $s$ değerinin gerçekleşeceğini
+vermez.
+
+Bu boşluğun kapanması için gereken şey de bellidir. $s$'yi sabitleyen bir
+mekanizma, ancak Bölge II'nin sınır koşullarını hazırlık aşamasında belirleyen
+bir düzenekten çıkabilir. Bölüm 15.6'nın yük ile potansiyel çarpımı böyle bir
+kolun ilk adayıdır, çünkü etkin frekansı kaydırarak gereken $s$ değerini
+dışarıdan oynatmaktadır. Ne var ki o bağıntı $s$'yi belirlemez, yalnızca gereken
+$s$'yi değiştirir; ikisi ayrı sorulardır ve ikincisi bu çalışmada açık kalır
+(Bölüm 21.2.7).
+
+Eşik gecikmesi ise buna karşılık serbest değildir: durumun ve ara bölgenin
+özelliklerinden çıkar, ve yolculuk başladıktan sonra sabit kalır.
 
 ### 13.7 Sekiz koşul, iki başarısızlık
 
