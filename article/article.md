@@ -49,9 +49,12 @@ bildirmekte ama içeride izlenen yolu bildirmemektedir.
 
 ## 1. Giriş
 
-Bir cismi zamanda geriye taşıyan çözümler genel görelilikte bilinmektedir, ancak
-bunlar ya evren ölçeğinde bir geometri ya da alışılmadık bir madde dağılımı
-gerektirdiğinden laboratuvara inmemektedir. Bu çalışma başka bir yol sınar ve onun
+Bir cismi zamanda geriye taşıyan çözümler genel görelilikte bilinmektedir:
+dönen bir evren [46], sonsuz uzunlukta dönen bir silindir [47] ve geçilebilir
+bir solucan deliği [48] bunların arasındadır. Ne var ki bunlar ya evren
+ölçeğinde bir geometri ya da alışılmadık bir madde dağılımı gerektirdiğinden
+laboratuvara inmemektedir; ayrıca kuantum etkilerinin böyle çözümleri
+engelleyip engellemediği de açık bir sorudur [49]. Bu çalışma başka bir yol sınar ve onun
 aritmetiğini kurar. Sınanan yolun sorusu şudur: parçacık Bölge II'de bir mesafe
 alıp geri döndüğünde, Bölge I'de duran bir gözlemcinin saatinde hangi anda
 görünür.
@@ -1020,11 +1023,12 @@ teker teker çevrilir. Yol $(1,3)$ imzasından $(2,2)$ imzasına, o imzadan da $
 imzasına gider; her adımda yalnızca tek bir öz değer sıfırdan geçtiğinden rank da
 yalnızca bir düşer. Aşağıdaki adaylardan ikincisi tam olarak bu yolun durağıdır.
 
-**Kleinian, $(2,2)$.** Bu ara bölge iki zaman ve iki uzay ekseni taşır, çünkü
+**Kleinian, $(2,2)$.** Bu imzanın geometrisi ayrıca [60]'ta ele alınmıştır. Bu ara bölge iki zaman ve iki uzay ekseni taşır, çünkü
 enine yönlerden yalnızca biri karakter değiştirmiştir. Yukarıda anılan kademeli
 yol da bu noktada durur.
 
-**Öklid, $(4,0)$.** Bu adayda enine yönlerin hepsi karakter değiştirmiştir ve
+**Öklid, $(4,0)$.** İmza değişimi literatürünün büyük bölümü [58] ve [59] ile
+başlayan bu geçişi ele almaktadır. Bu adayda enine yönlerin hepsi karakter değiştirmiştir ve
 bölgede hiç zaman yönü kalmamıştır. İmza değişimi literatürünün büyük bölümü tam
 olarak bu geçişi ele almaktadır.
 
@@ -1098,7 +1102,8 @@ kalınlıkta bile geçirgenlik yüzde seksen yedi civarında kalmaktadır.
 **Literatürdeki karşılığı.** Bu tablonun üçüncü satırının bir öncülü vardır ve
 karşılaştırma yapılmalıdır. [20] ve [21] kütlesiz skaler alanı iki boyutta imza
 değiştiren bir metrik üzerinde taşır ve pozitif ile negatif frekansların
-karışımını hesaplar; bu, saçılma dilinde tam olarak bir geçiş katsayısıdır.
+karışımını hesaplar. Bu karışım, saçılma dilinde bir geçiş katsayısıdır; eğri
+uzayzaman kuramının dilinde ise [75] ile [76]'nın parçacık üretimidir.
 O çalışmanın merkezi sonucu, karışımın **yalnızca Öklid bölgelerinin toplam konformal
 genişliğine** bağlı olduğu, metriğin ayrıntılı biçimine bağlı olmadığıdır. [22]
 aynı hesabı spin-$1/2$ için dener ve çözüm uzayında korunan bir iç çarpım
@@ -1143,8 +1148,8 @@ Geçirgenlik sorunun yalnızca yarısını cevaplar. Kalan yarısını, geçişi
 bıraktığı iz oluşturur.
 
 Zayıf eklem koşulu seçildiğinde geçiş yüzeyinde dış eğrilik sıfırlanmaz, ve
-sıfırlanmayan bir dış eğrilik gerilim tensöründe bir **madde tabakasına**
-karşılık gelir. Kalınlık sıfıra giderken tabaka noktasal bir terime iner. Sonlu
+sıfırlanmayan bir dış eğrilik bir **madde tabakasına** karşılık gelir. Bu
+karşılığı [52] ile [53]'ün ince kabuk formalizmi kurmaktadır. Kalınlık sıfıra giderken tabaka noktasal bir terime iner. Sonlu
 kalınlıkta ise geçiş bölgesinin içine yayılmış bir gerilim olarak durur
 (Bölüm 6.2). Zayıf koşulun karşılığı budur: parçacığın geçmesine izin veren seçim,
 aynı anda yüzeye bir madde tabakası koyar. Böyle bir tabakanın genel
@@ -1198,8 +1203,10 @@ için geçerli kısıtlar ise çok daha sıkıdır. [16] bu sınıfı ayrı ele 
 enerji koşullarının o durumda zamansal duruma göre daraldığını gösterir. Aşağıdaki
 hesabın hangi çerçevede okunması gerektiğini o sonuç belirlemektedir.
 
-**Hesap.** Katmanın taşıdığı yüzey enerji yoğunluğu ve basıncı, geçiş profili
-ailesinin her üyesi için ayrı ayrı değerlendirilmiştir ($d = 1$):
+**Hesap.** Aşağıdaki sütunlarda anılan sıfır, zayıf ve baskın enerji koşulları
+[54]'ün tanımlarıdır; koşulların bugünkü statüsünü [55] derlemektedir. Katmanın
+taşıdığı yüzey enerji yoğunluğu ve basıncı, geçiş profili ailesinin her üyesi
+için ayrı ayrı değerlendirilmiştir ($d = 1$):
 
 | Profil | Yoğunluk | Basınç | Sıfır (null) | Zayıf | Baskın |
 | ------------------------ | ---------- | ---------- | ------------ | ---------- | ---------- |
@@ -1341,8 +1348,8 @@ engel iddiası bulunmamaktadır.** Bölüm 5.7'nin sonucuna iliştirilmiş özg�
 payı bu nedenle geri çekilmiştir. Ayakta kalan katkı engelin kendisi değil,
 üstelin iki parametreli kapalı biçimidir.
 
-Literatürde dejenere bileşenin sıfırlanma hızını tek bir parametreyle
-sınıflandıran çalışmalar bulunmaktadır. Teğet bloğun mertebesini ikinci bir
+Dejenere bileşenin sıfırlanma hızını tek bir parametreyle sınıflandıran bir
+çalışma [57]'de bulunmaktadır. Teğet bloğun mertebesini ikinci bir
 parametre olarak taşıyan bir sınıflandırma ise yoktur; eğrilik ile lapse oranını
 bu iki mertebenin bileşimi olarak veren bir çalışma da yoktur.
 
@@ -1865,7 +1872,8 @@ kadar hızlı" sorusunun yerini "hangi yönelimde" sorusu alır. Hız bilgisini
 taşıyan tek yer $M(V)$ çarpanındaki $B$ boostudur, yani üç zamanlı uzaydaki
 yönelim.
 
-Hızın kendisi de geçiş altında $v' = c^2/v$ kuralıyla dönüşür. Bu kuralın sabit
+Hızın kendisi de geçiş altında $v' = c^2/v$ kuralıyla dönüşür; aynı kural
+takyon kuramında da çıkar [61]. Bu kuralın sabit
 noktası ışık hızıdır, ve kural subluminal ile superluminal bölgeleri birbirine
 eşler.
 
@@ -1974,7 +1982,7 @@ vardır, ve bu da bir ayar fazlalığıdır.
 $$\text{Stabilizatör} = O(2), \qquad \text{Yörünge uzayı} = O(3)/O(2) = S^2$$
 
 **Öncelik.** Fazladan bir zaman boyutunun ayar simetrisiyle elenmesini mekanizma
-olarak ilk kuran [13] olmuştur. O çalışmada $Sp(2,\mathbb{R})$ ayar simetrisi altında
+olarak ilk kuran [66] olmuştur, ve mekanizmanın olgun hâlini [13] vermiştir. O çalışmada $Sp(2,\mathbb{R})$ ayar simetrisi altında
 tek zamanlı sistemler, aynı iki zamanlı sistemin farklı ayar sabitlemeleri olarak
 ortaya çıkar, ve aynı mekanizma alan teorisine, etkileşimlere ve ayar arka
 planlarına kadar götürülmüştür. Yukarıdaki $O(3)$ fazlalığı da aynı türdendir,
@@ -1990,7 +1998,7 @@ ayrıntı değil, bütün hesabın dayanağıdır, ve ne anlama geldiği baştan
 sabitlenmelidir.
 
 Bunu yapmak zorunludur, çünkü Bölge II'de parçacık kavramı olağan anlamıyla
-bulunmaz. O kavram üç yapıya dayanır: pozitif ile negatif frekansın
+bulunmaz. O kavram üç yapıya dayanır [63], [75]: pozitif ile negatif frekansın
 birbirinden ayrılması, alttan sınırlı bir Hamiltonyen ve Poincaré grubunun
 üniter bir temsili. Bölüm 9 bu üçünün de Bölge II'de bulunmadığını
 göstermektedir. Bu yüzden Bölge I'de doğal görünen bir tanımı Bölge II'ye
@@ -2122,9 +2130,11 @@ kendisi ise Bölge II'de de tanımlı değildir; Bölüm 18.9 bunu reddeder.
 Geçişin ne kadar sürdüğü sorusuna üç kurgu üç ayrı yanıt verir. Nokta cisim
 kalınlığı bir hıza böler, dalga fazı frekansa göre türetir, genlik depolanan
 normu gelen akıya böler. Üçü de adı konmuş niceliklerdir ve bu çalışmaya ait
-değildir: fazın frekans türevi [31]'e, depolanan normun akıya oranı [32]'nin
-ikamet süresine karşılık gelir ve tanımların hangisinin neyi ölçtüğü [33]'te
-derlenmiştir. Sınanan yapılanmada bir katediş için sırasıyla $9{,}861$,
+değildir: fazın frekans türevi [31]'e, depolanan normun akıya oranı ise
+[67]'nin ikamet süresine karşılık gelir. Aynı süreyi bir saatin dönmesi
+olarak okuyan kurgu [68] ile başlamış, Larmor saati biçimini [32]'de almıştır.
+İkamet süresinin ilk tanımını [67] vermiştir.
+Tanımların hangisinin neyi ölçtüğü [69] ve [33]'te derlenmiştir. Sınanan yapılanmada bir katediş için sırasıyla $9{,}861$,
 $1{,}462864$ ve $0{,}519$ çıkar. Geçişin tek bir süresi yoktur.
 
 Dönüş anını hangisinin doğru yerleştirdiği ölçümle karara bağlanmıştır. Yayılan
@@ -2332,8 +2342,8 @@ noktasının beklenenden erken çıkmasıdır.
 
 **Doyumun kendisi bu çalışmanın bulgusu değildir.** Kalın bir engelde tünelleme
 süresinin kalınlıktan bağımsızlaşacağını [29] durağan faz yöntemiyle 1962'de
-hesaplamıştır; olgu literatürde o adla anılır. Mikrodalga ve fotonik ölçümler
-onu doğrulamış, [30] ise doymuş süreyi bir kat etme süresi olarak değil,
+hesaplamıştır; olgu literatürde o adla anılır. Mikrodalga [71] ve fotonik [70]
+ölçümler onu doğrulamış, [30] ise doymuş süreyi bir kat etme süresi olarak değil,
 engelde depolanan alanın boşalma süresi olarak okumuştur. Yukarıdaki tablo o
 sonucun bu geometrideki karşılığıdır. Bu çalışmanın kendi katkısı doyumun
 varlığı değil, doymuş gecikmenin ne kadar küçültülebileceğidir (Bölüm 4.1.6).
@@ -2511,6 +2521,18 @@ dalga operatörüne etki eder, kütleye değil.
 
 Sol sütun parçacığın kimliğini, sağ sütun başına gelenleri tarif etmektedir.
 Kimlik korunmakta, geçmiş değişmektedir.
+
+**Bu tabloya yöneltilebilecek itiraz.** [56], klasik bir imza değişiminde
+**standart korunum yasalarının çöktüğünü** göstermektedir: geçiş yüzeyinde
+enerji-momentum tensörünün olağan diverjans özdeşliği geçerliliğini
+yitirmektedir. Yukarıdaki tablo bu sonuçla çelişmez, çünkü iki ifade farklı
+nesneler hakkındadır. [56]'nın konusu **alanın enerji-momentum akısıdır**, yani
+bir yüzey boyunca taşınan nicelik; yukarıdaki tablonun konusu ise **tek bir
+modun etiketleridir**, yani frekans, enine dalga sayısı ve kütle parametresi.
+Birincisinin korunmadığını bu çalışma da bulmaktadır: geçen genlik birden
+küçüktür ve fark yüzeyde kalır (Bölüm 14.1). Korunan şey akı değil, geçen kısmın
+kimliğidir. Enerji-momentum akısının imza değişiminde nasıl kitaplandığı ise bu
+çalışmada hesaplanmamıştır, ve Bölüm 21.2 bunu açık madde olarak taşımaktadır.
 
 ### 15.1 Enerji vektörünün karşılığı
 
@@ -2698,8 +2720,8 @@ bağlamında [35]'te formüle edilmiş, [26] ise onu alan kuramına taşımışt
 Bu bölümün hesabı o ilkeyi kurmaz, yalnızca doğrular. Tek katkısı şudur: ayırt
 edilemezlik **hangi nicelikten** çıkıyor, onu gösterir. Söz konusu işaret, çıkış
 yüzünü belirleyen vektörün aynı bileşenidir. Dolayısıyla "hangi yüz" ile
-"hangi işaret" bağımsız iki soru sayılmaz. Ayırt edilemezliğin nerede kırıldığı
-ise bu çalışmanın kapsamı dışında kalmaktadır.
+"hangi işaret" bağımsız iki soru sayılmaz. Ayırt edilemezliğin nerede kırıldığını [62]
+derlemektedir, ve o soru bu çalışmanın kapsamı dışında kalmaktadır.
 
 **Çekince.** Bu bölümde hesaplanan şey, dispersiyon bağıntısının iki dalı da
 kabul ettiği ve yönelim yönünün geçiş dalga sayısını değiştirmediğidir. "Bölge II dal seçemez" ifadesi bir hesap değil, zaman yöneliminin yokluğundan çıkan
@@ -2805,7 +2827,7 @@ elenir, çünkü sürekli bir sapma dağılımı bu yapıda bulunmaz.
 olmadan çıkması bu çalışmanın icadı değildir; fizikte bir yüzyıllık öncülü
 vardır. [25] X-ışınlarının kristalden yansımasını, girişim yasalarına hiç
 başvurmadan, momentumun **kuantumlar hâlinde** aktarılması varsayımıyla türetir
-ve Bragg yasasını bu yolla elde eder. Ayrıklığı üreten şey kristalde örgünün
+ve [77]'nin yasasını bu yolla elde eder. Ayrıklığı üreten şey kristalde örgünün
 periyodikliği, bu kurguda ise çıkış yüzlerinin sonlu kümesidir; ikisinde de ayrıklık
 saçıcının sürekli olmayan bir simetri yapısından gelir, dalga girişiminden
 gelmez.
@@ -2843,7 +2865,7 @@ anlamını netleştirmektedir:
 
 **Sonuç:** İşaret belirsizliği denklemlerin düzeyinde yapısaldır, ölçümün
 düzeyinde değil. Bölge I tarafta da zamanın oku denklemlerden türetilmez,
-Newton, Maxwell ve Schrödinger denklemlerinin hepsi $T$-simetriktir; ok
+Newton, Maxwell ve Schrödinger denklemlerinin hepsi $T$-simetriktir [54]; ok
 başlangıç koşulundan gelir.
 
 ### 16.7 $D$'nin yön-bağımlı involüsyonla karşılaştırması
@@ -3235,11 +3257,13 @@ modda kat edilen bir mesafeden söz edilemez. Ölçülen tek şey, dönen paketi
 **tepe noktasının** nereye düştüğüdür.
 
 **Ve bir sinyal taşımadığı.** Ayrım bu noktada zorunludur, çünkü üstışık bir
-sinyalin geçmişe ulaşmasının nedensel maliyeti [36]'da sayılmıştır: böyle bir
-düzenek ya negatif sonuç verir ya da çelişki üretir. Aşağıdaki hesap bir sinyal
+sinyalin geçmişe ulaşmasının nedensel maliyetini [50] ile [36] saymaktadır:
+böyle bir düzenek ya negatif sonuç verir ya da çelişki üretir. Hangi üstışık
+türünün nedenselliği gerçekten çiğnediğini ise [51] ayırmaktadır. Aşağıdaki hesap bir sinyal
 iddiası taşımadığı için o ikilemin dışında durur. Bu nokta açık bırakılmamış,
 hesaba dâhil edilmiştir: hesap dalganın ön cephesini tepesinden ayrı
-hesaplamaktadır. Cephe hızı frekans büyüdükçe ışık hızına iner ve ara bölge
+hesaplamaktadır. Cephe hızının frekans büyüdükçe ışık hızına inmesi [72] ve
+[73]'ün klasik sonucudur, ve ara bölge
 cepheyi hiçbir kalınlıkta öne almaz. Tepenin öne alınması büyürken de onu
 taşıyan genlik çökmektedir: $d = 32$ için $5{,}2 \times 10^{-32}$'ye iner. Yukarıdaki $+29{,}0743$,
 bir mesajın ışığı geçtiği anlamına gelmez ve bu çalışma öyle bir iddiada
@@ -3365,7 +3389,7 @@ yazıldığında birincisi $(-1,-1,+1,+1)$, ikincisi $(+1,-1,+1,+1)$ olur; çarp
 $(-1,+1,+1,+1)$, yani Bölge I zamanının saf ters çevrilmesidir. İkisi farklı grup
 öğeleri olduğundan, biri hakkındaki bir teorem ötekini kapatmaz.
 
-**Geçişi biçimlendirerek yön verilemez.** Literatürdeki karşılıklılık sonucu
+**Geçişi biçimlendirerek yön verilemez.** [74]'ün karşılıklılık sonucu
 şunu söylemektedir. Her iki uçta yön başına tek bir yayılan kanal varsa, uzaysal
 olarak bakışımsız bir engelin geçirgenliği soldan ve sağdan giriş için aynı
 kalır. Bu sonuç, zamanda tersinirlik ile birimsellikten çıkmaktadır. Bu çalışma onu olduğu gibi
@@ -3392,7 +3416,7 @@ biçimdedir**: tam olarak bir eksende tek olan bir nicelik. O bölümde bu nicel
 seçimi için gerekiyordu, bu bölümde ise yolculuk yönü için gerekmektedir.
 
 İki ters çevirmenin ayrı tutulması özgün bir gözlem değildir. Saçılma kuramının
-olağan sınıflandırmasında karşılıklılık, zamanda tersinme ve uzaysal evirme
+olağan sınıflandırmasında [74] karşılıklılık, zamanda tersinme ve uzaysal evirme
 **ayrı işlemlerdir** ve karşılıklılık yalnızca geçirgenlik genliklerini bağlar.
 Yapılan iş, o sınıflandırmanın bu geçişe uygulanmasıdır.
 
@@ -3416,11 +3440,12 @@ içi doğrudan ölçüme kapalı kalmıştır, ve bölümün geri kalanı bu kap
 nereden geldiğini kurar.
 
 **Konumlandırma reddedilir.** Uzaysal türden bir dörtlü momentum, öz durumları
-nedenselliğe saygı gösteren bir konum işlemcisini kabul etmemektedir. Dolayısıyla
+nedenselliğe saygı gösteren bir konum işlemcisini kabul etmemektedir [63], [64]. Dolayısıyla
 parçacığın Bölge II'de nerede olduğunu söyleyen bir durum bulunmaz, ve bu çalışma
 da böyle bir durum sağlamamaktadır. Yazılan cümle bir hesap değil, bir kayıttır.
 
-**Var olan yöntem parçacığa değil, sınıra bakar.** Eksik kütle yöntemi giren ve
+**Var olan yöntem parçacığa değil, sınıra bakar.** [65]'in kullandığı eksik
+kütle yöntemi giren ve
 çıkan her şeyi ölçüp farkın değişmezini kurar, ve uzaysal türden bir taşıyıcı o
 değişmezin negatif çıkmasıyla kendini belli eder. Yani yöntemin öznesi yolcu
 değil, tutulan hesabın kendisidir.
@@ -3924,7 +3949,7 @@ kendi sayılarıdır, bu çalışmanın türettikleri değil.
 | Nicelik | Değer |
 | ------------------ | ----------------------------------------- |
 | Planck yoğunluğu | $5{,}15 \times 10^{96}$ kg/m$^3$ |
-| Kritik yoğunluk | $2{,}11 \times 10^{96}$ kg/m$^3$ |
+| Kritik yoğunluk [79] | $2{,}11 \times 10^{96}$ kg/m$^3$ |
 | Dönme eşiği | $1{,}06 \times 10^{96}$ kg/m$^3$ |
 
 Maliyet bu hesapta iki parçaya ayrılmaktadır, çünkü ikisi birlikte anıldığında
@@ -3958,12 +3983,14 @@ kurulmaktadır:
 
 $$\rho_c = \frac{\sqrt{3}}{32\pi^2\gamma^3}\, M_*^4$$
 
-Birinci çarpan serbest değildir. Kuantizasyon parametresi $\gamma$ bir entropi
+Birinci çarpan serbest değildir. Kuantizasyon parametresi $\gamma$, [78]'in
+entropi
 sayımından gelmekte ve $0{,}2375$ değerini almaktadır; bu değerden türetilen kesir de
 $0{,}4094$ çıkar. Bu çarpanı ayarlanabilir saymak, aranan sonucu baştan kabul
 etmek anlamına gelir.
 
-İkinci çarpanı ise ölçülmüş bir nicelik sabitlememektedir. Ek sıkışmış boyutlar
+İkinci çarpanı ise ölçülmüş bir nicelik sabitlememektedir. [39] ile [82]'nin
+kurduğu senaryoda ek sıkışmış boyutlar
 bulunuyorsa yer çekiminin güçlendiği ölçek dört boyutlu değerin çok altına
 inmekte [39], ve eşik o ölçeğin **dördüncü kuvvetiyle** düşmektedir. Bu
 ölçekleme, söz konusu ölçeğin dört boyutlu Planck ölçeğinin yerini aldığı
@@ -3977,7 +4004,8 @@ varsayımına dayanır ve bu çalışmada gerekçelendirilmemiştir. Kaldıraç 
 | $10^{4}$ GeV | $4{,}75 \times 10^{35}$ kg/m$^3$ | $60{,}3$ mertebe |
 | $10^{3}$ GeV | $4{,}75 \times 10^{31}$ kg/m$^3$ | $64{,}3$ mertebe |
 
-Bugün kasıtlı olarak kurulabilen en yoğun yapılanma
+Bugün kasıtlı olarak kurulabilen en yoğun yapılanma, hacmi [80]'in ölçütüyle
+alındığında
 $9{,}28 \times 10^{21}$ kg/m$^3$ değerine ulaşmaktadır. Eşiğin oraya inmesi ise
 yer çekiminin $3{,}74$ GeV ölçeğinde güçlenmesini gerektirirdi. Dışlanan ölçek
 tek bir sayı değildir, ek boyut sayısına bağlıdır: [40] onu iki boyut için
@@ -4019,7 +4047,8 @@ kaynağın sağlaması gerekmez, protonun kendisi taşır.
 
 **Enerji yine de gerekir, ama bant için değil.** Varışın hangi fırlatmaya ait
 olduğunu bir etiket söylemektedir, ve etiket protonun ince bir folyodan
-geçmesini gerektirir; folyo da protonu saçar. Bir megaelektronvoltluk bir proton,
+geçmesini gerektirir; folyo da protonu saçar. [81]'in çoklu Coulomb saçılması
+yaklaşımına göre bir megaelektronvoltluk bir proton,
 santimetre karesi başına on mikrogramlık karbondan $1{,}38 \times 10^{-3}$ radyan
 genişleyerek çıkar, yani demet hattının ulaştığı kolimasyonu bozar. Aynı folyo
 iki yüz otuz megaelektronvoltta protonu yalnızca $6{,}66 \times 10^{-6}$ radyan
@@ -4259,3 +4288,97 @@ budur.
     Lett. **8** (2013) 145.
 45. S. Kudaka, S. Matsumoto. *A mathematically rigorous approach raises
     questions concerning the generalized Hartman effect*. arXiv:1105.2159
+**Zamanda geriye yolculuğa izin veren çözümler**
+
+46. K. Gödel. *An example of a new type of cosmological solution of Einstein's
+    field equations of gravitation*. Rev. Mod. Phys. **21** (1949) 447.
+47. F. J. Tipler. *Rotating cylinders and the possibility of global causality
+    violation*. Phys. Rev. D **9** (1974) 2203.
+48. M. S. Morris, K. S. Thorne, U. Yurtsever. *Wormholes, time machines, and
+    the weak energy condition*. Phys. Rev. Lett. **61** (1988) 1446.
+49. S. W. Hawking. *Chronology protection conjecture*. Phys. Rev. D **46**
+    (1992) 603.
+50. R. C. Tolman. *The Theory of the Relativity of Motion*. University of
+    California Press, 1917, §71.
+51. S. Liberati, S. Sonego, M. Visser. *Faster-than-c signals, special
+    relativity, and causality*. Ann. Phys. **298** (2002) 167.
+    arXiv:gr-qc/0107091
+
+**İnce kabuk, eklem koşulu ve enerji koşulları**
+
+52. W. Israel. *Singular hypersurfaces and thin shells in general relativity*.
+    Nuovo Cimento B **44** (1966) 1; erratum **48** (1967) 463.
+53. C. Lanczos. *Flächenhafte Verteilung der Materie in der Einsteinschen
+    Gravitationstheorie*. Ann. Phys. **74** (1924) 518.
+54. S. W. Hawking, G. F. R. Ellis. *The Large Scale Structure of Space-Time*.
+    Cambridge University Press, 1973.
+55. E. Curiel. *A Primer on Energy Conditions*. Einstein Stud. **13** (2017) 43.
+    arXiv:1405.0403
+56. C. Hellaby, T. Dray. *Failure of standard conservation laws at a classical
+    change of signature*. Phys. Rev. D **49** (1994) 5096. arXiv:gr-qc/9404001
+57. M. Kossowski, M. Kriele. *Smooth and discontinuous signature type change in
+    general relativity*. Class. Quantum Grav. **10** (1993) 2363.
+
+**İmza değişiminin kurucu çalışmaları**
+
+58. J. B. Hartle, S. W. Hawking. *Wave function of the Universe*. Phys. Rev. D
+    **28** (1983) 2960.
+59. G. F. R. Ellis, A. Sumeruk, D. Coule, C. Hellaby. *Change of signature in
+    classical relativity*. Class. Quantum Grav. **9** (1992) 1535.
+60. J. Barrett, G. W. Gibbons, M. J. Perry, C. N. Pope, P. Ruback. *Kleinian
+    geometry and the $N = 2$ superstring*. Int. J. Mod. Phys. A **9** (1994)
+    1457. arXiv:hep-th/9302073
+
+**Takyonlar, yerelleştirme ve yeniden yorumlama**
+
+61. E. Recami, R. Mignani. *Classical theory of tachyons*. Riv. Nuovo Cim. **4**
+    (1974) 209.
+62. E. Recami. *Classical tachyons and possible applications*. Riv. Nuovo Cim.
+    **9** (1986) 1.
+63. T. D. Newton, E. P. Wigner. *Localized states for elementary systems*. Rev.
+    Mod. Phys. **21** (1949) 400.
+64. G. C. Hegerfeldt. *Remark on causality and particle localization*. Phys.
+    Rev. D **10** (1974) 3320.
+65. C. Baltay, G. Feinberg, N. Yeh, R. Linsker. *Search for uncharged
+    faster-than-light particles*. Phys. Rev. D **1** (1970) 759.
+66. I. Bars, C. Kounnas. *Theories with two times*. Phys. Lett. B **402** (1997)
+    25. arXiv:hep-th/9703060
+
+**Geçiş süresinin tanımları ve ölçümleri**
+
+67. F. T. Smith. *Lifetime matrix in collision theory*. Phys. Rev. **118**
+    (1960) 349.
+68. M. Büttiker, R. Landauer. *Traversal time for tunneling*. Phys. Rev. Lett.
+    **49** (1982) 1739.
+69. E. H. Hauge, J. A. Støvneng. *Tunneling times: a critical review*. Rev.
+    Mod. Phys. **61** (1989) 917.
+70. A. M. Steinberg, P. G. Kwiat, R. Y. Chiao. *Measurement of the
+    single-photon tunneling time*. Phys. Rev. Lett. **71** (1993) 708.
+71. A. Enders, G. Nimtz. *On superluminal barrier traversal*. J. Phys. I France
+    **2** (1992) 1693.
+72. A. Sommerfeld. *Über die Fortpflanzung des Lichtes in dispergierenden
+    Medien*. Ann. Phys. **44** (1914) 177.
+73. L. Brillouin. *Wave Propagation and Group Velocity*. Academic Press, 1960.
+
+**Karşılıklılık, parçacık üretimi ve ölçek**
+
+74. R. G. Newton. *Scattering Theory of Waves and Particles*. 2nd edition,
+    Springer, 1982.
+75. N. D. Birrell, P. C. W. Davies. *Quantum Fields in Curved Space*. Cambridge
+    University Press, 1982.
+76. L. Parker. *Quantized fields and particle creation in expanding universes
+    I*. Phys. Rev. **183** (1969) 1057.
+77. W. L. Bragg. *The diffraction of short electromagnetic waves by a crystal*.
+    Proc. Camb. Phil. Soc. **17** (1913) 43.
+78. A. Ashtekar, J. Baez, K. Krasnov. *Quantum geometry of isolated horizons
+    and black hole entropy*. Adv. Theor. Math. Phys. **4** (2000) 1.
+    arXiv:gr-qc/0005126
+79. A. Ashtekar, T. Pawlowski, P. Singh. *Quantum nature of the big bang:
+    improved dynamics*. Phys. Rev. D **74** (2006) 084003. arXiv:gr-qc/0607039
+80. J. D. Bjorken. *Highly relativistic nucleus-nucleus collisions: the central
+    rapidity region*. Phys. Rev. D **27** (1983) 140.
+81. G. R. Lynch, O. I. Dahl. *Approximations to multiple Coulomb scattering*.
+    Nucl. Instr. Meth. B **58** (1991) 6.
+82. I. Antoniadis, N. Arkani-Hamed, S. Dimopoulos, G. Dvali. *New dimensions at
+    a millimeter to a Fermi and superstrings at a TeV*. Phys. Lett. B **436**
+    (1998) 257. arXiv:hep-ph/9804398
