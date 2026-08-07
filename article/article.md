@@ -3742,25 +3742,25 @@ hızıdır. Bir metrelik yolculuk $3{,}34$ nanosaniye kazandırır.
 | $1$ dakika | $1{,}80 \times 10^{10}$ m |
 | $1$ yıl | $9{,}46 \times 10^{15}$ m, bir ışık yılı |
 
-Sınanan sürücüde, yani $1{,}5 \times 10^{24}$ rad/s değerinde, gidiş dönüşün
-borcu $5{,}4614 \times 10^{-24}$ s olarak çıkar. Bu borcu kapatan öte taraf
-mesafesi $1{,}6373 \times 10^{-15}$ m değerindedir, yani protonun birkaç
-yarıçapı kadardır.
-Borç, ölçülmeye değer herhangi bir ilerlemenin yanında ihmal edilir; gereken
-mesafe pratikte ilerleme ile ışık hızının çarpımıdır.
+Tabloya bir de geçişin kendi borcu eklenmelidir. Sınanan sürücüde, yani
+$1{,}5 \times 10^{24}$ rad/s değerinde, gidiş dönüşün borcu
+$5{,}4614 \times 10^{-24}$ s çıkmaktadır, ve bu borcu kapatan öte taraf mesafesi
+$1{,}6373 \times 10^{-15}$ m, yani protonun birkaç yarıçapı kadardır. Görüldüğü
+gibi borç, ölçülmeye değer herhangi bir ilerlemenin yanında ihmal edilir;
+dolayısıyla gereken mesafe pratikte ilerleme ile ışık hızının çarpımına eşittir.
 
-Bir yıl geriye taşınma, öte tarafta bir ışık yılı mesafe kat edilmesini
-gerektirmektedir. Önerinin ölçeği en açık biçimde bu satırda görünür.
+Tablonun son satırı önerinin ölçeğini en açık biçimde göstermektedir: bir yıl
+geriye taşınmak, öte tarafta bir ışık yılı yol almayı gerektirir.
 
 ### 21.2.3 Zayıflayan nicelik
 
 Geri dönen parçacığın hiçbir özelliği azalmaz. Kütlesi, yükü ve mod ızgarası
-gidişteki değerlerini korur, çünkü geçiş mod genliklerini ölçekler ve mod
-etiketlerini yerinden oynatmaz.
+gidişteki değerlerini korur, çünkü geçiş yalnızca mod genliklerini ölçekler ve
+mod etiketlerini yerinden oynatmaz.
 
-Zayıflayan nicelik **varış olasılığıdır**. İletim katsayısı bir olasılıktır,
+Zayıflayan tek nicelik **varış olasılığıdır**. İletim katsayısı bir olasılıktır,
 parçacığın bir kesri değil. Dolayısıyla geri gelen bir proton eksiksiz bir
-protondur ve küçük olan sayı onun gelme şansıdır.
+protondur, ve küçük olan sayı yalnızca onun gelme şansıdır.
 
 | Opaklık | Varış olasılığı | Bir varış için fırlatma sayısı |
 | ------- | -------------------------- | ------------------------------ |
@@ -3770,9 +3770,10 @@ protondur ve küçük olan sayı onun gelme şansıdır.
 
 ### 21.2.4 Görünürlük ile doyum
 
-Deneyin asıl engeli kütle duvarı değildir. Varışın milyarda birin üzerinde
-kalması opaklığı $10{,}36$ ile sınırlar. Gecikmenin doyması ise aynı çarpımın
-büyük olmasını ister ve yolculuğu satın alan nicelik o gecikmedir.
+Deneyin asıl engeli kütle duvarı değildir, iki şartın birbirine ters çekmesidir.
+Varışın milyarda birin üzerinde kalması opaklığı $10{,}36$ ile sınırlamaktadır.
+Buna karşılık gecikmenin doyması aynı çarpımın büyük olmasını ister, ve
+yolculuğu satın alan nicelik de o gecikmedir.
 
 İki şart birbirini ters yöne çeker. Sonucun görülebileceği kadar ince bir engel,
 gecikmenin doyması için yeterince opak kalmaz. Kütle duvarını aşan bir sürücü
@@ -3781,15 +3782,15 @@ oluşturmaktadır.
 
 ### 21.2.5 Yoğunluk koşulu
 
-Bu çalışma öte bölgeyi verilmiş kabul eder ve yolculuğu oradan hesaplamaktadır. Bölgenin
-hangi koşulda ortaya çıktığını ise literatürün bir kolu bir sayıya bağlar.
-Döngü kuantum kozmolojisinin etkin dinamiğinde hiperyüzey deformasyon cebiri
-yoğunluğa bağlı bir çarpan kazanır ve bu çarpan enerji yoğunluğu kritik
-yoğunluğun yarısını geçtiğinde işaret değiştirir [37]. Aynı kuram yüksek
-yoğunlukta geometriyi Öklid imzasına döndürür [38]. Aşağıdaki sayılar o kuramın
-kendi sayılarıdır, bu çalışmanın türettikleri değil. Altında mod denklemi
-hiperboliktir ve geometri Lorentz imzalıdır; üstünde denklem eliptiktir ve
-geometri Öklid imzalıdır.
+Bu çalışma öte bölgeyi verilmiş kabul etmekte ve yolculuğu oradan
+hesaplamaktadır. Bölgenin hangi koşulda ortaya çıktığını ise literatürün bir kolu
+tek bir sayıya bağlamıştır. Döngü kuantum kozmolojisinin etkin dinamiğinde
+hiperyüzey deformasyon cebiri yoğunluğa bağlı bir çarpan kazanır, ve bu çarpan
+enerji yoğunluğu kritik yoğunluğun yarısını geçtiğinde işaret değiştirir [37].
+Aynı kuram yüksek yoğunlukta geometriyi Öklid imzasına döndürmektedir [38].
+Eşiğin altında mod denklemi hiperbolik, geometri Lorentz imzalıdır; üstünde
+denklem eliptik, geometri Öklid imzalı olur. Aşağıdaki sayılar da o kuramın
+kendi sayılarıdır, bu çalışmanın türettikleri değil.
 
 | Nicelik | Değer |
 | ------------------ | ----------------------------------------- |
