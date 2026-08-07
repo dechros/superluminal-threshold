@@ -217,9 +217,12 @@ ayrı kalınlığı için ayrı ayrı yürütülmüştür.
 
 Eşik geçirgen alınmıştır, yani parçacık eşikten geçebilmektedir. Bunun
 karşılığında doğan madde tabakasını ve o tabakanın çiğnediği enerji koşulunu
-Bölüm 1.5 üçüncü engel olarak saymıştı. En ağır sonucu ise Bölüm 5.7 verir: bu
-metrik ailesinde oran koşulunu geçebilen tek profil, güçlü koşulu sağlayan
-profildir, yani hiçbir şey geçirmeyen profil.
+Bölüm 1.5 üçüncü engel olarak saymıştı. Bölüm 5.7 sınanan üç profilde oran
+koşulunu geçen tek profilin güçlü koşulu sağlayan, yani hiçbir şey geçirmeyen
+profil olduğunu bulur. Bunun genel bir engel olmadığını ise Bölüm 5.7.1
+göstermekte: oran koşulunu sağlayan yapılanmalar bulunur, ve aynı alt bölüm
+engel iddiasını bu nedenle geri alır. Kalan katkı üstelin iki parametreli
+kapalı biçimidir.
 
 Çalışma parçacığı ayrıca iki okumayla birden taşır. Hesaplar dalga paketi üzerinden
 yürür, anlatım ise noktasal bir cisim dilini kullanır. İki okumayı birbirine
@@ -2731,8 +2734,10 @@ vermektedir: biri imzayı geçirgenlik oranında öngörür, diğeri hiç öngö
 Aradaki fark bir yorum farkı değil, **ölçülebilir** bir farktır. Parçacığı
 geçiren ve enerjisiz sapma arayan tek bir deney ikisini birbirinden ayırır.
 
-Çalışmanın ayırt edici öngörüsü de tam olarak bu ayrımda durmaktadır, ve ulaşılamaz
-bir yüzeye değil ara bölgenin kendisine bağlıdır.
+Ne var ki bu ayrım çalışmanın son sözü değildir. Bölüm 16.5 iki okumadan
+ikincisini elemekte, ve yerine modelin kendi yapısından çıkan üçüncü bir cevap
+koymaktadır. Çalışmanın ayırt edici öngörüsü de o üçüncü cevapta durur; aşağıdaki
+iki uç ise onun sınandığı çerçeveyi kurar.
 
 **Çekince.** İki okumanın verdiği sıfır ve bir uçlarını hesap değil, iki kabul
 üretmektedir. Ayar okumasında dönme özdeşliğe iner, çünkü ara bölge simetrik
@@ -3106,7 +3111,11 @@ Bölge II'deki bir durum iki veriden oluşur:
 1. **Yönelim.** Üç zaman uzayındaki enerji vektörünün doğrultusu. Uzunluk kütle
  kabuğu tarafından sabitlendiğinden, doğrultu bir **iki-küre** üzerinde
  değişir.
-2. **Dal.** Tek uzay ekseni boyunca dalga sayısının işareti. İki değer alır.
+2. **İlerleme işareti.** Tek uzay ekseni boyunca dalga sayısının işareti,
+ $\sigma = \pm 1$. Bu işaret, sekiz geçiş matrisinden hangisinin işlediğini
+ adlandıran **dal** ile aynı nicelik değildir: dal varış anının işaretini
+ belirler, ilerleme işareti ise belirlemez. Hangi koordinatın hangisine
+ bağlı olduğunu Bölüm 18.3 vermektedir.
 
 İki veri birleşince dönüşümün tanım kümesi $S^2 \times \mathbb{Z}_2$ olmaktadır.
 Tarama bu uzayı $312$ ayrık duruma bölmüştür.
@@ -3138,8 +3147,8 @@ somutlaştırmaktadır ($d = 2$, uzunluk kütle kabuğundan):
 | $1{,}2$ | $9{,}9732$ | $2{,}0000$ | $(+0{,}0037,\; +0{,}0016)$ |
 | $2{,}5$ | $15{,}5319$ | $2{,}0000$ | $(+0{,}0024,\; -0{,}0036)$ |
 
-Geçiş doğrultusundaki yer değiştirme üçünde de aynıdır, çünkü yalnızca dalı
-görür; geçen süre ile enine yer değiştirmeler ise yönelimle birlikte
+Geçiş doğrultusundaki yer değiştirme üçünde de aynıdır, çünkü yalnızca ilerleme
+işaretine bağlıdır; geçen süre ile enine yer değiştirmeler ise yönelimle birlikte
 değişmektedir.
 
 ### 18.3 Koordinatların gördüğü durum bileşenleri
@@ -3147,7 +3156,7 @@ değişmektedir.
 Dönüşümün yapısı şöyle görülür: dört koordinat birbirinden bağımsız kaynaklara
 bağlanmaktadır.
 
-| Koordinat | Yönelime bağlı mı | Dala bağlı mı |
+| Koordinat | Yönelime bağlı mı | İlerleme işaretine bağlı mı |
 | ----------- | ----------------- | ------------- |
 | $t$ | Evet | **Hayır** |
 | $x_{\perp}$ | **Hayır** | Evet |
@@ -3155,8 +3164,8 @@ bağlanmaktadır.
 
 Tablonun en önemli satırı ilkidir, ve okunuşu şudur: **parçacığın ne zaman
 döndüğünü ile nereden döndüğünü ayrı nicelikler belirlemektedir.** Zaman bileşeni
-dala hiç bağlı değildir, geçiş yönündeki yer değiştirme ise yönelime hiç bağlı
-değildir.
+ilerleme işaretine hiç bağlı değildir, geçiş yönündeki yer değiştirme ise
+yönelime hiç bağlı değildir.
 
 ### 18.4 Dönüşümün tanım kümesini sıkıştırması
 
@@ -3301,7 +3310,8 @@ biçim sonlu kalınlıkta da saçılma hesabıyla örtüşmektedir: $d = 1$ içi
 $1{,}451403$, $d = 2$ için $1{,}462898$ çıkar, ve iki yol da aynı sayıyı verir.
 
 **Dört koordinatın tamamı.** Bölge II'deki bir durumu, üç zamandaki enerji
-vektörü $\mathbf{E}$ ile tek uzay eksenindeki dal $\sigma = \pm 1$ belirler.
+vektörü $\mathbf{E}$ ile tek uzay eksenindeki ilerleme işareti
+$\sigma = \pm 1$ belirler.
 Dönüş olayının dört koordinatı da bunlardan çıkar:
 
 $$t = \frac{4\omega}{c^2\,|E_1|\,\beta}, \qquad
@@ -3311,7 +3321,8 @@ x_\perp = d\,\frac{1+\sigma}{2}, \qquad y = S(d)\,\frac{E_2}{|\mathbf{E}|},
 Bu ifadede $S(d)$ paket merkezinin kaymasıdır ve iki enine koordinatın **ortak**
 çarpanıdır. Okunuşu:
 
-> **Ne zaman** döndüğü yalnızca yönelime bağlıdır, dala hiç bağlı değildir. **Nereden**
+> **Ne zaman** döndüğü yalnızca yönelime bağlıdır, ilerleme işaretine hiç bağlı
+> değildir. **Nereden**
 > çıktığı yalnızca dala bakar, yönelime hiç bakmaz. **Ne kadar saptığı** ise
 > yönelimin enine bileşenlerine bakar ve iki sapma tek bir çarpanı paylaşır.
 
@@ -3355,7 +3366,7 @@ belirlediği bir niceliktir. Ağırlıkları $A$ ve $B$, bağıl fazı $\varphi$
 göstergenin işareti de döner. Yani yanlılık engelde değil, gelen durumda
 saklıdır.
 
-Bu gereksinim, dal taramasının öteki uçtan vardığı gereksinimle **aynı
+Bu gereksinim, sekiz matris taramasının öteki uçtan vardığı gereksinimle **aynı
 biçimdedir**: tam olarak bir eksende tek olan bir nicelik. O bölümde bu nicelik dönüşüm
 seçimi için gerekiyordu, bu bölümde ise yolculuk yönü için gerekmektedir.
 
@@ -3508,7 +3519,7 @@ hesabıdır ve bu bölümde yeniden türetilmez, yalnızca çağrılır.
 | 5 | Tek geçişin faz gecikmesi | $1{,}217161$ |
 | 6 | İki geçiş, yani gidiş dönüş gecikmesi | $2{,}434322$ |
 | 7 | Gereken Bölge II mesafesi | $2{,}434322$ |
-| 8 | Kat edilen mesafe ve dal | $6{,}000000$, dal $-1$ |
+| 8 | Kat edilen mesafe ve ilerleme işareti | $6{,}000000$, $\sigma = -1$ |
 | 9 | Dönüş olayı: geçen süre | $-3{,}565678$ |
 | 9 | Dönüş olayı: geçiş yönünde yer değiştirme | $0{,}000000$ |
 | 9 | Dönüş olayı: iki enine yer değiştirme | $+0{,}009483$, $+0{,}009483$ |
