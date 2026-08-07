@@ -2106,9 +2106,10 @@ değil, iki geçişin ortak genliğinin fazından okunmaktadır.
 
 ## 12. İkinci geçiş ve eşleşme
 
-Gidiş tek bir yüzeyin problemidir; gidiş dönüş iki yüzeyin problemidir ve
-farklıdır. İki yüzey arasındaki bölge, dalganın bir kez geçtiği bir engel değil,
-içinde ileri geri yansımaların üst üste bindiği bir **boşluk** gibi davranır.
+Gidiş tek bir yüzeyin problemidir, oysa gidiş dönüş iki yüzeyin problemidir ve
+sonucu farklı çıkar. İki yüzey arasındaki bölge artık dalganın bir kez geçtiği
+bir engel gibi değil, içinde ileri geri yansımaların üst üste bindiği bir
+**boşluk** gibi davranır.
 
 ### 12.1 Geçiş genliği
 
@@ -2118,12 +2119,12 @@ iki yüzeyin birlikte çözümü tek bir karmaşık genlik verir:
 $$A = \frac{4\kappa q}
  {(\kappa+q)^2 e^{-i q d} - (\kappa-q)^2 e^{i q d}}$$
 
-Bu ifade dört ara bölge tipini birden kapsamaktadır, çünkü $q$ karmaşık değer
-alabilir. Ara bölge yayılımlı ise $q$ reeldir ve payda salınır. Söndürücü ise
-$q$ sanaldır; üstel terimler reel hiperbolik fonksiyonlara döner ve genlik
-bastırılmaktadır. İki durum ayrı formüller değil, aynı formülün iki dalıdır.
+Bu tek ifade dört ara bölge tipini birden kapsar, çünkü $q$ karmaşık değer
+alabilir. Ara bölge yayılımlıysa $q$ reel çıkar ve payda salınır; söndürücüyse
+$q$ sanal olur, üstel terimler reel hiperbolik fonksiyonlara döner ve genlik
+bastırılır. Yani iki durum ayrı formüller değil, aynı formülün iki dalıdır.
 
-Ara bölge yokken $q = \kappa$ olur ve $A$ serbest yayılma fazına indirgenir; bu,
+Ara bölge hiç yokken de $q = \kappa$ olur ve $A$ serbest yayılma fazına iner. Bu,
 hesabın tutarlılık sınamasıdır ve sağlanmaktadır.
 
 ### 12.2 Genliğin taşıdığı iki bilgi
@@ -2136,38 +2137,40 @@ tamamı bu fazın nasıl okunacağı üzerinedir.
 
 ### 12.3 Parçacığın eşikten geçirilme yolu
 
-Eşikten geçiş bir kapının açılması değildir. Ara bölge söndürücü rejimde bir
-engeldir ve engelin içinde normal dalga sayısı sanaldır. Dolayısıyla geçiş
-tünellemedir: parçacık engeli aşmaz, genliği engelin içinde üstel olarak bastırılır
-ve öte yüzde sıfırdan farklı bir değerle çıkar.
+Eşikten geçiş bir kapının açılmasına benzemez. Söndürücü rejimde ara bölge bir
+engeldir ve engelin içinde normal dalga sayısı sanal değer alır. Dolayısıyla
+geçişin adı tünellemedir: parçacık engeli aşmaz, genliği engelin içinde üstel
+olarak bastırılır ve öte yüzde sıfırdan farklı bir değerle çıkar.
 
-Bunun iki sonucu vardır. Geçiş **olasılıksaldır**; tek bir parçacık için
-söylenebilecek olan, geçme şansının $|A|^2$ olduğudur. Geçiş ayrıca
-**zorlanamaz**; genlik ancak engelin opaklığı, yani sönüm sabiti ile kalınlığın
-çarpımı küçültülerek büyür.
+Buradan iki sonuç doğar. Geçiş **olasılıksaldır**, yani tek bir parçacık için
+söylenebilecek tek şey geçme şansının $|A|^2$ olduğudur. Geçiş ayrıca
+**zorlanamaz**, çünkü genlik ancak engelin opaklığı, yani sönüm sabiti ile
+kalınlığın çarpımı küçültülerek büyür.
 
-Deney bu nedenle tek bir parçacığa dayanmaz. Düzenek çok sayıda parçacığı aynı
-eşiğe fırlatır ve geri dönenleri sayar. Gereken fırlatma sayısı opaklığın
-üstelidir ve Bölüm 21.2.3 onu sayılara bağlamaktadır.
+İkinci sonuç deneyin biçimini de belirler. Düzenek tek bir parçacığa dayanamaz;
+çok sayıda parçacığı aynı eşiğe fırlatır ve geri dönenleri sayar. Gereken
+fırlatma sayısı opaklığın üsteliyle büyür, ve Bölüm 21.2.3 onu sayılara
+bağlamaktadır.
 
 ### 12.4 Dönüşün kendiliğinden olmasının sebebi
 
-Parçacığın geri gelmesi bir tercih ya da ikinci bir müdahale değildir. Sebebi öte
-tarafın yapısındadır.
+Parçacığın geri gelmesi bir tercih ya da ikinci bir müdahale değildir; sebebi
+doğrudan öte tarafın yapısında durur.
 
-Bölge II üç zaman yönü taşır ve Bölüm 9'da gösterildiği üzere zaman yönelimi
-orada tanımsız kalır. Yönelim olmadığı için "ileri doğru yayılmayı sürdürmek" diye
-bir koşul da yoktur. Yakın tarafta bir ışıma koşulu dalganın yalnızca dışarı
-gitmesini şart koşar, çünkü orada geleceği geçmişten ayıran bir ok bulunur. Öte
-taraf böyle bir ok sunmadığından **kendi ışıma koşulunu vermez**.
+Bölge II üç zaman yönü taşır, ve Bölüm 9'da gösterildiği üzere zaman yönelimi
+orada tanımsız kalır. Yönelim bulunmadığından "ileri doğru yayılmayı sürdürmek"
+diye bir koşul da kurulamaz. Yakın tarafta ışıma koşulu dalgayı yalnızca dışarı
+gönderir, çünkü orada geleceği geçmişten ayıran bir ok bulunur. Öte taraf böyle bir ok sunmadığından **kendi ışıma koşulunu veremez**.
 
-Bunun saçılma problemindeki karşılığı doğrudandır: Bölge II iki genlik taşır, biri
-yüzeyden uzaklaşan diğeri yüzeye doğru gelen. İkincisi elle konmuş bir kabul
-değildir; tek yönlülüğü dayatacak bir yapı bulunmadığı için ortaya çıkar.
+Aynı durumun saçılma problemindeki karşılığı doğrudandır: Bölge II iki genlik
+birden taşır, biri yüzeyden uzaklaşan diğeri yüzeye doğru gelen. İkincisi elle
+konmuş bir kabul değildir, tek yönlülüğü dayatacak bir yapı bulunmadığı için
+kendiliğinden ortaya çıkar.
 
-Dolayısıyla dönüş kendiliğindendir. Parçacık öte tarafta kalmayı seçemez, çünkü
-kalmayı tanımlayacak bir zaman oku yoktur. Geri gelmesi, gitmesiyle aynı çözümün
-parçasıdır ve iki yüzeyin ortak çözümü tek bir genlik verir.
+Dolayısıyla dönüşün kendisi de kendiliğindendir. Parçacık öte tarafta kalmayı
+seçemez, çünkü kalmayı tanımlayacak bir zaman oku yoktur. Geri gelmesi,
+gitmesiyle aynı çözümün parçasıdır, ve iki yüzeyin ortak çözümü tek bir genlik
+verir.
 
 **Çekince.** Bu, dönüşün kesin olduğu anlamına gelmez. Kesin olan, dönüş
 genliğinin var olduğudur; büyüklüğü Bölüm 12.2'nin verdiği $|A|$ değeridir ve
@@ -2180,37 +2183,40 @@ saatinde nereye oturur.
 
 ### 13.1 Saat taşımanın imkânsızlığı
 
-İlk akla gelen yol, parçacığın kendi saatini okumaktır. Bu yol kapalı kalır. Ara
-bölgede zaman yönelimi yoktur; Öklid durumunda zaman ekseni hiç yoktur. Bir süre
-okunacak bir yapı bulunmadığı için "içeride şu kadar kaldı" ifadesi tanımsız kalır.
+İlk akla gelen yol, parçacığın kendi saatini okumaktır, ancak bu yol kapalı
+kalır. Ara bölgede zaman yönelimi bulunmaz, Öklid durumunda ise zaman ekseninin
+kendisi hiç yoktur. Bir süreyi okuyacak yapı bulunmadığından "içeride şu kadar
+kaldı" ifadesi de tanımsız kalır.
 
-Dolayısıyla dönüş anı, taşınan bir süreden değil, başka bir yerden gelmek
-zorundadır.
+Öyleyse dönüş anı taşınan bir süreden gelemez, başka bir yerden gelmek zorundadır.
 
 ### 13.2 Fazın taşıdığı yer bilgisi
 
-Bölüm 12'nin genliği karmaşıktır. Fazının frekansa göre türevi, dışarıda kalan
-gözlemcinin ölçtüğü gecikmedir:
+O yer Bölüm 12'nin genliğidir. Genlik karmaşık bir sayı olduğundan bir fazı
+vardır, ve o fazın frekansa göre türevi dışarıda kalan gözlemcinin ölçtüğü
+gecikmeyi verir:
 
 $$\tau = \frac{d}{d\omega}\,\arg A(\omega)$$
 
-Bu ifade ara bölgenin içinde hiçbir saat gerektirmez. Yalnızca dışarıda, iki
-yüzeyin de dışında tanımlı olan bir niceliğin, geçiş genliğinin, frekansa
-duyarlılığını kullanır. Süreyi bilmeden yeri veren şey budur.
+Bu ifade ara bölgenin içinde hiçbir saat gerektirmez, çünkü yalnızca iki yüzeyin
+de dışında tanımlı olan tek bir niceliği kullanır: geçiş genliğinin frekansa
+duyarlılığını. Süreyi hiç bilmeden yeri veren şey budur.
 
-Tutarlılık sınaması: ara bölge yokken $\tau$ tam olarak serbest uçuş süresine
-eşit çıkar ve bu üç ayrı kalınlıkta doğrulanmıştır.
+İfade bir tutarlılık sınamasından da geçmiştir: ara bölge hiç yokken $\tau$ tam
+olarak serbest uçuş süresine eşit çıkar, ve bu üç ayrı kalınlıkta
+doğrulanmıştır.
 
 ### 13.3 Engel olmanın frekansa bağlılığı
 
-Hesabın ilk sonucu beklenmedik biçimde basittir. Aynı ara bölge, yüksek
-frekansta yayılımlı, düşük frekansta söndürücüdür. Öklid bölge için sınır,
+Yukarıdaki ifadenin verdiği ilk sonuç beklenmedik biçimde basittir: aynı ara
+bölge, yüksek frekansta yayılımlı, düşük frekansta ise söndürücü
+davranmaktadır. Öklid bölge için sınırı
 
 $$\omega^2 < k_T^2\left(1 + \tfrac{2n}{3}\right) + \mu$$
 
-koşuluyla verilir. Yani "ara bölge bir duvar mıdır" sorusunun tek bir cevabı
-yoktur; cevabı gelen parçacığın frekansı belirler. Eşik bu nedenle bir duvar değil
-bir **mod filtresidir** ve metnin başka yerleri bu adla ona geri döner.
+koşulu verir. Yani "ara bölge bir duvar mıdır" sorusunun tek bir cevabı yoktur;
+cevabı gelen parçacığın frekansı belirler. Bu nedenle eşik bir duvar değil bir
+**mod filtresidir**, ve metnin başka yerleri ona bu adla geri döner.
 
 ### 13.4 Engel rejiminde gecikmenin doyumu
 
@@ -2223,16 +2229,14 @@ Ara bölge söndürücü olduğunda gecikme kalınlıkla artmayı bırakır:
 | $4$ | $1{,}463$ | $4$ |
 | $8$ | $1{,}463$ | $8$ |
 
-Gecikme ikinci basamaktan sonra sabitlenir. Kalınlık sekiz kat arttığında dönüş
-anı değişmez.
+Tabloda gecikme ikinci basamaktan sonra sabitlenmektedir, yani kalınlık sekiz kat
+arttığında dönüş anı hiç değişmez. Buradan iki sonuç çıkar ve ikisi de önemlidir.
 
-Bunun iki sonucu vardır ve ikisi de önemlidir.
-
-**Birincisi, geçiş ışıktan hızlı görünür.** Sekiz birim kalınlıkta gecikme
-ışığın alacağı sürenin beşte biri kadardır. Bu, bu modelde bir uyarımın ışıktan
-hızlı **yayılması** anlamına gelmez; Bölüm 10.2 grup hızının daima $c$'nin
-altında kaldığını hesaplamıştır. Anlamı, geçen paketin tepe noktasının beklenenden
-erken çıkmasıdır.
+**Birincisi, geçiş ışıktan hızlı görünür.** Sekiz birim kalınlıkta gecikme,
+ışığın alacağı sürenin beşte biri kadar kalır. Yine de bu, bir uyarımın ışıktan
+hızlı **yayılması** anlamına gelmez, çünkü Bölüm 10.2 grup hızının daima $c$'nin
+altında kaldığını hesaplamıştır. Buradaki tek anlam, geçen paketin tepe
+noktasının beklenenden erken çıkmasıdır.
 
 **Doyumun kendisi bu çalışmanın bulgusu değildir.** Kalın bir engelde tünelleme
 süresinin kalınlıktan bağımsızlaşacağını [29] durağan faz yöntemiyle 1962'de
@@ -2248,22 +2252,23 @@ engel arasındaki açıklığın da gecikmeye girmemesini bekler ve [42] bunu op
 niceliğin bir kat etme süresi değil kavite ömrü olduğunu savunur; [44] ile [45]
 bağımsızlığın kendisini reddeder.
 
-Bu metnin hiçbir sonucu o tartışmaya dayanmaz. Buradaki hesap tek bir bölgenin
-kalınlığını konu alır ve öte tarafta kat edilen mesafe gecikmeye değil ona
-karşı çalışan terime girer. Kayıt, aynı yöne bakan bir soruyu açık olarak
-göstermek içindir.
+Yine de bu metnin hiçbir sonucu o tartışmaya dayanmaz. Buradaki hesap tek bir
+bölgenin kalınlığını konu alır, ve öte tarafta kat edilen mesafe gecikmeye değil
+ona karşı çalışan terime girer. Yukarıdaki kayıt yalnızca aynı yöne bakan bir
+soruyu açık olarak göstermek için durmaktadır.
 
-**İkincisi ve bu modelin aleyhinedir, dönüş anı kalınlığı unutur.** Bir
-birimlik ara bölgeyle sekiz birimlik ara bölge parçacığı Bölge I saatinde **aynı
-ana** koyar. Dolayısıyla dönüş anına bakarak ara bölgenin ne kadar kalın olduğu
-söylenemez.
+**İkinci sonuç ise bu modelin aleyhinedir: dönüş anı kalınlığı unutur.** Bir
+birimlik bir ara bölge ile sekiz birimlik bir ara bölge, parçacığı Bölge I'in
+saatinde **aynı ana** koyar. Dolayısıyla dönüş anına bakarak ara bölgenin ne
+kadar kalın olduğu söylenemez.
 
 ### 13.5 Yayılımlı rejimde tersine dönme
 
-İç mod yayıldığında doyum yoktur; gecikme kalınlıkla salınır. Kalınlık taranınca
-gecikme $0{,}225$ ile $9{,}009$ arasında gidip gelir. Yayılımlı bir ara bölgede
-dönüş anı kalınlığa **duyarlıdır**, ancak tek değerli değildir: aynı gecikmeyi
-veren birden çok kalınlık vardır.
+İç mod yayılabildiğinde doyum ortadan kalkmakta ve gecikme kalınlıkla
+salınmaktadır.
+Kalınlık tarandığında gecikme $0{,}225$ ile $9{,}009$ arasında gidip gelmektedir.
+Yani yayılımlı bir ara bölgede dönüş anı kalınlığa **duyarlıdır**, ancak tek
+değerli değildir: aynı gecikmeyi veren birden çok kalınlık bulunur.
 
 | Ara bölge | Dönüş anının kalınlığa bağlılığı |
 | --------- | ----------------------------------- |
@@ -2274,12 +2279,12 @@ veren birden çok kalınlık vardır.
 
 ### 13.6 Mesafe ile fiyatın farkı
 
-Dönüş anı tek bir çıkarma işlemidir. Öte tarafta kat edilen mesafe $s$, tek
-geçişin faz gecikmesi $\tau$ ile yazıldığında, kalkışa göre varış anı
-$2\tau - s$ değerindedir. Bedel gidiş dönüşe aittir, dolayısıyla tek geçişin
-iki katıdır; ikisini karıştırmak bu çalışmaya iki kez ikilik çarpana mal
-olmuştur. Sınanan yapılanmada $\tau = 1{,}462864$, gidiş dönüşün bedeli
-$2\tau = 2{,}925728$ olarak çıkar.
+Dönüş anını tek bir çıkarma işlemi verir. Öte tarafta kat edilen mesafe $s$ ve
+tek geçişin faz gecikmesi $\tau$ ile yazıldığında, kalkışa göre varış anı
+$2\tau - s$ olmaktadır. Buradaki bedel gidiş dönüşe ait olduğundan tek geçişin
+iki katıdır, ve ikisini birbirine karıştırmak bu çalışmada iki kez ikilik çarpan
+hatasına yol açmıştır. Sınanan yapılanmada $\tau = 1{,}462864$, gidiş dönüşün
+bedeli ise $2\tau = 2{,}925728$ değerindedir.
 
 | Öte tarafta kat edilen mesafe | Varış anı | Konum |
 | ----------------------------- | -------------- | ----------------- |
