@@ -176,6 +176,35 @@ namespace slm
         const double thickness = 2.0;
         const double pi = std::acos(-1.0);
 
+        report.subsection("Reversing both the energy and the branch: what still separates them");
+        {
+            const ReturnEvent::State forward =
+                ReturnEvent::stateFromAngles(pi / 3.0, 0.9, 3.0, +1);
+            const ReturnEvent::State reversed{{-forward.orientation[0], -forward.orientation[1],
+                                               -forward.orientation[2]},
+                                              -forward.branch};
+            const ReturnEvent::Event a = ReturnEvent::map(forward, Kind::Euclidean, c, mu,
+                                                          thickness);
+            const ReturnEvent::Event b = ReturnEvent::map(reversed, Kind::Euclidean, c, mu,
+                                                          thickness);
+            report.checkNear("  the two give the same elapsed time, so the return moment alone "
+                             "cannot tell a reversed journey from an unreversed one",
+                             a.elapsed - b.elapsed, 1e-12);
+            report.check(std::format("  but they leave from different faces, {:.4f} against "
+                                     "{:.4f}, so the exit face does separate them",
+                                     a.crossing, b.crossing),
+                         std::abs(a.crossing - b.crossing) > 1e-9);
+            report.check(std::format("  and the transverse displacements carry opposite signs, "
+                                     "{:+.6f} against {:+.6f}",
+                                     a.transverseFirst, b.transverseFirst),
+                         a.transverseFirst * b.transverseFirst < 0.0);
+            report.check("so the reinterpretation leaves one observable degenerate and two "
+                         "observables distinct, which is what a reading of the return moment "
+                         "on its own would have missed",
+                         std::abs(a.elapsed - b.elapsed) < 1e-12 &&
+                             std::abs(a.crossing - b.crossing) > 1e-9);
+        }
+
         report.subsection("The domain: a two-sphere of orientations times two branches");
         for (int branch : {1, -1})
         {

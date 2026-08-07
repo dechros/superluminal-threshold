@@ -155,11 +155,12 @@ gerçekleşebilmesi için nelerin gerektiğini de sayıyla verir.
 ### 1.3 İddianın büyüklüğü
 
 Yukarıdaki sonuç dört parçadan kurulur, ancak bunlardan yalnızca dördüncüsü
-yenidir. İlkini literatür 1962 ile 1970 arasında göstermiştir: ışıktan hızlı
-hareket geçmişe varmayı mümkün kılar. İkincisini de yine literatür bilmektedir,
-yani Bölge II'nin bir uzay ve üç zaman ekseni taşıdığını, parçacıkların da
-yalnızca o tek uzay ekseninde ilerleyebildiğini. Üçüncüsü, bir uzay ekseninin bu
-geçiş altında zaman eksenine dönüşmesidir, ve o da bilinen bir sonuç sayılır.
+yenidir. İlkini literatür 1962 ile 1970 arasında göstermiştir ([35], [26], [36]): ışıktan
+hızlı hareket geçmişe varmayı mümkün kılar. İkincisini de yine literatür
+bilmektedir ([1], [3]), yani Bölge II'nin bir uzay ve üç zaman ekseni
+taşıdığını, parçacıkların da yalnızca o tek uzay ekseninde ilerleyebildiğini.
+Üçüncüsü, bir uzay ekseninin bu geçiş altında zaman eksenine dönüşmesidir, ve o
+da bilinen bir sonuçtur ([1], [3]).
 Geriye kalan dördüncü adımı ise aşağıdaki cümle taşır:
 
 > Işık hızını geçen kütleli madde, Bölge II'nin tek mekân boyutunda hareket edip
@@ -702,7 +703,7 @@ kadar ilerleyen tek bir genliğin toplam fazı
 
 $$\Phi(\omega) \;=\; \varphi(\omega) + \kappa(\omega)\, s,$$
 
-ve durağan faz koşulu çıkan paketin anını
+ve [31]'in kullandığı durağan faz koşulu çıkan paketin anını
 
 $$t \;=\; \frac{\mathrm{d}\varphi}{\mathrm{d}\omega}
  \;+\; s\,\frac{\mathrm{d}\kappa}{\mathrm{d}\omega}$$
@@ -4304,11 +4305,23 @@ cümlesinden ayırt edilemez.
 
 **Vurduğu halka.** İşaret ve ölçülebilirlik.
 
-**Yanıt.** Bölüm 16.4 aynı ilkeyi yönelim tarafında ele almakta ve ayırt
-edilemezliğin hangi nicelikten çıktığını göstermektedir. Dönüş anı tarafında
-ise aynı hesap yapılmamıştır. Aritmetik ayakta kalmakta, ancak Bölüm 18.9'un
-saydığı üç okunabilir nicelikten ilki iki senaryo arasında ayırt edici olmaktan
-çıkmaktadır. İtiraz **karşılanmamıştır**.
+**Yanıt.** İtiraz sayıya dökülebilir bir soru sormaktadır: enerji vektörü ile
+ilerleme işaretinin ikisi birden çevrildiğinde dönüş olayının dört koordinatı
+değişir mi. Hesap şunu vermektedir.
+
+| Gözlenen nicelik | İki senaryoda | Ayırt eder mi |
+| ----------------------- | ------------------------- | ------------- |
+| Dönüş anı | Aynı | **hayır** |
+| Çıkış yüzü | $2{,}0000$ ile $0{,}0000$ | **evet** |
+| Enine yer değiştirmeler | Ters işaretli | **evet** |
+
+İtirazın haklı olduğu kısım birinci satırdır: dönüş anı tek başına iki
+senaryoyu ayırmaz, ve bu nicelik çekirdek iddiayı taşıyan niceliktir. Buna
+karşılık ikinci ve üçüncü satırlar ayırmaktadır. Parçacığın hangi yüzden
+çıktığı ile enine yer değiştirmelerinin işareti birlikte okunduğunda iki
+senaryo ayrılmaktadır, ve ikisi de Bölüm 18.9'un saydığı okunabilir nicelikler
+arasındadır. İtiraz bu nedenle **kısmen karşılanmıştır**: dönüş anı tek başına
+yeterli değildir, üç niceliğin birlikte okunması yeterlidir.
 
 ### 22.9 Alınan mesafenin gözlenebilirliği
 
@@ -4361,6 +4374,14 @@ Bölüm 22.3 geçerliyse $\tau$ ile $s$ toplanamaz. Bölüm 22.2 geçerliyse ge�
 bedeli küçük bir olasılık değildir. Bölüm 22.4'ün ikilemi kapatılmadıkça, elde
 ya nedensel bir çelişki ya da bilinen bir tepe kayması kalmaktadır. Dördü
 birbirinden bağımsızdır, ve dördü de zincirin ayrı bir halkasını kesmektedir.
+
+İki itiraz ise hesapla daraltılmıştır, ve daraltma biçimi kayda değer.
+Bölüm 22.1'in ölçütü sayıya döküldüğünde itiraz doğrudan okumada ayakta
+kalmakta, ara bölgeden geçen okumada düşmektedir; yani zincir yalnızca üç
+bölgeli hâliyle savunulabilir. Bölüm 22.8'in hesabı ise dönüş anının tek başına
+ayırt edici olmadığını doğrulamakta, ancak çıkış yüzü ile enine yer
+değiştirmelerin ayırdığını göstermektedir. İkisinde de itirazın haklı olduğu
+kısım ile kalan kısım artık düzyazıyla değil sayıyla ayrılmaktadır.
 
 ---
 
