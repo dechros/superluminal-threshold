@@ -56,15 +56,13 @@ aritmetiğini kurar. Sınanan yolun sorusu şudur: parçacık Bölge II'de bir m
 alıp geri döndüğünde, Bölge I'de duran bir gözlemcinin saatinde hangi anda
 görünür.
 
-Soruyu kurabilmek için çalışma iki bölgeyi birbirinden ayırmaktadır. **Bölge I**,
-parçacığın yola çıktığı sıradan bölgedir; Bölge I'de dört eksenin biri zaman, üçü
-mekân eksenidir ve ışık hızı bir üst sınır olarak durur. **Bölge II** ise bunun
-tersini taşır: Bölge II'de üç eksen zaman, bir eksen mekân eksenidir. Bu yüzden parçacık
-Bölge II'de yalnızca o tek mekân ekseni boyunca ilerleyebilmekte, zamanda ise üç
-ayrı yön bulmaktadır. Eksenlerin bu şekilde yer değiştirmesi literatürde *imza
-değişimi* adını taşır. İki bölgeyi ayıran yüzey ise bu çalışmada **eşik** adını
-alır; eşik kalınlıksız bir yüzey olarak değil, sonlu kalınlıkta bir katman
-olarak ele alınmaktadır.
+İki bölgenin tanımını Özet vermişti. **Bölge I**'de bir eksen zaman ve üç eksen
+mekân eksenidir, **Bölge II**'de ise bunun tersi geçerlidir. İkisini ayıran
+sonlu kalınlıktaki katman **eşik** adını alır. Bu tanıma bir madde daha eklenir.
+Bölge II'de üç zaman ekseni bulunduğundan, o bölgede bir cismin durumu tek bir
+hız sayısıyla değil, üç zaman uzayındaki bir **yönelimle** verilir (Bölüm 10).
+Yönelim ile tek uzay eksenindeki ilerleme, parçacığın Bölge II'de taşıdığı
+bilginin tamamıdır.
 
 ### 1.1 Kurulan dönüşüm
 
@@ -172,8 +170,7 @@ ise anılacak bir kaynağı yoktur.
 ### 1.4 Sonucu taşıyan adımlar
 
 Sonuca yedi adımda varılmıştır. Adımların tamamı, her birinin hangi bölümde
-kurulduğuyla birlikte Bölüm 19'da sıralanır. Hesabı en kısa yoldan tekrar etmek
-isteyen okuyucu orayı okursa yeter.
+kurulduğuyla birlikte Bölüm 19'da sıralanır.
 
 ### 1.5 Gösterilmeyenler
 
@@ -303,13 +300,12 @@ kurulduğunu gösterir.
 | Mesafe | Bölge II'de mekânda kat edilen mesafe ne anlama gelir | Bölüm 4.1.1, Bölüm 4.1.2, Bölüm 4.1.3, Bölüm 9, Bölüm 10.1 |
 | Dönüş | Geri döndüğünde saatte nereye düşer | Bölüm 13, Bölüm 16, Bölüm 17, Bölüm 18, Bölüm 19 |
 
-Bölüm 2 bu üç adımın tamamını tek bir hesap hâlinde, sayılarıyla birlikte önden
-verir. Kalan bölümler o hesabın her bir adımını ayrı ayrı kurmaktadır.
-
-**Simülasyon için gereken en kısa yol.** Yedi adımın tamamı Bölüm 19'da tek
-yerde toplanmıştır ve her adımın hangi bölümde kurulduğu o özette yazılıdır. Hesabı
-tekrar etmek isteyen okuyucu için en kısa yol budur: önce Bölüm 19, sonra o bölümden
-işaret edilen yedi adres.
+**İki giriş noktası vardır ve ikisi farklı işe yarar.** Bölüm 2 hesabı on bir
+satırlık bir tablo hâlinde, denetim sayılarıyla birlikte verir; sayıyı yeniden
+üretmek isteyen oradan başlar. Bölüm 19 ise yedi adımı sıralar ve her adımın
+hangi bölümde kurulduğunu gösterir; sonucun nasıl kurulduğunu izlemek isteyen
+oradan başlar. İki bölümün sayıları farklı yapılanmalara aittir, dolayısıyla
+birbirinin yerine geçmez.
 
 Geri kalan bölümler ise ana hattı ilerletmez. Her biri, üç adımdan birine
 yöneltilebilecek belirli bir itirazı karşılar ve o itirazı kapatınca işi biter.
@@ -330,6 +326,12 @@ sonucu taşırken onun bir alt bölümü yalnızca bir itiraza cevap veriyor ola
 Bölüm 14 ile Bölüm 15, eşiğin hangi modları geçirdiğini kayda geçiren iki
 dökümdür ve ana hat ile itiraz bölümlerinin arasında durmaktadır. Sonucu
 üretmezler, ancak sonucun kendi içinde tutarlı kalmasını onlar sağlar.
+
+**"Eşik" kökü üç ayrı nesnede geçer.** Tek başına **eşik**, iki bölgeyi ayıran
+sonlu kalınlıktaki katmandır. **Eşik gecikmesi**, parçacığın o katmanı geçmesi
+için gereken süredir ve saniye taşır. **Eşik mesafesi** $s^\ast$ ise Bölge
+II'de alınan ve dönüşü tam kalkış anına getiren uzunluktur, ve metre taşır.
+Üçünün birimi farklı olduğundan hangisinin kastedildiği bağlamdan da okunur.
 
 **"Sözlük" sözcüğü üç ayrı nesneyi adlandırır.** Üçü aşağıda bir kez ayrılmıştır ve
 çalışmanın geri kalanında bu ayrım tekrarlanmamaktadır.
@@ -1778,7 +1780,8 @@ yolun daha **ilk adımında** kaybolur, ikinci adımı beklemez.
 | Ara bölge, $(2,2)$ | 2 | Bağlantılı | Yok |
 | Bölge II, $(3,1)$ | 3 | Bağlantılı | Yok |
 
-Ok, entropiden değil, zaman yönü **sayısından** çıkar; ve eşik değeri birdir.
+Ok, entropiden değil, zaman yönü **sayısından** çıkar: bir yön varsa ok vardır,
+birden çoksa yoktur.
 
 **Literatürdeki karşılığı.** [11], imza değiştiren bir manifoldun geçiş
 hiperyüzeyinde, her noktadan geçen ve zaman yönünü tersine çeviren kapalı
@@ -3791,7 +3794,7 @@ yazılmasının nedeni de budur.
 
 | Konu | Durum |
 | ------------------------- | ------------------------------------------------------------------------ |
-| Üç zamanda zamanın oku | Kapandı (Bölüm 9.4), ok zaman yönü sayısından çıkar, eşik değeri birdir |
+| Üç zamanda zamanın oku | Kapandı (Bölüm 9.4), ok zaman yönü sayısından çıkar, bir yön varsa ok vardır |
 | Dönüşümdeki $\pm$ işareti | Kapanamaz olduğu gösterildi (Bölüm 16.6) |
 | Grup yapısı | Kapandı (Bölüm 4.2), sorun $B$ katmanında |
 | Superluminal durgunluk | Kapandı (Bölüm 10.2), ayar fazlalığı |
