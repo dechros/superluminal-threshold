@@ -3145,31 +3145,34 @@ fazdır.
 
 ### 18.7 Eşlemenin kapalı biçimi
 
-Bölüm 18.1 ile Bölüm 18.6 arası eşlemeyi **tarayarak** vermiştir. Tarama bir cevap
-değildir: bu durumların nereye döndüğünü söyler, eşlemenin **ne olduğunu**
-söylemez. Bu bölüm onu formül olarak yazmıştır. Yapılan tarama literatürde bu
-eşlemenin hiçbir biçimini bulmamıştır; aşağıdakini bu çalışma üretir.
+Bölüm 18.1 ile Bölüm 18.6 arası eşlemeyi **tarayarak** vermişti. Oysa tarama tam
+bir cevap sayılmaz: taranan durumların nereye gittiğini söyler, ama eşlemenin
+**ne olduğunu** söylemez. Bu alt bölüm onu formül olarak yazmaktadır. Literatür
+taraması bu eşlemenin hiçbir biçimini bulamamıştır, dolayısıyla aşağıdaki formülü
+bu çalışma üretir.
 
-**İki özdeşlik formülü kısaltıyor ve ikisi de yaklaşık değil tamdır.**
+**Formülü iki özdeşlik kısaltmaktadır, ve ikisi de yaklaşık değil tamdır.**
 
 **Birinci özdeşlik.** Dış normal dalga sayısı, enerji vektörünün **birinci
-bileşenidir**. Kütle kabuğu frekansı uzunluktan sabitler, enine dalga sayısı
-öteki iki bileşenin uzunluğudur ve fark birinci bileşeni yalnız bırakır:
+bileşenine** eşittir. Kütle kabuğu frekansı vektörün uzunluğundan sabitler, enine
+dalga sayısı öteki iki bileşenin uzunluğunu verir, ve aradaki fark birinci
+bileşeni yalnız bırakır:
 
 $$\kappa^2 = \frac{\omega^2}{c^2} - k_\perp^2 - \mu = (E_1^2 + E_2^2 + E_3^2 + \mu) - (E_2^2 + E_3^2) - \mu = E_1^2$$
 
 $$\boxed{\;\kappa = |E_1|\;}$$
 
 Yani modun yüzeyle nasıl karşılaştığına karar veren nicelik, yönelimin bir
-fonksiyonu değil, **bir koordinatıdır**. Bu, tüm formülü kısaltan şeydir.
+fonksiyonu değil doğrudan **bir koordinatıdır**. Formülü kısaltan şey de budur.
 
-**İkinci özdeşlik.** İç sönüm sabiti aynı üç bileşenden, tek ek girdi olarak
-çevrilen yön sayısı $n$ ile kurulur:
+**İkinci özdeşlik.** İç sönüm sabiti de aynı üç bileşenden kurulmaktadır; tek ek
+girdi, imzası çevrilen yön sayısı $n$ olur:
 
 $$\beta^2 = \frac{2n}{3}\,(E_2^2 + E_3^2) - E_1^2$$
 
-Dolayısıyla geçişin engel mi geçit mi olduğu, bileşenler arasında düz bir
-eşitsizliktir. Öklid ara bölge için ($n = 3$):
+Dolayısıyla ara bölgenin engel mi yoksa geçit mi olduğu, bileşenler arasındaki
+düz bir eşitsizliğe inmektedir. Öklid ara bölge için ($n = 3$) bu eşitsizlik
+şudur:
 
 $$\text{engel} \iff 2(E_2^2 + E_3^2) > E_1^2$$
 
@@ -3184,11 +3187,12 @@ bunun **iki katıdır**:
 
 $$t_{\text{gidiş dönüş}}(\mathbf{E}) \;=\; \frac{4\,\omega}{c^2\,\kappa\,\beta}$$
 
-Bölüm 18.5'in tablosu bu nicelikle kurulur; ışık süresi de gidiş dönüş olduğu
-için ikisi aynı ayaktadır.
+Bölüm 18.5'in tablosu bu nicelikle kurulmuştur, ve ışık süresi de bir gidiş dönüş
+süresi olduğundan ikisi aynı ayakta durmaktadır.
 
-**İçinde kalınlık yoktur.** Doyum burada bir tabloda fark edilen bir şey değil,
-bir **özdeşliktir**. Saçılma hesabıyla karşılaştırıldığında:
+**Formülün içinde kalınlık geçmez.** Yani doyum, bir tabloda sonradan fark edilen
+bir olgu değil, doğrudan bir **özdeşliktir**. Saçılma hesabıyla
+karşılaştırıldığında şu çıkar:
 
 | $d$ | Saçılma hesabı | Kapalı biçim | Artık |
 | ---- | -------------- | ------------ | ----------------------- |
@@ -3198,20 +3202,22 @@ bir **özdeşliktir**. Saçılma hesabıyla karşılaştırıldığında:
 | $32$ | $1{,}462864$ | $1{,}462864$ | $7{,}2 \times 10^{-11}$ |
 
 **Sonlu kalınlık biçimi.** Doyum henüz kurulmamışken de geçerli olan tam biçim,
-doyuran çarpanı açıkça taşır.
-$u = 2\kappa\beta / [(\kappa^2-\beta^2)\tanh(\beta d)]$ olmak üzere:
+doyuma götüren çarpanı açıkça taşımaktadır. $u = 2\kappa\beta /
+[(\kappa^2-\beta^2)\tanh(\beta d)]$ yazıldığında:
 
 $$\arg T = \frac{\pi}{2} - \arctan u, \qquad t = -\frac{1}{1+u^2}\,\frac{du}{d\omega}$$
 
 $$\frac{d\kappa}{d\omega} = \frac{\omega}{c^2\kappa}, \qquad \frac{d\beta}{d\omega} = -\frac{\omega}{c^2\beta}$$
 
-$\tanh(\beta d) \to 1$ limitinde $u \to 2\kappa\beta/(\kappa^2-\beta^2)$ olur,
-kalınlık düşer ve yukarıdaki kapalı biçim geri gelir. Sonlu kalınlıkta da
-saçılma hesabıyla örtüşür: $d = 1$ için $1{,}451403$, $d = 2$ için $1{,}462898$,
-ikisi de her iki yoldan aynıdır.
+$\tanh(\beta d) \to 1$ limitinde $u$ değeri $2\kappa\beta/(\kappa^2-\beta^2)$'ye
+gitmekte, kalınlık formülden düşmekte ve yukarıdaki kapalı biçim geri
+gelmektedir. Bu tam
+biçim sonlu kalınlıkta da saçılma hesabıyla örtüşmektedir: $d = 1$ için
+$1{,}451403$, $d = 2$ için $1{,}462898$ çıkar, ve iki yol da aynı sayıyı verir.
 
-**Dört koordinatın tamamı.** Öte taraftaki durum, üç zamandaki enerji vektörü
-$\mathbf{E}$ ile tek uzay eksenindeki dal $\sigma = \pm 1$'dir. Dönüş olayı:
+**Dört koordinatın tamamı.** Öte taraftaki bir durumu, üç zamandaki enerji
+vektörü $\mathbf{E}$ ile tek uzay eksenindeki dal $\sigma = \pm 1$ belirler.
+Dönüş olayının dört koordinatı da bunlardan çıkar:
 
 $$t = \frac{4\omega}{c^2\,|E_1|\,\beta}, \qquad
 x_\perp = d\,\frac{1+\sigma}{2}, \qquad y = S(d)\,\frac{E_2}{|\mathbf{E}|},
