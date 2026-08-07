@@ -2943,16 +2943,16 @@ kullanılamaz.
 
 İki çekince kayda geçirilmiştir.
 
-**Birincisi, aralık uzunlukla daralır, genişlemez.** Daha hızlı bir parçacık
-dönüş anı üzerinde daha **dar** bir seçim aralığına sahiptir. Bu, beklenenin
-tersidir ve hesabın sonucudur.
+**Birincisi, aralık uzunlukla daralmaktadır, genişlememektedir.** Yani daha hızlı
+bir parçacığın dönüş anı üzerindeki seçim aralığı daha **dardır**. Bu, beklenenin
+tersi bir sonuçtur ve doğrudan hesaptan çıkar.
 
 **İkincisi, aralığın büyüklüğü yanıltıcıdır.** Aralığa hâkim olan katkı, yüzeye
-teğet geçen yönelimlerden gelir; orada normal dalga sayısı sıfıra gider ve
+teğet geçen yönelimlerden gelmektedir; orada normal dalga sayısı sıfıra gider ve
 gecikme ıraksar. Bu nedenle $62{,}4$ sayısı fiziksel bir manevra kabiliyeti
-değil, bir limit davranışıdır. Teğetlikten uzakta da yönelim dönüş anını
-değiştirmeye devam eder, dolayısıyla etki bir ıraksama artefaktı değildir; ancak
-büyüklüğü bu sayının verdiği izlenimden küçüktür.
+değil, bir limit davranışıdır. Yine de teğetlikten uzakta da yönelim dönüş anını
+değiştirmeyi sürdürür, dolayısıyla etki bir ıraksama yan ürünü sayılmaz; yalnızca
+büyüklüğü bu sayının verdiği izlenimden küçük kalır.
 
 ### 17.5 Yönelim izinin kaynağı
 
@@ -2961,55 +2961,58 @@ bölüm aynı soruyu bağımsız bir yoldan sorar ve **etkinin nerede doğduğun
 belirlemektedir.
 
 **Ölçüt.** Bir durum aynı anda birden çok zaman değişkeninde evriliyorsa, her
-biri kendi üretecini taşır ve bu evrimler ancak zamanlar uzayındaki taşımanın
-yoldan bağımsız olması hâlinde tutarlı kalır. Bu koşul, bileşenleri üreteçlerin
+değişken kendi üretecini taşır. Bu evrimler ancak zamanlar uzayındaki taşıma
+yoldan bağımsız kaldığında tutarlı olur, ve o koşul da bileşenleri üreteçlerin
 ikişerli komütatörleri olan bir eğriliğin sıfırlanmasını gerektirir. Ölçüt bu
 çalışmaya ait değildir: çok zamanlı dalga fonksiyonları için [18] ve [19]'da
-kurulmuştur; ikincisi onu genel etkileşim potansiyelleri için tutarlılığın tam
-koşulu olarak verir. [18] ayrıca burada önemli olan ayrımı yapar: çok
-zamanlı bir betimleme, birden çok zamansı boyut demek değildir. Burada
-uygulanan, o ölçütün kendisidir. Eğrilik sıfırsa yol hiçbir bilgi taşımaz ve tek
-zamana indirgeme belirsizlik içermez; sıfır değilse kapalı bir yol durumun
-üzerinde bir holonomi bırakır ve zamanlar arasındaki yönelim gözlenebilir hâle
-gelir.
+kurulmuş, ikincisi onu genel etkileşim potansiyelleri için tutarlılığın tam
+koşulu olarak vermiştir. [18] ayrıca burada önemli olan bir ayrımı yapar: çok
+zamanlı bir betimleme, birden çok zamansı boyut demek değildir. Burada uygulanan
+şey o ölçütün kendisidir, ve okunuşu şudur. Eğrilik sıfırsa yol hiçbir bilgi
+taşımaz, tek zamana indirgeme de belirsizlik içermez. Sıfır değilse kapalı bir
+yol durumun üzerinde bir holonomi bırakır, ve zamanlar arasındaki yönelim
+gözlenebilir hâle gelir.
 
-**Serbest kuram düzdür.** Öte tarafın serbest alanı için üç üreteç, tek bir
-enerji vektörünün bileşenleridir ve komüte ederler; üç eğrilik bileşeninin üçü
-de tam olarak sıfırdır. Kapalı bir yolun holonomisi, yolun uzunluğu ne olursa
-olsun kaybolur; bu, $1000$ birimlik yol için de denetlenmiştir.
+**Serbest kuram düzdür.** Öte tarafın serbest alanında üç üreteç, tek bir enerji
+vektörünün bileşenlerinden ibarettir ve birbiriyle komüte ederler. Bu yüzden üç
+eğrilik bileşeninin üçü de tam olarak sıfır çıkmaktadır. Kapalı bir yolun
+holonomisi de, yolun uzunluğu ne olursa olsun kaybolur; bu $1000$ birimlik bir
+yol için ayrıca denetlenmiştir.
 
 > İçerideki yol, serbest evrim tarafından **kaydedilmez**. Dolayısıyla Bölüm
 > 17.3'te bulunan yönelim bağımlılığının kaynağı ara bölgenin içi olamaz.
 
-**Eğriliği yüzeyler getiriyor.** İki eşik yüzeyindeki eşleşme, geçiş
-doğrultusunu enine doğrultulara karıştırır ve üreteçler bu karışım altında
-komüte etmeyi bırakır. Eğrilik bağlaşım gücüyle doğru orantılıdır ve bağlaşım
-sıfırlandığında tümüyle kaybolur, dolayısıyla etkinin **tamamı** yüzeylere
-aittir.
+**Eğriliği yüzeyler getirmektedir.** İki eşik yüzeyindeki eşleşme, geçiş
+doğrultusunu enine doğrultulara karıştırır, ve üreteçler bu karışım altında
+komüte etmeyi bırakır. Ortaya çıkan eğrilik bağlaşım gücüyle doğru orantılıdır ve
+bağlaşım sıfırlandığında tümüyle kaybolur. Dolayısıyla etkinin **tamamı**
+yüzeylere aittir.
 
-**İki hesabın örtüşmesi.** Bu, bağımsız bir sınamadır ve durum durum tutar:
+**İki hesabın örtüşmesi.** Bu örtüşme bağımsız bir sınamadır, ve durum durum
+tutmaktadır:
 
 | Durum | Yüzey eğriliği | Saçılmanın dönüş anını oynatması |
 | -------------------------------------------------------------------------------- | -------------- | -------------------------------- |
 | Geçiş yuvasında ağırlığı olmayan vektör, diğer iki yuvanın düzleminde döndürülür | $0$ | $0$ |
 | Genel bir vektör, geçiş yuvasına dokunan düzlemde döndürülür | $3{,}000$ | $1{,}6383$ |
 
-Ayrıca eğrilik yalnızca geçiş yuvasına dokunan iki düzlemde sıfırdan farklıdır;
-diğer iki yuvanın gerdiği düzlem, yüzeyler dâhil edildiğinde bile düzdür. Bu,
-Bölüm 16.11'de fazdan bağımsız olarak bulunan seçimin **aynısıdır**: çıkış anı
-üç zaman düzleminden ikisini görür, birini görmez. İki ayrı yoldan aynı iki
-düzleme varılmıştır.
+Eğrilik ayrıca yalnızca geçiş yuvasına dokunan iki düzlemde sıfırdan farklı
+çıkmaktadır; diğer iki yuvanın gerdiği düzlem, yüzeyler hesaba katıldığında bile
+düz kalır. Seçilen bu iki düzlem, Bölüm 16.11'de fazdan bağımsız olarak bulunan
+düzlemlerin **aynısıdır**: çıkış anı üç zaman düzleminden ikisini görür, birini
+görmez. Yani iki ayrı yoldan aynı iki düzleme varılmıştır.
 
 **Sonuç.** Yönelimin Bölge I'in zaman eksenindeki izi gerçektir, ancak ara
-bölgenin içinde değil, **sınırında** doğar. Bunu iki hesaptan hiçbiri tek başına
-söyleyemez: saçılma etkinin varlığını verir, eğrilik ölçütü yerini vermektedir.
+bölgenin içinde değil **sınırında** doğmaktadır. Bunu iki hesaptan hiçbiri tek
+başına söyleyemez: saçılma etkinin varlığını verir, eğrilik ölçütü ise yerini.
 
 ---
 
 ## 18. Yönelimden dönüş olayına
 
-Önceki bölümler eşlemenin parçalarını ayrı ayrı kurdu. Bu bölüm o parçaları tek
-bir hesapta birleştirir ve eşlemenin tanım kümesini baştan sona tarar.
+Önceki bölümler eşlemenin parçalarını ayrı ayrı kurmuştu. Bu bölüm o parçaları
+tek bir hesapta birleştirmekte, ve eşlemenin tanım kümesini baştan sona
+taramaktadır.
 
 ### 18.1 Tanım kümesi
 
@@ -3020,8 +3023,8 @@ bir hesapta birleştirir ve eşlemenin tanım kümesini baştan sona tarar.
  değişir.
 2. **Dal.** Tek uzay ekseni boyunca dalga sayısının işareti. İki değer alır.
 
-Dolayısıyla yönelim uzayı $S^2 \times \mathbb{Z}_2$'dir. Taramada bu uzay $312$
-duruma ayrıklaştırılmıştır.
+İki veri birleşince eşlemenin tanım kümesi $S^2 \times \mathbb{Z}_2$ olmaktadır.
+Tarama bu uzayı $312$ ayrık duruma bölmüştür.
 
 ### 18.2 Değer kümesi
 
@@ -3030,8 +3033,9 @@ vardır:
 
 $$(t,\; x_{\perp},\; y,\; z)_{\text{dönüş}}$$
 
-Burada $t$ geçen süre, $x_{\perp}$ geçiş doğrultusundaki yer değiştirme, $y$ ve
-$z$ enine yer değiştirmelerdir. Her dördü de öte taraftaki durumdan hesaplanır:
+Burada $t$ geçen süreyi, $x_{\perp}$ geçiş doğrultusundaki yer değiştirmeyi, $y$
+ile $z$ ise enine yer değiştirmeleri göstermektedir. Dördü de öte taraftaki
+durumdan hesaplanır, ancak dördü farklı yerlerden gelir:
 
 | Koordinat | Nereden gelir |
 | ----------- | --------------------------------------------------------------------- |
@@ -3039,9 +3043,9 @@ $z$ enine yer değiştirmelerdir. Her dördü de öte taraftaki durumdan hesapla
 | $x_{\perp}$ | Daldan: sıfır ya da kalınlık, yani hangi yüzden çıktığı |
 | $y,\, z$ | Paket merkezinin kayması, yönelimin enine bileşenlerine dağıtılmış |
 
-Taranan $312$ durumun tamamı sonlu ve belirli bir olaya gider; eşlemede tanımsız
-nokta yoktur. Üç örnek durum, eşlemenin ne verdiğini somutlaştırır ($d = 2$,
-uzunluk kütle kabuğundan):
+Taranan $312$ durumun tamamı sonlu ve belirli bir olaya gitmektedir, yani
+eşlemede tanımsız nokta bulunmaz. Aşağıdaki üç örnek eşlemenin ne verdiğini
+somutlaştırmaktadır ($d = 2$, uzunluk kütle kabuğundan):
 
 | Kutup açısı | $t$ | $x_{\perp}$ | $(y,\, z)$ |
 | ----------- | ----------- | ----------- | -------------------------- |
