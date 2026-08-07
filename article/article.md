@@ -2827,31 +2827,32 @@ içinde değil, yüzeylerde belirlenmektedir.
 
 ### 16.11 Çıkış anının gördüğü düzlemler
 
-Çıkış anı ise dönmeye kör değildir, ancak seçicidir. Öte tarafın enerji vektörü,
-geçiş altında Bölge I'in üç momentumudur; bileşenlerinden biri geçiş yönüne,
-ikisi enine yönlere karşılık gelir. Bir dönme, ancak geçiş yönüyle enine yönler
-arasında ağırlık taşırsa çıkış anını değiştirir.
+Çıkış anı ise dönmeye kör değildir, ancak seçici davranır. Öte tarafın enerji
+vektörü geçiş altında Bölge I'in üç momentumuna karşılık gelir, ve
+bileşenlerinden biri geçiş yönüne, ikisi ise enine yönlere düşmektedir. Bir dönme
+çıkış anını ancak geçiş yönüyle enine yönler arasında ağırlık taşıdığında
+değiştirmektedir:
 
 | Dönme düzlemi | Çıkış anına etkisi |
 | --------------------------------- | ------------------ |
 | İki enine yuvanın gerdiği düzlem | Yok |
 | Geçiş yuvasına dokunan iki düzlem | Var |
 
-Enine düzlemdeki dönme enine bileşenlerin kare toplamını korur; artık $10^{-12}$
-mertebesindedir. Diğer iki düzlemde dönme o toplamı değiştirir ve çıkış anı
-kayar.
+Tablonun ilk satırının nedeni şudur: enine düzlemdeki bir dönme enine
+bileşenlerin kare toplamını korur, ve artık $10^{-12}$ mertebesinde kalır. Diğer
+iki düzlemde ise dönme o toplamı değiştirmekte ve çıkış anı kaymaktadır.
 
-Bu, gözlemsel olarak anlamlı bir ayrımdır: parçacığın öte tarafta **hangi
-düzlemde döndüğü** buradan çıkarılabilir, çıkış anına bakılarak. Buna karşılık
-**hangi yüzden çıktığı** hiçbir düzleme bağlı değildir.
+Bu ayrım gözlem bakımından anlamlıdır: çıkış anına bakılarak parçacığın öte
+tarafta **hangi düzlemde döndüğü** çıkarılabilir. Buna karşılık **hangi yüzden
+çıktığı** hiçbir düzleme bağlı değildir.
 
 ### 16.12 İçerideki yolun izi
 
-İçeride süpürülen açı süreklidir; dönme açısı serbest bir parametredir ve
-birbirine ne kadar yakın iki değer seçilirse seçilsin farklı iki yol elde
-edilir. Örnek olarak, çeyrek turluk bir dönme $1{,}1102$ radyan süpürür. Buna
-karşılık buraya ulaşan sapma, Bölüm 16.5'in nicelenmiş tayfının bir elemanıdır
-ve momentum $(1,2,3)$ için o tayf **üç** değerlidir.
+İçeride süpürülen açı süreklidir. Dönme açısı serbest bir parametre olduğundan,
+birbirine ne kadar yakın iki değer seçilirse seçilsin iki farklı yol doğmaktadır;
+örneğin çeyrek turluk bir dönme $1{,}1102$ radyan süpürmektedir. Buna karşılık
+Bölge I'e ulaşan sapma, Bölüm 16.5'in nicelenmiş tayfının bir elemanıdır, ve
+momentum $(1,2,3)$ için o tayf yalnızca **üç** değer taşır.
 
 Sürekli bir küme burada üç elemanlı bir kümeye düşmektedir. Bu düşüş, Bölüm
 1.10'un dokuzuncu maddesinin somut karşılığıdır: öte taraftaki yönelim, dönüş
@@ -2871,27 +2872,27 @@ bileşke dönmenin nicelenmiş izi kalır.
 
 ## 17. Koordinat sözlüğü
 
-Çekirdek soru şudur: öte tarafta dört koordinatın her birinde hareket etmenin ya
-da yönelmenin Bölge I'deki karşılığı nedir. Bu bölüm o sözlüğü kurar; Bölüm 18
-sözlüğü kullanarak dönüş olayını hesaplamaktadır.
+Buradaki soru şudur: parçacık öte tarafta dört koordinattan birinde hareket eder
+ya da yönelirse, bunun Bölge I'deki karşılığı ne olur. Bu bölüm o sözlüğü kurar,
+Bölüm 18 ise sözlüğü kullanarak dönüş olayını hesaplamaktadır.
 
 ### 17.1 Sözlüğün burada kullanılan biçimi
 
-Dört yuvanın karakteri, hangi yuvaya indiği ve bir birim adımın Bölge I saatinde
-ne ürettiğini Bölüm 10.1 tablo hâlinde verir ve bu bölüm onu tekrarlamaz. Bu
-bölümün ihtiyaç duyduğu iki sonuç şudur: dört yuvanın dördü de eşikte karakter
-değiştirir ve buna karşın hareket serbestliği yuva yuva korunmaktadır. Öte tarafın üç
-zamanında serbestçe hareket edilir ve o üç zamanın taşıdığı Bölge I uzay
-yönlerinde de. Öte tarafın tek uzay ekseninde yön seçilemez ve onun taşıdığı
-Bölge I zamanında da seçilemez.
+Dört yuvanın karakterini, hangi yuvaya indiğini ve bir birim adımın Bölge I'in
+saatinde ne ürettiğini Bölüm 10.1 tablo hâlinde vermişti, ve bu bölüm o tabloyu
+tekrarlamaz. Buradan yalnızca iki sonuç gerekmektedir. Birincisi, dört yuvanın
+dördü de eşikte karakter değiştirir. İkincisi, buna karşın hareket serbestliği
+yuva yuva aynı kalmaktadır. Parçacık öte tarafın üç zamanında ve o üç zamanın
+taşıdığı Bölge I uzay yönlerinde serbestçe hareket etmektedir. Buna karşılık öte
+tarafın tek uzay ekseninde ve onun taşıdığı Bölge I zamanında yön seçemez.
 
-Tek yönlü koordinatın iki bölgede **ayna yerlerde** durması bu sözlüğün en sıkı
-ifadesidir: Bölge I'in zamanı ile Bölge II'nin tek uzay ekseni aynı
-koordinattır ve ikisinde de yön seçilemez.
+Sözlüğün en sıkı ifadesi de buradan çıkar: tek yönlü koordinat iki bölgede **ayna
+yerlerde** durmaktadır. Bölge I'in zamanı ile Bölge II'nin tek uzay ekseni aynı
+koordinattır, ve ikisinde de yön seçilemez.
 
-"Tek yönlü" ifadesinin içindeki iki ayrı iddiayı, yani yönlendirilebilirlik ile
-ilerleme zorunluluğunu, Bölüm 9.3 ayırır ve yalnızca birincisinin hesaplandığını
-göstermektedir.
+"Tek yönlü" ifadesinin içinde iki ayrı iddia gizlidir, yani yönlendirilebilirlik
+ile ilerleme zorunluluğu. Bölüm 9.3 bu ikisini birbirinden ayırmakta ve yalnızca
+birincisinin hesaplandığını göstermektedir.
 
 Bu ifadenin Bölüm 4.1.3'ün sonucuyla nasıl bir arada durduğu da orada yazılıdır.
 Yön seçilemez, çünkü cisim o eksende geri dönemez. Dönüş anının işareti ise
@@ -2900,32 +2901,31 @@ cismin yürüyüş yönünden değil, hangi geçiş eşlemesinin kullanıldığ�
 
 ### 17.2 Yönelimin gözlenemezliği
 
-Üç zaman arasında bir $O(3)$ simetrisi vardır ve bu bir ayar fazlalığıdır.
-Sonucu şudur: öte tarafta enerji vektörünün **yönü** fiziksel değildir, yalnızca
-**uzunluğu** fizikseldir. Vektör döndürülebilir, ama orada bu dönmenin
-gözlenebilir bir karşılığı yoktur.
+Üç zaman ekseni arasındaki $O(3)$ simetrisi bir ayar fazlalığıdır, ve bunun
+sonucu şudur: öte tarafta enerji vektörünün **yönü** fiziksel değildir, yalnızca
+**uzunluğu** fizikseldir. Vektör döndürülebilir, ancak o dönmenin orada
+gözlenebilir bir karşılığı bulunmamaktadır.
 
-Yönelimin büyüklüğünü belirleyen şey kütle kabuğudur. Uzunluk, parçacığın
-enerjisi ve kütlesiyle sabitlenir; üç zaman düzlemlerinden herhangi birinde
-döndürmek uzunluğu değiştirmez, artık $10^{-16}$ mertebesindedir.
+Vektörün uzunluğunu ise kütle kabuğu sabitlemektedir. Uzunluk parçacığın enerjisi
+ve kütlesiyle belirlenir, ve üç zaman düzleminden herhangi birinde döndürmek onu
+değiştirmez; artık $10^{-16}$ mertebesinde kalır.
 
 > Parçacık öte tarafta **yönünü seçebilir, uzunluğunu seçemez.**
 
 ### 17.3 Üç zamandaki hareketin etkisi
 
-Çekirdek sorunun en can alıcı yeri budur ve cevabı iki katmanlıdır.
+Çekirdek sorunun en can alıcı yeri burasıdır, ve cevabı iki parçadan oluşur.
 
-**Doğrudan yol kapalı kalır.** Bölüm 10.1'in tablosu bunu vermektedir: üç zamanın
-her birinde bir birim adımın Bölge I saatindeki karşılığı tam olarak sıfırdır,
-tek uzay ekseninde ise tam olarak birdir.
+**Doğrudan yol kapalı kalır.** Bunu Bölüm 10.1'in tablosu vermektedir: üç zamanın
+her birinde bir birim adımın Bölge I'in saatindeki karşılığı tam olarak sıfırdır,
+tek uzay ekseninde ise tam olarak birdir. Yani "orada zamanda yürüdüm, burada
+zamanda kaydım" cümlesini involüsyonun kendisi **desteklemez**, çünkü involüsyon
+o hareketi Bölge I'in uzayına gönderir.
 
-Yani "orada zamanda yürüdüm, burada zamanda kaydım" cümlesi involüsyonun kendisi
-tarafından **desteklenmez**. Involüsyon o hareketi Bölge I'in uzayına gönderir.
-
-**Dolaylı yol açıktır.** Aynı enerji vektörünün bileşenleri, iki yüzeydeki
-eşleşmeye girer ve dönüş anı o eşleşmenin fazından okunmaktadır. Uzunluk sabit tutulup
-yalnızca yön değiştirildiğinde dönüş anı değişir: yönelim küresi tarandığında
-ulaşılan aralık, uzunluk $3$ için $62{,}4$ birimdir.
+**Dolaylı yol ise açıktır.** Aynı enerji vektörünün bileşenleri iki yüzeydeki
+eşleşmeye girmekte, ve dönüş anı o eşleşmenin fazından okunmaktadır. Uzunluk
+sabit tutulup yalnızca yön değiştirildiğinde dönüş anı da değişir: yönelim küresi
+tarandığında ulaşılan aralık, uzunluk $3$ için $62{,}4$ birim olmaktadır.
 
 > Öte taraftaki yönelim, Bölge I'in zaman ekseninde **başka bir konumu işaret
 > eder**. Ama bunu koordinat izdüşümüyle değil, eşleşmenin fazıyla yapar.
