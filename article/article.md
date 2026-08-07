@@ -3235,74 +3235,76 @@ tarama artık cevaba giden tek yol değil, **formülün üzerindeki bir denetimd
 
 ### 18.8 Yönün buradan seçilebilirliği
 
-Formül, öte taraftaki yer değiştirmeyi veri almaktadır. Yer değiştirmenin **işareti**
-dönüş anını doğrudan belirlediğine göre, o işaretin buradan kurulup
-kurulamayacağı ayrı ve meşru bir sorudur.
+Yukarıdaki formül öte taraftaki yer değiştirmeyi veri olarak almaktadır. O yer
+değiştirmenin **işareti** dönüş anını doğrudan belirlediğine göre, işaretin Bölge
+I'den kurulup kurulamayacağı ayrı ve meşru bir soru hâline gelir.
 
-**İki soru birbirinden ayrıdır.** Birincisi hangi geçiş eşlemesinin
-gerçekleştiğidir. Bu soru, Bölge I'in zaman yuvasıyla öte tarafın ayrıcalıklı
-uzay eksenini **birlikte** ters çeviren dönüşüme bakar ve o dönüşüm ayrıca
-incelenmiştir. Buradaki soru ise eşleme verilmişken **yolculuğun yönüdür** ve
-yalnızca geçiş ekseninin ters çevrilmesine bakar. İşaret dizileri olarak
-yazıldığında birincisi $(-1,-1,+1,+1)$, ikincisi $(+1,-1,+1,+1)$'dir; çarpımları
-$(-1,+1,+1,+1)$, yani Bölge I zamanının saf ters çevrilmesidir. İki işlem farklı
-grup öğeleridir ve biri hakkındaki bir teorem ötekini kapatmaz.
+**Karıştırılmaması gereken iki soru vardır.** Birincisi, hangi geçiş eşlemesinin
+gerçekleştiğidir; bu soru Bölge I'in zaman yuvasıyla öte tarafın ayrıcalıklı uzay
+eksenini **birlikte** ters çeviren dönüşüme bakar, ve o dönüşüm ayrıca
+incelenmiştir. Buradaki soru ise eşleme verilmişken **yolculuğun yönüdür**, ve
+yalnızca geçiş ekseninin ters çevrilmesine bakar. İşaret dizisi olarak
+yazıldığında birincisi $(-1,-1,+1,+1)$, ikincisi $(+1,-1,+1,+1)$ olur; çarpımları
+$(-1,+1,+1,+1)$, yani Bölge I zamanının saf ters çevrilmesidir. İkisi farklı grup
+öğeleri olduğundan, biri hakkındaki bir teorem ötekini kapatmaz.
 
 **Geçişi biçimlendirerek yön verilemez.** Literatürdeki karşılıklılık sonucu
-şunu söyler: her iki uçta yön başına tek bir yayılan kanal varsa, uzaysal olarak
-bakışımsız bir engelin geçirgenliği soldan ve sağdan giriş için aynıdır. Bu,
-zamanda tersinirlik ile birimsellikten çıkar. Bu sonuç olduğu gibi benimsenmez; burada
-kurulmuş profiller onu yeniden üretmiştir. Çarpık profil için geçirgenlik iki yönde
-de $4{,}9096125448 \times 10^{-3}$ çıkar ve fark $7 \times 10^{-18}$
-mertebesinde kalır. Profilin gerçekten bakışımsız olduğu ayrıca doğrulandı.
-Dolayısıyla eşitliği profilde saklanan bir bakışım değil, teorem vermektedir.
-Kurulmuş beş profilin hiçbiri iki yönde farklı geçirmez.
+şunu söylemektedir. Her iki uçta yön başına tek bir yayılan kanal varsa, uzaysal
+olarak bakışımsız bir engelin geçirgenliği soldan ve sağdan giriş için aynı
+kalır. Bu sonuç, zamanda tersinirlik ile birimsellikten çıkmaktadır. Bu metin onu
+olduğu gibi benimsemez, burada kurulan profillerle yeniden üretmiştir. Çarpık
+profil için geçirgenlik iki yönde de $4{,}9096125448 \times 10^{-3}$ çıkmakta ve
+aradaki fark $7 \times 10^{-18}$ mertebesinde kalmaktadır. Profilin gerçekten
+bakışımsız olduğu da ayrıca doğrulanmıştır. Dolayısıyla eşitliği, profilde
+gizlenmiş bir bakışım değil doğrudan teorem vermektedir, ve kurulan beş profilin
+hiçbiri iki yönde farklı geçirmez.
 
 > Tek kanallı bir gönderimde yolculuğun yönü, parçacığın zaten taşıdığı
 > işarettir. Engelin biçimi, kalınlığı ve bakışımsızlığı bu işareti
 > **değiştirmez**.
 
 **Karşılıklılığın açık bıraktığı tek yer, gelen durumun kendisidir.** Eşevreli
-bir kanal çiftinin taşıdığı yön, kanallar arası bağıl fazın tekil bir
-fonksiyonudur. Ağırlıkları $A$ ve $B$, bağıl fazı $\varphi$ olan bir çift için
-yön göstergesi $2AB\sin\varphi$ olur. $\varphi$ işaret değiştirdiğinde
-göstergenin işareti de değişir. Yani yanlılık engelde değil, gelen durumdadır.
+bir kanal çiftinin taşıdığı yön, kanallar arası bağıl fazın tek başına
+belirlediği bir niceliktir. Ağırlıkları $A$ ve $B$, bağıl fazı $\varphi$ olan bir
+çift için yön göstergesi $2AB\sin\varphi$ olur, ve $\varphi$ işaret değiştirdiğinde
+göstergenin işareti de döner. Yani yanlılık engelde değil, gelen durumda
+saklıdır.
 
-Bu, dal taramasının öteki uçtan vardığı gereksinimle **aynı biçimdedir**: tam
-olarak bir eksende tek olan bir nicelik. Orada eşleme seçimi için, burada
-yolculuk yönü için çıkmaktadır.
+Bu gereksinim, dal taramasının öteki uçtan vardığı gereksinimle **aynı
+biçimdedir**: tam olarak bir eksende tek olan bir nicelik. Orada o nicelik eşleme
+seçimi için gerekiyordu, burada yolculuk yönü için gerekmektedir.
 
 İki ters çevirmenin ayrı tutulması özgün bir gözlem değildir. Saçılma kuramının
 olağan sınıflandırmasında karşılıklılık, zamanda tersinme ve uzaysal evirme
 **ayrı işlemlerdir** ve karşılıklılık yalnızca geçirgenlik genliklerini bağlar.
 Burada yapılan, o sınıflandırmanın bu geçişe uygulanmasıdır.
 
-**Burada bir sonuç iddiası bulunmamaktadır.** Öte taraf tek bir uzay ekseni
-taşır ve yukarıdaki çift geçişten türemez; bu bölüm onu elle yazar. Böyle bir
-kanal yapısını bu çalışma **sağlamamaktadır**. Dolayısıyla bu alt bölüm bir yön
-verme yöntemi kurmaz; yön vermenin inşa edilmesi gereken **tek yerini** işaret
-eder.
+**Yine de burada bir sonuç iddia edilmemektedir.** Öte taraf tek bir uzay ekseni
+taşımaktadır, ve yukarıdaki kanal çifti o eksenden türemez; bu alt bölüm onu elle
+yazmıştır. Böyle bir kanal yapısını bu çalışma **sağlamamaktadır**. Dolayısıyla
+buradaki hesap bir yön verme yöntemi kurmaz, yalnızca yön vermenin inşa edilmesi
+gereken **tek yerini** işaret eder.
 
 ### 18.9 Parçacık öte taraftayken gözlenebilenler
 
-Yer değiştirmenin buradan seçilemediği görüldükten sonra, en azından
-gözlenebilir olup olmadığı sorulmalıdır.
+Yer değiştirmenin Bölge I'den seçilemediği görüldüğüne göre, sıradaki soru şudur:
+en azından gözlenebilir mi.
 
 **Konumlandırma reddedilir.** Uzaysal türden bir dörtlü momentum, öz durumları
-nedenselliğe saygı gösteren bir konum işlemcisi kabul etmez; dolayısıyla
-parçacığın öte tarafta nerede olduğunu söyleyen bir durum yoktur. Bu çalışma
-böyle bir durum da sağlamamaktadır ve bunu hesaplamaz, kaydeder.
+nedenselliğe saygı gösteren bir konum işlemcisini kabul etmemektedir. Dolayısıyla
+parçacığın öte tarafta nerede olduğunu söyleyen bir durum bulunmaz, ve bu çalışma
+da böyle bir durum sağlamamaktadır. Buradaki cümle bir hesap değil, bir kayıttır.
 
-**Var olan yöntem parçacığa değil, sınıra bakar.** Eksik kütle yöntemi, giren ve
-çıkan her şeyi ölçüp farkın değişmezini kurar; uzaysal türden bir taşıyıcı, bu
-değişmezin negatif çıkmasıyla kendini belli eder. Öznesi yolcu değil,
-bilançodur.
+**Var olan yöntem parçacığa değil, sınıra bakar.** Eksik kütle yöntemi giren ve
+çıkan her şeyi ölçüp farkın değişmezini kurar, ve uzaysal türden bir taşıyıcı o
+değişmezin negatif çıkmasıyla kendini belli eder. Yani yöntemin öznesi yolcu
+değil, tutulan hesabın kendisidir.
 
-Ne var ki yöntem, etkileşimden ayrılan **gerçek bir kütle kabuğu momentumunu**
-varsayar; ve bu çalışmadaki iç bölge her zaman böyle bir momentum taşımaz.
-Öklidyen bir bölgede, enine kare toplamı 4 ve $c = \mu = 1$ iken, iç mod
-$\omega = \sqrt{13} \approx 3{,}6056$ frekansının altında söner, üstünde
-yayılır:
+Ne var ki bu yöntem, etkileşimden ayrılan **gerçek bir kütle kabuğu momentumunu**
+varsaymaktadır, oysa buradaki iç bölge her zaman böyle bir momentum taşımaz.
+Öklidyen bir bölgede, enine kare toplamı 4 ve $c = \mu = 1$ iken iç mod
+$\omega = \sqrt{13} \approx 3{,}6056$ frekansının altında sönmekte, üstünde ise
+yayılmaktadır:
 
 | $\omega$ | Geçiş dalga sayısının karesi | Kütle kabuğunda | Gidiş dönüş rejimi |
 | -------- | ---------------------------- | --------------- | ------------------ |
@@ -3311,20 +3313,22 @@ yayılır:
 | $6$ | $+23{,}00$ | evet | hayır |
 | $12$ | $+131{,}00$ | evet | hayır |
 
-**Denetlenen şey gerek koşul, yeter koşul değil.** Yöntemin gerçekten okuduğu
+**Denetlenen şey gerek koşuldur, yeter koşul değil.** Yöntemin gerçekten okuduğu
 nicelik, dörtlü momentumun bir değişmezinin işaretidir. Yukarıdaki sütun ise tek
-bir eksen boyunca dalga sayısının karesidir, yani **başka bir nesnedir**. Bu
-çalışma o değişmezi hiçbir yerde hesaplamamakta, dolayısıyla bir kütle imzası da
-iddia etmemektedir. Elde kalan sonuç rejim ayrımının kendisidir.
+bir eksen boyunca dalga sayısının karesini vermektedir, yani **başka bir
+nesnedir**. Bu çalışma o değişmezi hiçbir yerde hesaplamamış, dolayısıyla bir
+kütle imzası da iddia etmemiştir. Elde kalan tek sonuç, rejim ayrımının
+kendisidir.
 
-İki rejim birbirinin tümleyenidir. İki ayrı yoldan yazılmış iki yüklem hesapta
-uyuşur: biri iç dalga sayısından gelir, öteki eşik eniyilemesinin kullandığı
-engel testinden. Taranan dört bin frekansın hiçbiri, iç modu kütle kabuğuna
-oturtup aynı anda gecikmenin doymasına izin vermemektedir. Bu tümleyenlik de
-yeni bir olgu değildir: sönümlü modun kendisi geçiş süresine katkı vermez,
-dolayısıyla gecikmenin doyması zaten iç bölgenin sönümlü olmasını gerektirir.
-Burada yapılan, bilinen bu bağın bu bölgeye uygulanıp gözlemle karşı karşıya
-getirilmesidir. Sonuç bu nedenle bir yöntem değil, bir **gerilimdir**:
+İki rejim birbirinin tümleyenidir. Bunu iki ayrı yoldan yazılmış iki yüklem
+doğrular: biri iç dalga sayısından, öteki eşik eniyilemesinin kullandığı engel
+testinden gelmektedir. Taranan dört bin frekansın hiçbiri, iç modu kütle
+kabuğuna oturtup aynı anda gecikmenin doymasına izin vermemektedir. Bu
+tümleyenlik de yeni bir olgu değildir, çünkü sönümlü mod geçiş süresine katkı
+vermez ve gecikmenin doyması zaten iç bölgenin sönümlü olmasını gerektirir.
+Burada yapılan tek şey, bilinen bu bağı bu bölgeye uygulayıp gözlemle karşı
+karşıya getirmektir. Sonuç bu nedenle bir yöntem değil, bir **gerilim** olarak
+çıkar:
 
 > İç bölgede kütle kabuğunda bir mod bulunan rejimde varış **öne alınmaz**.
 > Varışın öne alındığı rejimde ise gözlenecek bir kütle kabuğu modu **yoktur**.
