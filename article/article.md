@@ -1,6 +1,6 @@
 # İkinci bölgedeki mesafenin birinci bölgede zaman farkına dönüşmesi
 
-## Öz
+## Özet
 
 Bu çalışma, kütleli bir parçacığı zamanda başka bir ana taşımanın bir yolunu
 sınamaktadır. Sınanan kurgu iki bölge tanımlar. **Bölge I** parçacığın yola
@@ -364,9 +364,9 @@ $d$, kütle parametresi $\mu$ ve hız $c$ olur.
 | Adım | Nicelik | Bu nicelik nedir | Nerede |
 | ---- | ---------------------------------------------------------------------------------- | ------------------------------------------------------ | ------------------------ |
 | 1 | $\omega = c\sqrt{E_1^2 + E_2^2 + E_3^2 + \mu}$ | Parçacığın frekansı | Bölüm 15.1 |
-| 2 | $k_\perp^2 = E_2^2 + E_3^2$ | Geçiş doğrultusuna dik dalga sayısının karesi | Bölüm 18.3 |
-| 3 | $\kappa = \sqrt{\omega^2/c^2 - k_\perp^2 - \mu} = \lvert E_1 \rvert$ | Geçiş doğrultusundaki dalga sayısı, eşiğin dışında | Bölüm 18.7 |
-| 4 | $\beta = \sqrt{\tfrac{2n}{3}k_\perp^2 - E_1^2}$ | Eşiğin içinde genliğin sönüm hızı | Bölüm 18.7 |
+| 2 | $k_T^2 = E_2^2 + E_3^2$ | Geçiş doğrultusuna dik dalga sayısının karesi | Bölüm 18.3 |
+| 3 | $\kappa = \sqrt{\omega^2/c^2 - k_T^2 - \mu} = \lvert E_1 \rvert$ | Geçiş doğrultusundaki dalga sayısı, eşiğin dışında | Bölüm 18.7 |
+| 4 | $\beta = \sqrt{\tfrac{2n}{3}k_T^2 - E_1^2}$ | Eşiğin içinde genliğin sönüm hızı | Bölüm 18.7 |
 | 5 | $q = i\beta$ söndürücü hâlde, reel yayılımlı hâlde | Geçiş doğrultusundaki dalga sayısı, eşiğin içinde | Bölüm 12.1 |
 | 6 | $A(\omega) = \dfrac{4\kappa q}{(\kappa+q)^2 e^{-iqd} - (\kappa-q)^2 e^{iqd}}$ | Eşiğin bir yüzünden girip diğerinden çıkma genliği | Bölüm 12.1 |
 | 7 | $\tau = \dfrac{\mathrm{d}}{\mathrm{d}\omega}\arg A(\omega)$ | Tek geçişin süresi | Bölüm 13.2 |
@@ -392,7 +392,7 @@ $$E = L(\sin\theta\cos\varphi,\; \sin\theta\sin\varphi,\; \cos\theta),
 | ------------------------------------------------- | ------------------------------------------ |
 | $E$ | $(1{,}987118,\; 1{,}673727,\; 1{,}500000)$ |
 | $\omega$ | $3{,}162278$ |
-| $k_\perp^2$ | $5{,}051361$ |
+| $k_T^2$ | $5{,}051361$ |
 | $\kappa$ | $1{,}987118$ |
 | $\beta$ | $2{,}480742$ |
 | $\tau$, fazın türevinden | $1{,}282994$ |
@@ -503,8 +503,10 @@ Kütle parametresi $\mu = (mc/\hbar)^2$ ile yazılır.
 
 ## 4. Geçişi yapan yapı
 
-Eşiği geçiren superboost dönüşümü, birbirinden bağımsız iki parçanın çarpımına
-ayrılır:
+Eşiği geçiren dönüşüme literatürde **superboost** adı verilir: sıradan bir
+Lorentz boostu gibi iki çerçeveyi bağlar, ancak bağladığı çerçevelerden biri
+ışık hızının ötesinde durduğundan metriğin imzasını da çevirir. Bu dönüşüm
+birbirinden bağımsız iki parçanın çarpımına ayrılır:
 
 $$M(V) = D \cdot B(c^2/V), \qquad V > c$$
 
@@ -1028,7 +1030,9 @@ içindeki normal dalga sayısının karesi
 
 $$q_{\text{iç}}^2 = \frac{\omega^2}{c^2} - \left(1 + \frac{2n}{3}\right)k_T^2 - \mu$$
 
-olur; bu ifadede $n$ karakter değiştiren enine yön sayısıdır. İfade dışarıdaki
+olur; bu ifadede $n$, imzası çevrilen yön sayısıdır. Öklid tipinde üç uzay
+yönünün üçü de işaret değiştirdiğinden $n = 3$, Kleinian tipinde yalnızca biri
+değiştiğinden $n = 1$ olur. İfade dışarıdaki
 $\kappa^2 = \omega^2/c^2 - k_T^2 - \mu$ değerinden, çevrilen her yönün üçte iki
 ağırlıkla düşülmesiyle çıkar ve Bölüm 18.7'nin $\beta^2$ tanımıyla
 $q_{\text{iç}}^2 = -\beta^2$ bağıntısıyla aynıdır.
@@ -2140,13 +2144,13 @@ bir okuma aynı kalınlığın geçiş süresi olamaz.
 
 Paketin bölgeyi geçebilmesi iki üst sınırla kısıtlanmıştır ve ikisi tek bir
 koşulun iki görünümüdür. Dışarıda yayılabilen en düşük frekans
-$\omega_{\min} = c\sqrt{k_\perp^2 + \mu}$ değerindedir. Bandın merkezi bunun
+$\omega_{\min} = c\sqrt{k_T^2 + \mu}$ değerindedir. Bandın merkezi bunun
 altına düştüğünde hiçbir bileşen algılayıcıya ulaşmaz.
 
 Birinci sınır kütleye düşer. Merkez frekans sabit tutulduğunda kütle parametresi
 en çok
 
-$$\mu_{\max} = \frac{\omega_0^2}{c^2} - k_\perp^2$$
+$$\mu_{\max} = \frac{\omega_0^2}{c^2} - k_T^2$$
 
 değerine kadar büyür; sınanan yapılanmada bu $3{,}84$ çıkar ve kalınlık ifadeye
 girmez. İkinci sınır bandın genişliğine düşer. Toplamın kapsadığı genişlik sayısı
@@ -2290,7 +2294,7 @@ Yukarıdaki ifadenin verdiği ilk sonuç beklenmedik biçimde basittir: aynı ar
 bölge, yüksek frekansta yayılımlı, düşük frekansta ise söndürücü
 davranmaktadır. Öklid bölge için sınırı
 
-$$\omega^2 < k_T^2\left(1 + \tfrac{2n}{3}\right) + \mu$$
+$$\omega^2 < c^2\left[\left(1 + \tfrac{2n}{3}\right)k_T^2 + \mu\right]$$
 
 koşulu verir. Yani "ara bölge bir duvar mıdır" sorusunun tek bir cevabı yoktur;
 cevabı gelen parçacığın frekansı belirler. Bu nedenle eşik bir duvar değil bir
@@ -3134,7 +3138,7 @@ durumdan hesaplanır, ancak dördü farklı yerlerden gelir:
 | Koordinat | Nereden gelir |
 | ----------- | --------------------------------------------------------------------- |
 | $t$ | İki geçişin ortak genliğinin fazından; içeride saat taşınamadığı için |
-| $x_{\perp}$ | Daldan: sıfır ya da kalınlık, yani hangi yüzden çıktığı |
+| $x_{\perp}$ | İlerleme işaretinden: sıfır ya da kalınlık, yani hangi yüzden çıktığı |
 | $y,\, z$ | Paket merkezinin kayması, yönelimin enine bileşenlerine dağıtılmış |
 
 Taranan $312$ durumun tamamı sonlu ve belirli bir olaya gitmektedir, yani
@@ -3252,7 +3256,7 @@ bileşenine** eşittir. Kütle kabuğu frekansı vektörün uzunluğundan sabitl
 dalga sayısı öteki iki bileşenin uzunluğunu verir, ve aradaki fark birinci
 bileşeni yalnız bırakır:
 
-$$\kappa^2 = \frac{\omega^2}{c^2} - k_\perp^2 - \mu = (E_1^2 + E_2^2 + E_3^2 + \mu) - (E_2^2 + E_3^2) - \mu = E_1^2$$
+$$\kappa^2 = \frac{\omega^2}{c^2} - k_T^2 - \mu = (E_1^2 + E_2^2 + E_3^2 + \mu) - (E_2^2 + E_3^2) - \mu = E_1^2$$
 
 $$\boxed{\;\kappa = |E_1|\;}$$
 
@@ -3812,7 +3816,7 @@ engelin ortaya çıkıp çıkmadığını gelen alanın mod içeriği belirler.
 ### 21.2.1 Laboratuvar mertebeleri
 
 Bu alt bölüm geçiş koşullarının deneysel karşılığını sayılara indirmektedir.
-Kütle tavanı $\mu_{\max} = \omega_0^2/c^2 - k_\perp^2$ biçiminde yazılır, ve
+Kütle tavanı $\mu_{\max} = \omega_0^2/c^2 - k_T^2$ biçiminde yazılır, ve
 bu koşuldan bir alt sınır doğar: bant merkezi, taşınan kütlenin durgun enerjisinden
 kurulan frekansı aşmak zorundadır.
 
@@ -4060,7 +4064,7 @@ yaptığı anı** varış saymaktadır.
 Bu hesap hiçbir gecikme formülü kullanmaz. Durağan faz koşulunu da dayatmaz,
 ortaya çıkmasını ya da çıkmamasını serbest bırakır.
 
-**Bandın kesilmesi zorunludur.** Frekans $\sqrt{k_\perp^2 + \mu}$ değerinin, bu
+**Bandın kesilmesi zorunludur.** Frekans $\sqrt{k_T^2 + \mu}$ değerinin, bu
 yapılanmada $2{,}2361$'in altına düştüğünde dışarıdaki dalga sayısı sanal olur ve
 o bileşen dedektöre **hiç ulaşmaz**. Bu yüzden bant o frekansta kesilmektedir; kesilmezse
 toplam anlamsız bir katkı taşır.
