@@ -2422,25 +2422,27 @@ doğrulanmıştır.
 
 ### 15.2 Dönüşümün kayıpsızlığı
 
-$D$ bir involüsyondur, dolayısıyla iki kez uygulanınca dört-momentumun dört
-bileşeni de **tam olarak** başlangıç değerine döner; sayısal artık sıfırdır.
+$D$ bir involüsyon olduğundan, iki kez uygulandığında dört-momentumun dört
+bileşeni de **tam olarak** başlangıç değerine döner ve sayısal artık sıfır kalır.
 
-Bunun önemi şudur: modelin bildirdiği bütün kayıplar dönüşümden değil, iki
-bölgenin birleştiği **yüzeyden** gelmektedir. Cebir hiçbir şey kaybetmez; bedeli
-eklem koşulları ödetir.
+Bu sonucun önemi şuradadır: modelin bildirdiği bütün kayıplar dönüşümden değil,
+iki bölgenin birleştiği **yüzeyden** gelmektedir. Cebir hiçbir şey kaybetmez,
+bedeli eklem koşulları ödetir.
 
 ### 15.3 Öte tarafta uzunluğun fizikselliği
 
 Bölüm 10'da gösterildiği gibi üç zaman ekseni arasında bir $O(3)$ simetrisi
-vardır ve enerji vektörünün **yönü** orada fiziksel değildir, bir ayar
-fazlalığıdır. Fiziksel olan tek şey uzunluğudur.
+bulunmaktadır. Bu simetri bir ayar fazlalığı olduğundan enerji vektörünün **yönü**
+orada fiziksel değildir, ve fiziksel olan tek nicelik uzunluğu olarak kalır.
 
-Üç ayrı dönme açısı aynı sonucu verir: dönme enerji vektörünün uzunluğunu, öte
-tarafın momentumunu ve değişmezi değiştirmez.
+Üç ayrı dönme açısı da aynı sonucu vermiştir: dönme, enerji vektörünün
+uzunluğunu, öte tarafın momentumunu ve değişmezi değiştirmez.
 
 ### 15.4 Dönmenin bıraktığı iz
 
-Parçacık öte tarafta bir $O(3)$ dönmesi geçirip geri döndüğünde:
+Söz konusu dönme öte tarafta fiziksel bir fark yaratmasa da, Bölge I'de iz
+bırakmaktadır. Parçacık öte tarafta bir $O(3)$ dönmesi geçirip geri döndüğünde
+şu tablo ortaya çıkar:
 
 | Nicelik | Sonuç |
 | --------------------------------- | ------------------ |
@@ -2449,7 +2451,7 @@ Parçacık öte tarafta bir $O(3)$ dönmesi geçirip geri döndüğünde:
 | Kütle | Tam olarak korunur |
 | Bölge I'in momentumunun **yönü** | **Değişir** |
 
-Hesaplanan sapmalar:
+Son satırdaki sapmanın büyüklüğü de hesaplanmıştır:
 
 | Öte taraftaki dönme açısı | Bölge I'de sapma (radyan) |
 | ------------------------- | ------------------------- |
@@ -2461,40 +2463,41 @@ Hesaplanan sapmalar:
 > **gözlenebilir bir sapma** olarak görünür. Parçacık aynı enerjiyle, aynı
 > süratle, aynı kütleyle, ama farklı bir yöne bakarak geri döner.
 
-Bu, Bölüm 16'da kurulan sözlüğün en somut maddesidir ve gidiş dönüşün bedelsiz
-yapabildiği tek şeydir: yön değiştirmek.
+Bu madde, Bölüm 16'da kurulan sözlüğün en somut maddesidir, ve gidiş dönüşün
+hiçbir bedel ödemeden yapabildiği tek şeyi adlandırır: yön değiştirmek.
 
-**Çekince.** Bu sonuç dönüşüm düzeyindedir ve arayüzün mod süzgecinden
-bağımsızdır. Parçacık öte tarafta bir $O(3)$ dönmesi geçirir mi, yani orada ne
-yapar: bu hesabın konusu o değil. Hesap şunu verir: geçirirse Bölge I'de ne
-görünür.
+**Çekince.** Yukarıdaki sonuç dönüşüm düzeyinde kalır ve yüzeyin mod
+süzgecinden bağımsızdır. Parçacığın öte tarafta gerçekten bir $O(3)$ dönmesi
+geçirip geçirmediği bu hesabın konusu değildir. Hesabın verdiği tek şey şudur:
+geçirirse Bölge I'de ne görünür.
 
 **Kalan çekince.** Bu döküm doğrusal ve durağan bir saçılma kurgusuna dayanır.
 
 ### 15.5 Yükün yeniden dağılması
 
-Yüklü bir durum için döküme bir kalem daha girer. Yük yoğunluğu dört akımın
-zaman bileşenidir ve geçiş yakın tarafın zaman eksenini öte tarafın bir uzay
+Yüklü bir durum için döküme bir kalem daha girmektedir. Yük yoğunluğu dört akımın
+zaman bileşenidir, ve geçiş yakın tarafın zaman eksenini öte tarafın bir uzay
 ekseni üzerine taşır. Dolayısıyla yakın tarafta yoğunluk olarak okunan nicelik
-öte tarafta bir **akım bileşeni**, akımlardan biri ise yoğunluktur. Yakın
-tarafta $(3{,}0,\, 0,\, 0,\, 0{,}5)$ olarak yazılan dört akım öte tarafta
-$(0{,}5,\, 0,\, 0,\, 3{,}0)$ olarak görünür.
+öte tarafta bir **akım bileşenine** dönüşür, akımlardan biri de yoğunluğa. Sayıyla
+söylemek gerekirse, yakın tarafta $(3{,}0,\, 0,\, 0,\, 0{,}5)$ yazılan dört akım
+öte tarafta $(0{,}5,\, 0,\, 0,\, 3{,}0)$ olarak görünür.
 
-Geçiş dört akımı bütün hâlinde taşımakta ve bileşenlerinden hiçbirini
-kaybetmemektedir; yalnızca yoğunluk ile akım arasındaki bölünme yeniden dağılır.
-Dört akımın değişmez karesi geçişin dayattığı genel işarete kadar korunur. Bu nedenle öte tarafta ne
-kadar yük bulunduğu sorusu, yakın tarafta sorulan soruyla aynı soru değildir.
+Bu yeniden dağılım bir kayıp değildir. Geçiş dört akımı bütün hâlinde taşımakta
+ve bileşenlerinden hiçbirini kaybetmemektedir; değişen tek şey, yoğunluk ile akım
+arasındaki bölünmedir. Dört akımın değişmez karesi de geçişin dayattığı genel
+işarete kadar korunur. Yine de bu nedenle "öte tarafta ne kadar yük var" sorusu,
+yakın tarafta sorulan soruyla aynı soru sayılmaz.
 
 ### 15.6 Potansiyelin ayar aralığı
 
-Yük, zamanlamayı kendi başına değiştirmez. Uygulanan potansiyel sıfır olduğunda
-yükün beş katına çıkarılması gidiş dönüş okumasını oynatmaz ve kod bunu üç
-okumanın hepsinde ayrı ayrı sınamıştır.
+Yük, zamanlamayı kendi başına değiştirmemektedir. Uygulanan potansiyel sıfır
+olduğunda yükü beş katına çıkarmak gidiş dönüş okumasını hiç oynatmaz, ve
+doğrulama bunu üç okumanın hepsinde ayrı ayrı sınamıştır.
 
-Yükün getirdiği şey bölge dışından işleyen bir ayardır. Minimal bağlaşım etkin
-frekansı yük ile potansiyelin çarpımı kadar kaydırır, dolayısıyla gereken öte
-taraf mesafesi dışarıdan oynatılır. Nötr bir durumda bu ayar yoktur, çünkü kayma
-yükle birlikte sıfırlanır.
+Yükün getirdiği şey, bölgenin dışından işleyen bir ayardır. Minimal bağlaşım
+etkin frekansı yük ile potansiyelin çarpımı kadar kaydırdığından, gereken öte
+taraf mesafesi dışarıdan oynatılabilir. Nötr bir durumda böyle bir ayar
+bulunmaz, çünkü kayma yükle birlikte sıfırlanır.
 
 Bu ayarın bir alt sınırı vardır. Gereken mesafe frekansla tek düze gitmez: önce
 düşer, en küçük değerine ulaşır, sonra yeniden yükselir. Sınanan yapılanmada bu
