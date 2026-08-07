@@ -3517,36 +3517,38 @@ Elle yapılan iki hesap, parite argümanı ve boyut sayımı, cebirsel kontrolde
 
 ### 20.1 Üç denetim
 
-Üç denetim makalenin kendisini okur ve metni bulamazsa koşuyu düşürür; girdisi
-yokken sessizce geçen bir kontrol, hiçbir şey yapmadığı için başarı bildirir.
+Aşağıdaki üç denetim makalenin kendisini okumakta, ve metni bulamazsa koşuyu
+düşürmektedir. Bu son davranış zorunludur: girdisi yokken sessizce geçen bir
+kontrol, hiçbir şey yapmadığı hâlde başarı bildirir.
 
-**Sayıların metne ulaşması.** Süpürme, test takımı çıktısında üç ile altı
-ondalık basamakla basılmış her sayıyı toplar ve makalede arar. Ham çıktısı bir
-eksik listesi değil, incelenecek adaylar listesidir: metin virgül ve $10^{-12}$
-yazarken çıktı nokta ve $e$-gösterimi kullanır. Dört tur, makaleye ulaşmayan
-sonuçları tek tek ortaya çıkardı ve hepsi metne girdi; geriye kalanların tamamı
-girdi ya da ara değerdir.
+**Sayıların metne ulaşması.** Birinci denetim, test takımı çıktısında üç ile altı
+ondalık basamakla basılmış her sayıyı toplamakta ve makalede aramaktadır. Ham
+çıktısı bir eksik listesi değil, incelenecek adaylar listesidir, çünkü metin
+virgül ve $10^{-12}$ yazarken çıktı nokta ve $e$-gösterimi kullanır. Dört tur
+boyunca makaleye ulaşmayan sonuçlar tek tek ortaya çıktı ve hepsi metne girdi;
+geriye kalanların tamamı girdi ya da ara değerdir.
 
-**Kaynakça kapsaması.** Metindeki her atıf numarasının listede bir karşılığı,
-listedeki her künyeye metinden en az bir atıf aranır. İki yön ayrı ayrı
-gereklidir, çünkü liste iki ayrı biçimde çürür: numaralar kayarsa bir atıf
-listenin sonunu aşar, bir pasaj çıkarılırsa künye sahipsiz kalır. Denetimin
-ağırlığı şuradan gelir: bir bölüm silindiğinde dosyada ondan sonra gelen her şey
-onunla birlikte gider ve kaynakça dosyanın son öğesidir. Bu çalışmada tam
-olarak bu oldu; hiçbir sayısal denetim görmedi, çünkü bir atıf numarası hiçbir
-hesabın ürettiği bir sayı değildir. Künyenin kimliğini basılı rakam değil
-listedeki sırası taşır.
+**Kaynakça kapsaması.** İkinci denetim iki yönü birden aramaktadır. Metindeki her
+atıf numarasının listede bir karşılığı, listedeki her künyenin de metinde en az
+bir atfı bulunmalıdır. İki yön de gereklidir, çünkü liste iki ayrı biçimde
+çürümektedir. Numaralar
+kayarsa bir atıf listenin sonunu aşar; bir pasaj çıkarılırsa künye sahipsiz kalır.
+Denetimin ağırlığı da şuradan gelir: bir bölüm silindiğinde dosyada ondan sonra
+gelen her şey onunla birlikte gider, ve kaynakça dosyanın son öğesidir. Bu
+çalışmada tam olarak bu oldu, ve hiçbir sayısal denetim onu görmedi; çünkü bir
+atıf numarası hiçbir hesabın ürettiği bir sayı değildir. Künyenin kimliğini de
+basılı rakam değil listedeki sırası taşır.
 
-**Varsayım sicili.** Doğrulama, varsayım ileri süren her pasajı bulur ve her
-birinin aşağıdaki sicilde bir hüküm ile yer almasını şart koşar. Sicilin
-kapsamadığı bir pasaj başarısızlıktır. Sicil kodda değil burada durur:
-doğrulamanın içinde tek bir bölüm numarası yoktur, hem hüküm sözlüğünü hem
-sicili bu bölümden okur.
+**Varsayım sicili.** Üçüncü denetim, varsayım ileri süren her pasajı bulmakta ve
+her birinin aşağıdaki sicilde bir hükümle yer almasını şart koşmaktadır. Sicilin
+kapsamadığı bir pasaj koşuyu düşürür. Sicilin kendisi kodda değil burada durur:
+doğrulamanın içinde tek bir bölüm numarası geçmez, hem hüküm sözlüğünü hem sicili
+bu bölümden okur.
 
-Üç denetim de bozma ile sınanmıştır: karşılıksız bir atıf eklemek, kaynakça
-listesini silmek, bir künyeye giden tek atfı çevirmek ve sicilde yeri olmayan
-bir varsayım cümlesi eklemek. Koşu her seferinde düşmüş, bozma geri alındığında
-tekrar geçmiştir.
+Üç denetim de bozularak sınanmıştır. Metne karşılıksız bir atıf eklendi, kaynakça
+listesi silindi, bir künyeye giden tek atıf başka yere çevrildi, ve sicilde yeri
+olmayan bir varsayım cümlesi eklendi. Koşu her seferinde düşmüş, bozma geri
+alındığında yeniden geçmiştir.
 
 ### 20.2 Hüküm sözlüğü ve sicil
 
