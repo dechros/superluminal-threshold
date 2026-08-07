@@ -3437,15 +3437,15 @@ bir denetimdir.
 örneğin geçerliliği bu ikisinin birbirinden ayrı tutulmasına bağlıdır.
 
 **Ara bölgenin içinde** kat edilen bir mesafe **yoktur**. İçerideki mod
-sönümlüdür, grup hızı tanımsız kalır, ve gecikmenin kalınlıkla artmaması hızlı
+sönümlüdür, grup hızı tanımsız kalmaktadır, ve gecikmenin kalınlıkla artmaması hızlı
 bir yolculuğa değil yolculuğun hiç olmamasına karşılık gelir; elde yalnızca faz
 kalır (Bölüm 16.9). Bu nedenle tablodaki $2{,}434322$ bir yol süresi değil, iki
 geçişin faz gecikmesidir, ve tablonun hiçbir satırında kalınlık değişmemektedir.
 
 **Öte tarafta** kat edilen mesafe ise bundan bağımsız bir niceliktir. Öte taraf
-bir engel değildir: orada mod sönümlü kalmaz ve tek uzay ekseni boyunca hareket
-olağan anlamıyla tanımlıdır (Bölüm 10.1, Bölüm 17.2). Tablonun satırdan satıra
-değişen sütunu da budur.
+bir engel değildir: orada mod sönümlü kalmamakta ve tek uzay ekseni boyunca
+hareket olağan anlamıyla tanımlı olmaktadır (Bölüm 10.1, Bölüm 17.2). Tablonun satırdan satıra
+değişen sütunu da bu niceliktir.
 
 Bu ayrım olmasaydı örnek kendi kendini çürütürdü, çünkü sönümlü bir bölgenin
 içinde yolculuk diline başvurmak Bölüm 16.9'un tam olarak reddettiği şeydir.
@@ -3455,8 +3455,8 @@ bütünüyle öte tarafta kat edilmektedir.
 **Bedeli de aynı yerde yazılıdır.** Bu yolculukta parçacık
 $1{,}83 \times 10^{-41}$ ağırlıkla dönmektedir. Ne var ki bu ağırlık bir yasak
 anlamına gelmez. Doyum derinliği sabit tutulup enerji yükseltildiğinde gereken
-mesafe $2{,}4343$'ten sırasıyla $0{,}9895$, $0{,}3101$ ve $0{,}0980$'a iner,
-buna karşılık tek geçişin genliği $4{,}293312 \times 10^{-3}$ ve gidiş dönüşün
+mesafe $2{,}4343$'ten sırasıyla $0{,}9895$, $0{,}3101$ ve $0{,}0980$'a
+inmektedir. Buna karşılık tek geçişin genliği $4{,}293312 \times 10^{-3}$ ve gidiş dönüşün
 ağırlığı $3{,}397579 \times 10^{-10}$ değerinde **kıpırdamadan** kalır. Ödenen
 şey enerji ve daha ince bir bölgedir.
 
@@ -3490,8 +3490,8 @@ gösterilmediğini yazar, ve çekirdek ölçümün düzeneğini şart şart beli
 ## 20. Yöntem ve doğrulama
 
 Bu metindeki her sayısal ve cebirsel iddia, C++ ile kurulmuş bir doğrulamaya
-karşılık gelir. Doğrulamalar genel amaçlı kütüphaneler hâlinde durur ve
-üzerlerinde bir test takımı çalışır.
+karşılık gelir. Doğrulamalar genel amaçlı kütüphaneler hâlinde durmakta, ve
+üzerlerinde bir test takımı çalışmaktadır.
 
 **İki metin birbirine atıf yapmaz.** Makale hiçbir dosya ya da sınıf adı anmaz;
 kod da hiçbir bölüm ya da kaynak numarası anmaz. Gerekçe bakımdır: birbirine
@@ -3507,10 +3507,10 @@ vermektedir. Buna karşılık boost, dönme, faz türevi ve mod toplamı hesapla
 irrasyonel ya da yakınsak nicelikler doğar; oralarda açıkça belirtilen bir
 tolerans kullanılmıştır.
 
-**Doğrulama disiplini.** Hiçbir kontrol, sonucunu hesaplamadan bildiremez.
-Sonucunu iddia edip hiçbir şey hesaplamayan kontroller tek tek bulunmuş, ya
-gerçek bir hesapla değiştirilmiş ya da kaldırılmıştır; kaldırılanlar fiziksel
-değil yorum niteliğindeydi.
+**Doğrulama disiplini.** Hiçbir kontrol, sonucunu hesaplamadan bildiremez. Bu
+kurala uymayan kontrolleri bir tarama tek tek bulmuş, ve her birinin yerine ya
+gerçek bir hesap koymuş ya da onu tümüyle atmıştır. Atılanlar fiziksel değil,
+yorum niteliğindeydi.
 
 Elle yapılan iki hesap, parite argümanı ve boyut sayımı, cebirsel kontrolde
 **yanlış çıktı** ve düzeltildi. Modelin bugünkü hâli bu düzeltmeleri içerir.
