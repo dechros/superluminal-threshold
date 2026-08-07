@@ -3558,7 +3558,7 @@ gösterilmediğini yazar, ve çekirdek ölçümün düzeneğini şart şart beli
 
 ## 20. Yöntem ve doğrulama
 
-Bu çalışmadeki her sayısal ve cebirsel iddia, C++ ile kurulmuş bir doğrulamaya
+Bu çalışmadaki her sayısal ve cebirsel iddia, C++ ile kurulmuş bir doğrulamaya
 karşılık gelir. Doğrulamalar genel amaçlı kütüphaneler hâlinde durmakta, ve
 üzerlerinde bir test takımı çalışmaktadır.
 
@@ -3566,7 +3566,7 @@ karşılık gelir. Doğrulamalar genel amaçlı kütüphaneler hâlinde durmakta
 kod da hiçbir bölüm ya da kaynak numarası anmaz. Gerekçe bakımdır: birbirine
 isimle bağlanan iki çalışmadan biri yeniden düzenlendiğinde diğerindeki atıflar
 sessizce çürür ve çürüdükleri fark edilmez. Bunun yerine bağ, aşağıdaki
-denetimlerde olduğu gibi **çalışma zamanında kurulur**: doğrulama çalışmayı okur ve
+denetimlerde olduğu gibi **çalışma zamanında kurulur**: doğrulama makale dosyasını okur ve
 aradığını o dosyada bulamazsa koşuyu düşürür.
 
 **Sayısal güvenilirlik.** Modelin matrislerinin büyük kısmı tamsayı girdi taşır
@@ -3586,13 +3586,13 @@ Elle yapılan iki hesap, parite argümanı ve boyut sayımı, cebirsel kontrolde
 
 ### 20.1 Üç denetim
 
-Aşağıdaki üç denetim makalenin kendisini okumakta, ve çalışmayı bulamazsa koşuyu
+Aşağıdaki üç denetim makale dosyasını okumakta, ve dosyayı bulamazsa koşuyu
 düşürmektedir. Bu son davranış zorunludur: girdisi yokken sessizce geçen bir
 kontrol, hiçbir şey yapmadığı hâlde başarı bildirir.
 
-**Sayıların çalışmaya ulaşması.** Birinci denetim, test takımı çıktısında üç ile altı
+**Sayıların makaleye ulaşması.** Birinci denetim, test takımı çıktısında üç ile altı
 ondalık basamakla basılmış her sayıyı toplamakta ve makalede aramaktadır. Ham
-çıktısı bir eksik listesi değil, incelenecek adaylar listesidir, çünkü çalışma
+çıktısı bir eksik listesi değil, incelenecek adaylar listesidir, çünkü makale
 virgül ve $10^{-12}$ yazarken çıktı nokta ve $e$-gösterimi kullanır. Dört tur
 boyunca makaleye ulaşmayan sonuçlar tek tek ortaya çıktı ve hepsi çalışmaya girdi;
 geriye kalanların tamamı girdi ya da ara değerdir.
