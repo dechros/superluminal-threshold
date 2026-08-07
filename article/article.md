@@ -3437,39 +3437,40 @@ bir denetimdir.
 örneğin geçerliliği bu ikisinin birbirinden ayrı tutulmasına bağlıdır.
 
 **Ara bölgenin içinde** kat edilen bir mesafe **yoktur**. İçerideki mod
-sönümlüdür, grup hızı tanımsız kalır ve gecikmenin kalınlıkla artmaması hızlı bir
-yolculuk değil yolculuğun yokluğudur; elde yalnızca faz vardır (Bölüm 16.9).
-Yukarıdaki $2{,}434322$ bu nedenle bir yol süresi değil, iki geçişin faz
-gecikmesidir ve tablonun hiçbir satırında kalınlık değişmemektedir.
+sönümlüdür, grup hızı tanımsız kalır, ve gecikmenin kalınlıkla artmaması hızlı
+bir yolculuğa değil yolculuğun hiç olmamasına karşılık gelir; elde yalnızca faz
+kalır (Bölüm 16.9). Bu nedenle tablodaki $2{,}434322$ bir yol süresi değil, iki
+geçişin faz gecikmesidir, ve tablonun hiçbir satırında kalınlık değişmemektedir.
 
 **Öte tarafta** kat edilen mesafe ise bundan bağımsız bir niceliktir. Öte taraf
-bir engel değildir; orada mod sönümlü değildir ve tek uzay ekseni boyunca
-hareket olağan anlamıyla tanımlıdır (Bölüm 10.1, Bölüm 17.2). Tablonun değişen
-sütunu budur.
+bir engel değildir: orada mod sönümlü kalmaz ve tek uzay ekseni boyunca hareket
+olağan anlamıyla tanımlıdır (Bölüm 10.1, Bölüm 17.2). Tablonun satırdan satıra
+değişen sütunu da budur.
 
-Bu ayrım olmasa örnek kendi kendini çürütürdü: sönümlü bir bölgenin içinde
-yolculuk diline başvurmak, Bölüm 16.9'un tam olarak reddettiği şeydir. Örnek
-buna başvurmamaktadır; ara bölge yalnızca bir faz gecikmesi katmakta, mesafe ise
+Bu ayrım olmasaydı örnek kendi kendini çürütürdü, çünkü sönümlü bir bölgenin
+içinde yolculuk diline başvurmak Bölüm 16.9'un tam olarak reddettiği şeydir.
+Örnek buna başvurmaz: ara bölge yalnızca bir faz gecikmesi katmakta, mesafe ise
 bütünüyle öte tarafta kat edilmektedir.
 
 **Bedeli de aynı yerde yazılıdır.** Bu yolculukta parçacık
-$1{,}83 \times 10^{-41}$ ağırlıkla dönmektedir. Ne var ki bu ağırlık bir yasak değildir: doyum derinliği
-sabit tutulup enerji yükseltildiğinde gereken mesafe $2{,}4343$'ten $0{,}9895$,
-$0{,}3101$ ve $0{,}0980$'a inerken tek geçişin genliği
-$4{,}293312 \times 10^{-3}$, dolayısıyla gidiş dönüşün ağırlığı
-$3{,}397579 \times 10^{-10}$ değerinde **kıpırdamamaktadır**. Ödenen şey enerji ve daha ince bir bölgedir.
+$1{,}83 \times 10^{-41}$ ağırlıkla dönmektedir. Ne var ki bu ağırlık bir yasak
+anlamına gelmez. Doyum derinliği sabit tutulup enerji yükseltildiğinde gereken
+mesafe $2{,}4343$'ten sırasıyla $0{,}9895$, $0{,}3101$ ve $0{,}0980$'a iner,
+buna karşılık tek geçişin genliği $4{,}293312 \times 10^{-3}$ ve gidiş dönüşün
+ağırlığı $3{,}397579 \times 10^{-10}$ değerinde **kıpırdamadan** kalır. Ödenen
+şey enerji ve daha ince bir bölgedir.
 
-**Sonucun ifadesini** Bölüm 1.1'in "Ana sonuç" paragrafı verir ve bu bölüm
-onu tekrarlamaz. Bu bölüm o ifadeyi eklemez; yukarıdaki yedi adımın onu nasıl
-ürettiğini ve aşağıdaki tek parçacığın onu nasıl gerçeklediğini göstermektedir.
+**Sonucun ifadesini** Bölüm 1.1'in "Ana sonuç" paragrafı vermiştir, ve bu bölüm
+onu tekrarlamaz. Buradaki katkı başkadır: yedi adımın o ifadeyi nasıl ürettiğini
+ve yukarıdaki tek parçacığın onu nasıl gerçeklediğini göstermektir.
 
-**İddianın sınırı**, aynı şekilde Bölüm 1.5'te üç bedel olarak sayılmıştır: genliğin
-küçüklüğü bir büyüklük sorunudur ve Bölüm 4.1.6 bunun seçilmiş bir çalışma
-noktası olduğunu göstermektedir. İşaretin seçilebilirliği bir açık sorudur (Bölüm
-9.4). Geçirgen okuma ile yüzey katmanı bir arada duramaz; bu, literatürün güçlü
-ile zayıf ayrımıdır, modele özgü bir boşluk değil (Bölüm 5.7.1). Yedi
-adımın kendisi bu boşluktan bağımsız olarak doğrudur; eksik olan, adımları bir
-deneye bağlayan son adımdır.
+**İddianın sınırını** ise Bölüm 1.5 üç engel olarak saymıştı. Birincisi, genliğin
+küçüklüğü bir büyüklük sorunudur, ve Bölüm 4.1.6 bunun seçilmiş bir çalışma
+noktası olduğunu göstermektedir. İkincisi, işaretin seçilebilirliği açık bir soru
+olarak durur (Bölüm 9.4). Üçüncüsü, geçirgen okuma ile yüzey tabakası bir arada
+duramaz; bu da literatürün güçlü ile zayıf ayrımından gelir, modele özgü bir
+boşluk değildir (Bölüm 5.7.1). Yedi adımın kendisi bu boşluklardan bağımsız
+olarak doğrudur, ve eksik olan tek şey adımları bir deneye bağlayan son adımdır.
 
 > Bu çalışmanın söylediği şudur: böyle bir geçiş kurulabilirse, dönüş anının
 > nereye düştüğü serbest bir yorum değil, hesaplanmış bir sayıdır.
@@ -3481,10 +3482,10 @@ deneye bağlayan son adımdır.
 Bu kısım çalışmanın nasıl doğrulandığını ve hangi düzenekle sınanabileceğini
 yazar.
 
-İki bölüm vardır. Birincisi yöntemi kurmaktadır. Her sayısal ve cebirsel iddia bir
-doğrulamaya karşılık gelir, iki metin birbirine isimle değil çalışma zamanında
-bağlanır ve doğrulama kendini de denetlemektedir. İkincisi neyin gösterilmediğini
-yazar ve çekirdek ölçümün düzeneğini şart şart belirtir.
+Kısım iki bölümden oluşur. Birincisi yöntemi kurmaktadır: her sayısal ve cebirsel
+iddia bir doğrulamaya karşılık gelir, iki metin birbirine isimle değil çalışma
+zamanında bağlanır, ve doğrulama kendini de denetler. İkincisi ise neyin
+gösterilmediğini yazar, ve çekirdek ölçümün düzeneğini şart şart belirtir.
 
 ## 20. Yöntem ve doğrulama
 
@@ -3499,15 +3500,16 @@ sessizce çürür ve çürüdükleri fark edilmez. Bunun yerine bağ, aşağıda
 denetimlerde olduğu gibi **çalışma zamanında kurulur**: doğrulama metni okur ve
 aradığını orada bulamazsa koşuyu düşürür.
 
-**Sayısal güvenilirlik.** Modelin matrislerinin büyük kısmı tamsayı girdilidir
-($0, +1, -1$) ve bu girdiler ikilik tabanda tam temsil edildiğinden permütasyon,
-involüsyon ve determinant testleri cebirsel hesapla birebir aynı sonucu vermektedir.
-Boost, dönme, faz türevi ve mod toplamı hesaplarında irrasyonel ya da yakınsak
-nicelikler oluşur; oralarda açıkça belirtilen bir tolerans kullanılmıştır.
+**Sayısal güvenilirlik.** Modelin matrislerinin büyük kısmı tamsayı girdi taşır
+($0, +1, -1$), ve bu girdiler ikilik tabanda tam temsil edildiğinden permütasyon,
+involüsyon ve determinant testleri cebirsel hesapla birebir aynı sonucu
+vermektedir. Buna karşılık boost, dönme, faz türevi ve mod toplamı hesaplarında
+irrasyonel ya da yakınsak nicelikler doğar; oralarda açıkça belirtilen bir
+tolerans kullanılmıştır.
 
-**Doğrulama disiplini.** Bir kontrolün sonucunu hesaplamadan bildirmesine izin
-verilmez. Sonucunu iddia edip hiçbir şey hesaplamayan kontroller tespit edilip
-ya gerçek bir hesapla değiştirilmiş ya da kaldırılmıştır; kaldırılanlar fiziksel
+**Doğrulama disiplini.** Hiçbir kontrol, sonucunu hesaplamadan bildiremez.
+Sonucunu iddia edip hiçbir şey hesaplamayan kontroller tek tek bulunmuş, ya
+gerçek bir hesapla değiştirilmiş ya da kaldırılmıştır; kaldırılanlar fiziksel
 değil yorum niteliğindeydi.
 
 Elle yapılan iki hesap, parite argümanı ve boyut sayımı, cebirsel kontrolde
