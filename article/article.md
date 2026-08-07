@@ -322,6 +322,11 @@ sonucu taşırken onun bir alt bölümü yalnızca bir itiraza cevap veriyor ola
 | 10.2, 10.5 | Dispersiyon, grup hızı, kapalı form çözüm | Üç zamanlı bir bölgede hız kavramı ne oluyor |
 | 20 | Yöntem ve üç denetim | Bu sayılar doğrulanmış mı ve doğrulama kendini kandırıyor olabilir mi |
 | 21 | Açık kalanlar | Neyin gösterilmediği yazılı mı |
+| 22 | İtirazlar ve yanıtlar | Literatürden gelen itirazlar tek yerde toplanmış mı |
+| 4.2 | Geniş formülasyonla karşılaştırma | Aynı grubu daha genel kuran bir çalışma varken bu kurulum gereksiz mi |
+| 10.3 | Durgunluğun tek yörüngeye indirgenmesi | Bölge II'de duran bir cismin sonsuz çok durumu mu var |
+| 15.5 | Yükün yeniden dağılması | Eşikte yük kayboluyor mu |
+| 18.8 | Yönün Bölge I'den seçilebilirliği | Engeli biçimlendirerek işaret seçilebilir mi |
 
 Bölüm 14 ile Bölüm 15, eşiğin hangi modları geçirdiğini kayda geçiren iki
 dökümdür ve ana hat ile itiraz bölümlerinin arasında durmaktadır. Sonucu
@@ -964,7 +969,14 @@ formülasyon yan yana konursa:
 Kapsam bakımından [3] bu bölümü içerir ve aşar. İki formülasyon **aynı grup
 değildir**: $D$, [3]'ün genişletilmiş grubunda bulunmaz, çünkü içerdiği
 $x \leftrightarrow y$ takasının üç boyuttaki determinantı $-1$'dir ve
-dolayısıyla $SO(3)$ elemanı değildir. Bölüm 16.7 bunu hesaplamıştır.
+dolayısıyla $SO(3)$ elemanı değildir.
+
+Karşılaştırma şöyle yürür. $\theta = \varphi = 0$ ekseni için yön-bağımlı
+involüsyon $t$ ile $z$'yi işaretli olarak takas eder. Aynı işlem
+$\Lambda_{\inf}^2 = I$ bağıntısını da sağlar, yani o da bir involüsyondur, ama
+yalnızca iki koordinata dokunur. $D$ ise dört koordinatı birden değiştirir.
+Sonuç şudur: $D$, yön-bağımlı involüsyonun ürettiği genişletilmiş grup
+$L_{\text{ext}}$ içinde yer almaz, ve iki yapı aynı ailenin iki üyesi değildir.
 
 Bu bölüm tek bir şey ekler: grup kapanmasındaki bozulma hangi parçadan geliyor,
 onu ayırır. Doğrulanan iki olgu şudur. $D^2 = I$ olduğundan
@@ -2854,24 +2866,7 @@ düzeyinde değil. Bölge I tarafta da zamanın oku denklemlerden türetilmez,
 Newton, Maxwell ve Schrödinger denklemlerinin hepsi $T$-simetriktir [54]; ok
 başlangıç koşulundan gelir.
 
-### 16.7 $D$'nin yön-bağımlı involüsyonla karşılaştırması
-
-$D$'nin grup içindeki yeri, onu yön-bağımlı bir involüsyonla karşılaştırınca
-netleşmektedir. $\theta = \varphi = 0$ ekseni için yön-bağımlı involüsyon $t$ ile
-$z$'yi işaretli olarak takas eder ve $\Lambda_{\inf}^2 = I$ bağıntısını sağlar;
-yani o da bir involüsyondur, ancak yalnızca iki koordinata dokunur.
-
-$D$ ise dört koordinatı birden değiştirir, ve içinde bir $x \leftrightarrow y$
-takası barındırır. O takasın üç boyuttaki determinantı $-1$ olduğundan bir
-$SO(3)$ elemanı değildir, ve bunun doğrudan sonucu şudur:
-
-> $D$, yön-bağımlı involüsyonun ürettiği genişletilmiş grup $L_{\text{ext}}$
-> içinde **bulunmaz**.
-
-Yani $D$ ile yön-bağımlı formlar aynı ailenin iki üyesi değildir; farklı
-yapılardır.
-
-### 16.8 Bölge II'de hareketin tanımı
+### 16.7 Bölge II'de hareketin tanımı
 
 Çıkış yüzü Bölüm 16.3'te Bölge I'in enerjisinin işareti olarak belirlendi, çıkış
 anı ise Bölüm 13'te genliğin fazından okundu. İkisi de parçacığın ara bölgede
@@ -2892,7 +2887,7 @@ Birinci hareket bir yolculuktur, ikincisi bir yönelimdir. Sorulacak soru şudur
 iki gözlenebilir, yani çıkış yüzü ve çıkış anı, bu iki hareketten hangisini
 görür.
 
-### 16.9 Çıkış anı ve yolculuk süresi
+### 16.8 Çıkış anı ve yolculuk süresi
 
 Ara bölge yayılıma izin veriyorsa geçiş ekseni boyunca bir grup hızı tanımlıdır,
 ve kalınlığın bu hıza bölümü bir yol süresi vermektedir. Bu süre fazdan okunan
@@ -2927,7 +2922,7 @@ okuması tam bu noktada ayrışmaktadır. Dalga okuması her iki rejimde de tan�
 kalır, parçacık okuması ise yalnızca yayılımlı rejimde tanımlıdır. Ayrışmanın
 kendisi de bir sonuçtur.
 
-### 16.10 Çıkış yüzünün körlüğü
+### 16.9 Çıkış yüzünün körlüğü
 
 Enerji vektörü üç zaman düzleminden herhangi birinde, herhangi bir açıyla
 döndürülse de geçiş dalga sayısı değişmez. Bunun nedeni açıktır: kütle kabuğu o
@@ -2940,7 +2935,7 @@ Dolayısıyla çıkış yüzü, parçacığın Bölge II'de izlediği yola hiçb
 bölgenin
 içinde değil, yüzeylerde belirlenmektedir.
 
-### 16.11 Çıkış anının gördüğü düzlemler
+### 16.10 Çıkış anının gördüğü düzlemler
 
 Çıkış anı ise dönmeye kör değildir, ancak seçici davranır. Bölge II'nin enerji
 vektörü geçiş altında Bölge I'in üç momentumuna karşılık gelir, ve
@@ -2960,7 +2955,7 @@ iki düzlemde ise dönme o toplamı değiştirmekte ve çıkış anı kaymaktad�
 Bu ayrım gözlem bakımından anlamlıdır: çıkış anına bakılarak parçacığın Bölge II'de **hangi düzlemde döndüğü** çıkarılabilir. Buna karşılık **hangi yüzden
 çıktığı** hiçbir düzleme bağlı değildir.
 
-### 16.12 İçerideki yolun izi
+### 16.11 İçerideki yolun izi
 
 İçeride süpürülen açı süreklidir. Dönme açısı serbest bir parametre olduğundan,
 birbirine ne kadar yakın iki değer seçilirse seçilsin iki farklı yol doğmaktadır;
@@ -3110,7 +3105,7 @@ tutmaktadır:
 
 Eğrilik ayrıca yalnızca geçiş yuvasına dokunan iki düzlemde sıfırdan farklı
 çıkmaktadır; diğer iki yuvanın gerdiği düzlem, yüzeyler hesaba katıldığında bile
-düz kalır. Seçilen bu iki düzlem, Bölüm 16.11'de fazdan bağımsız olarak bulunan
+düz kalır. Seçilen bu iki düzlem, Bölüm 16.10'da fazdan bağımsız olarak bulunan
 düzlemlerin **aynısıdır**: çıkış anı üç zaman düzleminden ikisine bağlıdır, birine
 bağlı değildir. Yani iki ayrı yoldan aynı iki düzleme varılmıştır.
 
@@ -3584,7 +3579,7 @@ bir denetimdir.
 **Ara bölgenin içinde** kat edilen bir mesafe **yoktur**. İçerideki mod
 sönümlüdür, grup hızı tanımsız kalmaktadır, ve gecikmenin kalınlıkla artmaması hızlı
 bir yolculuğa değil yolculuğun hiç olmamasına karşılık gelir; elde yalnızca faz
-kalır (Bölüm 16.9). Bu nedenle tablodaki $2{,}434322$ bir yol süresi değil, iki
+kalır (Bölüm 16.8). Bu nedenle tablodaki $2{,}434322$ bir yol süresi değil, iki
 geçişin faz gecikmesidir, ve tablonun hiçbir satırında kalınlık değişmemektedir.
 
 **Bölge II'de** kat edilen mesafe ise bundan bağımsız bir niceliktir. Bölge II
@@ -3593,7 +3588,7 @@ hareket olağan anlamıyla tanımlı olmaktadır (Bölüm 10.1, Bölüm 17.2). T
 değişen sütunu da bu niceliktir.
 
 Bu ayrım olmasaydı örnek kendi kendini çürütürdü, çünkü sönümlü bir bölgenin
-içinde yolculuk diline başvurmak Bölüm 16.9'un tam olarak reddettiği şeydir.
+içinde yolculuk diline başvurmak Bölüm 16.8'in tam olarak reddettiği şeydir.
 Örnek buna başvurmaz: ara bölge yalnızca bir faz gecikmesi katmakta, mesafe ise
 bütünüyle Bölge II'de kat edilmektedir.
 
