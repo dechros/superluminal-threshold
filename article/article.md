@@ -3817,27 +3817,29 @@ bölgenin ömrü, ışığın onu geçme süresi kadardır:
 $5{,}6132 \times 10^{-24}$ s. Gidiş dönüşün borcu ise
 $4{,}6155 \times 10^{-24}$ s, yani o ömrün $0{,}82$'si.
 
-İkisi aynı mertebededir. Dolayısıyla şart bugün sağlanır, ama payı yoktur:
-bölgeyi biraz küçülten ya da borcu biraz büyüten her seçim onu ihlal eder.
-Bu metin bir üretim yolu önermediği için şartı sekizin arasına yazmaz, ancak
-üretimi konuşan her öneriye onu iliştirmek gerekir.
+İki süre aynı mertebede kalmaktadır. Dolayısıyla şart bugün sağlanır, ama hiç
+payı yoktur: bölgeyi biraz küçülten ya da borcu biraz büyüten her seçim onu
+çiğner. Bu metin bir üretim yolu önermediğinden şartı sekizin arasına yazmaz,
+ancak üretimi konuşan her öneriye onu iliştirmek gerekmektedir.
 
 ### 21.2.6 Eşiğin dayandığı iki çarpan
 
-Kritik yoğunluk evrensel bir sabit değildir. İki çarpandan kurulur:
+Yukarıdaki kritik yoğunluk evrensel bir sabit değildir, iki çarpandan
+kurulmaktadır:
 
 $$\rho_c = \frac{\sqrt{3}}{32\pi^2\gamma^3}\, M_*^4$$
 
 Birinci çarpan serbest değildir. Kuantizasyon parametresi $\gamma$ bir entropi
-sayımından gelir ve $0{,}2375$ değerini alır; buradan türetilen kesir $0{,}4094$
-çıkar. Bu çarpanı ayarlanabilir saymak, aranan sonucu baştan kabul etmek olur.
+sayımından gelmekte ve $0{,}2375$ değerini almaktadır; buradan türetilen kesir de
+$0{,}4094$ çıkar. Bu çarpanı ayarlanabilir saymak, aranan sonucu baştan kabul
+etmek anlamına gelir.
 
-İkinci çarpan ölçülmüş bir nicelik tarafından sabitlenmemiştir. Ek sıkışmış
-boyutlar bulunuyorsa yer çekiminin güçlendiği ölçek dört boyutlu değerin çok
-altına iner [39] ve eşik o ölçeğin **dördüncü kuvvetiyle** düşer. Bu ölçekleme,
-o ölçeğin dört boyutlu Planck ölçeğinin yerini aldığı varsayımına dayanır ve
-burada gerekçelendirilmemiştir. Kaldıraç büyüktür:
-ölçeğin on altı mertebe düşmesi eşiği altmış dört mertebe düşürür.
+İkinci çarpanı ise ölçülmüş bir nicelik sabitlememektedir. Ek sıkışmış boyutlar
+bulunuyorsa yer çekiminin güçlendiği ölçek dört boyutlu değerin çok altına
+inmekte [39], ve eşik o ölçeğin **dördüncü kuvvetiyle** düşmektedir. Bu
+ölçekleme, söz konusu ölçeğin dört boyutlu Planck ölçeğinin yerini aldığı
+varsayımına dayanır ve burada gerekçelendirilmemiştir. Kaldıraç ise büyüktür:
+ölçeğin on altı mertebe düşmesi eşiği altmış dört mertebe aşağı çeker.
 
 | Yer çekiminin güçlendiği ölçek | Dönme eşiği | Kazanç |
 | ------------------------------ | --------------------------------- | ------------- |
@@ -3846,16 +3848,17 @@ burada gerekçelendirilmemiştir. Kaldıraç büyüktür:
 | $10^{4}$ GeV | $4{,}75 \times 10^{35}$ kg/m$^3$ | $60{,}3$ mertebe |
 | $10^{3}$ GeV | $4{,}75 \times 10^{31}$ kg/m$^3$ | $64{,}3$ mertebe |
 
-En yoğun kasıtlı yapılanma $9{,}28 \times 10^{21}$ kg/m$^3$ değerine ulaşır.
-Eşiğin oraya inmesi, yer çekiminin $3{,}74$ GeV ölçeğinde güçlenmesini
-gerektirirdi. Dışlanan ölçek tek bir sayı değildir; ek boyut sayısına bağlıdır
-ve [40] onu iki boyut için $9{,}9$ TeV, altı boyut için $5{,}3$ TeV olarak
-verir. En elverişli sınır alındığında bile kapatan ölçek $3{,}2$ mertebe
-dışlanmış kalır ve koşul $13{,}5$ mertebe uzaktadır.
+Bugün kasıtlı olarak kurulabilen en yoğun yapılanma
+$9{,}28 \times 10^{21}$ kg/m$^3$ değerine ulaşmaktadır. Eşiğin oraya inmesi ise
+yer çekiminin $3{,}74$ GeV ölçeğinde güçlenmesini gerektirirdi. Dışlanan ölçek
+tek bir sayı değildir, ek boyut sayısına bağlıdır: [40] onu iki boyut için
+$9{,}9$ TeV, altı boyut için $5{,}3$ TeV olarak vermektedir. En elverişli sınır
+alındığında bile kapatan ölçek $3{,}2$ mertebe dışlanmış kalır, ve koşul
+$13{,}5$ mertebe uzakta durur.
 
-Bu hesabın kazandırdığı şudur: açık, çıplak bir imkânsızlık değil tek bir
-parametre üzerindeki ölçülmüş bir mesafedir. Mesafe çarpışmanın enerjisiyle
-değil, ek boyutların varlığıyla kapanır.
+Bu hesabın kazandırdığı şey şudur: ortada çıplak bir imkânsızlık değil, tek bir
+parametre üzerinde ölçülmüş bir mesafe bulunmaktadır. O mesafeyi de çarpışmanın
+enerjisi değil, ek boyutların varlığı kapatır.
 
 **Ulaşılan yoğunluk, seçilen hacim tanımına bağlıdır.** Yukarıdaki
 $9{,}28 \times 10^{21}$ sayısı, çarpışma enerjisini durgun bir proton küresine
@@ -3867,38 +3870,40 @@ $1{,}04 \times 10^{22}$ kg/m$^3$. Aradaki yayılım $3{,}7$ mertebedir ve ölç�
 değil tanım farkıdır: büzülmüş örtüşme henüz maddeye dönüşmemiş enerjiyi
 sayar, durgun küre ise düzleşmeyi hiç saymaz.
 
-Yayılım yukarıdaki hükmü değiştirmez, çünkü en cömert tanım bile eşiğin
-çok altında kalır; değiştirdiği şey, mesafenin üç anlamlı basamakla yazılamaz
-olmasıdır. Bu metin durgun küreyi kullanır ve seçimini burada kaydeder.
+Bu yayılım yukarıdaki hükmü değiştirmez, çünkü en cömert tanım bile eşiğin çok
+altında kalmaktadır. Değiştirdiği tek şey, mesafenin üç anlamlı basamakla
+yazılamaz olmasıdır. Metin durgun küre tanımını kullanmakta, ve seçimini burada
+kayda geçirmektedir.
 
 ### 21.2.7 Çekirdek ölçümün düzeneği
 
-Ölçülen nicelik tektir. Bir proton fırlatılır, eşiği geçer, öte tarafta tek
-uzamsal eksen boyunca yer değiştirir, geri geçer ve **aynı saat üzerinde**
-fırlatılışından önceki bir anda kaydedilir. Okunan şey iki olay arasındaki zaman
-farkıdır; bu, iddiayı bir çıkarım değil bir ölçüm yapan özelliktir.
+Deneyin ölçtüğü nicelik tektir. Bir proton fırlatılır, eşiği geçer, öte tarafta
+tek uzay ekseni boyunca yer değiştirir, geri geçer, ve **aynı saat üzerinde**
+fırlatılışından önceki bir anda kaydedilir. Okunan şey yalnızca iki olay
+arasındaki zaman farkıdır, ve iddiayı bir çıkarım olmaktan çıkarıp bir ölçüme
+çeviren de budur.
 
-Bir şart, göründüğü kadar ağır değildir. Protonun bant merkezi kendi toplam
-enerjisi bölü indirgenmiş Planck sabitidir ve durgun bir proton durgun
-enerjisinden kurulan frekansta zaten oturur. Hiçbir kaynak o frekansı sağlamaz,
-proton kendisi taşır.
+Şartlardan biri göründüğü kadar ağır değildir. Protonun bant merkezi, kendi
+toplam enerjisinin indirgenmiş Planck sabitine bölümüne eşittir, ve durgun bir
+proton zaten durgun enerjisinden kurulan frekansta oturur. Yani o frekansı hiçbir
+kaynağın sağlaması gerekmez, protonun kendisi taşır.
 
 **Enerji yine de gerekir, ama bant için değil.** Varışın hangi fırlatmaya ait
-olduğunu bir etiket söyler ve etiket protonun ince bir folyodan geçmesini
-gerektirir; folyo da onu saçar. Bir megaelektronvoltluk proton santimetre karesi
-başına on mikrogramlık karbondan $1{,}38 \times 10^{-3}$ radyan genişleyerek
-çıkar, yani demet hattının ulaştığı kolimasyonu bozar. İki yüz otuz
-megaelektronvoltta aynı folyo onu $6{,}66 \times 10^{-6}$ radyan genişletir ve
-etiket ile kolimasyon bir arada durur. Enerjinin satın aldığı şey bant değil,
-**saçılma bütçesidir**; o enerjide bant merkezi $1{,}7749 \times 10^{24}$ rad/s
-değerine çıkar.
+olduğunu bir etiket söylemektedir, ve etiket protonun ince bir folyodan
+geçmesini gerektirir; folyo da protonu saçar. Bir megaelektronvoltluk bir proton,
+santimetre karesi başına on mikrogramlık karbondan $1{,}38 \times 10^{-3}$ radyan
+genişleyerek çıkar, yani demet hattının ulaştığı kolimasyonu bozar. Aynı folyo
+iki yüz otuz megaelektronvoltta protonu yalnızca $6{,}66 \times 10^{-6}$ radyan
+genişletmektedir, ve böylece etiket ile kolimasyon bir arada durabilir.
+Dolayısıyla enerjinin satın aldığı şey bant değil, **saçılma bütçesidir**; o
+enerjide bant merkezi de $1{,}7749 \times 10^{24}$ rad/s değerine çıkar.
 
-**Fırlatma hızı da bedava değildir.** Bir varış için $4{,}85 \times 10^{8}$
-fırlatma gerekir, ancak saniyede $4{,}85 \times 10^{8}$ fırlatmak fırlatmalar
-arasına yalnızca $2{,}06$ nanosaniye koyar. Aranan işaret bir nanosaniyelik bir
-geri kayma olduğuna göre, o kadar erken bir varış ile bir önceki protonun geç
-varışı ayırt edilemez. Hız saniyede on milyona indirilir, aralık yüz nanosaniye
-olur ve koşu $48{,}5$ saniye sürer.
+**Fırlatma hızı da bedava değildir.** Tek bir varış için
+$4{,}85 \times 10^{8}$ fırlatma gerekmektedir, ancak bunu saniyede yapmak
+fırlatmalar arasına yalnızca $2{,}06$ nanosaniye koyar. Aranan işaret bir
+nanosaniyelik bir geri kayma olduğuna göre, o kadar erken bir varış ile bir
+önceki protonun geç varışı birbirinden ayırt edilemez. Bu yüzden hız saniyede on
+milyona indirilir; aralık yüz nanosaniyeye çıkar, ve koşu $48{,}5$ saniye sürer.
 
 | Şart | İstenen | Ulaşılan |
 | ------------------------------- | ---------------------------------- | ---------------------------------- |
@@ -3911,14 +3916,14 @@ olur ve koşu $48{,}5$ saniye sürer.
 | Saniyedeki fırlatma sayısı | $4{,}85 \times 10^{8}$ | $10^{7}$ |
 | Varışın fırlatmaya bağlanması | bir etiket | bir etiket |
 
-Bugünkü bir laboratuvar sekiz şarttan yedisini karşılar. Tablonun sağ sütununu
-şartlar tek tek değil birlikte belirler: yukarıdaki iki çekişme, enerjiyi
-yükseltip hızı düşüren tek bir çalışma noktasında birlikte çözülür. Okumayı
-mümkün kılan sayı şudur: aranan ilerleme $10^{-9}$ s, zamanlama çözünürlüğü
-$1{,}8 \times 10^{-11}$ s, yani elli beş çözünürlük genişliği ayrım. Ölçüm
-sınırda durmaz ve deney $48{,}5$ saniye sürer.
+Bugünkü bir laboratuvar bu sekiz şarttan yedisini karşılamaktadır. Tablonun sağ
+sütununu şartlar tek tek değil birlikte belirler: yukarıdaki iki çekişme,
+enerjiyi yükseltip hızı düşüren tek bir çalışma noktasında birlikte çözülür.
+Okumayı mümkün kılan sayı da şudur: aranan ilerleme $10^{-9}$ s, zamanlama
+çözünürlüğü $1{,}8 \times 10^{-11}$ s, yani arada elli beş çözünürlük genişliği
+bulunur. Ölçüm sınırda durmaz, ve deneyin tamamı $48{,}5$ saniye sürer.
 
-Düzeneğin parçaları da olağandır:
+Düzeneğin parçaları da olağandır ve hepsi raftan alınabilir:
 
 - tedavi sınıfı bir proton siklotronu, iki yüz otuz megaelektronvolt;
 - iki delikli bir sürüklenme kolimasyonu, açıyı istenen bandın altına indiren ve
@@ -3928,32 +3933,32 @@ Düzeneğin parçaları da olağandır:
 - tek bir zaman çevirici yonga ve tek bir osilatör, iki damgayı birlikte okuyan.
 
 Son madde isteğe bağlı değildir. İki damga ayrı saatlerden okunursa, bir
-nanosaniyelik bir saat kayması aranan işaretin tamamını taklit eder.
+nanosaniyelik bir saat kayması aranan işaretin tamamını taklit edebilir.
 
-Sağlanmayan tek şart öte bölgenin yoğunluğudur. Düzeneğin geri kalanı olağandır:
-bir proton demeti, bir kolimatör, hızlı bir zamanlama algılayıcısı ve bir
-tetikleyici. Dolayısıyla deney tarif edilmiş olup gerçekleştirilebilir değildir,
-ve ikisinin arasında duran şey bir liste değil tek bir şart üzerindeki tek bir
-sayıdır.
+Geriye sağlanmayan tek şart kalmaktadır: öte bölgenin yoğunluğu. Düzeneğin geri
+kalanı bir proton demeti, bir kolimatör, hızlı bir zamanlama algılayıcısı ve bir
+tetikleyiciden ibarettir. Dolayısıyla deney tarif edilmiştir ama
+gerçekleştirilebilir değildir, ve ikisinin arasında duran şey uzun bir liste
+değil, tek bir şart üzerindeki tek bir sayıdır.
 
 ### 21.3 Simülasyondan okuma
 
-Bu çalışmadaki her gecikme **tek bir yoldan** gelmektedir: fazın frekans türevi.
-Yol doğrudur, ama tek bir yol kendini denetleyemez. Bu alt bölüm ikinci yolu
-kurmaktadır.
+Bu çalışmadaki her gecikme **tek bir yoldan** gelmektedir: fazın frekansa göre
+türevinden. Yol doğrudur, ancak tek bir yol kendini denetleyemez. Bu alt bölüm
+ikinci bir yol kurmaktadır.
 
-**Yöntem.** Bir dalga paketi frekanslar üzerinden toplanır; her frekans, iki
-geçişin o frekansa uyguladığı genlikle ve gözlem noktasına kadarki serbest
-yayılım fazıyla çarpılmıştır. Hesap sonucu zamanda ileri yürütmekte ve zarfın
-**tepe yaptığı anı** varış saymaktadır.
+**Yöntem.** Bir dalga paketi frekanslar üzerinden toplanmaktadır. Her frekans,
+iki geçişin o frekansa uyguladığı genlikle ve gözlem noktasına kadarki serbest
+yayılım fazıyla çarpılır. Hesap sonucu zamanda ileri yürütmekte, ve zarfın **tepe
+yaptığı anı** varış saymaktadır.
 
-Hesap hiçbir gecikme formülü kullanmamaktadır. Durağan faz koşulunu da
-dayatmamakta, ortaya çıkmasını ya da çıkmamasını serbest bırakmaktadır.
+Bu hesap hiçbir gecikme formülü kullanmaz. Durağan faz koşulunu da dayatmaz,
+ortaya çıkmasını ya da çıkmamasını serbest bırakır.
 
 **Bandın kesilmesi zorunludur.** Frekans $\sqrt{k_\perp^2 + \mu}$ değerinin, bu
-yapılanmada $2{,}2361$'in altına düştüğünde dışarıdaki dalga sayısı sanaldır ve
-o bileşen dedektöre **hiç ulaşmaz**. Bant orada kesilmektedir; kesilmezse toplam
-anlamsız bir katkı taşır.
+yapılanmada $2{,}2361$'in altına düştüğünde dışarıdaki dalga sayısı sanal olur ve
+o bileşen dedektöre **hiç ulaşmaz**. Bu yüzden bant orada kesilmektedir; kesilmezse
+toplam anlamsız bir katkı taşır.
 
 **Birinci sonuç: gecikme doğrulanmaktadır.**
 
@@ -3963,9 +3968,9 @@ anlamsız bir katkı taşır.
 | $8$ | $+1{,}4635$ | $+1{,}4629$ |
 | $16$ | $+1{,}4635$ | $+1{,}4629$ |
 
-Kalan fark paketin sonlu genişliğinden gelir ve bant daraldıkça küçülür.
-Frekans toplamı dört kat inceltildiğinde sayı kıpırdamaz; yani bildirilen şey
-kesmenin bir özelliği değil.
+Kalan fark paketin sonlu genişliğinden gelmekte, ve bant daraldıkça
+küçülmektedir. Frekans toplamı dört kat inceltildiğinde sayı hiç kıpırdamaz, yani
+bildirilen değer kesmenin bir yan ürünü değildir.
 
 > Doyum, kendisine hiç söylenmemiş bir yol tarafından **gözlenmektedir**.
 > Kalınlık dörtten on altıya çıkarken gecikme değişmemektedir. Dolayısıyla
@@ -3981,20 +3986,22 @@ tepe fazladan kaymaktadır:
 | $8$ | $-0{,}1726$ |
 | $16$ | $-0{,}3369$ |
 
-Sebebi şudur: opak rejimde geçirgenliğin **modülü** frekansla dik biçimde
-yükselir. Bölge paketi yalnızca geciktirmez, onu **hızlı yanına doğru yeniden
-ağırlıklandırır**. Bu kayma kalınlıkla büyümekte, gecikme ise büyümemektedir.
+Bunun sebebi şudur: opak rejimde geçirgenliğin **modülü** frekansla dik biçimde
+yükselmektedir. Yani bölge paketi yalnızca geciktirmez, onu **hızlı yanına doğru
+yeniden ağırlıklandırır**. Bu kayma kalınlıkla büyürken, gecikme büyümez.
 
-Bu gerçek bir etkidir ve bir hata değildir; ancak bir **gecikme de değildir**.
-Paket, farklı bir paket olarak varmaktadır. İkisinin toplamını tek sayı olarak
-bildirmek, birini ötekine yazmak olurdu; bu nedenle tablo ikisini ayrı tutmaktadır.
+Ortaya çıkan etki gerçektir ve bir hesap hatası değildir; ancak bir **gecikme de
+değildir**. Paket varır, ama farklı bir paket olarak varır. İkisinin toplamını
+tek bir sayı olarak bildirmek birini ötekinin hanesine yazmak olurdu, ve tablo bu
+nedenle ikisini ayrı tutmaktadır.
 
-**Simülasyonun üç kez düzelttiği yer.** Grup hızı ilk yazımda ters çevrilmişti
-ve arama penceresi tepeyi hiç içermiyordu. Bant, dışarıdaki dalga sayısının
-sanal olduğu bölgeye uzanıyordu. İlk seçilen paket genişliğinde ise yeniden
-ağırlıklandırma gecikmeye baskın gelmekteydi; kalınlıkla **büyüyen bir öne
-kayma** neredeyse gecikme diye kaydedilecekti. Üçü de simülasyonun kendisi
-tarafından yakalanmıştır, ki bir simülasyonun varlık nedeni budur.
+**Simülasyonun üç kez düzelttiği yer.** Grup hızı ilk yazımda ters çevrilmişti,
+ve arama penceresi tepeyi hiç içermiyordu. İkinci hatada bant, dışarıdaki dalga
+sayısının sanal olduğu bölgeye kadar uzanıyordu. Üçüncüsünde ise ilk seçilen
+paket genişliğinde yeniden ağırlıklandırma gecikmeye baskın geliyordu, ve
+kalınlıkla **büyüyen bir öne kayma** neredeyse gecikme diye kaydedilecekti. Üçünü
+de simülasyonun kendisi yakalamıştır, ki bir simülasyonun varlık nedeni de
+budur.
 
 ---
 
