@@ -165,22 +165,38 @@ Sonuca yedi adımda varılmıştır. Adımların tamamı, her birinin hangi böl
 kurulduğuyla birlikte Bölüm 19'da sıralanır. Hesabı en kısa yoldan tekrar etmek
 isteyen okuyucu orayı okursa yeter.
 
-### 1.5 Bu adımların göstermedikleri
+### 1.5 Gösterilmeyenler
 
-Yedi adım bir aritmetik kurar ve o aritmetik kendi içinde eksiksiz işler. Ancak
+Yedi adım bir aritmetik kurar, ve o aritmetik kendi içinde eksiksiz işler. Ancak
 aynı aritmetik, böyle bir geçişin fiziksel olarak kurulabildiğini göstermez.
-Kurulmasının önüne üç ayrı engel çıkar, ve üçü birbirinden farklı türdendir.
+Kurulmasının önüne beş ayrı engel çıkar.
 
-Birincisi bir büyüklük sorunudur. Eşiği geçebilen yapılanmalarda parçacığın geçme
-olasılığını veren genlik, kalınlık $d = 8$'e çıktığında
-$3{,}46 \times 10^{-12}$'ye kadar iner; yani geçiş mümkün kalır ama neredeyse hiç
-gerçekleşmez. İkincisi ise bir açık sorudur. Saat farkının işaretini
-seçebilmek, sekiz matris arasından birini evrensel olarak sabitleyen bir kuralın
-bulunmamasına dayanır, oysa böyle bir kuralın yokluğu kanıtlanmamıştır.
-Üçüncüsü, eşiği geçirgen kabul eden okuma ile geçiş yüzeyindeki madde
-tabakasının bir arada duramamasıdır. Bu son engel bu modele özgü değildir, çünkü
-kaynağını literatürün zaten taşıdığı güçlü ile zayıf eklem koşulu ayrımından
-alır.
+**Birincisi bir büyüklük sorunudur.** Eşiği geçebilen yapılanmalarda parçacığın
+geçme olasılığını veren genlik, kalınlık $d = 8$'e çıktığında
+$3{,}46 \times 10^{-12}$'ye kadar iner. Yani geçiş mümkün kalır ama neredeyse
+hiç gerçekleşmez.
+
+**İkincisi bir açık sorudur.** Saat farkının işaretini seçebilmek, sekiz matris
+arasından birini evrensel olarak sabitleyen bir kuralın bulunmamasına dayanır,
+oysa böyle bir kuralın yokluğu kanıtlanmamıştır.
+
+**Üçüncüsü bir çelişkidir.** Eşiği geçirgen kabul eden okuma ile geçiş
+yüzeyindeki madde tabakası bir arada duramaz. Bu engel bu modele özgü değildir,
+çünkü kaynağını literatürün zaten taşıdığı güçlü ile zayıf eklem koşulu
+ayrımından alır.
+
+**Dördüncüsü bir yanlış okuma tehlikesidir.** Gecikmenin kalınlıkla doyması,
+içeride bir yayılma hızının ölçüldüğü anlamına gelmez, çünkü aynı rejimde grup
+hızı zaten tanımsız kalır. Aynı gecikme, ara bölgede depolanan alanın katmanda
+ne kadar durduğundan da bağımsız değildir.
+
+**Beşincisi gözlemdedir.** İddiayı taşıyan aralıkta parçacık Bölge II'de
+doğrudan görünmez, ve geriye yalnızca üç sınır niceliği kalır. Üçü de tek bir
+bilgi verir, yani bir geçişin olduğunu (Bölüm 18.9). Bölge II'de durup ileriyi
+kestirmeye çalışan bir gözlemci de başarısız olur, çünkü eşikteki başlangıç
+değeri problemi iyi konumlanmaz. Ancak bu çöküş, eşikten geçerek Bölge II'ye
+giren hiçbir şeyi etkilemez, çünkü kütle kabuğu üzerindeki bir modun büyüme
+katsayısı her durumda negatif çıkar.
 
 ### 1.6 Model
 
@@ -236,24 +252,7 @@ $312$ ayrı Bölge II durumunun yalnızca $158$ farklı dönüş olayına düşt
 göstermektedir. Bu sıkışma, boyut değişiminde kaybolan bilginin sayısal
 ölçüsünü verir.
 
-### 1.9 Gösterilmeyenler
-
-Bölge II'de durup ileriyi kestirmeye çalışan bir gözlemci başarısız olur, çünkü
-eşikteki başlangıç değeri problemi iyi konumlanmaz. Ancak bu çöküş, eşikten
-geçerek oraya giren hiçbir şeyi etkilemez: kütle kabuğu üzerindeki bir modun
-büyüme katsayısı her durumda negatif çıkar, yani mod büyümek yerine sönümlenir.
-
-İkinci sınır gecikmeyle ilgilidir. Gecikmenin kalınlıkla doyması, içeride bir
-yayılma hızının ölçüldüğü anlamına gelmez, çünkü aynı rejimde grup hızı zaten
-tanımsız kalır. Hesap bir şeyi daha göstermiştir: bu gecikme, ara bölgede
-depolanan alanın katmanda ne kadar durduğundan bağımsız bir sayı değildir.
-
-Üçüncü sınır ise gözlemdedir. İddiayı taşıyan aralıkta parçacık Bölge II'de
-doğrudan görünmez, ve geriye yalnızca üç sınır niceliği kalır. Üçü de tek bir
-bilgi verir, yani bir geçişin olduğunu (Bölüm 18.9). Geçişin tayf üzerinde hangi
-olasılıkla dağıldığı ise hesaplanmamıştır.
-
-### 1.10 Modelin maddeleri
+### 1.9 Modelin maddeleri
 
 Aşağıdaki maddelerin hepsi tek bir dönüşüme aittir: Bölge II'deki yönelimi dönüş
 olayının dört koordinatına bağlayan dönüşüme. Her madde bu dönüşümün ya bir
@@ -280,7 +279,7 @@ girdisini, ya bir kısıtını, ya da bir sonucunu kaydeder.
  yönelim bu koordinatların hepsine değil, yalnızca bir kısmına
  ulaşır.
 
-### 1.11 Okuma haritası
+### 1.10 Okuma haritası
 
 Çalışma üç adım üzerine kurulmuştur, ve üçü de tek bir amaca hizmet eder: kütleli
 bir parçacığı zamanda geriye taşımak. Aşağıdaki tablo her adımın hangi bölümlerde
