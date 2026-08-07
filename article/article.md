@@ -2334,12 +2334,12 @@ değerli değildir: aynı gecikmeyi veren birden çok kalınlık bulunur.
 
 ### 13.6 Mesafe ile fiyatın farkı
 
-Dönüş anını tek bir çıkarma işlemi verir. Bölge II'de kat edilen mesafe $s$ ve
-tek geçişin faz gecikmesi $\tau$ ile yazıldığında, kalkışa göre varış anı
-$2\tau - s$ olmaktadır. Yazılan gecikme gidiş dönüşe ait olduğundan tek geçişin
-iki katıdır, ve ikisini birbirine karıştırmak bu çalışmada iki kez ikilik çarpan
-hatasına yol açmıştır. Sınanan yapılanmada $\tau = 1{,}462864$, gidiş dönüşün
-gecikmesi ise $2\tau = 2{,}925728$ değerindedir.
+Varış anının $2\tau - s$ olduğunu Bölüm 2.1 ile Bölüm 4.1.3 kurmuştu. Bu alt
+bölüm o ifadeyi bir başka yapılanmada sayıya döker. $\tau$ tek bir geçişin
+gecikmesi olduğundan gidiş dönüşün gecikmesi onun iki katıdır, ve ikisini
+birbirine karıştırmak bu çalışmada iki kez ikilik çarpan hatasına yol açmıştır.
+Sınanan yapılanmada $\tau = 1{,}462864$, gidiş dönüşün gecikmesi ise
+$2\tau = 2{,}925728$ değerindedir.
 
 | Bölge II'de kat edilen mesafe | Varış anı | Konum |
 | ----------------------------- | -------------- | ----------------- |
@@ -2348,8 +2348,9 @@ gecikmesi ise $2\tau = 2{,}925728$ değerindedir.
 | $6{,}000000$ | $-3{,}074272$ | Kalkıştan önce |
 | $25{,}000000$ | $-22{,}074272$ | Kalkıştan önce |
 
-Yolcunun denetlediği tek nicelik $s$ değeridir. Bedel durumun ve bölgenin
-özelliklerinden çıkar ve yolculuk sırasında değiştirilemez.
+Yolculuk sırasında değiştirilebilen tek nicelik $s$ değeridir. Eşik gecikmesi
+ise durumun ve ara bölgenin özelliklerinden çıkar, ve yolculuk başladıktan
+sonra sabit kalır.
 
 ### 13.7 Sekiz koşul, iki başarısızlık
 
