@@ -951,22 +951,6 @@ kıpırdamaz. İki sonuç ne aynı niceliği ne de aynı kurulumu ele aldığın
 bu bölümün hesabı o mekanizmanın yeniden bulunması sayılmaz. Bu bölüm ona yalnızca
 kendi yerini göstermek için değinmektedir.
 
-### 4.1.7 Grup kapalılığının bozulduğu katman
-
-Doğrulanan iki olgu:
-
-- $D^2 = I$, dolayısıyla $\langle D \rangle = \mathbb{Z}_2$, **kapalı**.
-- $M(V)^2 \neq I$, birleşik dönüşüm kapalı **değil**. ($V = 1{,}5c$, $2c$ ve
- $10c$ için ayrı ayrı gösterildi.)
-
-Kapanma sorunu $D$'den değil, $B$ katmanından kaynaklanır. $D \cdot B$'yi tek
-bir dönüşüm olarak ele almak kapanmayı bozar; ayrıştırıldığında iki parça da
-düzgündür: $D$ bir $\mathbb{Z}_2$ ayrık simetrisi, $B$ ise $SO(1,3)$ içindedir.
-
-Elde edilen yapı $\langle D \rangle \ltimes SO(1,3)$ biçiminde bir yarı-doğrudan
-çarpımdır. Kapanmanın bozulması, $D B D^{-1}$ konjugasyonunun boost tipini
-korumamasından çıkar; yön-bağımlı genleşmeler bu konjugasyonun ürünüdür.
-
 ### 4.2 Geniş formülasyonla karşılaştırma
 
 Aynı problem [3]'te bağımsız ve çok daha geniş biçimde çözülmüştür. İki
@@ -988,8 +972,16 @@ $x \leftrightarrow y$ takasının üç boyuttaki determinantı $-1$'dir ve
 dolayısıyla $SO(3)$ elemanı değildir. Bölüm 16.7 bunu hesaplamıştır.
 
 Bu bölüm tek bir şey ekler: grup kapanmasındaki bozulma hangi parçadan geliyor,
-onu ayırır. $D$ kapalı bir grup üretir, $B$ üretmez. [3] sorunu bu
-biçimde ortaya koymaz, çünkü o çalışma baştan kapalı bir grup kurmaktadır.
+onu ayırır. Doğrulanan iki olgu şudur. $D^2 = I$ olduğundan
+$\langle D \rangle = \mathbb{Z}_2$ kapalıdır. Buna karşılık $M(V)^2 \neq I$
+çıkar, yani birleşik dönüşüm kapalı değildir; bu $V = 1{,}5c$, $2c$ ve $10c$
+için ayrı ayrı gösterilmiştir. Sorun $D$'den değil $B$ katmanından gelmektedir,
+ve ayrıştırıldığında iki parça da düzgündür: $D$ bir $\mathbb{Z}_2$ ayrık
+simetrisi, $B$ ise $SO(1,3)$ içindedir. Elde edilen yapı
+$\langle D \rangle \ltimes SO(1,3)$ biçiminde bir yarı-doğrudan çarpımdır, ve
+kapanmanın bozulması $D B D^{-1}$ konjugasyonunun boost tipini korumamasından
+çıkar. [3] sorunu bu biçimde ortaya koymaz, çünkü o çalışma baştan kapalı bir
+grup kurmaktadır.
 
 ---
 
@@ -1706,14 +1698,13 @@ I'in uzaysal açı momentumunun aynasıdır.
 ### 9.2 Rollerin tersine dönmesi
 
 Aşağıdaki tablo Bölüm 10.1'in sözlüğünün rol tarafıdır; koordinat karşılıkları
-o çalışmada, rollerin karşılaştırması ise bu bölümde durmaktadır.
+Bölüm 10.1'de, rollerin karşılaştırması ise bu bölümde durmaktadır.
 
 | | Bölge I | Bölge II |
 | ---------------------- | ---------------- | ----------------------------- |
 | Serbest hareket | Uzayda, üç yönde | Üç zamanda serbestçe |
 | Tek yönlü zorunluluk | Zamanda | Tek uzay ekseninde |
 | $O(3)$ dönme simetrisi | Uzaysal | Zamansal |
-| Temel nesne | Yörünge (eğri) | Cephe (üç boyutlu hiperyüzey) |
 
 ### 9.3 Ayrım ve zorunluluk
 
@@ -3824,7 +3815,7 @@ yazılmasının nedeni de budur.
 | Üç zamanda zamanın oku | Kapandı (Bölüm 9.4), ok zaman yönü sayısından çıkar, bir yön varsa ok vardır |
 | Dönüşümdeki $\pm$ işareti | Kapanamaz olduğu gösterildi (Bölüm 16.6) |
 | Grup yapısı | Kapandı (Bölüm 4.2), sorun $B$ katmanında |
-| Superluminal durgunluk | Kapandı (Bölüm 10.2), ayar fazlalığı |
+| Superluminal durgunluk | Kapandı (Bölüm 10.3), ayar fazlalığı |
 | Etkileşim / Maxwell | Kapsam dışı bırakıldı |
 | Kuantumlama | Kapandı |
 | Takyonların varlığı | Açık, deneysel soru |
@@ -4168,6 +4159,205 @@ paket genişliğinde yeniden ağırlıklandırma gecikmeye baskın geliyordu, ve
 kalınlıkla **büyüyen bir öne kayma** neredeyse gecikme diye kaydedilecekti. Üçünü
 de simülasyonun kendisi yakalamıştır, ki bir simülasyonun varlık nedeni de
 budur.
+
+---
+
+## 22. İtirazlar ve yanıtlar
+
+Bu bölüm çekirdek zincire yöneltilebilecek itirazları tek yerde toplamaktadır.
+Zincir beş halkadan oluşur: **geçiş**, **çevrim**, **doyum**, **işaret** ve
+**ölçülebilirlik**. Aşağıdaki her madde bu halkalardan birini hedef alır, ve
+her maddenin sonunda bu çalışmanın verebildiği yanıt durur. Yanıt veremediği
+maddeler de aynı biçimde yazılmıştır.
+
+### 22.1 İmza değişimi bir işaret uzlaşımı olabilir
+
+**İtiraz.** $\eta = \mathrm{diag}(+1,-1,-1,-1)$ ile
+$\eta' = \mathrm{diag}(+1,+1,+1,-1)$, eksenler ters sırayla okunduğunda
+birbirinin negatifidir. Metriğin genel işareti ise tensör düzeyinde bir
+uzlaşımdır. Dolayısıyla Bölge II, Bölge I'in ters işaretle yazılmış hâli
+olabilir, ve $D$ fiziksel bir dönüşüm değil bir yeniden adlandırma olabilir. Bu
+okumada Bölüm 4.1.1'in katsayı sonucu bir hesap değil bir tanımdır, çünkü
+işaretli bir permütasyon matrisinin sıfırdan farklı girdisi zaten $\pm 1$ olmak
+zorundadır. İtirazı [2] kurmaktadır.
+
+**Vurduğu halka.** Geçiş ve çevrim, ikisi birden.
+
+**Yanıt.** İtiraz iki bölgenin doğrudan karşılaştırılması için geçerlidir, ve bu
+çalışma onu geçersiz kılan bir hesap taşımamaktadır. Buna karşılık geçiş bu
+modelde doğrudan kurulmamıştır: araya kendi imzası olan üçüncü bir bölge girer
+(Bölüm 5). Ara bölgenin Kleinyen hâli $(2,2)$ imzasını taşır, ve $(2,2)$ ne
+$(1,3)$'ün kendisidir ne de negatifidir; iki artı ile iki eksi, genel işaret
+çevrildiğinde yine iki artı ile iki eksi verir. Bu yüzden $(1,3)$'ten
+$(2,2)$'ye geçiş bir yeniden adlandırma değildir, ve Bölüm 5.1 bu yolun her
+adımında yalnızca tek bir öz-değerin sıfırlandığını göstermektedir. Yanıtın
+sınırı da açıktır: kademeli yolun bir uzlaşım değişimi olmadığı gösterilmekte,
+$D$'nin uçtan uca uygulanışı için aynı şey gösterilmemektedir. İtiraz bu
+hâliyle **açık kalmaktadır**, ve zincirin en zayıf halkası burasıdır.
+
+### 22.2 İmza değişimi sınırsız parçacık üretebilir
+
+**İtiraz.** İmza değiştiren bir arka planda tanımlı bir kuantum alanı, geçiş
+sırasında sınırsız sayıda parçacık ve sınırsız toplam enerji üretebilir. O
+zaman geçişin bedeli küçük bir olasılık değil, eşiği ayakta bırakmayan bir geri
+tepkidir.
+
+**Vurduğu halka.** Geçiş.
+
+**Yanıt.** Bu çalışmada böyle bir hesap **yoktur**. Bölüm 5.3'ün andığı frekans
+karışımı hesabı ([20], [21]) tam olarak bu soruya bakan çerçevedir, ve o
+çerçevede karışım yalnızca Öklidyen bölgenin toplam konformal genişliğine bağlı
+çıkmaktadır. Bu çalışmanın verdiği geçirgenlik sayıları tek parçacık
+saçılmasına aittir, ve geri tepkiyi içermez. İtiraz **karşılanmamıştır**.
+
+### 22.3 Doyan gecikme bir kat etme süresi olmayabilir
+
+**İtiraz.** Doymuş grup gecikmesi, engelde depolanan alanın boşalma süresidir,
+ve alan iki uçtan birden boşalır. Bir ömür süresi ise bir hızla
+ilişkilendirilemez, bir yayılma terimiyle de toplanamaz. O zaman $2\tau - s$
+ifadesi iki farklı türden süreyi çıkarmaktadır, ve sıfırlandığı nokta fiziksel
+bir olay işaretlemez. İtirazı [30] kurmaktadır.
+
+**Vurduğu halka.** Doyum ve çevrim.
+
+**Yanıt.** Bu çalışma toplamı elle kurmamış, tek bir genliğin durağan faz
+koşulundan türetmiştir (Bölüm 4.1.2), ve türetimi bağımsız bir yolla üç ayrı
+mesafede sınamıştır. Türetim itirazın hedefi olan **yorumu** ise
+kurtarmamaktadır: durağan faz koşulu çıkan paketin tepesinin hangi anda
+göründüğünü verir, o tepenin bir kat etme süresi taşıdığını vermez. Ayrımı
+Bölüm 1.5 dördüncü engel olarak kaydetmektedir. İtiraz **kısmen
+karşılanmıştır**: toplamın cebri sağlamdır, süre yorumu değildir.
+
+### 22.4 Erken varan cismin sinyal sayılması
+
+**İtiraz.** Bu çalışma nedensellik itirazını, bir sinyal iddiası taşımadığını
+söyleyerek karşılamaktadır (Bölüm 18.6). Oysa çekirdek iddia bir dalga
+tepesinin değil, kütleli bir parçacığın kalkıştan önce geri dönmesidir.
+Kimliğini taşıyan bir cismin erken varması ise tanımı gereği bir sinyaldir, ve
+[50] ile [36]'nın saydığı nedensel maliyeti doğurur.
+
+**Vurduğu halka.** İşaret.
+
+**Yanıt.** İtiraz bir ikilem kurmaktadır, ve ikilem gerçektir. Cisim okuması
+alınırsa nedensel çelişki doğar. Faz okuması alınırsa geriye çıkan paketin
+tepesinin öne düşmesi kalır, o da bilinen bir olgudur. Bu çalışma iki okumayı
+birlikte yürütmekte (Bölüm 11) ve dönüş anını faz okumasından almaktadır (Bölüm
+13). İki okumanın hangi koşulda birbirine çevrildiğini Bölüm 11.3 ile 11.4
+vermektedir: paket yeterince dar tutulduğunda çevrim tam işler, ancak dar paket
+kendi kaybını getirir. Dolayısıyla ikilem **kapatılmamıştır**. Kaydedilen şey
+şudur: faz okumasıyla hesaplanan dönüş anı bir sinyal iddiası taşımaz, ve cisim
+okumasına geçmek için gereken dar paket sınırı Bölüm 11.4'te sayılıdır.
+
+### 22.5 Çok zamanlı bölgede başlangıç verisinin serbestliği
+
+**İtiraz.** Birden çok zaman ekseni taşıyan bir bölgede başlangıç değeri
+problemi ancak yerel olmayan bir kısıt altında tek çözüm verir. O kısıt, Bölge
+II'nin verisini eşikte serbest bırakmaz. Bu durumda $s$, dışarıdan seçilebilen
+bir sayı olmaktan çıkar.
+
+**Vurduğu halka.** Çevrim ve işaret.
+
+**Yanıt.** Bu çalışma iyi konumlanma sorununu kaydetmekte (Bölüm 1.5, beşinci
+engel), ve eşikten erişilen alt kümenin sönümlü olduğunu göstererek
+**kararlılık** tarafını karşılamaktadır. İtirazın **teklik** tarafı ise
+karşılanmamıştır. Bölüm 13.6 zaten $s$'nin bu modelde belirlenmediğini
+yazmaktadır; itiraz o boşluğu daraltmakta, yani $s$'yi yalnızca belirsiz değil,
+eşikteki veriye bağlı bir nicelik hâline getirmektedir.
+
+### 22.6 Güçlü eklem koşulu bir tercih olmayabilir
+
+**İtiraz.** İmza değişen bir yüzeyde iyi tanımlı bir Ricci tensörü, dış
+eğriliğin sıfırlanmasını zaten dayatmaktadır ([57], [24]). O zaman zayıf koşul
+bir seçenek değildir, ve eşik geçirgen olamaz.
+
+**Vurduğu halka.** Geçiş.
+
+**Yanıt.** Bu çalışma itirazı reddetmemekte, **kabul etmektedir**. Bölüm 5.7
+sınanan üç profilde oran koşulunu geçen tek profilin hiçbir şey geçirmeyen
+profil olduğunu bulmaktadır, ve Bölüm 5.7.1 seksen bir mertebe çiftinin
+hiçbirinin iki koşulu birden sağlamadığını göstermektedir. Elde kalan tek
+boşluk şudur: itirazın dayandığı alan denklemi biçimi kaçınılmaz değildir, ve
+bunu [8] ayrıca belirtmektedir. Bu çalışma o boşluğu kullanmamaktadır.
+
+### 22.7 Nedensel çevrim kurulan yüzeyde vakum gerilimi ıraksayabilir
+
+**İtiraz.** Kapalı nedensel çevrimlerin kurulabilir hâle geldiği yüzeyde
+düzenlenmiş gerilim-enerji tensörü ıraksar, ve geri tepki geometriyi yok eder.
+Eşik mesafesi tam olarak böyle bir yüzeydir. İtirazı [49] kurmaktadır.
+
+**Vurduğu halka.** İşaret.
+
+**Yanıt.** Bu itiraz hesabı çürütmemekte, hesabın çıktısının kendini iptal
+ettiğini söylemektedir, ve bu çalışma karşılık verecek bir hesap
+taşımamaktadır. Bölüm 1 [49]'u yalnızca literatürdeki başka çözümler için
+anmakta, kendi eşik mesafesine uygulamamaktadır. İtiraz **karşılanmamıştır**.
+
+### 22.8 Yeniden yorumlama dönüş anını ayırt edici olmaktan çıkarabilir
+
+**İtiraz.** Zamanda geriye giden negatif enerjili bir kol, ileri giden bir
+karşıparçacık olarak yeniden yorumlanabilir ([35], [26]). O zaman dönüşün
+kalkıştan önce olduğu cümlesi, hedefte daha sonra bir karşıparçacık çıktığı
+cümlesinden ayırt edilemez.
+
+**Vurduğu halka.** İşaret ve ölçülebilirlik.
+
+**Yanıt.** Bölüm 16.4 aynı ilkeyi yönelim tarafında ele almakta ve ayırt
+edilemezliğin hangi nicelikten çıktığını göstermektedir. Dönüş anı tarafında
+ise aynı hesap yapılmamıştır. Aritmetik ayakta kalmakta, ancak Bölüm 18.9'un
+saydığı üç okunabilir nicelikten ilki iki senaryo arasında ayırt edici olmaktan
+çıkmaktadır. İtiraz **karşılanmamıştır**.
+
+### 22.9 Alınan mesafenin gözlenebilirliği
+
+**İtiraz.** Uzaysal türden bir dörtlü momentum, nedenselliğe saygı gösteren bir
+konum işlemcisi kabul etmemektedir ([63], [64]). O zaman Bölge II'de alınan
+mesafe diye ölçülebilir bir nicelik yoktur, ve $s$ bir koordinat etiketidir.
+
+**Vurduğu halka.** Çevrim, girdi tarafı.
+
+**Yanıt.** Bu çalışma sonucu Bölüm 18.9'da kabul etmektedir. Kabulün sonucu
+çekirdek eşitliğe de taşınmalıdır: $\Delta t = s/c$ eşitliğinin sol tarafı
+Bölge I'de ölçülür, sağ tarafı ölçülmez. Dolayısıyla eşitlik doğrudan
+sınanamaz, ve sınanabilen tek şey sol taraftır. Bölüm 21.2.7'nin düzeneği de
+yalnızca sol tarafı okumaktadır.
+
+### 22.10 Fermiyon taşınırsa spin yapısı sorunu
+
+**İtiraz.** Çekirdek amaç bir proton taşımaksa, taşınan nesne fermiyondur. İmza
+değiştiren ve Kleinyen manifoldlarda spin yapısının varlığı ise topolojik
+engellere takılabilir ([27], [28]).
+
+**Vurduğu halka.** Geçiş, yalnızca taşınan nesnenin türü için.
+
+**Yanıt.** Bu çalışmanın bütün hesapları skaler alan üzerinde yürümektedir, ve
+kütle yalnızca $\mu = (mc/\hbar)^2$ parametresi olarak girmektedir. Bölüm 4'ün
+taraması da yalnızca vektör temsilinde yapılmıştır; $D$'nin spinor
+temsilindeki karşılığı sorulmamıştır. Aritmetik değişmez, ancak hangi
+parçacığın gönderilebileceği açık kalmaktadır. İtiraz **karşılanmamıştır**.
+
+### 22.11 Karşılanmış sayılan iki itiraz
+
+İki itirazı bu çalışma kapatmaktadır, ve tamlık için ikisi de burada durur.
+Birincisi, genelleştirilmiş Hartman etkisinin reddedilmiş olmasıdır ([43],
+[44], [45]); Bölüm 13.4 üç karşı kaynağı da anmakta ve bu çalışmanın hiçbir
+sonucunun o tartışmaya dayanmadığını göstermektedir. İkincisi, geçiş süresinin
+tek bir okuması bulunmamasıdır ([32], [34], [69]); Bölüm 18.6 beş okumayı
+saymakta, faz okumasının seçildiğini bir seçim olarak kaydetmekte, ve seçimi
+Bölüm 11.6'nın bağımsız ölçütüyle desteklemektedir.
+
+### 22.12 Ayakta kalan ve düşen
+
+Yukarıdaki maddeler karşısında ayakta kalan kısım hesaptır: sekiz aday matrisin
+taranması, katsayının tam olarak bir çıkması, yer değiştirmelerin toplanması,
+momentumun koordinatlarla aynı matrisle taşınması, ve doymuş gecikmenin bu
+geometrideki kapalı biçimi. Hiçbir itiraz bu adımların cebrini vurmamaktadır.
+
+Düşen kısım ise aritmetiğin fiziksel yorumudur, ve dört ayrı yerden
+düşmektedir. Bölüm 22.1 geçerliyse $D$ bir dönüşüm değil bir adlandırmadır.
+Bölüm 22.3 geçerliyse $\tau$ ile $s$ toplanamaz. Bölüm 22.2 geçerliyse geçişin
+bedeli küçük bir olasılık değildir. Bölüm 22.4'ün ikilemi kapatılmadıkça, elde
+ya nedensel bir çelişki ya da bilinen bir tepe kayması kalmaktadır. Dördü
+birbirinden bağımsızdır, ve dördü de zincirin ayrı bir halkasını kesmektedir.
 
 ---
 
