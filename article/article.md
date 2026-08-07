@@ -931,25 +931,20 @@ gereken mesafe hem gereken kalınlık düşer, genlik ise yerinde kalır. Dolay�
 "mümkün, ama ağırlığı $10^{-12}$" cümlesi bir yasak bildirmez; yalnızca hangi
 çalışma noktasının seçildiğini bildirir.
 
-**Üçünün birlikte değerlendirilmesi, bir sınırlama olarak.** Üç nicelikten
-ikisi zayıf kalır: genlik ağırlığı yolun uzunluğunu hiç görmez, ve düz bir yol
-enerji istemez. Üçüncüsü gerçek bir enerji artışı getirir, ancak tanıdık bir
-niceliktir: sıradan bir Lorentz dönüşümünün bir zaman aralığına uyguladığı
-çarpanın aynısı. Yani bu üçlünün içinde bu kurguya özgü hiçbir nicelik
-bulunmamaktadır. Modelin hesaplayamadığı şey yolculuğun kendisinin katkısıdır,
-ve bunun nedeni yapısaldır: genliği veren ifadedeki değişkenlerin hiçbiri
-parçacığın Bölge II'de ne kadar gittiğine bağlı değildir.
+**Bir sınırlama olarak.** Yukarıdaki üç nicelikten ikisi zayıf kalmaktadır:
+geçirgenlik yolun uzunluğunu hiç görmez, ve düz bir yol enerji istemez.
+Üçüncüsü gerçek bir enerji artışı getirir, ancak sıradan bir Lorentz
+dönüşümünün bir zaman aralığına uyguladığı çarpandan başkası değildir. Modelin
+hesaplayamadığı şey yolculuğun kendi katkısıdır, ve nedeni yapısaldır: genliği
+veren ifadedeki değişkenlerin hiçbiri parçacığın Bölge II'de ne kadar
+gittiğine bağlı değildir.
 
-**Literatürdeki en yakın sonuç ve ondan farkı.** Engelin biçimi ile parçacığın
-enerjisi ayarlanarak tünellemenin güçlendirilebildiği bilinmektedir; belirli
-koşullarda geçirgenlik, saydam olmayan bir engelde bile üstel olarak küçük
-kalmaz. Ancak o mekanizma **geçme olasılığını** artırır ve tek boyutlu olmayan
-bir engel ister. Bu bölümün hesabı ise geçirgenliği değil, **genlik sabit tutulurken
-doymuş gecikmeyi** küçültmektedir, ve kullanılan engel tek boyutludur. Sönüm
-katsayısı ile kalınlığın çarpımı sabit kaldığından genlik zaten yerinden
-kıpırdamaz. İki sonuç ne aynı niceliği ne de aynı kurulumu ele aldığından,
-bu bölümün hesabı o mekanizmanın yeniden bulunması sayılmaz. Bu bölüm ona yalnızca
-kendi yerini göstermek için değinmektedir.
+**Literatürdeki en yakın sonuçtan farkı.** Engelin biçimini ve enerjiyi
+ayarlayarak tünellemeyi güçlendiren mekanizmalar bilinmektedir, ancak onlar
+**geçme olasılığını** artırır ve tek boyutlu olmayan bir engel ister. Bu
+bölümün hesabı ise geçirgenliği değil, genlik sabit tutulurken **doymuş
+gecikmeyi** küçültmektedir, ve kullanılan engel tek boyutludur. İki sonuç ne
+aynı niceliği ne de aynı kurulumu ele almaktadır.
 
 ### 4.2 Geniş formülasyonla karşılaştırma
 
