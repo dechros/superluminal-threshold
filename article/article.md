@@ -3059,7 +3059,8 @@ değişmektedir.
 
 ### 18.3 Koordinatların gördüğü durum bileşenleri
 
-Eşlemenin yapısı, koordinatların birbirinden bağımsız kaynaklara bağlanmasıdır:
+Eşlemenin yapısı şuradan görülür: dört koordinat birbirinden bağımsız kaynaklara
+bağlanmaktadır.
 
 | Koordinat | Yönelimi görür mü | Dalı görür mü |
 | ----------- | ----------------- | ------------- |
@@ -3067,23 +3068,26 @@ Eşlemenin yapısı, koordinatların birbirinden bağımsız kaynaklara bağlanm
 | $x_{\perp}$ | **Hayır** | Evet |
 | $y,\, z$ | Evet | Hayır |
 
-Bu tablonun en önemli satırı ilkidir: **parçacığın ne zaman döndüğü ile nereden
-döndüğü ayrı şeyler tarafından belirlenmektedir.** Zaman bileşeni dala tümüyle kör,
-geçiş yer değiştirmesi ise yönelime tümüyle kördür.
+Tablonun en önemli satırı ilkidir, ve okunuşu şudur: **parçacığın ne zaman
+döndüğünü ile nereden döndüğünü ayrı nicelikler belirlemektedir.** Zaman bileşeni
+dala tümüyle kör kalır, geçiş yönündeki yer değiştirme ise yönelime tümüyle
+kördür.
 
 ### 18.4 Eşlemenin tanım kümesini sıkıştırması
 
-$312$ durum $158$ farklı olaya gitmektedir. Eşleme birebir değildir; öte
-taraftaki farklı durumlar burada aynı olaya varır. Bu sıkışma, boyut
-değişiminde kaybolan bilginin niceliksel ölçüsüdür ve Bölüm 16.12'deki sapma
-tayfının sürekliden ayrığa düşmesiyle aynı olgunun bir başka görünümüdür.
+Taranan $312$ durum yalnızca $158$ farklı olaya gitmektedir. Yani eşleme birebir
+değildir: öte taraftaki farklı durumlar Bölge I'de aynı olaya varır. Buradaki
+sıkışma, boyut değişiminde kaybolan bilginin sayısal ölçüsüdür, ve Bölüm
+16.12'de sapma tayfının sürekliden ayrığa düşmesiyle aynı olgunun başka bir
+görünümüdür.
 
 ### 18.5 Işık sinyaliyle karşılaştırma
 
-Çekirdek sorunun asıl hedefi zaman bileşenidir. Karşılaştırma ölçütü, aynı gidiş
-dönüşü ışığın yapması için gereken süredir, yani $2d/c$.
+Çekirdek sorunun asıl hedefi dört koordinattan zaman bileşenidir. Onu
+değerlendirmek için bir ölçüt gerekir, ve ölçüt aynı gidiş dönüşü ışığın yapması
+için geçen süredir, yani $2d/c$.
 
-Engel rejiminde ($\omega = 2{,}8$, Öklid ara bölge):
+Engel rejiminde ($\omega = 2{,}8$, Öklid ara bölge) karşılaştırma şöyle çıkar:
 
 | Kalınlık $d$ | Işığın gerektirdiği | Parçacığın dönüş anı | Fark |
 | ------------ | ------------------- | -------------------- | ------------ |
@@ -3092,30 +3096,32 @@ Engel rejiminde ($\omega = 2{,}8$, Öklid ara bölge):
 | $8$ | $16{,}00$ | $2{,}9257$ | $+13{,}0743$ |
 | $16$ | $32{,}00$ | $2{,}9257$ | $+29{,}0743$ |
 
-Buradaki iki sütun **aynı ayakta** ölçülmektedir ve bu bir düzeltmedir. Işık
-süresi gidiş dönüştür, yani $2d/c$; dolayısıyla parçacığın geçen süresi de
-bölgenin iki kez katedilmesidir, yani tek geçişin iki katıdır. Önceki bir
-sürümde gidiş dönüş ışık süresi, **tek geçişlik** bir gecikmeyle
-karşılaştırılıyordu ve bu, geçişi tam bir geçiş kadar kayırıyordu. Bölüm
-18.7'nin kapalı biçimi hangisinin hangisi olduğunu kesinleştirir: tek bir engel
-için doymuş faz süresi $2\omega/(c^2\kappa\beta)$'dır, yani $1{,}4629$ tek
-geçiştir.
+Tablodaki iki sütun **aynı ayakta** ölçülmektedir, ve bu bir düzeltmenin
+sonucudur. Işık süresi bir gidiş dönüş süresi olduğundan, parçacığın süresi de
+bölgenin iki kez kat edilmesine, yani tek geçişin iki katına karşılık gelmelidir.
+Metnin önceki bir sürümünde gidiş dönüş ışık süresi **tek geçişlik** bir
+gecikmeyle karşılaştırılıyordu, ve bu geçişi tam bir geçiş kadar kayırıyordu.
+Hangi sürenin hangisi olduğunu Bölüm 18.7'nin kapalı biçimi kesinleştirmektedir:
+tek bir engel için doymuş faz süresi $2\omega/(c^2\kappa\beta)$'dır, yani
+$1{,}4629$ değeri tek geçişe aittir.
 
-Dönüş anı kalınlıkla doyduğu, ışık süresi ise doymadığı için **fark sınırsız
-büyür**; fark $2d - 2{,}9257$ olarak gider. Bölge ne kadar kalınlaştırılırsa,
-dönüş olayı ışığın varabileceği andan o kadar öne düşer.
+Dönüş anı kalınlıkla doyduğundan, ışık süresi ise doymadığından **fark sınırsız
+büyümektedir**; fark $2d - 2{,}9257$ biçiminde gider. Yani bölge ne kadar
+kalınlaştırılırsa, dönüş olayı ışığın varabileceği andan o kadar öne düşer.
 
 ### 18.6 Farkın kapsamı ve sınırları
 
-Çalışmanın kendi çekincesi burada durmaktadır.
+Yukarıdaki farkın ne olduğu ile ne olmadığı, çalışmanın kendi çekincesini
+oluşturmaktadır.
 
 **Olduğu şey.** Dönüş olayının zaman koordinatı, kesintisiz hiçbir ışık
-sinyalinin ulaşamayacağı bir yerdedir. Çekirdek sorunun "zamanda yolculuk"
-kısmı, bu koordinatın konumu olarak tanımlanmıştır ve hesap onu vermektedir.
+sinyalinin ulaşamayacağı bir yere düşmektedir. Çekirdek sorunun "zamanda
+yolculuk" kısmı da bu koordinatın konumu olarak tanımlanmıştır, ve hesap onu
+vermektedir.
 
-**Olmadığı şey.** Bu, ışıktan hızlı bir **yayılma** değildir. Aynı rejimde
-içeride grup hızı diye bir nicelik yoktur, çünkü mod sönümlüdür ve sönümlü
-bir modda kat edilen bir mesafe bulunmaz. Ölçülen şey, dönen paketin
+**Olmadığı şey.** Bu sonuç ışıktan hızlı bir **yayılma** değildir. Aynı rejimde
+içeride grup hızı diye bir nicelik bulunmaz, çünkü mod sönümlüdür ve sönümlü bir
+modda kat edilen bir mesafeden söz edilemez. Ölçülen tek şey, dönen paketin
 **tepe noktasının** nereye düştüğüdür.
 
 **Ve bir sinyal taşımadığı.** Ayrım burada zorunludur, çünkü üstışık bir
@@ -3129,12 +3135,13 @@ taşıyan genlik çökmektedir: $d = 32$ için $5{,}2 \times 10^{-32}$'ye iner. 
 bir mesajın ışığı geçtiği anlamına gelmez ve bu çalışma öyle bir iddiada
 bulunmamaktadır.
 
-**Ayrıca tek okuma da değildir.** Aynı genlikten türetilen beş okuma vardır ve
-üçü geçişi ışığın üstüne, ikisi altına koyar; ayrım kalınlıkla değişmez.
-Yukarıdaki tablo faz okumasına dayanır, çünkü sorulan soru dışarıdaki bir
-dedektörde tepenin ne zaman göründüğüdür. Bu bir seçimdir ve seçimi kurmayan
-bir ölçüt Bölüm 11.6'da onu doğrular: yayılan paketin tepesi ölçüldüğünde
-tutan okuma fazdır.
+**Ayrıca tek okuma da değildir.** Aynı genlikten beş ayrı okuma türetilebilir;
+bunların üçü geçişi ışığın üstüne, ikisi altına koymakta, ve aradaki ayrım
+kalınlıkla değişmemektedir. Yukarıdaki tablo bunlardan faz okumasına
+dayanmaktadır, çünkü sorulan soru dışarıdaki bir dedektörde tepenin ne zaman
+göründüğüdür. Bu bir seçimdir, ancak seçimi kurmayan bağımsız bir ölçüt Bölüm
+11.6'da onu doğrulamıştır: yayılan paketin tepesi ölçüldüğünde tutan okuma
+fazdır.
 
 ### 18.7 Eşlemenin kapalı biçimi
 
