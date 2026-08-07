@@ -2522,9 +2522,9 @@ dokuzun gerçekte kaç tane olduğunu yeniden sayar.
 
 ### 16.1 Her hücrede korunan nicelikler
 
-Dokuz hücrenin **tamamında** Bölge I'in enerjisi ve sürati tam olarak korunur;
-sayısal artık sıfırdır. Hücreleri birbirinden ayıran tek şey Bölge I'in
-momentumunun yönüdür.
+Dokuz hücrenin **tamamında** Bölge I'in enerjisi ve sürati tam olarak
+korunmaktadır, ve sayısal artık sıfır çıkar. Öyleyse hücreleri birbirinden ayıran
+tek nicelik, Bölge I'de momentumun yönüdür:
 
 | Bağıl dönme | Bölge I'de sapma (radyan) |
 | ----------- | ------------------------- |
@@ -2552,25 +2552,25 @@ Bölüm 9.5'in iki etiketinden biri çıkış yüzüydü ve orada bağımsız bi
 gibi ele alınmıştı. Oysa bağımsız değildir.
 
 **Kurulum.** Ara bölgeyi geçmek, öte tarafın tek uzay ekseni boyunca hareket
-etmektir. Hangi yüzden çıkıldığı, o eksendeki dalga sayısının **işaretiyle**
-belirlenmektedir.
+etmek demektir. Parçacığın hangi yüzden çıktığını da o eksendeki dalga sayısının
+**işareti** belirlemektedir.
 
 **Kütle kabuğu büyüklüğü sabitler, işareti serbest bırakır.** Dispersiyon
-bağıntısı $q$ ile $-q$ arasında ayrım yapmaz; üç ayrı dalga sayısında her iki
+bağıntısı $q$ ile $-q$ arasında ayrım yapmaz, ve üç ayrı dalga sayısında her iki
 dalın da bağıntıyı sıfır artıkla sağladığı denetlenmiştir.
 
-**Yönelim büyüklüğü belirler, dalı belirlemez.** Enerji vektörünün yönünü
-uzunluğunu değiştirmeden çevirmek, geçiş dalga sayısını değiştirmez. Üç ayrı
+**Yönelim de büyüklüğü belirler, dalı belirlemez.** Enerji vektörünün yönünü
+uzunluğunu değiştirmeden çevirmek geçiş dalga sayısına dokunmaz; bu üç ayrı
 uzunlukta doğrulanmıştır.
 
-**Öte tarafın dal seçecek bir aracı yoktur.** Bir dalı seçmek, dışarı giden
-dalga koşulu koymaktır; o koşul bir zaman yönelimi gerektirir ve öte tarafta
-zaman yönelimi yoktur (Bölüm 9). Bu, Bölüm 6'da iki genliğin birden
-tutulmasının nedeniyle aynı nedendir.
+**Öte tarafın dalı seçecek bir aracı yoktur.** Bir dalı seçmek, dışarı giden
+dalga koşulu koymak demektir; o koşul bir zaman yönelimi gerektirir, ve öte
+tarafta zaman yönelimi bulunmaz (Bölüm 9). Bölüm 6'da iki genliğin birden
+tutulmasının nedeni de tam olarak budur.
 
-**Ve dal Bölge I'in enerjisidir.** Bölüm 15.1'de öte tarafın tek momentumunun
-Bölge I'in enerjisi olduğu gösterilmişti. Geçiş dalga sayısı tam olarak o
-slottur. Dolayısıyla:
+**Geriye kalan tek belirleyici Bölge I'in enerjisidir.** Bölüm 15.1 öte tarafın
+tek momentumunun Bölge I'in enerjisi olduğunu göstermişti, ve geçiş dalga sayısı
+tam olarak o yuvada durur. Dolayısıyla:
 
 > "Hangi yüzden çıktı" sorusu ile "enerjisinin işareti ne" sorusu **aynı
 > sorudur**.
@@ -2578,21 +2578,22 @@ slottur. Dolayısıyla:
 Karşı yüzden dönüş, başka bir yerden gelmiş gibi değil, **negatif enerjiyle**
 gelmiş gibi görünür.
 
-Bu, tabloyu iki yerden değiştirir. Çıkış yüzü ile yönelim bağımsız etiketler
-değildir, ikisi de aynı vektörün parçalarıdır. Bir de "hiç çıkmaz" satırının
-yanına üçüncü bir okuma girer: negatif enerjili bir varış, sıradan bir
-gözlemciye parçacık yerine karşıparçacık gibi görünebilir, ki bu literatürdeki
-çift yaratımı okumasıyla aynı yere düşer.
+Bu sonuç Bölüm 16.2'nin tablosunu iki yerden değiştirmektedir. Birincisi, çıkış
+yüzü ile yönelim bağımsız etiketler değildir; ikisi de aynı vektörün
+parçalarıdır. İkincisi, "hiç çıkmaz" satırının yanına üçüncü bir okuma girer:
+negatif enerjili bir varış, sıradan bir gözlemciye parçacık yerine
+karşıparçacık gibi görünebilir, ve bu da literatürdeki çift yaratımı okumasıyla
+aynı yere düşer.
 
-Bu okumanın adı ve önceliği vardır. **Yeniden yorumlama ilkesi** tam olarak
-bunu söyler: negatif enerjiyle zamanda geriye giden bir çözüm, pozitif enerjiyle
-ileri giden bir karşıparçacıktan ayırt edilemez. İlke takyonlar bağlamında
-[35]'te formüle edilmiş, [26] onu alan kuramına taşımıştır. Yukarıdaki hesap o
-ilkeyi doğrulamakta, kurmamaktadır. Buradaki hesap ayırt
-edilemezliğin **hangi nicelikten** çıktığını göstermiştir. İşaret, çıkış yüzünü
-belirleyen vektörün aynı bileşenidir. Dolayısıyla "hangi yüz" ile "hangi işaret"
-bağımsız iki soru değildir. Ayırt edilemezliğin nerede kırıldığı bu çalışmanın
-kapsamı dışındadır.
+İkinci okumanın adı ve önceliği de vardır. **Yeniden yorumlama ilkesi** tam
+olarak bunu söylemektedir: negatif enerjiyle zamanda geriye giden bir çözüm,
+pozitif enerjiyle ileri giden bir karşıparçacıktan ayırt edilemez. İlke takyonlar
+bağlamında [35]'te formüle edilmiş, [26] ise onu alan kuramına taşımıştır.
+Buradaki hesap o ilkeyi kurmaz, yalnızca doğrular. Tek katkısı şudur: ayırt
+edilemezlik **hangi nicelikten** çıkıyor, onu gösterir. Söz konusu işaret, çıkış
+yüzünü belirleyen vektörün aynı bileşenidir. Dolayısıyla "hangi yüz" ile
+"hangi işaret" bağımsız iki soru sayılmaz. Ayırt edilemezliğin nerede kırıldığı
+ise bu çalışmanın kapsamı dışında kalmaktadır.
 
 **Çekince.** Bu bölümde hesaplanan şey, dispersiyon bağıntısının iki dalı da
 kabul ettiği ve yönelim yönünün geçiş dalga sayısını değiştirmediğidir. "Öte
@@ -2601,12 +2602,12 @@ bir muhakemedir; dayanağını Bölüm 9 hesaplamıştır.
 
 ### 16.4 Hücrelerin dağılımı
 
-Yukarıdaki tablo hangi sonucun ne göründüğünü söyler, hangisinin
-gerçekleşeceğini söylemez. Bu bölüm o eksiği kapatır ve cevabın ikiye
-ayrıldığını bulur.
+Bölüm 16.2'nin tablosu hangi sonucun nasıl göründüğünü söyler, ama hangisinin
+gerçekleşeceğini söylemez. Bu alt bölüm o eksiği kapatmakta, ve cevabın ikiye
+ayrıldığını bulmaktadır.
 
-**Çıkış yüzü belirlidir.** Akı korunumu geçen ve yansıyan ağırlıkları verir ve
-geriye bir şey bırakmaz:
+**Çıkış yüzü belirlidir.** Akı korunumu geçen ve yansıyan ağırlıkları doğrudan
+verir, ve geriye açıkta bir şey bırakmaz:
 
 | Ara bölge | Karşı yüzden | Giriş yüzünden | Hiç çıkmaz |
 | --------- | ------------ | -------------- | ---------- |
@@ -2614,22 +2615,23 @@ geriye bir şey bırakmaz:
 | Öklid | $0{,}111$ | $0{,}889$ | $0$ |
 | Dejenere | $0$ | $1$ | $0$ |
 
-Kayıpsız bir bölge parçacığı yutmaz. Dolayısıyla dokuz hücrenin üçü, dönme hiç
-hesaba katılmadan önce, sıfır olasılıklıdır.
+Son sütunun tamamı sıfırdır, çünkü kayıpsız bir bölge parçacığı yutmaz.
+Dolayısıyla dokuz hücrenin üçü, daha dönme hesaba hiç katılmadan sıfır
+olasılıklı çıkmaktadır.
 
 **Dönme belirli değildir ve iki okuma taban tabana zıttır.**
 
-*Ayar okuması.* Öte tarafta yönelimin fiziksel içeriği yoktur (Bölüm 15.3). O
-hâlde iki yüz arasındaki bağıl dönme öte taraf tarafından değil, eklem koşulları
-tarafından belirlenmektedir. Simetrik bir ara bölge için dönme özdeşliktir ve **sapma
-yoktur**. Bu okumada model ayırt edici hiçbir şey öngörmez.
+*Ayar okuması.* Bölüm 15.3'e göre öte tarafta yönelimin fiziksel bir içeriği
+yoktur. Öyleyse iki yüz arasındaki bağıl dönmeyi öte taraf değil, eklem koşulları
+belirlemektedir. Simetrik bir ara bölge için bu dönme özdeşliğe iner ve ortada
+**hiç sapma kalmaz**. Yani bu okumada model ayırt edici hiçbir şey öngörmez.
 
-*Bilgisizlik okuması.* Öte tarafta hiçbir yön ayrıcalıklı değildir, dolayısıyla
-çıkış yönelimi küre üzerinde düzgün dağılmıştır. Bu durumda sapma açısının
-dağılımı $\tfrac{1}{2}\sin\theta$ olur; hesaplanan ortalama sapma tam olarak dik
-açıdır ve sonuçların yarısı dik açıdan fazla sapar. Sapmasız dönüş küre üzerinde
-tek bir nokta olduğundan olasılığı sıfırdır: **geçen her parçacık imzayı
-taşır**.
+*Bilgisizlik okuması.* İkinci okumada öte tarafta hiçbir yön ayrıcalıklı
+sayılmaz, dolayısıyla çıkış yönelimi küre üzerinde düzgün dağılır. Bu durumda
+sapma açısının dağılımı $\tfrac{1}{2}\sin\theta$ olur, hesaplanan ortalama sapma
+tam olarak dik açı çıkar, ve sonuçların yarısı dik açıdan fazla sapar. Sapmasız
+dönüş küre üzerinde tek bir noktaya karşılık geldiğinden olasılığı sıfırdır, yani
+**geçen her parçacık imzayı taşır**.
 
 | Okuma | İmzanın olasılığı, Kleinian | İmzanın olasılığı, Öklid |
 | ----------- | --------------------------- | ------------------------ |
@@ -2641,36 +2643,37 @@ vermektedir: biri imzayı geçirgenlik oranında öngörür, diğeri hiç öngö
 Aradaki fark bir yorum farkı değil, **ölçülebilir** bir farktır. Parçacığı
 geçiren ve bedelsiz sapma arayan tek bir deney ikisini birbirinden ayırır.
 
-Bu, çalışmanın ayırt edici öngörüsünün bulunduğu yerdir ve ulaşılamaz bir
-yüzeye değil ara bölgenin kendisine bağlıdır.
+Çalışmanın ayırt edici öngörüsü de tam olarak burada durmaktadır, ve ulaşılamaz
+bir yüzeye değil ara bölgenin kendisine bağlıdır.
 
-**Çekince.** İki okumanın verdiği sıfır ve bir uçları hesaplanmış değil,
-**varsayılmıştır**. Ayar okumasında dönmenin özdeşlik olması, ara bölgenin
-simetrik olduğu varsayımına dayanır. Bilgisizlik okumasındaki düzgün dağılım ise
-hiçbir yönün ayrıcalıklı olmadığı varsayımına. Hesaplanan şey, bu varsayımlar
-verildiğinde ne çıktığıdır. Hangi okumanın doğru olduğunu belirlemek eklem
-koşullarının asimetrik hâlinin çözülmesini gerektirir ve burada yapılmamıştır.
+**Çekince.** İki okumanın verdiği sıfır ve bir uçlarını hesap değil, iki kabul
+üretmektedir. Ayar okumasında dönme özdeşliğe iner, çünkü ara bölge simetrik
+sayılır. Bilgisizlik okumasındaki düzgün dağılım ise hiçbir yönü ayrıcalıklı
+saymayan ikinci bir kabulden gelir. Hesap yalnızca şunu verir: bu iki kabul
+altında sonuç ne çıkar. Hangi okumanın doğru olduğunu ise ancak eklem
+koşullarının asimetrik hâli söyleyebilir, ve o hâl burada çözülmemiştir.
 
-Ayrıca "hiç çıkmaz" satırının sıfır olması, geçişin kayıpsız olduğu varsayımına
-dayanır. Bölüm 5.4'teki madde katmanı geçişi sönümlü kılarsa bu satır sıfır
-olmaktan çıkar.
+Aynı biçimde "hiç çıkmaz" satırının sıfır kalması da geçişin kayıpsız olduğu
+varsayımına dayanmaktadır. Bölüm 5.4'teki madde tabakası geçişi sönümlü kılarsa
+o satır sıfır olmaktan çıkar.
 
 ### 16.5 Dönmenin nicelenmesi
 
-Önceki bölümün iki ucu da varsayımdı. Modelin içinde, varsayım gerektirmeyen
-üçüncü bir cevap zaten duruyor.
+Önceki alt bölümün iki ucu da varsayıma dayanıyordu. Oysa modelin içinde, hiçbir
+varsayım gerektirmeyen üçüncü bir cevap zaten durmaktadır.
 
-**Yapı.** Bölüm 4.1'de bütün filtreleri geçen sekiz matris kalmıştı;
-aralarındaki tek fark uzay eksenlerinin etiketlenmesiydi. Ara bölgenin **her
-yüzü bunlardan birini gerçekler**. İki yüz aynı matrisi gerçeklerse gidiş dönüş
-bileşkesi özdeşliktir. Farklı matrisleri gerçeklerse bileşke belirli bir
-dönmedir.
+**Yapı.** Bölüm 4.1'de bütün filtreleri geçen sekiz matris kalmıştı, ve
+aralarındaki tek fark uzay eksenlerinin etiketlenmesiydi. Ara bölgenin **her yüzü
+bu sekizden birini gerçekler**. İki yüz aynı matrisi gerçeklerse gidiş dönüşün
+bileşkesi özdeşlik olur; farklı matrisleri gerçeklerse bileşke belirli bir dönme
+verir.
 
-Dolayısıyla dönme ne serbest bir parametredir ne de düzgün dağılmıştır; sekiz
-matrisin bileşkelerinin oluşturduğu **sonlu bir kümeden** değer alır.
+Dolayısıyla dönme ne serbest bir parametredir ne de düzgün dağılmıştır. Değerini,
+sekiz matrisin bileşkelerinin oluşturduğu **sonlu bir kümeden** alır.
 
-**Hesap.** Altmış dört eşleşmenin 32'si Bölge I'in enerjisini korur ve bunların
-24'ü momentumu döndürür. Gelen momentum $(1,2,3)$ için ortaya çıkan sapma tayfı:
+**Hesap.** Altmış dört eşleşmenin 32'si Bölge I'in enerjisini korumakta, ve
+bunların 24'ü momentumu döndürmektedir. Gelen momentum $(1,2,3)$ için ortaya
+çıkan sapma tayfı şudur:
 
 $$\theta \in \{0{,}\ 0{,}873{,}\ 1{,}281\}$$
 
