@@ -2298,8 +2298,8 @@ Yolcunun denetlediği tek nicelik $s$ değeridir. Bedel durumun ve bölgenin
 
 ### 13.7 Sekiz koşul, iki başarısızlık
 
-Geçmenin, orada hareket etmenin ve kalkıştan önce dönmenin koşulları sekiz
-tanedir.
+Buraya kadar kurulan hesap sekiz koşul üretmiştir. Parçacık eşiği geçecek, orada
+hareket edecek ve kalkıştan önce dönecekse, sekizi de sağlanmalıdır.
 
 | Koşul | Başarısızlığın anlamı |
 | --------------------------------------- | -------------------------------- |
@@ -2312,13 +2312,13 @@ tanedir.
 | Ters çeviren dalın gerçekleşmesi | Varış öne değil arkaya kayar |
 | Mesafenin bedeli aşması | Varış kalkıştan sonraya düşer |
 
-Bu koşullar aynı biçimde başarısız olmaz ve ayrım sonucun okunuşunu belirlemektedir.
-Yedisi başarısız olduğunda yolculuk ortadan kalkar ya da işareti döner. Yalnızca
-son koşul, yani öte tarafta alınan mesafe, **daha fazla ödenerek** sağlanabilir.
-Koşullar tek tek bozulduğunda şu çıkar: kütle parametresinin $8$ olması, bant
-genişliğinin $0{,}5$ olması ve ters dalın seçilmesi birinci türden bir
-başarısızlık verir; mesafenin $0{,}5$'te kalması ise ikinci türden bir
-başarısızlık verir.
+Bu sekiz koşul aynı biçimde bozulmamaktadır, ve aradaki ayrım sonucun okunuşunu
+belirlemektedir. İlk yedisi bozulduğunda yolculuk ya tümüyle ortadan kalkar ya da
+işareti döner. Yalnızca sonuncusu, yani öte tarafta alınan mesafe, **daha fazla
+ödenerek** sağlanabilmektedir. Koşullar tek tek bozulduğunda şu tablo çıkmıştır:
+kütle parametresinin $8$ olması, bant genişliğinin $0{,}5$ olması ve ters dalın
+seçilmesi birinci türden bir başarısızlık verir, mesafenin $0{,}5$'te kalması
+ise ikinci türden bir başarısızlık verir.
 
 ### 13.8 Sınırın ağırlığa düşmesi
 
@@ -2333,12 +2333,14 @@ gitmek istendiği değil, ne kadar zayıf bir sinyalin algılanabildiği.
 
 ## 14. Mod içeriğinin değişimi
 
-Gidiş dönüş aynı ara bölgeyi iki kez geçmektedir. Mod süzgeci bu nedenle paketin
-üzerine **iki kez** iner ve etkiler çarpılır, toplanmaz.
+Bir gidiş dönüş aynı ara bölgeyi iki kez geçmektedir. Bu nedenle Bölüm 13.3'ün
+mod süzgeci paketin üzerine **iki kez** iner, ve iki geçişin etkileri toplanmaz,
+birbiriyle çarpılır.
 
 ### 14.1 Geri dönen ağırlık
 
-$\mu = 1$, $d = 1$, paket genişliği $0{,}3$ için:
+Çarpımın sonucu, $\mu = 1$, $d = 1$ ve paket genişliği $0{,}3$ için şöyle
+çıkmaktadır:
 
 | Ara bölge | Tek geçişte kalan | Gidiş dönüşte kalan |
 | --------- | ----------------- | ------------------- |
@@ -2346,12 +2348,12 @@ $\mu = 1$, $d = 1$, paket genişliği $0{,}3$ için:
 | Öklid | $0{,}122$ | $0{,}018$ |
 | Dejenere | $0$ | $0$ |
 
-Dönüş ayağı, gidiş ayağının bedelini yeniden ödetir. Öklid bölgede gidiş dönüş
-paketin yüzde ikisinden azını geri getirir.
+Görüldüğü gibi dönüş ayağı, gidiş ayağının bedelini bir kez daha ödetmektedir.
+Öklid bir bölgede gidiş dönüş, paketin yüzde ikisinden azını geri getirir.
 
 ### 14.2 Merkez kayması
 
-Süzgeç iki kez uygulandığı için ağırlık merkezinin kayması da büyür:
+Süzgeç iki kez uygulandığından ağırlık merkezinin kayması da büyümektedir:
 
 | Paket genişliği | Gidiş dönüş kayması (genişlik birimiyle) |
 | --------------- | ---------------------------------------- |
@@ -2360,13 +2362,14 @@ Süzgeç iki kez uygulandığı için ağırlık merkezinin kayması da büyür:
 | $0{,}1$ | $0{,}292$ |
 | $0{,}05$ | $0{,}146$ |
 
-Genişliği $0{,}4$ olan bir paket kendi genişliğinden fazla kayar; böyle bir
-paket için "aynı parçacık geri döndü" ifadesi savunulamaz.
+Tablonun ilk satırında genişliği $0{,}4$ olan bir paket kendi genişliğinden fazla
+kaymaktadır; böyle bir paket için "aynı parçacık geri döndü" ifadesi savunulamaz.
 
-Kayma yine genişlikle **doğru orantılıdır** ve alt sınırı yoktur. Dolayısıyla
-Bölüm 11.3'ün sonucu gidiş dönüş için de geçerli kalır: yeterince dar bir paket
-kendisi olarak geri döner. Bu, yolculuğun bir yolculuk olmasını, yani gidenle
-gelenin aynı şey sayılabilmesini sağlayan koşuldur.
+Buna karşılık kayma yine genişlikle **doğru orantılıdır** ve bir alt sınırı
+yoktur. Dolayısıyla Bölüm 11.3'ün sonucu gidiş dönüş için de geçerli kalmaktadır:
+yeterince dar bir paket kendisi olarak geri döner. Yolculuğun bir yolculuk
+sayılabilmesi, yani gidenle gelenin aynı şey olması, tam olarak bu koşula
+bağlıdır.
 
 ---
 
@@ -2377,16 +2380,16 @@ geçiş neye **dokunamaz**.
 
 Üç nicelik geçişten değişmeden çıkar ve üçü de hesapla denetlenmiştir.
 
-**Frekans.** Eklem koşulları sabit frekansta dayatıldığı için, ara bölgenin
-dayattığı dalga sayısı adımı frekanstan bağımsızdır. Üç ayrı frekansta adım aynı
-çıkar.
+**Frekans.** Eklem koşulları sabit frekansta dayatıldığından, ara bölgenin
+dayattığı dalga sayısı adımı frekanstan bağımsız kalmaktadır. Üç ayrı frekansta
+adım aynı çıkmıştır.
 
-**Enine dalga sayısı.** Yüzey kendi boyunca homojen olduğundan enine dalga
-sayısı korunur; adımı yalnızca o belirler. Üç ayrı enine dalga sayısı bunu
+**Enine dalga sayısı.** Yüzey kendi boyunca homojen olduğundan enine dalga sayısı
+korunur, ve adımı yalnızca o belirler. Üç ayrı enine dalga sayısı bunu
 doğrulamıştır.
 
-**Kütle.** Kütle parametresi iki tarafa da aynı miktarda girer; geçiş dalga
-operatörüne etki eder, kütleye değil.
+**Kütle.** Kütle parametresi iki tarafa da aynı miktarda girmektedir, çünkü geçiş
+dalga operatörüne etki eder, kütleye değil.
 
 | Nicelik | Gidiş dönüşte |
 | ------------------- | --------------------------- |
