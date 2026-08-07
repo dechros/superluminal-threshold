@@ -3617,14 +3617,14 @@ bölüm adımları formülden değil sayısal deneyden okur.
 
 ### 21.1 Hesap ile deney arası
 
-Açık maddeler tek bir liste olarak sayıldığında yanıltıcıdır, çünkü hepsi aynı
+Açık maddeleri tek bir liste hâlinde saymak yanıltıcı olur, çünkü hepsi aynı
 türden değildir. Belirleyici ayrım şudur: **daha iyi bir düzeneğin
 kaldırabildiği** engel ile **hiçbir düzeneğin kaldıramadığı** engel. Küçük bir
-genlik birincisidir; bir hızdır ve hızlar denemeyle satın alınır. Modelde
-karşılığı olmayan bir seçim ise ikincisidir ve ona mühendislik sorunu demek
-dürüst olmaz.
+genlik birincisine girer; o bir hızdır, ve hızlar denemeyle satın alınabilir.
+Modelde karşılığı olmayan bir seçim ise ikincisine girer, ve ona mühendislik
+sorunu demek dürüst olmaz.
 
-Dört engel vardır ve türleri şöyledir:
+Bu ölçüte göre dört engel ve üç tür çıkmaktadır:
 
 | Engel | Türü | Neyle kapanır |
 | ------------------------------------------ | ------ | -------------------------------------------------------------- |
@@ -3633,25 +3633,27 @@ Dört engel vardır ve türleri şöyledir:
 | Sekiz geçişten hangisinin gerçeklendiği | Seçim | Tam olarak bir eksende tek olan bir nicelik |
 | Böyle bir bölgenin yapılabilmesi | Varlık | Bu çalışmanın dışında; koşullu ifade buraya dayanır |
 
-**Hızların fiyatı.** Bölüm 19'un yürüttüğü gidiş dönüşün ağırlığında tek bir
-olay için $5{,}5 \times 10^{40}$ deneme gerekir. Enerji yükseltmek bunu
+**Hızların fiyatı.** Bölüm 19'un yürüttüğü gidiş dönüşün ağırlığında tek bir olay
+için $5{,}5 \times 10^{40}$ deneme gerekmektedir. Enerji yükseltmek bu sayıyı
 **değiştirmez**: doyum derinliği sabit tutulduğunda gidiş dönüşün ağırlığı,
-toplam enerji dokuzdan elli bine çıkarken $3{,}397579 \times 10^{-10}$
-değerinde kalır. Bu bir umut değil, hesaplanmış bir sonuçtur.
+toplam enerji dokuzdan elli bine çıkarken $3{,}397579 \times 10^{-10}$ değerinde
+kalır. Bu bir tahmin değil, hesaplanmış bir sonuçtur.
 
-**Enerjinin satın aldığı şey mesafedir.** Aynı aralıkta öte tarafta kat edilmesi
-gereken mesafe $2{,}4343$'ten $0{,}0980$'a inmektedir. Yani iki talep
-birbiriyle takas edilmez: enerji yükseltmek yolculuğu kısaltırken ağırlıktan
+**Enerjinin satın aldığı şey mesafedir.** Aynı enerji aralığında öte tarafta kat
+edilmesi gereken mesafe $2{,}4343$'ten $0{,}0980$'a inmektedir. Yani iki talep
+birbiriyle takas edilemez: enerji yükseltmek yolculuğu kısaltırken ağırlıktan
 hiçbir şey götürmez.
 
-**Hiçbir hızın dokunmadığı engel.** Hangi geçiş gerçeklenir: bunu ne enerji ne
-deneme belirler. Söz konusu olan, görülemeyecek kadar küçük bir nicelik değil;
-metriğin yapmadığı bir seçim. İki aile bu çalışmada hesaplanan **hiçbir**
-nicelikte ayrışmamaktadır; daha iyi bir düzenek aynı sayıları ölçer.
+**Hiçbir hızın dokunamadığı engel.** Hangi geçişin gerçeklendiğini ne enerji ne
+de deneme sayısı belirler. Söz konusu olan, görülemeyecek kadar küçük bir nicelik
+değildir; metriğin yapmadığı bir seçimdir. İki aile bu çalışmada hesaplanan
+**hiçbir** nicelikte ayrışmamaktadır, dolayısıyla daha iyi bir düzenek de aynı
+sayıları ölçer.
 
-**Koşullu ifadenin dayandığı yer** dördüncü satırdır. Bu çalışmanın hiçbir
-sonucu, imzası değişmiş bir bölgenin yapılabilip yapılamayacağına dair bir şey
-söylemez. Sonucun bir öneri değil bir koşullu olarak yazılmasının nedeni budur.
+**Koşullu ifadenin dayandığı yer** tablonun dördüncü satırıdır. Bu çalışmanın
+hiçbir sonucu, imzası değişmiş bir bölgenin yapılıp yapılamayacağı hakkında bir
+şey söylemez. Sonucun bir öneri olarak değil bir koşullu ifade olarak
+yazılmasının nedeni de budur.
 
 > Dürüst özet şudur: iki engel **sayıdır**, biri **seçimdir**, biri de **öncülün
 > kendisidir**.
@@ -3676,16 +3678,16 @@ Eskiden bu listede olan "eşikte tam yansımanın akı korunumunun tek çözüm�
 olması" maddesi **çıkarılmıştır**; eşik geçirgen okunduğundan beri o iddia
 taşınmamaktadır.
 
-**Bölüm 5.1'de kapanan nokta.** İki imza arasındaki sürekli yolun ne kadar
-dejenere olmak zorunda olduğu sorusu cevaplandı. Her noktada yalnızca tek bir
-öz-değerin sıfırlandığı bir yol vardır; bedeli, $(2,2)$ imzalı iki zamanlı bir
-ara bölgeden geçmektir. Daha önce yazılan "geçiş sağlanmaz" sonucu geri
-çekilmiştir.
+**Bölüm 5.1'de kapanan nokta.** O bölüm şu soruyu cevaplamıştır: iki imza
+arasındaki sürekli bir yol ne kadar dejenere olmak zorundadır. Her noktada
+yalnızca tek bir öz-değerin sıfırlandığı bir yol bulunmaktadır, ve bedeli $(2,2)$
+imzalı iki zamanlı bir ara bölgeden geçmektir. Metnin daha önceki "geçiş
+sağlanmaz" sonucu bu nedenle geri çekilmiştir.
 
-**Bölüm 8'de daraltılan nokta.** Eşiğin yansıtıcı olması sınırsız bir öte taraf
-varsayar. Sonlu kalınlıkta bir dilim, üstel olarak bastırılmış ama sıfır olmayan
-bir geçirgenlik verir; ayrıca engelin ortaya çıkıp çıkmadığını gelen alanın mod
-içeriği belirler.
+**Bölüm 8'de daraltılan nokta.** Eşiğin yansıtıcı olması, öte tarafın sınırsız
+olduğu varsayımına dayanır. Sonlu kalınlıkta bir dilim ise üstel olarak
+bastırılmış, ama sıfır olmayan bir geçirgenlik vermektedir. Buna ek olarak,
+engelin ortaya çıkıp çıkmadığını gelen alanın mod içeriği belirler.
 
 **Açık kalanlar.**
 
@@ -3704,9 +3706,10 @@ içeriği belirler.
 
 ### 21.2.1 Laboratuvar mertebeleri
 
-Geçiş koşullarının deneysel karşılığı sayılara indirgenmiştir. Kütle tavanı
-$\mu_{\max} = \omega_0^2/c^2 - k_\perp^2$ biçiminde yazılmıştır. Bant merkezi, taşınan
-kütlenin durgun enerjisinden kurulan frekansı aşmak zorundadır.
+Bu alt bölüm geçiş koşullarının deneysel karşılığını sayılara indirmektedir.
+Kütle tavanı $\mu_{\max} = \omega_0^2/c^2 - k_\perp^2$ biçiminde yazılır, ve
+buradan bir alt sınır doğar: bant merkezi, taşınan kütlenin durgun enerjisinden
+kurulan frekansı aşmak zorundadır.
 
 | Nicelik | Değer |
 | ------------------------------------------ | ---------------------------------- |
@@ -3715,16 +3718,16 @@ kütlenin durgun enerjisinden kurulan frekansı aşmak zorundadır.
 | Karşılık gelen kütle parametresi | $2{,}2609 \times 10^{31}$ m$^{-2}$ |
 | Bir voltluk potansiyelin frekans kayması | $1{,}5193 \times 10^{15}$ rad/s |
 
-Bu tablo iki şey söyler. Kütle tavanı sonradan kestirilecek bir ölçek değil,
-yazılı bir laboratuvar şartıdır: bu frekansın altındaki bir bant protonu hiç
-taşımaz. Potansiyelin sağladığı ayar ise giriş frekansının dokuz mertebe
-altında kalır. Dolayısıyla dönüş kaba bir şartın üzerinde ince bir ayarla
-yönlendirilir ve şart bu yolla dolanılmaz.
+Tablo iki şey söylemektedir. Birincisi, kütle tavanı sonradan kestirilecek bir
+ölçek değil yazılı bir laboratuvar şartıdır: bu frekansın altındaki bir bant
+protonu hiç taşımaz. İkincisi, potansiyelin sağladığı ayar giriş frekansının
+dokuz mertebe altında kalır. Yani dönüş, kaba bir şartın üzerine binen ince bir
+ayarla yönlendirilmekte, ve şartın kendisi bu yolla dolanılamamaktadır.
 
-Ölçülmesi gereken nicelikler de bu tablodan çıkar: bant merkezi ve genişliği,
-öte tarafta kat edilen mesafe ve dönen genliğin ağırlığı. İlk üçü düzeneğin
-ayarlarıdır, dördüncüsü sonucun kendisidir ve Bölüm 13.8'de gösterildiği üzere
-deneyin asıl güçlüğü oradadır.
+Ölçülmesi gereken nicelikler de aynı tablodan çıkar: bant merkezi ve genişliği,
+öte tarafta kat edilen mesafe, ve dönen genliğin ağırlığı. İlk üçü düzeneğin
+ayarlarıdır; dördüncüsü sonucun kendisidir, ve Bölüm 13.8'de gösterildiği üzere
+deneyin asıl güçlüğü de oradadır.
 
 ### 21.2.2 Mesafenin süreye çevrimi
 
