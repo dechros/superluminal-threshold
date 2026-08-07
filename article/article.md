@@ -348,19 +348,19 @@ $d$, kütle parametresi $\mu$ ve hız $c$ olur.
 
 **Adımlar.**
 
-| Adım | Nicelik | Nerede |
-| ---- | ---------------------------------------------------------------------------------- | ------------------------ |
-| 1 | $\omega = c\sqrt{E_1^2 + E_2^2 + E_3^2 + \mu}$ | Bölüm 15.1 |
-| 2 | $k_\perp^2 = E_2^2 + E_3^2$ | Bölüm 18.3 |
-| 3 | $\kappa = \sqrt{\omega^2/c^2 - k_\perp^2 - \mu} = \lvert E_1 \rvert$ | Bölüm 18.7 |
-| 4 | $\beta = \sqrt{\tfrac{2n}{3}k_\perp^2 - E_1^2}$, iç sönüm sabiti | Bölüm 18.7 |
-| 5 | $q = i\beta$ söndürücü hâlde, reel yayılımlı hâlde | Bölüm 12.1 |
-| 6 | $A(\omega) = \dfrac{4\kappa q}{(\kappa+q)^2 e^{-iqd} - (\kappa-q)^2 e^{iqd}}$ | Bölüm 12.1 |
-| 7 | $\tau = \dfrac{\mathrm{d}}{\mathrm{d}\omega}\arg A(\omega)$, tek geçişin gecikmesi | Bölüm 13.2 |
-| 8 | Gidiş dönüş gecikmesi $= 2\tau$ | Bölüm 12 |
-| 9 | Varış anı $= 2\tau - s$, geri taşıyan dalda | Bölüm 4.1.2, Bölüm 4.1.3 |
-| 10 | Eşik mesafesi $s^\ast = 2\tau$ | Bölüm 4.1.3 |
-| 11 | Ödenen enerji oranı $\Delta E / E = \Delta / s$ | Bölüm 4.1.5 |
+| Adım | Nicelik | Bu nicelik nedir | Nerede |
+| ---- | ---------------------------------------------------------------------------------- | ------------------------------------------------------ | ------------------------ |
+| 1 | $\omega = c\sqrt{E_1^2 + E_2^2 + E_3^2 + \mu}$ | Parçacığın frekansı | Bölüm 15.1 |
+| 2 | $k_\perp^2 = E_2^2 + E_3^2$ | Geçiş doğrultusuna dik dalga sayısının karesi | Bölüm 18.3 |
+| 3 | $\kappa = \sqrt{\omega^2/c^2 - k_\perp^2 - \mu} = \lvert E_1 \rvert$ | Geçiş doğrultusundaki dalga sayısı, eşiğin dışında | Bölüm 18.7 |
+| 4 | $\beta = \sqrt{\tfrac{2n}{3}k_\perp^2 - E_1^2}$ | Eşiğin içinde genliğin sönüm hızı | Bölüm 18.7 |
+| 5 | $q = i\beta$ söndürücü hâlde, reel yayılımlı hâlde | Geçiş doğrultusundaki dalga sayısı, eşiğin içinde | Bölüm 12.1 |
+| 6 | $A(\omega) = \dfrac{4\kappa q}{(\kappa+q)^2 e^{-iqd} - (\kappa-q)^2 e^{iqd}}$ | Eşiğin bir yüzünden girip diğerinden çıkma genliği | Bölüm 12.1 |
+| 7 | $\tau = \dfrac{\mathrm{d}}{\mathrm{d}\omega}\arg A(\omega)$ | Tek geçişin süresi | Bölüm 13.2 |
+| 8 | $2\tau$ | Gidiş dönüşün toplam eşik gecikmesi | Bölüm 12 |
+| 9 | $2\tau - s$ | Varış anı, kalkışa göre, geri taşıyan dalda | Bölüm 4.1.2, Bölüm 4.1.3 |
+| 10 | $s^\ast = 2\tau$ | Eşik mesafesi: bunu aşan yolculuk kalkıştan önce döner | Bölüm 4.1.3 |
+| 11 | $\Delta E / E = \Delta / s$ | Kalkıştan $\Delta$ kadar önce dönmenin enerji oranı | Bölüm 4.1.5 |
 
 Dokuzuncu satırda $s$'nin önündeki katsayı **bire eşittir** ve araya bir hız
 girmez. Çalışmanın asıl sonucu budur (Bölüm 4.1.1, Bölüm 4.1.2). O terimin
