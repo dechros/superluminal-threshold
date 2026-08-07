@@ -2719,9 +2719,10 @@ formülasyonda iki bölgedeki okların bağıl işareti prensip olarak ölçüle
 çünkü eşik geçirgen değildi. Eşik geçirgen olduğuna göre o gerekçe düşmüştür ve
 bağıl işaret ilke olarak ölçülebilir kalır.
 
-$\pm D$ ayrımı test edildi: her iki işaret de $\det = +1$ ve $M^2 = I$
-koşullarını sağlar, dolayısıyla bu koşullarla ayırt edilemezler. Ancak Bölüm
-9'daki bulgu işaretin anlamını netleştirir:
+Ayrımın kendisi de sınanmıştır. $D$ ile $-D$ arasındaki fark denendiğinde her iki
+işaretin de $\det = +1$ ve $M^2 = I$ koşullarını sağladığı çıkmıştır, yani bu
+koşullar ikisini birbirinden ayıramaz. Buna karşılık Bölüm 9'un bulgusu işaretin
+anlamını netleştirmektedir:
 
 1. Her iki bölgede birer ok seçimi vardır (Bölge I'de zaman, Bölge II'de uzay).
 2. $D$ Bölge I'in ok eksenini Bölge II'nin ok eksenine gönderir, seçimler
@@ -2740,14 +2741,14 @@ başlangıç koşulundan gelir.
 
 ### 16.7 $D$'nin yön-bağımlı involüsyonla karşılaştırması
 
-$D$'yi yön-bağımlı bir involüsyonla karşılaştırmak, onun grup içindeki yerini
-netleştirir. $\theta = \varphi = 0$ ekseni için yön-bağımlı involüsyon $t$ ile
-$z$'yi işaretli olarak takas eder ve $\Lambda_{\inf}^2 = I$ sağlar; yani o da
-bir involüsyondur, ancak yalnızca iki koordinatı değiştirir.
+$D$'nin grup içindeki yeri, onu yön-bağımlı bir involüsyonla karşılaştırınca
+netleşmektedir. $\theta = \varphi = 0$ ekseni için yön-bağımlı involüsyon $t$ ile
+$z$'yi işaretli olarak takas eder ve $\Lambda_{\inf}^2 = I$ bağıntısını sağlar;
+yani o da bir involüsyondur, ancak yalnızca iki koordinata dokunur.
 
-$D$ ise dört koordinatı birden değiştirir ve içinde bir $x \leftrightarrow y$
-takası barındırır. Bu takasın üç boyuttaki determinantı $-1$'dir, dolayısıyla
-bir $SO(3)$ elemanı değildir. Bunun doğrudan sonucu şudur:
+$D$ ise dört koordinatı birden değiştirir, ve içinde bir $x \leftrightarrow y$
+takası barındırır. O takasın üç boyuttaki determinantı $-1$ olduğundan bir
+$SO(3)$ elemanı değildir, ve bunun doğrudan sonucu şudur:
 
 > $D$, yön-bağımlı involüsyonun ürettiği genişletilmiş grup $L_{\text{ext}}$
 > içinde **bulunmaz**.
@@ -2762,9 +2763,10 @@ anı ise Bölüm 13'te genliğin fazından okundu. İkisi de parçacığın ara 
 **ne yaptığına** bağlanmamıştı. Bu bölüm o bağlantıyı kurar; simülasyonun
 canlandıracağı nicelik tam olarak budur.
 
-Öte tarafın dört ekseninin karakterini Bölüm 10.1 vermiştir. Bir durum, üç
-zaman uzayındaki bir enerji vektörü ile tek uzay ekseni boyunca bir dalga
-sayısından oluşur. Parçacığın yapabileceği iki şey vardır ve yalnızca ikisi:
+Öte tarafın dört ekseninin karakterini Bölüm 10.1 vermişti. Oradaki tabloya göre
+bir durum iki parçadan oluşur: üç zaman uzayındaki bir enerji vektörü ve tek uzay
+ekseni boyunca bir dalga sayısı. Parçacığın yapabileceği şey de yalnızca ikiye
+iner:
 
 1. **Geçiş yönünde yer değiştirme.** Tek uzay ekseni boyunca ilerlemek. Ara
  bölgeyi kat etmek budur.
@@ -2777,9 +2779,9 @@ görür.
 
 ### 16.9 Çıkış anı ve yolculuk süresi
 
-Ara bölge yayılıma izin veriyorsa geçiş ekseni boyunca bir grup hızı tanımlıdır
-ve kalınlığın bu hıza bölümü bir yol süresi vermektedir. Fazdan okunan çıkış anıyla
-karşılaştırıldığında ikisi birebir tutar:
+Ara bölge yayılıma izin veriyorsa geçiş ekseni boyunca bir grup hızı tanımlıdır,
+ve kalınlığın bu hıza bölümü bir yol süresi vermektedir. Bu süre fazdan okunan
+çıkış anıyla karşılaştırıldığında ikisi birebir tutar:
 
 | Kalınlık $d$ | Yol süresi | Fazdan okunan an |
 | ------------ | ---------- | ---------------- |
@@ -2787,12 +2789,12 @@ karşılaştırıldığında ikisi birebir tutar:
 | $2$ | $2{,}1553$ | $2{,}1553$ |
 | $4$ | $4{,}3105$ | $4{,}3105$ |
 
-Artık $10^{-12}$ mertebesindedir. Bu rejimde çıkış anı gerçekten bir yolculuk
-süresidir ve parçacık dili tam anlamıyla meşrudur.
+Aradaki artık $10^{-12}$ mertebesinde kalır. Yani bu rejimde çıkış anı gerçekten
+bir yolculuk süresidir, ve parçacık dilini kullanmak tam anlamıyla meşrudur.
 
-Engel rejiminde durum niteliksel olarak değişir. İçerideki mod sönümlüyse grup
-hızı **yoktur**, dolayısıyla yol süresi tanımsız kalır. Buna karşılık faz hâlâ
-belirli bir an verir:
+Engel rejiminde ise durum niteliksel olarak değişir. İçerideki mod sönümlüyse
+grup hızı **yoktur**, dolayısıyla yol süresi de tanımsız kalır. Buna karşılık faz
+yine belirli bir an vermeyi sürdürür:
 
 | Kalınlık $d$ | Yol süresi | Fazdan okunan an |
 | ------------ | ---------- | ---------------- |
@@ -2800,25 +2802,27 @@ belirli bir an verir:
 | $4$ | tanımsız | $1{,}4629$ |
 | $8$ | tanımsız | $1{,}4629$ |
 
-Bu, Bölüm 13.4'teki Hartman doyumunun hareket dilindeki karşılığıdır ve okunuşu
-şudur: gecikmenin kalınlıkla artmaması **hızlı bir yolculuk** değil,
-**yolculuğun yokluğudur**. Kat edilen bir mesafe yoktur; elde yalnızca faz
-vardır.
+İkinci tablo, Bölüm 13.4'teki doyumun hareket dilindeki karşılığıdır, ve okunuşu
+şudur: gecikmenin kalınlıkla artmaması **hızlı bir yolculuk** anlamına gelmez,
+**yolculuğun hiç olmaması** anlamına gelir. Kat edilen bir mesafe yoktur, elde
+yalnızca faz kalır.
 
-Bu ayrımın modelin geneli açısından sonucu şudur: parçacık okuması ile dalga
-okuması burada ayrışır. Dalga okuması her iki rejimde de tanımlıdır, parçacık
-okuması yalnızca yayılımlı rejimde tanımlıdır. Ayrışmanın kendisi bir sonuçtur.
+Buradan modelin geneli için bir sonuç daha çıkar: parçacık okuması ile dalga
+okuması tam bu noktada ayrışmaktadır. Dalga okuması her iki rejimde de tanımlı
+kalır, parçacık okuması ise yalnızca yayılımlı rejimde tanımlıdır. Ayrışmanın
+kendisi de bir sonuçtur.
 
 ### 16.10 Çıkış yüzünün körlüğü
 
-Enerji vektörünün üç zaman düzleminden herhangi birinde, herhangi bir açıyla
-döndürülmesi geçiş dalga sayısını değiştirmez. Kütle kabuğu o dalga sayısının
-büyüklüğünü vektörün yalnızca **uzunluğundan** belirler, dönme ise uzunluğu
-korur.
+Enerji vektörü üç zaman düzleminden herhangi birinde, herhangi bir açıyla
+döndürülse de geçiş dalga sayısı değişmez. Bunun nedeni açıktır: kütle kabuğu o
+dalga sayısının büyüklüğünü yalnızca vektörün **uzunluğundan** belirler, dönme
+ise uzunluğa dokunmaz.
 
-Üç düzlemin her birinde yirmi dört açı ve üç farklı vektör uzunluğu tarandığında
-geçiş dalga sayısındaki en büyük değişim $10^{-9}$'un altındadır. Dolayısıyla
-çıkış yüzü, parçacığın orada izlediği yola tümüyle kördür. Yüz, ara bölgenin
+Üç düzlemin her birinde yirmi dört açı ve üç farklı vektör uzunluğu tarandığında,
+geçiş dalga sayısındaki en büyük değişim $10^{-9}$'un altında kalmıştır.
+Dolayısıyla çıkış yüzü, parçacığın orada izlediği yola tümüyle kördür. Yüz, ara
+bölgenin
 içinde değil, yüzeylerde belirlenmektedir.
 
 ### 16.11 Çıkış anının gördüğü düzlemler
