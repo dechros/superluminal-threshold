@@ -31,8 +31,8 @@ koşulu, geçiş genliği, kütleli parçacık.
 
 Kütleli bir cismi zamanda geriye taşımanın bilinen bir yolu yoktur. Bu metin bir
 yol önerir ve onun aritmetiğini kurar: parçacık ışık hızı eşiğini geçer, öte
-tarafta mekânda mesafe kat eder ve geri döner. Metnin sorduğu soru, orada
-harcanan mesafenin dönüşte saati ne kadar kaydırdığıdır.
+tarafta mekânda mesafe kat eder ve geri döner. Metnin sorduğu soru şudur: orada
+harcanan mesafe dönüşte saati ne kadar kaydırmaktadır.
 
 Soruyu kurabilmek için metin iki bölgeyi birbirinden ayırmaktadır. **Bölge I**,
 parçacığın yola çıktığı sıradan bölgedir; orada ışık hızı bir üst sınır olarak
@@ -55,7 +55,7 @@ $$(\text{öte taraftaki yönelim ve hareket}) \;\longmapsto\; (t, x, y, z)_{\tex
 I'in saati tam $s$ kadar kayar. Aradaki katsayı bire eşit olduğundan araya bir
 hız ya da bir ölçek çarpanı girmez. Kayma yalnızca zaman koordinatında görünür,
 çünkü dönüş olayının uzay koordinatlarına hiçbir şey sızmaz. Eşleme doğrusal
-olduğu için arka arkaya yapılan yolculukların kaymaları da basitçe toplanır.
+olduğundan arka arkaya yapılan yolculukların kaymaları da basitçe toplanmaktadır.
 Bütün bunlara karşın geometri tek başına kaymanın işaretini, yani saatin ileri
 mi geri mi gittiğini belirlemez.
 
@@ -241,7 +241,7 @@ kurulduğunu gösterir.
 | Dönüş | Geri döndüğünde saatte nereye düşer | Bölüm 13, Bölüm 16, Bölüm 17, Bölüm 18, Bölüm 19 |
 
 Bölüm 2 bu üç adımın tamamını tek bir hesap hâlinde, sayılarıyla birlikte önden
-verir. Kalan bölümler o hesabın her bir adımını ayrı ayrı kurar.
+verir. Kalan bölümler o hesabın her bir adımını ayrı ayrı kurmaktadır.
 
 **Simülasyon için gereken en kısa yol.** Yedi adımın tamamı Bölüm 19'da tek
 yerde toplanmıştır ve her adımın hangi bölümde kurulduğu orada yazılıdır. Hesabı
@@ -1535,8 +1535,8 @@ limitidir**. Sıfır kalınlıkta her şey geçer, kalın dilimde hiçbir şey g
 Buna ikinci bir koşul daha eklenir, çünkü iç modun sönümlü olup olmadığını gelen
 alanın mod içeriği belirler. İşaret değiştiren yön az dalga sayısı taşıyorsa iç
 mod yayılmaya devam eder, ve geçirgenlik bastırılmak yerine **salınır**,
-rezonansta bire kadar çıkar. Öyleyse engeli yaratan şey imza değişiminin kendisi
-değil, gelen alanın hangi modlardan oluştuğudur.
+rezonansta bire kadar çıkar. Öyleyse engeli imza değişiminin kendisi
+değil, gelen alanın mod içeriği yaratmaktadır.
 
 İki koşul birlikte Bölüm 6.1'in sonucunu geçersiz kılmaz, yalnızca kapsamını
 daraltır: eşiğin yansıtıcı olması, öte tarafın sınırsız olduğu ve gelen modun
@@ -2120,7 +2120,7 @@ $$A = \frac{4\kappa q}
  {(\kappa+q)^2 e^{-i q d} - (\kappa-q)^2 e^{i q d}}$$
 
 Bu tek ifade dört ara bölge tipini birden kapsar, çünkü $q$ karmaşık değer
-alabilir. Ara bölge yayılımlıysa $q$ reel çıkar ve payda salınır; söndürücüyse
+alabilir. Ara bölge yayılımlıysa $q$ reel çıkmakta ve payda salınmaktadır; söndürücüyse
 $q$ sanal olur, üstel terimler reel hiperbolik fonksiyonlara döner ve genlik
 bastırılır. Yani iki durum ayrı formüller değil, aynı formülün iki dalıdır.
 
