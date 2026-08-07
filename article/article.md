@@ -181,8 +181,8 @@ Yedi adım bir aritmetik kurar, ve o aritmetik kendi içinde eksiksiz işler. An
 aynı aritmetik, böyle bir geçişin fiziksel olarak kurulabildiğini göstermez.
 Kurulmasının önüne beş ayrı engel çıkar.
 
-**Birincisi bir büyüklük sorunudur.** Eşiği geçebilen yapılanmalarda parçacığın
-geçme olasılığını veren genlik, kalınlık $d = 8$'e çıktığında
+**Birincisi bir büyüklük sorunudur.** Eşiği geçebilen yapılanmalarda geçirgenlik
+$T$, yani parçacığın geçme olasılığı, kalınlık $d = 8$'e çıktığında
 $3{,}46 \times 10^{-12}$'ye kadar iner. Yani geçiş mümkün kalır ama neredeyse
 hiç gerçekleşmez.
 
@@ -374,6 +374,13 @@ $d$, kütle parametresi $\mu$ ve hız $c$ olur.
 | 9 | $2\tau - s$ | Varış anı, kalkışa göre, geri taşıyan dalda | Bölüm 4.1.2, Bölüm 4.1.3 |
 | 10 | $s^\ast = 2\tau$ | Eşik mesafesi: bunu aşan yolculuk kalkıştan önce döner | Bölüm 4.1.3 |
 | 11 | $\Delta E / E = \Delta / s$ | Kalkıştan $\Delta$ kadar önce dönmenin enerji oranı | Bölüm 4.1.5 |
+
+**Üç yakın nicelik birbirinden ayrı durur.** Altıncı satırın verdiği
+$A(\omega)$ bir **genliktir** ve karmaşık bir sayıdır. Onun karesi
+$T = |A|^2$ **geçirgenliktir**, yani tek bir geçişin olasılığıdır. Bir paketin
+gidiş dönüşten sağ çıkan kesrine ise **dönen ağırlık** denir (Bölüm 14.1);
+ağırlık, paketin bütün frekans bileşenleri üzerinden alınmış bir toplam
+olduğundan tek bir $T$ değerine eşit değildir.
 
 Dokuzuncu satırda $s$'nin önündeki katsayı **bire eşittir** ve araya bir hız
 girmez. Çalışmanın asıl sonucu budur (Bölüm 4.1.1, Bölüm 4.1.2). O terimin
@@ -811,15 +818,15 @@ yolculuk için harcanması gereken enerji.
 **Genlik ağırlığı.** Parçacık kalkıştan $\Delta$ kadar önce dönecekse, Bölge II'de aldığı yol doymuş geçiş gecikmesini $\Delta$ kadar aşmalıdır.
 Gecikmeyi yolun uzunluğu değil ara bölge sabitlediğinden, gereken yol istenen
 kaymayla **birebir** büyür: $\Delta = 0$ için $2{,}565988$, $\Delta = 1000$ için
-$1002{,}565988$ birim. Geçişin genlik ağırlığını ise yalnızca ara bölge belirler.
-Ağırlık kalınlık $2$'de $3{,}67 \times 10^{-3}$, kalınlık $8$'de
+$1002{,}565988$ birim. Geçişin geçirgenliğini ise yalnızca ara bölge belirler.
+Geçirgenlik kalınlık $2$'de $3{,}67 \times 10^{-3}$, kalınlık $8$'de
 $3{,}46 \times 10^{-12}$ çıkar, yani bölgeye gerçekten duyarlı bir niceliktir.
-Buna karşın **yolun uzunluğu, ağırlığı veren ifadede hiç geçmez**. Dolayısıyla bu
-modelde ne kadar uzun bir yolculuk yapılırsa yapılsın, ağırlık en kısa
-yolculuktakiyle aynı kalır.
+Buna karşın **yolun uzunluğu, geçirgenliği veren ifadede hiç geçmez**.
+Dolayısıyla bu modelde ne kadar uzun bir yolculuk yapılırsa yapılsın,
+geçirgenlik en kısa yolculuktakiyle aynı kalır.
 
 Bu durum bir serbestlik değildir. Bölge II'de alınan yol genliğe hiç girmiyorsa,
-modelde bir **eksik** var demektir. Yolculuğun ağırlığa ne kattığını
+modelde bir **eksik** var demektir. Yolculuğun geçirgenliğe ne kattığını
 hesaplayabilmek için genliğin önce yol uzunluğuna bağlı bir değişken kazanması
 gerekir. Yukarıdaki sayılar bundan fazlasını vermez.
 
@@ -912,7 +919,7 @@ Bölüm 13.4'ün doymuş değerinin tam olarak aynısını. Bu ikinci denetim ö
 değildir: tek geçiş ile gidiş dönüşü birbirine karıştırmak bu çalışmada iki kez
 ikilik bir çarpan hatasına yol açmıştır.
 
-**Bunun çalışmaya kattığı.** Bölüm 4.1.5'in ağırlık tablosundaki sayı, yani $d = 8$
+**Bunun çalışmaya kattığı.** Bölüm 4.1.5'in geçirgenlik değeri, yani $d = 8$
 için $3{,}46 \times 10^{-12}$, tek bir kalınlıkta okunmuş bir değerdir ve bir üst
 sınır değildir. Aynı doyum derinliğinde daha yüksek enerjiyle çalışılırsa hem
 gereken mesafe hem gereken kalınlık düşer, genlik ise yerinde kalır. Dolayısıyla
