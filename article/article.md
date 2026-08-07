@@ -394,7 +394,7 @@ hesaplanıp karşılaştırılabilir, ve ayrıldıkları noktada hatanın kayna�
 uygulamada bulunur, modelde değil.
 
 **Geçişin ne sıklıkta olacağı da hesaba girer.** Yukarıdaki sayılar neyin mümkün
-olduğunu söyler, o şeyin ne kadar sık gerçekleşeceğini söylemez. Aynı
+olduğunu verir, o şeyin ne kadar sık gerçekleşeceğini vermez. Aynı
 yapılanmada tek bir geçişin genliği $4{,}692932 \times 10^{-9}$, geçirgenliği
 $2{,}202361 \times 10^{-17}$ çıkmaktadır. Bölüm 4.1.3 ile Bölüm 4.1.5'in
 kalınlığa göre verdiği $3{,}46 \times 10^{-12}$ dizisi ise başka bir
@@ -735,7 +735,7 @@ ulaşabilen yapılanmalar kalın bariyerlerdir, ve kalın bir bariyer neredeyse
 hiçbir şey geçirmez: geçirgenlik $d = 2$ için $3{,}67 \times 10^{-3}$, $d = 4$
 için $3{,}60 \times 10^{-6}$, $d = 8$ için $3{,}46 \times 10^{-12}$ çıkar. Yani
 geçiş hem mümkün kalır hem de son derece seyrek gerçekleşir. Bu bölümün sonucu
-neyin olabileceğini söyler, ne kadarının olacağını söylemez.
+neyin olabileceğini verir, ne kadarının olacağını vermez.
 
 Bu toplama işlemi ayrıca bağımsız bir türetmeyle karşılaştırılmıştır.
 Bölüm 4.1.2 varış anını tek bir genlikten okumakta, ve iki yol üç ayrı mesafede
@@ -806,7 +806,7 @@ yolculuktakiyle aynı kalır.
 Bu durum bir serbestlik değildir. Bölge II'de alınan yol genliğe hiç girmiyorsa,
 modelde bir **eksik** var demektir. Yolculuğun ağırlığa ne kattığını
 hesaplayabilmek için genliğin önce yol uzunluğuna bağlı bir değişken kazanması
-gerekir. Yukarıdaki sayılar bundan fazlasını söylemez.
+gerekir. Yukarıdaki sayılar bundan fazlasını vermez.
 
 **Düz bir yolun enerjisi.** Bölge II'nin geometrisi, ayırt edilmiş eksen boyunca
 kaydırma altında değişmez. Bu yüzden o eksene eşlenik nicelik korunur ve düz bir
@@ -1078,7 +1078,7 @@ genişliğine** bağlı olduğu, metriğin ayrıntılı biçimine bağlı olmad�
 aynı hesabı spin-$1/2$ için dener ve çözüm uzayında korunan bir iç çarpım
 bulunmadığını gösterir.
 
-İki sonuç birbirini yalanlamaz, aynı yapının iki farklı kesitidir:
+İki sonuç birbiriyle çelişmez, aynı yapının iki farklı kesitidir:
 
 | | [20], [21] | Bu çalışma |
 | -------------------- | ------------------------------- | -------------------------------------------------- |
@@ -1382,7 +1382,7 @@ eğrilik yüzeyde yalnızca **sürekli** mi kalmalı (*zayıf* imza değişimi),
 koşulu verdiğini incelemiş ve ikisini de savunulabilir bulmuştur. [6] daha ileri gider: imza
 değişiminde kanonik Einstein denklemleri diye bir şey yoktur, seçim yapılmak
 zorundadır; [8] aynı noktayı yineleyip herhangi bir seçimi "asıl" denklemler
-diye adlandırmanın retorik olduğunu söyler.
+diye adlandırmanın retorik kaldığını gösterir.
 
 Yukarıdaki $\pi|_\Sigma = 0$ sonucu **güçlü** koşuldur. Aynı sonucu başka bir
 yoldan [4] daha önce elde eder. O çalışmada Klein-Gordon alanı imza değiştiren bir
@@ -1439,7 +1439,7 @@ değil, akı korunumunun tek çözümüdür.** Böylece Bölüm 6'nın sonucu bi
 ürünü olmaktan çıkar ve o seçim verildiğinde bir zorunluluğa dönüşür.
 
 Zayıf koşulda ise $T_+ = 1$, $T_- = R$ olur ve akı **her** $R$ için korunur.
-Zayıf koşul geçişe izin verir, ancak ne kadarının geçtiğini söylemez. Bölge
+Zayıf koşul geçişe izin verir, ancak ne kadarının geçtiğini vermez. Bölge
 II'de dışarı giden dalgayı seçecek bir koşul kurulamadığından $R$ serbest kalır.
 Yani zayıf koşul "geçiş vardır" demekten çok, "bu problem iyi konumlanmamıştır"
 demektedir, ve bu da yukarıdaki sonuçla tutarlı kalır.
@@ -1496,7 +1496,7 @@ tensöründe noktasal bir terim olup olmaması meselesi değildir; profilin geç
 teğet gelip gelmediği meselesidir.
 
 **Bölüm 5.4 ile bunun bağı.** İki hesap aynı geçişin iki idealleştirmesine
-bakar ve sonuçları birbirini yalanlamaz. Bu kurguda geçiş sonlu bir aralığa yayılır
+bakar, ve sonuçları birbiriyle çelişmez. Bu kurguda geçiş sonlu bir aralığa yayılır
 ve profil düzgündür; dış eğrilik süreklidir, dolayısıyla delta terimi yoktur.
 Bölüm 5.4 ise geçişi kalınlığı $d$ olan bir katmana sıkıştırır ve gücün
 $1/d$ ile gittiğini bulur; o güç, bu bölümdeki sürekli eğriliğin sıfır kalınlık
@@ -1687,7 +1687,7 @@ duruşunun tamamını verir.
 
 **Birincisi.** Boyut sayısından çıkan şey **ayrımın varlığıdır**, ayrımın iki
 yakasından hangisinin gelecek olduğu değil. Bir koridorun iki ucu olması, hangi
-ucun ileri olduğunu söylemez.
+ucun ileri olduğunu vermez.
 
 **İkincisi.** Ayrım metrikte durur, ama **etiket durmaz**, çünkü denklemler bir
 yönü tercih etmez. Zamanda ileri giden her çözümün geriye giden bir eşi bulunur
@@ -1770,7 +1770,7 @@ fiziksel yorumunu da verir: hiperyüzey yakınındaki bir gözlemciye böyle bir
 ilmek, iki ayrı noktada bir parçacık-karşıparçacık çiftinin yaratılması gibi
 görünebilir.
 
-İlk bakışta bir çelişki görünür: Bölüm 6.1 eşiğin geçirgen olmadığını söylerken,
+İlk bakışta bir çelişki görünür: Bölüm 6.1 eşiğin geçirgen olmadığını verirken,
 [11] yüzeyden geçen ilmeklerden söz etmektedir. Çelişki yalnızca görünüştedir ve
 Bölüm 7 onu çözer. İki metrik arasındaki fark bir kareler toplamıdır, dolayısıyla Bölge I'de
 zaman-benzeri olan her yön Bölge II'de de zaman-benzeridir. Yani eşikte bir
@@ -1960,7 +1960,7 @@ taşımak serbest değildir.
 
 Benimsenen çözüm, tek bir tanım aramak yerine **iki okumayı birlikte
 yürütmektir**. Bu, yalnızca bu bölümün değil, çalışmanın tamamının yöntemidir:
-parçacık hakkında bir şey söyleyen her bölüm, söylediğini iki kez söyler.
+parçacık hakkında bir sonuç veren her bölüm, o sonucu iki kez yazar.
 
 **Dalga okuması.** Bu okumada parçacık, kütleli reel skaler alanın dar bir mod
 demetidir. Enine dalga sayısı üzerinde Gauss ağırlıklı bir paket alınır,
@@ -2184,7 +2184,7 @@ hesabın tutarlılık sınamasıdır ve sağlanmaktadır.
 
 ### 12.2 Genliğin taşıdığı iki bilgi
 
-Genliğin **büyüklüğü** ne kadarının geçtiğini söyler ve Bölüm 5'in geçirgenlik
+Genliğin **büyüklüğü** ne kadarının geçtiğini verir, ve Bölüm 5'in geçirgenlik
 tablosunu vermektedir.
 
 Genliğin **fazı** ise dönüş anını taşır ve asıl konu odur. Bir sonraki bölümün
@@ -2654,8 +2654,8 @@ bir muhakemedir; dayanağını Bölüm 9 hesaplamıştır.
 
 ### 16.4 Hücrelerin dağılımı
 
-Bölüm 16.2'nin tablosu hangi sonucun nasıl göründüğünü söyler, ama hangisinin
-gerçekleşeceğini söylemez. Bu alt bölüm o eksiği kapatmakta, ve cevabın ikiye
+Bölüm 16.2'nin tablosu hangi sonucun nasıl göründüğünü verir, ama hangisinin
+gerçekleşeceğini vermez. Bu alt bölüm o eksiği kapatmakta, ve cevabın ikiye
 ayrıldığını bulmaktadır.
 
 **Çıkış yüzü belirlidir.** Akı korunumu geçen ve yansıyan ağırlıkları doğrudan
@@ -2873,7 +2873,7 @@ ise uzunluğa dokunmaz.
 
 Üç düzlemin her birinde yirmi dört açı ve üç farklı vektör uzunluğu tarandığında,
 geçiş dalga sayısındaki en büyük değişim $10^{-9}$'un altında kalmıştır.
-Dolayısıyla çıkış yüzü, parçacığın Bölge II'de izlediği yola tümüyle kördür. Yüz, ara
+Dolayısıyla çıkış yüzü, parçacığın Bölge II'de izlediği yola hiçbir bağımlılık taşımaz. Yüz, ara
 bölgenin
 içinde değil, yüzeylerde belirlenmektedir.
 
@@ -3119,8 +3119,8 @@ bağlanmaktadır.
 
 Tablonun en önemli satırı ilkidir, ve okunuşu şudur: **parçacığın ne zaman
 döndüğünü ile nereden döndüğünü ayrı nicelikler belirlemektedir.** Zaman bileşeni
-dala tümüyle kör kalır, geçiş yönündeki yer değiştirme ise yönelime tümüyle
-kördür.
+dala hiç bağlı değildir, geçiş yönündeki yer değiştirme ise yönelime hiç bağlı
+değildir.
 
 ### 18.4 Dönüşümün tanım kümesini sıkıştırması
 
@@ -3195,8 +3195,8 @@ fazdır.
 ### 18.7 Dönüşümün kapalı biçimi
 
 Bölüm 18.1 ile Bölüm 18.6 arası dönüşümü **tarayarak** vermişti. Oysa tarama tam
-bir cevap sayılmaz: taranan durumların nereye gittiğini söyler, ama dönüşümün
-**ne olduğunu** söylemez. Bu alt bölüm onu formül olarak yazmaktadır. Literatür
+bir cevap sayılmaz: taranan durumların nereye gittiğini verir, ama dönüşümün
+**ne olduğunu** vermez. Bu alt bölüm onu formül olarak yazmaktadır. Literatür
 taraması bu dönüşümün hiçbir biçimini bulamamıştır, dolayısıyla aşağıdaki formülü
 bu çalışma üretir.
 
@@ -3393,8 +3393,8 @@ karşıya getirmektir. Sonuç bu nedenle bir yöntem değil, bir **gerilim** ola
 **Geriye kalan.** İddiayı taşıyan sönümlü rejimde elde kalan gözlenebilirler,
 bu çalışmanın zaten hesapladığı iki sınır niceliğidir: geçen ağırlık ve katman
 şiddeti. İkisi de iki aileyi ayıran ters çevirme altında çift olduğundan, yalnızca
-bir geçişin **olduğunu** bildirebilirler. İçeride ne olduğunu söylemezler,
-parçacığın hangi yöne gittiğini hiç söylemezler.
+bir geçişin **olduğunu** bildirebilirler. İçeride ne olduğunu vermezler,
+parçacığın hangi yöne gittiğini de vermezler.
 
 Bu sonuç iddiayı düşürmez, çünkü iddia zaten Bölge I'de okunan dönüş anına
 dayanmaktadır. Düşen şey **tanı gücüdür**: bir geçişin olduğu ve dönüşün hangi
@@ -3710,7 +3710,7 @@ sayıları ölçer.
 
 **Koşullu ifadenin dayandığı yer** tablonun dördüncü satırıdır. Bu çalışmanın
 hiçbir sonucu, imzası değişmiş bir bölgenin yapılıp yapılamayacağı hakkında bir
-şey söylemez. Sonucun bir öneri olarak değil bir koşullu ifade olarak
+şey vermez. Sonucun bir öneri olarak değil bir koşullu ifade olarak
 yazılmasının nedeni de budur.
 
 > Dürüst özet şudur: iki engel **sayıdır**, biri **seçimdir**, biri de **öncülün
