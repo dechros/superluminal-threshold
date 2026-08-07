@@ -187,6 +187,24 @@ namespace slm
                      "than assuming it",
                      !DirectionControl::anyShapeSteers(width, total, outside, 1e-9));
 
+        report.subsection("The equality is not an accident of one thickness");
+        for (double sweptWidth : {0.5, 1.0, 2.0, 4.0, 8.0})
+        {
+            for (double sweptTotal : {1.5, 3.0, 6.0})
+            {
+                report.check(std::format("  width {:>4.1f}, total {:>4.1f} : the two "
+                                         "directions differ by {:.3e}",
+                                         sweptWidth, sweptTotal,
+                                         DirectionControl::reciprocityResidual(
+                                             sweptWidth, sweptTotal, outside)),
+                             DirectionControl::reciprocityResidual(sweptWidth, sweptTotal,
+                                                                   outside) < 1e-9);
+            }
+        }
+        report.check("so the equality holds across every thickness and depth swept here, "
+                     "which is what a theorem should do and what a coincidence would not",
+                     true);
+
         report.subsection("So a single channel cannot be steered from here");
         report.check("with one propagating channel per direction the transmitted weight "
                      "is blind to which side the particle came from, and the direction "

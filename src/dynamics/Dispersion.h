@@ -33,6 +33,12 @@ namespace slm
         /// derivative because region II has three time axes.
         double gradientMagnitude(double kappa) const;
 
+        /// The signal front travels at the infinite-frequency limit of the
+        /// phase velocity, not at the group velocity. For a massive field that
+        /// limit is c, and this query evaluates the phase velocity at the given
+        /// wavenumber so a caller can watch it descend towards c.
+        double frontVelocityAt(double k) const;
+
     private:
         double c_;
         double mass_;

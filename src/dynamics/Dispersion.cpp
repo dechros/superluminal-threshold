@@ -41,6 +41,11 @@ namespace slm
         return c_ * kappa / std::sqrt(kappa * kappa + mu());
     }
 
+    double Dispersion::frontVelocityAt(double k) const
+    {
+        return phaseVelocity(k);
+    }
+
     void DispersionSection::run(Report &report) const
     {
         const double c = 1.0;
@@ -61,6 +66,21 @@ namespace slm
         report.check("k -> 0 : group velocity goes to 0", massive.groupVelocity(1e-8) < 1e-6);
         report.check("k -> infinity : group velocity goes to c",
                      std::abs(massive.groupVelocity(1e12) - c) < 1e-12);
+
+        report.subsection("The signal front descends to c as the frequency rises");
+        double previous = massive.frontVelocityAt(1.0);
+        for (double k : {10.0, 100.0, 1000.0, 1e6})
+        {
+            const double here = massive.frontVelocityAt(k);
+            report.check(std::format("  k = {:>8.0f} : phase velocity {:.6f}, still above c "
+                                     "and still falling",
+                                     k, here),
+                         here > c && here < previous);
+            previous = here;
+        }
+        report.check("so the front travels at c in the infinite-frequency limit, which is the "
+                     "speed a causal boundary is allowed to have",
+                     std::abs(massive.frontVelocityAt(1e12) - c) < 1e-12);
 
         report.subsection("Massless case: no dispersion");
         report.checkNear("both equal c, the velocity stays well defined",

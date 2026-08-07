@@ -3262,9 +3262,12 @@ böyle bir düzenek ya negatif sonuç verir ya da çelişki üretir. Hangi üst�
 türünün nedenselliği gerçekten çiğnediğini ise [51] ayırmaktadır. Aşağıdaki hesap bir sinyal
 iddiası taşımadığı için o ikilemin dışında durur. Bu nokta açık bırakılmamış,
 hesaba dâhil edilmiştir: hesap dalganın ön cephesini tepesinden ayrı
-hesaplamaktadır. Cephe hızının frekans büyüdükçe ışık hızına inmesi [72] ve
-[73]'ün klasik sonucudur, ve ara bölge
-cepheyi hiçbir kalınlıkta öne almaz. Tepenin öne alınması büyürken de onu
+hesaplamaktadır. Cephe hızının frekans büyüdükçe ışık hızına inmesi [72] ile
+[73]'ün klasik sonucudur, ve bu çalışma onu ödünç almak yerine kendi
+dispersiyon bağıntısından yeniden üretmiştir: faz hızı $k = 10$ için
+$1{,}004988$, $k = 100$ için $1{,}000050$ çıkmakta, ve sonsuz frekans sınırında
+$c$'ye inmektedir. Ara bölge de cepheyi hiçbir
+kalınlıkta öne almaz. Tepenin öne alınması büyürken de onu
 taşıyan genlik çökmektedir: $d = 32$ için $5{,}2 \times 10^{-32}$'ye iner. Yukarıdaki $+29{,}0743$,
 bir mesajın ışığı geçtiği anlamına gelmez ve bu çalışma öyle bir iddiada
 bulunmamaktadır.
@@ -3396,9 +3399,11 @@ kalır. Bu sonuç, zamanda tersinirlik ile birimsellikten çıkmaktadır. Bu ça
 benimsemekle yetinmez, kendi kurduğu profillerle yeniden üretmiştir. Çarpık
 profil için geçirgenlik iki yönde de $4{,}9096125448 \times 10^{-3}$ çıkmakta ve
 aradaki fark $7 \times 10^{-18}$ mertebesinde kalmaktadır. Profilin gerçekten
-bakışımsız olduğu da ayrıca doğrulanmıştır. Dolayısıyla eşitliği, profilde
-gizlenmiş bir bakışım değil doğrudan teorem vermektedir, ve kurulan beş profilin
-hiçbiri iki yönde farklı geçirmez.
+bakışımsız olduğu da ayrıca doğrulanmıştır. Eşitlik tek bir kalınlığa da bağlı
+değildir: beş kalınlık ile üç derinlikten kurulu on beş yapılanmanın hepsinde
+iki yön arasındaki fark $10^{-15}$ altında kalmaktadır. Dolayısıyla eşitliği
+profilde gizlenmiş bir bakışım değil doğrudan teorem vermektedir, ve kurulan
+beş profilin hiçbiri iki yönde farklı geçirmez.
 
 > Tek kanallı bir gönderimde yolculuğun yönü, parçacığın zaten taşıdığı
 > işarettir. Engelin biçimi, kalınlığı ve bakışımsızlığı bu işareti
