@@ -205,8 +205,9 @@ doğrudan görünmez, ve geriye yalnızca üç sınır niceliği kalır. Üçü 
 bilgi verir, yani bir geçişin olduğunu (Bölüm 18.9). Bölge II'de durup ileriyi
 kestirmeye çalışan bir gözlemci de başarısız olur, çünkü eşikteki başlangıç
 değeri problemi iyi konumlanmaz. Ancak bu çöküş, eşikten geçerek Bölge II'ye
-giren hiçbir şeyi etkilemez, çünkü kütle kabuğu üzerindeki bir modun büyüme
-katsayısı her durumda negatif çıkar.
+giren durumları etkilemez: iddiayı taşıyan engel rejiminde iç mod sönümlüdür,
+yani $q = i\beta$ ile $\beta$ gerçeldir (Bölüm 5.2), ve sönümlü bir mod
+büyüyerek çözümü bozamaz.
 
 ### 1.6 Model
 
@@ -3244,9 +3245,14 @@ taşıyan genlik çökmektedir: $d = 32$ için $5{,}2 \times 10^{-32}$'ye iner. 
 bir mesajın ışığı geçtiği anlamına gelmez ve bu çalışma öyle bir iddiada
 bulunmamaktadır.
 
-**Ayrıca tek okuma da değildir.** Aynı genlikten beş ayrı okuma türetilebilir;
-bunların üçü geçişi ışığın üstüne, ikisi altına koymakta, ve aradaki ayrım
-kalınlıkla değişmemektedir. Yukarıdaki tablo bunlardan faz okumasına
+**Ayrıca tek okuma da değildir.** Aynı genlikten beş ayrı okuma türetilebilir:
+faz okuması, ikamet süresi, dönme bileşeni, hizalanma okuması ve yarı klasik
+okuma. Bunlardan dönme bileşeni ile ikamet süresi aynı niceliktir, dolayısıyla
+geriye dört ayrı değer kalmıştır. Bölüm 11.6 bu listeden üçünü ele almıştı, ve
+karşılıkları şöyledir: nokta cisim okuması yarı klasik okumadır, dalga okuması
+faz okumasıdır, genlik okuması ise ikamet süresidir. Beş okumanın üçü
+geçişi ışığın üstüne, ikisi altına koyar, ve aradaki ayrım kalınlıkla
+değişmemektedir. Yukarıdaki tablo bunlardan faz okumasına
 dayanmaktadır, çünkü sorulan soru dışarıdaki bir dedektörde tepenin ne zaman
 göründüğüdür. Bu bir seçimdir, ancak seçimi kurmayan bağımsız bir ölçüt Bölüm
 11.6'da onu doğrulamıştır: yayılan paketin tepesi ölçüldüğünde tutan okuma
@@ -3498,8 +3504,11 @@ tek cümlede sabitlenmesidir.
  kalınlık geçmez (Bölüm 18.7). Rejim kaydı zorunludur, çünkü yayılımlı bir ara
  bölgede gecikme doymaz, salınır (Bölüm 13.5).
 7. **Dolayısıyla bir eşik mesafesi vardır ve ötesinde varış, girişten öncedir.**
- Öklidyen ara bölge, $d = 8$, $c = \mu = 1$ için eşik $2{,}565988$'dir (Bölüm
- 4.1.3).
+ Eşik mesafesinin sayısal değeri enerji vektörünün yönelimine bağlıdır. Bölüm
+ 4.1.3'ün yönelimi, Öklidyen ara bölge, $d = 8$ ve $c = \mu = 1$ için
+ $2{,}565988$ verir; aşağıdaki örnek başka bir yönelim kullandığından
+ $2{,}434322$ verecektir. İki sayı aynı formülün iki farklı girdideki
+ değeridir.
 
 **Yedi adımın tek bir parçacık üzerinde yürütülmesi.** Yukarıdaki adımlar ayrı
 ayrı kuruludur, ve hepsini birden kapatan tek bir örnek şudur. Ara bölge Öklidyen
@@ -4025,20 +4034,23 @@ nanosaniyelik bir geri kayma olduğuna göre, o kadar erken bir varış ile bir
 önceki protonun geç varışı birbirinden ayırt edilemez. Bu yüzden hız saniyede on
 milyona indirilir; aralık yüz nanosaniyeye çıkar, ve koşu $48{,}5$ saniye sürer.
 
-| Şart | İstenen | Ulaşılan |
+| Şart | İstenen | Bu düzenekte |
 | ------------------------------- | ---------------------------------- | ---------------------------------- |
 | Demetin durgunluk frekansını aşması | $1{,}4255 \times 10^{24}$ rad/s | $1{,}7749 \times 10^{24}$ rad/s |
 | Enine momentumun toplama oranı | $10^{-1}$ | $5 \times 10^{-5}$ |
-| Öte bölgenin yoğunluğu | $1{,}06 \times 10^{96}$ kg/m$^3$ | $9{,}28 \times 10^{21}$ kg/m$^3$ |
+| Bölge II'nin yoğunluğu | $1{,}06 \times 10^{96}$ kg/m$^3$ | $9{,}28 \times 10^{21}$ kg/m$^3$ |
 | Geçişin opaklığı | $10$ | $10$ |
-| Bölge II'deki yer değiştirme | $0{,}2998$ m | $1$ m |
+| Bölge II'deki yer değiştirme | $0{,}2998$ m | $1$ m, düzeneğin varsayımı |
 | Zamanlama çözünürlüğü | $2 \times 10^{-11}$ s | $1{,}8 \times 10^{-11}$ s |
 | Saniyedeki fırlatma sayısı | $4{,}85 \times 10^{8}$ | $10^{7}$ |
 | Varışın fırlatmaya bağlanması | bir etiket | bir etiket |
 
-Bugünkü bir laboratuvar bu sekiz şarttan yedisini karşılamaktadır. Tablonun sağ
-sütununu şartlar tek tek değil birlikte belirler: yukarıdaki iki çekişme,
-enerjiyi yükseltip hızı düşüren tek bir çalışma noktasında birlikte çözülür.
+Bugünkü bir laboratuvar bu sekiz şarttan yedisini karşılamaktadır. Sağ sütunun
+yedi satırı bugünkü donanımın ölçülü yeteneğini verir. Sekizinci satır, yani
+Bölge II'de kat edilen $1$ m, bir ölçüm değil bir gerekliliktir: düzenek ancak o
+uzunlukta çalışır, ve o uzunluğa da yalnızca yoğunluk şartı altında erişir.
+Tablonun sağ sütununu şartlar tek tek değil birlikte belirler: yukarıdaki iki çekişme, enerjiyi yükseltip hızı düşüren
+tek bir çalışma noktasında birlikte çözülür.
 Okumayı mümkün kılan sayı da şudur: aranan ilerleme $10^{-9}$ s, zamanlama
 çözünürlüğü $1{,}8 \times 10^{-11}$ s, yani arada elli beş çözünürlük genişliği
 bulunur. Ölçüm sınırda durmaz, ve deneyin tamamı $48{,}5$ saniye sürer.
@@ -4055,7 +4067,7 @@ Düzeneğin parçaları da olağandır ve hepsi raftan alınabilir:
 Son madde isteğe bağlı değildir. İki damga ayrı saatlerden okunursa, bir
 nanosaniyelik bir saat farkı aranan işaretin tamamını taklit edebilir.
 
-Geriye sağlanmayan tek şart kalmaktadır: öte bölgenin yoğunluğu. Düzeneğin geri
+Geriye sağlanmayan tek şart kalmaktadır: Bölge II'nin yoğunluğu. Düzeneğin geri
 kalanı bir proton demeti, bir kolimatör, hızlı bir zamanlama algılayıcısı ve bir
 tetikleyiciden ibarettir. Dolayısıyla deney tarif edilmiştir ama
 gerçekleştirilebilir değildir, ve ikisinin arasında duran şey uzun bir liste
