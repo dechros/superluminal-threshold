@@ -230,15 +230,12 @@ gösterilmiştir.
 ### 1.7 Yolculuk
 
 Parçacığın Bölge II'de yapabilecekleri iki etikete indirgenmiştir: ara bölgenin
-hangi yüzünden çıktığı ve enerji vektörünün ne kadar döndüğü. Vektörün yönü
-serbest kalır, uzunluğu ise sabit durur; üç zaman ekseni arasındaki $O(3)$
-dönmeleri fiziksel bir fark üretmez, yalnızca aynı durumu farklı biçimde yazar.
+hangi yüzünden çıktığı ve enerji vektörünün ne kadar döndüğü. İkisinin tanımını
+Bölüm 9.5, Bölge I'deki karşılıklarını ise Bölüm 10.1 verir.
 
-Bu iki etiketten hareketin saate ne taşıdığı da çıkar. Tümüyle üç zaman ekseninin
-içinde kalan bir hareket Bölge I'in saatinde hiç fark üretmez, çünkü o eksenler
-arasındaki dönmeler dönüşümün katsayısına dokunmaz. Aynı nedenle başladığı yere
-dönen bir gezinti de hiçbir iz bırakmaz. Geriye saati oynatan tek şey kalır: tek
-uzay ekseni boyunca alınan yol.
+Bu iki etiketten çıkan sonuç şudur: Bölge I'in saatinde fark üreten tek hareket,
+tek uzay ekseni boyunca alınan yoldur. Üç zaman ekseni içinde kalan hareketler
+saate hiçbir şey taşımaz.
 
 Dönüş anını ise parçacığın yanında taşıdığı bir saat vermez. O an, ara bölgeye
 giriş ve çıkış genliklerinin ortak fazından okunur. Engel rejiminde bu faz
