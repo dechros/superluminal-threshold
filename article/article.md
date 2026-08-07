@@ -1347,7 +1347,9 @@ Madde tabakasının gücü doğrudan hesaplanmamış, imza dönüşünün dik e�
 
 ## 6. Eşik yüzeyi ve eklem koşulu
 
-İki bölgeyi birbirine bağlayan $\Sigma$ yüzeyi iki eklem koşulu taşır:
+İki bölgeyi ayıran eşik yüzeyi aşağıda $\Sigma$ ile gösterilmektedir. Bir alanın
+bu yüzeyden geçebilmesi için iki koşul gerekir, ve bu ikisine **eklem koşulu**
+adı verilir:
 
 1. Alan sürekli: $\psi_I|_\Sigma = \psi_{II}|_\Sigma$
 2. Konjuge momentum sürekli: $\pi_I|_\Sigma = \pi_{II}|_\Sigma$
@@ -1358,11 +1360,15 @@ I'de zaman-benzeri, Bölge II'de ise uzay-benzeri olduğundan $\pi_{II} = -\pi_I
 
 $$\pi|_\Sigma = 0$$
 
-olursa sağlanabilir. Bu eşitliğe **düğüm koşulu** denir ve anlamı şudur: eşikte
-akı sıfırlanır.
+olursa sağlanabilir. Bu eşitliğe **düğüm koşulu** adı verilir, ve anlamı şudur:
+eşik yüzeyinde parçacık akısı sıfıra iner.
 
 **Sonuç:** $\Sigma$ geçirgen değil, **yansıtıcıdır**. Kütleli madde eşikten
-geçemez, tam yansır.
+geçemez, tam yansır. Bu sonuç çalışmanın geri kalanıyla çelişir görünmektedir,
+çünkü Bölüm 1 eşiği geçirgen almıştı. Çelişki görünüştedir ve Bölüm 6.1
+çözmektedir: yukarıdaki hesap **güçlü** eklem koşulunu kullanır, oysa aynı
+denklemler **zayıf** eklem koşuluyla da tutarlıdır ve zayıf koşul geçişe izin
+verir. İki koşul arasındaki seçimi geometri yapmaz.
 
 **İstisna.** Kütlesiz durumda, yani $\mu = 0$ için koşul kendiliğinden sağlanır.
 Ancak kütlesiz alan zaten $c$ hızında gittiğinden onun geçmesi de gerekmez.
@@ -1819,14 +1825,18 @@ $$\omega(k) = c\sqrt{k^2 + \mu}, \qquad
  v_{\text{grup}} = \frac{d\omega}{dk}, \qquad
  v_{\text{faz}} \cdot v_{\text{grup}} = c^2$$
 
-Bölge II'de da aynı türev alınabilir, ancak Bölge II'de zaman üç boyutlu olduğundan
-payda bir vektöre dönüşür:
+Bölge II'de de aynı türev alınabilir, ancak orada zamanın üç bileşeni
+bulunduğundan türev bir sayı değil, üç bileşenli bir gradyan verir:
 
-$$\frac{dq}{d\kappa} \;\longrightarrow\; \text{skaler/vektör} = \text{gradyan} = \text{VEKTÖR}$$
+$$\frac{\partial \kappa}{\partial (t_1, t_2, t_3)} \;=\;
+\left(\frac{\partial \kappa}{\partial t_1},\;
+ \frac{\partial \kappa}{\partial t_2},\;
+ \frac{\partial \kappa}{\partial t_3}\right)$$
 
-**Sonuç:** Hız Bölge II'de bir sayı olmaktan çıkar ve bir yönelime dönüşür. "Ne kadar
-hızlı" sorusunun yerini "hangi yönelimde" sorusu alır. Hız bilgisini taşıyan tek
-yer $B$ boostudur, yani üç zamanlı uzaydaki yönelim.
+**Sonuç:** Hız Bölge II'de bir sayı olmaktan çıkar ve bir yönelime dönüşür. "Ne
+kadar hızlı" sorusunun yerini "hangi yönelimde" sorusu alır. Hız bilgisini
+taşıyan tek yer $M(V)$ çarpanındaki $B$ boostudur, yani üç zamanlı uzaydaki
+yönelim.
 
 Hızın kendisi de geçiş altında $v' = c^2/v$ kuralıyla dönüşür. Bu kuralın sabit
 noktası ışık hızıdır, ve kural subluminal ile superluminal bölgeleri birbirine
