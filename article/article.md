@@ -205,14 +205,11 @@ geçiş, kalınlıksız bir yüzey olarak alınmaz; kendi kalınlığı ve kendi
 üçüncü bir bölge olarak durur. Bütün hesaplar bu ara bölgenin dört tipi ve beş
 ayrı kalınlığı için ayrı ayrı yürütülmüştür.
 
-Eşik geçirgen alınmıştır, yani parçacık eşikten geçebilmektedir. Bu seçim, iki
-bölgeyi birbirine bağlarken zayıf eklem koşulunu benimsemek anlamına gelir, ve
-bedelini de açıkça öder. Ödenen bedel, geçiş yüzeyinde doğan bir madde
-tabakasıdır; tabakanın gücü kalınlık arttıkça azalır, ama hiç sıfırlanmaz. Yüzey
-zamansal olmadığından bu tabaka baskın enerji koşulunu çiğner, ve daha uygun bir
-madde seçerek bundan kurtulmak mümkün olmaz. En ağır sonucu ise Bölüm 5.7 verir:
-bu metrik ailesinde oran koşulunu geçebilen tek profil, güçlü koşulu sağlayan
-profil çıkar, yani hiçbir şey geçirmeyen profil.
+Eşik geçirgen alınmıştır, yani parçacık eşikten geçebilmektedir. Bunun
+karşılığında doğan madde tabakasını ve o tabakanın çiğnediği enerji koşulunu
+Bölüm 1.5 üçüncü engel olarak saymıştı. En ağır sonucu ise Bölüm 5.7 verir: bu
+metrik ailesinde oran koşulunu geçebilen tek profil, güçlü koşulu sağlayan
+profildir, yani hiçbir şey geçirmeyen profil.
 
 Çalışma parçacığı ayrıca iki okumayla birden taşır. Hesaplar dalga paketi üzerinden
 yürür, anlatım ise noktasal bir cisim dilini kullanır. İki okumayı birbirine
@@ -784,13 +781,13 @@ dönüş düz rotaya göre saati **geriye** taşır.
 **Bu artığın ne olduğu ve neye mal olduğu.** Yukarıdaki hiperbolik kosinüs, Bölge
 I'de sıradan bir Lorentz dönüşümünün bir zaman aralığına uyguladığı çarpanın
 aynısıdır. Dolayısıyla artık, bilinen zaman genleşmesinin Bölge II'den görünen
-hâli olur, yeni ve bağımsız bir etki değil. Hesap bunun bedelini de verir:
+hâli olur, yeni ve bağımsız bir etki değil. Hesap bunun karşılığını da verir:
 sıfırdan farklı bir hızlılıkla bileşke alınan geçiş metrik bağıntısını korur,
 yani kabul edilebilir ailenin dışına çıkmaz, ancak **iki kez uygulanınca başa
 dönme özelliğini kaybeder**. Bölüm 4.1'in tarama koşullarından biri olan bu
 özellik böyle bir bileşkede ortadan kalkar.
 
-### 4.1.5 Yer değiştirmenin bedeli
+### 4.1.5 Yer değiştirmenin karşılığı
 
 Bölge II'de yol almanın iki ayrı karşılığı vardır ve ikisi birbirinden farklı
 davranır: yolculuğun ne olasılıkla gerçekleşeceğini veren genlik ağırlığı, ve
@@ -1123,7 +1120,7 @@ Zayıf eklem koşulu seçildiğinde geçiş yüzeyinde dış eğrilik sıfırlan
 sıfırlanmayan bir dış eğrilik gerilim tensöründe bir **madde tabakasına**
 karşılık gelir. Kalınlık sıfıra giderken tabaka noktasal bir terime iner. Sonlu
 kalınlıkta ise geçiş bölgesinin içine yayılmış bir gerilim olarak durur
-(Bölüm 6.2). Zayıf koşulun bedeli budur: parçacığın geçmesine izin veren seçim,
+(Bölüm 6.2). Zayıf koşulun karşılığı budur: parçacığın geçmesine izin veren seçim,
 aynı anda yüzeye bir madde tabakası koyar. Böyle bir tabakanın genel
 formülasyonunu [17] vermiştir; o çalışma, imzanın değiştiği yüzeyin zamansal
 olamaması da dahil olmak üzere konuyu tam olarak ele alır. Bu bölümün hesabı onun
@@ -1200,7 +1197,7 @@ kalınlığın tersiyle azalır, ancak yoğunluk negatif dalda kalmaya devam ede
 
 İhlal zayıflar, kaybolmaz.
 
-**Sonuç ve bunun modele maliyeti.** Zayıf eklem koşulunun bedeli, daha önce
+**Sonuç ve bunun modele maliyeti.** Zayıf eklem koşulunun karşılığı, daha önce
 yazıldığı gibi yalnızca "bir madde katmanı" değildir. Bedel, **baskın enerji
 koşulunu ihlal eden** bir katmandır ve bu, daha iyi bir madde seçilerek
 onarılamaz. Geriye kalan tek çıkış yolu, dönüm noktasında durağan profildir; o
@@ -2049,9 +2046,9 @@ Gidiş dönüş anlatısının tamamı bu sonuca dayanır. Paket dar tutulmadı�
 "parçacık gitti ve geri döndü" cümlesi anlamını yitirir, çünkü dönen şey gidenden
 farklı bir mod dağılımı olur.
 
-### 11.4 Dar paketin bedeli
+### 11.4 Dar paketin iki kaybı
 
-Dar paket limiti merkezi korur, ama her şeyi korumaz. İki bedel kalır.
+Dar paket limiti merkezi korur, ama her şeyi korumaz. İki kayıp kalır.
 
 Birincisi, geçen ağırlığın oranı hiçbir zaman bire ulaşmaz. Dar bir pakette de
 bu oran birden küçük kalır, yani dönen paketin toplam ağırlığı gidenin altındadır.
@@ -2339,10 +2336,10 @@ değerli değildir: aynı gecikmeyi veren birden çok kalınlık bulunur.
 
 Dönüş anını tek bir çıkarma işlemi verir. Bölge II'de kat edilen mesafe $s$ ve
 tek geçişin faz gecikmesi $\tau$ ile yazıldığında, kalkışa göre varış anı
-$2\tau - s$ olmaktadır. Yazılan bedel gidiş dönüşe ait olduğundan tek geçişin
+$2\tau - s$ olmaktadır. Yazılan gecikme gidiş dönüşe ait olduğundan tek geçişin
 iki katıdır, ve ikisini birbirine karıştırmak bu çalışmada iki kez ikilik çarpan
 hatasına yol açmıştır. Sınanan yapılanmada $\tau = 1{,}462864$, gidiş dönüşün
-bedeli ise $2\tau = 2{,}925728$ değerindedir.
+gecikmesi ise $2\tau = 2{,}925728$ değerindedir.
 
 | Bölge II'de kat edilen mesafe | Varış anı | Konum |
 | ----------------------------- | -------------- | ----------------- |
@@ -2368,7 +2365,7 @@ hareket edecek ve kalkıştan önce dönecekse, sekizi de sağlanmalıdır.
 | Genliğin iki geçişten sağ çıkması | Ölçülebilir dönüş yok |
 | Bir eklem koşulunun çıkışa izin vermesi | Yüzey tek yönlü dalgayı yasaklar |
 | Ters çeviren dalın gerçekleşmesi | Varış öne değil arkaya kayar |
-| Mesafenin bedeli aşması | Varış kalkıştan sonraya düşer |
+| Mesafenin eşik gecikmesini aşması | Varış kalkıştan sonraya düşer |
 
 Bu sekiz koşul aynı biçimde bozulmamaktadır, ve aradaki ayrım sonucun okunuşunu
 belirlemektedir. İlk yedisi bozulduğunda yolculuk ya tümüyle ortadan kalkar ya da
@@ -2406,7 +2403,7 @@ birbiriyle çarpılır.
 | Öklid | $0{,}122$ | $0{,}018$ |
 | Dejenere | $0$ | $0$ |
 
-Görüldüğü gibi dönüş ayağı, gidiş ayağının bedelini bir kez daha ödetmektedir.
+Görüldüğü gibi dönüş ayağı, gidiş ayağının kaybını bir kez daha tekrarlamaktadır.
 Öklid bir bölgede gidiş dönüş, paketin yüzde ikisinden azını geri getirir.
 
 ### 14.2 Merkez kayması
@@ -2485,7 +2482,7 @@ bileşeni de **tam olarak** başlangıç değerine döner ve sayısal artık sı
 
 Bu sonucun önemi şudur: modelin bildirdiği bütün kayıplar dönüşümden değil,
 iki bölgenin birleştiği **yüzeyden** gelmektedir. Cebir hiçbir şey kaybetmez,
-bedeli eklem koşulları ödetir.
+karşılığını eklem koşulları belirler.
 
 ### 15.3 Bölge II'de uzunluğun fizikselliği
 
@@ -2522,7 +2519,7 @@ Son satırdaki sapmanın büyüklüğü de hesaplanmıştır:
 > süratle, aynı kütleyle, ama farklı bir yöne bakarak geri döner.
 
 Bu madde, Bölüm 16'da kurulan sözlüğün en somut maddesidir, ve gidiş dönüşün
-hiçbir bedel ödemeden yapabildiği tek şeyi adlandırır: yön değiştirmek.
+hiçbir enerji harcamadan yapabildiği tek şeyi adlandırır: yön değiştirmek.
 
 **Çekince.** Yukarıdaki sonuç dönüşüm düzeyinde kalır ve yüzeyin mod
 süzgecinden bağımsızdır. Parçacığın Bölge II'de gerçekten bir $O(3)$ dönmesi
@@ -2560,7 +2557,7 @@ Bu ayarın bir alt sınırı vardır. Gereken mesafe frekansla tek düze gitmez:
 düşer, en küçük değerine ulaşır, sonra yeniden yükselir. Sınanan yapılanmada bu
 en küçük değer $2{,}920810$ olup $-0{,}0395$ potansiyelinde bulunur. Yani
 potansiyelin sağladığı şey istenildiği kadar ucuz bir yolculuk değil, yalnızca
-**en ucuz noktaya ayarlanma** imkânıdır, ve bu ayardan gelen kazanç toplam bedelin
+**en ucuz noktaya ayarlanma** imkânıdır, ve bu ayardan gelen kazanç toplam maliyetin
 yüzde beşinin altında kalmaktadır.
 
 
@@ -2696,7 +2693,7 @@ dönüş küre üzerinde tek bir noktaya karşılık geldiğinden olasılığı 
 **İki okumanın ayrılmasının değeri.** İkisi olabilecek en uzak iki tahmini
 vermektedir: biri imzayı geçirgenlik oranında öngörür, diğeri hiç öngörmez.
 Aradaki fark bir yorum farkı değil, **ölçülebilir** bir farktır. Parçacığı
-geçiren ve bedelsiz sapma arayan tek bir deney ikisini birbirinden ayırır.
+geçiren ve enerjisiz sapma arayan tek bir deney ikisini birbirinden ayırır.
 
 Çalışmanın ayırt edici öngörüsü de tam olarak bu ayrımda durmaktadır, ve ulaşılamaz
 bir yüzeye değil ara bölgenin kendisine bağlıdır.
@@ -3177,7 +3174,7 @@ modda kat edilen bir mesafeden söz edilemez. Ölçülen tek şey, dönen paketi
 **tepe noktasının** nereye düştüğüdür.
 
 **Ve bir sinyal taşımadığı.** Ayrım bu noktada zorunludur, çünkü üstışık bir
-sinyalin geçmişe ulaşmasının nedensel bedeli [36]'da sayılmıştır: böyle bir
+sinyalin geçmişe ulaşmasının nedensel maliyeti [36]'da sayılmıştır: böyle bir
 düzenek ya negatif sonuç verir ya da çelişki üretir. Aşağıdaki hesap bir sinyal
 iddiası taşımadığı için o ikilemin dışında durur. Bu nokta açık bırakılmamış,
 hesaba dâhil edilmiştir: çalışma dalganın ön cephesini tepesinden ayrı
@@ -3741,7 +3738,7 @@ taşınmamaktadır.
 
 **Bölüm 5.1'de kapanan nokta.** O bölüm şu soruyu cevaplamıştır: iki imza
 arasındaki sürekli bir yol ne kadar dejenere olmak zorundadır. Her noktada
-yalnızca tek bir öz-değerin sıfırlandığı bir yol bulunmaktadır, ve bedeli $(2,2)$
+yalnızca tek bir öz-değerin sıfırlandığı bir yol bulunmaktadır, ve maliyeti $(2,2)$
 imzalı iki zamanlı bir ara bölgeden geçmektir. Çalışmanın daha önceki "geçiş
 sağlanmaz" sonucu bu nedenle geri çekilmiştir.
 
