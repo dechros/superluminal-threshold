@@ -156,7 +156,7 @@ Geriye kalan dördüncü adımı ise aşağıdaki cümle taşır:
 
 Literatürde bulunmayan şey tam olarak budur: Bölge II'deki yer değiştirmeyi bir
 saat farkına çeviren ve dönüşte hangi ana varıldığını sayıyla veren bir
-çalışma. İlk üç parçanın her biri yukarıda kaynağıyla anılmıştır, dördüncüsünün
+hesap. İlk üç parçanın her biri yukarıda kaynağıyla anılmıştır, dördüncüsünün
 ise anılacak bir kaynağı yoktur.
 
 ### 1.4 Sonucu taşıyan adımlar
@@ -658,8 +658,8 @@ Sekiz aday için iki cebirsel olgu bunu kurar:
 2. **Aynı matrisler involüsyondur** ($M^2 = I$, Bölüm 4.1'in tarama
  koşullarından biri). Ortogonallikle birlikte bu $M = M^{-1} = M^{\mathsf{T}}$
  verir, yani $M$ **simetriktir**. O hâlde eşlenik değişkeni yöneten girdi,
- koordinatı yöneten girdinin devriğidir: iki katsayı aynı **sayıdır**,
- yalnızca aynı büyüklükte değildir.
+ koordinatı yöneten girdinin devriğidir: iki katsayı yalnızca aynı büyüklükte
+ değil, aynı **sayıdır**.
 
 Bu iki olgu, taramanın zaten dayattığı koşulların sonucudur; toplanabilirlik
 için yeni bir varsayım eklenmemiştir.
@@ -1887,7 +1887,7 @@ vardır. Hesaplanan büyüklük
 $$\left|\frac{\mathrm{d}q}{\mathrm{d}\kappa}\right| = \frac{c\,\kappa}{\sqrt{\kappa^2+\mu}}$$
 
 sınanan bütün dalga sayılarında $c$'nin altındadır ve $\kappa \to \infty$
-limitinde $c$'ye gider. Yani **Bölge II'nin da bir hız sınırı vardır** ve o
+limitinde $c$'ye gider. Yani **Bölge II'nin de bir hız sınırı vardır** ve o
 sınır bu tarafın sınırıyla aynı sayıdır. Durgun bir cisim için
 $q(0) = mc^2/\hbar \neq 0$'dır, yani o eksende duran bir cismin bile sıfırdan
 farklı bir eşlenik niceliği vardır.
@@ -1988,7 +1988,7 @@ olan bir cisimdir. Sorulan sorular "nereye gitti", "ne zaman döndü", "hangi
 yönelimi kazandı" biçimini alır, ve cevapları tek tek sayılardır.
 
 İki okuma birbirinin basitleştirilmiş hâli değildir; ikisi de kendi içinde
-eksiksizdir, ve çalışma ikisini yan yana yürütmektedir. Uyuştukları yerde çalışma
+eksiksizdir, ve bu çalışma ikisini yan yana yürütmektedir. Uyuştukları yerde çalışma
 uyuşmanın nedenini de yazar. Ayrıldıkları yerde ise ayrılmayı **gizlemez, sonuç
 olarak kaydeder**, çünkü bu modelde ikisinin ayrıldığı yerler tam olarak Bölge II'nin kendine özgü davrandığı yerlerdir.
 
@@ -3060,7 +3060,7 @@ Eğrilik ayrıca yalnızca geçiş yuvasına dokunan iki düzlemde sıfırdan fa
 çıkmaktadır; diğer iki yuvanın gerdiği düzlem, yüzeyler hesaba katıldığında bile
 düz kalır. Seçilen bu iki düzlem, Bölüm 16.11'de fazdan bağımsız olarak bulunan
 düzlemlerin **aynısıdır**: çıkış anı üç zaman düzleminden ikisine bağlıdır, birine
-görmez. Yani iki ayrı yoldan aynı iki düzleme varılmıştır.
+bağlı değildir. Yani iki ayrı yoldan aynı iki düzleme varılmıştır.
 
 **Sonuç.** Yönelimin Bölge I'in zaman eksenindeki izi gerçektir, ancak ara
 bölgenin içinde değil **sınırında** doğmaktadır. Bunu iki hesaptan hiçbiri tek
@@ -3188,7 +3188,7 @@ modda kat edilen bir mesafeden söz edilemez. Ölçülen tek şey, dönen paketi
 sinyalin geçmişe ulaşmasının nedensel maliyeti [36]'da sayılmıştır: böyle bir
 düzenek ya negatif sonuç verir ya da çelişki üretir. Aşağıdaki hesap bir sinyal
 iddiası taşımadığı için o ikilemin dışında durur. Bu nokta açık bırakılmamış,
-hesaba dâhil edilmiştir: çalışma dalganın ön cephesini tepesinden ayrı
+hesaba dâhil edilmiştir: hesap dalganın ön cephesini tepesinden ayrı
 hesaplamaktadır. Cephe hızı frekans büyüdükçe ışık hızına iner ve ara bölge
 cepheyi hiçbir kalınlıkta öne almaz. Tepenin öne alınması büyürken de onu
 taşıyan genlik çökmektedir: $d = 32$ için $5{,}2 \times 10^{-32}$'ye iner. Yukarıdaki $+29{,}0743$,
@@ -3311,8 +3311,8 @@ $(-1,+1,+1,+1)$, yani Bölge I zamanının saf ters çevrilmesidir. İkisi farkl
 **Geçişi biçimlendirerek yön verilemez.** Literatürdeki karşılıklılık sonucu
 şunu söylemektedir. Her iki uçta yön başına tek bir yayılan kanal varsa, uzaysal
 olarak bakışımsız bir engelin geçirgenliği soldan ve sağdan giriş için aynı
-kalır. Bu sonuç, zamanda tersinirlik ile birimsellikten çıkmaktadır. Bu çalışma onu
-olduğu gibi benimsemez, bu çalışmada kurulan profillerle yeniden üretmiştir. Çarpık
+kalır. Bu sonuç, zamanda tersinirlik ile birimsellikten çıkmaktadır. Bu çalışma onu olduğu gibi
+benimsemekle yetinmez, kendi kurduğu profillerle yeniden üretmiştir. Çarpık
 profil için geçirgenlik iki yönde de $4{,}9096125448 \times 10^{-3}$ çıkmakta ve
 aradaki fark $7 \times 10^{-18}$ mertebesinde kalmaktadır. Profilin gerçekten
 bakışımsız olduğu da ayrıca doğrulanmıştır. Dolayısıyla eşitliği, profilde
@@ -3552,7 +3552,7 @@ Bu kısım çalışmanın nasıl doğrulandığını ve hangi düzenekle sınana
 yazar.
 
 Kısım iki bölümden oluşur. Birincisi yöntemi kurmaktadır: her sayısal ve cebirsel
-iddia bir doğrulamaya karşılık gelir, iki çalışma birbirine isimle değil çalışma
+iddia bir doğrulamaya karşılık gelir, makale ile kod birbirine isimle değil çalışma
 zamanında bağlanır, ve doğrulama kendini de denetler. İkincisi ise neyin
 gösterilmediğini yazar, ve çekirdek ölçümün düzeneğini şart şart belirtir.
 
@@ -3562,7 +3562,7 @@ Bu çalışmadaki her sayısal ve cebirsel iddia, C++ ile kurulmuş bir doğrula
 karşılık gelir. Doğrulamalar genel amaçlı kütüphaneler hâlinde durmakta, ve
 üzerlerinde bir test takımı çalışmaktadır.
 
-**İki çalışma birbirine atıf yapmaz.** Makale hiçbir dosya ya da sınıf adı anmaz;
+**Makale ile kod birbirine atıf yapmaz.** Makale hiçbir dosya ya da sınıf adı anmaz;
 kod da hiçbir bölüm ya da kaynak numarası anmaz. Gerekçe bakımdır: birbirine
 isimle bağlanan iki çalışmadan biri yeniden düzenlendiğinde diğerindeki atıflar
 sessizce çürür ve çürüdükleri fark edilmez. Bunun yerine bağ, aşağıdaki
@@ -3976,7 +3976,7 @@ milyona indirilir; aralık yüz nanosaniyeye çıkar, ve koşu $48{,}5$ saniye s
 
 | Şart | İstenen | Ulaşılan |
 | ------------------------------- | ---------------------------------- | ---------------------------------- |
-| Deçalışma durgunluk frekansını aşması | $1{,}4255 \times 10^{24}$ rad/s | $1{,}7749 \times 10^{24}$ rad/s |
+| Demetin durgunluk frekansını aşması | $1{,}4255 \times 10^{24}$ rad/s | $1{,}7749 \times 10^{24}$ rad/s |
 | Enine momentumun toplama oranı | $10^{-1}$ | $5 \times 10^{-5}$ |
 | Öte bölgenin yoğunluğu | $1{,}06 \times 10^{96}$ kg/m$^3$ | $9{,}28 \times 10^{21}$ kg/m$^3$ |
 | Geçişin opaklığı | $10$ | $10$ |
