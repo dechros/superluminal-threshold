@@ -3191,7 +3191,7 @@ yönelime hiç bağlı değildir.
 Taranan $312$ durum yalnızca $158$ farklı olaya gitmektedir. Yani dönüşüm birebir
 değildir: Bölge II'deki farklı durumlar Bölge I'de aynı olaya varır. Bu
 sıkışma, boyut değişiminde kaybolan bilginin sayısal ölçüsüdür, ve Bölüm
-16.12'de sapma tayfının sürekliden ayrığa düşmesiyle aynı olgunun başka bir
+16.5'te sapma tayfının sürekliden ayrığa düşmesiyle aynı olgunun başka bir
 görünümüdür.
 
 ### 18.5 Işık sinyaliyle karşılaştırma
