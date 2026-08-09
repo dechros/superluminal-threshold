@@ -1029,8 +1029,7 @@ yol da bu noktada durur.
 
 **Öklid, $(4,0)$.** İmza değişimi literatürünün büyük bölümü [58] ve [59] ile
 başlayan bu geçişi ele almaktadır. Bu adayda enine yönlerin hepsi karakter değiştirmiştir ve
-bölgede hiç zaman yönü kalmamıştır. İmza değişimi literatürünün büyük bölümü tam
-olarak bu geçişi ele almaktadır.
+bölgede hiç zaman yönü kalmamıştır.
 
 **Dejenere katman.** Son aday, metriğin tersi bulunmayan bir tabakadır. Öteki üç
 adaydan farklı olarak bu adayda bir imzadan söz edilemez, çünkü yayılımı yöneten
