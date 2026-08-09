@@ -196,103 +196,6 @@ namespace slm
         return buffer.str();
     }
 
-    int AssumptionLedger::controlCharacters(const std::string &text)
-    {
-        int count = 0;
-        for (unsigned char character : text)
-        {
-            if (character < 0x20 && character != static_cast<unsigned char>('\n'))
-            {
-                ++count;
-            }
-        }
-        return count;
-    }
-
-    std::vector<int> AssumptionLedger::splitMacros(const std::string &text)
-    {
-        std::vector<int> places;
-        const auto rows = lines(text);
-        for (std::size_t index = 0; index < rows.size(); ++index)
-        {
-            std::string row = rows[index];
-            while (!row.empty() && (row.back() == '\r' || row.back() == ' '))
-            {
-                row.pop_back();
-            }
-            if (row.size() >= 2 && row.back() == '\\' && row[row.size() - 2] != '\\')
-            {
-                places.push_back(static_cast<int>(index) + 1);
-            }
-        }
-        return places;
-    }
-
-    bool AssumptionLedger::carriesTitle(const std::string &text)
-    {
-        for (const std::string &line : lines(text))
-        {
-            if (line.empty())
-            {
-                continue;
-            }
-            return line.rfind("# ", 0) == 0 && line.rfind("## ", 0) != 0 && line.size() > 8;
-        }
-        return false;
-    }
-
-    std::vector<std::string> AssumptionLedger::appendixReferencesOutsideIt(const std::string &text)
-    {
-        const auto all = lines(text);
-        std::size_t opensAt = all.size();
-        std::vector<std::pair<std::string, std::size_t>> placed;
-        for (std::size_t index = 0; index < all.size(); ++index)
-        {
-            const std::string &line = all[index];
-            if (line.rfind("# ", 0) == 0 && line.rfind("## ", 0) != 0 &&
-                opensAt == all.size() && line.find("Ek") != std::string::npos)
-            {
-                opensAt = index;
-            }
-            if (line.rfind("## ", 0) == 0)
-            {
-                const std::size_t dot = line.find('.');
-                if (dot != std::string::npos && dot > 3)
-                {
-                    placed.emplace_back(line.substr(3, dot - 3), index);
-                }
-            }
-        }
-
-        std::vector<std::string> wrong;
-        for (const std::string &line : all)
-        {
-            std::size_t at = line.find("Ek ");
-            while (at != std::string::npos)
-            {
-                std::size_t end = at + 3;
-                while (end < line.size() && line[end] >= '0' && line[end] <= '9')
-                {
-                    ++end;
-                }
-                if (end > at + 3)
-                {
-                    const std::string wanted = line.substr(at + 3, end - at - 3);
-                    for (const auto &entry : placed)
-                    {
-                        if (entry.first == wanted && entry.second < opensAt &&
-                            std::find(wrong.begin(), wrong.end(), wanted) == wrong.end())
-                        {
-                            wrong.push_back(wanted);
-                        }
-                    }
-                }
-                at = line.find("Ek ", end);
-            }
-        }
-        return wrong;
-    }
-
     std::vector<std::string> AssumptionLedger::vocabulary(const std::string &text)
     {
         return firstColumn(findVocabulary(text));
@@ -437,20 +340,20 @@ namespace slm
         report.check(std::format("it carries no stray control character, of which {} were "
                                  "found, so no markup macro has been silently turned into the "
                                  "character its escape names",
-                                 AssumptionLedger::controlCharacters(document)),
-                     AssumptionLedger::controlCharacters(document) == 0);
-        for (const int line : AssumptionLedger::splitMacros(document))
+                                 DocumentIntegrity::controlCharacters(document)),
+                     DocumentIntegrity::controlCharacters(document) == 0);
+        for (const int line : DocumentIntegrity::splitMacros(document))
         {
             report.check(std::format("  line {} ends in a lone backslash", line), false);
         }
         report.check("no line ends in a lone backslash, so no macro has been cut in half by "
                      "the one escape the count above cannot see, the line break itself",
-                     AssumptionLedger::splitMacros(document).empty());
+                     DocumentIntegrity::splitMacros(document).empty());
         report.check("its first line is a title at the top level, which is the one block the "
                      "text carries without a number and so the one a renumbering cannot miss "
                      "losing",
-                     AssumptionLedger::carriesTitle(document));
-        for (const std::string &wanted : AssumptionLedger::appendixReferencesOutsideIt(document))
+                     DocumentIntegrity::carriesTitle(document));
+        for (const std::string &wanted : DocumentIntegrity::appendixReferencesOutsideIt(document))
         {
             report.check(std::format("  section {} is referred to as an appendix but is not "
                                      "placed in one",
@@ -459,7 +362,7 @@ namespace slm
         }
         report.check("every section the text calls an appendix is placed in the appendix, so a "
                      "reference that merely resolves is not mistaken for one that is right",
-                     AssumptionLedger::appendixReferencesOutsideIt(document).empty());
+                     DocumentIntegrity::appendixReferencesOutsideIt(document).empty());
         const auto ledger = AssumptionLedger::entries(document);
         const auto known = AssumptionLedger::vocabulary(document);
         report.check(std::format("a ledger of {} rows was located in it, by matching a four "

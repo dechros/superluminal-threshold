@@ -3,9 +3,6 @@
 #include "core/Section.h"
 #include "intermediate/IntermediateRegion.h"
 
-#include <complex>
-#include <vector>
-
 namespace slm
 
 {
@@ -16,12 +13,9 @@ namespace slm
     /// Everything else in these libraries computes the arrival moment from the
     /// phase: the delay is a frequency derivative, and the closed form is that
     /// derivative evaluated. That is exact, but it is also a single route, and
-    /// a single route cannot check itself. This class takes the other route. It
-    /// builds a wave packet as a sum over frequencies, multiplies each
-    /// frequency by the amplitude the region imposes on it, and propagates the
-    /// result forward in time on the far side of the region. Then it looks for
-    /// the moment at which the transmitted packet is largest, and calls that
-    /// the arrival.
+    /// a single route cannot check itself. This class builds a packet with
+    /// WavePacketField and looks for the moment at which the transmitted
+    /// packet is largest, and calls that the arrival.
     ///
     /// No delay formula is used anywhere in that procedure. The stationary
     /// phase condition is not imposed; it is allowed to emerge or to fail. If
@@ -51,75 +45,6 @@ namespace slm
     class PacketSimulation
     {
     public:
-        /// Gaussian weight the incoming packet gives a frequency.
-        /// The frequency side of the sum, evaluated once.
-        ///
-        /// Only one factor in the sum depends on the observation time, and it is
-        /// exp(-i omega t). Everything else, the spectral weight, the crossing
-        /// amplitude and the propagation phase, depends on the frequency alone.
-        /// A peak search asks for the envelope at thousands of times, and
-        /// rebuilding those factors at each of them was where the running time
-        /// went: the search cost three thousand amplitude evaluations per time
-        /// step, and the whole simulation took two minutes out of a run that
-        /// takes under two seconds without it.
-        ///
-        /// Held this way the search reduces to multiplying stored coefficients
-        /// by a phase. No result changes, because nothing is approximated; the
-        /// same terms are summed in the same order.
-        struct Harmonics
-        {
-            std::vector<double> frequency;
-            std::vector<std::complex<double>> coefficient;
-        };
-
-        /// Build the frequency side for a single crossing observed at a point.
-        static Harmonics harmonics(double observationPoint, IntermediateRegion::Kind kind,
-                                   double c, double mu, double transverseSquared,
-                                   double thickness, double centre, double spread, int samples,
-                                   bool phaseOnly);
-
-        /// Build the frequency side for the round trip, which is observed where
-        /// it started and so carries no propagation phase.
-        static Harmonics roundTripHarmonics(IntermediateRegion::Kind kind, double c, double mu,
-                                            double transverseSquared, double thickness,
-                                            double centre, double spread, int samples,
-                                            bool phaseOnly);
-
-        /// Envelope at the given time, from a frequency side already built.
-        static double envelopeOf(const Harmonics &harmonics, double time);
-
-        static double spectrum(double omega, double centre, double spread);
-
-        /// Real part of the transmitted packet at a point past the region, at a
-        /// given time, obtained by summing the transmitted amplitude over
-        /// frequencies. The sum is the whole of the method: each frequency is
-        /// multiplied by the amplitude the two crossings impose on it, and by
-        /// the free propagation phase to the observation point.
-        static double transmittedField(double time, double observationPoint,
-                                       IntermediateRegion::Kind kind, double c, double mu,
-                                       double transverseSquared, double thickness, double centre,
-                                       double spread, int samples);
-
-        /// Lowest frequency that propagates outside, below which a component
-        /// never reaches the detector and must be excluded from the band.
-        static double lowestPropagatingFrequency(double c, double mu, double transverseSquared);
-
-        /// Envelope of the transmitted packet, which is what a detector
-        /// integrating over a cycle would register. When phaseOnly is set the
-        /// transmitted amplitude is stripped of its modulus and kept only as a
-        /// phase, which isolates the delay from the reweighting.
-        static double transmittedEnvelope(double time, double observationPoint,
-                                          IntermediateRegion::Kind kind, double c, double mu,
-                                          double transverseSquared, double thickness,
-                                          double centre, double spread, int samples,
-                                          bool phaseOnly);
-
-        /// The same for a packet that never met the region, which is the
-        /// reference the delay is measured against.
-        static double freeEnvelope(double time, double observationPoint, double c, double mu,
-                                   double transverseSquared, double centre, double spread,
-                                   int samples);
-
         /// Time at which the transmitted envelope peaks, found by scanning and
         /// then refining. This is the measured arrival and it is the point of
         /// the class.
@@ -175,18 +100,12 @@ namespace slm
                                          double centre, double spread, int samples,
                                          double tolerance);
 
-        /// Envelope of the packet after the WHOLE round trip, back at the point
-        /// it started from. Two crossings and a far-side displacement, with the
-        /// displacement entering the phase as the dictionary says it must: the
-        /// far-side coordinate is the near-side time slot, so travelling a distance there
-        /// multiplies each frequency by exp(i omega s) rather than by a spatial
-        /// phase. Nothing else in the sum knows about that; it is the crossing
-        /// dictionary applied once, and the peak is then found the same way as
-        /// everywhere else.
-        static double roundTripEnvelope(double time, IntermediateRegion::Kind kind, double c,
-                                        double mu, double transverseSquared, double thickness,
-                                        double farSideDistance, int branch, double centre,
-                                        double spread, int samples, bool phaseOnly);
+        /// Time at which the returned packet peaks with no far-side
+        /// displacement, obtained by searching the time axis directly. This is
+        /// the only peak that has to be searched for.
+        static double peakAtRest(IntermediateRegion::Kind kind, double c, double mu,
+                                 double transverseSquared, double thickness, double centre,
+                                 double spread, int samples, bool phaseOnly);
 
         /// Whether the far-side displacement moves the envelope rigidly.
         ///
@@ -204,12 +123,6 @@ namespace slm
                                  double transverseSquared, double thickness,
                                  double farSideDistance, int branch, double centre,
                                  double spread, int samples, double tolerance = 1e-12);
-
-        /// Moment at which the packet peaks with no far-side displacement. This
-        /// is the only peak that has to be searched for.
-        static double peakAtRest(IntermediateRegion::Kind kind, double c, double mu,
-                                 double transverseSquared, double thickness, double centre,
-                                 double spread, int samples, bool phaseOnly);
 
         /// Moment at which the returned packet peaks, measured from the moment
         /// it set out. Negative means the simulation found the particle back
