@@ -4,7 +4,7 @@
 #include "particle/ReturnEvent.h"
 #include "particle/RoundTrip.h"
 #include "particle/WavePacket.h"
-#include "sim/PacketSimulation.h"
+#include "sim/WavePacketField.h"
 
 #include <algorithm>
 #include <cmath>
@@ -57,152 +57,6 @@ namespace slm
             return variance > 0.0 ? std::sqrt(variance) : 0.0;
         }
 
-        const std::vector<double> &massGrid()
-        {
-            static const std::vector<double> grid = {0.25, 0.5, 1.0, 2.0, 3.0};
-            return grid;
-        }
-
-        const std::vector<double> &extentGrid()
-        {
-            static const std::vector<double> grid = {0.005, 0.01, 0.02, 0.04, 0.08};
-            return grid;
-        }
-    }
-
-    double RoundTripInvariants::predictedDelayAtMass(double mass, IntermediateRegion::Kind kind,
-                                                     double c, double transverseSquared,
-                                                     double thickness, double centre)
-    {
-        return PacketSimulation::predictedDelay(kind, c, mass, transverseSquared, thickness,
-                                                centre);
-    }
-
-    double RoundTripInvariants::measuredThresholdAtMass(double mass, IntermediateRegion::Kind kind,
-                                                        double c, double transverseSquared,
-                                                        double thickness, double centre,
-                                                        double spread, int samples)
-    {
-        return PacketSimulation::measuredThreshold(kind, c, mass, transverseSquared, thickness, -1,
-                                                   centre, spread, samples);
-    }
-
-    bool RoundTripInvariants::thresholdGrowsWithMass(IntermediateRegion::Kind kind, double c,
-                                                     double transverseSquared, double thickness,
-                                                     double centre, double spread, int samples)
-    {
-        double previous = -std::numeric_limits<double>::infinity();
-        for (double mass : massGrid())
-        {
-            const double value = measuredThresholdAtMass(mass, kind, c, transverseSquared,
-                                                         thickness, centre, spread, samples);
-            if (!(value > previous))
-            {
-                return false;
-            }
-            previous = value;
-        }
-        return true;
-    }
-
-    bool RoundTripInvariants::saturationHoldsAtMass(double mass, IntermediateRegion::Kind kind,
-                                                    double c, double transverseSquared,
-                                                    double centre, double spread, int samples,
-                                                    double tolerance)
-    {
-        const double thin = measuredThresholdAtMass(mass, kind, c, transverseSquared, 8.0, centre,
-                                                    spread, samples);
-        const double thick = measuredThresholdAtMass(mass, kind, c, transverseSquared, 16.0, centre,
-                                                     spread, samples);
-        if (std::abs(thin) <= 0.0)
-        {
-            return false;
-        }
-        return std::abs(thick - thin) / std::abs(thin) < tolerance;
-    }
-
-    double RoundTripInvariants::largestAdmissibleMass(double c, double transverseSquared,
-                                                      double centre)
-    {
-        return centre * centre / (c * c) - transverseSquared;
-    }
-
-    bool RoundTripInvariants::propagatesOutside(double mass, double c, double transverseSquared,
-                                                double centre)
-    {
-        return mass < largestAdmissibleMass(c, transverseSquared, centre);
-    }
-
-    double RoundTripInvariants::largestAdmissibleExtent(double c, double mu,
-                                                        double transverseSquared, double centre,
-                                                        double reach)
-    {
-        if (reach <= 0.0)
-        {
-            return 0.0;
-        }
-        const double floorFrequency =
-            PacketSimulation::lowestPropagatingFrequency(c, mu, transverseSquared);
-        const double headroom = centre - floorFrequency;
-        return headroom > 0.0 ? headroom / reach : 0.0;
-    }
-
-    bool RoundTripInvariants::extentIsAdmissible(double spread, double c, double mu,
-                                                 double transverseSquared, double centre,
-                                                 double reach)
-    {
-        return spread < largestAdmissibleExtent(c, mu, transverseSquared, centre, reach);
-    }
-
-    bool RoundTripInvariants::thresholdGrowsWithExtent(IntermediateRegion::Kind kind, double c,
-                                                       double mu, double transverseSquared,
-                                                       double thickness, double centre,
-                                                       int samples)
-    {
-        double previous = -std::numeric_limits<double>::infinity();
-        for (double width : extentGrid())
-        {
-            const double value = measuredThresholdAtExtent(width, kind, c, mu, transverseSquared,
-                                                           thickness, centre, samples);
-            if (!(value > previous))
-            {
-                return false;
-            }
-            previous = value;
-        }
-        return true;
-    }
-
-    double RoundTripInvariants::measuredThresholdAtExtent(double spread,
-                                                          IntermediateRegion::Kind kind, double c,
-                                                          double mu, double transverseSquared,
-                                                          double thickness, double centre,
-                                                          int samples)
-    {
-        return PacketSimulation::measuredThreshold(kind, c, mu, transverseSquared, thickness, -1,
-                                                   centre, spread, samples);
-    }
-
-    double RoundTripInvariants::thresholdVariationOverExtent(IntermediateRegion::Kind kind,
-                                                             double c, double mu,
-                                                             double transverseSquared,
-                                                             double thickness, double centre,
-                                                             int samples)
-    {
-        double smallest = std::numeric_limits<double>::infinity();
-        double largest = -std::numeric_limits<double>::infinity();
-        for (double spread : extentGrid())
-        {
-            const double value = measuredThresholdAtExtent(spread, kind, c, mu, transverseSquared,
-                                                           thickness, centre, samples);
-            smallest = std::min(smallest, value);
-            largest = std::max(largest, value);
-        }
-        if (!std::isfinite(smallest) || std::abs(smallest) <= 0.0)
-        {
-            return 0.0;
-        }
-        return (largest - smallest) / std::abs(smallest);
     }
 
     RoundTripInvariants::Ledger RoundTripInvariants::ledger(double centre, double spread,
@@ -285,7 +139,7 @@ namespace slm
         const int samples = 300;
 
         report.subsection("The mass the band can carry at all");
-        const double ceiling = RoundTripInvariants::largestAdmissibleMass(c, transverse, centre);
+        const double ceiling = ThresholdSensitivity::largestAdmissibleMass(c, transverse, centre);
         report.check(std::format("  above a mass parameter of {:.4f} the band centre no longer "
                                  "propagates outside the region, so the journey has no timing "
                                  "rather than a longer one",
@@ -293,21 +147,21 @@ namespace slm
                      ceiling > 0.0);
         report.check("the ceiling is set by the band centre and the transverse part alone, and "
                      "the thickness does not enter it",
-                     RoundTripInvariants::largestAdmissibleMass(c, transverse, centre) ==
-                         RoundTripInvariants::largestAdmissibleMass(c, transverse, centre));
+                     ThresholdSensitivity::largestAdmissibleMass(c, transverse, centre) ==
+                         ThresholdSensitivity::largestAdmissibleMass(c, transverse, centre));
         report.check("a mass just below the ceiling still propagates",
-                     RoundTripInvariants::propagatesOutside(ceiling - 0.01, c, transverse, centre));
+                     ThresholdSensitivity::propagatesOutside(ceiling - 0.01, c, transverse, centre));
         report.check("and one just above it does not, which bounds every timing statement below",
-                     !RoundTripInvariants::propagatesOutside(ceiling + 0.01, c, transverse,
+                     !ThresholdSensitivity::propagatesOutside(ceiling + 0.01, c, transverse,
                                                              centre));
 
         report.subsection("The mass parameter, on both routes");
-        for (double mass : massGrid())
+        for (double mass : ThresholdSensitivity::massGrid())
         {
             const double predicted =
-                RoundTripInvariants::predictedDelayAtMass(mass, kind, c, transverse, thickness,
+                ThresholdSensitivity::predictedDelayAtMass(mass, kind, c, transverse, thickness,
                                                            centre);
-            const double measured = RoundTripInvariants::measuredThresholdAtMass(
+            const double measured = ThresholdSensitivity::measuredThresholdAtMass(
                 mass, kind, c, transverse, thickness, centre, spread, samples);
             report.check(std::format("  mass parameter {:>5.2f} : closed form delay {:.4f}, "
                                      "measured threshold {:.4f}",
@@ -316,22 +170,22 @@ namespace slm
         }
         report.check("the timing depends on the mass parameter, so a heavier state does not "
                      "buy the same journey as a lighter one",
-                     RoundTripInvariants::measuredThresholdAtMass(0.25, kind, c, transverse,
+                     ThresholdSensitivity::measuredThresholdAtMass(0.25, kind, c, transverse,
                                                                    thickness, centre, spread,
                                                                    samples) !=
-                         RoundTripInvariants::measuredThresholdAtMass(3.0, kind, c, transverse,
+                         ThresholdSensitivity::measuredThresholdAtMass(3.0, kind, c, transverse,
                                                                        thickness, centre, spread,
                                                                        samples));
         report.check("and the measured threshold grows with the mass parameter over the range "
                      "scanned, so mass is a cost rather than a saving",
-                     RoundTripInvariants::thresholdGrowsWithMass(kind, c, transverse, thickness,
+                     ThresholdSensitivity::thresholdGrowsWithMass(kind, c, transverse, thickness,
                                                                   centre, spread, samples));
         for (double mass : {0.25, 1.0, 3.0})
         {
             report.check(std::format("  mass parameter {:>5.2f} : the thickness independence "
                                      "still holds",
                                      mass),
-                         RoundTripInvariants::saturationHoldsAtMass(mass, kind, c, transverse,
+                         ThresholdSensitivity::saturationHoldsAtMass(mass, kind, c, transverse,
                                                                      centre, spread, samples,
                                                                      1e-6));
         }
@@ -339,10 +193,10 @@ namespace slm
         report.subsection("The widest band that can cross at all");
         const double reach = 5.0;
         const double extentCeiling =
-            RoundTripInvariants::largestAdmissibleExtent(c, mu, transverse, centre, reach);
+            ThresholdSensitivity::largestAdmissibleExtent(c, mu, transverse, centre, reach);
         report.check(std::format("  the cutoff sits at {:.4f} and the band centre at {:.4f}, so "
                                  "the widest band lying wholly above it has width {:.4f}",
-                                 PacketSimulation::lowestPropagatingFrequency(c, mu, transverse),
+                                 WavePacketField::lowestPropagatingFrequency(c, mu, transverse),
                                  centre, extentCeiling),
                      extentCeiling > 0.0);
         report.check("the limit on the extent and the limit on the mass are the same limit seen "
@@ -352,19 +206,20 @@ namespace slm
                      extentCeiling > 0.0 && ceiling > 0.0);
         report.check("every width scanned below lies under that ceiling, so the widths compared "
                      "are bands of the stated shape rather than bands with a tail cut away",
-                     RoundTripInvariants::extentIsAdmissible(extentGrid().back(), c, mu, transverse,
-                                                             centre, reach));
+                     ThresholdSensitivity::extentIsAdmissible(
+                         ThresholdSensitivity::extentGrid().back(), c, mu, transverse, centre,
+                         reach));
 
         report.subsection("The extent of the band");
-        for (double width : extentGrid())
+        for (double width : ThresholdSensitivity::extentGrid())
         {
-            const double measured = RoundTripInvariants::measuredThresholdAtExtent(
+            const double measured = ThresholdSensitivity::measuredThresholdAtExtent(
                 width, kind, c, mu, transverse, thickness, centre, samples);
             report.check(std::format("  band width {:.3f} : measured threshold {:.4f}", width,
                                      measured),
                          measured > 0.0);
         }
-        const double variation = RoundTripInvariants::thresholdVariationOverExtent(
+        const double variation = ThresholdSensitivity::thresholdVariationOverExtent(
             kind, c, mu, transverse, thickness, centre, samples);
         report.check(std::format("the measured threshold moves by {:.2e} in relative terms over a "
                                  "sixteenfold change of band width, so the extent is a second "
@@ -373,12 +228,12 @@ namespace slm
                      variation > 1e-3 && variation < 1e-1);
         report.check("a wider band measures a later return at every step of the scan, so the "
                      "extent enters with a definite sign and not as scatter",
-                     RoundTripInvariants::thresholdGrowsWithExtent(kind, c, mu, transverse,
+                     ThresholdSensitivity::thresholdGrowsWithExtent(kind, c, mu, transverse,
                                                                     thickness, centre, samples));
         report.check("the closed form carries no width at all, so it reports this dependence as "
                      "absent; the measurement is the only route on which it appears, which is "
                      "the reason both routes are run rather than one",
-                     RoundTripInvariants::predictedDelayAtMass(mu, kind, c, transverse, thickness,
+                     ThresholdSensitivity::predictedDelayAtMass(mu, kind, c, transverse, thickness,
                                                                 centre) > 0.0 &&
                          variation > 1e-3);
 
