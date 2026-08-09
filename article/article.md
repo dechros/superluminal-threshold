@@ -4134,6 +4134,47 @@ boyutlu bir elektron bulutunun bu tek eksende neye karşılık geldiği bu
 imzasındaki dinamiği literatürde de kurulmuş değildir. Bu çalışma o dinamiği
 icat etmemiştir; soru açık kalmıştır.
 
+### 21.2.9 Bağın kinematik sınaması
+
+Literatür bu soruyu daha önce kurmamıştır. Dixon'ın genişletilmiş cisim
+dinamiği [83] sıradan görelilikte vardır, ama imza değişimiyle hiç
+birleştirilmemiştir. Çok zamanlı fizik yazını [66] bir bağlı durumun iç
+yapısını hesaplamaz. Tegmark [84] ile Craig ve Weinstein [85], birden fazla
+zaman ekseninin kararlı bir yapıyı desteklemediğini tartışır, ama bir bağlı
+durumun tayfını çıkarmaz. Sıradan uzay-zamanda bile boyut düşürmek hidrojen
+atomunu bozar: Loudon'ın tek boyutlu hidrojen atomu [86] sınırsız derin bir
+taban durumu ve uyarılmış durumlarda yozlaşma verir. Hazır bir kuram yoktur,
+bu yüzden bu bölüm kendi dar sınamasını kurar.
+
+Bu bölüm kendi tanımını kurar. Aynı sürücüyü, aynı yönelim açılarını ve aynı
+dalı paylaşan, yalnızca kütlesi farklı iki durumu Bölüm 18'in yönelim-dönüş
+eşlemesinden geçirir, ve eşlemenin ikisine verdiği sonucu karşılaştırır. Aynı
+dönüş olayını verdikleri durumu bağlı, farklı sonuç verdikleri durumu ayrık
+adlandırır, ve farkın büyüklüğünü hesaplar.
+
+Sürücü $\omega = 2{,}8$'dir, aynı yönelim açıları ve aynı dal her iki kütleye
+de uygulanır. Kütle kabuğu her kütleye kendi enerji vektörü uzunluğunu verir:
+protonun $\mu = 1$'i uzunluk $2{,}615339$'a, elektronun $\mu = 5{,}446170
+\times 10^{-4}$'ü uzunluk $2{,}799903$'e karşılık gelir. Proton dönüş anını
+$t = 2{,}860608$'de, elektron $t = 2{,}495908$'de bulur; fark $-0{,}364700$
+birimdir. Enine varış noktaları da farklıdır: proton $(+0{,}011745,
++0{,}008657)$, elektron $(+0{,}042547, +0{,}031359)$, fark
+$(+0{,}030802, +0{,}022703)$ birim. Makalenin geri kalanının kullandığı
+sürücüde bu fark $6{,}8077 \times 10^{-25}$ s ve $1{,}7237 \times 10^{-17}$ m
+ile $1{,}2705 \times 10^{-17}$ m'ye karşılık gelir.
+
+**Sonuç.** Aynı yönelimle ve aynı dalla fırlatılan, yalnızca kütlesi farklı
+iki durum, bu eşlemede **aynı** dönüş olayına gitmez. Ağır ve hafif kütle
+farklı anda döner, farklı enine noktaya varır. Bağ, bu sınamanın tanımladığı
+anlamda, çift dönüşte ayakta kalmaz.
+
+**Bunun gösterdiği ve göstermediği.** Bu bir kinematik sınamadır, çözülmüş bir
+iki cisim yörüngesi değildir. Protonla elektronu bir arada tutan kuvveti
+hiçbir yerde temsil etmez, Bölge II'nin tek uzay ekseninde bir bağıl
+koordinatın ne anlama geleceğini de kurmaz; ikisini literatür de
+kurmamıştır (yukarıdaki tarama). Bu sınamanın verdiği şey dardır: bu
+projenin kendi tek-parçacık eşlemesi, kütle farkına karşı katı değildir.
+
 ### 21.3 Simülasyondan okuma
 
 Bu çalışmadaki her gecikme **tek bir yoldan** gelmektedir: fazın frekansa göre
@@ -4665,3 +4706,14 @@ kısım ile kalan kısım artık düzyazıyla değil sayıyla ayrılmaktadır.
 82. I. Antoniadis, N. Arkani-Hamed, S. Dimopoulos, G. Dvali. *New dimensions at
     a millimeter to a Fermi and superstrings at a TeV*. Phys. Lett. B **436**
     (1998) 257. arXiv:hep-ph/9804398
+
+**Genişletilmiş cisimler ve çok zamanlı yapının sınırları**
+
+83. W. G. Dixon. *Dynamics of extended bodies in general relativity I:
+    Momentum and angular momentum*. Proc. R. Soc. Lond. A **314** (1970) 499.
+84. M. Tegmark. *On the dimensionality of spacetime*. Class. Quantum Grav.
+    **14** (1997) L69.
+85. W. Craig, S. Weinstein. *On determinism and well-posedness in multiple
+    time dimensions*. Proc. R. Soc. A **465** (2009) 3023. arXiv:0812.0210
+86. R. Loudon. *One-dimensional hydrogen atom*. Am. J. Phys. **27** (1959)
+    649.

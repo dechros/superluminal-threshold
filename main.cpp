@@ -6,6 +6,7 @@
 #include "boundary/ProfiledBarrier.h"
 #include "intermediate/ThresholdOptimum.h"
 #include "particle/AsymmetricFaces.h"
+#include "particle/BoundPair.h"
 #include "scan/PermutationScan.h"
 #include "core/Report.h"
 #include "core/Section.h"
@@ -90,6 +91,7 @@ namespace
         sections.push_back(std::make_unique<slm::RoundTripExperimentSection>());
         sections.push_back(std::make_unique<slm::TimeProjectionSection>());
         sections.push_back(std::make_unique<slm::ReturnEventSection>());
+        sections.push_back(std::make_unique<slm::BoundPairSection>());
         sections.push_back(std::make_unique<slm::ReturnFormulaSection>());
         return sections;
     }
