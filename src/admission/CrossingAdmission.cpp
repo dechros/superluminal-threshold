@@ -2,9 +2,9 @@
 
 #include "boundary/JunctionFamily.h"
 #include "core/Report.h"
-#include "identity/RoundTripInvariants.h"
+#include "identity/ThresholdSensitivity.h"
 #include "routes/ThreeRoutes.h"
-#include "sim/PacketSimulation.h"
+#include "sim/WavePacketField.h"
 
 #include <cmath>
 #include <format>
@@ -15,8 +15,8 @@ namespace slm
     {
         double cutoff(const CrossingAdmission::Setup &setup)
         {
-            return PacketSimulation::lowestPropagatingFrequency(setup.c, setup.mu,
-                                                                setup.transverseSquared);
+            return WavePacketField::lowestPropagatingFrequency(setup.c, setup.mu,
+                                                               setup.transverseSquared);
         }
 
         double roundTripPrice(const CrossingAdmission::Setup &setup)
@@ -93,11 +93,11 @@ namespace slm
         case Condition::BandAboveCutoff:
             return setup.centre > cutoff(setup);
         case Condition::BandWidthAdmissible:
-            return RoundTripInvariants::extentIsAdmissible(setup.spread, setup.c, setup.mu,
+            return ThresholdSensitivity::extentIsAdmissible(setup.spread, setup.c, setup.mu,
                                                            setup.transverseSquared, setup.centre,
                                                            setup.bandReach);
         case Condition::MassBelowCeiling:
-            return RoundTripInvariants::propagatesOutside(setup.mu, setup.c,
+            return ThresholdSensitivity::propagatesOutside(setup.mu, setup.c,
                                                           setup.transverseSquared, setup.centre);
         case Condition::InteriorBlocks:
             return IntermediateRegion::blocks(setup.kind, setup.c, setup.mu,
@@ -122,12 +122,12 @@ namespace slm
         case Condition::BandAboveCutoff:
             return setup.centre - cutoff(setup);
         case Condition::BandWidthAdmissible:
-            return RoundTripInvariants::largestAdmissibleExtent(setup.c, setup.mu,
+            return ThresholdSensitivity::largestAdmissibleExtent(setup.c, setup.mu,
                                                                 setup.transverseSquared,
                                                                 setup.centre, setup.bandReach) -
                    setup.spread;
         case Condition::MassBelowCeiling:
-            return RoundTripInvariants::largestAdmissibleMass(setup.c, setup.transverseSquared,
+            return ThresholdSensitivity::largestAdmissibleMass(setup.c, setup.transverseSquared,
                                                               setup.centre) -
                    setup.mu;
         case Condition::InteriorBlocks:

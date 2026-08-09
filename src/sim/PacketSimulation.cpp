@@ -2,201 +2,21 @@
 
 #include "core/Report.h"
 #include "intermediate/TwoCrossings.h"
+#include "sim/WavePacketField.h"
 
 #include <algorithm>
 #include <cmath>
-#include <complex>
 #include <format>
 
 namespace slm
 {
     namespace
     {
-        constexpr double kBandwidths = 5.0;
-
         double normalWavenumber(double omega, double c, double mu, double transverseSquared)
         {
             const double squared = TwoCrossings::outsideSquared(omega, c, mu, transverseSquared);
             return squared > 0.0 ? std::sqrt(squared) : 0.0;
         }
-
-    }
-
-    double PacketSimulation::spectrum(double omega, double centre, double spread)
-    {
-        const double z = (omega - centre) / spread;
-        return std::exp(-0.5 * z * z);
-    }
-
-    double PacketSimulation::lowestPropagatingFrequency(double c, double mu,
-                                                        double transverseSquared)
-    {
-        return c * std::sqrt(transverseSquared + mu);
-    }
-
-    double PacketSimulation::transmittedField(double time, double observationPoint,
-                                              IntermediateRegion::Kind kind, double c, double mu,
-                                              double transverseSquared, double thickness,
-                                              double centre, double spread, int samples)
-    {
-        const double floorFrequency =
-            lowestPropagatingFrequency(c, mu, transverseSquared) + 1e-3;
-        const double low = std::max(centre - kBandwidths * spread, floorFrequency);
-        const double high = centre + kBandwidths * spread;
-        const double step = (high - low) / samples;
-        std::complex<double> total(0.0, 0.0);
-        for (int i = 0; i < samples; ++i)
-        {
-            const double omega = low + (i + 0.5) * step;
-            if (omega <= 0.0)
-            {
-                continue;
-            }
-            const double weight = spectrum(omega, centre, spread);
-            const std::complex<double> crossing =
-                TwoCrossings::amplitude(kind, omega, c, mu, transverseSquared, thickness);
-            const double k = normalWavenumber(omega, c, mu, transverseSquared);
-            const std::complex<double> travel(0.0, k * observationPoint - omega * time);
-            total += weight * crossing * std::exp(travel) * step;
-        }
-        return total.real();
-    }
-
-    PacketSimulation::Harmonics PacketSimulation::harmonics(
-        double observationPoint, IntermediateRegion::Kind kind, double c, double mu,
-        double transverseSquared, double thickness, double centre, double spread, int samples,
-        bool phaseOnly)
-    {
-        const double floorFrequency =
-            lowestPropagatingFrequency(c, mu, transverseSquared) + 1e-3;
-        const double low = std::max(centre - kBandwidths * spread, floorFrequency);
-        const double high = centre + kBandwidths * spread;
-        const double step = (high - low) / samples;
-        Harmonics built;
-        built.frequency.reserve(samples);
-        built.coefficient.reserve(samples);
-        for (int i = 0; i < samples; ++i)
-        {
-            const double omega = low + (i + 0.5) * step;
-            if (omega <= 0.0)
-            {
-                continue;
-            }
-            const double weight = spectrum(omega, centre, spread);
-            std::complex<double> crossing =
-                TwoCrossings::amplitude(kind, omega, c, mu, transverseSquared, thickness);
-            if (phaseOnly)
-            {
-                crossing = std::polar(1.0, std::arg(crossing));
-            }
-            const double k = normalWavenumber(omega, c, mu, transverseSquared);
-            built.frequency.push_back(omega);
-            built.coefficient.push_back(weight * crossing *
-                                       std::exp(std::complex<double>(0.0, k * observationPoint)) *
-                                       step);
-        }
-        return built;
-    }
-
-    PacketSimulation::Harmonics PacketSimulation::roundTripHarmonics(
-        IntermediateRegion::Kind kind, double c, double mu, double transverseSquared,
-        double thickness, double centre, double spread, int samples, bool phaseOnly)
-    {
-        const double floorFrequency =
-            lowestPropagatingFrequency(c, mu, transverseSquared) + 1e-3;
-        const double low = std::max(centre - kBandwidths * spread, floorFrequency);
-        const double high = centre + kBandwidths * spread;
-        const double step = (high - low) / samples;
-        Harmonics built;
-        built.frequency.reserve(samples);
-        built.coefficient.reserve(samples);
-        for (int i = 0; i < samples; ++i)
-        {
-            const double omega = low + (i + 0.5) * step;
-            if (omega <= 0.0)
-            {
-                continue;
-            }
-            const double weight = spectrum(omega, centre, spread);
-            std::complex<double> crossing =
-                TwoCrossings::amplitude(kind, omega, c, mu, transverseSquared, thickness);
-            if (phaseOnly)
-            {
-                crossing = std::polar(1.0, std::arg(crossing));
-            }
-            built.frequency.push_back(omega);
-            built.coefficient.push_back(weight * crossing * step);
-        }
-        return built;
-    }
-
-    double PacketSimulation::envelopeOf(const Harmonics &built, double time)
-    {
-        std::complex<double> total(0.0, 0.0);
-        for (std::size_t i = 0; i < built.frequency.size(); ++i)
-        {
-            total += built.coefficient[i] *
-                     std::exp(std::complex<double>(0.0, -built.frequency[i] * time));
-        }
-        return std::abs(total);
-    }
-
-    double PacketSimulation::transmittedEnvelope(double time, double observationPoint,
-                                                 IntermediateRegion::Kind kind, double c,
-                                                 double mu, double transverseSquared,
-                                                 double thickness, double centre, double spread,
-                                                 int samples, bool phaseOnly)
-    {
-        const double floorFrequency =
-            lowestPropagatingFrequency(c, mu, transverseSquared) + 1e-3;
-        const double low = std::max(centre - kBandwidths * spread, floorFrequency);
-        const double high = centre + kBandwidths * spread;
-        const double step = (high - low) / samples;
-        std::complex<double> total(0.0, 0.0);
-        for (int i = 0; i < samples; ++i)
-        {
-            const double omega = low + (i + 0.5) * step;
-            if (omega <= 0.0)
-            {
-                continue;
-            }
-            const double weight = spectrum(omega, centre, spread);
-            std::complex<double> crossing =
-                TwoCrossings::amplitude(kind, omega, c, mu, transverseSquared, thickness);
-            if (phaseOnly)
-            {
-                crossing = std::polar(1.0, std::arg(crossing));
-            }
-            const double k = normalWavenumber(omega, c, mu, transverseSquared);
-            const std::complex<double> travel(0.0, k * observationPoint - omega * time);
-            total += weight * crossing * std::exp(travel) * step;
-        }
-        return std::abs(total);
-    }
-
-    double PacketSimulation::freeEnvelope(double time, double observationPoint, double c,
-                                          double mu, double transverseSquared, double centre,
-                                          double spread, int samples)
-    {
-        const double floorFrequency =
-            lowestPropagatingFrequency(c, mu, transverseSquared) + 1e-3;
-        const double low = std::max(centre - kBandwidths * spread, floorFrequency);
-        const double high = centre + kBandwidths * spread;
-        const double step = (high - low) / samples;
-        std::complex<double> total(0.0, 0.0);
-        for (int i = 0; i < samples; ++i)
-        {
-            const double omega = low + (i + 0.5) * step;
-            if (omega <= 0.0)
-            {
-                continue;
-            }
-            const double weight = spectrum(omega, centre, spread);
-            const double k = normalWavenumber(omega, c, mu, transverseSquared);
-            const std::complex<double> travel(0.0, k * observationPoint - omega * time);
-            total += weight * std::exp(travel) * step;
-        }
-        return std::abs(total);
     }
 
     double PacketSimulation::measuredArrival(double observationPoint,
@@ -211,8 +31,9 @@ namespace slm
         double from = expected - 6.0;
         double to = expected + 6.0;
         double best = 0.5 * (from + to);
-        const Harmonics built = harmonics(observationPoint, kind, c, mu, transverseSquared,
-                                          thickness, centre, spread, samples, phaseOnly);
+        const WavePacketField::Harmonics built =
+            WavePacketField::harmonics(observationPoint, kind, c, mu, transverseSquared,
+                                       thickness, centre, spread, samples, phaseOnly);
         for (int pass = 0; pass < 6; ++pass)
         {
             const int steps = 600;
@@ -220,7 +41,7 @@ namespace slm
             for (int i = 0; i <= steps; ++i)
             {
                 const double t = from + (to - from) * i / steps;
-                const double value = envelopeOf(built, t);
+                const double value = WavePacketField::envelopeOf(built, t);
                 if (value > bestValue)
                 {
                     bestValue = value;
@@ -251,8 +72,8 @@ namespace slm
             for (int i = 0; i <= steps; ++i)
             {
                 const double t = from + (to - from) * i / steps;
-                const double value = freeEnvelope(t, observationPoint, c, mu, transverseSquared,
-                                                  centre, spread, samples);
+                const double value = WavePacketField::freeEnvelope(
+                    t, observationPoint, c, mu, transverseSquared, centre, spread, samples);
                 if (value > bestValue)
                 {
                     bestValue = value;
@@ -337,40 +158,6 @@ namespace slm
         return std::abs(thick - thicker) <= tolerance * std::abs(thick);
     }
 
-    double PacketSimulation::roundTripEnvelope(double time, IntermediateRegion::Kind kind,
-                                               double c, double mu, double transverseSquared,
-                                               double thickness, double farSideDistance,
-                                               int branch, double centre, double spread,
-                                               int samples, bool phaseOnly)
-    {
-        const double floorFrequency =
-            lowestPropagatingFrequency(c, mu, transverseSquared) + 1e-3;
-        const double low = std::max(centre - kBandwidths * spread, floorFrequency);
-        const double high = centre + kBandwidths * spread;
-        const double step = (high - low) / samples;
-        const double sign = branch > 0 ? 1.0 : -1.0;
-        std::complex<double> total(0.0, 0.0);
-        for (int i = 0; i < samples; ++i)
-        {
-            const double omega = low + (i + 0.5) * step;
-            if (omega <= 0.0)
-            {
-                continue;
-            }
-            const double weight = spectrum(omega, centre, spread);
-            std::complex<double> crossing =
-                TwoCrossings::amplitude(kind, omega, c, mu, transverseSquared, thickness);
-            if (phaseOnly)
-            {
-                crossing = std::polar(1.0, std::arg(crossing));
-            }
-            const std::complex<double> farSide(0.0, sign * omega * farSideDistance);
-            const std::complex<double> observed(0.0, -omega * time);
-            total += weight * crossing * std::exp(farSide) * std::exp(observed) * step;
-        }
-        return std::abs(total);
-    }
-
     double PacketSimulation::searchedReturnMoment(IntermediateRegion::Kind kind, double c,
                                                   double mu, double transverseSquared,
                                                   double thickness, double farSideDistance,
@@ -381,8 +168,8 @@ namespace slm
         double to = 3.0 * farSideDistance + 20.0;
         double best = 0.0;
         const double sign = branch > 0 ? 1.0 : -1.0;
-        const Harmonics built = roundTripHarmonics(kind, c, mu, transverseSquared, thickness,
-                                                   centre, spread, samples, phaseOnly);
+        const WavePacketField::Harmonics built = WavePacketField::roundTripHarmonics(
+            kind, c, mu, transverseSquared, thickness, centre, spread, samples, phaseOnly);
         for (int pass = 0; pass < 4; ++pass)
         {
             const int steps = 200;
@@ -390,7 +177,7 @@ namespace slm
             for (int i = 0; i <= steps; ++i)
             {
                 const double t = from + (to - from) * i / steps;
-                const double value = envelopeOf(built, t - sign * farSideDistance);
+                const double value = WavePacketField::envelopeOf(built, t - sign * farSideDistance);
                 if (value > bestValue)
                 {
                     bestValue = value;
@@ -412,12 +199,12 @@ namespace slm
         const double sign = branch > 0 ? 1.0 : -1.0;
         for (double time : {-2.0, 0.0, 1.5, 4.0})
         {
-            const double displaced =
-                roundTripEnvelope(time, kind, c, mu, transverseSquared, thickness,
-                                  farSideDistance, branch, centre, spread, samples, false);
-            const double shifted =
-                roundTripEnvelope(time - sign * farSideDistance, kind, c, mu, transverseSquared,
-                                  thickness, 0.0, branch, centre, spread, samples, false);
+            const double displaced = WavePacketField::roundTripEnvelope(
+                time, kind, c, mu, transverseSquared, thickness, farSideDistance, branch, centre,
+                spread, samples, false);
+            const double shifted = WavePacketField::roundTripEnvelope(
+                time - sign * farSideDistance, kind, c, mu, transverseSquared, thickness, 0.0,
+                branch, centre, spread, samples, false);
             if (std::abs(displaced - shifted) > tolerance * std::max(1.0, std::abs(shifted)))
             {
                 return false;
@@ -495,19 +282,18 @@ namespace slm
         report.check("the packet is summed over frequencies, each multiplied by the "
                      "amplitude the two crossings impose and by free propagation to the "
                      "observation point, and the arrival is where the envelope peaks",
-                     PacketSimulation::transmittedEnvelope(60.0, point, kind, c, mu, transverse,
-                                                            8.0, centre, spread, samples,
-                                                            false) > 0.0);
+                     WavePacketField::transmittedEnvelope(60.0, point, kind, c, mu, transverse,
+                                                           8.0, centre, spread, samples,
+                                                           false) > 0.0);
         report.check("no delay formula enters the measurement: the stationary phase "
                      "condition is not imposed but left to emerge or to fail",
-                     PacketSimulation::freeEnvelope(60.0, point, c, mu, transverse, centre,
-                                                     spread, samples) > 0.0);
+                     WavePacketField::freeEnvelope(60.0, point, c, mu, transverse, centre,
+                                                    spread, samples) > 0.0);
         report.check(std::format("  the band is clipped at {:.4f}, below which the outside "
                                  "wavenumber is imaginary and a component never reaches the "
                                  "detector",
-                                 PacketSimulation::lowestPropagatingFrequency(c, mu,
-                                                                              transverse)),
-                     centre > PacketSimulation::lowestPropagatingFrequency(c, mu, transverse));
+                                 WavePacketField::lowestPropagatingFrequency(c, mu, transverse)),
+                     centre > WavePacketField::lowestPropagatingFrequency(c, mu, transverse));
 
         report.subsection("The delay, measured from the phase the region imposes");
         for (double thickness : {4.0, 8.0, 16.0})

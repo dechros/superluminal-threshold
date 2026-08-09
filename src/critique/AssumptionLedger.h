@@ -1,6 +1,7 @@
 #pragma once
 
 #include "core/Section.h"
+#include "critique/DocumentIntegrity.h"
 
 #include <string>
 #include <vector>
@@ -47,44 +48,6 @@ namespace slm
 
         /// Contents of the text, empty when it cannot be read.
         static std::string text();
-
-        /// Number of control characters in the text other than the line break.
-        ///
-        /// A tool that edits the text through a language with backslash escapes
-        /// can turn a markup macro into the control character its escape names,
-        /// silently and without changing the length of the line. The damage
-        /// survives review because the rendered output merely loses a symbol.
-        /// Counting them costs nothing and turns that class of accident into a
-        /// failure.
-        static int controlCharacters(const std::string &text);
-
-        /// Lines ending in a lone backslash, which is a macro cut in half.
-        ///
-        /// The count above sees every escape except one. A backslash followed by
-        /// the letter n names the line break itself, so a macro beginning with
-        /// that letter does not become a control character: it becomes a real
-        /// line break, and the rest of the macro becomes prose at the start of
-        /// the next line. Nothing about the file then looks wrong, and no reader
-        /// of the source sees a defect. What it leaves behind is always the same
-        /// shape: a line whose last character is a single backslash.
-        static std::vector<int> splitMacros(const std::string &text);
-
-        /// Whether the text opens with a title at the top level.
-        ///
-        /// A rewrite that rebuilds the document from its blocks can drop the
-        /// block that was never numbered, and every check keyed on numbers will
-        /// still pass. This one is keyed on the thing that has no number.
-        static bool carriesTitle(const std::string &text);
-
-        /// Section identifiers the text refers to as belonging to its appendix,
-        /// that are not in fact placed there.
-        ///
-        /// A reference that resolves is not thereby correct. A rewrite that
-        /// applies a mapping twice leaves every reference pointing at some
-        /// section, just not the intended one, and an existence check passes.
-        /// This one is stronger where it can be: a reference announced as an
-        /// appendix must land after the heading that opens the appendix.
-        static std::vector<std::string> appendixReferencesOutsideIt(const std::string &text);
 
         /// Dispositions the text declares as permissible.
         static std::vector<std::string> vocabulary(const std::string &text);

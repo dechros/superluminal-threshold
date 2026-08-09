@@ -4,6 +4,7 @@
 #include "core/Report.h"
 #include "experiment/RoundTripExperiment.h"
 #include "identity/RoundTripInvariants.h"
+#include "identity/ThresholdSensitivity.h"
 #include "intermediate/IntermediateRegion.h"
 #include "routes/ThreeRoutes.h"
 #include "units/PhysicalScales.h"
@@ -96,9 +97,9 @@ namespace slm
 
         return {
             {"the mass ceiling",
-             RoundTripInvariants::largestAdmissibleMass(1.0, 4.0, 2.8), "3{,}84"},
+             ThresholdSensitivity::largestAdmissibleMass(1.0, 4.0, 2.8), "3{,}84"},
             {"the widest admissible band",
-             RoundTripInvariants::largestAdmissibleExtent(1.0, 1.0, 4.0, 2.8, 5.0), "0{,}1128"},
+             ThresholdSensitivity::largestAdmissibleExtent(1.0, 1.0, 4.0, 2.8, 5.0), "0{,}1128"},
             {"the round trip price",
              ThreeRoutes::roundTripReading(ThreeRoutes::Route::Wave, kind, 2.8, 1.0, 1.0, 4.0,
                                            8.0),
