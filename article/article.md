@@ -4174,44 +4174,14 @@ koordinatın ne anlama geleceğini de kurmaz; ikisini literatür de
 kurmamıştır (yukarıdaki tarama). Bu sınamanın verdiği şey dardır: bu
 projenin kendi tek-parçacık eşlemesi, kütle farkına karşı katı değildir.
 
-### 21.2.10 Katı dörtyüzlünün şekli
-
-Bu bölüm dört uydu kütleyi düzgün bir dörtyüzlünün köşe yönlerine, bir merkez
-kütleyi de ayrı bir referans yöne yerleştirir. Hiçbir bağ uzunluğu kullanmaz;
-bir uzunluğu yönelim açısına çeviren bir kural bu projede de literatürde de
-yoktur. Yalnızca yönü taşır, uzunluğu ise her kütle için kütle kabuğu ayrı
-ayrı belirler.
-
-Uydu kütlesi hidrojen atomunun kütlesidir, $\mu = 1{,}000545$; merkez kütle
-karbon-12'dir, $\mu = 11{,}913313$. Makalenin geri kalanının kullandığı
-sürücü, $\omega = 2{,}8$, karbonu taşıyamaz, çünkü $2{,}8^2 = 7{,}84$
-karbonun $\mu$'sünün altındadır. Bu bölüm bu yüzden sürücüyü $\omega = 4$'e
-yükseltir ve bunu açıkça belirtir.
-
-Dört uydu, aynı $\omega$'da, aynı dalla, dörtyüzlünün dört köşe yönüyle
-eşlemeden geçince dördü de **aynı** anda döner: $t = 1{,}847588$. Bu,
-dörtyüzlünün simetrisinin bir sonucudur, çünkü dört yön de dış normal
-bileşende ($\kappa$) ve enine bileşende ($k_T$) aynı büyüklüğü taşır. Enine
-varış noktaları ise $(\pm 0{,}009991, \pm 0{,}009991)$ bir kare biçimi çizer.
-Merkez kütle ise çok farklı bir anda döner, $t = 31{,}658789$.
-
-Dört uydunun dönüş olaylarını üç bileşenli bir vektör olarak alıp (dönüş anı,
-birinci enine, ikinci enine) aralarındaki açıyı ölçmek, açının korunmadığını
-gösterir. Fırlatmada altı çift de $109{,}47°$'dir; dönüşte altı açı
-$0{,}62°$ ile $0{,}88°$ arasında değişir, hem birbirinden farklı hem de
-fırlatma açısının yüzde birinden küçük. Sebep, dönüş anının enine yer
-değiştirmeden yaklaşık $185$ kat büyük kalmasıdır: bu ortak büyük değer dönüş
-vektörünü baskın biçimde tek bir yöne yaklaştırır, ve dörtyüzlünün açısal
-şeklini hiçbir ortak ölçek taşımaz.
-
-**Bunun gösterdiği ve göstermediği.** Dört köşe yönü düzgün bir dörtyüzlünün
-birim vektörleridir, hiçbir uzunluk taşımaz. Bu hesap gerçek bir metan
-molekülünün bağ uzunluğunu hiçbir yerde kullanmaz. Merkez kütle bağ yönü
-değil referans yön alır, çünkü merkez kütlenin ağırlık merkezine göre yer
-değiştirmesi dörtyüzlünün simetriyle sıfırdır. Bu proje hiçbir yerde kuvvet,
-potansiyel ya da bağ dinamiği taşımaz; burada çıkan düzleşme bu projenin
-kendi tek parçacık eşlemesinin beş kez çağrılmasının bir özelliğidir,
-çözülmüş bir beş cisim yörüngesi değildir.
+Bu tanımı üç ya da daha çok kütleye, gerçek bir 3D moleküle taşımanın
+gerekçeli bir yolu yoktur. Her kütleye kendi molekül içi konumuna göre ayrı
+bir yönelim vermek, konumu yönelime çeviren bir kural ister. Böyle bir kural
+ne bu projede ne literatürde vardır: Bölüm 3'ün eksen karşılığı tek bir
+parçacığın kendi hızını taşır, bir yapı içindeki konumu değil. Katı bir
+öteleme tek yönelimi bütün kütlelere paylaştırır. O durumda aynı kütleli her
+atom zaten aynı olaya gider, yalnızca farklı kütle ayrı kalır. Bu da
+yukarıdaki proton-elektron bulgusunun bir tekrarından başka bir şey vermez.
 
 ### 21.3 Simülasyondan okuma
 

@@ -26,7 +26,6 @@
 #include "particle/FarSideMotion.h"
 #include "particle/ReturnEvent.h"
 #include "particle/ReturnFormula.h"
-#include "particle/RigidMolecule.h"
 #include "particle/RoundTrip.h"
 #include "particle/TimeProjection.h"
 #include "particle/WavePacket.h"
@@ -93,7 +92,6 @@ namespace
         sections.push_back(std::make_unique<slm::TimeProjectionSection>());
         sections.push_back(std::make_unique<slm::ReturnEventSection>());
         sections.push_back(std::make_unique<slm::BoundPairSection>());
-        sections.push_back(std::make_unique<slm::RigidMoleculeSection>());
         sections.push_back(std::make_unique<slm::ReturnFormulaSection>());
         return sections;
     }
