@@ -4348,8 +4348,27 @@ engellere takılabilir ([27], [28]).
 **Yanıt.** Bu çalışmanın bütün hesapları skaler alan üzerinde yürümektedir, ve
 kütle yalnızca $\mu = (mc/\hbar)^2$ parametresi olarak girmektedir. Bölüm 4'ün
 taraması da yalnızca vektör temsilinde yapılmıştır; $D$'nin spinor
-temsilindeki karşılığı sorulmamıştır. Aritmetik değişmez, ancak hangi
-parçacığın gönderilebileceği açık kalmaktadır. İtiraz **karşılanmamıştır**.
+temsilindeki karşılığı bu bölüm doğrudan kurmakta ve sınamaktadır.
+
+Bu bölüm her üç imza için standart Dirac matrisleriyle bir gamma kümesi
+kurmakta, ve Clifford bağıntısı $\{\gamma^\mu, \gamma^\nu\} = 2\eta^{\mu\nu}$'yı
+her üçünde ayrı ayrı doğrulamaktadır. Sonra her kümeyi kendi karmaşık
+eşleniğine bağlayan bir matrisi on altı elemanlı Clifford tabanında
+aramaktadır. Böyle bir matrisin varlığı ve karesinin verdiği işaret, temsili
+iki sınıftan birine koyar: **gerçel** sınıf Majorana koşulunu tek başına
+taşır, **simplektik** sınıf onu yalnızca çift sayıda kopyayla taşır.
+Sınıflandırmadaki serbest işareti bilinen bir olgu sabitler: Bölge I'in olağan
+üç eksi bir artı imzası gerçel çıkar.
+
+Bu sabitlemeyle Bölge I ile Kleinian ara bölge aynı sınıfa düşmekte, Bölge II
+ise yalnızca simplektik sınıfta kalmaktadır. Yani Bölge I'in kurduğu bir
+Majorana koşulunun Bölge II'de karşılığı yoktur.
+
+Bu hesabın sınırı da nettir: temsilin gerçeklik sınıfını verir, çatı demetinin
+eşikte dejenere olan bir metrik üzerinden spin yapısı taşıyıp taşımadığını
+vermez; o soru [27] ile [28]'in konusu olarak kalır. İtiraz bu nedenle **kısmen
+karşılanmıştır**: taşınan nesne bir Dirac fermiyonuysa bu hesaptan bir engel
+çıkmaz, Bölge I'deki hâliyle bir Majorana fermiyonuysa engel doğrudan çıkar.
 
 ### 22.11 Karşılanmış sayılan iki itiraz
 

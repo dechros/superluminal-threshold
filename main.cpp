@@ -33,6 +33,7 @@
 #include "sim/PacketSimulation.h"
 #include "critique/AssumptionLedger.h"
 #include "transform/SignatureInvolution.h"
+#include "transform/SpinRepresentation.h"
 #include "units/PhysicalScales.h"
 #include "experiment/RoundTripExperiment.h"
 #include "units/ProtonJourney.h"
@@ -50,6 +51,7 @@ namespace
     {
         std::vector<std::unique_ptr<slm::Section>> sections;
         sections.push_back(std::make_unique<slm::SignatureInvolution>());
+        sections.push_back(std::make_unique<slm::SpinRepresentation>());
         sections.push_back(std::make_unique<slm::IntermediateRegionSection>());
         sections.push_back(std::make_unique<slm::PermutationScan>());
         sections.push_back(std::make_unique<slm::ProfiledBarrierSection>());
