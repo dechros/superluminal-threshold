@@ -47,6 +47,10 @@ namespace slm
         /// electron, less the mass equivalent of the energy that binds them.
         static double hydrogenAtomMass();
 
+        /// Rest mass of a carbon-12 atom, twelve unified atomic mass units
+        /// exactly by the definition of the unit.
+        static double carbonMass();
+
         /// Energy quantum of a drive at the given angular frequency, in joules.
         static double driveQuantum(double angularFrequency);
 
