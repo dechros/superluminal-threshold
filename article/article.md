@@ -4089,6 +4089,51 @@ tetikleyiciden ibarettir. Dolayısıyla deney tarif edilmiştir ama
 gerçekleştirilebilir değildir, ve ikisinin arasında duran şey uzun bir liste
 değil, tek bir şart üzerindeki tek bir sayıdır.
 
+### 21.2.8 Bağlı bir durum, hidrojen atomu
+
+Bu çalışmanın bütün geçiş hesabı taşınan nesneyi tek bir kütleyle temsil eder,
+ve o kütle hesaba yalnızca bir yerde girer: Bölüm 11.7'nin tavanı. Tavanın
+ötesinde nesnenin ne olduğu bir daha okunmaz. Bu bölüm o tek girişi bir proton
+yerine bir hidrojen atomuyla, yani bir elektronla bağlı bir protonla,
+sınamıştır.
+
+Hidrojen atomunun durgun kütlesini proton ile elektronun kütleleri
+toplamından bağlanma enerjisinin kütle karşılığını çıkarmak verir:
+$1{,}672622 \times 10^{-27}$ kg artı $9{,}109384 \times 10^{-31}$ kg eksi
+$2{,}424141 \times 10^{-35}$ kg. Elektronun payı protona göre bağıl
+$5{,}4462 \times 10^{-4}$, bağlanma enerjisininki ise $1{,}4493 \times
+10^{-8}$'dir, yani dört basamak daha küçüktür. Atomun ağırlığını neredeyse
+tamamen elektron taşır, bağlanma enerjisinin kendisi bu çalışmanın kullandığı
+basamak sayısında hiç iz bırakmaz.
+
+Aynı ölçütle protonun ve atomun tavanı karşılaştırılabilir. Protonun bant
+tavanı $1{,}4255 \times 10^{24}$ rad/s'dir, Bölüm 21.2.1'in verdiği sayı;
+atomun tavanı $1{,}4263 \times 10^{24}$ rad/s'e çıkar, artış elektronun
+payına eşit mertebede kalır. Bölüm 21.2.2 ile 21.2.7'nin sınadığı sürücü,
+$1{,}5 \times 10^{24}$ rad/s, ikisini de aşar.
+
+Tavan aşıldıktan sonra geçişin geri kalanı sürücüye ve mesafeye bakar, taşınan
+nesneye bakmaz: Bölüm 21.2.1'in kullandığı hesap kütleyi hiç girdi olarak
+almaz. Bu yüzden aynı sürücüyle, aynı mesafeyle kurulan gidiş dönüş, hidrojen
+atomu için de protonunkiyle **aynı** sayıları verir: borç $5{,}4614 \times
+10^{-24}$ s, varış fırlatıştan $1{,}0007$ nanosaniye önce. Tavanı aşan her
+nesne bu hesapta aynı yolculuğu yapar, çünkü hesap tavanın ötesinde nesnenin
+ne olduğunu bir daha sormaz.
+
+**Bu eşitliğin gösterdiği şey dardır.** Model taşınan nesneyi tavanın
+ötesinde tek bir kütle olarak taşır, ve elektronla protonun bağıl konumunu
+hiçbir yerde temsil etmez. Dolayısıyla dönen atomun elektronu hâlâ taşıyıp
+taşımadığı, yani aynı moleküler bağla dönüp dönmediği, bu hesabın konusu
+değildir; hesap o soruyu hiç sormaz.
+
+Bölge II'de sorunun bir katmanı daha vardır. Bölüm 11.5 orada "konum"
+kavramının tek uzay ekseni $r$'ye daraldığını, üç zaman yönü boyunca hiçbir
+karşılığı kalmadığını yazar; Bölüm 18.9 de aynı daralmayı teyit etmiştir. Üç
+boyutlu bir elektron bulutunun bu tek eksende neye karşılık geldiği bu
+çalışmanın sormadığı bir sorudur, çünkü bağıl koordinatın üç zaman bir uzay
+imzasındaki dinamiği literatürde de kurulmuş değildir. Bu çalışma o dinamiği
+icat etmemiştir; soru açık kalmıştır.
+
 ### 21.3 Simülasyondan okuma
 
 Bu çalışmadaki her gecikme **tek bir yoldan** gelmektedir: fazın frekansa göre

@@ -16,6 +16,7 @@ namespace slm
         constexpr double kElectronMass = 9.1093837015e-31;
         constexpr double kProtonMass = 1.67262192369e-27;
         constexpr double kSecondsPerYear = 3.155695e7;
+        constexpr double kHydrogenBindingEnergyEv = 13.598434;
     }
 
     double PhysicalScales::lightSpeed() { return kLightSpeed; }
@@ -23,6 +24,16 @@ namespace slm
     double PhysicalScales::elementaryCharge() { return kElementaryCharge; }
     double PhysicalScales::electronMass() { return kElectronMass; }
     double PhysicalScales::protonMass() { return kProtonMass; }
+
+    double PhysicalScales::hydrogenBindingEnergyJoules()
+    {
+        return kHydrogenBindingEnergyEv * kElementaryCharge;
+    }
+
+    double PhysicalScales::hydrogenAtomMass()
+    {
+        return kProtonMass + kElectronMass - hydrogenBindingEnergyJoules() / (kLightSpeed * kLightSpeed);
+    }
 
     double PhysicalScales::driveQuantum(double angularFrequency)
     {

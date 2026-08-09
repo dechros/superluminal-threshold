@@ -39,6 +39,14 @@ namespace slm
         static double electronMass();
         static double protonMass();
 
+        /// Ground-state binding energy of hydrogen, in joules. A fixed
+        /// textbook constant, not something this project derives.
+        static double hydrogenBindingEnergyJoules();
+
+        /// Rest mass of a ground-state hydrogen atom: the proton and the
+        /// electron, less the mass equivalent of the energy that binds them.
+        static double hydrogenAtomMass();
+
         /// Energy quantum of a drive at the given angular frequency, in joules.
         static double driveQuantum(double angularFrequency);
 

@@ -36,6 +36,7 @@
 #include "transform/SpinRepresentation.h"
 #include "units/PhysicalScales.h"
 #include "experiment/RoundTripExperiment.h"
+#include "units/AtomJourney.h"
 #include "units/ProtonJourney.h"
 #include "units/SignatureThreshold.h"
 #include "units/ThresholdScaling.h"
@@ -83,6 +84,7 @@ namespace
         sections.push_back(std::make_unique<slm::CrossingAdmissionSection>());
         sections.push_back(std::make_unique<slm::PhysicalScalesSection>());
         sections.push_back(std::make_unique<slm::ProtonJourneySection>());
+        sections.push_back(std::make_unique<slm::AtomJourneySection>());
         sections.push_back(std::make_unique<slm::SignatureThresholdSection>());
         sections.push_back(std::make_unique<slm::ThresholdScalingSection>());
         sections.push_back(std::make_unique<slm::RoundTripExperimentSection>());
