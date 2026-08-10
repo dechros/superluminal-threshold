@@ -17,8 +17,8 @@ namespace slm
         {
         case Character::FreeMotion:
             return "free motion";
-        case Character::ForcedFlow:
-            return "forced flow";
+        case Character::Directed:
+            return "directed";
         default:
             return "orientation only";
         }
@@ -76,12 +76,12 @@ namespace slm
 
     TimeProjection::Character TimeProjection::farSideCharacter(int slot)
     {
-        return isTimelike(true, slot) ? Character::FreeMotion : Character::ForcedFlow;
+        return isTimelike(true, slot) ? Character::FreeMotion : Character::Directed;
     }
 
     TimeProjection::Character TimeProjection::nearCharacter(int slot)
     {
-        return isTimelike(false, slot) ? Character::ForcedFlow : Character::FreeMotion;
+        return isTimelike(false, slot) ? Character::Directed : Character::FreeMotion;
     }
 
     TimeProjection::Four TimeProjection::toNearCoordinates(const Four &farSide)
@@ -174,11 +174,12 @@ namespace slm
                      TimeProjection::farSideCharacter(0) == Character::FreeMotion &&
                          TimeProjection::nearCharacter(TimeProjection::imageSlot(0)) ==
                              Character::FreeMotion);
-        report.check("the one-way coordinate is in mirror places: the near-side time is "
-                     "the far side's single space axis, and neither can be steered",
-                     TimeProjection::nearCharacter(0) == Character::ForcedFlow &&
+        report.check("the directed coordinate is in mirror places: the near-side time is "
+                     "the far side's single space axis, and both split into two senses "
+                     "that no rotation connects",
+                     TimeProjection::nearCharacter(0) == Character::Directed &&
                          TimeProjection::farSideCharacter(TimeProjection::farSideSpaceSlot()) ==
-                             Character::ForcedFlow &&
+                             Character::Directed &&
                          TimeProjection::imageSlot(TimeProjection::farSideSpaceSlot()) == 0);
 
         report.subsection("Moving in the far-side times does not move the near-side time directly");
