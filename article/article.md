@@ -107,6 +107,13 @@ $\pi/2$'den geriye doğru okunduğunda, yani $\pi/2$ ile açının farkı
 alındığında, sıfıra düşen ikinci bir yörünge verir; ikinci yörünge
 birincisiyle aynı yörünge parametresinde sıfıra ulaşmıştır.
 
+**Kuvvetin kaynağı.** $F$'nin kendisi bu çalışmada türetilmez, önesürülür.
+İki zamanlı fizik yazınının etkileşimli alan kuramları, aynı kısıta tam bu
+türden doğrusal bir terim ekleyerek arka plan alanlarını tanımlamaktadır
+[6]. Kuvvetin bu tür bir arka plan alanından geldiği varsayılır; hangi alan
+olduğu, alanın kendi denklemi ve kaynağı ayrı birer sorudur ve bu çalışmanın
+kapsamı dışında kalır.
+
 ## 4. İkinci bölgeye geçiş
 
 Eşik açısı $\pi/2$'ye ulaştığında parçacık ikinci bölgededir. İkinci
@@ -198,12 +205,17 @@ hiçbir dosya ya da sınıf adı anmaz, kod da hiçbir bölüm ya da kaynak numa
 anmaz; bağ çalışma zamanında, makale metnini okuyan ayrı bir denetimle
 kurulmaktadır.
 
-Deney düzeyinde şu tahmin öne sürülür: parçacık ikinci bölgede bir $O(3)$
-dönmesi geçirip geri dönerse, birinci bölgede aynı enerjiyle, aynı süratle,
-ama farklı bir yöne bakarak görünür. Sapma açıları sürekli bir aralıktan
-değil, modelin kendi yapısından çıkan ayrık bir kümeden gelmektedir. Bu
-tahmin kavramsal düzeyde kalır; hangi düzenekle sınanabileceği bu çalışmanın
-kapsamı dışındadır.
+Doğrudan bir sınama tek bir sayıya dayanır: bir metrelik bir geçiş, dönüşü
+$3{,}34\times 10^{-9}$ saniye öne çekmektedir (Bölüm 7). Bu büyüklükteki bir
+zaman farkı, bugünkü en hassas atom saatleriyle prensipte ölçülebilir bir
+aralıktadır [7]; ölçümün önündeki engel hassasiyet değildir. Önündeki engel,
+3.3'ün önesürdüğü $F$ kuvvetinin nasıl üretileceğidir. Bu çalışma o üretimi
+kurmaz, yalnızca üretilirse dönüş anında ne okunacağını hesaplar.
+
+İkincil bir iz de vardır: parçacık ikinci bölgede bir $O(3)$ dönmesi geçirip
+geri dönerse, birinci bölgede aynı enerjiyle, aynı süratle, ama farklı bir
+yöne bakarak görünür (Bölüm 6). Bu iz kavramsal düzeyde kalır; sapmanın
+büyüklüğünü veren bir hesap bu çalışmada kurulmamıştır.
 
 **Hüküm sözlüğü.**
 
@@ -216,7 +228,7 @@ kapsamı dışındadır.
 
 | Bölüm | Ne varsayılıyor | Hüküm | Nerede kapandı |
 | ----- | ---------------------------------------------------------- | ---------------------------- | -------------------------------------------------- |
-| 3.3 | Kısıtlı Hamiltonyen mekaniğinin ayar simetrisi yerine standart yolu | ilan edilmiş sınırlama | Bölüm 3.3'ün kendisi, sonucu metinde yazılıdır |
+| 3.3 | Kısıtlı Hamiltonyen mekaniğinin ayar simetrisi yerine standart yolu, ve $F$'nin bir arka plan alanından geldiği | ilan edilmiş sınırlama | Bölüm 3.3'ün kendisi, sonucu metinde yazılıdır |
 | 8 | Yok; pasaj hangi varsayımların değil, doğrulamanın nasıl kurulduğunun anlatılması | varsayım değil, söz ediliyor | Doğrulamanın kendisi, bu bölüm onu belgeler |
 
 ## Kaynakça
@@ -231,3 +243,7 @@ kapsamı dışındadır.
    (1974) 209.
 5. I. Bars. *Two-time physics with gravitational and gauge field backgrounds*.
    Phys. Rev. D **62** (2000) 105018. arXiv:hep-th/0002140
+6. I. Bars, Y.-C. Kuo. *Interacting two-time physics field theory with a BRST
+   gauge invariant action*. arXiv:hep-th/0605267
+7. A. D. Ludlow, M. M. Boyd, J. Ye, E. Peik, P. O. Schmidt. *Optical atomic
+   clocks*. Rev. Mod. Phys. **87** (2015) 637.
