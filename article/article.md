@@ -1170,11 +1170,12 @@ değerinde bu sınama artığı $10^{-9}$ altında bulur. Önceki bölümlerin
 olduğu sürece parçacık her hedefe ulaşır, ne bir yansıma ne bir eşik vardır.
 
 **Saate düşen fark.** Ulaşılan $s$, geri kalan üç eksende hiçbir iz bırakmaz.
-Bölüm 4.1.1'in sözlüğü doğrudan uygulandığında, $s$ kadar saf bir $r$ yer
-değiştirmesi Bölge I saatinde tam $s$'ye eşit bir farka düşer ve öteki üç
-koordinata hiç dokunmaz. Bir metrelik hedef, saatte $3{,}3356\times 10^{-9}$
-saniyelik bir farka karşılık gelir; Özet'in verdiği sayının aynısı, şimdi
-kütleden ve enerji vektöründen bağımsız, gerekçeli bir dinamikten çıkmaktadır.
+Bölüm 4.1.1'in sözlüğü bunu doğrudan verir. Saf bir $r$ yer değiştirmesi, $s$
+büyüklüğünde, dönüş anını kalkış anına tam $s$ kadar yaklaştırır; bu işaret
+Bölüm 1.2'nin seçtiği geri taşıyan aileyle aynıdır. Öteki üç koordinata hiç
+dokunmaz. Bir metrelik hedef, dönüşü $3{,}3356\times 10^{-9}$ saniye öne çeken
+bir farka karşılık gelir; Özet'in verdiği sayının aynısı, şimdi kütleden ve
+enerji vektöründen bağımsız, gerekçeli bir dinamikten çıkmaktadır.
 
 **Bu bölümün kurmadığı şey.** Kuvvetin kendisini üreten fiziksel düzenek bu
 çalışmanın kapsamı dışında kalır. Yörünge parametresi $\sigma$'nun Bölge

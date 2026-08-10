@@ -1,6 +1,7 @@
 #include "charge/ChargedCurrent.h"
 #include "particle/AcceleratedCrossing.h"
 #include "particle/AsymmetricFaces.h"
+#include "scan/DirectionFamily.h"
 #include "scan/PermutationScan.h"
 #include "core/Report.h"
 #include "core/Section.h"
@@ -29,6 +30,7 @@ namespace
         sections.push_back(std::make_unique<slm::SpinRepresentation>());
         sections.push_back(std::make_unique<slm::IntermediateRegionSection>());
         sections.push_back(std::make_unique<slm::PermutationScan>());
+        sections.push_back(std::make_unique<slm::DirectionFamily>());
         sections.push_back(std::make_unique<slm::AsymmetricFacesSection>());
         sections.push_back(std::make_unique<slm::TimeOrientationSection>());
         sections.push_back(std::make_unique<slm::DispersionSection>());

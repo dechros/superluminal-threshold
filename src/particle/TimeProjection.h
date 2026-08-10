@@ -11,12 +11,20 @@ namespace slm
     /// What each coordinate on the far side becomes here, and how many
     /// dimensions of its own character it shares that role with.
     ///
-    /// The two metrics are diag(1,-1,-1,-1) and diag(1,1,1,-1), and the
-    /// involution sends (ct, x, y, z) to (z, y, x, ct). Reading that off slot
-    /// by slot gives the dictionary this class computes rather than asserts:
-    /// the three positive slots beyond the threshold are times and they carry
-    /// the near side's three space directions, while the one negative slot there is a
-    /// space direction and it carries the near-side time.
+    /// The two metrics are diag(1,-1,-1,-1) and diag(1,1,1,-1). Two
+    /// self-inverse maps carry one to the negative of the other: a plain
+    /// axis swap, and that same swap with the sign flipped on the pair of
+    /// slots the near-side time and the far-side space axis occupy. Both
+    /// pass every structural test available (the metric relation,
+    /// involution, unit determinant), and nothing in those tests picks
+    /// between them; this class computes on the one whose sign the study's
+    /// results are stated in. Reading either off slot by slot gives the
+    /// same dictionary for which coordinate carries which: the three
+    /// positive slots beyond the threshold are times and they carry the
+    /// near side's three space directions, while the one negative slot
+    /// there is a space direction and it carries the near-side time. Only
+    /// the sign on that carried pair depends on which of the two maps is
+    /// used.
     ///
     /// A set of three same-signed axes admits a continuous rotation from any
     /// unit vector to its own negative, so no consistent split into two senses

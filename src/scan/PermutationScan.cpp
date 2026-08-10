@@ -44,30 +44,39 @@ namespace slm
         return found;
     }
 
+    std::vector<PermutationScan::Candidate> PermutationScan::admissible()
+    {
+        std::vector<Candidate> found;
+        for (const Candidate &candidate : metricPreserving())
+        {
+            const bool isInvolution = candidate.matrix.isInvolution();
+            const bool isUnitDet = std::abs(candidate.matrix.determinant() - 1.0) < kEps;
+            if (isInvolution && isUnitDet)
+            {
+                found.push_back(candidate);
+            }
+        }
+        return found;
+    }
+
     void PermutationScan::run(Report &report) const
     {
         const std::vector<Candidate> passing = metricPreserving();
 
         std::vector<Candidate> involutions;
         std::vector<Candidate> unitDet;
-        std::vector<Candidate> both;
         for (const Candidate &candidate : passing)
         {
-            const bool isInvolution = candidate.matrix.isInvolution();
-            const bool isUnitDet = std::abs(candidate.matrix.determinant() - 1.0) < kEps;
-            if (isInvolution)
+            if (candidate.matrix.isInvolution())
             {
                 involutions.push_back(candidate);
             }
-            if (isUnitDet)
+            if (std::abs(candidate.matrix.determinant() - 1.0) < kEps)
             {
                 unitDet.push_back(candidate);
             }
-            if (isInvolution && isUnitDet)
-            {
-                both.push_back(candidate);
-            }
         }
+        const std::vector<Candidate> both = admissible();
 
         report.subsection("Scan: 4! x 2^4 = 384 signed permutation matrices");
 
