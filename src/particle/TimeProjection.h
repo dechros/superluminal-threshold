@@ -1,7 +1,6 @@
 #pragma once
 
 #include "core/Section.h"
-#include "intermediate/IntermediateRegion.h"
 
 #include <array>
 #include <string>
@@ -25,11 +24,11 @@ namespace slm
     /// way the near side's three space directions are free.
     ///
     /// The question this leaves is whether an orientation among their three
-    /// times can move the time coordinate of the return event here. Directly it
-    /// cannot, because that orientation lands in the near-side space. Indirectly it can,
-    /// because the transverse components of the same vector enter the matching
-    /// at the two surfaces and therefore the phase the return moment is read
-    /// from. These functions separate the two routes and measure the second.
+    /// times can move the time coordinate of the return event here directly,
+    /// that is through the involution alone rather than through whatever
+    /// process reads a moment off the far-side state. These functions show
+    /// that it cannot: such an orientation lands in the near-side space, not
+    /// in the near-side time.
     class TimeProjection
     {
     public:
@@ -73,21 +72,6 @@ namespace slm
 
         /// The three far-side slots that are time-like.
         static std::array<int, 3> farSideTimeSlots();
-
-        /// Time coordinate of the return event for a given orientation of the
-        /// far-side energy vector, at fixed length.
-        static double returnTime(const Three &orientation, IntermediateRegion::Kind kind, double c,
-                                 double mu, double thickness);
-
-        /// Largest and smallest return time over the sphere of orientations at
-        /// fixed length, which is the range an orientation alone commands.
-        static double returnTimeRange(double length, IntermediateRegion::Kind kind, double c,
-                                      double mu, double thickness, int steps = 24);
-
-        /// Return time at the orientation pointing along the slot that carries
-        /// the near-side time under the involution.
-        static double returnTimeAlongNearTimeAxis(double length, IntermediateRegion::Kind kind,
-                                                 double c, double mu, double thickness);
 
         /// Whether a displacement purely within the three far-side times
         /// produces any displacement in the near-side time.
