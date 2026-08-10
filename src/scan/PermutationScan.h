@@ -29,6 +29,11 @@ namespace slm
         /// \return The surviving candidates, in scan order.
         static std::vector<Candidate> metricPreserving();
 
+        /// The candidates surviving all three filters: the metric relation,
+        /// involution, and unit determinant.
+        /// \return The eight surviving candidates, in scan order.
+        static std::vector<Candidate> admissible();
+
         std::string title() const override
         {
             return "Scan over the 384 signed permutation matrices";

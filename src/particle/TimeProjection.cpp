@@ -10,6 +10,14 @@
 
 namespace slm
 {
+    namespace
+    {
+        Matrix4 resultMatrix()
+        {
+            const Matrix4 s = Matrix4::diagonal(-1.0, 1.0, 1.0, -1.0);
+            return s * SignatureInvolution::matrix();
+        }
+    }
 
     std::string TimeProjection::name(Character character)
     {
@@ -32,7 +40,7 @@ namespace slm
 
     int TimeProjection::imageSlot(int farSideSlot)
     {
-        const Matrix4 d = SignatureInvolution::matrix();
+        const Matrix4 d = resultMatrix();
         for (int row = 0; row < 4; ++row)
         {
             if (std::abs(d.at(row, farSideSlot)) > 0.5)
@@ -86,7 +94,7 @@ namespace slm
 
     TimeProjection::Four TimeProjection::toNearCoordinates(const Four &farSide)
     {
-        const Matrix4 d = SignatureInvolution::matrix();
+        const Matrix4 d = resultMatrix();
         Four near{};
         for (int row = 0; row < 4; ++row)
         {

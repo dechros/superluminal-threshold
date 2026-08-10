@@ -120,8 +120,8 @@ namespace slm
         const TimeProjection::Four displacement{0.0, 0.0, 0.0, target};
         const TimeProjection::Four image = TimeProjection::toNearCoordinates(displacement);
         report.checkNear("  a pure r displacement of the target size lands entirely on the "
-                         "near-side clock, at the target value",
-                         image[0] - target, 1e-12);
+                         "near-side clock, at minus the target value",
+                         image[0] + target, 1e-12);
         report.checkNear("  and it leaves the three near-side space coordinates alone",
                          image[1] * image[1] + image[2] * image[2] + image[3] * image[3], 1e-24);
 
