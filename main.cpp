@@ -1,17 +1,14 @@
-#include "charge/ChargedCurrent.h"
 #include "particle/AcceleratedCrossing.h"
-#include "particle/AsymmetricFaces.h"
+#include "particle/ContinuousCrossing.h"
 #include "scan/DirectionFamily.h"
 #include "scan/PermutationScan.h"
 #include "core/Report.h"
 #include "core/Section.h"
 #include "dynamics/Dispersion.h"
-#include "field/TimeOrientation.h"
+#include "dynamics/ThresholdField.h"
 #include "intermediate/IntermediateRegion.h"
-#include "particle/ExitFace.h"
 #include "particle/TimeProjection.h"
 #include "transform/SignatureInvolution.h"
-#include "transform/SpinRepresentation.h"
 #include "units/PhysicalScales.h"
 
 #include <exception>
@@ -27,15 +24,12 @@ namespace
     {
         std::vector<std::unique_ptr<slm::Section>> sections;
         sections.push_back(std::make_unique<slm::SignatureInvolution>());
-        sections.push_back(std::make_unique<slm::SpinRepresentation>());
         sections.push_back(std::make_unique<slm::IntermediateRegionSection>());
         sections.push_back(std::make_unique<slm::PermutationScan>());
         sections.push_back(std::make_unique<slm::DirectionFamily>());
-        sections.push_back(std::make_unique<slm::AsymmetricFacesSection>());
-        sections.push_back(std::make_unique<slm::TimeOrientationSection>());
+        sections.push_back(std::make_unique<slm::ThresholdFieldSection>());
+        sections.push_back(std::make_unique<slm::ContinuousCrossingSection>());
         sections.push_back(std::make_unique<slm::DispersionSection>());
-        sections.push_back(std::make_unique<slm::ExitFaceSection>());
-        sections.push_back(std::make_unique<slm::ChargedCurrentSection>());
         sections.push_back(std::make_unique<slm::PhysicalScalesSection>());
         sections.push_back(std::make_unique<slm::TimeProjectionSection>());
         sections.push_back(std::make_unique<slm::AcceleratedCrossingSection>());
