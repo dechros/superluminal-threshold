@@ -834,8 +834,13 @@ Bölüm 8.1'de, rollerin karşılaştırması ise bu bölümde durmaktadır.
 | | Bölge I | Bölge II |
 | ---------------------- | ---------------- | ----------------------------- |
 | Serbest hareket | Uzayda, üç yönde | Üç zamanda serbestçe |
-| Tek yönlü zorunluluk | Zamanda | Tek uzay ekseninde |
+| İki bileşene ayrışan eksen | Zaman | Tek uzay ekseni |
 | $O(3)$ dönme simetrisi | Uzaysal | Zamansal |
+
+Ortadaki satır bir zorunluluk değil, bir **etiketleme imkânı** kaydeder: tek
+boyutlu bir eksen kendi negatifinden sürekli bir dönüşle ayrılamaz, bu yüzden
+iki tarafı ayrı ayrı adlandırılabilir kalır. Bölüm 7.3 bu satırın neyi
+söylemediğini açar.
 
 ### 7.3 Ayrım ve zorunluluk
 
@@ -1017,9 +1022,10 @@ birim adımın Bölge I saatinde ne ürettiği.
 Tablo iki sonucu birden verir. Dört yuvanın dördü de eşikte karakter değiştirir,
 yani hiçbiri türünü korumaz. Buna karşılık **hareket serbestliği yuva yuva
 aynı kalır**: parçacık Bölge II'nin üç zamanında serbestçe hareket eder, ve o üç
-zamanın taşıdığı Bölge I uzay yönlerinde de aynı serbestliği bulur. Aynı biçimde,
-Bölge II'nin tek uzay ekseninde yön seçemez, ve onun taşıdığı Bölge I zamanında da
-seçemez.
+zamanın taşıdığı Bölge I uzay yönlerinde de aynı serbestliği bulur. Bölge II'nin
+tek uzay ekseninde ise bu çalışmanın hesabı bir yön seçimi göstermez; kütle
+kabuğu yalnızca büyüklüğü sabitler (Bölüm 8.2), yönü sabitleyen ayrı bir
+mekanizma bu bölümün konusu değildir.
 
 **Üç zaman ekseninde hareket.** Bu eksenlerde hareket serbesttir, ama iki nedenle
 sonucu taşıyamaz. Birincisi, tümüyle bu üç eksenin içinde kalan bir yer
@@ -1050,12 +1056,12 @@ farklı bir eşlenik niceliği vardır.
 Çalışmanın sonucunu taşıyan eksen de budur. Parçacık bu eksende $s$ kadar
 ilerlerse Bölge I'in saati tam $s$ kadar kayar, çünkü katsayı bire eşittir ve
 diğer üç eksenin aynı yuvaya katkısı tam olarak sıfır kalır. Bunun ispatını
-Bölüm 4.1.1 verir; işaretin nereden geldiğini ve o eksende geri dönülememesinin
-bu sonuçla nasıl bir arada durduğunu ise Bölüm 1.2 yazar.
+Bölüm 4.1.1 verir; işaretin nereden geldiğini ise Bölüm 1.2 yazar.
 
 **Dört eksenin özeti.** Parçacık üç eksende serbestçe hareket eder, ama o üç
-eksen saate hiçbir şey taşımaz. Kalan tek eksende hareket serbest değildir, ama
-saate taşınan her şey bu dengesizlikten gelir. Yolculuğun tamamı bu dengesizlik üzerine
+eksen saate hiçbir şey taşımaz. Kalan tek eksen saate taşınan her şeyi tek
+başına taşır; bu eksendeki hareketin büyüklüğünü kütle kabuğu, yönünü ise
+ayrı bir mekanizma belirler. Yolculuğun tamamı bu dengesizlik üzerine
 kuruludur.
 
 ### 8.2 Dispersiyon ve grup hızı
@@ -1562,20 +1568,24 @@ saatinde ne ürettiğini Bölüm 8.1 tablo hâlinde vermişti, ve bu bölüm o t
 tekrarlamaz. Sözlükten yalnızca iki sonuç gerekmektedir. Birincisi, dört yuvanın
 dördü de eşikte karakter değiştirir. İkincisi, buna karşın hareket serbestliği
 yuva yuva aynı kalmaktadır. Parçacık Bölge II'nin üç zamanında ve o üç zamanın
-taşıdığı Bölge I uzay yönlerinde serbestçe hareket etmektedir. Buna karşılık Bölge II'nin tek uzay ekseninde ve onun taşıdığı Bölge I zamanında yön seçemez.
+taşıdığı Bölge I uzay yönlerinde serbestçe hareket etmektedir. Bölge II'nin tek
+uzay ekseninde ise bu bölümün hesabı bir yön seçimi göstermez; kütle kabuğu
+yalnızca büyüklüğü sabitler.
 
-Sözlüğün en sıkı ifadesi de bu iki sonuçtan çıkar: tek yönlü koordinat iki bölgede **ayna
-yerlerde** durmaktadır. Bölge I'in zamanı ile Bölge II'nin tek uzay ekseni aynı
-koordinattır, ve ikisinde de yön seçilemez.
+Sözlüğün en sıkı ifadesi de bu iki sonuçtan çıkar: iki bileşene ayrışan koordinat
+iki bölgede **ayna yerlerde** durmaktadır. Bölge I'in zamanı ile Bölge II'nin tek
+uzay ekseni aynı koordinattır.
 
-"Tek yönlü" ifadesinin içinde iki ayrı iddia gizlidir, yani yönlendirilebilirlik
-ile ilerleme zorunluluğu. Bölüm 7.3 bu ikisini birbirinden ayırmakta ve yalnızca
-birincisinin hesaplandığını göstermektedir.
+Bu tek cümlenin içinde iki ayrı iddia gizlidir, yani yönlendirilebilirlik ile
+ilerleme zorunluluğu. Bölüm 7.3 bu ikisini birbirinden ayırmakta ve yalnızca
+birincisinin hesaplandığını göstermektedir. Bu bölümün hesabı da yalnızca
+birincisini kullanır: eksenin iki bileşene ayrıldığını, ikisinin arasında
+seçim yapan bir kural bu hesapta bulunmadığını.
 
-Bu ifadenin Bölüm 1.2'nin sonucuyla nasıl bir arada durduğu da o bölümde yazılıdır.
-Yön seçilemez, çünkü cisim o eksende geri dönemez. Dönüş anının işareti ise
-cismin ilerleme yönünden değil, hangi geçiş dönüşümünün kullanıldığından gelir.
-İki ifade farklı niceliklerden söz eder ve birbiriyle çelişmez.
+Dönüş anının işareti, cismin kendi ilerleme yönünden değil, hangi geçiş
+dönüşümünün kullanıldığından gelir (Bölüm 1.2). Cismin kendisi hangi yönde
+ilerlediği ise bu bölümün konusu değildir; o soru ayrı bir mekanizma
+gerektirir.
 
 ### 12.2 Yönelimin gözlenemezliği
 

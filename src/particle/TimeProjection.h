@@ -8,8 +8,8 @@
 namespace slm
 {
 
-    /// What each coordinate on the far side becomes here, and whether motion
-    /// along it is free, forced, or unavailable.
+    /// What each coordinate on the far side becomes here, and how many
+    /// dimensions of its own character it shares that role with.
     ///
     /// The two metrics are diag(1,-1,-1,-1) and diag(1,1,1,-1), and the
     /// involution sends (ct, x, y, z) to (z, y, x, ct). Reading that off slot
@@ -18,10 +18,12 @@ namespace slm
     /// the near side's three space directions, while the one negative slot there is a
     /// space direction and it carries the near-side time.
     ///
-    /// The consequence is that the two sides are one-way in mirror places. The near side's
-    /// time flows one way and cannot be steered; so does the far side's single space
-    /// axis, and it is the same coordinate. Their three times are free in the
-    /// way the near side's three space directions are free.
+    /// A set of three same-signed axes admits a continuous rotation from any
+    /// unit vector to its own negative, so no consistent split into two senses
+    /// exists there. A single axis admits no such rotation, so it does split
+    /// into two senses. This class labels character by that count alone; it
+    /// does not assert that either sense is inaccessible to a mechanism
+    /// supplied elsewhere.
     ///
     /// The question this leaves is whether an orientation among their three
     /// times can move the time coordinate of the return event here directly,
@@ -38,8 +40,8 @@ namespace slm
         /// What a coordinate is used for in the region it belongs to.
         enum class Character
         {
-            FreeMotion,    ///< Motion along it is free in both directions.
-            ForcedFlow,    ///< Motion along it is one way and cannot be steered.
+            FreeMotion, ///< Three same-signed axes; a continuous rotation reaches either sense.
+            Directed,   ///< One axis; the two senses are not connected by any rotation.
             OrientationOnly ///< A direction can be taken in it, but no displacement is observable.
         };
 
