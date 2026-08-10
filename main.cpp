@@ -1,4 +1,5 @@
 #include "charge/ChargedCurrent.h"
+#include "particle/AcceleratedCrossing.h"
 #include "particle/AsymmetricFaces.h"
 #include "scan/PermutationScan.h"
 #include "core/Report.h"
@@ -41,6 +42,7 @@ namespace
         sections.push_back(std::make_unique<slm::ChargedCurrentSection>());
         sections.push_back(std::make_unique<slm::PhysicalScalesSection>());
         sections.push_back(std::make_unique<slm::TimeProjectionSection>());
+        sections.push_back(std::make_unique<slm::AcceleratedCrossingSection>());
         return sections;
     }
 

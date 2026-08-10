@@ -126,7 +126,7 @@ eder, taşınan maddeyi değil.
 Geçişin kurulmasının önünde bir engel de şudur: Bölge II'nin içi doğrudan
 ölçüme kapalı kalmıştır. Bölge I'de okunabilen nicelik dönüş anıdır. Bu
 nicelik bir geçişin olduğunu bildirir, ancak parçacığın Bölge II'de izlediği
-yolu bildirmez (Bölüm 13).
+yolu bildirmez (Bölüm 14).
 
 ### 1.3 İddianın büyüklüğü
 
@@ -150,7 +150,7 @@ ise anılacak bir kaynağı yoktur.
 ### 1.4 Sonucu taşıyan adımlar
 
 Sonuca beş adımda varılmıştır. Adımların tamamı, her birinin hangi bölümde
-kurulduğuyla birlikte Bölüm 14'te sıralanır.
+kurulduğuyla birlikte Bölüm 15'te sıralanır.
 
 ### 1.5 Gösterilmeyenler
 
@@ -165,7 +165,7 @@ oysa böyle bir kuralın yokluğu kanıtlanmamıştır.
 **İkincisi gözlemdedir.** Bölge II'de durup ileriyi kestirmeye çalışan bir
 gözlemci başarısız olur, çünkü eşikteki başlangıç değeri problemi iyi
 konumlanmaz (Bölüm 7.3). Bölge II'nin içi de Bölge I'den doğrudan ölçüme
-kapalıdır (Bölüm 13).
+kapalıdır (Bölüm 14).
 
 ### 1.6 Model
 
@@ -203,7 +203,7 @@ geri tepmediği ve açıları ayrık değerlerde kalan bir esnek sapma.
 
 Dönüşümün kendisi ise tek yönlüdür: Bölge II'deki yönelim dönüş olayının
 koordinatlarına ancak bir kısmıyla ulaşır, sürekli bir küme ayrık bir tayfa
-düşer (Bölüm 11.8).
+düşer (Bölüm 12.8).
 
 ### 1.9 Modelin maddeleri
 
@@ -235,10 +235,10 @@ kurulduğunu gösterir.
 | ------ | ----------------------------------------------------- | ----------------------------------------------------------- |
 | Geçiş | Kütleli bir parçacık eşiğin ötesine nasıl geçer | Bölüm 3, Bölüm 4, Bölüm 5 |
 | Mesafe | Bölge II'de mekânda kat edilen mesafe ne anlama gelir | Bölüm 4.1.1, Bölüm 4.1.2, Bölüm 7, Bölüm 8.1 |
-| Dönüş | Geri döndüğünde saatte nereye düşer | Bölüm 11, Bölüm 12, Bölüm 13, Bölüm 14 |
+| Dönüş | Geri döndüğünde saatte nereye düşer | Bölüm 12, Bölüm 13, Bölüm 14, Bölüm 15 |
 
 **İki giriş noktası vardır ve ikisi farklı işe yarar.** Bölüm 2 hesabı kısa bir
-tablo hâlinde verir; sayıyı yeniden üretmek isteyen oradan başlar. Bölüm 14 ise
+tablo hâlinde verir; sayıyı yeniden üretmek isteyen oradan başlar. Bölüm 15 ise
 beş adımı sıralar ve her adımın
 hangi bölümde kurulduğunu gösterir; sonucun nasıl kurulduğunu izlemek isteyen
 oradan başlar. İki bölümün sayıları farklı yapılanmalara aittir, dolayısıyla
@@ -253,16 +253,16 @@ sonucu taşırken onun bir alt bölümü yalnızca bir itiraza cevap veriyor ola
 | Bölüm | Konusu | Karşıladığı soru |
 | ---------- | ---------------------------------------------------------- | ---------------------------------------------------------------------------- |
 | 6 | Geometrinin izin verdiği geçiş | Böyle bir geçişe geometri izin veriyor mu |
-| 9 | Dalga ve nokta cisim okumaları | Hesabı paketle yapıp anlatımı cisimle kurmak meşru mu |
+| 10 | Dalga ve nokta cisim okumaları | Hesabı paketle yapıp anlatımı cisimle kurmak meşru mu |
 | 7.3 | Yönlendirilebilirlik ile ilerleme zorunluluğunun ayrılması | Ayrım metrikte var, zorunluluk hiçbir metrikte yok |
 | 8.2, 8.3 | Dispersiyon, grup hızı, kapalı form çözüm | Üç zamanlı bir bölgede hız kavramı ne oluyor |
-| 15 | Yöntem ve üç denetim | Bu sayılar doğrulanmış mı ve doğrulama kendini kandırıyor olabilir mi |
-| 16 | İtirazlar ve yanıtlar | Literatürden gelen itirazlar tek yerde toplanmış mı |
+| 16 | Yöntem ve üç denetim | Bu sayılar doğrulanmış mı ve doğrulama kendini kandırıyor olabilir mi |
+| 17 | İtirazlar ve yanıtlar | Literatürden gelen itirazlar tek yerde toplanmış mı |
 | 4.2 | Geniş formülasyonla karşılaştırma | Aynı grubu daha genel kuran bir çalışma varken bu kurulum gereksiz mi |
 | 8.3 | Durgunluğun tek yörüngeye indirgenmesi | Bölge II'de duran bir cismin sonsuz çok durumu mu var |
-| 10.5 | Yükün yeniden dağılması | Eşikte yük kayboluyor mu |
+| 11.5 | Yükün yeniden dağılması | Eşikte yük kayboluyor mu |
 
-Bölüm 10, geçişin neyi değiştirmeden bıraktığını kayda geçiren bir dökümdür ve
+Bölüm 11, geçişin neyi değiştirmeden bıraktığını kayda geçiren bir dökümdür ve
 ana hat ile itiraz bölümlerinin arasında durmaktadır. Sonucu üretmez, ancak
 sonucun kendi içinde tutarlı kalmasını sağlar.
 
@@ -277,8 +277,8 @@ II'de alınan ve dönüşü tam kalkış anına getiren uzunluktur, ve metre ta�
 | Nerede | Neyi eşler | Çekirdek için rolü |
 | ---------- | -------------------------------------------------------------------------------------- | ------------------------------------------------ |
 | Bölüm 8.1 | Bölge II'nin dört ekseni $\to$ Bölge I'in yuvaları ve bir birim adımın saatte ürettiği | **Çekirdeğin kendisi.** İspatı Bölüm 4.1.1'dedir |
-| Bölüm 11.2 | Bölge II'deki yönelim $\to$ Bölge I'de gözlenen nicelikler | Çekirdeğin girdi tarafı |
-| Bölüm 12.1 | Dört koordinatta hareket ile yönelim arasındaki ayrım | Girdinin hangi kısmının hareket olduğu |
+| Bölüm 12.2 | Bölge II'deki yönelim $\to$ Bölge I'de gözlenen nicelikler | Çekirdeğin girdi tarafı |
+| Bölüm 13.1 | Dört koordinatta hareket ile yönelim arasındaki ayrım | Girdinin hangi kısmının hareket olduğu |
 
 Sayısal katsayı yalnızca birincisinde tanımlanır ve tek bir yerde ispatlanmıştır.
 Diğer ikisi onu kullanır, yeniden kurmaz.
@@ -295,15 +295,15 @@ türetildiği yanında yazılıdır. Çalışmanın kalanı da o türetmeleri ve
 hangi itirazı karşıladığını anlatmaktadır.
 
 **Girdi.** Hesap, Bölge II'nin enerji vektörü $E = (E_1, E_2, E_3)$ ile başlar. Bu
-vektör Bölge I'de parçacığın üç momentum bileşenine karşılık gelir (Bölüm 10.1).
+vektör Bölge I'de parçacığın üç momentum bileşenine karşılık gelir (Bölüm 11.1).
 Vektörün Bölge II'deki yönü fiziksel bir fark yaratmaz, yalnızca uzunluğu yaratır
-(Bölüm 10.3). Geri kalan girdiler kütle parametresi $\mu$ ve hız $c$ olur.
+(Bölüm 11.3). Geri kalan girdiler kütle parametresi $\mu$ ve hız $c$ olur.
 
 **Adımlar.**
 
 | Adım | Nicelik | Bu nicelik nedir | Nerede |
 | ---- | ---------------------------------------------------------------------------------- | ------------------------------------------------------ | ------------------------ |
-| 1 | $\omega = c\sqrt{E_1^2 + E_2^2 + E_3^2 + \mu}$ | Parçacığın frekansı | Bölüm 10.1 |
+| 1 | $\omega = c\sqrt{E_1^2 + E_2^2 + E_3^2 + \mu}$ | Parçacığın frekansı | Bölüm 11.1 |
 | 2 | $2\tau$ | Gidiş dönüşün toplam eşik bedeli, tek bir geçişin $\tau$'sundan | Kapsam dışı |
 | 3 | $2\tau - s$ | Varış anı, kalkışa göre, geri taşıyan dalda | Bölüm 4.1.2, Bölüm 4.1.1 |
 | 4 | $s^\ast = 2\tau$ | Eşik mesafesi: bunu aşan yolculuk kalkıştan önce döner | Bölüm 4.1.2 |
@@ -963,12 +963,12 @@ Parçacığın Bölge II'de yapabilecekleri iki bağımsız etiketle tükenir.
 **Hangi yüzden çıktığı.** Ara bölgenin iki yüzü vardır ve parçacık girdiği
 yüzden geri dönebilir, karşı yüzden çıkabilir, ya da hiç çıkmayabilir.
 
-**Enerji vektörünün ne kadar döndüğü.** Bölüm 10.3'te gösterildiği gibi
+**Enerji vektörünün ne kadar döndüğü.** Bölüm 11.3'te gösterildiği gibi
 yönelimin kendisi Bölge II'de ayar fazlalığıdır; fiziksel olan tek şey giriş ile
 çıkış arasındaki **bağıl** dönmedir. Üç sınıf ayırt edilir: dönme yok, kısmi
 dönme ve tam ters çevirme.
 
-İki etiket birlikte üç çarpı üç, yani dokuz hücrelik bir tablo verir. Bölüm 11
+İki etiket birlikte üç çarpı üç, yani dokuz hücrelik bir tablo verir. Bölüm 12
 bu hücrelerin her birinin Bölge I'de nasıl göründüğünü tek tek hesaplamıştır.
 
 ## 8. Bölge II'de hareket ve yönelim
@@ -1114,9 +1114,76 @@ planlarına kadar götürülmüştür. Yukarıdaki $O(3)$ fazlalığı da aynı 
 yalnızca çok daha dardır. Bu bölümün katkısı mekanizmanın kendisi değil, onun bu
 modeldeki durgunluk sorusuna uygulanmasıdır.
 
+## 9. Sabit kuvvetle sürülen geçiş
+
+Bölüm 1.1, parçacığın Bölge II'de $s$ kadar mesafe almasını üreten dinamiği
+kapsam dışı bırakmıştı. Bölüm 8.1 de bu eksendeki hareketin yönünü ayrı bir
+mekanizmanın belirleyeceğini yazmıştı. Bu bölüm o mekanizmayı kurar: parçacığa
+$r$ ekseni boyunca sabit bir kuvvet uygulanır, tıpkı Bölge I'de bir kuvvetin
+parçacığı mekânda hareket ettirmesi gibi.
+
+**Literatürün verdiği ve vermediği.** Çok zamanlı bir uzayda parçacığa kuvvet
+ekleyen olgun bir program $Sp(2,\mathbb{R})$ ayar simetrisidir [43]. Bu
+program serbest kısıta bir potansiyel terimi ekler. Ne var ki ayar
+simetrisinin kapanması düz bir arka planda bu terimi derece $-2$ homojen bir
+fonksiyona sıkıştırır ve keyfi bir $V(r)$'ye izin vermez. Aynı programın
+kendi metni, hayalet durumlardan kaçınmanın ikiden çok zaman eksenine izin
+vermediğini yazmaktadır [44]. Bölge II üç zaman ekseni taşıdığından bu
+program burada kullanılamaz.
+
+Bunun yerine kısıtlı Hamiltonyen mekaniğinin standart yolu izlenir: kütle
+kabuğuna doğrudan bir potansiyel terimi eklemek. Bu yöntemde hiçbir ayar
+simetrisi varsayılmaz, ve yöntem imzadan bağımsızdır. Sıradan $(1,3)$ imzalı
+bir parçacık için de aynı yöntem kullanılır.
+
+**Kurulum.** Serbest kısıt (Bölüm 8.2) şöyle genişletilir:
+
+$$k_1^2+k_2^2+k_3^2-\frac{q^2}{c^2}+\mu+V(r)=0, \qquad V(r)=2Fr$$
+
+$V$ yalnızca $r$'ye bağlı olduğundan $t_1$, $t_2$, $t_3$ ötelemeleri ve
+aralarındaki $O(3)$ simetrisi bozulmadan kalır (Bölüm 11.1); bozulan tek
+simetri $r$ ötelemesidir. Kısıttan Hamilton denklemleri çıkar:
+
+$$\frac{dr}{d\sigma}=-\frac{q}{c^2}, \qquad \frac{dq}{d\sigma}=-F,
+\qquad \frac{dt_i}{d\sigma}=k_i, \qquad \frac{dk_i}{d\sigma}=0$$
+
+$\sigma$ yörünge boyunca alınan bir parametredir; bu çalışma ona bir zaman
+yorumu yüklemez.
+
+**Çözüm.** Serbest kısıt $r=0$'da $q(0)=\pm c\sqrt{k^2+\mu}$ verir (Bölüm
+8.2); negatif kök alınır, çünkü bu kök $r$'yi artan yöne taşır. $F>0$ iken
+$q$ sabit hızla azalır, dolayısıyla $r$'nin artış hızı hiç durmadan büyür:
+
+$$q(\sigma)=q(0)-F\sigma, \qquad r(\sigma)=\frac{F\sigma^2}{2c^2}-\frac{q(0)\sigma}{c^2}$$
+
+$q(0)<0$ olduğundan $r(\sigma)$ sıfırdan başlayıp her $\sigma>0$ için artar;
+bir dönüş noktası yoktur.
+
+**Her hedefe ulaşılır.** Herhangi bir hedef mesafe $s$ için, $r(\sigma)=s$
+eşitliğini çözen $\sigma$ kapalı formda çıkar ve $F,s>0$ için her zaman
+gerçel, sonlu ve pozitiftir. Sınama üç kütle değerini, üç kuvvet değerini ve
+üç hedef mesafeyi, yani 27 birleşimi kapsar, ve hiçbir birleşim hedefine
+ulaşmadan kalmaz. Kısıt da yörünge boyunca sıfırda kalır: beş $\sigma$
+değerinde bu sınama artığı $10^{-9}$ altında bulur. Önceki bölümlerin
+çıkardığı geçememe olasılığı burada geri gelmez: kuvvet sıfırdan farklı
+olduğu sürece parçacık her hedefe ulaşır, ne bir yansıma ne bir eşik vardır.
+
+**Saate düşen fark.** Ulaşılan $s$, geri kalan üç eksende hiçbir iz bırakmaz.
+Bölüm 4.1.1'in sözlüğü doğrudan uygulandığında, $s$ kadar saf bir $r$ yer
+değiştirmesi Bölge I saatinde tam $s$'ye eşit bir farka düşer ve öteki üç
+koordinata hiç dokunmaz. Bir metrelik hedef, saatte $3{,}3356\times 10^{-9}$
+saniyelik bir farka karşılık gelir; Özet'in verdiği sayının aynısı, şimdi
+kütleden ve enerji vektöründen bağımsız, gerekçeli bir dinamikten çıkmaktadır.
+
+**Bu bölümün kurmadığı şey.** Kuvvetin kendisini üreten fiziksel düzenek bu
+çalışmanın kapsamı dışında kalır. Yörünge parametresi $\sigma$'nun Bölge
+I'de ölçülebilir bir karşılığı da kurulmamıştır; kurulan tek bağıntı $s$ ile
+dönüş anı arasındakidir. Kuvvetin parçacığın kendi enerjisine geri tepkisi de
+hesaba katılmamıştır.
+
 # Kısım IV. Üç bölgede madde
 
-## 9. Parçacığın iki okuması
+## 10. Parçacığın iki okuması
 
 Bu çalışmanın ele aldığı olay şudur: kütleli bir parçacık eşiği geçer, Bölge II'de bir süre kalır ve geri döner. Öyleyse "parçacık" sözcüğü küçük bir
 ayrıntı değil, bütün hesabın dayanağıdır, ve ne anlama geldiği baştan
@@ -1154,7 +1221,7 @@ olarak kaydeder**, çünkü bu modelde ikisinin ayrıldığı yerler tam olarak 
 İkisini birbirine bağlayan şey aşağıda kurulan sözlüktür, ve o sözlüğün nerede
 geçerli kaldığı hesaplanabilir bir sorudur.
 
-### 9.1 Sözlük
+### 10.1 Sözlük
 
 | Nokta cisim dili | Dalga paketi karşılığı |
 | -------------------------------- | ----------------------------------------- |
@@ -1166,7 +1233,7 @@ geçerli kaldığı hesaplanabilir bir sorudur.
 
 Bu bölümün asıl sonucunu son satır taşır.
 
-### 9.2 Nokta cisim koşulu
+### 10.2 Nokta cisim koşulu
 
 Bir paketin ağırlık merkezi, eşikten geçerken kayabilir, ve bu kayma paket
 genişliğiyle **doğru orantılı** gitmektedir: genişlik yarıya indiğinde kayma da
@@ -1183,7 +1250,7 @@ Gidiş dönüş anlatısının tamamı bu sonuca dayanır. Paket dar tutulmadı�
 "parçacık gitti ve geri döndü" cümlesi anlamını yitirir, çünkü dönen şey gidenden
 farklı bir mod dağılımı olur.
 
-### 9.3 Dar paketin iki kaybı
+### 10.3 Dar paketin iki kaybı
 
 Dar paket limiti merkezi korur, ama her şeyi korumaz. İki kayıp kalır.
 
@@ -1196,7 +1263,7 @@ Bölge II'de bulunma ağırlığıdır.
 biri mertebesinde değişebilir. Yani genişlik merkez kadar temiz korunmaz, ama
 merkeze göre ikinci mertebeden küçük kalır.
 
-### 9.4 Bu tanımın sınırları
+### 10.4 Bu tanımın sınırları
 
 Üç çekince vardır.
 
@@ -1211,7 +1278,7 @@ Nokta cisim okuması yalnızca Bölge I'de tanımlıdır. Bölge II'de "konum" k
 tek uzay ekseni olan $r$ üzerine daralır ve üç zaman yönü boyunca hiçbir
 karşılığı kalmaz.
 Bölge II'de hareketin ne anlama geldiğini bu nedenle Bölüm 8 karşılar. Konumun
-kendisi ise Bölge II'de de tanımlı değildir; Bölüm 13 bunu reddeder.
+kendisi ise Bölge II'de de tanımlı değildir; Bölüm 14 bunu reddeder.
 
 Sorunun bir katmanı daha vardır. Üç boyutlu bir elektron bulutunun bu tek
 eksende neye karşılık geldiği, bu çalışmanın sormadığı bir sorudur. Bağıl
@@ -1227,17 +1294,17 @@ değişmeden çıktığı.
 
 ---
 
-## 10. Korunan nicelikler
+## 11. Korunan nicelikler
 
 Önceki bölüm geçişin neyi değiştirdiğini saydı. Bu bölüm ters soruyu sorar:
 geçiş neye **dokunamaz**.
 
 $D$ bir involüsyondur, dolayısıyla iki kez uygulandığında dört-momentumun dört
-bileşeni de başlangıç değerine döner (Bölüm 10.2). Aşağıdaki alt bölümler bunun
+bileşeni de başlangıç değerine döner (Bölüm 11.2). Aşağıdaki alt bölümler bunun
 ne anlama geldiğini açar: bir gidiş dönüşte enerji, momentumun büyüklüğü ve
 kütle tam olarak korunur; değişen tek şey yöndür.
 
-### 10.1 Enerji vektörünün karşılığı
+### 11.1 Enerji vektörünün karşılığı
 
 Bölge II'nin üç enerji bileşeni soyut bir nesne değildir; Bölge I'de tanınan bir
 şeyin başka adıdır. $D$ dört-momentuma uygulandığında
@@ -1253,7 +1320,7 @@ Bu, iki niceliğin sayısal olarak eşit olması değil, aynı nesne olmasıdır
 vektörünün uzunluğu Bölge I'in momentumunun büyüklüğüne tam olarak eşittir ve bu
 doğrulanmıştır.
 
-### 10.2 Dönüşümün kayıpsızlığı
+### 11.2 Dönüşümün kayıpsızlığı
 
 $D$ bir involüsyon olduğundan, iki kez uygulandığında dört-momentumun dört
 bileşeni de **tam olarak** başlangıç değerine döner ve sayısal artık sıfır kalır.
@@ -1262,7 +1329,7 @@ Bu sonucun önemi şudur: modelin bildirdiği bütün kayıplar dönüşümden d
 iki bölgenin birleştiği **yüzeyden** gelmektedir. Cebir hiçbir şey kaybetmez,
 karşılığını eklem koşulları belirler.
 
-### 10.3 Bölge II'de uzunluğun fizikselliği
+### 11.3 Bölge II'de uzunluğun fizikselliği
 
 Bölüm 8'de gösterildiği gibi üç zaman ekseni arasında bir $O(3)$ simetrisi
 bulunmaktadır. Bu simetri bir ayar fazlalığı olduğundan enerji vektörünün **yönü**
@@ -1271,7 +1338,7 @@ Bölge II'de fiziksel değildir, ve fiziksel olan tek nicelik uzunluğu olarak k
 Üç ayrı dönme açısı da aynı sonucu vermiştir: dönme, enerji vektörünün
 uzunluğunu, Bölge II'nin momentumunu ve değişmezi değiştirmez.
 
-### 10.4 Dönmenin bıraktığı iz
+### 11.4 Dönmenin bıraktığı iz
 
 Söz konusu dönme Bölge II'de fiziksel bir fark yaratmasa da, Bölge I'de iz
 bırakmaktadır. Parçacık Bölge II'de bir $O(3)$ dönmesi geçirip geri döndüğünde
@@ -1296,7 +1363,7 @@ Son satırdaki sapmanın büyüklüğü de hesaplanmıştır:
 > **gözlenebilir bir sapma** olarak görünür. Parçacık aynı enerjiyle, aynı
 > süratle, aynı kütleyle, ama farklı bir yöne bakarak geri döner.
 
-Bu madde, Bölüm 11'de kurulan sözlüğün en somut maddesidir, ve gidiş dönüşün
+Bu madde, Bölüm 12'de kurulan sözlüğün en somut maddesidir, ve gidiş dönüşün
 hiçbir enerji harcamadan yapabildiği tek şeyi adlandırır: yön değiştirmek.
 
 **Çekince.** Yukarıdaki sonuç dönüşüm düzeyinde kalır ve yüzeyin mod
@@ -1306,7 +1373,7 @@ geçirirse Bölge I'de ne görünür.
 
 **Kalan çekince.** Bu döküm doğrusal ve durağan bir saçılma kurgusuna dayanır.
 
-### 10.5 Yükün yeniden dağılması
+### 11.5 Yükün yeniden dağılması
 
 Yüklü bir durum için döküme bir kalem daha girmektedir. Yük yoğunluğu dört akımın
 zaman bileşenidir, ve geçiş yakın tarafın zaman eksenini Bölge II'nin bir uzay
@@ -1329,12 +1396,12 @@ Bu kısım dönüşümün girdi tarafını, yani Bölge II'deki yönelimin ne an
 geldiğini tanımlar; sonra girdiyi dönüş olayının dört koordinatına bağlar; ve
 yedi adımı tek yerde yazar.
 
-## 11. Yönelim sözlüğü
+## 12. Yönelim sözlüğü
 
 Bu bölüm Bölüm 7.5'in dokuz hücresini tek tek bu tarafa çevirir, sonra o
 dokuzun gerçekte kaç tane olduğunu yeniden sayar.
 
-### 11.1 Her hücrede korunan nicelikler
+### 12.1 Her hücrede korunan nicelikler
 
 Dokuz hücrenin **tamamında** Bölge I'in enerjisi ve sürati tam olarak
 korunmaktadır, ve sayısal artık sıfır çıkar. Öyleyse hücreleri birbirinden ayıran
@@ -1346,7 +1413,7 @@ tek nicelik, Bölge I'de momentumun yönüdür:
 | Kısmi | $0{,}961$ |
 | Tam ters | $2{,}601$ |
 
-### 11.2 Sözlük
+### 12.2 Sözlük
 
 | Bölge II'de olan | Bu tarafta görünen | Sıradan bir olaydan ayırt edilebilir mi |
 | ---------------------------------- | ---------------------- | --------------------------------------- |
@@ -1360,7 +1427,7 @@ tek nicelik, Bölge I'de momentumun yönüdür:
 | Hiç çıkmaz, kısmi dönme | Soğurulma | Hayır |
 | Hiç çıkmaz, ters çevirme | Soğurulma | Hayır |
 
-### 11.3 Çıkış yüzünü belirleyen nicelik
+### 12.3 Çıkış yüzünü belirleyen nicelik
 
 Bölüm 7.5'in iki etiketinden biri çıkış yüzüydü, ve o bölümde bağımsız bir etiket
 gibi ele alınmıştı. Oysa bağımsız değildir.
@@ -1381,7 +1448,7 @@ uzunlukta doğrulanmıştır.
 dalga koşulu koymak demektir; o koşul bir zaman yönelimi gerektirir, ve Bölge
 II'de zaman yönelimi bulunmaz (Bölüm 7).
 
-**Geriye kalan tek belirleyici Bölge I'in enerjisidir.** Bölüm 10.1 Bölge II'nin
+**Geriye kalan tek belirleyici Bölge I'in enerjisidir.** Bölüm 11.1 Bölge II'nin
 tek momentumunun Bölge I'in enerjisi olduğunu göstermişti, ve geçiş dalga sayısı
 tam olarak o yuvada durur. Dolayısıyla:
 
@@ -1391,7 +1458,7 @@ tam olarak o yuvada durur. Dolayısıyla:
 Karşı yüzden dönüş, başka bir yerden gelmiş gibi değil, **negatif enerjiyle**
 gelmiş gibi görünür.
 
-Bu sonuç Bölüm 11.2'nin tablosunu iki yerden değiştirmektedir. Birincisi, çıkış
+Bu sonuç Bölüm 12.2'nin tablosunu iki yerden değiştirmektedir. Birincisi, çıkış
 yüzü ile yönelim bağımsız etiketler değildir; ikisi de aynı vektörün
 parçalarıdır. İkincisi, "hiç çıkmaz" satırının yanına üçüncü bir okuma girer:
 negatif enerjili bir varış, sıradan bir gözlemciye parçacık yerine
@@ -1415,7 +1482,7 @@ ayrımının) yokluğundan çıkan bir muhakemedir; dayanağını Bölüm 7
 hesaplamıştır. Bu iki "yönelim" ayrı nesnedir: biri enerji vektörünün üç zaman
 ekseni arasındaki doğrultusu, öteki gelecek ile geçmişi ayıran işarettir.
 
-### 11.4 Dönmenin nicelenmesi
+### 12.4 Dönmenin nicelenmesi
 
 İki yüz arasındaki bağıl dönme hakkında iki saf beklenti kurulabilir, ve ikisi
 de bir varsayıma dayanır. **Ayar okuması** iki yüzü simetrik sayar ve dönmeyi
@@ -1474,7 +1541,7 @@ bir grup oluşturur.
 çalışmada kurulmamıştır. Tayfın kendisi hesaplanmıştır, tayf üzerindeki olasılık
 dağılımı hesaplanmamıştır.
 
-### 11.5 İşaret sorusunun yeniden okunması
+### 12.5 İşaret sorusunun yeniden okunması
 
 Aşağıdaki tartışma bu sözlüğün bir parçasıdır ve sonucu tersine dönmüştür. Eski
 formülasyonda iki bölgedeki okların bağıl işareti prensip olarak ölçülemezdi,
@@ -1493,7 +1560,7 @@ anlamını netleştirmektedir:
  hizalanması. Tek başına hiçbiri anlamlı değildir.
 4. Eşik geçirgen olduğuna göre iki bölge arasında bir kanal vardır; bağıl işaret
  bu nedenle prensip olarak ölçülebilir kalır. Ölçümü yapacak nicelik Bölüm
- 11.3'te belirlenmiştir: parçacığın hangi yüzden döndüğü, yani enerjisinin
+ 12.3'te belirlenmiştir: parçacığın hangi yüzden döndüğü, yani enerjisinin
  işareti.
 
 **Sonuç:** İşaret belirsizliği denklemlerin düzeyinde yapısaldır, ölçümün
@@ -1501,9 +1568,9 @@ düzeyinde değil. Bölge I tarafta da zamanın oku denklemlerden türetilmez,
 Newton, Maxwell ve Schrödinger denklemlerinin hepsi $T$-simetriktir [32]; ok
 başlangıç koşulundan gelir.
 
-### 11.6 Bölge II'de hareketin tanımı
+### 12.6 Bölge II'de hareketin tanımı
 
-Çıkış yüzü Bölüm 11.3'te Bölge I'in enerjisinin işareti olarak belirlendi, ve
+Çıkış yüzü Bölüm 12.3'te Bölge I'in enerjisinin işareti olarak belirlendi, ve
 bu belirleme parçacığın ara bölgede **ne yaptığına** bağlanmamıştı. Bu bölüm o
 bağlantıyı kurar.
 
@@ -1520,7 +1587,7 @@ iner:
 Birinci hareket bir yolculuktur, ikincisi bir yönelimdir. Sorulacak soru şudur:
 çıkış yüzü bu iki hareketten hangisini görür.
 
-### 11.7 Çıkış yüzünün körlüğü
+### 12.7 Çıkış yüzünün körlüğü
 
 Enerji vektörü üç zaman düzleminden herhangi birinde, herhangi bir açıyla
 döndürülse de geçiş dalga sayısı değişmez. Bunun nedeni açıktır: kütle kabuğu o
@@ -1533,12 +1600,12 @@ Dolayısıyla çıkış yüzü, parçacığın Bölge II'de izlediği yola hiçb
 bölgenin
 içinde değil, yüzeylerde belirlenmektedir.
 
-### 11.8 İçerideki yolun izi
+### 12.8 İçerideki yolun izi
 
 İçeride süpürülen açı süreklidir. Dönme açısı serbest bir parametre olduğundan,
 birbirine ne kadar yakın iki değer seçilirse seçilsin iki farklı yol doğmaktadır;
 örneğin çeyrek turluk bir dönme $1{,}1102$ radyan süpürmektedir. Buna karşılık
-Bölge I'e ulaşan sapma, Bölüm 11.4'ün nicelenmiş tayfının bir elemanıdır, ve
+Bölge I'e ulaşan sapma, Bölüm 12.4'ün nicelenmiş tayfının bir elemanıdır, ve
 momentum $(1,2,3)$ için o tayf yalnızca **üç** değer taşır.
 
 Sürekli bir küme bu adımda üç elemanlı bir kümeye düşmektedir. Bu düşüş, Bölüm
@@ -1555,13 +1622,13 @@ bileşke dönmenin nicelenmiş izi kalır.
 
 ---
 
-## 12. Koordinat sözlüğü
+## 13. Koordinat sözlüğü
 
 Sorulan soru şudur: parçacık Bölge II'de dört koordinattan birinde hareket eder
 ya da yönelirse, bunun Bölge I'deki karşılığı ne olur. Bu bölüm o sözlüğü kurar,
-Bölüm 13 ise sözlüğü kullanarak dönüş olayını hesaplamaktadır.
+Bölüm 14 ise sözlüğü kullanarak dönüş olayını hesaplamaktadır.
 
-### 12.1 Sözlüğün bu bölümde kullanılan biçimi
+### 13.1 Sözlüğün bu bölümde kullanılan biçimi
 
 Dört yuvanın karakterini, hangi yuvaya indiğini ve bir birim adımın Bölge I'in
 saatinde ne ürettiğini Bölüm 8.1 tablo hâlinde vermişti, ve bu bölüm o tabloyu
@@ -1587,7 +1654,7 @@ dönüşümünün kullanıldığından gelir (Bölüm 1.2). Cismin kendisi hangi
 ilerlediği ise bu bölümün konusu değildir; o soru ayrı bir mekanizma
 gerektirir.
 
-### 12.2 Yönelimin gözlenemezliği
+### 13.2 Yönelimin gözlenemezliği
 
 Üç zaman ekseni arasındaki $O(3)$ simetrisi bir ayar fazlalığıdır, ve bunun
 sonucu şudur: Bölge II'de enerji vektörünün **yönü** fiziksel değildir, yalnızca
@@ -1600,7 +1667,7 @@ değiştirmez; artık $10^{-16}$ mertebesinde kalır.
 
 > Parçacık Bölge II'de **yönünü seçebilir, uzunluğunu seçemez.**
 
-### 12.3 Üç zamandaki hareketin etkisi
+### 13.3 Üç zamandaki hareketin etkisi
 
 Çekirdek sorunun en can alıcı yeri bu sorudur.
 
@@ -1615,7 +1682,7 @@ o hareketi Bölge I'in uzayına gönderir.
 
 ---
 
-## 13. Bölge I'de ölçülebilenler
+## 14. Bölge I'de ölçülebilenler
 
 Bu çalışmanın aradığı ölçüm Bölge II'nin içinde değil, Bölge I'de durmaktadır.
 Deney parçacığı gönderir, parçacık geri döner, ve Bölge I'in saati dönüş anını
@@ -1636,7 +1703,7 @@ ana düştüğü ölçülebilir, ancak parçacığın Bölge II'de izlediği yol
 
 ---
 
-## 14. Sonucun beş adımı
+## 15. Sonucun beş adımı
 
 Önceki bölümler sonuca giden adımları ayrı ayrı kurdu. Bu bölüm adımları tek bir
 yerde birleştirir ve her birinin hangi bölümde kurulduğunu göstermektedir. Yeni
@@ -1686,7 +1753,7 @@ iddia bir doğrulamaya karşılık gelir, makale ile kod birbirine isimle değil
 zamanında bağlanır, ve doğrulama kendini de denetler. İkincisi ise neyin
 gösterilmediğini yazar, ve çekirdek ölçümün düzeneğini şart şart belirtir.
 
-## 15. Yöntem ve doğrulama
+## 16. Yöntem ve doğrulama
 
 Bu çalışmadaki her sayısal ve cebirsel iddia, C++ ile kurulmuş bir doğrulamaya
 karşılık gelir. Doğrulamalar genel amaçlı kütüphaneler hâlinde durmakta, ve
@@ -1714,7 +1781,7 @@ yorum niteliğindeydi.
 Elle yapılan iki hesap, parite argümanı ve boyut sayımı, cebirsel kontrolde
 **yanlış çıktı** ve düzeltildi. Modelin bugünkü hâli bu düzeltmeleri içerir.
 
-### 15.1 Üç denetim
+### 16.1 Üç denetim
 
 Aşağıdaki üç denetim makale dosyasını okumakta, ve dosyayı bulamazsa koşuyu
 düşürmektedir. Bu son davranış zorunludur: girdisi yokken sessizce geçen bir
@@ -1749,7 +1816,7 @@ listesi silindi, bir künyeye giden tek atıf başka yere çevrildi, ve sicilde 
 olmayan bir varsayım cümlesi eklendi. Koşu her seferinde düşmüş, bozma geri
 alındığında yeniden geçmiştir.
 
-### 15.2 Hüküm sözlüğü ve sicil
+### 16.2 Hüküm sözlüğü ve sicil
 
 **Hüküm sözlüğü.** Kullanılabilecek hükümler bunlardır ve doğrulama sicilde
 bunların dışında bir hüküm bulursa koşuyu düşürür.
@@ -1773,9 +1840,9 @@ varsayımı eleştiren bir cümle ile varsayan bir cümle aynı kelimeyi taşım
 | ----- | -------------------------------------------------------------------------- | ---------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------- |
 | 4.1.2 | Faz gecikmesi ile Bölge II yer değiştirmesinin toplanabilmesi | türetildi | Aynı bölüm, tek bir durağan faz koşulundan |
 | 7.4 | Global hiperbolikliğin sağlanması | başka kurguya ait | Karşılaştırılan formülasyonun ihtiyacıdır; bu çalışmanın sonucu yalnızca zaman yönlerinin sayısından çıkar |
-| 11.4 | Yok; pasaj kendi kurduğu iki saf beklentiyi kaldırmak için anar | varsayım değil, söz ediliyor | Onları kaldıran bölümün kendisi |
-| 15.1 | Yok; pasaj üç denetimin ne aradığını anlatır | varsayım değil, söz ediliyor | Denetimlerin kendisi, ki bu bölüm onları belgeler |
-| 15.2 | Yok; pasaj bu sicili ve taradığı kelimeleri anlatır | varsayım değil, söz ediliyor | Sicilin kendisi, ki bu bölüm onu belgeler |
+| 12.4 | Yok; pasaj kendi kurduğu iki saf beklentiyi kaldırmak için anar | varsayım değil, söz ediliyor | Onları kaldıran bölümün kendisi |
+| 16.1 | Yok; pasaj üç denetimin ne aradığını anlatır | varsayım değil, söz ediliyor | Denetimlerin kendisi, ki bu bölüm onları belgeler |
+| 16.2 | Yok; pasaj bu sicili ve taradığı kelimeleri anlatır | varsayım değil, söz ediliyor | Sicilin kendisi, ki bu bölüm onu belgeler |
 | 7.3 | Denklem düzeyinde ve durum düzeyinde tek yönlülüğün aynı iddia olması | başka kurguya ait | İki okuma o bölümde ayrılır ve yalnızca ikincisi savunulur |
 
 Sicil $6$ kalem taşır. Kalemler üç türden birine girer: türetilmiş olanlar,
@@ -1787,7 +1854,7 @@ tekrar geçmiştir.
 
 ---
 
-## 16. İtirazlar ve yanıtlar
+## 17. İtirazlar ve yanıtlar
 
 Bu bölüm çekirdek zincire yöneltilebilecek itirazları tek yerde toplamaktadır.
 Zincir beş halkadan oluşur: **geçiş**, **çevrim**, **doyum**, **işaret** ve
@@ -1795,7 +1862,7 @@ Zincir beş halkadan oluşur: **geçiş**, **çevrim**, **doyum**, **işaret** v
 her maddenin sonunda bu çalışmanın verebildiği yanıt durur. Yanıt veremediği
 maddeler de aynı biçimde yazılmıştır.
 
-### 16.1 İmza değişimi bir işaret uzlaşımı olabilir
+### 17.1 İmza değişimi bir işaret uzlaşımı olabilir
 
 **İtiraz.** $\eta = \mathrm{diag}(+1,-1,-1,-1)$ ile
 $\eta' = \mathrm{diag}(+1,+1,+1,-1)$, eksenler ters sırayla okunduğunda
@@ -1833,7 +1900,7 @@ olmadığını verir; $D$'nin uçtan uca tek adımda uygulanışı için aynı �
 vermez. Zincir ancak ara bölgeden geçen okumada ayakta kalır, ve doğrudan
 okumada itiraz **açık kalmaktadır**. Bu, zincirin en zayıf halkasıdır.
 
-### 16.2 İmza değişimi sınırsız parçacık üretebilir
+### 17.2 İmza değişimi sınırsız parçacık üretebilir
 
 **İtiraz.** İmza değiştiren bir arka planda tanımlı bir kuantum alanı, geçiş
 sırasında sınırsız sayıda parçacık ve sınırsız toplam enerji üretebilir. O
@@ -1848,7 +1915,7 @@ bölgenin toplam konformal genişliğine bağlı çıkmaktadır. Bu çalışma t
 parçacığın geçişini konu alır ve geri tepkiyi hesaba katmaz. İtiraz
 **karşılanmamıştır**.
 
-### 16.3 Doyan gecikme bir kat etme süresi olmayabilir
+### 17.3 Doyan gecikme bir kat etme süresi olmayabilir
 
 **İtiraz.** Doymuş grup gecikmesi, engelde depolanan alanın boşalma süresidir,
 ve alan iki uçtan birden boşalır. Bir ömür süresi ise bir hızla
@@ -1864,7 +1931,7 @@ ise kurtarmamaktadır: durağan faz koşulu çıkan paketin tepesinin hangi anda
 göründüğünü verir, o tepenin bir kat etme süresi taşıdığını vermez. İtiraz
 **kısmen karşılanmıştır**: toplamın cebri sağlamdır, süre yorumu değildir.
 
-### 16.4 Erken varan cismin sinyal sayılması
+### 17.4 Erken varan cismin sinyal sayılması
 
 **İtiraz.** Bu çalışma nedensellik itirazını, bir sinyal iddiası taşımadığını
 söyleyerek karşılamaktadır. Oysa çekirdek iddia bir dalga
@@ -1877,14 +1944,14 @@ Kimliğini taşıyan bir cismin erken varması ise tanımı gereği bir sinyaldi
 **Yanıt.** İtiraz bir ikilem kurmaktadır, ve ikilem gerçektir. Cisim okuması
 alınırsa nedensel çelişki doğar. Faz okuması alınırsa geriye çıkan paketin
 tepesinin öne düşmesi kalır, o da bilinen bir olgudur. Bu çalışma iki okumayı
-birlikte yürütmekte (Bölüm 9) ve dönüş anını faz okumasından almaktadır. İki
-okumanın hangi koşulda birbirine çevrildiğini Bölüm 9.2 ile 11.4
+birlikte yürütmekte (Bölüm 10) ve dönüş anını faz okumasından almaktadır. İki
+okumanın hangi koşulda birbirine çevrildiğini Bölüm 10.2 ile 11.4
 vermektedir: paket yeterince dar tutulduğunda çevrim tam işler, ancak dar paket
 kendi kaybını getirir. Dolayısıyla ikilem **kapatılmamıştır**. Kaydedilen şey
 şudur: faz okumasıyla hesaplanan dönüş anı bir sinyal iddiası taşımaz, ve cisim
-okumasına geçmek için gereken dar paket sınırı Bölüm 9.3'te sayılıdır.
+okumasına geçmek için gereken dar paket sınırı Bölüm 10.3'te sayılıdır.
 
-### 16.5 Çok zamanlı bölgede başlangıç verisinin serbestliği
+### 17.5 Çok zamanlı bölgede başlangıç verisinin serbestliği
 
 **İtiraz.** Birden çok zaman ekseni taşıyan bir bölgede başlangıç değeri
 problemi ancak yerel olmayan bir kısıt altında tek çözüm verir. O kısıt, Bölge
@@ -1900,7 +1967,7 @@ karşılanmamıştır. $s$'nin bu modelde belirlenmediği zaten kayıtlıdır; i
 boşluğu daraltmakta, yani $s$'yi yalnızca belirsiz değil, eşikteki veriye bağlı
 bir nicelik hâline getirmektedir.
 
-### 16.6 Nedensel çevrim kurulan yüzeyde vakum gerilimi ıraksayabilir
+### 17.6 Nedensel çevrim kurulan yüzeyde vakum gerilimi ıraksayabilir
 
 **İtiraz.** Kapalı nedensel çevrimlerin kurulabilir hâle geldiği yüzeyde
 düzenlenmiş gerilim-enerji tensörü ıraksar, ve geri tepki geometriyi yok eder.
@@ -1913,7 +1980,7 @@ ettiğini söylemektedir, ve bu çalışma karşılık verecek bir hesap
 taşımamaktadır. Bölüm 1 [30]'u yalnızca literatürdeki başka çözümler için
 anmakta, kendi eşik mesafesine uygulamamaktadır. İtiraz **karşılanmamıştır**.
 
-### 16.7 Yeniden yorumlama dönüş anını ayırt edici olmaktan çıkarabilir
+### 17.7 Yeniden yorumlama dönüş anını ayırt edici olmaktan çıkarabilir
 
 **İtiraz.** Zamanda geriye giden negatif enerjili bir kol, ileri giden bir
 karşıparçacık olarak yeniden yorumlanabilir ([25], [19]). O zaman dönüşün
@@ -1940,7 +2007,7 @@ senaryo ayrılmaktadır, ve ikisi de Bölge I'de okunabilir niceliklerdir. İtir
 bu nedenle **kısmen karşılanmıştır**: dönüş anı tek başına yeterli değildir,
 üç niceliğin birlikte okunması yeterlidir.
 
-### 16.8 Alınan mesafenin gözlenebilirliği
+### 17.8 Alınan mesafenin gözlenebilirliği
 
 **İtiraz.** Uzaysal türden bir dörtlü momentum, nedenselliğe saygı gösteren bir
 konum işlemcisi kabul etmemektedir ([38], [39]). O zaman Bölge II'de alınan
@@ -1948,12 +2015,12 @@ mesafe diye ölçülebilir bir nicelik yoktur, ve $s$ bir koordinat etiketidir.
 
 **Vurduğu halka.** Çevrim, girdi tarafı.
 
-**Yanıt.** Bu çalışma sonucu Bölüm 13'te kabul etmektedir. Kabulün sonucu
+**Yanıt.** Bu çalışma sonucu Bölüm 14'te kabul etmektedir. Kabulün sonucu
 çekirdek eşitliğe de taşınmalıdır: $\Delta t = s/c$ eşitliğinin sol tarafı
 Bölge I'de ölçülür, sağ tarafı ölçülmez. Dolayısıyla eşitlik doğrudan
 sınanamaz, ve sınanabilen tek şey sol taraftır.
 
-### 16.9 Fermiyon taşınırsa spin yapısı sorunu
+### 17.9 Fermiyon taşınırsa spin yapısı sorunu
 
 **İtiraz.** Çekirdek amaç bir proton taşımaksa, taşınan nesne fermiyondur. İmza
 değiştiren ve Kleinyen manifoldlarda spin yapısının varlığı ise topolojik
@@ -1986,7 +2053,7 @@ vermez; o soru [20] ile [21]'in konusu olarak kalır. İtiraz bu nedenle **kısm
 karşılanmıştır**: taşınan nesne bir Dirac fermiyonuysa bu hesaptan bir engel
 çıkmaz, Bölge I'deki hâliyle bir Majorana fermiyonuysa engel doğrudan çıkar.
 
-### 16.10 Ayakta kalan ve düşen
+### 17.10 Ayakta kalan ve düşen
 
 Yukarıdaki maddeler karşısında ayakta kalan kısım hesaptır: sekiz aday matrisin
 taranması, katsayının tam olarak bir çıkması, yer değiştirmelerin toplanması,
@@ -1994,16 +2061,16 @@ ve momentumun koordinatlarla aynı matrisle taşınması. Hiçbir itiraz bu
 adımların cebrini vurmamaktadır.
 
 Düşen kısım ise aritmetiğin fiziksel yorumudur, ve dört ayrı yerden
-düşmektedir. Bölüm 16.1 geçerliyse $D$ bir dönüşüm değil bir adlandırmadır.
-Bölüm 16.3 geçerliyse $\tau$ ile $s$ toplanamaz. Bölüm 16.2 geçerliyse geçişin
-bedeli küçük bir olasılık değildir. Bölüm 16.4'ün ikilemi kapatılmadıkça, elde
+düşmektedir. Bölüm 17.1 geçerliyse $D$ bir dönüşüm değil bir adlandırmadır.
+Bölüm 17.3 geçerliyse $\tau$ ile $s$ toplanamaz. Bölüm 17.2 geçerliyse geçişin
+bedeli küçük bir olasılık değildir. Bölüm 17.4'ün ikilemi kapatılmadıkça, elde
 ya nedensel bir çelişki ya da bilinen bir tepe kayması kalmaktadır. Dördü
 birbirinden bağımsızdır, ve dördü de zincirin ayrı bir halkasını kesmektedir.
 
 İki itiraz ise hesapla daraltılmıştır, ve daraltma biçimi kayda değer.
-Bölüm 16.1'in ölçütü sayıya döküldüğünde itiraz doğrudan okumada ayakta
+Bölüm 17.1'in ölçütü sayıya döküldüğünde itiraz doğrudan okumada ayakta
 kalmakta, ara bölgeden geçen okumada düşmektedir; yani zincir yalnızca üç
-bölgeli hâliyle savunulabilir. Bölüm 16.7'nin hesabı ise dönüş anının tek başına
+bölgeli hâliyle savunulabilir. Bölüm 17.7'nin hesabı ise dönüş anının tek başına
 ayırt edici olmadığını doğrulamakta, ancak çıkış yüzü ile enine yer
 değiştirmelerin ayırdığını göstermektedir. İkisinde de itirazın haklı olduğu
 kısım ile kalan kısım artık düzyazıyla değil sayıyla ayrılmaktadır.
@@ -2127,3 +2194,10 @@ kısım ile kalan kısım artık düzyazıyla değil sayıyla ayrılmaktadır.
     University Press, 1982.
 42. W. L. Bragg. *The diffraction of short electromagnetic waves by a crystal*.
     Proc. Camb. Phil. Soc. **17** (1913) 43.
+
+**Çok zamanlı fizikte etkileşim ve kuvvet**
+
+43. I. Bars. *Two-time physics with gravitational and gauge field backgrounds*.
+    Phys. Rev. D **62** (2000) 105018. arXiv:hep-th/0002140
+44. I. Bars, Y.-C. Kuo. *Interacting two-time physics field theory with a BRST
+    gauge invariant action*. arXiv:hep-th/0605267
