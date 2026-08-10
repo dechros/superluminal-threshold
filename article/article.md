@@ -1404,8 +1404,11 @@ yüzünü belirleyen vektörün aynı bileşenidir. Dolayısıyla "hangi yüz" i
 derlemektedir, ve o soru bu çalışmanın kapsamı dışında kalmaktadır.
 
 **Çekince.** Bu bölümde hesaplanan şey, dispersiyon bağıntısının iki dalı da
-kabul ettiği ve yönelim yönünün geçiş dalga sayısını değiştirmediğidir. "Bölge II dal seçemez" ifadesi bir hesap değil, zaman yöneliminin yokluğundan çıkan
-bir muhakemedir; dayanağını Bölüm 7 hesaplamıştır.
+kabul ettiği ve enerji vektörünün yönünün geçiş dalga sayısını değiştirmediğidir.
+"Bölge II dal seçemez" ifadesi bir hesap değil, zaman yöneliminin (gelecek-geçmiş
+ayrımının) yokluğundan çıkan bir muhakemedir; dayanağını Bölüm 7
+hesaplamıştır. Bu iki "yönelim" ayrı nesnedir: biri enerji vektörünün üç zaman
+ekseni arasındaki doğrultusu, öteki gelecek ile geçmişi ayıran işarettir.
 
 ### 11.4 Dönmenin nicelenmesi
 
