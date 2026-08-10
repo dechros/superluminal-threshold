@@ -1227,28 +1227,10 @@ değişmeden çıktığı.
 Önceki bölüm geçişin neyi değiştirdiğini saydı. Bu bölüm ters soruyu sorar:
 geçiş neye **dokunamaz**.
 
-Üç nicelik geçişten değişmeden çıkar ve üçü de hesapla denetlenmiştir.
-
-**Frekans.** Eklem koşulları sabit frekansta dayatıldığından, ara bölgenin
-dayattığı dalga sayısı adımı frekanstan bağımsız kalmaktadır. Üç ayrı frekansta
-adım aynı çıkmıştır.
-
-**Enine dalga sayısı.** Yüzey kendi boyunca homojen olduğundan enine dalga sayısı
-korunur, ve adımı yalnızca o belirler. Üç ayrı enine dalga sayısı bunu
-doğrulamıştır.
-
-**Kütle.** Kütle parametresi iki tarafa da aynı miktarda girmektedir, çünkü geçiş
-dalga operatörüne etki eder, kütleye değil.
-
-| Nicelik | Gidiş dönüşte |
-| ------------------- | --------------------------- |
-| Frekans | Değişmez |
-| Enine dalga sayısı | Değişmez |
-| Kütle | Değişmez |
-| Normal dalga sayısı | Ara bölgede sanal olabilir |
-
-Sol sütun parçacığın kimliğini tarif etmektedir, ve dördü de geçişten
-değişmeden çıkar.
+$D$ bir involüsyondur, dolayısıyla iki kez uygulandığında dört-momentumun dört
+bileşeni de başlangıç değerine döner (Bölüm 10.2). Aşağıdaki alt bölümler bunun
+ne anlama geldiğini açar: bir gidiş dönüşte enerji, momentumun büyüklüğü ve
+kütle tam olarak korunur; değişen tek şey yöndür.
 
 ### 10.1 Enerji vektörünün karşılığı
 
