@@ -43,8 +43,13 @@ release: $(RELEASE_BIN)
 
 debug: $(DEBUG_BIN)
 
+#  The physics half and the article-analysis half are two processes (see
+#  tools/check_article.py), so both always run and both print their full
+#  report even when one of them fails; only the combined exit code decides
+#  whether the target fails, the way a single process's report used to.
 run: $(RELEASE_BIN)
-	@./$(RELEASE_BIN)
+	@mkdir -p build
+	@./$(RELEASE_BIN); cpp=$$?; python tools/check_article.py; py=$$?; test $$cpp -eq 0 -a $$py -eq 0
 
 $(RELEASE_BIN): $(RELEASE_OBJS)
 	@mkdir -p $(dir $@)
