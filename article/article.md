@@ -1067,9 +1067,8 @@ $$k_1^2 + k_2^2 + k_3^2 - \frac{q^2}{c^2} + \mu = 0
 
 $q$ her zaman reeldir: $r$ ekseninde salınım vardır, sönümlenme yoktur.
 
-Durgun cisim ($k = 0$) için $q = mc^2/\hbar \neq 0$. Yani Bölge II'de duran bir cisim
-bile $r$ ekseninde ilerler, Bölge I'deki "duran cisim zamanda ilerler"
-ifadesinin tam aynasıdır.
+Enerji vektörü sıfır olsa da ($k = 0$) $q$ sıfırlanmaz: $q = mc^2/\hbar$. Kütle
+kabuğu bu değeri $r$ ekseni için sıfırdan ayrı bir alt sınır olarak dayatır.
 
 Grup hızı:
 
