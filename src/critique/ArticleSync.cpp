@@ -1,16 +1,7 @@
 #include "critique/ArticleSync.h"
 
-#include "charge/ChargedRoundTrip.h"
 #include "core/Report.h"
-#include "experiment/RoundTripExperiment.h"
-#include "identity/RoundTripInvariants.h"
-#include "identity/ThresholdSensitivity.h"
-#include "intermediate/IntermediateRegion.h"
-#include "routes/ThreeRoutes.h"
 #include "units/PhysicalScales.h"
-#include "units/ProtonJourney.h"
-#include "units/SignatureThreshold.h"
-#include "units/ThresholdScaling.h"
 
 #include <algorithm>
 #include <cctype>
@@ -92,53 +83,13 @@ namespace slm
 
     std::vector<ArticleSync::Quotation> ArticleSync::quotations()
     {
-        const auto kind = IntermediateRegion::Kind::Euclidean;
-        const double drive = 1.5e24;
+        constexpr double kSecondsPerYear = 3.155695e7;
 
         return {
-            {"the mass ceiling",
-             ThresholdSensitivity::largestAdmissibleMass(1.0, 4.0, 2.8), "3{,}84"},
-            {"the widest admissible band",
-             ThresholdSensitivity::largestAdmissibleExtent(1.0, 1.0, 4.0, 2.8, 5.0), "0{,}1128"},
-            {"the round trip price",
-             ThreeRoutes::roundTripReading(ThreeRoutes::Route::Wave, kind, 2.8, 1.0, 1.0, 4.0,
-                                           8.0),
-             "2{,}925728"},
-            {"the point body reading",
-             ThreeRoutes::reading(ThreeRoutes::Route::PointBody, kind, 2.8, 1.0, 1.0, 4.0, 8.0),
-             "9{,}861"},
-            {"the wave reading",
-             ThreeRoutes::reading(ThreeRoutes::Route::Wave, kind, 2.8, 1.0, 1.0, 4.0, 8.0),
-             "1{,}462864"},
-            {"the amplitude reading",
-             ThreeRoutes::reading(ThreeRoutes::Route::Amplitude, kind, 2.8, 1.0, 1.0, 4.0, 8.0),
-             "0{,}519"},
-            {"the cheapest price under a potential",
-             ChargedRoundTrip::cheapestThreshold(ThreeRoutes::Route::Wave, kind, 2.8, 1.0, 1.0,
-                                                 4.0, 8.0, 1.0, 0.5, 2001, 1.0),
-             "2{,}920810"},
-            {"the proton admission frequency", ProtonJourney::lowestDriveForProton(), "1{,}4255"},
-            {"the crossing debt in seconds", ProtonJourney::debtInSeconds(drive), "5{,}4614"},
-            {"the break even distance", ProtonJourney::breakEvenDistance(drive), "1{,}6373"},
-            {"the Planck density", SignatureThreshold::planckDensity(), "5{,}15"},
-            {"the turning density", SignatureThreshold::turningDensity(), "1{,}06"},
-            {"the quantisation parameter", ThresholdScaling::quantisationParameter(), "0{,}2375"},
-            {"the derived critical fraction",
-             ThresholdScaling::criticalFraction(ThresholdScaling::quantisationParameter()),
-             "0{,}4094"},
-            {"the beam frequency with kinetic energy",
-             RoundTripExperiment::available(RoundTripExperiment::Requirement::BeamEnergy),
-             "1{,}7749"},
-            {"the far-side displacement", RoundTripExperiment::displacementMetres(), "0{,}2998"},
-            {"the launches per arrival", RoundTripExperiment::launchesNeeded(), "4{,}85"},
-            {"the running time", RoundTripExperiment::runTimeSeconds(), "0{,}49"},
-            {"the density reached",
-             RoundTripExperiment::available(RoundTripExperiment::Requirement::RegionDensity),
-             "9{,}28"},
-            {"the scale that would close the gap",
-             ThresholdScaling::scaleThatClosesGap(
-                 SignatureThreshold::densityInSphere(2.08e-6, 0.8414e-15)),
-             "3{,}74"},
+            {"the light-year distance a year of advance costs",
+             PhysicalScales::distanceForAdvance(kSecondsPerYear), "9{,}46"},
+            {"the nanoseconds a metre of far-side travel buys",
+             PhysicalScales::advanceForDistance(1.0) * 1e9, "3{,}34"},
         };
     }
 

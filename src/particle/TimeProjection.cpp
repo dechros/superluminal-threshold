@@ -2,10 +2,9 @@
 
 #include "core/Matrix4.h"
 #include "core/Report.h"
-#include "particle/FarSideMotion.h"
+#include "particle/EnergyVector.h"
 #include "transform/SignatureInvolution.h"
 
-#include <algorithm>
 #include <cmath>
 #include <format>
 
@@ -101,41 +100,6 @@ namespace slm
         return near;
     }
 
-    double TimeProjection::returnTime(const Three &orientation, IntermediateRegion::Kind kind,
-                                      double c, double mu, double thickness)
-    {
-        return FarSideMotion::momentFromEnergy(kind, c, mu, orientation, thickness);
-    }
-
-    double TimeProjection::returnTimeRange(double length, IntermediateRegion::Kind kind, double c,
-                                           double mu, double thickness, int steps)
-    {
-        const double pi = std::acos(-1.0);
-        double smallest = 1e300;
-        double largest = -1e300;
-        for (int i = 0; i <= steps; ++i)
-        {
-            for (int j = 0; j < steps; ++j)
-            {
-                const double polar = pi * i / steps;
-                const double azimuth = 2.0 * pi * j / steps;
-                const Three orientation{length * std::sin(polar) * std::cos(azimuth),
-                                        length * std::sin(polar) * std::sin(azimuth),
-                                        length * std::cos(polar)};
-                const double value = returnTime(orientation, kind, c, mu, thickness);
-                smallest = std::min(smallest, value);
-                largest = std::max(largest, value);
-            }
-        }
-        return largest - smallest;
-    }
-
-    double TimeProjection::returnTimeAlongNearTimeAxis(double length, IntermediateRegion::Kind kind,
-                                                      double c, double mu, double thickness)
-    {
-        return returnTime({length, 0.0, 0.0}, kind, c, mu, thickness);
-    }
-
     bool TimeProjection::timeMotionThereMovesNearTime()
     {
         const std::array<int, 3> times = farSideTimeSlots();
@@ -160,11 +124,9 @@ namespace slm
 
     void TimeProjectionSection::run(Report &report) const
     {
-        using Kind = IntermediateRegion::Kind;
         using Character = TimeProjection::Character;
         const double c = 1.0;
         const double mu = 1.0;
-        const double thickness = 2.0;
 
         report.subsection("Which slots are times and which is space, on each side");
         report.check(std::format("  on the near side one slot is timelike, and it is slot {}",
@@ -238,59 +200,16 @@ namespace slm
                              image[0], 1e-12);
         }
 
-        report.subsection("But the orientation reaches the near-side clock by the other route");
-        const double length = 3.0;
-        const double range = TimeProjection::returnTimeRange(length, Kind::None, c, mu, thickness);
-        report.check(std::format("  at fixed length the return time varies by {:.4f} over the "
-                                 "sphere of orientations",
-                                 range),
-                     range > 1e-6);
-        report.check("so an orientation among the far side's three times does place the "
-                     "particle at a different moment here, through the matching "
-                     "rather than through the involution",
-                     range > 1e-6 && !TimeProjection::timeMotionThereMovesNearTime());
-
-        report.subsection("How far the orientation alone can move the return moment");
-        for (double probe : {2.0, 3.0, 5.0})
-        {
-            const double spread = TimeProjection::returnTimeRange(probe, Kind::None, c, mu,
-                                                                   thickness);
-            const double alongNearTime =
-                TimeProjection::returnTimeAlongNearTimeAxis(probe, Kind::None, c, mu, thickness);
-            report.check(std::format("  length {:g} : the reachable spread is {:.4f} against a "
-                                     "return time of {:.4f} along the axis carrying the "
-                                     "near-side time",
-                                     probe, spread, alongNearTime),
-                         spread > 0.0 && alongNearTime > 0.0);
-        }
-        report.check("the spread narrows as the energy vector lengthens, so a "
-                     "faster particle commands a narrower choice of return "
-                     "moments rather than a wider one",
-                     TimeProjection::returnTimeRange(5.0, Kind::None, c, mu, thickness) <
-                         TimeProjection::returnTimeRange(2.0, Kind::None, c, mu, thickness));
-        report.check("the spread is large because it is dominated by orientations "
-                     "that graze the surface, where the normal wavenumber tends to "
-                     "zero and the delay diverges",
-                     TimeProjection::returnTimeRange(3.0, Kind::None, c, mu, thickness) >
-                         10.0 * TimeProjection::returnTimeAlongNearTimeAxis(3.0, Kind::None, c, mu,
-                                                                          thickness));
-        report.check("away from grazing the orientation still moves the return "
-                     "moment, so the effect is not an artefact of the divergence",
-                     std::abs(TimeProjection::returnTime({3.0, 0.0, 0.0}, Kind::None, c, mu,
-                                                          thickness) -
-                              TimeProjection::returnTime({2.0, 2.0, 1.0}, Kind::None, c, mu,
-                                                          thickness)) > 1e-6);
-
         report.subsection("What decides the size of the orientation");
         report.checkNear("the mass shell fixes the length, and rotating within the "
                          "three times leaves it alone",
-                         FarSideMotion::vectorLength(
-                             FarSideMotion::rotateInTimePlane({1.0, 2.0, 2.0}, 1, 0.9)) -
+                         EnergyVector::length(
+                             EnergyVector::rotateInPlane({1.0, 2.0, 2.0}, 1, 0.9)) -
                              3.0,
                          1e-12);
         report.check("so the length is not a free choice of the particle but is "
                      "set by its energy and mass, while the direction is free",
-                     !FarSideMotion::rotationChangesCrossingWavenumber(c, mu, {1.0, 2.0, 2.0}));
+                     !EnergyVector::rotationChangesFrequency(c, mu, {1.0, 2.0, 2.0}));
     }
 
 }
