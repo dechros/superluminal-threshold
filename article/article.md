@@ -49,7 +49,7 @@ aritmetiğini kurar. Sınanan yolun sorusu şudur: parçacık Bölge II'de bir m
 alıp geri döndüğünde, Bölge I'de duran bir gözlemcinin saatinde hangi anda
 görünür.
 
-İki bölgenin tanımını Özet vermişti. **Bölge I**'de bir eksen zaman ve üç eksen
+Özet, iki bölgenin tanımını vermişti. **Bölge I**'de bir eksen zaman ve üç eksen
 mekân eksenidir, **Bölge II**'de ise bunun tersi geçerlidir. İkisini ayıran
 sonlu kalınlıktaki katman **eşik** adını alır. Bu tanıma bir madde daha eklenir.
 Bölge II'de üç zaman ekseni bulunduğundan, o bölgede bir cismin durumu tek bir
@@ -181,8 +181,8 @@ gösterilmiştir.
 ### 1.7 Yolculuk
 
 Parçacığın Bölge II'de yapabilecekleri iki etikete indirgenmiştir: ara bölgenin
-hangi yüzünden çıktığı ve enerji vektörünün ne kadar döndüğü. İkisinin tanımını
-Bölüm 7.5, Bölge I'deki karşılıklarını ise Bölüm 8.1 verir.
+hangi yüzünden çıktığı ve enerji vektörünün ne kadar döndüğü. Bölüm 7.5
+ikisinin tanımını, Bölüm 8.1 ise Bölge I'deki karşılıklarını verir.
 
 Bu iki etiketten çıkan sonuç şudur: Bölge I'in saatinde fark üreten tek hareket,
 tek uzay ekseni boyunca alınan yoldur. Üç zaman ekseni içinde kalan hareketler
@@ -1055,8 +1055,9 @@ farklı bir eşlenik niceliği vardır.
 
 Çalışmanın sonucunu taşıyan eksen de budur. Parçacık bu eksende $s$ kadar
 ilerlerse Bölge I'in saati tam $s$ kadar kayar, çünkü katsayı bire eşittir ve
-diğer üç eksenin aynı yuvaya katkısı tam olarak sıfır kalır. Bunun ispatını
-Bölüm 4.1.1 verir; işaretin nereden geldiğini ise Bölüm 1.2 yazar.
+diğer üç eksenin aynı yuvaya katkısı tam olarak sıfır kalır.
+Bölüm 4.1.1 bunun ispatını verir; Bölüm 1.2 ise işaretin nereden geldiğini
+yazar.
 
 **Dört eksenin özeti.** Parçacık üç eksende serbestçe hareket eder, ama o üç
 eksen saate hiçbir şey taşımaz. Kalan tek eksen saate taşınan her şeyi tek
@@ -1277,7 +1278,7 @@ paketin geçiş sırasında dağılması ayrı bir olgudur.
 Nokta cisim okuması yalnızca Bölge I'de tanımlıdır. Bölge II'de "konum" kavramı
 tek uzay ekseni olan $r$ üzerine daralır ve üç zaman yönü boyunca hiçbir
 karşılığı kalmaz.
-Bölge II'de hareketin ne anlama geldiğini bu nedenle Bölüm 8 karşılar. Konumun
+Bu nedenle Bölüm 8, Bölge II'de hareketin ne anlama geldiğini karşılar. Konumun
 kendisi ise Bölge II'de de tanımlı değildir; Bölüm 14 bunu reddeder.
 
 Sorunun bir katmanı daha vardır. Üç boyutlu bir elektron bulutunun bu tek
@@ -1430,7 +1431,7 @@ tek nicelik, Bölge I'de momentumun yönüdür:
 ### 12.3 Çıkış yüzünü belirleyen nicelik
 
 Bölüm 7.5'in iki etiketinden biri çıkış yüzüydü, ve o bölümde bağımsız bir etiket
-gibi ele alınmıştı. Oysa bağımsız değildir.
+gibi ele alınmıştı. Oysa çıkış yüzü bağımsız bir etiket değildir.
 
 **Kurulum.** Ara bölgeyi geçmek, Bölge II'nin tek uzay ekseni boyunca hareket
 etmek demektir. Parçacığın hangi yüzden çıktığını da o eksendeki dalga sayısının
@@ -1574,7 +1575,7 @@ başlangıç koşulundan gelir.
 bu belirleme parçacığın ara bölgede **ne yaptığına** bağlanmamıştı. Bu bölüm o
 bağlantıyı kurar.
 
-Bölge II'nin dört ekseninin karakterini Bölüm 8.1 vermişti. O bölümdeki tabloya göre
+Bölüm 8.1, Bölge II'nin dört ekseninin karakterini vermişti. O bölümdeki tabloya göre
 bir durum iki parçadan oluşur: üç zaman uzayındaki bir enerji vektörü ve tek uzay
 ekseni boyunca bir dalga sayısı. Parçacığın yapabileceği şey de yalnızca ikiye
 iner:
@@ -1630,8 +1631,8 @@ Bölüm 14 ise sözlüğü kullanarak dönüş olayını hesaplamaktadır.
 
 ### 13.1 Sözlüğün bu bölümde kullanılan biçimi
 
-Dört yuvanın karakterini, hangi yuvaya indiğini ve bir birim adımın Bölge I'in
-saatinde ne ürettiğini Bölüm 8.1 tablo hâlinde vermişti, ve bu bölüm o tabloyu
+Bölüm 8.1, dört yuvanın karakterini, hangi yuvaya indiğini ve bir birim adımın
+Bölge I'in saatinde ne ürettiğini tablo hâlinde vermişti, ve bu bölüm o tabloyu
 tekrarlamaz. Sözlükten yalnızca iki sonuç gerekmektedir. Birincisi, dört yuvanın
 dördü de eşikte karakter değiştirir. İkincisi, buna karşın hareket serbestliği
 yuva yuva aynı kalmaktadır. Parçacık Bölge II'nin üç zamanında ve o üç zamanın
@@ -1808,8 +1809,8 @@ basılı rakam değil listedeki sırası taşır.
 **Varsayım sicili.** Üçüncü denetim, varsayım ileri süren her pasajı bulmakta ve
 her birinin aşağıdaki sicilde bir hükümle yer almasını şart koşmaktadır. Sicilin
 kapsamadığı bir pasaj koşuyu düşürür. Sicilin kendisi kodda değil makalede durur:
-doğrulamanın içinde tek bir bölüm numarası geçmez, hem hüküm sözlüğünü hem sicili
-bu bölümden okur.
+doğrulamanın içinde tek bir bölüm numarası geçmez; doğrulama hem hüküm
+sözlüğünü hem sicili bu bölümden okur.
 
 Üç denetim de bozularak sınanmıştır. Çalışmaya karşılıksız bir atıf eklendi, kaynakça
 listesi silindi, bir künyeye giden tek atıf başka yere çevrildi, ve sicilde yeri
@@ -1944,10 +1945,10 @@ Kimliğini taşıyan bir cismin erken varması ise tanımı gereği bir sinyaldi
 **Yanıt.** İtiraz bir ikilem kurmaktadır, ve ikilem gerçektir. Cisim okuması
 alınırsa nedensel çelişki doğar. Faz okuması alınırsa geriye çıkan paketin
 tepesinin öne düşmesi kalır, o da bilinen bir olgudur. Bu çalışma iki okumayı
-birlikte yürütmekte (Bölüm 10) ve dönüş anını faz okumasından almaktadır. İki
-okumanın hangi koşulda birbirine çevrildiğini Bölüm 10.2 ile 11.4
-vermektedir: paket yeterince dar tutulduğunda çevrim tam işler, ancak dar paket
-kendi kaybını getirir. Dolayısıyla ikilem **kapatılmamıştır**. Kaydedilen şey
+birlikte yürütmekte (Bölüm 10) ve dönüş anını faz okumasından almaktadır.
+Bölüm 10.2 ile 11.4, iki okumanın hangi koşulda birbirine çevrildiğini
+vermektedir: paket yeterince dar tutulduğunda çevrim tam işler, ancak dar
+paket kendi kaybını getirir. Dolayısıyla ikilem **kapatılmamıştır**. Kaydedilen şey
 şudur: faz okumasıyla hesaplanan dönüş anı bir sinyal iddiası taşımaz, ve cisim
 okumasına geçmek için gereken dar paket sınırı Bölüm 10.3'te sayılıdır.
 
