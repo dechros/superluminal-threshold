@@ -18,15 +18,16 @@ tartışılmaktadır, çünkü böyle bir aşma geçmişe ulaşmayı mümkün k�
 [2], [3]. Bu çalışma soruyu bir süreç olarak ele alır ve altı adımda kurar:
 
 1. Parçacık ışık hızının altında, sıradan bir cisim olarak hareket eder.
-2. Işık hızı eşiği yeni bir serbestlik derecesiyle, sürekli bir kuvvetle
-   geçilmektedir.
+2. Parçacık, ışık hızı eşiğini yeni bir serbestlik derecesiyle, sürekli bir
+   kuvvetle geçer.
 3. Geçiş tamamlandığında parçacık ikinci bölgede, ışık hızının üstünde
    bulunur.
-4. İkinci bölgede tek bir eksen boyunca, yine bir kuvvetle, bir mesafe
-   alınmaktadır.
-5. Aynı mekanizma tersine çalıştırılıp parçacık ışığın altına döndürülür.
-6. Alınan mesafenin birinci bölgenin saatinde bıraktığı fark
-   hesaplanmaktadır.
+4. Parçacık ikinci bölgede tek bir eksen boyunca, yine bir kuvvetle, bir
+   mesafe alır.
+5. Aynı türden bir kuvvet tersine uygulanıp parçacığı ışığın altına
+   döndürür.
+6. Bu çalışma, alınan mesafenin birinci bölgenin saatinde bıraktığı farkı
+   hesaplar.
 
 Üçüncü, dördüncü ve altıncı adımların matematiği önceki bir çalışmada
 kurulmuştur. Eşiği geçiren $384$ işaretli permütasyon matrisinin taraması,
@@ -69,8 +70,13 @@ $$g_\mu(\theta) = \eta_\mu \cos(2\theta), \qquad \mu = 0,1,2,3$$
 $\theta = 0$'da $g = \eta$, yani birinci bölgenin metriği çıkar. $\theta =
 \pi/2$'de $g = -\eta$ çıkar: aynı işaret sayısını taşıyan, yalnızca
 eksenlerin yeniden etiketlendiği bir metrik. $\theta = \pi/4$'te ise $g$'nin
-dört bileşeni de birden sıfırlanır; metrik burada dejeneredir, ve bu nokta
-3.1'in kataloğundaki dejenere tabakanın karşılığıdır.
+dört bileşeni de birden sıfırlanır; metrik burada dejeneredir.
+
+Bu nokta ile 3.1'in dejenere tabakası aynı adı taşır, ama aynı nesne
+değildir. Tabaka mekânda bir kalınlık taşır ve dalga onun içinden geçer; bu
+noktanın ise mekânda hiçbir kalınlığı yoktur, yalnızca açının aldığı tek bir
+değerdir. Bu çalışma ikisini birbirinden türetmez, yalnızca ikisinin de
+dejenere olduğunu kaydeder.
 
 Sabit kütleli bir parçacık için gerekli momentümün karesi
 $\cos(2\theta)(E^2/c^2 - \mu)$ olarak yazılır. $E^2/c^2 - \mu \geq 0$ iken bu
@@ -169,8 +175,15 @@ birleşimi kapsar ve hiçbiri hedefine ulaşmadan kalmaz.
 
 ## 6. Eşikten geri dönüş
 
-Dönüş, 3.3'ün kurduğu mekanizmanın aynısıdır, yalnızca $\pi/2$'den başlayıp
-sıfıra inen bacağı okunur. İki bölgeyi bağlayan matris bir involüsyondur:
+Dönüş için, 3.3'ün kurduğu türden bir kuvvet ayrıca ve tersine uygulanır; bu
+kuvvet açının değerini $\pi/2$'den sıfıra indirir. Bu, ileri yöndeki
+kuvvetin kendiliğinden sönmesi değildir, çünkü sabit kuvvet açının artış
+hızını sürekli büyütür, hiç yavaşlatmaz. İki bacağı da sabit kuvvetle
+kurmak, 3.3'ün kapalı formunu yeniden kullanmak için yapılan bir seçimdir.
+İşareti değişen tek bir kuvvetle bütün gidiş dönüş tek bir uygulamada da
+kurulabilir; ama bu çalışma o genellemeyi yapmaz.
+
+İki bölgeyi bağlayan matris bir involüsyondur:
 $D^2=I$'dir, $S$'nin kendisi de $S^2=I$ sağlar, dolayısıyla iki kez
 uygulanan geçiş dört-momentümün dört bileşenini de başlangıç değerine
 döndürmektedir. Parçacık geri döndüğünde enerjisi, momentümünün büyüklüğü ve
