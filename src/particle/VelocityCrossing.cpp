@@ -251,6 +251,30 @@ namespace slm
                          VelocityCrossing::metricScale(speed) < 0.0 && theta > kPi / 4.0);
         }
 
+        report.subsection("Light speed is passed at a rate that does not vanish");
+        const double step = 1e-7;
+        for (double testForce : {0.05, 0.4, 3.0})
+        {
+            const double at = VelocityCrossing::luminalParameter(c, mu, testForce);
+            const double rate = (ContinuousCrossing::theta(c, mu, testForce, at + step) -
+                                 ContinuousCrossing::theta(c, mu, testForce, at - step)) /
+                                (2.0 * step);
+            report.checkNear(std::format("  accelerating force {:g} : the angle advances through "
+                                         "light speed at {:.6f}, which is the momentum the shell "
+                                         "demands there divided by the speed of light",
+                                         testForce, rate),
+                             rate - VelocityCrossing::momentumAtLightSpeed(c, mu, testForce) /
+                                        (c * c),
+                             1e-6);
+            report.check("    and the rate is bounded away from zero, unlike the standard "
+                         "shell's, which stalls",
+                         rate > 0.5 * std::sqrt(mu) / c);
+        }
+        report.check("so the degenerate angle is passed transversally and the particle spends no "
+                     "parameter at it, which is the same conclusion the wall reading reached by "
+                     "its own route and does not need that reading to hold",
+                     VelocityCrossing::luminalParameter(c, mu, force) > 0.0);
+
         report.subsection("The involution is the reflection of the angle about light speed");
         for (double beta : {0.25, 0.5, 0.9, 2.0, 4.0})
         {
