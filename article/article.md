@@ -2,20 +2,21 @@
 
 ## Özet
 
-Kütleli bir parçacığın ışık hızı eşiğini geçip geri dönmesi tek bir süreç
-olarak kurulur: parçacık ışığın altında başlar, eşiği sürekli bir kuvvetle
-geçer, ikinci bölgede bir mesafe alır, aynı kuvvetle geri döner, ve birinci
-bölgenin saatinde bıraktığı farkı taşır. Parçacık eşiği yeni bir serbestlik
-derecesiyle, eşik açısıyla, aşar; bu açıyı sabit kütle değil sabit bir kuvvet
-sürer, ve enerji hiçbir noktada sonsuza gitmez. İkinci bölgede alınan bir
-metrelik yol, dönüşü kalkıştan $3{,}34\times 10^{-9}$ saniye öne
-çekmektedir.
+Bu çalışma, kütleli bir parçacığın ışık hızı eşiğini geçip geri dönmesini
+tek bir süreç olarak kurar: parçacık ışığın altında başlar, eşiği sürekli
+bir kuvvetle geçer, ikinci bölgede bir mesafe alır, aynı kuvvetle geri
+döner, ve birinci bölgenin saatinde bıraktığı farkı taşır. Parçacık eşiği
+yeni bir serbestlik derecesiyle, eşik açısıyla, aşar; bu açıyı sabit kütle
+değil sabit bir kuvvet sürer, ve enerji hiçbir noktada sonsuza gitmez.
+İkinci bölgede alınan bir metrelik yol, dönüşü kalkıştan
+$3{,}34\times 10^{-9}$ saniye öne çekmektedir.
 
 ## 1. Giriş
 
-Kütleli bir parçacığın ışık hızı eşiğini aşıp aşamayacağı sorusu uzun süredir
-tartışılmaktadır, çünkü böyle bir aşma geçmişe ulaşmayı mümkün kılar [1],
-[2], [3]. Bu çalışma soruyu bir süreç olarak ele alır ve altı adımda kurar:
+Literatür, kütleli bir parçacığın ışık hızı eşiğini aşıp aşamayacağı
+sorusunu uzun süredir tartışmaktadır, çünkü böyle bir aşma geçmişe ulaşmayı
+mümkün kılar [1], [2], [3]. Bu çalışma soruyu bir süreç olarak ele alır ve
+altı adımda kurar:
 
 1. Parçacık ışık hızının altında, sıradan bir cisim olarak hareket eder.
 2. Parçacık, ışık hızı eşiğini yeni bir serbestlik derecesiyle, sürekli bir
@@ -24,22 +25,23 @@ tartışılmaktadır, çünkü böyle bir aşma geçmişe ulaşmayı mümkün k�
    bulunur.
 4. Parçacık ikinci bölgede tek bir eksen boyunca, yine bir kuvvetle, bir
    mesafe alır.
-5. Aynı türden bir kuvvet tersine uygulanıp parçacığı ışığın altına
+5. Aynı türden bir kuvvet, bu kez tersine, parçacığı ışığın altına
    döndürür.
 6. Bu çalışma, alınan mesafenin birinci bölgenin saatinde bıraktığı farkı
-   hesaplar.
+   hesaplamıştır.
 
-Üçüncü, dördüncü ve altıncı adımların matematiği önceki bir çalışmada
-kurulmuştur. Eşiği geçiren $384$ işaretli permütasyon matrisinin taraması,
+Önceki bir çalışma, üçüncü, dördüncü ve altıncı adımların matematiğini
+kurmuştur: eşiği geçiren $384$ işaretli permütasyon matrisinin taraması,
 ikinci bölgedeki sabit kuvvetle sürülen hareket, ve alınan mesafeyi saat
 farkına çeviren katsayının bire eşit çıkması bu adımları taşımaktadır. Bu
-çalışmanın eklediği adımlar ikincisi ve beşincisidir: eşiğin kendisinin süreç
-içinde, tekillik taşımadan nasıl geçildiği.
+çalışmanın eklediği adımlar ikincisi ve beşincisidir: parçacığın eşiği,
+süreç içinde ve tekillik taşımadan, nasıl geçtiği.
 
 ## 2. Birinci bölgede sıradan hareket
 
-Birinci bölgenin koordinatları $(ct, x, y, z)$, metriği
-$\eta = \mathrm{diag}(+1,-1,-1,-1)$ ile yazılır. Kütleli bir parçacığın
+Süreç, birinci bölgedeki sıradan hareketle başlar. Bu çalışma, birinci
+bölgenin koordinatlarını $(ct, x, y, z)$, metriğini
+$\eta = \mathrm{diag}(+1,-1,-1,-1)$ ile yazar. Kütleli bir parçacığın
 dispersiyon bağıntısı
 
 $$\omega(k) = c\sqrt{k^2 + \mu}, \qquad \mu = \left(\frac{mc}{\hbar}\right)^2$$
@@ -47,14 +49,14 @@ $$\omega(k) = c\sqrt{k^2 + \mu}, \qquad \mu = \left(\frac{mc}{\hbar}\right)^2$$
 biçimindedir; $\omega$ frekansı, $k$ dalga sayısını, $\mu$ kütle
 parametresini taşır. Grup hızı $v_{\text{grup}} = d\omega/dk$, $k\to\infty$
 limitinde $c$'ye yaklaşır ve hiçbir sonlu $k$'de onu aşmaz. Aşağıdaki
-bölümler bu sınırı aşan bir sürecin nasıl kurulduğunu göstermektedir.
+bölümler, bu sınırı aşan süreci kurar.
 
 ## 3. Işık hızı eşiği
 
 ### 3.1 Ara bölgenin dört adayı
 
-Eşiğin kendisi kalınlıksız bir yüzey değil, kendi imzası olan bir bölge
-olarak ele alınır. Dört aday taranmıştır: hiç ara bölge olmaması, enine
+Bu çalışma eşiğin kendisini kalınlıksız bir yüzey değil, kendi imzası olan
+bir bölge olarak ele alır. Bu çalışma dört adayı tarar: hiç ara bölge olmaması, enine
 yönlerin teker teker çevrildiği kademeli bir yol, dördünün birden çevrildiği
 Öklidyen bir katman, ve metriğin tersinin bulunmadığı dejenere bir tabaka.
 Kademeli yolun durağı, yalnızca bir enine yönün çevrildiği ara katmandır; bu
@@ -76,10 +78,10 @@ Bu nokta ile 3.1'in dejenere tabakası aynı adı taşır, ama aynı nesne
 değildir. Tabaka mekânda bir kalınlık taşır ve dalga onun içinden geçer; bu
 noktanın ise mekânda hiçbir kalınlığı yoktur, yalnızca açının aldığı tek bir
 değerdir. Bu çalışma ikisini birbirinden türetmez, yalnızca ikisinin de
-dejenere olduğunu kaydeder.
+dejenere olduğunu kaydetmiştir.
 
-Sabit kütleli bir parçacık için gerekli momentümün karesi
-$\cos(2\theta)(E^2/c^2 - \mu)$ olarak yazılır. $E^2/c^2 - \mu \geq 0$ iken bu
+Bu çalışma, sabit kütleli bir parçacık için gerekli momentümün karesini
+$\cos(2\theta)(E^2/c^2 - \mu)$ olarak yazar. $E^2/c^2 - \mu \geq 0$ iken bu
 ifade $\theta < \pi/4$ için sıfırdan büyük, $\theta > \pi/4$ için negatif
 çıkar. Sınanan sekiz açı değerinin dördü bunu sıfırdan büyük, kalan dördü
 negatif vermiştir. Kütlesi sabit tutulan bir parçacığın eşik açısı, dejenere
@@ -91,19 +93,19 @@ yüzden parçacığı eşikten geçirmez; geçiren şey ayrı bir mekanizmadır.
 Çok zamanlı fizikte bir parçacığa kuvvet ekleyen olgun bir program
 $Sp(2,\mathbb{R})$ ayar simetrisidir [5]. Bu program kısıta eklenen terimi
 belirli bir dereceye sıkıştırır ve keyfi bir potansiyele izin vermez. Bunun
-yerine kısıtlı Hamiltonyen mekaniğinin standart yolu, ayar simetrisi yerine
-varsayılır: eşik açısının kendi kütle kabuğuna doğrudan bir potansiyel
-eklenmiştir.
+yerine bu çalışma, kısıtlı Hamiltonyen mekaniğinin standart yolunu, ayar
+simetrisi yerine varsayar: eşik açısının kendi kütle kabuğuna doğrudan bir
+potansiyel eklemiştir.
 
 $$\mu_\theta + 2F\theta - \frac{p_\theta^2}{c^2} = 0$$
 
 $p_\theta$, $\theta$'ya eşlenik momentümü taşır; $F$ sabit bir kuvvettir.
-Hamilton denklemleri kapalı formda çözülür. Giriş momentümü $\theta=0$'daki
-negatif kök alınır, çünkü bu kök $\theta$'yı artan yöne taşır. $F>0$ iken
-$p_\theta$ sabit hızla azalır, dolayısıyla $\theta$'nın artış hızı hiç
-durmadan büyür ve hiçbir dönüş noktası yoktur. Dejenere nokta $\theta=\pi/4$
-bu denklemde özel bir ağırlık taşımaz, çünkü sürücü terim $\theta$ ile
-çarpımsal değil doğrusaldır.
+Bu çalışma Hamilton denklemlerini kapalı formda çözer. Giriş momentümü
+için $\theta=0$'daki negatif kökü alır, çünkü bu kök $\theta$'yı artan
+yöne taşır. $F>0$ iken $p_\theta$ sabit hızla azalır, dolayısıyla
+$\theta$'nın artış hızı hiç durmadan büyür ve hiçbir dönüş noktası yoktur.
+Dejenere nokta $\theta=\pi/4$ bu denklemde özel bir ağırlık taşımaz, çünkü
+sürücü terim $\theta$ ile çarpımsal değil doğrusaldır.
 
 Herhangi bir hedef açı için, oraya ulaşılan yörünge parametresi kapalı
 formda çıkar ve her zaman gerçel, sonlu ve pozitiftir. Sınama üç kütle
@@ -113,12 +115,12 @@ $\pi/2$'den geriye doğru okunduğunda, yani $\pi/2$ ile açının farkı
 alındığında, sıfıra düşen ikinci bir yörünge verir; ikinci yörünge
 birincisiyle aynı yörünge parametresinde sıfıra ulaşmıştır.
 
-**Kuvvetin kaynağı.** $F$'nin kendisi bu çalışmada türetilmez, önesürülür.
-İki zamanlı fizik yazınının etkileşimli alan kuramları, aynı kısıta tam bu
-türden doğrusal bir terim ekleyerek arka plan alanlarını tanımlamaktadır
-[6]. Kuvvetin bu tür bir arka plan alanından geldiği varsayılır; hangi alan
-olduğu, alanın kendi denklemi ve kaynağı ayrı birer sorudur ve bu çalışmanın
-kapsamı dışında kalır.
+**Kuvvetin kaynağı.** Bu çalışma $F$'yi türetmez, önesürür. İki zamanlı
+fizik yazınının etkileşimli alan kuramları, aynı kısıta tam bu türden
+doğrusal bir terim ekleyerek arka plan alanlarını tanımlamaktadır [6]. Bu
+çalışma, kuvvetin bu tür bir arka plan alanından geldiğini varsayar; hangi
+alan olduğu, alanın kendi denklemi ve kaynağı ayrı birer sorudur ve bu
+çalışmanın kapsamı dışında kalır.
 
 ## 4. İkinci bölgeye geçiş
 
@@ -127,11 +129,11 @@ bölgenin koordinatları $(t_1, t_2, t_3, r)$, metriği
 $\eta' = \mathrm{diag}(+1,+1,+1,-1)$'dir; $t_1$, $t_2$, $t_3$ zaman
 eksenini, $r$ ise tek uzay eksenini taşımaktadır.
 
-İki bölgeyi birbirine bağlayan ayrık dönüşüm, işaretli permütasyon
-matrislerinin tamamı taranarak bulunmuştur; bu dönüşüm klasik takyon
-kuramının superboost kavramıyla aynı ailededir [4]. Aday sayısı $4!$
-permütasyon ile $2^4$ işaret bileşiminin çarpımından çıkar, yani $384$
-matris denenmiştir.
+Bu çalışma, iki bölgeyi birbirine bağlayan ayrık dönüşümü, işaretli
+permütasyon matrislerinin tamamını tarayarak bulmuştur; bu dönüşüm klasik
+takyon kuramının superboost kavramıyla aynı ailededir [4]. Aday sayısı
+$4!$ permütasyon ile $2^4$ işaret bileşiminin çarpımından çıkar, yani bu
+çalışma $384$ matrisi denemiştir.
 
 | Filtre | Kalan aday |
 | ---------------------------------- | ---------- |
@@ -140,13 +142,17 @@ matris denenmiştir.
 | ve $\det=+1$ | 8 |
 
 Kalan sekiz matrisin tamamı birinci bölgenin zamanını ikinci bölgenin tek
-uzay eksenine göndermektedir. Sekizi, ikinci bölgeye atılan bir birim adımı
-birinci bölgenin saatinde hangi yöne taşıdıklarına göre dörde dört ayrılır:
-dördü daha geç bir ana, dördü daha erken bir ana gönderir. Bu çalışmanın
-sonucunu taşıyan hesaplar, geriye taşıyan dörtlüden $SD$ matrisi üzerinde
-tanımlıdır; bu seçim üç filtreden çıkmaz, ayrıca kararlaştırılmıştır.
+uzay eksenine göndermektedir. Bu çalışma sekizini, ikinci bölgeye atılan bir
+birim adımı birinci bölgenin saatinde hangi yöne taşıdıklarına göre dörde
+dört ayırır: dördü daha geç bir ana, dördü daha erken bir ana gönderir. Bu
+çalışmanın sonucunu taşıyan hesaplar, geriye taşıyan dörtlüden $SD$
+matrisi üzerinde tanımlıdır; bu seçim üç filtreden çıkmaz, bu çalışma onu
+ayrıca kararlaştırmıştır.
 
 ## 5. İkinci bölgede mekânda ilerleyiş
+
+Bölge II'ye giren parçacık, orada tek gerçek mekân ekseni boyunca
+ilerlemelidir.
 
 ### 5.1 Hız sınırı
 
@@ -162,8 +168,8 @@ sınırı vardır, ve o sınır birinci bölgeninkiyle aynı sayıdır.
 
 ### 5.2 Sabit kuvvetle sürülen $r$ hareketi
 
-Serbest kısıt $k_1^2+k_2^2+k_3^2-q^2/c^2+\mu=0$, $r$ ekseni boyunca bir
-kuvvet eklenerek genişletilir:
+Bu çalışma serbest kısıtı $k_1^2+k_2^2+k_3^2-q^2/c^2+\mu=0$, $r$ ekseni
+boyunca bir kuvvet ekleyerek genişletir:
 
 $$k_1^2+k_2^2+k_3^2-\frac{q^2}{c^2}+\mu+2Fr=0$$
 
@@ -175,59 +181,62 @@ birleşimi kapsar ve hiçbiri hedefine ulaşmadan kalmaz.
 
 ## 6. Eşikten geri dönüş
 
-Dönüş için, 3.3'ün kurduğu türden bir kuvvet ayrıca ve tersine uygulanır; bu
-kuvvet açının değerini $\pi/2$'den sıfıra indirir. Bu, ileri yöndeki
-kuvvetin kendiliğinden sönmesi değildir, çünkü sabit kuvvet açının artış
-hızını sürekli büyütür, hiç yavaşlatmaz. İki bacağı da sabit kuvvetle
-kurmak, 3.3'ün kapalı formunu yeniden kullanmak için yapılan bir seçimdir.
-İşareti değişen tek bir kuvvetle bütün gidiş dönüş tek bir uygulamada da
-kurulabilir; ama bu çalışma o genellemeyi yapmaz.
+Parçacık hedef mesafeye ulaştıktan sonra dönüş başlar. 3.3'ün kurduğu
+türden bir kuvvet, bu kez tersine, açının değerini $\pi/2$'den sıfıra
+indirir. Bu, ileri yöndeki kuvvetin kendiliğinden sönmesi değildir, çünkü
+sabit kuvvet açının artış hızını sürekli büyütür, hiç yavaşlatmaz. İki
+bacağı da sabit kuvvetle kurmak, 3.3'ün kapalı formunu yeniden kullanmak
+için yapılan bir seçimdir. İşareti değişen tek bir kuvvet, bütün gidiş
+dönüşü tek bir uygulamada da kurabilir; ama bu çalışma o genellemeyi
+yapmaz.
 
-İki bölgeyi bağlayan matris bir involüsyondur:
-$D^2=I$'dir, $S$'nin kendisi de $S^2=I$ sağlar, dolayısıyla iki kez
-uygulanan geçiş dört-momentümün dört bileşenini de başlangıç değerine
-döndürmektedir. Parçacık geri döndüğünde enerjisi, momentümünün büyüklüğü ve
-kütlesi tam olarak korunur. Korunmayan tek şey yöndür, çünkü ikinci
-bölgedeki üç zaman ekseni arasında bir $O(3)$ dönmesi birinci bölgede bir
-sapma olarak görünebilir.
+İki bölgeyi bağlayan matris bir involüsyondur: $D^2=I$'dir, $S$'nin
+kendisi de $S^2=I$ sağlar, dolayısıyla iki kez uygulanan geçiş
+dört-momentümün dört bileşenini de başlangıç değerine döndürmektedir. Bu
+involüsyon özelliği, parçacık geri döndüğünde enerjisini, momentümünün
+büyüklüğünü ve kütlesini tam olarak korur. Korunmayan tek şey yöndür,
+çünkü ikinci bölgedeki üç zaman ekseni arasında bir $O(3)$ dönmesi
+birinci bölgede bir sapma olarak görünebilir.
 
 ## 7. Zamanda gidilen mesafe
 
-İkinci bölgenin tek uzay ekseninde alınan $s$ kadar yol, birinci bölgenin
-saatinde tam olarak $s$ kadar fark üretir. Katsayı sekiz geçişin tamamında
-bire eşit çıkmıştır ve diğer üç eksenin aynı yuvaya katkısı sıfırdır. İşaret,
-seçilen $SD$ matrisinin geriye taşıyan ailesinden gelir. Dönüş anı
+Bu geri dönüşün asıl sonucu, saatte bıraktığı farktır. İkinci bölgenin tek
+uzay ekseninde alınan $s$ kadar yol, birinci bölgenin saatinde tam olarak
+$s$ kadar fark üretir. Katsayı sekiz geçişin tamamında bire eşit
+çıkmıştır ve diğer üç eksenin aynı yuvaya katkısı sıfırdır. İşaret,
+seçilen $SD$ matrisinin geriye taşıyan ailesinden gelir. Dönüş anı şu
+değeri alır:
 
 $$t_{\text{dönüş}} = 2\tau - s$$
 
-biçiminde yazılır; $\tau$ değeri tek bir geçişin bedelini, $s$ değeri ise
-ikinci bölgede alınan mesafeyi taşır.
+$\tau$ değeri tek bir geçişin bedelini, $s$ değeri ise ikinci bölgede
+alınan mesafeyi taşır.
 
 Bir metrelik bir hedef, dönüşü $3{,}34\times 10^{-9}$ saniye öne çeken bir
 farka karşılık gelmektedir; bu fark kütleden ve enerji vektöründen
 bağımsızdır, çünkü katsayı geometriden çıkar. Bir yıllık bir öne çekme ise
-bir ışık yılı, yani $9{,}46\times 10^{15}$ metrelik bir yol gerektirir.
+bir ışık yılı, yani $9{,}46\times 10^{15}$ metrelik bir yol gerektirmiştir.
 
 ## 8. Yöntem ve deney
 
-Bu bölüm hangi varsayımların çalışmaya girdiğini değil, doğrulamanın nasıl
-kurulduğunu anlatır. Bu çalışmadaki her sayısal ve cebirsel iddia, C++ ile
-kurulmuş bir doğrulamaya karşılık gelir; doğrulamalar genel amaçlı
-kütüphaneler hâlinde durur ve üzerlerinde bir test takımı çalışır. Makale
-hiçbir dosya ya da sınıf adı anmaz, kod da hiçbir bölüm ya da kaynak numarası
-anmaz; bağ çalışma zamanında, makale metnini okuyan ayrı bir denetimle
-kurulmaktadır.
+Bu sonucun nasıl sınandığı ayrı bir sorudur. Bu bölüm hangi varsayımların
+çalışmaya girdiğini değil, bu çalışmanın doğrulamayı nasıl kurduğunu
+anlatır. Bu çalışmadaki her sayısal ve cebirsel iddia, C++ ile kurulmuş
+bir doğrulamaya karşılık gelir; doğrulamalar genel amaçlı kütüphaneler
+hâlinde durur ve üzerlerinde bir test takımı çalışır. Makale hiçbir dosya
+ya da sınıf adı anmaz, kod da hiçbir bölüm ya da kaynak numarası anmaz;
+bağı ise çalışma zamanında, makale metnini okuyan ayrı bir denetim
+kurmaktadır.
 
 Doğrudan bir sınama tek bir orantıya dayanır: Bölge II'de alınan $s$ kadar
 mesafe, dönüşü tam olarak $s$ kadar öne çekmektedir (Bölüm 7), ve bu oran
-$s$'nin büyüklüğünden bağımsız sabit kalır. Sınamanın gerektirdiği zaman
-farkı bu yüzden istenildiği kadar büyütülebilir; ölçüm büyüklüğü bir engel
-taşımaz.
+$s$'nin büyüklüğünden bağımsız sabit kalır. $s$ büyüdükçe zaman farkı da
+istenildiği kadar büyür; ölçüm büyüklüğü bir engel taşımaz.
 
-İkincil bir iz de vardır: parçacık ikinci bölgede bir $O(3)$ dönmesi geçirip
-geri dönerse, birinci bölgede aynı enerjiyle, aynı süratle, ama farklı bir
-yöne bakarak görünür (Bölüm 6). Bu iz kavramsal düzeyde kalır; sapmanın
-büyüklüğünü veren bir hesap bu çalışmada kurulmamıştır.
+İkincil bir iz de vardır: parçacık ikinci bölgede bir $O(3)$ dönmesi
+geçirip geri dönerse, birinci bölgede aynı enerjiyle, aynı süratle, ama
+farklı bir yöne bakarak görünür (Bölüm 6). Bu iz kavramsal düzeyde kalır;
+bu çalışma sapmanın büyüklüğünü veren bir hesap kurmamıştır.
 
 **Hüküm sözlüğü.**
 
