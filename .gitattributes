@@ -1,20 +1,13 @@
 # Line endings are pinned so a checkout reproduces what was committed.
 #
-# The verification reads the manuscript and refuses stray control characters,
-# which is what catches a markup macro silently turned into the character its
-# escape names. A carriage return is such a character. The committed blobs hold
-# line feeds only, but git converts them on checkout wherever core.autocrlf is
-# left at its Windows default, and the run then fails on a clean clone with one
-# carriage return per line and nothing wrong with the repository.
-#
-# Pinning the working-tree ending here makes the checkout independent of whoever
-# is checking out. Nothing is rewritten by this: the blobs are already line feed.
+# The committed blobs hold line feeds only, but git converts them on checkout
+# wherever core.autocrlf is left at its Windows default. Pinning the
+# working-tree ending here makes the checkout independent of whoever is
+# checking out. Nothing is rewritten by this: the blobs are already line feed.
 
 *.md        text eol=lf
 *.cpp       text eol=lf
 *.h         text eol=lf
-*.py        text eol=lf
-*.tex       text eol=lf
 *.yaml      text eol=lf
 Makefile    text eol=lf
 .gitignore  text eol=lf
