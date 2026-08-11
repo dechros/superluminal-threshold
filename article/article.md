@@ -205,12 +205,11 @@ hiçbir dosya ya da sınıf adı anmaz, kod da hiçbir bölüm ya da kaynak numa
 anmaz; bağ çalışma zamanında, makale metnini okuyan ayrı bir denetimle
 kurulmaktadır.
 
-Doğrudan bir sınama tek bir sayıya dayanır: bir metrelik bir geçiş, dönüşü
-$3{,}34\times 10^{-9}$ saniye öne çekmektedir (Bölüm 7). Bu büyüklükteki bir
-zaman farkı, bugünkü en hassas atom saatleriyle prensipte ölçülebilir bir
-aralıktadır [7]; ölçümün önündeki engel hassasiyet değildir. Önündeki engel,
-3.3'ün önesürdüğü $F$ kuvvetinin nasıl üretileceğidir. Bu çalışma o üretimi
-kurmaz, yalnızca üretilirse dönüş anında ne okunacağını hesaplar.
+Doğrudan bir sınama tek bir orantıya dayanır: Bölge II'de alınan $s$ kadar
+mesafe, dönüşü tam olarak $s$ kadar öne çekmektedir (Bölüm 7), ve bu oran
+$s$'nin büyüklüğünden bağımsız sabit kalır. Sınamanın gerektirdiği zaman
+farkı bu yüzden istenildiği kadar büyütülebilir; ölçüm büyüklüğü bir engel
+taşımaz.
 
 İkincil bir iz de vardır: parçacık ikinci bölgede bir $O(3)$ dönmesi geçirip
 geri dönerse, birinci bölgede aynı enerjiyle, aynı süratle, ama farklı bir
@@ -245,5 +244,3 @@ büyüklüğünü veren bir hesap bu çalışmada kurulmamıştır.
    Phys. Rev. D **62** (2000) 105018. arXiv:hep-th/0002140
 6. I. Bars, Y.-C. Kuo. *Interacting two-time physics field theory with a BRST
    gauge invariant action*. arXiv:hep-th/0605267
-7. A. D. Ludlow, M. M. Boyd, J. Ye, E. Peik, P. O. Schmidt. *Optical atomic
-   clocks*. Rev. Mod. Phys. **87** (2015) 637.
