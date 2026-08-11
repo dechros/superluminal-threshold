@@ -3,7 +3,7 @@
 ## Özet
 
 Bu çalışma, kütleli bir parçacığın ışık hızı eşiğini geçip geri dönmesini
-tek bir süreç olarak kurar: parçacık ışığın altında başlar, eşiği sürekli
+tek bir süreç olarak ele alır: parçacık ışığın altında başlar, eşiği sürekli
 bir kuvvetle geçer, ikinci bölgede bir mesafe alır, aynı kuvvetle geri
 döner, ve birinci bölgenin saatinde bıraktığı farkı taşır. Parçacık eşiği
 yeni bir serbestlik derecesiyle, eşik açısıyla, aşar; bu açıyı sabit kütle
@@ -49,7 +49,7 @@ $$\omega(k) = c\sqrt{k^2 + \mu}, \qquad \mu = \left(\frac{mc}{\hbar}\right)^2$$
 biçimindedir; $\omega$ frekansı, $k$ dalga sayısını, $\mu$ kütle
 parametresini taşır. Grup hızı $v_{\text{grup}} = d\omega/dk$, $k\to\infty$
 limitinde $c$'ye yaklaşır ve hiçbir sonlu $k$'de onu aşmaz. Aşağıdaki
-bölümler, bu sınırı aşan süreci kurar.
+bölümler, bu sınırı aşan süreci anlatır.
 
 ## 3. Işık hızı eşiği
 
