@@ -1,13 +1,17 @@
 #include "particle/AcceleratedCrossing.h"
 #include "particle/ContinuousCrossing.h"
 #include "scan/DirectionFamily.h"
+#include "scan/HandednessSelection.h"
 #include "scan/PermutationScan.h"
 #include "core/Report.h"
 #include "core/Section.h"
 #include "dynamics/Dispersion.h"
 #include "dynamics/ThresholdField.h"
+#include "intermediate/DegenerateWindow.h"
 #include "intermediate/IntermediateRegion.h"
+#include "mechanism/ThresholdWall.h"
 #include "particle/TimeProjection.h"
+#include "transform/RelabellingObstruction.h"
 #include "transform/SignatureInvolution.h"
 #include "units/PhysicalScales.h"
 
@@ -22,10 +26,14 @@ namespace
     {
         std::vector<std::unique_ptr<slm::Section>> sections;
         sections.push_back(std::make_unique<slm::SignatureInvolution>());
+        sections.push_back(std::make_unique<slm::RelabellingObstructionSection>());
         sections.push_back(std::make_unique<slm::IntermediateRegionSection>());
         sections.push_back(std::make_unique<slm::PermutationScan>());
         sections.push_back(std::make_unique<slm::DirectionFamily>());
+        sections.push_back(std::make_unique<slm::HandednessSelectionSection>());
         sections.push_back(std::make_unique<slm::ThresholdFieldSection>());
+        sections.push_back(std::make_unique<slm::ThresholdWallSection>());
+        sections.push_back(std::make_unique<slm::DegenerateWindowSection>());
         sections.push_back(std::make_unique<slm::ContinuousCrossingSection>());
         sections.push_back(std::make_unique<slm::DispersionSection>());
         sections.push_back(std::make_unique<slm::PhysicalScalesSection>());
