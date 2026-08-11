@@ -1,4 +1,4 @@
-# Eşik hızının sürekli geçişi ve saatteki fark
+# Parçacığın ışık hızını geçip dönüşte bıraktığı fark
 
 ## Özet
 
