@@ -5,11 +5,19 @@
 namespace slm
 {
 
-    /// The threshold as a domain wall, which is what replaces the posited
-    /// force with something that solves an equation.
+    /// The threshold as a domain wall, which is an alternative reading of the
+    /// constant @f$ F @f$ and is not the mechanism this project uses.
     ///
-    /// The crossing angle is treated as a real scalar field rather than as a
-    /// coordinate the particle carries. The field has the potential
+    /// The mechanism is accelerating and decelerating the particle, and
+    /// @ref VelocityCrossing carries it: the crossing angle is the particle's
+    /// own speed through @f$ \beta = \tan\theta @f$, and @f$ F @f$ is the
+    /// accelerating force. This section reads the same constant differently, as
+    /// a coupling to a scalar condensate, and the two readings cannot both be
+    /// true of one apparatus. What is kept here is the geometry the reading
+    /// fixes and the arithmetic that checks it, not a second way across.
+    ///
+    /// Under that reading the crossing angle is a real scalar field rather than
+    /// a coordinate the particle carries. The field has the potential
     /// @f$ U(\theta) = \Lambda^4 \sin^2 2\theta @f$, whose minima sit at
     /// @f$ \theta = 0 @f$ and @f$ \theta = \pi/2 @f$ and whose single maximum
     /// between them sits at @f$ \theta = \pi/4 @f$. The two minima are the two
@@ -26,10 +34,10 @@ namespace slm
     /// the degenerate point, so a particle crossing the wall spends its least
     /// time where the metric is worst.
     ///
-    /// What remains posited is the field itself: its potential scale, its
-    /// stiffness, and the coupling by which a particle feels it. Those are the
-    /// ordinary ingredients of a scalar sector rather than a force invented for
-    /// one trajectory, and that is the whole of the improvement claimed here.
+    /// Read as a mechanism this would leave the field itself posited: its
+    /// potential scale, its stiffness, and the coupling by which a particle
+    /// feels it. The project does not read it that way, and states the reading
+    /// here only to keep the alternative on the record.
     class ThresholdWall
     {
     public:
@@ -66,11 +74,12 @@ namespace slm
         /// crossing angle @p theta, given a linear coupling @p force to the
         /// field: @f$ \mu(\theta) = \mu + 2 F \theta @f$.
         ///
-        /// This is the whole of the mechanism on the particle's side. A linear
-        /// coupling to the field is an ordinary Yukawa term, and the constant
-        /// that the earlier work applied as a force is one half the slope of
-        /// this mass parameter. The force was never a force; it was a mass that
-        /// depends on where the particle stands in the wall.
+        /// A linear coupling to the field is an ordinary Yukawa term, and one
+        /// half the slope of this mass parameter is numerically the constant the
+        /// crossing sections use. The agreement is arithmetic and does not
+        /// settle what the constant is: the project reads it as the accelerating
+        /// force, and reads a particle standing in a wall as the alternative it
+        /// declines.
         static double massParameter(double mu, double force, double theta);
 
         /// The factor by which a particle's rest energy grows between the two
@@ -85,13 +94,14 @@ namespace slm
 
     /// Section verifying that the kink solves the field equation, that its
     /// degenerate point is crossed at maximum speed, and that the coupling
-    /// reproduces the mass shell the earlier sections assumed.
+    /// reproduces the mass shell the earlier sections assumed. The section
+    /// establishes an alternative reading and not the mechanism.
     class ThresholdWallSection : public Section
     {
     public:
         std::string title() const override
         {
-            return "The threshold as a domain wall, so that the crossing follows from a field equation rather than from an applied force";
+            return "The threshold as a domain wall, an alternative reading of the same constant that the project does not use as its mechanism";
         }
         void run(Report &report) const override;
     };

@@ -195,7 +195,7 @@ namespace slm
                      ThresholdWall::distanceToReach(width, 1e-8) <
                          3.0 * ThresholdWall::distanceToReach(width, 1e-3));
 
-        report.subsection("The applied force was a mass that depends on the angle");
+        report.subsection("Under this reading the constant would be a mass that depends on the angle");
         const double mu = 1.0;
         const double force = 0.4;
         for (double theta : {0.0, 0.3, kPi / 4.0, 1.2, kPi / 2.0})
