@@ -12,8 +12,6 @@
 #include "units/PhysicalScales.h"
 
 #include <exception>
-#include <fstream>
-#include <iomanip>
 #include <iostream>
 #include <memory>
 #include <vector>
@@ -46,23 +44,6 @@ namespace
         std::cout << "################################################################\n";
     }
 
-    /// Writes the numbers the article quotes from a calculation, so the
-    /// Python-side article checks (tools/check_article.py) can hold the
-    /// text to them without duplicating the formula that produces them.
-    /// This is the one bridge between the two halves of the test suite: the
-    /// article-analysis half asks only "does the text still agree with
-    /// this file", never "how was this file's number computed".
-    void writeQuotations()
-    {
-        std::ofstream out("build/quotations.json");
-        out << std::setprecision(17);
-        out << "{\n";
-        out << "  \"the light-year distance a year of advance costs\": "
-            << slm::PhysicalScales::distanceForAdvance(3.155695e7) << ",\n";
-        out << "  \"the nanoseconds a metre of far-side travel buys\": "
-            << slm::PhysicalScales::advanceForDistance(1.0) * 1e9 << "\n";
-        out << "}\n";
-    }
 }
 
 int main()
@@ -81,7 +62,6 @@ int main()
         }
 
         report.summary();
-        writeQuotations();
         return report.allPassed() ? 0 : 1;
     }
     catch (const std::exception &error)
