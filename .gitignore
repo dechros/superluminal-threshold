@@ -69,11 +69,10 @@ vgcore.*
 Thumbs.db
 desktop.ini
 
-# ---- Python (left over from the earlier symbolic layer) --------------------
+# ---- Python ----------------------------------------------------------------
+# No Python remains in this repository. The rules stay so that a stray cache
+# directory from an older checkout never appears as an untracked file.
 __pycache__/
 *.pyc
 /.venv/
 /venv/
-
-# Scratch produced while reading the literature.
-/.digest.json
