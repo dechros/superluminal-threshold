@@ -1,5 +1,6 @@
 #include "particle/AcceleratedCrossing.h"
 #include "particle/ContinuousCrossing.h"
+#include "particle/PairedExcursion.h"
 #include "scan/DirectionFamily.h"
 #include "scan/HandednessSelection.h"
 #include "scan/PermutationScan.h"
@@ -39,6 +40,7 @@ namespace
         sections.push_back(std::make_unique<slm::PhysicalScalesSection>());
         sections.push_back(std::make_unique<slm::TimeProjectionSection>());
         sections.push_back(std::make_unique<slm::AcceleratedCrossingSection>());
+        sections.push_back(std::make_unique<slm::PairedExcursionSection>());
         return sections;
     }
 
