@@ -12,6 +12,7 @@
 #include "intermediate/IntermediateRegion.h"
 #include "mechanism/ThresholdWall.h"
 #include "particle/TimeProjection.h"
+#include "particle/VelocityCrossing.h"
 #include "transform/RelabellingObstruction.h"
 #include "transform/SignatureInvolution.h"
 #include "units/PhysicalScales.h"
@@ -33,6 +34,7 @@ namespace
         sections.push_back(std::make_unique<slm::DirectionFamily>());
         sections.push_back(std::make_unique<slm::HandednessSelectionSection>());
         sections.push_back(std::make_unique<slm::ThresholdFieldSection>());
+        sections.push_back(std::make_unique<slm::VelocityCrossingSection>());
         sections.push_back(std::make_unique<slm::ThresholdWallSection>());
         sections.push_back(std::make_unique<slm::DegenerateWindowSection>());
         sections.push_back(std::make_unique<slm::ContinuousCrossingSection>());

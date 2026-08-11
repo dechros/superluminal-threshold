@@ -13,9 +13,37 @@ Displacing a particle in time is the aim, and the six steps below are what the a
 5. **The return.** The same kind of force, applied in reverse, brings `theta` back from `pi/2` to `0`. The map between the two sides is an involution, so energy, momentum magnitude and mass return to their exact starting values; only direction can differ.
 6. **The clock.** A distance `s` covered on the far side moves the near-side clock by exactly `s`, and by the handedness filter of step 3 it moves it backwards, so the return happens earlier than it otherwise would by an amount that scales linearly with `s` — one metre buys about 3.34 nanoseconds. The direction is a result of the filters rather than a choice made after them.
 
-## The mechanism
+## The mechanism: accelerating and decelerating, and nothing else
 
-The force in steps 2 and 4 is not applied by hand. The crossing angle is a real scalar field with the potential `U(theta) = Lambda^4 sin^2(2theta)`, whose two minima are the two regions and whose single maximum falls at `theta = pi/4`, the same angle at which the metric degenerates — neither was arranged to match the other. With that potential the static field equation is sine-Gordon in `4*theta` and has a kink,
+The crossing angle is not a field and not an extra coordinate. It is the particle's own speed, written as `beta = tan(theta)`. That single identification fixes the whole geometry without anything being arranged to fit:
+
+| angle | speed | metric |
+|---|---|---|
+| `0` | rest | near-side signature |
+| `pi/4` | `beta = 1` | **degenerate** |
+| `pi/2` | infinite | far-side signature |
+
+because the family's scale factor becomes a function of the speed alone,
+
+    cos(2*theta) = (1 - beta^2) / (1 + beta^2)
+
+which is positive below light speed, zero at it and negative above. Accelerating the particle *is* driving the metric towards its degenerate point; the two are one operation. The same dictionary explains the scan's result from the other direction: the discrete involution reflects the angle about `pi/4`, and the reflection reads `beta -> 1/beta` in speeds, which is the `v' = c^2/v` the involution section reached by a different route.
+
+**The standard shell forbids the crossing, and the program proves it rather than avoiding it.** Under constant proper acceleration `theta(tau) = arctan(tanh(a*tau/c))`, which stays below `pi/4` for every finite proper time. The failure is not the force running out — the force is never withdrawn — but the angle stalling: its rate falls off like `sech^2(a*tau/c)`, and the energy demanded is the Lorentz factor, `7.07e5` rest energies at a part in a million million short of light speed.
+
+**The obstruction is located exactly, and it is the metric's own degeneracy.** The energy diverges as `1/sqrt(cos(2*theta))`, and `cos(2*theta)` is the factor that degenerates. What stays finite through the point is the energy weighed against the degenerating metric rather than against the near-side one: `E^2*cos(2*theta) = (m*c^2)^2*cos^2(theta)`, which is exactly one half of the squared rest energy at light speed.
+
+**Under the extended shell the accelerated particle arrives.** The work the accelerating force does through the angle enters the shell linearly, `p^2/c^2 = mu + 2*F*theta`, so the momentum demanded at light speed is `c*sqrt(mu + pi*F/2)` — a finite number, verified across nine combinations of mass and force, each reaching `beta = 1` at a finite parameter, subluminal just before it and superluminal just after.
+
+**The return needs nothing of its own.** Reversing the accelerating force reflects the angle about `pi/4`, and the reflection fixes that angle, so the decelerating particle falls back through light speed at exactly the parameter the outward flight reached it, then comes to rest at the parameter the outward crossing took. The mass parameter it arrives with is the one it left with, because the shell at angle zero carries no work term.
+
+The one posited element left is the shell itself: the required energy scales linearly in the angle instead of divergently. The claim is about the shell, not about a force, and the program states the standard shell's verdict alongside it.
+
+## An earlier reading of the same constant
+
+The section below reads the same constant `F` as a coupling to a scalar condensate rather than as the accelerator's force. The two readings compete: only one of them can be the mechanism, and the account above is the one the project keeps. What follows is retained for the geometry it fixes, not as a second way across.
+
+The crossing angle is treated as a real scalar field with the potential `U(theta) = Lambda^4 sin^2(2theta)`, whose two minima are the two regions and whose single maximum falls at `theta = pi/4`, the same angle at which the metric degenerates — neither was arranged to match the other. With that potential the static field equation is sine-Gordon in `4*theta` and has a kink,
 
     theta(x) = arctan(exp(x/L)),    L = sqrt(lambda / 8*Lambda^4)
 
