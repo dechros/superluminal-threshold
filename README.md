@@ -27,6 +27,21 @@ which is a solution rather than a choice. Three things follow that a posited for
 
 What remains posited is the scalar sector itself — its potential scale, its stiffness, and the coupling by which a particle feels it. Those are the ordinary ingredients of a field theory rather than a force invented for one trajectory, and that is the whole of the improvement claimed.
 
+## Both directions, and what the crossing costs them
+
+The far side's space axis carries a sign, so one apparatus reaches both directions in time: drive one particle along `+r` and it returns before it left, drive a second the same distance along `-r` and it returns after, by the same amount. Nothing but the sign of the far-side displacement distinguishes them.
+
+The crossing is not free, and it breaks the symmetry. Reaching the far minimum means traversing a wall of finite thickness, which costs `L*ln(1/tolerance)/(beta*c)` of near-side time going in and the same coming out. That delay is positive for both particles and is blind to which way either was driven, so it **subtracts** from the backward one and **adds** to the forward one:
+
+    dt(+r) = -s/c + 2*tau
+    dt(-r) = +s/c + 2*tau
+
+Three consequences follow, and the first two are not symmetric:
+
+- **Forward in time needs no minimum distance.** The delay pushes the `-r` particle further the way it was already going, so any distance works, including none.
+- **Backward in time has a break-even distance**, `s* = 2*L*ln(1/tolerance)/beta`, where the far-side travel and the round trip through the wall cancel exactly. Short of `s*` the apparatus returns both particles later than they left and displaces neither one backward. In units of the wall's own width `s*` is a pure number: 37.2 for a tolerance of `1e-8` at `0.99c`. For a wall of field-theory thickness that is about `3.7e-14` m, so the delay decides nothing at laboratory distances — but it decides everything for a thick wall.
+- **The gap between the two particles is free of the delay.** It is `2*s/c` — 6.67 ns for a metre — and the shared delay cancels in the difference exactly, across every wall width, tolerance and crossing speed tried. Either particle read alone requires knowing `tau`; the pair does not. What limits the pair instead is preparing both to the same speed: crossing at `0.5c` against `0.99c` leaves `1.2e-22` s of the delay behind in the gap.
+
 ## The relabelling objection
 
 The far metric is the near one with every sign reversed and the slots permuted, and no property of a metric alone separates them: they even share a determinant. What the objection leaves out is that a region is a metric *together with the matter in it*. The mass shell reads `p^T g p = mu*c^2`, the relabelling acts on `g`, and `mu` belongs to the particle. Counting the coordinate axes that admit a real on-shell momentum gives 1 on the near side and 3 on the far side for the same ordinary particle, and carrying the shell's solutions through the relabelling demands `mu -> -mu`, which is not a change of convention but an imaginary mass. A second obstruction needs no particle: along the metric family the count of positive entries changes only at the degenerate angle, so the two regions lie in different components of the nondegenerate metrics.
