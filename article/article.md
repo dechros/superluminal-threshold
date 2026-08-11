@@ -1,15 +1,15 @@
-# Parçacığın ışık hızını geçip dönüşte bıraktığı fark
+# Parçacığın ışık hızını geçip beklenenden erken dönmesi
 
 ## Özet
 
 Bu çalışma, kütleli bir parçacığın ışık hızı eşiğini geçip geri dönmesini
-tek bir süreç olarak ele alır: parçacık ışığın altında başlar, eşiği sürekli
-bir kuvvetle geçer, ikinci bölgede bir mesafe alır, aynı kuvvetle geri
-döner, ve birinci bölgenin saatinde bıraktığı farkı taşır. Parçacık eşiği
-yeni bir serbestlik derecesiyle, eşik açısıyla, aşar; bu açıyı sabit kütle
-değil sabit bir kuvvet sürer, ve enerji hiçbir noktada sonsuza gitmez.
-İkinci bölgede alınan bir metrelik yol, dönüşü kalkıştan
-$3{,}34\times 10^{-9}$ saniye öne çekmektedir.
+tek bir süreç olarak ele alır. Süreç, parçacığın hızı ışık hızının
+altındayken başlar. Parçacık, ışık hızı eşiğini sürekli bir kuvvetle geçer,
+ikinci bölgede bir mesafe kat eder, ve tersine uygulanan bir kuvvetle ışık
+hızının altına döner. Parçacık eşiği yeni bir serbestlik derecesiyle, eşik
+açısıyla, aşar; bu açıyı sabit kütle değil sabit bir kuvvet sürer, ve enerji
+hiçbir noktada sonsuza gitmez. İkinci bölgede kat edilen bir metrelik yol,
+dönüş anını kalkıştan $3{,}34\times 10^{-9}$ saniye öne çekmektedir.
 
 ## 1. Giriş
 
@@ -24,17 +24,18 @@ altı adımda kurar:
 3. Geçiş tamamlandığında parçacık ikinci bölgede, ışık hızının üstünde
    bulunur.
 4. Parçacık ikinci bölgede tek bir eksen boyunca, yine bir kuvvetle, bir
-   mesafe alır.
-5. Aynı türden bir kuvvet, bu kez tersine, parçacığı ışığın altına
+   mesafe kat eder.
+5. Aynı türden bir kuvvet, bu kez tersine, parçacığı ışık hızının altına
    döndürür.
-6. Bu çalışma, alınan mesafenin birinci bölgenin saatinde bıraktığı farkı
+6. Bu çalışma, kat edilen mesafenin birinci bölgenin saatindeki karşılığını
    hesaplamıştır.
 
 Önceki bir çalışma, üçüncü, dördüncü ve altıncı adımların matematiğini
 kurmuştur: eşiği geçiren $384$ işaretli permütasyon matrisinin taraması,
-ikinci bölgedeki sabit kuvvetle sürülen hareket, ve alınan mesafeyi saat
-farkına çeviren katsayının bire eşit çıkması bu adımları taşımaktadır. Bu
-çalışmanın eklediği adımlar ikincisi ve beşincisidir: parçacığın eşiği,
+ikinci bölgedeki sabit kuvvetle sürülen hareket, ve kat edilen mesafeyi
+saat farkına çeviren katsayının bire eşit çıkması, bu üç adımı
+oluşturmaktadır.
+Bu çalışmanın eklediği adımlar ikincisi ve beşincisidir: parçacığın eşiği,
 süreç içinde ve tekillik taşımadan, nasıl geçtiği.
 
 ## 2. Birinci bölgede sıradan hareket
@@ -49,7 +50,7 @@ $$\omega(k) = c\sqrt{k^2 + \mu}, \qquad \mu = \left(\frac{mc}{\hbar}\right)^2$$
 biçimindedir; $\omega$ frekansı, $k$ dalga sayısını, $\mu$ kütle
 parametresini taşır. Grup hızı $v_{\text{grup}} = d\omega/dk$, $k\to\infty$
 limitinde $c$'ye yaklaşır ve hiçbir sonlu $k$'de onu aşmaz. Aşağıdaki
-bölümler, bu sınırı aşan süreci anlatır.
+bölümler, bu sınırı aşan süreci anlatmaktadır.
 
 ## 3. Işık hızı eşiği
 
@@ -200,17 +201,17 @@ birinci bölgede bir sapma olarak görünebilir.
 
 ## 7. Zamanda gidilen mesafe
 
-Bu geri dönüşün asıl sonucu, saatte bıraktığı farktır. İkinci bölgenin tek
-uzay ekseninde alınan $s$ kadar yol, birinci bölgenin saatinde tam olarak
-$s$ kadar fark üretir. Katsayı sekiz geçişin tamamında bire eşit
-çıkmıştır ve diğer üç eksenin aynı yuvaya katkısı sıfırdır. İşaret,
-seçilen $SD$ matrisinin geriye taşıyan ailesinden gelir. Dönüş anı şu
-değeri alır:
+Bu geri dönüşün asıl sonucu, dönüş anının saatte ne kadar erken olduğudur.
+İkinci bölgenin tek uzay ekseninde kat edilen $s$ kadar yol, dönüş anını
+birinci bölgenin saatinde, kalkış anına göre tam olarak $s$ kadar öne
+çeker. Katsayı sekiz geçişin tamamında bire eşit çıkmıştır ve diğer üç
+eksenin aynı yuvaya katkısı sıfırdır. İşaret, seçilen $SD$ matrisinin
+geriye taşıyan ailesinden gelir. Dönüş anı şu değeri alır:
 
 $$t_{\text{dönüş}} = 2\tau - s$$
 
-$\tau$ değeri tek bir geçişin bedelini, $s$ değeri ise ikinci bölgede
-alınan mesafeyi taşır.
+$\tau$, tek bir geçişin bedelidir; $s$ ise ikinci bölgede kat edilen
+mesafedir.
 
 Bir metrelik bir hedef, dönüşü $3{,}34\times 10^{-9}$ saniye öne çeken bir
 farka karşılık gelmektedir; bu fark kütleden ve enerji vektöründen
@@ -228,10 +229,10 @@ ya da sınıf adı anmaz, kod da hiçbir bölüm ya da kaynak numarası anmaz;
 bağı ise çalışma zamanında, makale metnini okuyan ayrı bir denetim
 kurmaktadır.
 
-Doğrudan bir sınama tek bir orantıya dayanır: Bölge II'de alınan $s$ kadar
-mesafe, dönüşü tam olarak $s$ kadar öne çekmektedir (Bölüm 7), ve bu oran
-$s$'nin büyüklüğünden bağımsız sabit kalır. $s$ büyüdükçe zaman farkı da
-istenildiği kadar büyür; ölçüm büyüklüğü bir engel taşımaz.
+Doğrudan bir sınama tek bir orantıya dayanır: Bölge II'de kat edilen $s$
+kadar mesafe, dönüş anını tam olarak $s$ kadar öne çekmektedir (Bölüm 7),
+ve bu oran $s$'nin büyüklüğünden bağımsız sabit kalır. $s$ büyüdükçe zaman
+farkı da istenildiği kadar büyür; ölçüm büyüklüğü bir engel değildir.
 
 İkincil bir iz de vardır: parçacık ikinci bölgede bir $O(3)$ dönmesi
 geçirip geri dönerse, birinci bölgede aynı enerjiyle, aynı süratle, ama
