@@ -1,10 +1,10 @@
 # superluminal-threshold
 
-A C++26 simulation of a massive particle crossing the light-speed threshold as a continuous process, with every claim checked by the program itself.
+A C++26 simulation of moving a particle backwards in time: send it across the light-speed threshold, drive it a distance on the far side, bring it back, and find it earlier than it left. Every claim is checked by the program itself.
 
 ## What it simulates
 
-The threshold between ordinary (subluminal) matter and its superluminal counterpart is modeled as a continuous crossing rather than an instantaneous jump:
+Displacing a particle in time is the aim, and the six steps below are what the aim requires. The time gained is set entirely by step 4, the distance covered on the far side; steps 2, 3 and 5 exist because reaching that side and returning from it are what make the distance available. The threshold is treated as a continuous crossing rather than an instantaneous jump:
 
 1. **Below light speed.** The particle starts as an ordinary object, governed by the standard dispersion relation `omega(k) = c*sqrt(k^2 + mu)`.
 2. **The threshold itself.** A new coordinate, the crossing angle `theta`, interpolates the spacetime metric from the near-side signature to the far-side one, `g(theta) = eta * cos(2*theta)`. At `theta = pi/4` the metric is degenerate; a fixed-mass particle has no real momentum past that point. A constant force added to the mass shell (the same constrained-Hamiltonian technique used in step 4) drives `theta` through the degenerate point with no singularity and no turning back.
