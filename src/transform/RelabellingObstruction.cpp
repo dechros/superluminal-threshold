@@ -152,5 +152,4 @@ namespace slm
                      "mass, which is an assumption it can state and not one it can prove",
                      mu > 0.0);
     }
-
 }

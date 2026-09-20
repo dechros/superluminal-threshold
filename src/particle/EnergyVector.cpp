@@ -4,7 +4,6 @@
 
 namespace slm
 {
-
     double EnergyVector::length(const Three &energy)
     {
         return std::sqrt(energy[0] * energy[0] + energy[1] * energy[1] + energy[2] * energy[2]);
@@ -59,5 +58,4 @@ namespace slm
         }
         return false;
     }
-
 }

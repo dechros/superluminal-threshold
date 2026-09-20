@@ -6,7 +6,6 @@
 
 namespace slm
 {
-
     void Report::section(std::string_view title)
     {
         std::cout << "\n";
@@ -92,5 +91,4 @@ namespace slm
     {
         return passedCount_ + failedCount_;
     }
-
 }

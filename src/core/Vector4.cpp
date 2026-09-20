@@ -7,7 +7,6 @@
 
 namespace slm
 {
-
     Vector4::Vector4(double x0, double x1, double x2, double x3)
         : components_{x0, x1, x2, x3}
     {
@@ -91,5 +90,4 @@ namespace slm
     {
         return scale * vector;
     }
-
 }

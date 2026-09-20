@@ -10,7 +10,6 @@
 
 namespace slm
 {
-
     double PairedExcursion::mapContribution(double metres, Sense sense)
     {
         const double magnitude = PhysicalScales::advanceForDistance(metres);
@@ -216,5 +215,4 @@ namespace slm
                      "that speed is what limits the measurement rather than the wall itself",
                      std::abs(mismatch) < PairedExcursion::separation(metres));
     }
-
 }

@@ -8,7 +8,6 @@
 
 namespace slm
 {
-
     Matrix4::Matrix4(const Rows &rows)
         : rows_(rows)
     {
@@ -334,5 +333,4 @@ namespace slm
         }
         return result;
     }
-
 }

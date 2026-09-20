@@ -8,7 +8,6 @@
 
 namespace slm
 {
-
     int IntermediateRegion::flippedDirections(Kind kind)
     {
         switch (kind)
@@ -138,5 +137,4 @@ namespace slm
                                                                  omega * 1.5) > 0.0);
         }
     }
-
 }

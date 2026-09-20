@@ -7,7 +7,6 @@
 
 namespace slm
 {
-
     double ContinuousCrossing::entryMomentum(double c, double mu)
     {
         return -c * std::sqrt(mu);
@@ -136,5 +135,4 @@ namespace slm
         report.check("  theta returning falls monotonically from pi/2 to zero",
                      monotonic);
     }
-
 }

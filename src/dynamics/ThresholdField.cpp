@@ -7,7 +7,6 @@
 
 namespace slm
 {
-
     ThresholdField::Diagonal ThresholdField::regionOneMetric()
     {
         return {1.0, -1.0, -1.0, -1.0};
@@ -96,5 +95,4 @@ namespace slm
         report.check("  the required momentum falls to exactly zero at theta = pi/4 itself",
                      std::abs(ThresholdField::requiredMomentumSquared(pi / 4.0, mu, energySquared)) < 1e-9);
     }
-
 }

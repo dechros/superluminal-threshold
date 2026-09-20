@@ -220,5 +220,4 @@ namespace slm
                      "set by its energy and mass, while the direction is free",
                      !EnergyVector::rotationChangesFrequency(c, mu, {1.0, 2.0, 2.0}));
     }
-
 }

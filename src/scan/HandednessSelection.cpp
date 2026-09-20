@@ -10,7 +10,6 @@
 
 namespace slm
 {
-
     double HandednessSelection::freeBlockDeterminant(const Matrix4 &matrix)
     {
         const double a = matrix.at(1, 0);
@@ -177,5 +176,4 @@ namespace slm
                          "the time difference",
                          worstSpread, 1e-12);
     }
-
 }

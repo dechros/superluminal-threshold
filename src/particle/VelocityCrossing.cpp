@@ -347,5 +347,4 @@ namespace slm
                                  returns),
                      returns == 9);
     }
-
 }

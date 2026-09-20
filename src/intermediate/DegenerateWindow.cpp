@@ -139,5 +139,4 @@ namespace slm
                          ThresholdWall::potential(lambdaScale, kPi / 4.0) >
                              ThresholdWall::potential(lambdaScale, 0.0));
     }
-
 }

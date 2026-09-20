@@ -10,7 +10,6 @@
 
 namespace slm
 {
-
     double AcceleratedCrossing::entryMomentum(double c, double mu, const Three &energy)
     {
         return -EnergyVector::massShellFrequency(c, mu, energy);
@@ -134,5 +133,4 @@ namespace slm
                                  metres, seconds),
                      seconds > 0.0);
     }
-
 }

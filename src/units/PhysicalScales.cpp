@@ -77,5 +77,4 @@ namespace slm
                      std::abs(PhysicalScales::distanceForAdvance(kSecondsPerYear) - 9.4605e15) <
                          1e13);
     }
-
 }

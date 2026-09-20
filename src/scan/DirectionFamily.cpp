@@ -16,9 +16,6 @@ namespace slm
 
     namespace
     {
-        /// The near-side time (row 0) produced by a step of the given size
-        /// along the far side's single space axis (column 3), the far
-        /// side's other three coordinates held at zero.
         double nearTimeFromSpaceStep(const Matrix4 &matrix, double step)
         {
             return matrix.at(0, 3) * step;
@@ -98,5 +95,4 @@ namespace slm
         report.check("D sends a positive step later", dSendsLater);
         report.check("SD sends the same positive step earlier", dFound && sdFound && !sdSendsLater);
     }
-
 }

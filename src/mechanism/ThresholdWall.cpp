@@ -248,5 +248,4 @@ namespace slm
                      ThresholdWall::massParameter(mu, 0.99 * ThresholdWall::smallestAdmissibleForce(mu),
                                                   kPi / 2.0) > 0.0);
     }
-
 }
