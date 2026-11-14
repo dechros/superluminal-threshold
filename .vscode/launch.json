@@ -5,7 +5,7 @@
             "name": "Debug (gdb)",
             "type": "cppdbg",
             "request": "launch",
-            "program": "${workspaceFolder}/build/superluminal-debug",
+            "program": "${workspaceFolder}/build/cmake-debug/superluminal",
             "args": [],
             "stopAtEntry": false,
             "cwd": "${workspaceFolder}",

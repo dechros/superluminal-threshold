@@ -1,6 +1,5 @@
-#pragma once
-
-#include "core/Section.h"
+#ifndef SLM_PARTICLE_ACCELERATEDCROSSING_H
+#define SLM_PARTICLE_ACCELERATEDCROSSING_H
 
 #include <array>
 
@@ -56,15 +55,6 @@ namespace slm
                                        double target);
     };
 
-    /// Section verifying the constant-force crossing and its guaranteed reach.
-    class AcceleratedCrossingSection : public Section
-    {
-    public:
-        std::string title() const override
-        {
-            return "A constant force along the single space axis, and the crossing it guarantees";
-        }
-        void run(Report &report) const override;
-    };
-
 }
+
+#endif

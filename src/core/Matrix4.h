@@ -1,4 +1,5 @@
-#pragma once
+#ifndef SLM_CORE_MATRIX4_H
+#define SLM_CORE_MATRIX4_H
 
 #include <array>
 #include <cstddef>
@@ -162,3 +163,5 @@ namespace slm
     Vector4 operator*(const Matrix4 &matrix, const Vector4 &vector);
 
 }
+
+#endif

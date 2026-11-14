@@ -1,0 +1,49 @@
+#ifndef SLM_DYNAMICS_DISPERSION_H
+#define SLM_DYNAMICS_DISPERSION_H
+
+namespace slm
+{
+
+    /// Dispersion relation of a massive field, evaluated on either side.
+    ///
+    /// One instance fixes the constants c, m and hbar; the member functions
+    /// are pure queries on those constants.
+    class Dispersion
+    {
+    public:
+        /// \param c Speed of light.
+        /// \param mass Field mass, may be zero.
+        /// \param hbar Reduced Planck constant.
+        Dispersion(double c, double mass, double hbar);
+
+        /// The mass parameter mu = (m c / hbar)^2.
+        double mu() const;
+
+        /// Region I angular frequency omega(k) = c sqrt(k^2 + mu).
+        double angularFrequency(double k) const;
+        /// Phase velocity omega/k.
+        double phaseVelocity(double k) const;
+        /// Group velocity d(omega)/dk.
+        double groupVelocity(double k) const;
+
+        /// Region II counterpart q(kappa), the same functional form.
+        double spatialFrequency(double kappa) const;
+        /// Magnitude |dq/dkappa|, which is a gradient rather than a scalar
+        /// derivative because region II has three time axes.
+        double gradientMagnitude(double kappa) const;
+
+        /// The signal front travels at the infinite-frequency limit of the
+        /// phase velocity, not at the group velocity. For a massive field that
+        /// limit is c, and this query evaluates the phase velocity at the given
+        /// wavenumber so a caller can watch it descend towards c.
+        double frontVelocityAt(double k) const;
+
+    private:
+        double c_;
+        double mass_;
+        double hbar_;
+    };
+
+}
+
+#endif

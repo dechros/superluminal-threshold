@@ -2,26 +2,36 @@
     "version": "2.0.0",
     "tasks": [
         {
-            "label": "Debug Build",
+            "label": "Configure",
             "type": "shell",
-            "group": "build",
-            "command": "make",
+            "command": "cmake",
             "args": [
-                "-j",
-                "debug"
+                "-S",
+                ".",
+                "-B",
+                "build/cmake",
+                "-DCMAKE_BUILD_TYPE=Release"
             ],
             "options": {
                 "cwd": "${workspaceFolder}"
             },
-            "problemMatcher": [
-                "$gcc"
+            "problemMatcher": []
+        },
+        {
+            "label": "Configure Debug",
+            "type": "shell",
+            "command": "cmake",
+            "args": [
+                "-S",
+                ".",
+                "-B",
+                "build/cmake-debug",
+                "-DCMAKE_BUILD_TYPE=Debug"
             ],
-            "presentation": {
-                "reveal": "always",
-                "panel": "shared",
-                "clear": true
+            "options": {
+                "cwd": "${workspaceFolder}"
             },
-            "detail": "g++ -std=c++26 -Wall -Wextra -Wpedantic -O0 -g3 -> build/superluminal-debug"
+            "problemMatcher": []
         },
         {
             "label": "Release Build",
@@ -30,14 +40,18 @@
                 "kind": "build",
                 "isDefault": true
             },
-            "command": "make",
+            "command": "cmake",
             "args": [
-                "-j",
-                "release"
+                "--build",
+                "build/cmake",
+                "-j"
             ],
             "options": {
                 "cwd": "${workspaceFolder}"
             },
+            "dependsOn": [
+                "Configure"
+            ],
             "problemMatcher": [
                 "$gcc"
             ],
@@ -46,7 +60,32 @@
                 "panel": "shared",
                 "clear": true
             },
-            "detail": "g++ -std=c++26 -Wall -Wextra -Wpedantic -O2 -DNDEBUG -> build/superluminal"
+            "detail": "Builds the library, the check suite and the Qt viewer into build/cmake"
+        },
+        {
+            "label": "Debug Build",
+            "type": "shell",
+            "group": "build",
+            "command": "cmake",
+            "args": [
+                "--build",
+                "build/cmake-debug",
+                "-j"
+            ],
+            "options": {
+                "cwd": "${workspaceFolder}"
+            },
+            "dependsOn": [
+                "Configure Debug"
+            ],
+            "problemMatcher": [
+                "$gcc"
+            ],
+            "presentation": {
+                "reveal": "always",
+                "panel": "shared",
+                "clear": true
+            }
         },
         {
             "label": "Run",
@@ -55,7 +94,7 @@
                 "kind": "test",
                 "isDefault": true
             },
-            "command": "./build/superluminal",
+            "command": "./build/cmake/superluminal",
             "options": {
                 "cwd": "${workspaceFolder}"
             },
@@ -68,7 +107,20 @@
                 "panel": "dedicated",
                 "clear": true
             },
-            "detail": "Release derlemesini yapar ve butun hesaplari ard arda calistirir"
+            "detail": "Runs every check in order"
+        },
+        {
+            "label": "Viewer",
+            "type": "shell",
+            "command": "./build/cmake/gui/superluminal-gui",
+            "options": {
+                "cwd": "${workspaceFolder}"
+            },
+            "dependsOn": [
+                "Release Build"
+            ],
+            "problemMatcher": [],
+            "detail": "Opens the Qt Quick 3D round-trip viewer"
         }
     ]
 }

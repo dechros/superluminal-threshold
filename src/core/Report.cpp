@@ -2,21 +2,21 @@
 
 #include <cmath>
 #include <format>
-#include <iostream>
+#include <print>
 
 namespace slm
 {
     void Report::section(std::string_view title)
     {
-        std::cout << "\n";
-        std::cout << "================================================================\n";
-        std::cout << "  " << title << "\n";
-        std::cout << "================================================================\n";
+        std::println("");
+        std::println("================================================================");
+        std::println("  {}", title);
+        std::println("================================================================");
     }
 
     void Report::subsection(std::string_view title)
     {
-        std::cout << "\n-- " << title << "\n";
+        std::println("\n-- {}", title);
     }
 
     void Report::record(std::string_view claim, bool ok, std::string_view detail)
@@ -30,12 +30,12 @@ namespace slm
             ++failedCount_;
         }
 
-        std::cout << (ok ? "  [ok]   " : "  [FAIL] ") << claim;
+        std::print("{}{}", ok ? "  [ok]   " : "  [FAIL] ", claim);
         if (!ok && !detail.empty())
         {
-            std::cout << "   " << detail;
+            std::print("   {}", detail);
         }
-        std::cout << "\n";
+        std::println("");
     }
 
     void Report::check(std::string_view claim, bool condition)
@@ -55,21 +55,21 @@ namespace slm
 
     void Report::summary() const
     {
-        std::cout << "\n";
-        std::cout << "================================================================\n";
+        std::println("");
+        std::println("================================================================");
         if (failedCount_ == 0 && passedCount_ == 0)
         {
-            std::cout << "  NOTHING WAS CHECKED\n";
+            std::println("  NOTHING WAS CHECKED");
         }
         else if (failedCount_ == 0)
         {
-            std::cout << std::format("  ALL PASSED: {} checks\n", passedCount_);
+            std::println("  ALL PASSED: {} checks", passedCount_);
         }
         else
         {
-            std::cout << std::format("  FAILED: {} of {} checks\n", failedCount_, total());
+            std::println("  FAILED: {} of {} checks", failedCount_, total());
         }
-        std::cout << "================================================================\n";
+        std::println("================================================================");
     }
 
     bool Report::allPassed() const

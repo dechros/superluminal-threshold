@@ -1,4 +1,5 @@
-#pragma once
+#ifndef SLM_CORE_SECTION_H
+#define SLM_CORE_SECTION_H
 
 #include <string>
 
@@ -28,3 +29,5 @@ namespace slm
     };
 
 }
+
+#endif

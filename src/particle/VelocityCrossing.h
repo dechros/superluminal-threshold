@@ -1,6 +1,5 @@
-#pragma once
-
-#include "core/Section.h"
+#ifndef SLM_PARTICLE_VELOCITYCROSSING_H
+#define SLM_PARTICLE_VELOCITYCROSSING_H
 
 namespace slm
 {
@@ -46,10 +45,12 @@ namespace slm
     /// replacement is the one posited element left in this account, and it is
     /// posited about the shell rather than about a force.
     ///
-    /// Deceleration returns the particle by the same closed form with the sign
-    /// of the accelerating force reversed. @ref returnToSubluminalParameter is
-    /// where the speed falls back below light speed, and the particle arrives
-    /// with the mass parameter it left with.
+    /// Deceleration is the time reverse of acceleration: the far-side momentum
+    /// is reflected and the same force carries the particle back along the
+    /// same curve. @ref returnToSubluminalParameter is where the speed falls
+    /// back below light speed, earlier in the return leg than the outward leg
+    /// took to reach it, and the particle arrives at rest with the mass
+    /// parameter it left with.
     class VelocityCrossing
     {
     public:
@@ -105,25 +106,13 @@ namespace slm
         static double returningSpeedAtParameter(double c, double mu, double force, double sigma);
 
         /// The parameter at which the decelerating particle falls back below
-        /// light speed. The return angle is the outward angle reflected about
-        /// @f$ \pi/4 @f$, and the reflection fixes that angle, so the return
-        /// crosses light speed at exactly the parameter the outward flight
-        /// reached it: @ref luminalParameter.
+        /// light speed. The return is the outward curve run backwards, so this
+        /// is the outward crossing parameter less @ref luminalParameter, which
+        /// is shorter than @ref luminalParameter because the outward leg spends
+        /// more of its parameter below light speed than above it.
         static double returnToSubluminalParameter(double c, double mu, double force);
     };
 
-    /// Section proving that the standard shell forbids the crossing and locates
-    /// the obstruction at the metric's degeneracy, that the extended shell
-    /// carries the particle across at finite cost, and that reversing the
-    /// accelerating force returns the same particle below light speed.
-    class VelocityCrossingSection : public Section
-    {
-    public:
-        std::string title() const override
-        {
-            return "The crossing in the particle's own speed, with accelerating and decelerating as the only mechanism";
-        }
-        void run(Report &report) const override;
-    };
-
 }
+
+#endif

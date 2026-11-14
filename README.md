@@ -10,7 +10,7 @@ Displacing a particle in time is the aim, and the six steps below are what the a
 2. **The threshold itself.** A new coordinate, the crossing angle `theta`, interpolates the spacetime metric from the near-side signature to the far-side one, `g(theta) = eta * cos(2*theta)`. At `theta = pi/4` the metric is degenerate; a fixed-mass particle has no real momentum past that point. A constant force added to the mass shell (the same constrained-Hamiltonian technique used in step 4) drives `theta` through the degenerate point with no singularity and no turning back.
 3. **Above light speed.** Once `theta` reaches `pi/2` the particle is on the far side, whose coordinates are `(t1, t2, t3, r)`: three time axes and one space axis. The discrete map between the two sides is found by scanning all 384 signed permutation matrices down to the 8 that survive every structural constraint. A fourth filter, handedness, cuts those 8 to 4: three far-side coordinates carry free motion onto the three near-side directions that also carry free motion, and a map reached as the endpoint of a continuous crossing cannot reflect them, because a reflection is not connected to the identity in the rotation group. The determinant of that block and the sign of the near-side time multiply to `-1` in all eight, so the filter settles both at once.
 4. **Motion on the far side.** Along the far side's single space axis, a constant force drives the particle to any target distance in finite, closed form — the same mechanism as step 2, applied earlier in the project's history to this axis.
-5. **The return.** The same kind of force, applied in reverse, brings `theta` back from `pi/2` to `0`. The map between the two sides is an involution, so energy, momentum magnitude and mass return to their exact starting values; only direction can differ.
+5. **The return.** The return is the time reverse of the outward leg: the far-side momentum is reflected and the same force carries the particle back along the same curve, so `theta` falls from `pi/2` to `0`, both Hamilton equations hold on the way, and energy, momentum magnitude and mass return to their exact starting values; only direction can differ.
 6. **The clock.** A distance `s` covered on the far side moves the near-side clock by exactly `s`, and by the handedness filter of step 3 it moves it backwards, so the return happens earlier than it otherwise would by an amount that scales linearly with `s` — one metre buys about 3.34 nanoseconds. The direction is a result of the filters rather than a choice made after them.
 
 ## The mechanism: accelerating and decelerating, and nothing else
@@ -35,7 +35,7 @@ which is positive below light speed, zero at it and negative above. Accelerating
 
 **Under the extended shell the accelerated particle arrives.** The work the accelerating force does through the angle enters the shell linearly, `p^2/c^2 = mu + 2*F*theta`, so the momentum demanded at light speed is `c*sqrt(mu + pi*F/2)` — a finite number, verified across nine combinations of mass and force, each reaching `beta = 1` at a finite parameter, subluminal just before it and superluminal just after.
 
-**The return needs nothing of its own.** Reversing the accelerating force reflects the angle about `pi/4`, and the reflection fixes that angle, so the decelerating particle falls back through light speed at exactly the parameter the outward flight reached it, then comes to rest at the parameter the outward crossing took. The mass parameter it arrives with is the one it left with, because the shell at angle zero carries no work term.
+**The return needs nothing of its own.** It is the outward curve run backwards, with the far-side momentum reflected: the decelerating particle falls back through light speed at the outward crossing parameter less the outward luminal one, then comes to rest at the parameter the outward crossing took. The mass parameter it arrives with is the one it left with, because the shell is the same shell and the state at the end of the reversed curve is the state at the start of the forward one.
 
 The one posited element left is the shell itself: the required energy scales linearly in the angle instead of divergently. The claim is about the shell, not about a force, and the program states the standard shell's verdict alongside it.
 
@@ -76,37 +76,58 @@ The far metric is the near one with every sign reversed and the slots permuted, 
 
 The claim is conditional and the condition is stated rather than hidden: were a particle of negative mass parameter available, the two regions would be the same region.
 
+## Six round trips, six ways across, and a viewer
+
+`src/journey/` sends three travellers on the whole trip, each along `+r` (backward in time) and along `-r` (forward): a massless particle, a hydrogen atom and a methane molecule with its five atoms placed. All six are run by `RoundTripSection` and every leg is checked: the shell on the outward leg, the signed far-side branch, the join at `pi/2`, both Hamilton equations on the return by central difference, and the state at return. Three results are specific to this section:
+
+- **The massless traveller is born at light speed.** It has no rest frame, so its start angle is `pi/4` and its entry momentum is exactly `c*sqrt(pi*F/2)`, the momentum the massive crossing demands at light speed. Anchoring the shell there with `mu = 0` is the one posited element added: the massless traveller enters in the state a massive one passes through. It needs no acceleration up to the threshold, only away from it.
+- **A molecule becomes a pattern in time.** Its atoms' offsets land entirely in the far side's three times, with no spread along `r`, so the molecule is a point in far-side space and an extended object in far-side time; every atom receives the same clock shift, every bond length returns unchanged, and the signed volume of the labelled bonds keeps its sign, so handedness survives the trip. A metre along `r` shifts the clock by 3.34 ns whether a massless particle or a molecule travelled.
+- **The handoff between the legs is stated.** The crossing ends with the angle's momentum at `p(sigma_out)`; that momentum is held while the angle stands at `pi/2`, and the return starts from it reflected. The far-side drive starts from the shell's rest state there, with no energy along the three time axes, because any such energy would move the traveller along what is the near side's space and it would not return to the place it left. Two elements are posited in all of this and nothing else: the extended shell, and the massless traveller's entry at the threshold.
+- **Two readings of what the crossing costs are kept side by side.** Under the field-wall reading the threshold has a width and the round trip through it costs a delay; under the velocity reading the threshold has no width, and the map's contribution is the whole shift. The gap between the forward and backward trips is `2s/c` under both.
+
+`CrossingMethodsSection` tries six ways across on each traveller and says what each mechanics supplies, what completes it, and what it costs: Newtonian passage with no speed limit (completed by the signature change), the standard shell (completed by the extended one), the extended shell under a constant force (complete by itself), bending the metric through its degenerate point (completed by reversing the shell with it, at the tension of the wall it creates), bending it with the shell reversed (complete, but external to the traveller), and quantum tunnelling across a degenerate layer (lossless for the massless traveller, completed by a far-side state to land in). The way chosen for each traveller is the complete one of least cost that needs nothing beyond the traveller and its accelerator; it is the extended shell for all three, started from the threshold for the massless traveller and through it for the other two. The list is open: a way is admitted when its mathematics closes.
+
+`JourneyState` samples the trip at any progress for the viewer, and `JourneyStateSection` checks that the sample is continuous across every phase join, starts and ends in the traveller's own state, and ends with the clock shift the round trip establishes. The Qt Quick 3D viewer in `gui/` draws nothing the library does not compute: the two regions as their axes and metric, the metric's four entries shrinking to zero at the threshold and reappearing with the opposite signs, the molecule's atoms at their far-side coordinates, the marker along `r` and the near-side clock running backward or forward with it. Pick the traveller and the direction, press Play.
+
 ## Layout
 
-- `src/dynamics/` — dispersion relations on both sides, and the threshold field's metric family.
-- `src/mechanism/` — the domain wall: the potential, the kink that solves its field equation, and the coupling that turns the applied force into a mass.
-- `src/particle/` — the two constant-force crossings (threshold angle, far-side space axis) and the coordinate map between sides.
-- `src/scan/` — the exhaustive permutation scan, its forward/backward classification, and the handedness filter that decides between them.
-- `src/transform/`, `src/intermediate/`, `src/units/` — the discrete involution, the answer to the relabelling objection, the intermediate-region geometry, the width of the degenerate set, physical unit conversions.
-- `src/core/` — `Report` (pass/fail bookkeeping) and `Section` (one unit of verification), shared by everything above.
+The code is layered, lowest first, and each layer is its own static library that links only the one beneath it. `tools/check_layers.py` runs under `ctest` and fails on any include that points upward.
+
+- `src/core/` — `Matrix4`, `Vector4`, `Report` (pass/fail bookkeeping) and `Section` (one unit of verification).
+- `src/physics/` — `dynamics/` (dispersion relations, the metric family), `mechanism/` (the domain wall), `transform/` (the involution, the relabelling objection), `scan/` (the signed-permutation scan, its direction families, the handedness filter), `intermediate/` (the intermediate-region geometry, the degenerate window), `units/` (physical constants and the metre-to-second exchange rate).
+- `src/particle/` — the one constant-force trajectory (`ConstantForce`) and its readings (threshold angle, far-side space axis), the velocity dictionary, the paired excursion and the coordinate map between sides.
+- `src/journey/` — the travellers, the six round trips, the six ways across, and the sampler the viewer reads.
+- `checks/` — one `NameSection.h` and `NameSection.cpp` per library, mirroring the tree above; the claims live here and the computations live in `src/`.
+- `app/main.cpp` — runs every section in order against one report.
+- `gui/` — the Qt Quick 3D viewer: a model object over `JourneyState`, and the QML scene. It links the journey layer and nothing above it.
+
+Headers carry the Doxygen documentation and use include guards; translation units carry no comments.
 
 ## Adding a section
 
-Implement `Section` (`title()`, `run(Report&)`) and add one line to `buildSections()` in `main.cpp`. There is no registration macro and no global state.
+Implement `Section` (`title()`, `run(Report&)`) in `checks/` beside the library it verifies and add one line to `buildSections()` in `app/main.cpp`. There is no registration macro and no global state.
 
 ## Build
 
-- Linux/Windows (MSYS2), g++ with `-std=c++26`
-- Standard library only, no external dependencies
+- CMake 3.28 or later, a C++26 compiler (GCC 16 and Clang 23 are what the project is built with)
+- The library and the check suite need the standard library only
+- The viewer needs Qt 6.8 or later with Quick, Quick3D and QuickControls2; it is skipped when Qt is not found
 
 ```bash
-make -j          # release -> build/superluminal
-make -j debug    # debug   -> build/superluminal-debug
-make run         # build release and run it
-make clean
+cmake -S . -B build/cmake -DCMAKE_BUILD_TYPE=Release
+cmake --build build/cmake -j
 ```
-
-Sources compile to separate objects under `build/obj`, so a full build takes a few seconds and a single-file change under a second. Header dependencies are tracked with `-MMD -MP`.
 
 ## Run
 
 ```bash
-./build/superluminal
+./build/cmake/superluminal          # the check suite
+ctest --test-dir build/cmake        # the suite and the layering check
+./build/cmake/gui/superluminal-gui  # the viewer
+./build/cmake/gui/superluminal-gui --snapshot frame.png --progress 0.5 --traveller 2 --sense 0
+./build/cmake/gui/superluminal-gui --autoplay 3 --traveller 2 --sense 1   # plays the trip, verifies the end state, exits 0
 ```
+
+The viewer offers six travellers: the reference three and water, ammonia and bromochlorofluoromethane, the last of which is chiral without any labelling.
 
 Output is one block per section, each listing its checks as pass or fail lines, ending in a summary. Exit code is `0` only when every check passes.

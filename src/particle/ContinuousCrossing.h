@@ -1,6 +1,5 @@
-#pragma once
-
-#include "core/Section.h"
+#ifndef SLM_PARTICLE_CONTINUOUSCROSSING_H
+#define SLM_PARTICLE_CONTINUOUSCROSSING_H
 
 namespace slm
 {
@@ -20,11 +19,13 @@ namespace slm
     /// without bound, reaching pi/2 and beyond for every mass and every
     /// positive force.
     ///
-    /// Reading the same trajectory as a displacement from the far endpoint,
-    /// pi/2 minus theta, gives a second angle that starts at pi/2 and falls
-    /// to zero at exactly the trajectory parameter theta itself reaches
-    /// pi/2. No second construction is needed for the return: it is the
-    /// same one, read from the other end.
+    /// The return is the time reverse of the same trajectory: the far-side
+    /// state has its conjugate momentum reflected and the same force carries
+    /// it back, so the returning angle is the outward angle read from the
+    /// other end, theta(sigma_out - sigma). It starts at pi/2 and falls to
+    /// zero at exactly the parameter the outward leg took, Hamilton's
+    /// equations hold along it with the same shell, and no second
+    /// construction is needed.
     class ContinuousCrossing
     {
     public:
@@ -47,23 +48,12 @@ namespace slm
         /// closed form from the quadratic it solves.
         static double sigmaToReach(double c, double mu, double force, double target);
 
-        /// The same trajectory read as a displacement from pi/2: starts at
-        /// pi/2 when sigma = 0 and reaches zero at sigma = sigmaToReach(...,
-        /// pi/2).
+        /// The time reverse of the outward trajectory, theta(sigma_out -
+        /// sigma): starts at pi/2 when sigma = 0 and reaches zero at sigma =
+        /// sigmaToReach(..., pi/2).
         static double thetaReturning(double c, double mu, double force, double sigma);
     };
 
-    /// Section verifying the constant-force crossing of theta, its guaranteed
-    /// reach past the degenerate point, and the same trajectory read as a
-    /// return to theta = 0.
-    class ContinuousCrossingSection : public Section
-    {
-    public:
-        std::string title() const override
-        {
-            return "A constant force along the crossing angle, and the crossing it guarantees";
-        }
-        void run(Report &report) const override;
-    };
-
 }
+
+#endif

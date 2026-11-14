@@ -1,6 +1,5 @@
-#pragma once
-
-#include "core/Section.h"
+#ifndef SLM_PARTICLE_TIMEPROJECTION_H
+#define SLM_PARTICLE_TIMEPROJECTION_H
 
 #include <array>
 #include <string>
@@ -75,6 +74,9 @@ namespace slm
 
         /// Push a far-side displacement through the involution.
         static Four toNearCoordinates(const Four &farSide);
+        /// Push a near-side displacement through the same involution. The map
+        /// is its own inverse, so this is the same matrix read the other way.
+        static Four toFarCoordinates(const Four &nearSide);
 
         /// The single far-side slot that is space-like, which is the one
         /// carrying the near-side time.
@@ -92,15 +94,6 @@ namespace slm
         static bool spaceMotionThereMovesNearTime();
     };
 
-    /// Section computing what motion along each far-side coordinate means here.
-    class TimeProjectionSection : public Section
-    {
-    public:
-        std::string title() const override
-        {
-            return "Which coordinates can be moved in, which only flow, and what that means here";
-        }
-        void run(Report &report) const override;
-    };
-
 }
+
+#endif

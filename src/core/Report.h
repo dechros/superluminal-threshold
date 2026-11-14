@@ -1,4 +1,5 @@
-#pragma once
+#ifndef SLM_CORE_REPORT_H
+#define SLM_CORE_REPORT_H
 
 #include <cstddef>
 #include <string>
@@ -72,3 +73,5 @@ namespace slm
     };
 
 }
+
+#endif

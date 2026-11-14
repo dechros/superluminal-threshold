@@ -1,4 +1,5 @@
-#pragma once
+#ifndef SLM_PARTICLE_ENERGYVECTOR_H
+#define SLM_PARTICLE_ENERGYVECTOR_H
 
 #include <array>
 
@@ -39,3 +40,5 @@ namespace slm
     };
 
 }
+
+#endif

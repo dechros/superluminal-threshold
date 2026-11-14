@@ -1,6 +1,5 @@
-#pragma once
-
-#include "core/Section.h"
+#ifndef SLM_PARTICLE_PAIREDEXCURSION_H
+#define SLM_PARTICLE_PAIREDEXCURSION_H
 
 namespace slm
 
@@ -82,17 +81,6 @@ namespace slm
                                     double secondBeta);
     };
 
-    /// Section verifying that one apparatus reaches both directions in time,
-    /// that only the backward direction carries a minimum distance, and that
-    /// the gap between the two particles is free of the crossing.
-    class PairedExcursionSection : public Section
-    {
-    public:
-        std::string title() const override
-        {
-            return "One apparatus, two directions in time, and what the thickness of the wall costs each of them";
-        }
-        void run(Report &report) const override;
-    };
-
 }
+
+#endif

@@ -1,4 +1,5 @@
-#pragma once
+#ifndef SLM_CORE_VECTOR4_H
+#define SLM_CORE_VECTOR4_H
 
 #include <array>
 #include <cstddef>
@@ -77,3 +78,5 @@ namespace slm
     Vector4 operator*(const Vector4 &vector, double scale);
 
 }
+
+#endif
