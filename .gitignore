@@ -69,8 +69,8 @@ Thumbs.db
 desktop.ini
 
 # ---- Python ----------------------------------------------------------------
-# No Python remains in this repository. The rules stay so that a stray cache
-# directory from an older checkout never appears as an untracked file.
+# The only Python is tools/check_layers.py, run with -I and without caches. The
+# rules stay so that a stray cache directory never appears as an untracked file.
 __pycache__/
 *.pyc
 /.venv/
