@@ -97,7 +97,8 @@ The code is layered, lowest first, and each layer is its own static library that
 - `src/physics/` — `dynamics/` (dispersion relations, the metric family), `mechanism/` (the domain wall), `transform/` (the involution, the relabelling objection), `scan/` (the signed-permutation scan, its direction families, the handedness filter), `intermediate/` (the intermediate-region geometry, the degenerate window), `units/` (physical constants and the metre-to-second exchange rate).
 - `src/particle/` — the one constant-force trajectory (`ConstantForce`) and its readings (threshold angle, far-side space axis), the velocity dictionary, the paired excursion and the coordinate map between sides.
 - `src/journey/` — the travellers, the six round trips, the six ways across, and the sampler the viewer reads.
-- `checks/` — one `NameSection.h` and `NameSection.cpp` per library, mirroring the tree above; the claims live here and the computations live in `src/`.
+- `checks/` — one `NameSection.h` and `NameSection.cpp` per physics, particle and journey module, mirroring those parts of the tree above; `src/core/` has no mirror because every section exercises it (and `Section`, `Report`) already. The claims live here and the computations live in `src/`.
+- `tools/check_layers.py` — the layering check run by `ctest`.
 - `app/main.cpp` — runs every section in order against one report.
 - `gui/` — the Qt Quick 3D viewer: a model object over `JourneyState`, and the QML scene. It links the journey layer and nothing above it.
 
@@ -111,6 +112,7 @@ Implement `Section` (`title()`, `run(Report&)`) in `checks/` beside the library 
 
 - CMake 3.28 or later, a C++26 compiler (GCC 16 and Clang 23 are what the project is built with)
 - The library and the check suite need the standard library only
+- Python 3 is optional: it only runs the layering test, which is skipped when no interpreter is found
 - The viewer needs Qt 6.8 or later with Quick, Quick3D and QuickControls2; it is skipped when Qt is not found
 
 ```bash
